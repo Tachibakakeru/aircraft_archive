@@ -51,6 +51,61 @@ async function loadData(id){
 
 function craftMeta(id){ return fleet.aircraft.find(a => a.id === id); }
 
+// 從 specifications.尺寸 取出以公尺為單位的數值
+function dimM(id, label){
+  const rows = (dataCache[id] && dataCache[id].specifications && dataCache[id].specifications["尺寸"]) || [];
+  const r = rows.find(x => x[0] === label);
+  if (!r) return null;
+  const m = String(r[1]).match(/([\d.]+)\s*m(?![m²³a-z])/);   // 公尺，排除 mm/m²/m³
+  return m ? parseFloat(m[1]) : null;
+}
+
+// ── 尺寸比例對照（同比例側影，附成人參考） ──
+function renderSizeCompare(){
+  const host = $("cmp-size");
+  const COLORS = ["#6fd3ef", "#ffb547", "#7ecb8f", "#c98bdb"];
+  const items = selected.map((id, i) => ({
+    id, name: craftMeta(id).name, color: COLORS[i % COLORS.length],
+    L: dimM(id, "全長"), H: dimM(id, "機高")
+  })).filter(a => a.L && a.H);
+  if (items.length < 2){ host.innerHTML = ""; return; }
+
+  const HUMAN = 1.8;
+  const maxL = Math.max(...items.map(a => a.L));
+  const maxH = Math.max(...items.map(a => a.H));
+  const vbW = 960, labelW = 156, padR = 24, drawW = vbW - labelW - padR;
+  const pxPerM = Math.min(drawW / maxL, 120 / maxH);   // 長度或高度取較嚴者，兩軸同比例
+  const rowSlot = maxH * pxPerM + 30;
+
+  const silhouette = (a, yb) => {
+    const w = a.L * pxPerM, h = a.H * pxPerM, x0 = labelW;
+    const fb = yb - h * 0.06, ft = fb - Math.max(h * 0.32, 5);   // 機身上下緣
+    const finX = x0 + w * 0.80;
+    return `
+      <path d="M ${x0 + w * 0.03},${fb} Q ${x0},${(fb + ft) / 2} ${x0 + w * 0.11},${ft}
+               L ${x0 + w},${ft} L ${x0 + w},${fb} Z" fill="${a.color}" opacity="0.9"/>
+      <path d="M ${finX},${ft} L ${x0 + w},${yb - h} L ${x0 + w},${ft} Z" fill="${a.color}" opacity="0.9"/>`;
+  };
+
+  let y = 6, body = "";
+  items.forEach(a => {
+    const yb = y + rowSlot - 22;
+    body += `<text x="${labelW - 12}" y="${yb - 8}" text-anchor="end" class="cs-name">${a.name}</text>
+             <text x="${labelW - 12}" y="${yb + 8}" text-anchor="end" class="cs-dim">${a.L} m</text>
+             ${silhouette(a, yb)}`;
+    y += rowSlot;
+  });
+  // 成人參考
+  const yb = y + 30;
+  const hh = HUMAN * pxPerM, hw = Math.max(hh * 0.28, 3), hx = labelW;
+  body += `<text x="${labelW - 12}" y="${yb - 4}" text-anchor="end" class="cs-dim">${I18N.t("compare.size.human")}</text>
+           <circle cx="${hx + hw / 2}" cy="${yb - hh + hw * 0.5}" r="${hw * 0.5}" fill="var(--muted)"/>
+           <rect x="${hx + hw * 0.2}" y="${yb - hh + hw}" width="${hw * 0.6}" height="${hh - hw}" rx="${hw * 0.3}" fill="var(--muted)"/>`;
+
+  host.innerHTML = `<div class="cs-head">${I18N.t("compare.size")}</div>
+    <svg viewBox="0 0 ${vbW} ${y + 48}" class="cs-svg" preserveAspectRatio="xMidYMid meet">${body}</svg>`;
+}
+
 // ── 選擇器 ──
 function renderPickers(){
   const wrap = $("cmp-pickers");
@@ -93,6 +148,7 @@ function syncUrl(){
 function renderTable(){
   const table = $("cmp-table");
   const empty = $("cmp-empty");
+  renderSizeCompare();
   if (!selected.length){ table.innerHTML = ""; empty.style.display = "block"; return; }
   empty.style.display = "none";
 

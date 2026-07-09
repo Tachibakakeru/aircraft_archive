@@ -3,6 +3,15 @@
    ═══════════════════════════════════════════ */
 body{min-height:100vh}
 
+/* ── 尺寸比例對照 ── */
+.cmp-size{margin:0 24px 8px}
+.cmp-size:empty{display:none}
+.cs-head{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--muted);margin:6px 0 8px}
+.cs-svg{width:100%;height:auto;max-height:60vh;
+  background:var(--panel);border:1px solid var(--stroke);border-radius:10px;padding:8px}
+.cs-name{fill:var(--text);font-family:var(--sans);font-size:15px;font-weight:700}
+.cs-dim{fill:var(--muted);font-family:var(--mono);font-size:12px}
+
 .cmp-topbar{
   position:sticky;top:0;z-index:10;
   display:flex;align-items:center;gap:20px;
