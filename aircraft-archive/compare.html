@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>機庫檔案 — 機型比較</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/compare.css">
+</head>
+<body>
+
+<div class="cmp-topbar">
+  <a class="back" href="index.html">← FLEET / 機隊列表</a>
+  <div class="cmp-title">
+    <span class="eyebrow">COMPARE / 機型比較</span>
+    <h1>並排比較規格</h1>
+  </div>
+  <button id="btn-theme" class="tool-btn" title="切換主題">◐</button>
+</div>
+
+<div class="cmp-pickers" id="cmp-pickers"></div>
+
+<div class="cmp-table-wrap">
+  <table class="cmp-table" id="cmp-table"></table>
+  <div id="cmp-empty" class="cmp-empty">請於上方選擇至少一架機型開始比較。</div>
+</div>
+
+<script src="js/theme.js"></script>
+<script src="js/compare.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="viewer-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>機庫檔案 — 3D 檢視</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="viewer">
+
+<canvas id="scene"></canvas>
+
+<!-- 3D 標註點層（覆蓋在 canvas 上，跟隨模型部位） -->
+<div id="hotspots"></div>
+
+<div class="v-header">
+  <div class="brand">
+    <a class="back" href="index.html">← FLEET / 機隊列表</a>
+    <div class="eyebrow">HANGAR ARCHIVE / 機庫檔案</div>
+    <h1 id="craft-title">—</h1>
+    <div class="sub" id="craft-sub"></div>
+  </div>
+  <div class="v-header-right">
+    <div class="v-tools">
+      <button id="btn-theme" class="tool-btn" title="切換主題">◐</button>
+      <button id="btn-specs" class="tool-btn" title="詳細規格">☰ 規格</button>
+      <a href="compare.html" class="tool-btn" title="機型比較">⇄ 比較</a>
+    </div>
+    <div class="hint">
+      拖曳 — 旋轉視角<br>
+      滾輪 / 雙指 — 縮放<br>
+      點擊部位 — 開啟解說
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <button id="btn-rotate" aria-pressed="true">自動旋轉</button>
+  <button id="btn-reset">重置視角</button>
+  <button id="btn-hotspots" aria-pressed="true">標註點</button>
+</div>
+
+<nav class="chips" id="chips" aria-label="部位快選"></nav>
+
+<svg id="callout-svg" aria-hidden="true">
+  <circle id="co-dot" r="4" style="display:none"></circle>
+  <line id="co-line" style="display:none"></line>
+</svg>
+<div id="callout-label"></div>
+
+<aside id="panel" aria-hidden="true">
+  <div class="panel-head">
+    <div class="eyebrow">COMPONENT</div>
+    <h2 id="p-title"></h2>
+    <div class="en" id="p-en"></div>
+    <button id="panel-close" aria-label="關閉面板">✕</button>
+  </div>
+  <div class="panel-body">
+    <p id="p-summary"></p>
+    <ul id="p-bullets" class="bullets"></ul>
+    <div id="p-images" class="gallery"></div>
+    <div class="spec-title" id="p-spec-title">SPECIFICATIONS / 規格</div>
+    <dl id="p-specs"></dl>
+    <div class="factbox" id="p-factbox"><b>DID YOU KNOW / 冷知識</b><span id="p-fact"></span></div>
+  </div>
+</aside>
+
+<!-- 詳細規格抽屜 -->
+<aside id="spec-drawer" aria-hidden="true">
+  <div class="panel-head">
+    <div class="eyebrow">FULL SPECIFICATIONS</div>
+    <h2 id="spec-craft-name">詳細規格</h2>
+    <button id="spec-close" aria-label="關閉規格">✕</button>
+  </div>
+  <div class="panel-body" id="spec-body"></div>
+</aside>
+
+<div class="credit" id="credit"></div>
+
+<div id="overlay">
+  <div class="tag">LOADING AIRFRAME</div>
+  <div class="msg" id="overlay-msg">正在載入機體幾何與部位資料……</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/viewer.js"></script>
+</body>
+</html>

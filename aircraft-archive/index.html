@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>機庫檔案 HANGAR ARCHIVE</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+
+<div class="fleet-wrap">
+  <div class="fleet-head">
+    <div class="eyebrow">HANGAR ARCHIVE / 機庫檔案</div>
+    <h1>機隊總覽</h1>
+    <div class="sub">FLEET INDEX — 點選機型進入 3D 互動檢視</div>
+  </div>
+
+  <div class="fleet-toolbar">
+    <input type="search" id="fleet-search" placeholder="搜尋機型 / 廠商…">
+    <a class="ed-entry" href="compare.html">⇄ 比較</a>
+    <a class="ed-entry" href="editor.html">✎ 編輯資料</a>
+    <button class="ed-entry" id="btn-theme" title="切換主題">◐</button>
+  </div>
+
+  <div class="fleet-grid" id="fleet-grid"></div>
+
+  <div id="fleet-error">
+    無法載入機隊資料（<code>data/fleet.json</code>）。<br>
+    若你是直接雙擊開啟 HTML 檔案（<code>file://</code>），瀏覽器會阻擋資料讀取，
+    請在專案資料夾啟動本機伺服器後再開啟：<br>
+    <code>python3 -m http.server 8000</code> → 瀏覽 <code>http://localhost:8000</code>
+  </div>
+
+  <div class="fleet-foot">
+    3D MODELS: Flightradar24 / fr24-3d-models (GPL-2.0)<br>
+    新增機型流程請見 README.md — convert_fr24.py 轉換 → 撰寫 data JSON → 註冊至 fleet.json
+  </div>
+</div>
+
+<script>
+(async () => {
+  const grid = document.getElementById("fleet-grid");
+  try {
+    const res = await fetch("data/fleet.json");
+    if (!res.ok) throw new Error(res.status);
+    const fleet = await res.json();
+
+    const render = (list) => {
+      grid.innerHTML = "";
+      for (const a of list){
+        const card = document.createElement("div");
+        card.className = "craft-card";
+        card.innerHTML = `
+          <a class="card-link" href="viewer.html?model=${encodeURIComponent(a.id)}">
+            <div class="thumb"><img src="${a.thumb}" alt="${a.name} 側視剪影" loading="lazy"></div>
+            <div class="body">
+              <div class="mfr">${a.manufacturer.toUpperCase()} / ${a.category}</div>
+              <h2>${a.name}</h2>
+              <div class="tagline">${a.tagline}</div>
+              <div class="specs">
+                <span>首飛<b>${a.firstFlight}</b></span>
+                <span>翼展<b>${a.span}</b></span>
+                <span>座位<b>${a.seats}</b></span>
+              </div>
+            </div>
+          </a>
+          <a class="card-edit" href="editor.html?model=${encodeURIComponent(a.id)}" title="編輯 ${a.name} 資料">✎</a>`;
+        grid.appendChild(card);
+      }
+    };
+    render(fleet.aircraft);
+
+    const search = document.getElementById("fleet-search");
+    search.addEventListener("input", () => {
+      const q = search.value.trim().toLowerCase();
+      render(fleet.aircraft.filter(a =>
+        [a.name, a.manufacturer, a.category].join(" ").toLowerCase().includes(q)));
+    });
+  } catch (err) {
+    document.getElementById("fleet-error").style.display = "block";
+  }
+})();
+
+document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
+
+</script>
+</body>
+</html>
