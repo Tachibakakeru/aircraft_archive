@@ -358,6 +358,8 @@ function init(DATA, MODEL){
 
     document.querySelectorAll(".chip").forEach(c =>
       c.classList.toggle("active", c.dataset.part === id));
+
+    history.replaceState(null, "", `?model=${encodeURIComponent(MODEL_ID)}&part=${encodeURIComponent(id)}`);
   }
 
   function deselect(){
@@ -368,6 +370,7 @@ function init(DATA, MODEL){
     coLabel.style.display = "none";
     coDot.style.display = coLine.style.display = "none";
     document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+    history.replaceState(null, "", `?model=${encodeURIComponent(MODEL_ID)}`);
   }
 
   document.getElementById("panel-close").addEventListener("click", deselect);
@@ -505,6 +508,65 @@ function init(DATA, MODEL){
     buildSpecs();
     if (selected && selected.userData.partId) selectPart(selected.userData.partId);
   });
+
+  /* ── 單位切換（雙單位 / 公制 / 英制） ── */
+  const btnUnit = document.getElementById("btn-unit");
+  const syncUnit = () => { btnUnit.textContent = I18N.UNIT_NAMES[I18N.getUnit()]; };
+  syncUnit();
+  btnUnit.addEventListener("click", () => I18N.cycleUnit());
+  document.addEventListener("unitchange", () => {
+    syncUnit();
+    buildSpecs();
+    if (selected && selected.userData.partId) selectPart(selected.userData.partId);
+  });
+
+  /* ── 鍵盤操作 ── */
+  const visibleParts = () => PART_ORDER.filter(id => partGroups[id] && PARTS[id]);
+  function stepPart(dir){
+    const list = visibleParts();
+    if (!list.length) return;
+    const cur = selected && selected.userData.partId;
+    let i = list.indexOf(cur);
+    i = i < 0 ? (dir > 0 ? 0 : list.length - 1) : (i + dir + list.length) % list.length;
+    selectPart(list[i]);
+  }
+  const keysHelp = document.createElement("div");
+  keysHelp.id = "keys-help"; keysHelp.hidden = true;
+  keysHelp.addEventListener("click", () => { keysHelp.hidden = true; });
+  document.body.appendChild(keysHelp);
+  function buildKeysHelp(){
+    keysHelp.innerHTML = `<div class="kh-box"><h3>${I18N.t("viewer.keys.title")}</h3><dl>
+      <dt>← →</dt><dd>${I18N.t("viewer.keys.parts")}</dd>
+      <dt>Esc</dt><dd>${I18N.t("viewer.keys.close")}</dd>
+      <dt>R</dt><dd>${I18N.t("viewer.keys.rotate")}</dd>
+      <dt>0</dt><dd>${I18N.t("viewer.keys.reset")}</dd>
+      <dt>S</dt><dd>${I18N.t("viewer.keys.specs")}</dd>
+      <dt>?</dt><dd>${I18N.t("viewer.keys.help")}</dd></dl></div>`;
+  }
+  document.addEventListener("langchange", buildKeysHelp);
+  document.addEventListener("keydown", e => {
+    const tgt = e.target;
+    if (tgt && tgt.closest && tgt.closest("input, textarea, select")) return;
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    switch (e.key){
+      case "ArrowRight": stepPart(1);  e.preventDefault(); break;
+      case "ArrowLeft":  stepPart(-1); e.preventDefault(); break;
+      case "Escape":
+        if (!keysHelp.hidden) keysHelp.hidden = true;
+        else if (specDrawer.classList.contains("open")){
+          specDrawer.classList.remove("open"); specDrawer.setAttribute("aria-hidden", "true");
+        } else deselect();
+        break;
+      case "r": case "R": btnRotate.click(); break;
+      case "0": document.getElementById("btn-reset").click(); break;
+      case "s": case "S": document.getElementById("btn-specs").click(); break;
+      case "?": buildKeysHelp(); keysHelp.hidden = !keysHelp.hidden; break;
+    }
+  });
+
+  /* ── 深連結：載入時自動選取部位 ── */
+  const wantPart = new URLSearchParams(location.search).get("part");
+  if (wantPart && PARTS[wantPart] && partGroups[wantPart]) selectPart(wantPart);
 
   /* ── 渲染迴圈 ── */
   function resize(){

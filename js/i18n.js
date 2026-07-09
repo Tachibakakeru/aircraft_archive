@@ -62,6 +62,21 @@ const I18N_STRINGS = {
     "viewer.panel.close": "關閉面板",
     "viewer.spec.close": "關閉規格",
     "ui.totop": "回到頂端",
+    "fleet.filter.all": "所有類別",
+    "fleet.sort.label": "排序方式",
+    "fleet.sort.name": "名稱",
+    "fleet.sort.first": "首飛年份",
+    "fleet.sort.seats": "座位數",
+    "fleet.sort.span": "翼展",
+    "viewer.keys.title": "鍵盤快捷鍵",
+    "viewer.keys.parts": "切換部位",
+    "viewer.keys.close": "關閉面板",
+    "viewer.keys.rotate": "自動旋轉",
+    "viewer.keys.reset": "重置視角",
+    "viewer.keys.specs": "詳細規格",
+    "viewer.keys.help": "顯示／隱藏本表",
+    "viewer.units": "單位",
+    "compare.difftoggle": "只顯示差異",
     "lang.name": "繁體中文",
   },
   "en": {
@@ -113,6 +128,21 @@ const I18N_STRINGS = {
     "viewer.panel.close": "Close panel",
     "viewer.spec.close": "Close specifications",
     "ui.totop": "Back to top",
+    "fleet.filter.all": "All categories",
+    "fleet.sort.label": "Sort by",
+    "fleet.sort.name": "Name",
+    "fleet.sort.first": "First flight",
+    "fleet.sort.seats": "Seats",
+    "fleet.sort.span": "Wingspan",
+    "viewer.keys.title": "Keyboard shortcuts",
+    "viewer.keys.parts": "Switch part",
+    "viewer.keys.close": "Close panel",
+    "viewer.keys.rotate": "Auto-rotate",
+    "viewer.keys.reset": "Reset view",
+    "viewer.keys.specs": "Specifications",
+    "viewer.keys.help": "Show / hide this list",
+    "viewer.units": "Units",
+    "compare.difftoggle": "Differences only",
     "lang.name": "English",
   },
   "ja": {
@@ -164,6 +194,21 @@ const I18N_STRINGS = {
     "viewer.panel.close": "パネルを閉じる",
     "viewer.spec.close": "諸元を閉じる",
     "ui.totop": "トップへ戻る",
+    "fleet.filter.all": "すべての分類",
+    "fleet.sort.label": "並び替え",
+    "fleet.sort.name": "名前",
+    "fleet.sort.first": "初飛行",
+    "fleet.sort.seats": "座席数",
+    "fleet.sort.span": "全幅",
+    "viewer.keys.title": "キーボードショートカット",
+    "viewer.keys.parts": "部位切替",
+    "viewer.keys.close": "パネルを閉じる",
+    "viewer.keys.rotate": "自動回転",
+    "viewer.keys.reset": "視点リセット",
+    "viewer.keys.specs": "詳細諸元",
+    "viewer.keys.help": "この表を表示／非表示",
+    "viewer.units": "単位",
+    "compare.difftoggle": "差異のみ表示",
     "lang.name": "日本語",
   },
 };
@@ -484,23 +529,53 @@ const I18N = (() => {
     return (e && e[current]) || label;
   }
 
-  // 詳細規格「數值」翻譯：替換其中的中文註記；繁中原樣回傳
-  function specValue(v){
-    if (current === "zh" || typeof v !== "string") return v;
-    const idx = current === "en" ? 1 : 2;
-    let s = v.replace(/ｍ/g, "m");   // 正規化全形公尺
-    for (const p of VALUE_PHRASES_SORTED) s = s.split(p[0]).join(p[idx]);
-    if (current === "en"){
-      s = s.replace(/（/g, " (").replace(/）/g, ")")
-           .replace(/／/g, " / ").replace(/[，、]/g, ", ")
-           .replace(/ -blade/g, "-blade")
-           .replace(/\s+/g, " ")
-           .replace(/\( /g, "(").replace(/ \)/g, ")").replace(/ ,/g, ",")
-           .trim();
-    } else {
-      s = s.replace(/，/g, "、");
-    }
+  // 單位模式：both（雙單位）/ metric（公制）/ imperial（英制）
+  const UKEY = "hangar_unit";
+  let unit = localStorage.getItem(UKEY) || "both";
+  const IMP_RE = /\b(ft|in|lb|lbf|nmi|mph|kt|gal|shp|hp)\b|ft²|ft³|°F|US gal/;
+  const MET_RE = /\b(mm|cm|km|kg|km\/h|m\/s|m²|m³|kN|kW|rpm|m|t|L|°C)\b/;
+
+  function applyUnits(s){
+    if (unit === "both") return s;
+    const m = s.match(/^(.*?)\s*[（(]([^（()）]*)[)）]\s*$/);
+    if (!m) return s;
+    const head = m[1].trim(), inner = m[2].trim();
+    if (IMP_RE.test(inner) && MET_RE.test(head))
+      return unit === "imperial" ? inner : head;
     return s;
+  }
+
+  // 詳細規格「數值」翻譯：替換中文註記並套用單位模式
+  function specValue(v){
+    if (typeof v !== "string") return v;
+    let s = v.replace(/ｍ/g, "m");   // 正規化全形公尺
+    if (current !== "zh"){
+      const idx = current === "en" ? 1 : 2;
+      for (const p of VALUE_PHRASES_SORTED) s = s.split(p[0]).join(p[idx]);
+      if (current === "en"){
+        s = s.replace(/（/g, " (").replace(/）/g, ")")
+             .replace(/／/g, " / ").replace(/[，、]/g, ", ")
+             .replace(/ -blade/g, "-blade")
+             .replace(/\s+/g, " ")
+             .replace(/\( /g, "(").replace(/ \)/g, ")").replace(/ ,/g, ",")
+             .trim();
+      } else {
+        s = s.replace(/，/g, "、");
+      }
+    }
+    return applyUnits(s);
+  }
+
+  function getUnit(){ return unit; }
+  function setUnit(u){
+    unit = u;
+    localStorage.setItem(UKEY, u);
+    document.dispatchEvent(new CustomEvent("unitchange", { detail: u }));
+  }
+  function cycleUnit(){
+    const order = ["both", "metric", "imperial"];
+    setUnit(order[(order.indexOf(unit) + 1) % order.length]);
+    return unit;
   }
 
   function get(){ return current; }
@@ -585,7 +660,10 @@ const I18N = (() => {
     window.addEventListener("resize", () => { if (!menu.hidden) place(); });
   }
 
-  return { t, field, spec, specValue, get, set, cycle, apply, mountSelector, SUPPORTED, LANG_NAMES };
+  const UNIT_NAMES = { both: "m·ft", metric: "m", imperial: "ft" };
+
+  return { t, field, spec, specValue, get, set, cycle, apply, mountSelector,
+           getUnit, setUnit, cycleUnit, UNIT_NAMES, SUPPORTED, LANG_NAMES };
 })();
 
 // 初始化語言標記

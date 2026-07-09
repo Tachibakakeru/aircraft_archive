@@ -30,7 +30,17 @@ const $ = id => document.getElementById(id);
   document.addEventListener("langchange", () => {
     I18N.apply(); renderPickers(); renderTable();
   });
+
+  const btnUnit = $("btn-unit");
+  const syncUnit = () => { btnUnit.textContent = I18N.UNIT_NAMES[I18N.getUnit()]; };
+  syncUnit();
+  btnUnit.addEventListener("click", () => I18N.cycleUnit());
+  document.addEventListener("unitchange", () => { syncUnit(); renderTable(); });
+
+  $("cmp-diff").addEventListener("change", e => { diffOnly = e.target.checked; renderTable(); });
 })();
+
+let diffOnly = false;
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
@@ -136,18 +146,21 @@ function renderTable(){
 
   // 詳細規格各分類
   catOrder.forEach(cat => {
-    html += `<tr class="cat-row"><td colspan="${selected.length + 1}">${I18N.spec(cat)}</td></tr>`;
+    let rowsHtml = "";
     catRows[cat].forEach(label => {
       const vals = selected.map(id => (lookup[id][cat] && lookup[id][cat][label]) || null);
       const strVals = vals.map(v => v == null ? null : I18N.specValue(I18N.field(v)));
       const allSame = strVals.every(v => v === strVals[0]);
-      html += `<tr><td class="label-cell">${I18N.spec(I18N.field(label))}</td>`;
+      if (diffOnly && allSame) return;   // 只顯示差異
+      rowsHtml += `<tr><td class="label-cell">${I18N.spec(I18N.field(label))}</td>`;
       strVals.forEach(v => {
-        if (v == null) html += `<td class="val na">—</td>`;
-        else html += `<td class="val${!allSame ? " diff" : ""}">${v}</td>`;
+        if (v == null) rowsHtml += `<td class="val na">—</td>`;
+        else rowsHtml += `<td class="val${!allSame ? " diff" : ""}">${v}</td>`;
       });
-      html += "</tr>";
+      rowsHtml += "</tr>";
     });
+    if (rowsHtml)
+      html += `<tr class="cat-row"><td colspan="${selected.length + 1}">${I18N.spec(cat)}</td></tr>` + rowsHtml;
   });
 
   html += "</tbody>";
@@ -165,16 +178,18 @@ function renderTable(){
 
 // 產生一組來自 fleet 的資訊列（getter 版）
 function catBlock(catName, rows, alwaysShow){
-  let html = `<tr class="cat-row"><td colspan="${selected.length + 1}">${catName}</td></tr>`;
+  let rowsHtml = "";
   rows.forEach(([label, getter]) => {
     const vals = selected.map(getter);
     const allSame = vals.every(v => v === vals[0]);
-    html += `<tr><td class="label-cell">${label}</td>`;
+    if (diffOnly && allSame) return;
+    rowsHtml += `<tr><td class="label-cell">${label}</td>`;
     vals.forEach(v => {
-      if (v == null || v === "—") html += `<td class="val na">—</td>`;
-      else html += `<td class="val${!allSame ? " diff" : ""}">${v}</td>`;
+      if (v == null || v === "—") rowsHtml += `<td class="val na">—</td>`;
+      else rowsHtml += `<td class="val${!allSame ? " diff" : ""}">${v}</td>`;
     });
-    html += "</tr>";
+    rowsHtml += "</tr>";
   });
-  return html;
+  if (!rowsHtml) return "";
+  return `<tr class="cat-row"><td colspan="${selected.length + 1}">${catName}</td></tr>` + rowsHtml;
 }
