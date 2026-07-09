@@ -49,7 +49,7 @@ function init(DATA, MODEL){
 
   /* ── Three.js 場景 ── */
   const canvas = document.getElementById("scene");
-  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true, preserveDrawingBuffer:true});
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   const scene = new THREE.Scene();
@@ -203,13 +203,17 @@ function init(DATA, MODEL){
       dragging = false;
       canvas.classList.remove("dragging");
       if (moved < 7) pickAt(e.clientX, e.clientY);
+      else { camDirty = true; updateURL(); }
     }
   }
   canvas.addEventListener("pointerup", endPointer);
   canvas.addEventListener("pointercancel", endPointer);
+  let wheelTimer = 0;
   canvas.addEventListener("wheel", e => {
     e.preventDefault();
     radius *= (1 + Math.sign(e.deltaY) * 0.08);
+    camDirty = true;
+    clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260);
   }, {passive:false});
 
   /* ── 點選 / 懸停 ── */
@@ -359,7 +363,7 @@ function init(DATA, MODEL){
     document.querySelectorAll(".chip").forEach(c =>
       c.classList.toggle("active", c.dataset.part === id));
 
-    history.replaceState(null, "", `?model=${encodeURIComponent(MODEL_ID)}&part=${encodeURIComponent(id)}`);
+    updateURL();
   }
 
   function deselect(){
@@ -370,7 +374,7 @@ function init(DATA, MODEL){
     coLabel.style.display = "none";
     coDot.style.display = coLine.style.display = "none";
     document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
-    history.replaceState(null, "", `?model=${encodeURIComponent(MODEL_ID)}`);
+    updateURL();
   }
 
   document.getElementById("panel-close").addEventListener("click", deselect);
@@ -564,8 +568,68 @@ function init(DATA, MODEL){
     }
   });
 
-  /* ── 深連結：載入時自動選取部位 ── */
-  const wantPart = new URLSearchParams(location.search).get("part");
+  /* ── 相機深連結 ── */
+  let camDirty = false;
+  function camStr(){
+    const y = ((airplane.rotation.y % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+    return [theta.toFixed(2), phi.toFixed(2), radius.toFixed(1), y.toFixed(2)].join(",");
+  }
+  function updateURL(){
+    const p = new URLSearchParams();
+    p.set("model", MODEL_ID);
+    if (selected && selected.userData.partId) p.set("part", selected.userData.partId);
+    if (camDirty) p.set("cam", camStr());
+    history.replaceState(null, "", `?${p.toString()}`);
+  }
+
+  /* ── 導覽模式（自動輪播部位） ── */
+  const btnTour = document.getElementById("btn-tour");
+  let tourTimer = 0;
+  function stopTour(){
+    if (!tourTimer) return;
+    clearInterval(tourTimer); tourTimer = 0;
+    btnTour.setAttribute("aria-pressed", "false");
+    btnTour.textContent = I18N.t("viewer.tour");
+  }
+  function startTour(){
+    const list = visibleParts();
+    if (!list.length) return;
+    autoRotate = false; btnRotate.setAttribute("aria-pressed", "false");
+    let i = Math.max(0, list.indexOf(selected && selected.userData.partId));
+    selectPart(list[i]);
+    btnTour.setAttribute("aria-pressed", "true");
+    btnTour.textContent = I18N.t("viewer.tour.stop");
+    tourTimer = setInterval(() => {
+      i = (i + 1) % list.length;
+      selectPart(list[i]);
+    }, 4200);
+  }
+  btnTour.addEventListener("click", () => tourTimer ? stopTour() : startTour());
+  // 手動操作時停止導覽
+  canvas.addEventListener("pointerdown", stopTour);
+  document.getElementById("chips").addEventListener("click", stopTour);
+
+  /* ── 截圖匯出 ── */
+  document.getElementById("btn-shot").addEventListener("click", () => {
+    renderer.render(scene, camera);
+    const a = document.createElement("a");
+    a.download = `${MODEL_ID}-${I18N.field(DATA.title)}.png`.replace(/[\\/:*?"<>|]/g, "");
+    a.href = canvas.toDataURL("image/png");
+    a.click();
+  });
+
+  /* ── 深連結：載入時自動選取部位、還原相機 ── */
+  const params = new URLSearchParams(location.search);
+  const camParam = params.get("cam");
+  if (camParam){
+    const [t, p, r, y] = camParam.split(",").map(Number);
+    if ([t, p, r, y].every(n => !Number.isNaN(n))){
+      theta = t; phi = p; radius = r; airplane.rotation.y = y;
+      autoRotate = false; btnRotate.setAttribute("aria-pressed", "false");
+      camDirty = true;
+    }
+  }
+  const wantPart = params.get("part");
   if (wantPart && PARTS[wantPart] && partGroups[wantPart]) selectPart(wantPart);
 
   /* ── 渲染迴圈 ── */

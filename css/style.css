@@ -18,6 +18,8 @@
   --sans:"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif;
   --scene-grid:#24344d;
   --scene-grid2:#1a2740;
+  --scene-bg-1:#14213a;        /* 3D 場景背景（中心） */
+  --scene-bg-0:#0a1018;        /* 3D 場景背景（外緣） */
 }
 /* ── 淺色主題 ── */
 :root[data-theme="light"]{
@@ -32,8 +34,10 @@
   --cyan:#0d7fa8;
   --bg-glow:#d7e3f0;           /* 淺色主題：柔和淺藍光暈，取代深色暈斑 */
   --overlay-scrim:rgba(20,32,52,.35);
-  --scene-grid:#c2ccdb;
-  --scene-grid2:#d5dde8;
+  --scene-grid:#9fb0c6;
+  --scene-grid2:#b9c5d6;
+  --scene-bg-1:#cdd7e6;        /* 淺色場景：中心稍深藍灰，讓淺色機體有對比 */
+  --scene-bg-0:#9fb0c8;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -140,7 +144,10 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
 #fleet-error code{font-family:var(--mono);color:var(--amber)}
 
 /* ── 檢視器頁 ───────────────────────────── */
-body.viewer{height:100%;overflow:hidden}
+body.viewer{
+  height:100%;overflow:hidden;
+  background:radial-gradient(135% 105% at 50% 40%, var(--scene-bg-1) 0%, var(--scene-bg-0) 100%);
+}
 html.viewer-root{height:100%}
 #scene{position:fixed;inset:0;display:block;touch-action:none;cursor:grab}
 #scene.dragging{cursor:grabbing}
