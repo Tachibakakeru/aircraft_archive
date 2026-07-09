@@ -1,0 +1,3 @@
+# fr24 原始 .glb 來源（GPL-2.0，體積大、可重新抓取）
+# 重抓：curl -sSL https://raw.githubusercontent.com/Flightradar24/fr24-3d-models/master/models/<id>.glb -o models_src/<id>.glb
+models_src/
