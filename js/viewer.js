@@ -40,9 +40,9 @@ function init(DATA, MODEL){
   const PART_ORDER = DATA.partOrder || Object.keys(PARTS);
   const F = v => I18N.field(v);   // 內容欄位多語言取值
 
-  document.title = `${I18N.field(DATA.title)} — HANGAR ARCHIVE`;
-  document.getElementById("craft-title").textContent = I18N.field(DATA.title);
-  document.getElementById("craft-sub").textContent = I18N.field(DATA.sub) || "";
+  document.title = `${I18N.specValue(I18N.field(DATA.title))} — HANGAR ARCHIVE`;
+  document.getElementById("craft-title").textContent = I18N.specValue(I18N.field(DATA.title));
+  document.getElementById("craft-sub").textContent = I18N.specValue(I18N.field(DATA.sub)) || "";
   document.getElementById("credit").textContent =
     (MODEL.meta && MODEL.meta.source) ? `3D MODEL: ${MODEL.meta.source}` : "";
   I18N.apply();
@@ -267,7 +267,7 @@ function init(DATA, MODEL){
     if (!partGroups[id] || !PARTS[id]) return;   // 該機型缺此部位則不顯示
     const b = document.createElement("button");
     b.className = "chip";
-    b.textContent = F(PARTS[id].name);
+    b.textContent = I18N.spec(F(PARTS[id].name));
     b.dataset.part = id;
     b.addEventListener("click", () => selectPart(id));
     chipsEl.appendChild(b);
@@ -280,7 +280,7 @@ function init(DATA, MODEL){
     setEmissive(selected, 0xffb547, 0.4);
 
     const d = PARTS[id];
-    document.getElementById("p-title").textContent = F(d.name);
+    document.getElementById("p-title").textContent = I18N.spec(F(d.name));
     document.getElementById("p-en").textContent = d.en || "";
     document.getElementById("p-summary").textContent = F(d.summary) || "";
 
@@ -330,8 +330,8 @@ function init(DATA, MODEL){
       d.specs.forEach(([k, v]) => {
         const row = document.createElement("div");
         row.className = "spec-row";
-        const dt = document.createElement("dt"); dt.textContent = F(k);
-        const dd = document.createElement("dd"); dd.textContent = F(v);
+        const dt = document.createElement("dt"); dt.textContent = I18N.spec(F(k));
+        const dd = document.createElement("dd"); dd.textContent = I18N.specValue(F(v));
         row.append(dt, dd);
         dl.appendChild(row);
       });
@@ -409,7 +409,7 @@ function init(DATA, MODEL){
     if (!partGroups[id] || !PARTS[id]) return;
     const el = document.createElement("div");
     el.className = "hotspot";
-    el.innerHTML = `<span class="dot"></span><span class="tag">${F(PARTS[id].name)}</span>`;
+    el.innerHTML = `<span class="dot"></span><span class="tag">${I18N.spec(F(PARTS[id].name))}</span>`;
     el.addEventListener("click", () => selectPart(id));
     hotspotLayer.appendChild(el);
     hotspots[id] = el;
@@ -441,7 +441,7 @@ function init(DATA, MODEL){
   /* ── 詳細規格抽屜 ── */
   const specDrawer = document.getElementById("spec-drawer");
   const specBody = document.getElementById("spec-body");
-  document.getElementById("spec-craft-name").textContent = I18N.field(DATA.title);
+  document.getElementById("spec-craft-name").textContent = I18N.specValue(I18N.field(DATA.title));
 
   function buildSpecs(){
     const spec = DATA.specifications;
@@ -489,17 +489,18 @@ function init(DATA, MODEL){
   I18N.mountSelector(document.getElementById("btn-lang"));
   document.addEventListener("langchange", () => {
     I18N.apply();
-    document.title = `${I18N.field(DATA.title)} — HANGAR ARCHIVE`;
-    document.getElementById("craft-title").textContent = I18N.field(DATA.title);
-    document.getElementById("craft-sub").textContent = I18N.field(DATA.sub) || "";
-    document.getElementById("spec-craft-name").textContent = I18N.field(DATA.title);
+    const tTitle = I18N.specValue(I18N.field(DATA.title));
+    document.title = `${tTitle} — HANGAR ARCHIVE`;
+    document.getElementById("craft-title").textContent = tTitle;
+    document.getElementById("craft-sub").textContent = I18N.specValue(I18N.field(DATA.sub)) || "";
+    document.getElementById("spec-craft-name").textContent = tTitle;
     document.querySelectorAll("#chips .chip").forEach(c => {
       const id = c.dataset.part;
-      if (PARTS[id]) c.textContent = F(PARTS[id].name);
+      if (PARTS[id]) c.textContent = I18N.spec(F(PARTS[id].name));
     });
     for (const [id, el] of Object.entries(hotspots)){
       const tag = el.querySelector(".tag");
-      if (tag && PARTS[id]) tag.textContent = F(PARTS[id].name);
+      if (tag && PARTS[id]) tag.textContent = I18N.spec(F(PARTS[id].name));
     }
     buildSpecs();
     if (selected && selected.userData.partId) selectPart(selected.userData.partId);
