@@ -69,7 +69,7 @@ NAME_RULES = [
     ("slat",    r"slat|krueger|ible|oble"),
     ("spoiler", r"spoiler|speedbrake"),
     ("aileron", r"aileron"),
-    ("flap",    r"flap(?!fairing)"),
+    ("flap",    r"flap"),   # 含 flap track fairing：整流罩併入最近襟翼一起連動
     ("wing",    r"wing|winglet|fairing"),
     ("cockpit", r"cockpit|windshield|windscreen|canopy"),
     ("fuselage",r"fuselage|window|door|dorr|exit|apu|cargo|antenna|beacon|radome|belly"),
@@ -364,6 +364,17 @@ def convert(src, dst):
             bynode = {}
             for p in plist:
                 bynode.setdefault(p["node"], []).append(p)
+            if pid == "flap":
+                # 襟翼滑軌整流罩（含其上放電刷）併入最近的襟翼片，一起連動
+                real = {n: v for n, v in bynode.items() if "fairing" not in str(n).lower()}
+                fair = {n: v for n, v in bynode.items() if "fairing" in str(n).lower()}
+                if real and fair:
+                    cent = {n: np.vstack([bake(p["pos"]) for p in v]).mean(0) for n, v in real.items()}
+                    for fn, fv in fair.items():
+                        fc = np.vstack([bake(p["pos"]) for p in fv]).mean(0)
+                        nn = min(cent, key=lambda rn: float(np.linalg.norm(cent[rn] - fc)))
+                        real[nn].extend(fv)
+                    bynode = real
             npanel = nvsum = 0
             for node, nplist in bynode.items():
                 entries, bmn, bmx, vtot, before, after = encode_plist(nplist)
