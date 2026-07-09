@@ -160,7 +160,8 @@ function init(DATA, MODEL){
       const pivot = new THREE.Group();
       pivot.position.set(s.pv[0], s.pv[1], s.pv[2]);
       pivot.userData = { type: s.t, side: s.sd,
-        axis: new THREE.Vector3(s.ax[0], s.ax[1], s.ax[2]).normalize() };
+        axis: new THREE.Vector3(s.ax[0], s.ax[1], s.ax[2]).normalize(),
+        base: new THREE.Vector3(s.pv[0], s.pv[1], s.pv[2]) };
       for (const e of s.e){
         const mesh = makeMesh(e);
         mesh.position.set(-s.pv[0], -s.pv[1], -s.pv[2]);   // 幾何相對樞紐
@@ -173,12 +174,18 @@ function init(DATA, MODEL){
 
   // 展開角度（弧度，正負經視覺校準）；對稱面乘以 side、副翼反對稱示意滾轉
   const DEPLOY = { flap: 0.70, slat: -0.38, spoiler: -0.80, aileron: 0.26 };
+  // Fowler 平移：襟翼隨展開往後（-X）並略下（-Y）滑出、縫翼往前（+X）下伸，
+  // 讓面隨鉸鏈一起離開機翼，避免與固定翼面（含放電刷）穿模
+  const FOWLER = { flap: [-0.22, -0.05, 0], slat: [0.10, -0.05, 0] };
   let deployTarget = 0, deployNow = 0;
   function applyDeploy(){
     for (const pv of surfaces){
-      let ang = (DEPLOY[pv.userData.type] || 0) * deployNow;
-      if (pv.userData.type !== "aileron") ang *= pv.userData.side;
+      const type = pv.userData.type;
+      let ang = (DEPLOY[type] || 0) * deployNow;
+      if (type !== "aileron") ang *= pv.userData.side;
       pv.quaternion.setFromAxisAngle(pv.userData.axis, ang);
+      const f = FOWLER[type], b = pv.userData.base;
+      if (f) pv.position.set(b.x + f[0] * deployNow, b.y + f[1] * deployNow, b.z + f[2] * deployNow);
     }
   }
 
