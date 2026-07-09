@@ -38,6 +38,14 @@ Promise.all([
 function init(DATA, MODEL){
   const PARTS = DATA.parts;
   const PART_ORDER = DATA.partOrder || Object.keys(PARTS);
+
+  // 記錄最近瀏覽（供列表頁顯示），最多保留 10 筆、最新在前
+  try {
+    const recent = JSON.parse(localStorage.getItem("hangar_recent") || "[]")
+      .filter(id => id !== MODEL_ID);
+    recent.unshift(MODEL_ID);
+    localStorage.setItem("hangar_recent", JSON.stringify(recent.slice(0, 10)));
+  } catch {}
   const F = v => I18N.field(v);   // 內容欄位多語言取值
 
   document.title = `${I18N.specValue(I18N.field(DATA.title))} — HANGAR ARCHIVE`;

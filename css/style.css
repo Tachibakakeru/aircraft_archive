@@ -133,6 +133,56 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
   font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);
 }
 .craft-card .specs b{color:var(--text);font-weight:500;display:block;margin-top:2px;font-size:12px}
+/* ── 收藏星號 ── */
+.card-fav{
+  position:absolute;top:12px;left:12px;z-index:2;
+  width:32px;height:32px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;line-height:1;cursor:pointer;
+  color:var(--muted);background:var(--panel);
+  border:1px solid var(--stroke);backdrop-filter:blur(6px);
+  opacity:0;transition:opacity .15s,color .15s,border-color .15s;
+}
+.craft-card:hover .card-fav,.card-fav.on{opacity:1}
+.card-fav.on,.card-fav:hover{color:var(--amber);border-color:var(--amber)}
+
+/* ── 最近瀏覽 ── */
+.fleet-recent{margin-bottom:26px}
+.fleet-recent-h{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:10px}
+.fleet-recent-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}
+.recent-chip{
+  flex:0 0 auto;display:flex;align-items:center;gap:8px;
+  text-decoration:none;color:var(--text);
+  background:var(--panel);border:1px solid var(--stroke);
+  border-radius:10px;padding:6px 12px 6px 6px;transition:border-color .15s;
+}
+.recent-chip:hover{border-color:var(--amber)}
+.recent-chip img{width:44px;height:30px;object-fit:contain;border-radius:5px;
+  background:linear-gradient(180deg,#152238,#0e1729)}
+.recent-chip span{font-size:13px;white-space:nowrap}
+
+/* ── 時間軸檢視 ── */
+.fleet-timeline{display:flex;flex-direction:column}
+.tl-row{display:grid;grid-template-columns:60px 26px 1fr;align-items:stretch}
+.tl-year{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber);
+  text-align:right;padding:20px 10px 0 0}
+.tl-line{position:relative;display:flex;justify-content:center}
+.tl-line::before{content:"";position:absolute;top:0;bottom:0;width:2px;background:var(--stroke)}
+.tl-dot{position:relative;margin-top:24px;width:11px;height:11px;border-radius:50%;
+  background:var(--amber);border:2px solid var(--bg-0);z-index:1}
+.tl-cardwrap{position:relative;margin:9px 0}
+.tl-card{display:flex;gap:14px;align-items:center;
+  text-decoration:none;color:var(--text);
+  background:var(--panel);border:1px solid var(--stroke);
+  border-radius:10px;padding:10px 14px;transition:border-color .15s,transform .15s}
+.tl-card:hover{border-color:var(--amber);transform:translateX(3px)}
+.tl-card img{width:88px;height:54px;object-fit:contain;flex-shrink:0;border-radius:6px;
+  background:linear-gradient(180deg,#152238,#0e1729)}
+.tl-info h3{font-size:16px;font-weight:700}
+.tl-info .tl-meta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.04em}
+.tl-cardwrap .card-fav{top:10px;left:auto;right:10px;opacity:1;
+  width:28px;height:28px;font-size:14px}
+
 .fleet-foot{
   margin-top:48px;
   font-family:var(--mono);font-size:10px;letter-spacing:.08em;

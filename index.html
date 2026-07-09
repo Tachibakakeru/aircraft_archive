@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>機庫檔案 HANGAR ARCHIVE</title>
-<link rel="stylesheet" href="css/style.css?v=8">
-<script src="js/theme.js?v=8"></script>
-<script src="js/i18n.js?v=8"></script>
+<link rel="stylesheet" href="css/style.css?v=9">
+<script src="js/theme.js?v=9"></script>
+<script src="js/i18n.js?v=9"></script>
 </head>
 <body>
 
@@ -21,11 +21,14 @@
     <input type="search" id="fleet-search" data-i18n-ph="fleet.search" placeholder="搜尋機型 / 廠商…">
     <select class="ed-entry" id="fleet-cat"></select>
     <select class="ed-entry" id="fleet-sort"></select>
+    <button class="ed-entry" id="fleet-view"></button>
     <a class="ed-entry" href="compare.html" data-i18n="fleet.compare">⇄ 比較</a>
     <a class="ed-entry" href="editor.html" data-i18n="fleet.edit">✎ 編輯資料</a>
     <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
     <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
   </div>
+
+  <div class="fleet-recent" id="fleet-recent" hidden></div>
 
   <div class="fleet-grid" id="fleet-grid"></div>
 
@@ -51,36 +54,85 @@
     const fleet = await res.json();
 
     const F = v => I18N.field(v);   // 內容欄位多語言取值
+    const enc = encodeURIComponent;
+    const byId = id => fleet.aircraft.find(a => a.id === id);
 
-    const render = (list) => {
-      grid.innerHTML = "";
-      for (const a of list){
-        const card = document.createElement("div");
-        card.className = "craft-card";
-        card.innerHTML = `
-          <a class="card-link" href="viewer.html?model=${encodeURIComponent(a.id)}">
-            <div class="thumb"><img src="${a.thumb}" alt="${a.name}" loading="lazy"></div>
-            <div class="body">
-              <div class="mfr">${a.manufacturer.toUpperCase()} / ${F(a.category)}</div>
-              <h2>${a.name}</h2>
-              <div class="tagline">${F(a.tagline)}</div>
-              <div class="specs">
-                <span>${I18N.t("fleet.spec.first")}<b>${a.firstFlight}</b></span>
-                <span>${I18N.t("fleet.spec.span")}<b>${a.span}</b></span>
-                <span>${I18N.t("fleet.spec.seats")}<b>${a.seats}</b></span>
+    let favs = new Set(JSON.parse(localStorage.getItem("hangar_favs") || "[]"));
+    let view = localStorage.getItem("hangar_view") || "grid";
+    const saveFavs = () => localStorage.setItem("hangar_favs", JSON.stringify([...favs]));
+    const toggleFav = id => { favs.has(id) ? favs.delete(id) : favs.add(id); saveFavs(); applyAll(); };
+    const star = id => `<button class="card-fav${favs.has(id) ? " on" : ""}" data-id="${id}" aria-pressed="${favs.has(id)}" title="${I18N.t("fleet.fav")}">${favs.has(id) ? "★" : "☆"}</button>`;
+
+    const cardHTML = a => `
+      <a class="card-link" href="viewer.html?model=${enc(a.id)}">
+        <div class="thumb"><img src="${a.thumb}" alt="${a.name}" loading="lazy"></div>
+        <div class="body">
+          <div class="mfr">${a.manufacturer.toUpperCase()} / ${F(a.category)}</div>
+          <h2>${a.name}</h2>
+          <div class="tagline">${F(a.tagline)}</div>
+          <div class="specs">
+            <span>${I18N.t("fleet.spec.first")}<b>${a.firstFlight}</b></span>
+            <span>${I18N.t("fleet.spec.span")}<b>${a.span}</b></span>
+            <span>${I18N.t("fleet.spec.seats")}<b>${a.seats}</b></span>
+          </div>
+        </div>
+      </a>
+      ${star(a.id)}
+      <a class="card-edit" href="editor.html?model=${enc(a.id)}" title="${I18N.t("fleet.edit.title")}">✎</a>`;
+
+    const bindFavs = root => root.querySelectorAll(".card-fav").forEach(b =>
+      b.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); toggleFav(b.dataset.id); }));
+
+    const renderGrid = list => {
+      grid.className = "fleet-grid";
+      // 收藏優先（穩定排序保留原順序）
+      list = list.slice().sort((a, b) => (favs.has(b.id) ? 1 : 0) - (favs.has(a.id) ? 1 : 0));
+      grid.innerHTML = list.map(a => `<div class="craft-card">${cardHTML(a)}</div>`).join("");
+      bindFavs(grid);
+    };
+
+    const renderTimeline = list => {
+      grid.className = "fleet-timeline";
+      const sorted = list.slice().sort((a, b) => numOf(a.firstFlight) - numOf(b.firstFlight));
+      grid.innerHTML = sorted.map(a => `
+        <div class="tl-row">
+          <div class="tl-year">${a.firstFlight}</div>
+          <div class="tl-line"><span class="tl-dot"></span></div>
+          <div class="tl-cardwrap">
+            <a class="tl-card" href="viewer.html?model=${enc(a.id)}">
+              <img src="${a.thumb}" alt="${a.name}" loading="lazy">
+              <div class="tl-info">
+                <h3>${a.name}</h3>
+                <div class="tl-meta">${a.manufacturer.toUpperCase()} · ${F(a.category)} · ${I18N.t("fleet.spec.seats")} ${a.seats}</div>
               </div>
-            </div>
-          </a>
-          <a class="card-edit" href="editor.html?model=${encodeURIComponent(a.id)}" title="${I18N.t("fleet.edit.title")}">✎</a>`;
-        grid.appendChild(card);
-      }
+            </a>
+            ${star(a.id)}
+          </div>
+        </div>`).join("");
+      bindFavs(grid);
+    };
+
+    const render = list => view === "timeline" ? renderTimeline(list) : renderGrid(list);
+
+    const renderRecent = () => {
+      const el = document.getElementById("fleet-recent");
+      let ids = [];
+      try { ids = JSON.parse(localStorage.getItem("hangar_recent") || "[]"); } catch {}
+      ids = ids.filter(byId).slice(0, 8);
+      if (!ids.length){ el.hidden = true; return; }
+      el.hidden = false;
+      el.innerHTML = `<div class="fleet-recent-h">${I18N.t("fleet.recent")}</div>` +
+        `<div class="fleet-recent-row">` + ids.map(id => {
+          const a = byId(id);
+          return `<a class="recent-chip" href="viewer.html?model=${enc(id)}"><img src="${a.thumb}" alt="${a.name}"><span>${a.name}</span></a>`;
+        }).join("") + `</div>`;
     };
 
     const search = document.getElementById("fleet-search");
     const catSel = document.getElementById("fleet-cat");
     const sortSel = document.getElementById("fleet-sort");
+    const viewBtn = document.getElementById("fleet-view");
 
-    // 由座位／翼展字串取出可比較的數值
     const numOf = s => { const m = String(s).match(/[\d.]+/); return m ? parseFloat(m[0]) : 0; };
     const SORTS = {
       name:  (a, b) => a.name.localeCompare(b.name),
@@ -89,8 +141,7 @@
       span:  (a, b) => numOf(b.span) - numOf(a.span),
     };
 
-    // 以繁中分類值當作穩定鍵，顯示則用當前語言
-    const catKey = a => I18N.field(a.category);   // 顯示用
+    const catKey = a => I18N.field(a.category);
     const catId  = a => (a.category && a.category.zh) || I18N.field(a.category);
 
     const buildControls = () => {
@@ -104,11 +155,13 @@
       const scur = sortSel.value || "name";
       sortSel.innerHTML = ["name", "first", "seats", "span"].map(k =>
         `<option value="${k}"${k === scur ? " selected" : ""}>${I18N.t("fleet.sort.label")} · ${I18N.t("fleet.sort." + k)}</option>`).join("");
+      viewBtn.textContent = view === "timeline" ? "▤ " + I18N.t("fleet.view.grid") : "🕒 " + I18N.t("fleet.view.timeline");
     };
 
     const applyAll = () => {
       I18N.apply();
       buildControls();
+      renderRecent();
       const q = search.value.trim().toLowerCase();
       const cat = catSel.value;
       let list = fleet.aircraft.filter(a =>
@@ -121,9 +174,13 @@
     search.addEventListener("input", applyAll);
     catSel.addEventListener("change", applyAll);
     sortSel.addEventListener("change", applyAll);
+    viewBtn.addEventListener("click", () => {
+      view = view === "timeline" ? "grid" : "timeline";
+      localStorage.setItem("hangar_view", view);
+      applyAll();
+    });
     document.addEventListener("langchange", applyAll);
 
-    buildControls();
     applyAll();
   } catch (err) {
     document.getElementById("fleet-error").style.display = "block";
@@ -135,6 +192,6 @@ I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 </script>
 
-<script src="js/ui.js?v=8"></script>
+<script src="js/ui.js?v=9"></script>
 </body>
 </html>
