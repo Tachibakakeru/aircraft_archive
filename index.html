@@ -6,21 +6,23 @@
 <title>機庫檔案 HANGAR ARCHIVE</title>
 <link rel="stylesheet" href="css/style.css">
 <script src="js/theme.js"></script>
+<script src="js/i18n.js"></script>
 </head>
 <body>
 
 <div class="fleet-wrap">
   <div class="fleet-head">
-    <div class="eyebrow">HANGAR ARCHIVE / 機庫檔案</div>
-    <h1>機隊總覽</h1>
-    <div class="sub">FLEET INDEX — 點選機型進入 3D 互動檢視</div>
+    <div class="eyebrow" data-i18n="brand.eyebrow">HANGAR ARCHIVE / 機庫檔案</div>
+    <h1 data-i18n="fleet.title">機隊總覽</h1>
+    <div class="sub" data-i18n="fleet.sub">FLEET INDEX — 點選機型進入 3D 互動檢視</div>
   </div>
 
   <div class="fleet-toolbar">
-    <input type="search" id="fleet-search" placeholder="搜尋機型 / 廠商…">
-    <a class="ed-entry" href="compare.html">⇄ 比較</a>
-    <a class="ed-entry" href="editor.html">✎ 編輯資料</a>
-    <button class="ed-entry" id="btn-theme" title="切換主題">◐</button>
+    <input type="search" id="fleet-search" data-i18n-ph="fleet.search" placeholder="搜尋機型 / 廠商…">
+    <a class="ed-entry" href="compare.html" data-i18n="fleet.compare">⇄ 比較</a>
+    <a class="ed-entry" href="editor.html" data-i18n="fleet.edit">✎ 編輯資料</a>
+    <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
+    <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
   </div>
 
   <div class="fleet-grid" id="fleet-grid"></div>
@@ -46,6 +48,8 @@
     if (!res.ok) throw new Error(res.status);
     const fleet = await res.json();
 
+    const F = v => I18N.field(v);   // 內容欄位多語言取值
+
     const render = (list) => {
       grid.innerHTML = "";
       for (const a of list){
@@ -53,36 +57,50 @@
         card.className = "craft-card";
         card.innerHTML = `
           <a class="card-link" href="viewer.html?model=${encodeURIComponent(a.id)}">
-            <div class="thumb"><img src="${a.thumb}" alt="${a.name} 側視剪影" loading="lazy"></div>
+            <div class="thumb"><img src="${a.thumb}" alt="${a.name}" loading="lazy"></div>
             <div class="body">
-              <div class="mfr">${a.manufacturer.toUpperCase()} / ${a.category}</div>
+              <div class="mfr">${a.manufacturer.toUpperCase()} / ${F(a.category)}</div>
               <h2>${a.name}</h2>
-              <div class="tagline">${a.tagline}</div>
+              <div class="tagline">${F(a.tagline)}</div>
               <div class="specs">
-                <span>首飛<b>${a.firstFlight}</b></span>
-                <span>翼展<b>${a.span}</b></span>
-                <span>座位<b>${a.seats}</b></span>
+                <span>${I18N.t("fleet.spec.first")}<b>${a.firstFlight}</b></span>
+                <span>${I18N.t("fleet.spec.span")}<b>${a.span}</b></span>
+                <span>${I18N.t("fleet.spec.seats")}<b>${a.seats}</b></span>
               </div>
             </div>
           </a>
-          <a class="card-edit" href="editor.html?model=${encodeURIComponent(a.id)}" title="編輯 ${a.name} 資料">✎</a>`;
+          <a class="card-edit" href="editor.html?model=${encodeURIComponent(a.id)}" title="編輯">✎</a>`;
         grid.appendChild(card);
       }
     };
-    render(fleet.aircraft);
 
-    const search = document.getElementById("fleet-search");
-    search.addEventListener("input", () => {
+    const applyAll = () => {
+      I18N.apply();
       const q = search.value.trim().toLowerCase();
       render(fleet.aircraft.filter(a =>
-        [a.name, a.manufacturer, a.category].join(" ").toLowerCase().includes(q)));
-    });
+        [a.name, a.manufacturer, I18N.field(a.category)].join(" ").toLowerCase().includes(q)));
+    };
+
+    const search = document.getElementById("fleet-search");
+    search.addEventListener("input", applyAll);
+    document.addEventListener("langchange", applyAll);
+
+    render(fleet.aircraft);
+    I18N.apply();
   } catch (err) {
     document.getElementById("fleet-error").style.display = "block";
   }
 })();
 
+// 語言與主題按鈕
+const btnLang = document.getElementById("btn-lang");
+btnLang.textContent = I18N.LANG_NAMES[I18N.get()];
+btnLang.addEventListener("click", () => {
+  const lang = I18N.cycle();
+  btnLang.textContent = I18N.LANG_NAMES[lang];
+});
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
+</script>
 
 </script>
 </body>

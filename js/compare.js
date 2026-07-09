@@ -20,10 +20,20 @@ const $ = id => document.getElementById(id);
   if (!selected.length) selected = [fleet.aircraft[0].id];
 
   await Promise.all(selected.map(loadData));
+  I18N.apply();
   renderPickers();
   renderTable();
 
   $("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
+
+  const btnLang = $("btn-lang");
+  btnLang.textContent = I18N.LANG_NAMES[I18N.get()];
+  btnLang.addEventListener("click", () => {
+    btnLang.textContent = I18N.LANG_NAMES[I18N.cycle()];
+  });
+  document.addEventListener("langchange", () => {
+    I18N.apply(); renderPickers(); renderTable();
+  });
 })();
 
 async function loadData(id){
@@ -57,7 +67,7 @@ function renderPickers(){
   if (selected.length < 4){
     const add = document.createElement("button");
     add.className = "cmp-add";
-    add.textContent = "＋ 加入機型";
+    add.textContent = I18N.t("compare.add");
     add.addEventListener("click", async () => {
       const next = fleet.aircraft.find(a => !selected.includes(a.id));
       if (!next) return;
@@ -113,7 +123,7 @@ function renderTable(){
       <h2>${m.name}</h2>
       <div class="mfr">${m.manufacturer.toUpperCase()}</div>
       <div>
-        <button class="remove" data-id="${id}">移除</button>
+        <button class="remove" data-id="${id}">${I18N.t("compare.remove")}</button>
         <a class="view-link" href="viewer.html?model=${id}">3D ↗</a>
       </div>
     </div></th>`;
@@ -121,11 +131,11 @@ function renderTable(){
   html += "</tr></thead><tbody>";
 
   // 基本資訊列（來自 fleet）
-  html += catBlock("基本資訊", [
-    ["製造商", id => craftMeta(id).manufacturer],
-    ["類別", id => craftMeta(id).category],
-    ["首飛年份", id => craftMeta(id).firstFlight],
-    ["典型座位", id => craftMeta(id).seats],
+  html += catBlock(I18N.t("compare.basic"), [
+    [I18N.t("compare.mfr"), id => craftMeta(id).manufacturer],
+    [I18N.t("compare.category"), id => I18N.field(craftMeta(id).category)],
+    [I18N.t("compare.firstflight"), id => craftMeta(id).firstFlight],
+    [I18N.t("compare.seats"), id => craftMeta(id).seats],
   ], true);
 
   // 詳細規格各分類
@@ -133,9 +143,10 @@ function renderTable(){
     html += `<tr class="cat-row"><td colspan="${selected.length + 1}">${cat}</td></tr>`;
     catRows[cat].forEach(label => {
       const vals = selected.map(id => (lookup[id][cat] && lookup[id][cat][label]) || null);
-      const allSame = vals.every(v => v === vals[0]);
-      html += `<tr><td class="label-cell">${label}</td>`;
-      vals.forEach(v => {
+      const strVals = vals.map(v => v == null ? null : I18N.field(v));
+      const allSame = strVals.every(v => v === strVals[0]);
+      html += `<tr><td class="label-cell">${I18N.field(label)}</td>`;
+      strVals.forEach(v => {
         if (v == null) html += `<td class="val na">—</td>`;
         else html += `<td class="val${!allSame ? " diff" : ""}">${v}</td>`;
       });

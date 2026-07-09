@@ -22,22 +22,23 @@
   </div>
   <div class="v-header-right">
     <div class="v-tools">
-      <button id="btn-theme" class="tool-btn" title="切換主題">◐</button>
-      <button id="btn-specs" class="tool-btn" title="詳細規格">☰ 規格</button>
-      <a href="compare.html" class="tool-btn" title="機型比較">⇄ 比較</a>
+      <button id="btn-lang" class="tool-btn" title="Language">繁中</button>
+      <button id="btn-theme" class="tool-btn" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+      <button id="btn-specs" class="tool-btn" data-i18n="viewer.specs" title="詳細規格">☰ 規格</button>
+      <a href="compare.html" class="tool-btn" data-i18n="viewer.compare" title="機型比較">⇄ 比較</a>
     </div>
     <div class="hint">
-      拖曳 — 旋轉視角<br>
-      滾輪 / 雙指 — 縮放<br>
-      點擊部位 — 開啟解說
+      <span data-i18n="viewer.hint.drag">拖曳 — 旋轉視角</span><br>
+      <span data-i18n="viewer.hint.zoom">滾輪 / 雙指 — 縮放</span><br>
+      <span data-i18n="viewer.hint.click">點擊部位 — 開啟解說</span>
     </div>
   </div>
 </div>
 
 <div class="controls">
-  <button id="btn-rotate" aria-pressed="true">自動旋轉</button>
-  <button id="btn-reset">重置視角</button>
-  <button id="btn-hotspots" aria-pressed="true">標註點</button>
+  <button id="btn-rotate" aria-pressed="true" data-i18n="viewer.rotate">自動旋轉</button>
+  <button id="btn-reset" data-i18n="viewer.reset">重置視角</button>
+  <button id="btn-hotspots" aria-pressed="true" data-i18n="viewer.hotspots">標註點</button>
 </div>
 
 <nav class="chips" id="chips" aria-label="部位快選"></nav>
@@ -50,7 +51,7 @@
 
 <aside id="panel" aria-hidden="true">
   <div class="panel-head">
-    <div class="eyebrow">COMPONENT</div>
+    <div class="eyebrow" data-i18n="viewer.component">COMPONENT</div>
     <h2 id="p-title"></h2>
     <div class="en" id="p-en"></div>
     <button id="panel-close" aria-label="關閉面板">✕</button>
@@ -59,16 +60,16 @@
     <p id="p-summary"></p>
     <ul id="p-bullets" class="bullets"></ul>
     <div id="p-images" class="gallery"></div>
-    <div class="spec-title" id="p-spec-title">SPECIFICATIONS / 規格</div>
+    <div class="spec-title" id="p-spec-title" data-i18n="viewer.spectitle">SPECIFICATIONS / 規格</div>
     <dl id="p-specs"></dl>
-    <div class="factbox" id="p-factbox"><b>DID YOU KNOW / 冷知識</b><span id="p-fact"></span></div>
+    <div class="factbox" id="p-factbox"><b data-i18n="viewer.fact">DID YOU KNOW / 冷知識</b><span id="p-fact"></span></div>
   </div>
 </aside>
 
 <!-- 詳細規格抽屜 -->
 <aside id="spec-drawer" aria-hidden="true">
   <div class="panel-head">
-    <div class="eyebrow">FULL SPECIFICATIONS</div>
+    <div class="eyebrow" data-i18n="viewer.fullspec">FULL SPECIFICATIONS</div>
     <h2 id="spec-craft-name">詳細規格</h2>
     <button id="spec-close" aria-label="關閉規格">✕</button>
   </div>
@@ -79,11 +80,12 @@
 
 <div id="overlay">
   <div class="tag">LOADING AIRFRAME</div>
-  <div class="msg" id="overlay-msg">正在載入機體幾何與部位資料……</div>
+  <div class="msg" id="overlay-msg" data-i18n="viewer.loading">正在載入機體幾何與部位資料……</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="js/theme.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/viewer.js"></script>
 </body>
 </html>

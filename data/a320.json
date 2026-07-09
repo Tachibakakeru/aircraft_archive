@@ -1,6 +1,14 @@
 {
-  "title": "Airbus A320",
-  "sub": "A320-200 — 點擊機體部位查看解說",
+  "title": {
+    "zh": "Airbus A320",
+    "en": "Airbus A320",
+    "ja": "エアバスA320"
+  },
+  "sub": {
+    "zh": "A320-200 — 點擊機體部位查看解說",
+    "en": "A320-200 — click a part for details",
+    "ja": "A320-200 — 部位をクリックで解説"
+  },
   "partOrder": [
     "fuselage",
     "cockpit",
@@ -12,9 +20,17 @@
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "A320 機身採半硬殼式（semi-monocoque）鋁合金結構，截面直徑 3.95 公尺，是同級窄體機中最寬的，因此客艙走道與座椅寬度略勝對手。機身同時維持高空飛行時的座艙加壓，並容納前後貨艙。",
+      "summary": {
+        "zh": "A320 機身採半硬殼式（semi-monocoque）鋁合金結構，截面直徑 3.95 公尺，是同級窄體機中最寬的，因此客艙走道與座椅寬度略勝對手。機身同時維持高空飛行時的座艙加壓，並容納前後貨艙。",
+        "en": "The A320's semi-monocoque aluminium fuselage has a 3.95 m cross-section — the widest in its class, giving slightly wider aisles and seats than rivals.",
+        "ja": "A320のセミモノコック・アルミ胴体は断面直径3.95mとクラス最大級で、通路と座席に余裕がある。"
+      },
       "specs": [
         [
           "全長",

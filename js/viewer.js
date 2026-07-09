@@ -38,12 +38,14 @@ Promise.all([
 function init(DATA, MODEL){
   const PARTS = DATA.parts;
   const PART_ORDER = DATA.partOrder || Object.keys(PARTS);
+  const F = v => I18N.field(v);   // 內容欄位多語言取值
 
-  document.title = `機庫檔案 — ${DATA.title}`;
-  document.getElementById("craft-title").textContent = DATA.title;
-  document.getElementById("craft-sub").textContent = DATA.sub || "";
+  document.title = `${I18N.field(DATA.title)} — HANGAR ARCHIVE`;
+  document.getElementById("craft-title").textContent = I18N.field(DATA.title);
+  document.getElementById("craft-sub").textContent = I18N.field(DATA.sub) || "";
   document.getElementById("credit").textContent =
     (MODEL.meta && MODEL.meta.source) ? `3D MODEL: ${MODEL.meta.source}` : "";
+  I18N.apply();
 
   /* ── Three.js 場景 ── */
   const canvas = document.getElementById("scene");
@@ -265,7 +267,7 @@ function init(DATA, MODEL){
     if (!partGroups[id] || !PARTS[id]) return;   // 該機型缺此部位則不顯示
     const b = document.createElement("button");
     b.className = "chip";
-    b.textContent = PARTS[id].name;
+    b.textContent = F(PARTS[id].name);
     b.dataset.part = id;
     b.addEventListener("click", () => selectPart(id));
     chipsEl.appendChild(b);
@@ -278,17 +280,18 @@ function init(DATA, MODEL){
     setEmissive(selected, 0xffb547, 0.4);
 
     const d = PARTS[id];
-    document.getElementById("p-title").textContent = d.name;
+    document.getElementById("p-title").textContent = F(d.name);
     document.getElementById("p-en").textContent = d.en || "";
-    document.getElementById("p-summary").textContent = d.summary || "";
+    document.getElementById("p-summary").textContent = F(d.summary) || "";
 
     // 條列式重點
     const ul = document.getElementById("p-bullets");
     ul.innerHTML = "";
-    if (d.bullets && d.bullets.length){
-      d.bullets.forEach(b => {
+    const bullets = d.bullets || [];
+    if (bullets.length){
+      bullets.forEach(b => {
         const li = document.createElement("li");
-        li.textContent = b;
+        li.textContent = F(b);
         ul.appendChild(li);
       });
       ul.style.display = "";
@@ -303,13 +306,14 @@ function init(DATA, MODEL){
       d.images.forEach(img => {
         const fig = document.createElement("figure");
         const el = document.createElement("img");
-        el.src = img.src; el.alt = img.caption || d.name; el.loading = "lazy";
+        el.src = img.src; el.alt = F(img.caption) || F(d.name); el.loading = "lazy";
         el.addEventListener("error", () => { fig.style.display = "none"; });
         fig.appendChild(el);
-        if (img.caption){
-          const cap = document.createElement("figcaption");
-          cap.textContent = img.caption;
-          fig.appendChild(cap);
+        const cap = F(img.caption);
+        if (cap){
+          const c = document.createElement("figcaption");
+          c.textContent = cap;
+          fig.appendChild(c);
         }
         gal.appendChild(fig);
       });
@@ -326,8 +330,8 @@ function init(DATA, MODEL){
       d.specs.forEach(([k, v]) => {
         const row = document.createElement("div");
         row.className = "spec-row";
-        const dt = document.createElement("dt"); dt.textContent = k;
-        const dd = document.createElement("dd"); dd.textContent = v;
+        const dt = document.createElement("dt"); dt.textContent = F(k);
+        const dd = document.createElement("dd"); dd.textContent = F(v);
         row.append(dt, dd);
         dl.appendChild(row);
       });
@@ -338,8 +342,9 @@ function init(DATA, MODEL){
 
     // 冷知識
     const factbox = document.getElementById("p-factbox");
-    if (d.fact){
-      document.getElementById("p-fact").textContent = d.fact;
+    const fact = F(d.fact);
+    if (fact){
+      document.getElementById("p-fact").textContent = fact;
       factbox.style.display = "";
     } else {
       factbox.style.display = "none";
@@ -404,7 +409,7 @@ function init(DATA, MODEL){
     if (!partGroups[id] || !PARTS[id]) return;
     const el = document.createElement("div");
     el.className = "hotspot";
-    el.innerHTML = `<span class="dot"></span><span class="tag">${PARTS[id].name}</span>`;
+    el.innerHTML = `<span class="dot"></span><span class="tag">${F(PARTS[id].name)}</span>`;
     el.addEventListener("click", () => selectPart(id));
     hotspotLayer.appendChild(el);
     hotspots[id] = el;
@@ -436,12 +441,12 @@ function init(DATA, MODEL){
   /* ── 詳細規格抽屜 ── */
   const specDrawer = document.getElementById("spec-drawer");
   const specBody = document.getElementById("spec-body");
-  document.getElementById("spec-craft-name").textContent = DATA.title;
+  document.getElementById("spec-craft-name").textContent = I18N.field(DATA.title);
 
   function buildSpecs(){
     const spec = DATA.specifications;
     if (!spec || !Object.keys(spec).length){
-      specBody.innerHTML = '<div class="spec-empty">此機型尚未填入詳細規格。<br>可在編輯器中補充。</div>';
+      specBody.innerHTML = `<div class="spec-empty">${I18N.t("viewer.spec.empty")}</div>`;
       return;
     }
     specBody.innerHTML = "";
@@ -449,13 +454,13 @@ function init(DATA, MODEL){
       const box = document.createElement("div");
       box.className = "spec-cat";
       const h = document.createElement("h3");
-      h.textContent = cat;
+      h.textContent = cat;   // 分類名稱（規格分類目前以繁中鍵值，跨語言共用）
       box.appendChild(h);
       rows.forEach(([k, v]) => {
         const row = document.createElement("div");
         row.className = "spec-row";
-        const dt = document.createElement("dt"); dt.textContent = k;
-        const dd = document.createElement("dd"); dd.textContent = v;
+        const dt = document.createElement("dt"); dt.textContent = F(k);
+        const dd = document.createElement("dd"); dd.textContent = F(v);
         row.append(dt, dd);
         box.appendChild(row);
       });
@@ -478,6 +483,30 @@ function init(DATA, MODEL){
     const t = window.HangarTheme.toggle();
     // 場景網格顏色即時更新
     grid.material.color.set(themeColor("--scene-grid", "#24344d"));
+  });
+
+  /* ── 語言切換 ── */
+  const btnLang = document.getElementById("btn-lang");
+  btnLang.textContent = I18N.LANG_NAMES[I18N.get()];
+  btnLang.addEventListener("click", () => {
+    btnLang.textContent = I18N.LANG_NAMES[I18N.cycle()];
+  });
+  document.addEventListener("langchange", () => {
+    I18N.apply();
+    document.title = `${I18N.field(DATA.title)} — HANGAR ARCHIVE`;
+    document.getElementById("craft-title").textContent = I18N.field(DATA.title);
+    document.getElementById("craft-sub").textContent = I18N.field(DATA.sub) || "";
+    document.getElementById("spec-craft-name").textContent = I18N.field(DATA.title);
+    document.querySelectorAll("#chips .chip").forEach(c => {
+      const id = c.dataset.part;
+      if (PARTS[id]) c.textContent = F(PARTS[id].name);
+    });
+    for (const [id, el] of Object.entries(hotspots)){
+      const tag = el.querySelector(".tag");
+      if (tag && PARTS[id]) tag.textContent = F(PARTS[id].name);
+    }
+    buildSpecs();
+    if (selected && selected.userData.partId) selectPart(selected.userData.partId);
   });
 
   /* ── 渲染迴圈 ── */
