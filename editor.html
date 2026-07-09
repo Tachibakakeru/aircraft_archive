@@ -6,6 +6,7 @@
 <title>機庫檔案 — 資料編輯器</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/editor.css">
+<script src="js/theme.js"></script>
 </head>
 <body>
 
@@ -30,12 +31,14 @@
 </div>
 
 <div class="ed-wrap">
-  <!-- 左側：部位清單 -->
+  <!-- 左側：部位清單 + 詳細規格入口 -->
   <aside class="ed-parts" id="ed-parts"></aside>
 
   <!-- 右側：編輯表單 -->
   <main class="ed-form" id="ed-form">
     <div class="ed-empty" id="ed-empty">← 選擇左側的部位開始編輯</div>
+
+    <!-- 部位編輯欄位 -->
     <div id="ed-fields" style="display:none">
       <div class="fld">
         <label>部位名稱（中文）</label>
@@ -77,6 +80,16 @@
           網址適合外部圖床（穩定、檔案小）；上傳圖片會直接內嵌進 JSON（方便但會讓檔案變大，建議先壓縮）。
         </div>
       </div>
+    </div>
+
+    <!-- 詳細規格編輯（機型層級） -->
+    <div id="ed-specs" style="display:none">
+      <div class="spec-ed-intro">
+        以「分類」組織詳細規格（如尺寸、重量、性能、發動機）。
+        每個分類下每行一項，用冒號分隔「項目」與「數值」。
+      </div>
+      <div id="spec-cats"></div>
+      <button id="add-cat" class="ghost tiny">＋ 新增分類</button>
     </div>
   </main>
 </div>

@@ -13,6 +13,22 @@
   --cyan:#6fd3ef;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Courier New",monospace;
   --sans:"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif;
+  --scene-grid:#24344d;
+  --scene-grid2:#1a2740;
+}
+/* ── 淺色主題 ── */
+:root[data-theme="light"]{
+  --bg-0:#eef2f7;
+  --bg-1:#f7f9fc;
+  --panel:rgba(255,255,255,.92);
+  --stroke:rgba(15,30,55,.12);
+  --text:#1a2740;
+  --muted:#5a6b82;
+  --amber:#e08a00;
+  --amber-soft:rgba(224,138,0,.12);
+  --cyan:#0d7fa8;
+  --scene-grid:#c2ccdb;
+  --scene-grid2:#d5dde8;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -54,6 +70,8 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
   border:1px solid var(--stroke);
   border-radius:8px;padding:10px 16px;
   transition:all .15s;white-space:nowrap;
+  cursor:pointer;
+  display:inline-flex;align-items:center;
 }
 .ed-entry:hover{border-color:var(--amber);color:var(--amber)}
 .fleet-grid{
@@ -149,6 +167,92 @@ html.viewer-root{height:100%}
   font-family:var(--mono);font-size:11px;letter-spacing:.1em;
   color:var(--muted);text-align:right;line-height:1.9;
 }
+.v-header-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none}
+.v-tools{display:flex;gap:8px;pointer-events:auto}
+.tool-btn{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  color:var(--text);text-decoration:none;
+  background:var(--panel);
+  border:1px solid var(--stroke);
+  border-radius:6px;padding:8px 12px;cursor:pointer;
+  backdrop-filter:blur(8px);
+  transition:border-color .15s, color .15s;
+  white-space:nowrap;
+}
+.tool-btn:hover{border-color:var(--amber);color:var(--amber)}
+
+/* ── 3D 標註點 ── */
+#hotspots{position:fixed;inset:0;pointer-events:none;z-index:3}
+.hotspot{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  pointer-events:auto;cursor:pointer;
+  display:flex;align-items:center;gap:0;
+}
+.hotspot .dot{
+  width:14px;height:14px;border-radius:50%;
+  background:var(--amber);
+  border:2px solid var(--bg-0);
+  box-shadow:0 0 0 2px var(--amber), 0 2px 8px rgba(0,0,0,.4);
+  flex-shrink:0;
+  transition:transform .15s;
+}
+.hotspot:hover .dot{transform:scale(1.3)}
+.hotspot .tag{
+  font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.04em;
+  color:var(--text);
+  background:var(--panel);
+  border:1px solid var(--stroke);
+  border-radius:12px;
+  padding:3px 10px;
+  margin-left:6px;
+  white-space:nowrap;
+  backdrop-filter:blur(8px);
+  opacity:0;transform:translateX(-6px);
+  transition:opacity .15s, transform .15s;
+}
+.hotspot:hover .tag, .hotspot.active .tag{opacity:1;transform:translateX(0)}
+.hotspot.active .dot{background:var(--cyan);box-shadow:0 0 0 2px var(--cyan),0 2px 8px rgba(0,0,0,.4)}
+.hotspot.dimmed{opacity:.35}
+
+/* ── 詳細規格抽屜 ── */
+#spec-drawer{
+  position:fixed;top:0;left:0;bottom:0;z-index:6;
+  width:min(400px,100vw);
+  background:var(--panel);
+  border-right:1px solid var(--stroke);
+  backdrop-filter:blur(14px);
+  transform:translateX(-105%);
+  transition:transform .3s cubic-bezier(.22,.8,.3,1);
+  display:flex;flex-direction:column;
+}
+#spec-drawer.open{transform:translateX(0)}
+#spec-close{
+  position:absolute;top:18px;right:18px;
+  width:32px;height:32px;
+  border:1px solid var(--stroke);border-radius:6px;
+  background:transparent;color:var(--muted);
+  font-size:16px;line-height:1;cursor:pointer;
+  transition:color .15s,border-color .15s;
+}
+#spec-close:hover{color:var(--amber);border-color:var(--amber)}
+.spec-cat{margin:22px 0 4px}
+.spec-cat:first-child{margin-top:4px}
+.spec-cat h3{
+  font-family:var(--mono);font-size:11px;letter-spacing:.24em;
+  color:var(--amber);
+  padding-bottom:8px;margin-bottom:4px;
+  border-bottom:1px solid var(--stroke);
+}
+.spec-cat .spec-row{
+  display:flex;justify-content:space-between;gap:16px;
+  padding:9px 0;
+  border-bottom:1px dashed rgba(127,127,127,.15);
+  font-size:13px;
+}
+.spec-cat .spec-row dt{color:var(--muted);flex-shrink:0}
+.spec-cat .spec-row dd{font-family:var(--mono);letter-spacing:.02em;text-align:right;color:var(--text)}
+.spec-empty{color:var(--muted);font-size:13px;line-height:1.9;padding:20px 0}
 
 .controls{
   position:fixed;left:24px;bottom:96px;z-index:5;

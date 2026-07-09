@@ -10,6 +10,9 @@
 
 <canvas id="scene"></canvas>
 
+<!-- 3D 標註點層（覆蓋在 canvas 上，跟隨模型部位） -->
+<div id="hotspots"></div>
+
 <div class="v-header">
   <div class="brand">
     <a class="back" href="index.html">← FLEET / 機隊列表</a>
@@ -17,16 +20,24 @@
     <h1 id="craft-title">—</h1>
     <div class="sub" id="craft-sub"></div>
   </div>
-  <div class="hint">
-    拖曳 — 旋轉視角<br>
-    滾輪 / 雙指 — 縮放<br>
-    點擊部位 — 開啟解說
+  <div class="v-header-right">
+    <div class="v-tools">
+      <button id="btn-theme" class="tool-btn" title="切換主題">◐</button>
+      <button id="btn-specs" class="tool-btn" title="詳細規格">☰ 規格</button>
+      <a href="compare.html" class="tool-btn" title="機型比較">⇄ 比較</a>
+    </div>
+    <div class="hint">
+      拖曳 — 旋轉視角<br>
+      滾輪 / 雙指 — 縮放<br>
+      點擊部位 — 開啟解說
+    </div>
   </div>
 </div>
 
 <div class="controls">
   <button id="btn-rotate" aria-pressed="true">自動旋轉</button>
   <button id="btn-reset">重置視角</button>
+  <button id="btn-hotspots" aria-pressed="true">標註點</button>
 </div>
 
 <nav class="chips" id="chips" aria-label="部位快選"></nav>
@@ -54,6 +65,16 @@
   </div>
 </aside>
 
+<!-- 詳細規格抽屜 -->
+<aside id="spec-drawer" aria-hidden="true">
+  <div class="panel-head">
+    <div class="eyebrow">FULL SPECIFICATIONS</div>
+    <h2 id="spec-craft-name">詳細規格</h2>
+    <button id="spec-close" aria-label="關閉規格">✕</button>
+  </div>
+  <div class="panel-body" id="spec-body"></div>
+</aside>
+
 <div class="credit" id="credit"></div>
 
 <div id="overlay">
@@ -62,6 +83,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/theme.js"></script>
 <script src="js/viewer.js"></script>
 </body>
 </html>

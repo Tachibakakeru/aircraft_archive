@@ -61,7 +61,13 @@ function init(DATA, MODEL){
   rim.position.set(-7, 4, -6);
   scene.add(rim);
 
-  const grid = new THREE.PolarGridHelper(9, 16, 5, 48, 0x24344d, 0x1a2740);
+  function themeColor(varName, fallback){
+    const v = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+    return v || fallback;
+  }
+  const grid = new THREE.PolarGridHelper(9, 16, 5, 48,
+    new THREE.Color(themeColor("--scene-grid", "#24344d")),
+    new THREE.Color(themeColor("--scene-grid2", "#1a2740")));
   scene.add(grid);
 
   const shadow = new THREE.Mesh(
@@ -389,6 +395,91 @@ function init(DATA, MODEL){
     airplane.rotation.y = 0;
   });
 
+  /* ── 3D 標註點（hotspots）── */
+  const hotspotLayer = document.getElementById("hotspots");
+  let showHotspots = true;
+  const hotspots = {};   // partId → DOM 元素
+
+  PART_ORDER.forEach(id => {
+    if (!partGroups[id] || !PARTS[id]) return;
+    const el = document.createElement("div");
+    el.className = "hotspot";
+    el.innerHTML = `<span class="dot"></span><span class="tag">${PARTS[id].name}</span>`;
+    el.addEventListener("click", () => selectPart(id));
+    hotspotLayer.appendChild(el);
+    hotspots[id] = el;
+  });
+
+  const btnHotspots = document.getElementById("btn-hotspots");
+  btnHotspots.addEventListener("click", () => {
+    showHotspots = !showHotspots;
+    btnHotspots.setAttribute("aria-pressed", String(showHotspots));
+    hotspotLayer.style.display = showHotspots ? "" : "none";
+  });
+
+  const _hsVec = new THREE.Vector3();
+  function updateHotspots(){
+    if (!showHotspots) return;
+    for (const [id, el] of Object.entries(hotspots)){
+      const g = partGroups[id];
+      _hsVec.copy(g.userData.anchor).applyMatrix4(airplane.matrixWorld);
+      const v = _hsVec.clone().project(camera);
+      if (v.z > 1){ el.style.display = "none"; continue; }   // 在相機後方
+      el.style.display = "";
+      el.style.left = ((v.x + 1) / 2 * innerWidth) + "px";
+      el.style.top  = ((-v.y + 1) / 2 * innerHeight) + "px";
+      el.classList.toggle("active", selected === g);
+      el.classList.toggle("dimmed", selected && selected !== g);
+    }
+  }
+
+  /* ── 詳細規格抽屜 ── */
+  const specDrawer = document.getElementById("spec-drawer");
+  const specBody = document.getElementById("spec-body");
+  document.getElementById("spec-craft-name").textContent = DATA.title;
+
+  function buildSpecs(){
+    const spec = DATA.specifications;
+    if (!spec || !Object.keys(spec).length){
+      specBody.innerHTML = '<div class="spec-empty">此機型尚未填入詳細規格。<br>可在編輯器中補充。</div>';
+      return;
+    }
+    specBody.innerHTML = "";
+    for (const [cat, rows] of Object.entries(spec)){
+      const box = document.createElement("div");
+      box.className = "spec-cat";
+      const h = document.createElement("h3");
+      h.textContent = cat;
+      box.appendChild(h);
+      rows.forEach(([k, v]) => {
+        const row = document.createElement("div");
+        row.className = "spec-row";
+        const dt = document.createElement("dt"); dt.textContent = k;
+        const dd = document.createElement("dd"); dd.textContent = v;
+        row.append(dt, dd);
+        box.appendChild(row);
+      });
+      specBody.appendChild(box);
+    }
+  }
+  buildSpecs();
+
+  document.getElementById("btn-specs").addEventListener("click", () => {
+    const open = specDrawer.classList.toggle("open");
+    specDrawer.setAttribute("aria-hidden", String(!open));
+  });
+  document.getElementById("spec-close").addEventListener("click", () => {
+    specDrawer.classList.remove("open");
+    specDrawer.setAttribute("aria-hidden", "true");
+  });
+
+  /* ── 主題切換 ── */
+  document.getElementById("btn-theme").addEventListener("click", () => {
+    const t = window.HangarTheme.toggle();
+    // 場景網格顏色即時更新
+    grid.material.color.set(themeColor("--scene-grid", "#24344d"));
+  });
+
   /* ── 渲染迴圈 ── */
   function resize(){
     renderer.setSize(innerWidth, innerHeight, false);
@@ -403,6 +494,7 @@ function init(DATA, MODEL){
     if (autoRotate && !dragging) airplane.rotation.y += 0.0022;
     applyCamera();
     updateCallout();
+    updateHotspots();
     renderer.render(scene, camera);
   }
   tick();

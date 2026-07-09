@@ -62,6 +62,7 @@ async function fetchModel(id){
     p.bullets = p.bullets || [];
     p.images = p.images || [];
   }
+  d.specifications = d.specifications || {};
   return d;
 }
 
@@ -69,6 +70,20 @@ async function fetchModel(id){
 function renderPartList(){
   const wrap = $("ed-parts");
   wrap.innerHTML = "";
+
+  // 詳細規格入口（機型層級，置頂）
+  const specBtn = document.createElement("button");
+  specBtn.dataset.part = "__specs__";
+  const specCount = Object.values(data.specifications || {}).reduce((n, r) => n + r.length, 0);
+  specBtn.innerHTML = `詳細規格${specCount ? '<span class="dot"></span>' : ''}<span class="en">SPECIFICATIONS · ${specCount} 項</span>`;
+  specBtn.addEventListener("click", () => selectSpecs());
+  if (currentPart === "__specs__") specBtn.classList.add("active");
+  wrap.appendChild(specBtn);
+
+  const divider = document.createElement("div");
+  divider.className = "ed-parts-divider";
+  wrap.appendChild(divider);
+
   (data.partOrder || Object.keys(data.parts)).forEach(pid => {
     const p = data.parts[pid];
     if (!p) return;
@@ -88,6 +103,7 @@ function selectPart(pid){
   const p = data.parts[pid];
   $("ed-empty").style.display = "none";
   $("ed-fields").style.display = "";
+  $("ed-specs").style.display = "none";
 
   $("f-name").value = p.name || "";
   $("f-en").value = p.en || "";
@@ -99,6 +115,80 @@ function selectPart(pid){
 
   document.querySelectorAll(".ed-parts button").forEach(b =>
     b.classList.toggle("active", b.dataset.part === pid));
+}
+
+// ── 選取「詳細規格」→ 顯示規格編輯器 ──
+function selectSpecs(){
+  currentPart = "__specs__";
+  $("ed-empty").style.display = "none";
+  $("ed-fields").style.display = "none";
+  $("ed-specs").style.display = "";
+  renderSpecEditor();
+  document.querySelectorAll(".ed-parts button").forEach(b =>
+    b.classList.toggle("active", b.dataset.part === "__specs__"));
+}
+
+// 渲染詳細規格編輯器（分類 → textarea）
+function renderSpecEditor(){
+  const wrap = $("spec-cats");
+  wrap.innerHTML = "";
+  const spec = data.specifications || (data.specifications = {});
+  for (const cat of Object.keys(spec)){
+    wrap.appendChild(specCatBlock(cat, spec[cat]));
+  }
+}
+
+function specCatBlock(catName, rows){
+  const box = document.createElement("div");
+  box.className = "spec-cat-edit";
+  box.innerHTML = `
+    <div class="spec-cat-head">
+      <input type="text" class="cat-name" value="${escAttr(catName)}" placeholder="分類名稱">
+      <button class="cat-del tiny" title="刪除分類">✕</button>
+    </div>
+    <textarea class="cat-rows" rows="4" placeholder="項目：數值"></textarea>`;
+  const nameInput = box.querySelector(".cat-name");
+  const rowsInput = box.querySelector(".cat-rows");
+  rowsInput.value = (rows || []).map(([k, v]) => `${k}：${v}`).join("\n");
+
+  // 分類改名
+  nameInput.addEventListener("input", () => {
+    const spec = data.specifications;
+    const oldKeys = Object.keys(spec);
+    // 重建物件以保留順序
+    const rebuilt = {};
+    oldKeys.forEach(k => {
+      if (k === catName){ rebuilt[nameInput.value] = spec[k]; }
+      else rebuilt[k] = spec[k];
+    });
+    data.specifications = rebuilt;
+    catName = nameInput.value;
+    persist();
+  });
+  // 內容編輯
+  rowsInput.addEventListener("input", () => {
+    data.specifications[catName] = rowsInput.value.split("\n").map(line => {
+      const m = line.split(/：|:|\t/);
+      if (m.length < 2) return null;
+      return [m[0].trim(), m.slice(1).join("").trim()];
+    }).filter(Boolean);
+    persist();
+    updateSpecCount();
+  });
+  // 刪除分類
+  box.querySelector(".cat-del").addEventListener("click", () => {
+    if (!confirm(`刪除分類「${catName}」？`)) return;
+    delete data.specifications[catName];
+    persist(); renderSpecEditor(); updateSpecCount();
+  });
+  return box;
+}
+
+function updateSpecCount(){
+  const btn = document.querySelector('.ed-parts button[data-part="__specs__"]');
+  if (!btn) return;
+  const n = Object.values(data.specifications || {}).reduce((s, r) => s + r.length, 0);
+  btn.querySelector(".en").textContent = `SPECIFICATIONS · ${n} 項`;
 }
 
 // ── 表單即時寫回 data + 暫存 ──
@@ -310,6 +400,18 @@ $("gh-clear").addEventListener("click", () => {
 
 $("gh-cancel").addEventListener("click", () => { ghModal.style.display = "none"; });
 ghModal.addEventListener("click", e => { if (e.target === ghModal) ghModal.style.display = "none"; });
+
+// ── 新增規格分類 ──
+$("add-cat").addEventListener("click", () => {
+  data.specifications = data.specifications || {};
+  let name = "新分類";
+  let i = 1;
+  while (data.specifications[name]) name = `新分類 ${++i}`;
+  data.specifications[name] = [];
+  persist();
+  renderSpecEditor();
+  updateSpecCount();
+});
 
 // ── 工具 ──
 function escAttr(s){ return String(s).replace(/"/g, "&quot;").replace(/</g, "&lt;"); }

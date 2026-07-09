@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>機庫檔案 HANGAR ARCHIVE</title>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,9 @@
 
   <div class="fleet-toolbar">
     <input type="search" id="fleet-search" placeholder="搜尋機型 / 廠商…">
+    <a class="ed-entry" href="compare.html">⇄ 比較</a>
     <a class="ed-entry" href="editor.html">✎ 編輯資料</a>
+    <button class="ed-entry" id="btn-theme" title="切換主題">◐</button>
   </div>
 
   <div class="fleet-grid" id="fleet-grid"></div>
@@ -78,6 +81,9 @@
     document.getElementById("fleet-error").style.display = "block";
   }
 })();
+
+document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
+
 </script>
 </body>
 </html>
