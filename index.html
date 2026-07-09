@@ -27,7 +27,7 @@
 
   <div class="fleet-grid" id="fleet-grid"></div>
 
-  <div id="fleet-error">
+  <div id="fleet-error" data-i18n-html="fleet.error">
     無法載入機隊資料（<code>data/fleet.json</code>）。<br>
     若你是直接雙擊開啟 HTML 檔案（<code>file://</code>），瀏覽器會阻擋資料讀取，
     請在專案資料夾啟動本機伺服器後再開啟：<br>
@@ -36,7 +36,7 @@
 
   <div class="fleet-foot">
     3D MODELS: Flightradar24 / fr24-3d-models (GPL-2.0)<br>
-    新增機型流程請見 README.md — convert_fr24.py 轉換 → 撰寫 data JSON → 註冊至 fleet.json
+    <span data-i18n="fleet.foot.line2">新增機型流程請見 README.md — convert_fr24.py 轉換 → 撰寫 data JSON → 註冊至 fleet.json</span>
   </div>
 </div>
 
@@ -69,7 +69,7 @@
               </div>
             </div>
           </a>
-          <a class="card-edit" href="editor.html?model=${encodeURIComponent(a.id)}" title="編輯">✎</a>`;
+          <a class="card-edit" href="editor.html?model=${encodeURIComponent(a.id)}" title="${I18N.t("fleet.edit.title")}">✎</a>`;
         grid.appendChild(card);
       }
     };
@@ -92,16 +92,11 @@
   }
 })();
 
-// 語言與主題按鈕
-const btnLang = document.getElementById("btn-lang");
-btnLang.textContent = I18N.LANG_NAMES[I18N.get()];
-btnLang.addEventListener("click", () => {
-  const lang = I18N.cycle();
-  btnLang.textContent = I18N.LANG_NAMES[lang];
-});
+// 語言（點擊選擇）與主題按鈕
+I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 </script>
 
-</script>
+<script src="js/ui.js?v=1"></script>
 </body>
 </html>

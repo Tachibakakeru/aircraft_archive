@@ -454,13 +454,13 @@ function init(DATA, MODEL){
       const box = document.createElement("div");
       box.className = "spec-cat";
       const h = document.createElement("h3");
-      h.textContent = cat;   // 分類名稱（規格分類目前以繁中鍵值，跨語言共用）
+      h.textContent = I18N.spec(cat);   // 分類名稱翻譯
       box.appendChild(h);
       rows.forEach(([k, v]) => {
         const row = document.createElement("div");
         row.className = "spec-row";
-        const dt = document.createElement("dt"); dt.textContent = F(k);
-        const dd = document.createElement("dd"); dd.textContent = F(v);
+        const dt = document.createElement("dt"); dt.textContent = I18N.spec(F(k));
+        const dd = document.createElement("dd"); dd.textContent = I18N.specValue(F(v));
         row.append(dt, dd);
         box.appendChild(row);
       });
@@ -485,12 +485,8 @@ function init(DATA, MODEL){
     grid.material.color.set(themeColor("--scene-grid", "#24344d"));
   });
 
-  /* ── 語言切換 ── */
-  const btnLang = document.getElementById("btn-lang");
-  btnLang.textContent = I18N.LANG_NAMES[I18N.get()];
-  btnLang.addEventListener("click", () => {
-    btnLang.textContent = I18N.LANG_NAMES[I18N.cycle()];
-  });
+  /* ── 語言選擇（點擊選擇） ── */
+  I18N.mountSelector(document.getElementById("btn-lang"));
   document.addEventListener("langchange", () => {
     I18N.apply();
     document.title = `${I18N.field(DATA.title)} — HANGAR ARCHIVE`;

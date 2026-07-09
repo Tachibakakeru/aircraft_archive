@@ -181,6 +181,42 @@ html.viewer-root{height:100%}
 }
 .tool-btn:hover{border-color:var(--amber);color:var(--amber)}
 
+/* ── 語言選單（點擊選擇） ── */
+.lang-menu{
+  position:fixed;z-index:60;min-width:132px;
+  background:var(--panel);
+  border:1px solid var(--stroke);border-radius:8px;
+  padding:5px;backdrop-filter:blur(10px);
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+  display:flex;flex-direction:column;gap:2px;
+}
+.lang-menu[hidden]{display:none}
+.lang-item{
+  font-family:var(--sans);font-size:13px;text-align:left;
+  color:var(--text);background:transparent;
+  border:0;border-radius:6px;padding:8px 12px;cursor:pointer;
+  transition:background .12s, color .12s;
+}
+.lang-item:hover{background:var(--amber-soft);color:var(--amber)}
+.lang-item[aria-selected="true"]{color:var(--amber);font-weight:700}
+.lang-item[aria-selected="true"]::after{content:" ✓";color:var(--amber)}
+
+/* ── 回到頂端按鈕 ── */
+#to-top{
+  position:fixed;right:20px;bottom:20px;z-index:55;
+  width:44px;height:44px;border-radius:50%;
+  font-size:20px;line-height:1;color:var(--bg-0);
+  background:var(--amber);border:1px solid var(--amber);
+  cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.35);
+  opacity:0;transform:translateY(12px);pointer-events:none;
+  transition:opacity .2s, transform .2s, filter .15s;
+}
+#to-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#to-top:hover{filter:brightness(1.08)}
+@media (max-width:640px){
+  #to-top{right:14px;bottom:14px;width:40px;height:40px;font-size:18px}
+}
+
 /* ── 3D 標註點 ── */
 #hotspots{position:fixed;inset:0;pointer-events:none;z-index:3}
 .hotspot{

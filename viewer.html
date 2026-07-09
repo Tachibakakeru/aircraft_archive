@@ -15,8 +15,8 @@
 
 <div class="v-header">
   <div class="brand">
-    <a class="back" href="index.html">← FLEET / 機隊列表</a>
-    <div class="eyebrow">HANGAR ARCHIVE / 機庫檔案</div>
+    <a class="back" href="index.html" data-i18n="fleet.back">← FLEET / 機隊列表</a>
+    <div class="eyebrow" data-i18n="brand.eyebrow">HANGAR ARCHIVE / 機庫檔案</div>
     <h1 id="craft-title">—</h1>
     <div class="sub" id="craft-sub"></div>
   </div>
@@ -41,7 +41,7 @@
   <button id="btn-hotspots" aria-pressed="true" data-i18n="viewer.hotspots">標註點</button>
 </div>
 
-<nav class="chips" id="chips" aria-label="部位快選"></nav>
+<nav class="chips" id="chips" aria-label="部位快選" data-i18n-aria="viewer.chips.aria"></nav>
 
 <svg id="callout-svg" aria-hidden="true">
   <circle id="co-dot" r="4" style="display:none"></circle>
@@ -54,7 +54,7 @@
     <div class="eyebrow" data-i18n="viewer.component">COMPONENT</div>
     <h2 id="p-title"></h2>
     <div class="en" id="p-en"></div>
-    <button id="panel-close" aria-label="關閉面板">✕</button>
+    <button id="panel-close" aria-label="關閉面板" data-i18n-aria="viewer.panel.close">✕</button>
   </div>
   <div class="panel-body">
     <p id="p-summary"></p>
@@ -71,7 +71,7 @@
   <div class="panel-head">
     <div class="eyebrow" data-i18n="viewer.fullspec">FULL SPECIFICATIONS</div>
     <h2 id="spec-craft-name">詳細規格</h2>
-    <button id="spec-close" aria-label="關閉規格">✕</button>
+    <button id="spec-close" aria-label="關閉規格" data-i18n-aria="viewer.spec.close">✕</button>
   </div>
   <div class="panel-body" id="spec-body"></div>
 </aside>

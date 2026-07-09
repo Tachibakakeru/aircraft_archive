@@ -26,11 +26,7 @@ const $ = id => document.getElementById(id);
 
   $("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 
-  const btnLang = $("btn-lang");
-  btnLang.textContent = I18N.LANG_NAMES[I18N.get()];
-  btnLang.addEventListener("click", () => {
-    btnLang.textContent = I18N.LANG_NAMES[I18N.cycle()];
-  });
+  I18N.mountSelector($("btn-lang"));
   document.addEventListener("langchange", () => {
     I18N.apply(); renderPickers(); renderTable();
   });
@@ -140,12 +136,12 @@ function renderTable(){
 
   // 詳細規格各分類
   catOrder.forEach(cat => {
-    html += `<tr class="cat-row"><td colspan="${selected.length + 1}">${cat}</td></tr>`;
+    html += `<tr class="cat-row"><td colspan="${selected.length + 1}">${I18N.spec(cat)}</td></tr>`;
     catRows[cat].forEach(label => {
       const vals = selected.map(id => (lookup[id][cat] && lookup[id][cat][label]) || null);
-      const strVals = vals.map(v => v == null ? null : I18N.field(v));
+      const strVals = vals.map(v => v == null ? null : I18N.specValue(I18N.field(v)));
       const allSame = strVals.every(v => v === strVals[0]);
-      html += `<tr><td class="label-cell">${I18N.field(label)}</td>`;
+      html += `<tr><td class="label-cell">${I18N.spec(I18N.field(label))}</td>`;
       strVals.forEach(v => {
         if (v == null) html += `<td class="val na">—</td>`;
         else html += `<td class="val${!allSame ? " diff" : ""}">${v}</td>`;
