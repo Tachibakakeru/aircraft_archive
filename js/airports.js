@@ -12,11 +12,19 @@ let AIRPORTS = [];
 let COUNTRIES = {};
 const detailCache = {};   // country code → { ident: {lat,lon,elev,region,runways} }
 
+const FAV_KEY = "hangar_apt_favs";
+let FAVS = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
+function isFav(id){ return FAVS.has(id); }
+function toggleFav(id){
+  FAVS.has(id) ? FAVS.delete(id) : FAVS.add(id);
+  localStorage.setItem(FAV_KEY, JSON.stringify([...FAVS]));
+}
+
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=25"),
-      fetch("data/countries.json?v=25"),
+      fetch("data/airports.json?v=26"),
+      fetch("data/countries.json?v=26"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -40,18 +48,49 @@ const detailCache = {};   // country code → { ident: {lat,lon,elev,region,runw
   $("apt-search").addEventListener("input", applyAll);
   $("apt-country").addEventListener("change", applyAll);
   $("apt-type").addEventListener("change", applyAll);
+  $("apt-fav-only").addEventListener("change", applyAll);
   document.addEventListener("langchange", () => { I18N.apply(); applyAll(); });
 
   I18N.mountSelector($("btn-lang"));
   $("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
   $("apt-p-close").addEventListener("click", closePanel);
-  document.addEventListener("keydown", e => { if (e.key === "Escape") closePanel(); });
+  $("apt-p-fav").addEventListener("click", () => {
+    const id = $("panel").dataset.id;
+    if (!id) return;
+    toggleFav(id);
+    syncFavButton();
+    applyAll();
+  });
+  document.addEventListener("keydown", e => {
+    if (!$("sat-lightbox").hidden){ if (e.key === "Escape") closeSatLightbox(); return; }
+    if (e.key === "Escape") closePanel();
+  });
   document.addEventListener("click", e => {
+    if (!$("sat-lightbox").hidden) return;
     const panel = $("panel");
     if (panel.classList.contains("open") && !panel.contains(e.target) && !e.target.closest(".apt-row"))
       closePanel();
   });
+
+  // 衛星縮圖點擊 → 放大檢視（事件委派，涵蓋每次重繪的內容）
+  document.addEventListener("click", e => {
+    const sat = e.target.closest(".apt-sat");
+    if (sat) openSatLightbox(parseFloat(sat.dataset.lat), parseFloat(sat.dataset.lon), parseInt(sat.dataset.zoom, 10));
+  });
+  $("sat-lb-close").addEventListener("click", closeSatLightbox);
+  $("sat-lb-in").addEventListener("click", () => { satState.zoom = Math.min(19, satState.zoom + 1); renderSatLightbox(); });
+  $("sat-lb-out").addEventListener("click", () => { satState.zoom = Math.max(2, satState.zoom - 1); renderSatLightbox(); });
+  $("sat-lightbox").addEventListener("click", e => { if (e.target.id === "sat-lightbox") closeSatLightbox(); });
 })();
+
+function syncFavButton(){
+  const id = $("panel").dataset.id;
+  const on = id && isFav(id);
+  const btn = $("apt-p-fav");
+  btn.classList.toggle("on", !!on);
+  btn.setAttribute("aria-pressed", String(!!on));
+  btn.textContent = on ? "★" : "☆";
+}
 
 function countryName(code){ return (COUNTRIES[code] || code || "—"); }
 
@@ -75,12 +114,14 @@ function applyAll(){
   const q = $("apt-search").value.trim().toLowerCase();
   const country = $("apt-country").value;
   const type = $("apt-type").value;
+  const favOnly = $("apt-fav-only").checked;
 
   let list;
-  if (!q && !country && !type){
+  if (!q && !country && !type && !favOnly){
     list = null;   // 尚未縮小範圍：不渲染，提示使用者搜尋
   } else {
     list = AIRPORTS.filter(a => {
+      if (favOnly && !isFav(a.id)) return false;
       if (country && a.country !== country) return false;
       if (type && a.type !== type) return false;
       if (!q) return true;
@@ -107,25 +148,40 @@ function render(list){
     return;
   }
   emptyEl.hidden = true;
-  list.sort((a, b) => a.name.localeCompare(b.name));
+  list = list.slice().sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
   const shown = list.slice(0, MAX_RESULTS);
   countEl.innerHTML = `${I18N.t("airports.count.showing")} <b>${shown.length.toLocaleString()}</b> / ${list.length.toLocaleString()}`;
 
   listEl.innerHTML = shown.map(a => {
     const codes = [a.icao, a.iata].filter(Boolean).map(c => `<span>${c}</span>`).join("");
     const loc = [a.city, countryName(a.country)].filter(Boolean).join(", ");
-    return `<button class="apt-row${a.type === "closed" ? " closed" : ""}" data-id="${a.id}">
+    const fav = isFav(a.id);
+    return `<div class="apt-row${a.type === "closed" ? " closed" : ""}" data-id="${a.id}" tabindex="0" role="button">
       <span class="apt-type-dot ${a.type}"></span>
       <span class="apt-main">
         <span class="apt-name">${a.name}</span>
         <span class="apt-loc">${loc}</span>
       </span>
+      <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}">${fav ? "★" : "☆"}</button>
       <span class="apt-codes">${codes}</span>
-    </button>`;
+    </div>`;
   }).join("");
 
-  listEl.querySelectorAll(".apt-row").forEach(row =>
-    row.addEventListener("click", () => openAirport(row.dataset.id)));
+  listEl.querySelectorAll(".apt-row").forEach(row => {
+    row.addEventListener("click", e => {
+      if (e.target.closest(".apt-row-fav")) return;
+      openAirport(row.dataset.id);
+    });
+    row.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " "){ e.preventDefault(); openAirport(row.dataset.id); }
+    });
+  });
+  listEl.querySelectorAll(".apt-row-fav").forEach(btn =>
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      toggleFav(btn.dataset.favId);
+      applyAll();
+    }));
 
   moreEl.hidden = list.length <= MAX_RESULTS;
   if (!moreEl.hidden) moreEl.textContent = I18N.t("airports.more").replace("{n}", (list.length - MAX_RESULTS).toLocaleString());
@@ -137,7 +193,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=25`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=26`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -201,24 +257,45 @@ function tileXY(lon, lat, z){
   const y = Math.floor((1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2 * n);
   return { x: ((x % n) + n) % n, y: Math.max(0, Math.min(n - 1, y)) };
 }
+function tileURL(z, x, y){
+  return `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}`;
+}
+function mosaicImgs(lat, lon, z, r){
+  const { x: cx, y: cy } = tileXY(lon, lat, z);
+  let tiles = "";
+  for (let dy = -r; dy <= r; dy++)
+    for (let dx = -r; dx <= r; dx++)
+      tiles += `<img src="${tileURL(z, cx + dx, cy + dy)}" alt="">`;
+  return tiles;
+}
 function satelliteHTML(lat, lon, type){
   if (lat == null || lon == null) return "";
   const z = SAT_ZOOM[type] || 14;
-  const { x: cx, y: cy } = tileXY(lon, lat, z);
-  let tiles = "";
-  for (let dy = -1; dy <= 1; dy++){
-    for (let dx = -1; dx <= 1; dx++){
-      const url = `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${cy + dy}/${cx + dx}`;
-      tiles += `<img src="${url}" alt="">`;
-    }
-  }
-  return `<div class="apt-sat">${tiles}</div><div class="apt-sat-credit">Imagery © Esri, Maxar, Earthstar Geographics</div>`;
+  return `<div class="apt-sat" role="button" tabindex="0" data-lat="${lat}" data-lon="${lon}" data-zoom="${z}"
+      style="grid-template-columns:repeat(3,1fr)">${mosaicImgs(lat, lon, z, 1)}</div>
+    <div class="apt-sat-credit">${I18N.t("airports.sat.hint")} · Imagery © Esri, Maxar, Earthstar Geographics</div>`;
 }
+
+/* ── 衛星影像放大檢視（點擊縮圖開啟，可再放大/縮小） ── */
+let satState = null;
+function openSatLightbox(lat, lon, zoom){
+  satState = { lat, lon, zoom };
+  renderSatLightbox();
+  $("sat-lightbox").hidden = false;
+}
+function renderSatLightbox(){
+  const { lat, lon, zoom } = satState;
+  $("sat-lightbox-grid").innerHTML = mosaicImgs(lat, lon, zoom, 2);
+  $("sat-lightbox-zoom").textContent = "z" + zoom;
+}
+function closeSatLightbox(){ $("sat-lightbox").hidden = true; satState = null; }
 
 async function openAirport(id){
   const a = AIRPORTS.find(x => x.id === id);
   if (!a) return;
   const panel = $("panel");
+  panel.dataset.id = id;
+  syncFavButton();
   $("apt-p-type").textContent = I18N.t("airports.type." + a.type) || a.type;
   $("apt-p-name").textContent = a.name;
   $("apt-p-loc").textContent = [a.city, countryName(a.country)].filter(Boolean).join(", ");

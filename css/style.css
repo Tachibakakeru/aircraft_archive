@@ -473,7 +473,7 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
   font-family:var(--mono);font-size:12px;letter-spacing:.14em;
   color:var(--muted);
 }
-#panel-close{
+#panel-close, .panel-close-btn{
   position:absolute;top:18px;right:18px;
   width:32px;height:32px;
   border:1px solid var(--stroke);border-radius:6px;
@@ -481,7 +481,7 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
   font-size:16px;line-height:1;cursor:pointer;
   transition:color .15s,border-color .15s;
 }
-#panel-close:hover{color:var(--amber);border-color:var(--amber)}
+#panel-close:hover, .panel-close-btn:hover{color:var(--amber);border-color:var(--amber)}
 .panel-body{padding:20px 24px 32px;overflow-y:auto}
 .panel-body p{font-size:14px;line-height:1.85;color:var(--text)}
 .spec-title{
