@@ -208,7 +208,7 @@ body.viewer{
   background:radial-gradient(135% 105% at 50% 40%, var(--scene-bg-1) 0%, var(--scene-bg-0) 100%);
 }
 html.viewer-root{height:100%}
-#scene{position:fixed;inset:0;display:block;touch-action:none;cursor:grab}
+#scene{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
 #scene.dragging{cursor:grabbing}
 #scene.hovering{cursor:pointer}
 
