@@ -616,3 +616,16 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
   transition:background .15s;
 }
 #auth-submit:hover{background:#ffc266}
+
+/* ── 密碼欄位眼睛圖示（切換明碼／遮蔽）：共用於解鎖畫面與 GitHub Token 欄位 ── */
+.pw-field{position:relative}
+.pw-field input{padding-right:42px !important}
+.pw-toggle{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  width:30px;height:30px;
+  display:flex;align-items:center;justify-content:center;
+  background:transparent;border:none;cursor:pointer;
+  color:var(--muted);font-size:15px;line-height:1;border-radius:6px;
+  padding:0;
+}
+.pw-toggle:hover{color:var(--text);background:rgba(255,255,255,.08)}

@@ -16,6 +16,7 @@ const $ = id => document.getElementById(id);
 // ── 初始化 ──
 (async () => {
   await requireAuth();   // 未驗證會顯示鎖定畫面，通過才繼續
+  wirePwToggle($("gh-token"));
 
   try {
     fleet = await (await fetch("data/fleet.json")).json();

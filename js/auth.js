@@ -59,6 +59,26 @@ const HANGAR_AUTH = (() => {
   return { hasPassword, isAuthed, setPassword, verify, changePassword, logout, sessionPassword };
 })();
 
+/* 密碼欄位加上「眼睛」圖示，點擊切換明碼／遮蔽顯示 */
+function wirePwToggle(input){
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "pw-toggle";
+  btn.textContent = "👁";
+  btn.title = "顯示密碼";
+  const wrap = document.createElement("div");
+  wrap.className = "pw-field";
+  input.parentNode.insertBefore(wrap, input);
+  wrap.appendChild(input);
+  wrap.appendChild(btn);
+  btn.addEventListener("click", () => {
+    const showing = input.type === "text";
+    input.type = showing ? "password" : "text";
+    btn.textContent = showing ? "👁" : "🙈";
+    btn.title = showing ? "顯示密碼" : "隱藏密碼";
+  });
+}
+
 /* 在頁面掛上一個全螢幕鎖，通過後才 resolve */
 function requireAuth(){
   return new Promise(resolve => {
@@ -87,6 +107,8 @@ function requireAuth(){
     const input = gate.querySelector("#auth-input");
     const confirm = gate.querySelector("#auth-confirm");
     const err = gate.querySelector("#auth-err");
+    wirePwToggle(input);
+    if (confirm) wirePwToggle(confirm);
     input.focus();
 
     async function submit(){
