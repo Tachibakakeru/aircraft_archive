@@ -44,7 +44,7 @@ export async function onRequestPost({ request, env }) {
   catch { return json({ ok: false, message: "請求格式錯誤" }, 400); }
 
   const { password, path, content, message } = body || {};
-  if (password !== env.EDITOR_PASSWORD) {
+  if ((password || "").trim() !== (env.EDITOR_PASSWORD || "").trim()) {
     return json({ ok: false, message: "密碼錯誤，請重新登入編輯器後再試。" }, 401);
   }
   if (!path || typeof content !== "string" || path.includes("..")) {
