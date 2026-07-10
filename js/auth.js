@@ -56,7 +56,36 @@ const HANGAR_AUTH = (() => {
     sessionStorage.removeItem(PLAIN_KEY);
   }
 
-  return { hasPassword, isAuthed, setPassword, verify, changePassword, logout, sessionPassword };
+  // 伺服器代管驗證（優先）：所有裝置對同一組 env.EDITOR_PASSWORD 比對，
+  // 不會像本機雜湊那樣「每台裝置各自設定、彼此不同步」。
+  async function serverAvailable(){
+    try {
+      const r = await fetch("/api/verify");
+      if (!r.ok) return false;
+      const d = await r.json().catch(() => ({}));
+      return !!d.configured;
+    } catch { return false; }
+  }
+  async function serverVerify(pw){
+    try {
+      const r = await fetch("/api/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: pw }),
+      });
+      const d = await r.json().catch(() => ({ ok:false }));
+      if (d.ok){
+        sessionStorage.setItem(SESSION_KEY, "1");
+        sessionStorage.setItem(PLAIN_KEY, pw);
+      }
+      return !!d.ok;
+    } catch { return false; }
+  }
+
+  return {
+    hasPassword, isAuthed, setPassword, verify, changePassword, logout, sessionPassword,
+    serverAvailable, serverVerify,
+  };
 })();
 
 /* 密碼欄位加上「眼睛」圖示，點擊切換明碼／遮蔽顯示 */
@@ -80,11 +109,15 @@ function wirePwToggle(input){
 }
 
 /* 在頁面掛上一個全螢幕鎖，通過後才 resolve */
-function requireAuth(){
-  return new Promise(resolve => {
-    if (HANGAR_AUTH.isAuthed()) { resolve(); return; }
+async function requireAuth(){
+  if (HANGAR_AUTH.isAuthed()) return;
 
-    const firstTime = !HANGAR_AUTH.hasPassword();
+  // 伺服器代管可用時，一律走伺服器驗證：所有裝置對同一組密碼比對，
+  // 不再有「這台裝置設定的密碼」這種各自為政的本機專屬概念。
+  const useServer = await HANGAR_AUTH.serverAvailable();
+  const firstTime = !useServer && !HANGAR_AUTH.hasPassword();
+
+  return new Promise(resolve => {
     const gate = document.createElement("div");
     gate.className = "auth-gate";
     gate.innerHTML = `
@@ -93,7 +126,9 @@ function requireAuth(){
         <h2>${firstTime ? "首次使用，請設定編輯密碼" : "請輸入編輯密碼"}</h2>
         <p class="auth-desc">${firstTime
           ? "這組密碼保存在你的瀏覽器，用來防止他人隨手修改資料。忘記可清除瀏覽器資料重設。"
-          : "此密碼保護編輯功能。訪客仍可正常瀏覽所有內容。"}</p>
+          : useServer
+            ? "此密碼與所有裝置共用（伺服器端統一驗證）。訪客仍可正常瀏覽所有內容。"
+            : "此密碼保護編輯功能。訪客仍可正常瀏覽所有內容。"}</p>
         <input type="password" id="auth-input" placeholder="${firstTime ? "設定一組密碼…" : "密碼…"}" autocomplete="off">
         ${firstTime ? '<input type="password" id="auth-confirm" placeholder="再次輸入確認…" autocomplete="off">' : ''}
         <div class="auth-err" id="auth-err"></div>
@@ -107,6 +142,7 @@ function requireAuth(){
     const input = gate.querySelector("#auth-input");
     const confirm = gate.querySelector("#auth-confirm");
     const err = gate.querySelector("#auth-err");
+    const btn = gate.querySelector("#auth-submit");
     wirePwToggle(input);
     if (confirm) wirePwToggle(confirm);
     input.focus();
@@ -114,6 +150,16 @@ function requireAuth(){
     async function submit(){
       const pw = input.value;
       if (!pw){ err.textContent = "請輸入密碼"; return; }
+
+      if (useServer){
+        btn.disabled = true;
+        const ok = await HANGAR_AUTH.serverVerify(pw);
+        btn.disabled = false;
+        if (ok){ gate.remove(); resolve(); }
+        else { err.textContent = "密碼錯誤"; input.value = ""; input.focus(); }
+        return;
+      }
+
       if (firstTime){
         if (pw.length < 4){ err.textContent = "密碼至少 4 個字元"; return; }
         if (pw !== confirm.value){ err.textContent = "兩次輸入不一致"; return; }
@@ -125,7 +171,7 @@ function requireAuth(){
       }
     }
 
-    gate.querySelector("#auth-submit").addEventListener("click", submit);
+    btn.addEventListener("click", submit);
     gate.addEventListener("keydown", e => { if (e.key === "Enter") submit(); });
   });
 }

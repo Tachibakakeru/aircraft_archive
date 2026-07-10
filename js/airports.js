@@ -42,8 +42,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=35"),
-      fetch("data/countries.json?v=35"),
+      fetch("data/airports.json?v=36"),
+      fetch("data/countries.json?v=36"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -269,7 +269,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=35`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=36`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -361,8 +361,20 @@ function openSatLightbox(lat, lon, zoom){
 }
 function renderSatLightbox(){
   const { lat, lon, zoom } = satState;
-  $("sat-lightbox-grid").innerHTML = mosaicImgs(lat, lon, zoom, 2);
   $("sat-lightbox-zoom").textContent = "z" + zoom;
+  // 25 張圖磚各自非同步載入，若載完幾張就先顯示，放大/縮小切換時
+  // 會看到一半新一半舊、順序亂跳的拼貼；改成全部預載完成才一次換上。
+  const temp = document.createElement("div");
+  temp.innerHTML = mosaicImgs(lat, lon, zoom, 2);
+  const imgs = [...temp.querySelectorAll("img")];
+  Promise.all(imgs.map(img => new Promise(resolve => {
+    if (img.complete) return resolve();
+    img.addEventListener("load", resolve, { once: true });
+    img.addEventListener("error", resolve, { once: true });
+  }))).then(() => {
+    if (!satState || satState.lat !== lat || satState.lon !== lon || satState.zoom !== zoom) return;
+    $("sat-lightbox-grid").innerHTML = temp.innerHTML;
+  });
 }
 function closeSatLightbox(){ $("sat-lightbox").hidden = true; satState = null; }
 
@@ -372,7 +384,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=35`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=36`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
