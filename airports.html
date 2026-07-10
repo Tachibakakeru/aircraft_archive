@@ -7,10 +7,10 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=27">
-<link rel="stylesheet" href="css/airports.css?v=27">
-<script src="js/theme.js?v=27"></script>
-<script src="js/i18n.js?v=27"></script>
+<link rel="stylesheet" href="css/style.css?v=28">
+<link rel="stylesheet" href="css/airports.css?v=28">
+<script src="js/theme.js?v=28"></script>
+<script src="js/i18n.js?v=28"></script>
 </head>
 <body>
 
@@ -63,6 +63,27 @@
     <dl id="apt-p-info"></dl>
     <div class="rw-section-title" data-i18n="airports.detail.runways">RUNWAYS / 跑道</div>
     <div id="apt-p-runways"></div>
+
+    <div class="apt-notes-title">
+      <span data-i18n="airports.detail.notes">NOTES / 備註與歷史資訊</span>
+      <button id="apt-p-edit" class="apt-notes-editbtn" data-i18n="airports.detail.editBtn">✎ 編輯</button>
+    </div>
+    <div id="apt-p-notes-view" class="apt-notes-view"></div>
+    <div id="apt-p-notes-edit" class="apt-notes-edit" hidden>
+      <textarea id="apt-p-notes-text" class="apt-notes-textarea" data-i18n-ph="airports.detail.notesPh" placeholder="輸入這座機場/跑道的備註、歷史或重要資訊…"></textarea>
+      <div id="apt-p-notes-imgs" class="apt-notes-imgs"></div>
+      <div class="apt-notes-addrow">
+        <input type="url" id="apt-p-notes-imgurl" class="apt-notes-imgurl" data-i18n-ph="airports.detail.imageUrlPh" placeholder="圖片網址 https://…">
+        <button id="apt-p-notes-imgadd" class="ed-entry" data-i18n="airports.detail.addImageUrl">＋ 加入網址</button>
+        <button id="apt-p-notes-imgfile" class="ed-entry" data-i18n="airports.detail.uploadImage">📁 上傳圖片</button>
+        <input type="file" id="apt-p-notes-file" accept="image/*" multiple hidden>
+      </div>
+      <div class="apt-notes-actions">
+        <span class="apt-notes-hint" data-i18n="airports.detail.notesLocal">＊僅儲存在你的瀏覽器（本機），不會同步給其他人。</span>
+        <button id="apt-p-notes-cancel" class="ed-entry" data-i18n="airports.detail.cancel">取消</button>
+        <button id="apt-p-notes-save" class="ed-entry primary" data-i18n="airports.detail.save">儲存</button>
+      </div>
+    </div>
   </div>
 </aside>
 
@@ -78,7 +99,7 @@
   <div class="apt-sat-credit">Imagery © Esri, Maxar, Earthstar Geographics</div>
 </div>
 
-<script src="js/airports.js?v=27"></script>
-<script src="js/ui.js?v=27"></script>
+<script src="js/airports.js?v=28"></script>
+<script src="js/ui.js?v=28"></script>
 </body>
 </html>

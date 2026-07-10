@@ -20,11 +20,30 @@ function toggleFav(id){
   localStorage.setItem(FAV_KEY, JSON.stringify([...FAVS]));
 }
 
+/* ── 機場備註／照片（本機自訂內容，僅存於使用者瀏覽器） ── */
+const NOTES_KEY = "hangar_apt_notes";
+function loadNotesStore(){
+  try { return JSON.parse(localStorage.getItem(NOTES_KEY) || "{}"); } catch { return {}; }
+}
+function getNotes(id){
+  const n = loadNotesStore()[id];
+  return n || { text: "", images: [] };
+}
+function setNotes(id, notes){
+  const store = loadNotesStore();
+  if (!notes.text && !(notes.images && notes.images.length)) delete store[id];
+  else store[id] = notes;
+  localStorage.setItem(NOTES_KEY, JSON.stringify(store));
+}
+function escapeHTML(s){
+  return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+}
+
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=27"),
-      fetch("data/countries.json?v=27"),
+      fetch("data/airports.json?v=28"),
+      fetch("data/countries.json?v=28"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -77,10 +96,40 @@ function toggleFav(id){
     const sat = e.target.closest(".apt-sat");
     if (sat) openSatLightbox(parseFloat(sat.dataset.lat), parseFloat(sat.dataset.lon), parseInt(sat.dataset.zoom, 10));
   });
-  $("sat-lb-close").addEventListener("click", closeSatLightbox);
-  $("sat-lb-in").addEventListener("click", () => { satState.zoom = Math.min(19, satState.zoom + 1); renderSatLightbox(); });
-  $("sat-lb-out").addEventListener("click", () => { satState.zoom = Math.max(2, satState.zoom - 1); renderSatLightbox(); });
-  $("sat-lightbox").addEventListener("click", e => { if (e.target.id === "sat-lightbox") closeSatLightbox(); });
+  $("sat-lb-close").addEventListener("click", e => { e.stopPropagation(); closeSatLightbox(); });
+  $("sat-lb-in").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.min(19, satState.zoom + 1); renderSatLightbox(); });
+  $("sat-lb-out").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.max(2, satState.zoom - 1); renderSatLightbox(); });
+  $("sat-lightbox").addEventListener("click", e => { e.stopPropagation(); if (e.target.id === "sat-lightbox") closeSatLightbox(); });
+
+  // 機場備註／照片編輯
+  $("apt-p-edit").addEventListener("click", () => openNotesEditor($("panel").dataset.id));
+  $("apt-p-notes-cancel").addEventListener("click", closeNotesEditor);
+  $("apt-p-notes-save").addEventListener("click", () => {
+    const id = $("panel").dataset.id;
+    if (!id) return;
+    const text = $("apt-p-notes-text").value.trim();
+    try { setNotes(id, { text, images: editingImages }); }
+    catch { alert("儲存失敗，圖片可能過大，建議改用圖片網址。"); return; }
+    renderNotesView(id);
+    closeNotesEditor();
+  });
+  $("apt-p-notes-imgadd").addEventListener("click", () => {
+    const input = $("apt-p-notes-imgurl");
+    const url = input.value.trim();
+    if (!url) return;
+    editingImages.push(url);
+    input.value = "";
+    renderEditingImages();
+  });
+  $("apt-p-notes-imgfile").addEventListener("click", () => $("apt-p-notes-file").click());
+  $("apt-p-notes-file").addEventListener("change", async e => {
+    for (const file of e.target.files){
+      const dataUrl = await downscaleImg(file, 1200, 0.8);
+      if (dataUrl) editingImages.push(dataUrl);
+    }
+    renderEditingImages();
+    e.target.value = "";
+  });
 })();
 
 function syncFavButton(){
@@ -193,7 +242,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=27`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=28`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -290,12 +339,68 @@ function renderSatLightbox(){
 }
 function closeSatLightbox(){ $("sat-lightbox").hidden = true; satState = null; }
 
+/* ── 機場備註／照片：檢視與編輯 ── */
+let editingImages = [];
+function renderNotesView(id){
+  const notes = getNotes(id);
+  const view = $("apt-p-notes-view");
+  if (!notes.text && !(notes.images && notes.images.length)){
+    view.innerHTML = `<div class="apt-notes-empty">${I18N.t("airports.detail.noNotes")}</div>`;
+    return;
+  }
+  const imgs = (notes.images || []).map(src => `<img src="${escapeHTML(src)}" alt="">`).join("");
+  view.innerHTML =
+    (notes.text ? `<p class="apt-notes-text">${escapeHTML(notes.text)}</p>` : "") +
+    (imgs ? `<div class="apt-notes-gallery">${imgs}</div>` : "");
+}
+function renderEditingImages(){
+  const el = $("apt-p-notes-imgs");
+  el.innerHTML = editingImages.map((src, i) =>
+    `<div class="apt-notes-imgitem"><img src="${escapeHTML(src)}" alt=""><button type="button" data-i="${i}" class="apt-notes-imgdel" title="移除">✕</button></div>`
+  ).join("");
+  el.querySelectorAll(".apt-notes-imgdel").forEach(btn =>
+    btn.addEventListener("click", () => { editingImages.splice(+btn.dataset.i, 1); renderEditingImages(); }));
+}
+function openNotesEditor(id){
+  if (!id) return;
+  const notes = getNotes(id);
+  $("apt-p-notes-text").value = notes.text || "";
+  editingImages = (notes.images || []).slice();
+  renderEditingImages();
+  $("apt-p-notes-view").hidden = true;
+  $("apt-p-edit").hidden = true;
+  $("apt-p-notes-edit").hidden = false;
+}
+function closeNotesEditor(){
+  $("apt-p-notes-edit").hidden = true;
+  $("apt-p-notes-view").hidden = false;
+  $("apt-p-edit").hidden = false;
+}
+// 上傳照片先縮圖壓縮，避免 localStorage 塞爆
+function downscaleImg(file, maxW, quality){
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = () => {
+      const scale = Math.min(1, maxW / img.width);
+      const c = document.createElement("canvas");
+      c.width = Math.round(img.width * scale);
+      c.height = Math.round(img.height * scale);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      resolve(c.toDataURL("image/jpeg", quality));
+    };
+    img.onerror = () => resolve("");
+    img.src = URL.createObjectURL(file);
+  });
+}
+
 async function openAirport(id){
   const a = AIRPORTS.find(x => x.id === id);
   if (!a) return;
   const panel = $("panel");
   panel.dataset.id = id;
   syncFavButton();
+  closeNotesEditor();
+  renderNotesView(id);
   $("apt-p-type").textContent = I18N.t("airports.type." + a.type) || a.type;
   $("apt-p-name").textContent = a.name;
   $("apt-p-loc").textContent = [a.city, countryName(a.country)].filter(Boolean).join(", ");
