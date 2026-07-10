@@ -24,6 +24,7 @@ self.addEventListener("fetch", e => {
   if (req.method !== "GET") return;
 
   const url = new URL(req.url);
+  if (url.protocol !== "http:" && url.protocol !== "https:") return;   // Cache API 不支援 chrome-extension: 等其他協定
   if (url.pathname.startsWith("/api/")) return;   // 即時 API：一律直連網路，不快取、不攔截
 
   if (req.mode === "navigate"){
