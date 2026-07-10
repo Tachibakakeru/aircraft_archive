@@ -42,8 +42,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=28"),
-      fetch("data/countries.json?v=28"),
+      fetch("data/airports.json?v=29"),
+      fetch("data/countries.json?v=29"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -110,6 +110,29 @@ function escapeHTML(s){
     const text = $("apt-p-notes-text").value.trim();
     try { setNotes(id, { text, images: editingImages }); }
     catch { alert("儲存失敗，圖片可能過大，建議改用圖片網址。"); return; }
+    renderNotesView(id);
+    closeNotesEditor();
+  });
+  $("apt-p-notes-publish").addEventListener("click", async () => {
+    const id = $("panel").dataset.id;
+    if (!id) return;
+    const text = $("apt-p-notes-text").value.trim();
+    const notes = { text, images: editingImages };
+    if (!text && !notes.images.length){ alert("請先輸入內容再發布。"); return; }
+    await requireAuth();   // 需通過與資料編輯器共用的密碼驗證，否則只會存在本機
+    const btn = $("apt-p-notes-publish");
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = I18N.t("airports.detail.publishing");
+    try {
+      setNotes(id, notes);
+      const result = await Storage.save("airport-notes/" + id, notes);
+      alert(result.message);
+      if (result.ok) delete publishedCache[id];
+    } finally {
+      btn.disabled = false;
+      btn.textContent = orig;
+    }
     renderNotesView(id);
     closeNotesEditor();
   });
@@ -242,7 +265,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=28`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=29`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -341,15 +364,36 @@ function closeSatLightbox(){ $("sat-lightbox").hidden = true; satState = null; }
 
 /* ── 機場備註／照片：檢視與編輯 ── */
 let editingImages = [];
-function renderNotesView(id){
-  const notes = getNotes(id);
+const publishedCache = {};
+async function fetchPublished(id){
+  if (id in publishedCache) return publishedCache[id];
+  try {
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=29`);
+    publishedCache[id] = r.ok ? await r.json() : null;
+  } catch { publishedCache[id] = null; }
+  return publishedCache[id];
+}
+async function renderNotesView(id){
   const view = $("apt-p-notes-view");
+  const local = getNotes(id);
+  const hasLocal = local.text || (local.images && local.images.length);
+  let notes = local, badge = "";
+  if (hasLocal){
+    badge = `<div class="apt-notes-badge local">${I18N.t("airports.detail.badgeLocal")}</div>`;
+  } else {
+    const pub = await fetchPublished(id);
+    if (pub && (pub.text || (pub.images && pub.images.length))){
+      notes = pub;
+      badge = `<div class="apt-notes-badge published">${I18N.t("airports.detail.badgePublished")}</div>`;
+    }
+  }
+  if ($("panel").dataset.id !== id) return;   // 使用者已切到別座機場，避免非同步結果寫錯面板
   if (!notes.text && !(notes.images && notes.images.length)){
     view.innerHTML = `<div class="apt-notes-empty">${I18N.t("airports.detail.noNotes")}</div>`;
     return;
   }
   const imgs = (notes.images || []).map(src => `<img src="${escapeHTML(src)}" alt="">`).join("");
-  view.innerHTML =
+  view.innerHTML = badge +
     (notes.text ? `<p class="apt-notes-text">${escapeHTML(notes.text)}</p>` : "") +
     (imgs ? `<div class="apt-notes-gallery">${imgs}</div>` : "");
 }

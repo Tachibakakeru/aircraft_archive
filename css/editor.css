@@ -5,7 +5,7 @@ body{min-height:100vh}
 
 .ed-topbar{
   position:sticky;top:0;z-index:10;
-  display:flex;align-items:center;gap:20px;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
   padding:14px 24px;
   background:rgba(11,18,32,.92);
   backdrop-filter:blur(10px);
@@ -27,7 +27,7 @@ body{min-height:100vh}
   border-radius:6px;padding:6px 10px;
   max-width:280px;
 }
-.ed-actions{display:flex;gap:10px}
+.ed-actions{display:flex;gap:10px;flex-wrap:wrap}
 
 button.primary,button.ghost{
   font-family:var(--mono);font-size:11px;letter-spacing:.12em;
@@ -166,48 +166,6 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
   z-index:100;
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
-/* ── 密碼鎖定畫面 ── */
-.auth-gate{
-  position:fixed;inset:0;z-index:200;
-  display:flex;align-items:center;justify-content:center;
-  padding:24px;
-  background:radial-gradient(1000px 600px at 60% 30%,#16233a 0%,transparent 60%),
-             linear-gradient(180deg,var(--bg-1),var(--bg-0));
-}
-.auth-box{
-  width:min(420px,100%);
-  background:var(--panel);
-  border:1px solid var(--stroke);
-  border-radius:14px;
-  padding:32px 30px;
-  backdrop-filter:blur(14px);
-}
-.auth-box .eyebrow{font-size:10px;margin-bottom:12px}
-.auth-box h2{font-size:20px;font-weight:700;letter-spacing:.02em;margin-bottom:10px;line-height:1.4}
-.auth-desc{font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:20px}
-.auth-box input{
-  width:100%;
-  font-family:var(--sans);font-size:15px;
-  color:var(--text);background:#0e1729;
-  border:1px solid var(--stroke);border-radius:8px;
-  padding:12px 14px;margin-bottom:10px;
-}
-.auth-box input:focus{outline:none;border-color:var(--amber)}
-.auth-err{color:#ff7850;font-size:13px;min-height:20px;margin:2px 0 8px}
-.auth-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}
-.auth-cancel{
-  font-family:var(--mono);font-size:11px;letter-spacing:.14em;
-  color:var(--muted);text-decoration:none;transition:color .15s;
-}
-.auth-cancel:hover{color:var(--amber)}
-#auth-submit{
-  font-family:var(--mono);font-size:12px;letter-spacing:.12em;font-weight:700;
-  background:var(--amber);color:var(--bg-0);
-  border:none;border-radius:8px;padding:11px 22px;cursor:pointer;
-  transition:background .15s;
-}
-#auth-submit:hover{background:#ffc266}
 
 /* ── GitHub 設定對話框 ── */
 #btn-github.configured{color:var(--cyan);border-color:rgba(111,211,239,.4)}
