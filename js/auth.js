@@ -12,8 +12,12 @@
    ═══════════════════════════════════════════════ */
 
 const HANGAR_AUTH = (() => {
-  const HASH_KEY = "hangar_pw_hash";   // localStorage：密碼雜湊
-  const SESSION_KEY = "hangar_authed"; // sessionStorage：本次已驗證
+  const HASH_KEY = "hangar_pw_hash";     // localStorage：密碼雜湊
+  const SESSION_KEY = "hangar_authed";   // sessionStorage：本次已驗證
+  const PLAIN_KEY = "hangar_pw_plain";   // sessionStorage：本次工作階段暫存明碼
+                                          // 用途：呼叫 /api/gh-save 時需要明碼讓伺服器比對
+                                          // env.EDITOR_PASSWORD，僅存在本次分頁工作階段，
+                                          // 不寫入 localStorage、關閉分頁即消失。
 
   async function sha256(text){
     const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
@@ -22,28 +26,37 @@ const HANGAR_AUTH = (() => {
 
   const hasPassword = () => !!localStorage.getItem(HASH_KEY);
   const isAuthed = () => sessionStorage.getItem(SESSION_KEY) === "1";
+  const sessionPassword = () => sessionStorage.getItem(PLAIN_KEY) || "";
 
   async function setPassword(pw){
     localStorage.setItem(HASH_KEY, await sha256(pw));
     sessionStorage.setItem(SESSION_KEY, "1");
+    sessionStorage.setItem(PLAIN_KEY, pw);
   }
 
   async function verify(pw){
     const stored = localStorage.getItem(HASH_KEY);
     if (!stored) return false;
     const ok = (await sha256(pw)) === stored;
-    if (ok) sessionStorage.setItem(SESSION_KEY, "1");
+    if (ok){
+      sessionStorage.setItem(SESSION_KEY, "1");
+      sessionStorage.setItem(PLAIN_KEY, pw);
+    }
     return ok;
   }
 
   function changePassword(){
     localStorage.removeItem(HASH_KEY);
     sessionStorage.removeItem(SESSION_KEY);
+    sessionStorage.removeItem(PLAIN_KEY);
   }
 
-  function logout(){ sessionStorage.removeItem(SESSION_KEY); }
+  function logout(){
+    sessionStorage.removeItem(SESSION_KEY);
+    sessionStorage.removeItem(PLAIN_KEY);
+  }
 
-  return { hasPassword, isAuthed, setPassword, verify, changePassword, logout };
+  return { hasPassword, isAuthed, setPassword, verify, changePassword, logout, sessionPassword };
 })();
 
 /* 在頁面掛上一個全螢幕鎖，通過後才 resolve */

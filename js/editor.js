@@ -297,16 +297,16 @@ $("btn-clear-local").addEventListener("click", async () => {
   toast("已清除本機暫存");
 });
 
-// ── 儲存（依 Storage 設定：GitHub 直接 commit 或下載）──
+// ── 儲存（優先伺服器代管推送，其次個人 GitHub 設定，最後下載）──
 $("btn-save").addEventListener("click", async () => {
   const btn = $("btn-save");
   const original = btn.textContent;
   btn.disabled = true;
-  btn.textContent = Storage.mode() === "github" ? "推送中…" : "下載中…";
+  btn.textContent = "儲存中…";
   try {
     const result = await Storage.save(currentId, data);
     toast(result.message);
-    if (result.ok && Storage.mode() === "github"){
+    if (result.ok && result.pushed){
       // 推送成功後清掉本機暫存（線上已是最新）
       localStorage.removeItem(LS_PREFIX + currentId);
     }
@@ -318,9 +318,13 @@ $("btn-save").addEventListener("click", async () => {
   }
 });
 
-function refreshSaveButton(){
+async function refreshSaveButton(){
   const btn = $("btn-save");
-  if (Storage.mode() === "github"){
+  const serverReady = await Storage.server.checkAvailable();
+  if (serverReady){
+    btn.textContent = "儲存到網站";
+    btn.title = "透過伺服器直接 commit 到 GitHub，自動觸發部署（不需在本機設定 Token）";
+  } else if (Storage.mode() === "github"){
     btn.textContent = "儲存到 GitHub";
     btn.title = "直接 commit 到 GitHub，自動觸發部署";
   } else {

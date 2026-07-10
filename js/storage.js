@@ -73,7 +73,7 @@ const GitHubStorage = (() => {
         body: JSON.stringify(body),
       });
       if (res.ok){
-        return { ok:true, message:`已推送到 GitHub（${sha ? "更新" : "新建"} ${filePath}）` };
+        return { ok:true, message:`已推送到 GitHub（${sha ? "更新" : "新建"} ${filePath}）`, pushed:true };
       }
       const err = await res.json().catch(() => ({}));
       if (res.status === 401) return { ok:false, message:"Token 無效或已過期" };
@@ -113,11 +113,52 @@ const DownloadStorage = {
     a.href = url; a.download = `${id}.json`;
     a.click();
     URL.revokeObjectURL(url);
-    return { ok:true, message:`已下載 ${id}.json（請覆蓋 data/ 後重新部署）` };
+    return { ok:true, message:`已下載 ${id}.json（請覆蓋 data/ 後重新部署）`, pushed:false };
   }
 };
 
-/* ---- 統一入口：依設定自動選後端 ---- */
+/* ---- 後端三：Cloudflare Pages Function 代管（不需在瀏覽器存 Token）----
+   /api/gh-save 由伺服器端持有真正的 GitHub Token，瀏覽器只送出站台密碼
+   （與編輯器解鎖同一組，存在 sessionStorage，見 auth.js）。換新裝置只要
+   輸入密碼即可，不必再複製/輸入 Personal Access Token。
+   若該路由不存在（本機開發、或尚未部署 Functions），save() 回傳 null，
+   由上層自動退回舊有的 GitHubStorage／DownloadStorage。 ---- */
+const ServerStorage = {
+  async checkAvailable(){
+    try {
+      const res = await fetch("/api/gh-save");
+      if (!res.ok) return false;
+      const data = await res.json().catch(() => ({}));
+      return !!data.configured;
+    } catch { return false; }
+  },
+  async save(id, dataObj){
+    try {
+      const res = await fetch("/api/gh-save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          password: (typeof HANGAR_AUTH !== "undefined") ? HANGAR_AUTH.sessionPassword() : "",
+          path: `data/${id}.json`,
+          content: JSON.stringify(dataObj, null, 2),
+          message: `更新 ${id} 資料（天空檔案編輯器）`,
+        }),
+      });
+      // 只信任「長得像我們自己函式回應」的內容（有 ok 布林欄位）；
+      // 404／501（本機開發伺服器對未知路由的常見回應）或任何非預期格式，
+      // 一律視為「這條路由不存在」，交給下一層後備，而不是把伺服器雜訊
+      // 誤判成真正的錯誤訊息丟給使用者。
+      let data;
+      try { data = await res.json(); } catch { return null; }
+      if (typeof data.ok !== "boolean") return null;
+      return data;
+    } catch {
+      return null;   // 網路層完全失敗（如本機 file:// 或無 Functions 執行環境），交給下一層後備
+    }
+  },
+};
+
+/* ---- 統一入口：優先走伺服器代管，其次個人 GitHub 設定，最後下載 ---- */
 const Storage = {
   mode(){
     return GitHubStorage.isConfigured() ? "github" : "download";
@@ -126,8 +167,11 @@ const Storage = {
     return GitHubStorage.isConfigured();
   },
   async save(id, dataObj){
+    const serverResult = await ServerStorage.save(id, dataObj);
+    if (serverResult) return serverResult;
     const backend = this.mode() === "github" ? GitHubStorage : DownloadStorage;
     return backend.save(id, dataObj);
   },
   github: GitHubStorage,
+  server: ServerStorage,
 };
