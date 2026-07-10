@@ -1,0 +1,63 @@
+/* ═══════════════════════════════════════════
+   機型家族與次型號對照頁樣式
+   ═══════════════════════════════════════════ */
+.var-wrap{max-width:880px;margin:0 auto;padding:44px 22px 80px}
+
+.var-lede{color:var(--muted);font-size:14.5px;max-width:62ch;margin:10px 0 26px}
+
+.var-legend{
+  display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  padding:14px 18px;margin-bottom:38px;
+  background:var(--panel);border:1px solid var(--stroke);border-radius:10px;
+  font-size:12.5px;color:var(--muted);
+}
+.var-legend b{color:var(--text);font-weight:600}
+.var-legend .sw{display:inline-flex;align-items:center;gap:7px}
+.chip-demo{display:inline-block;padding:2px 9px;border-radius:20px;font-family:var(--mono);font-size:10.5px}
+.chip-demo.in{background:var(--amber);color:var(--bg-0);font-weight:700}
+.chip-demo.out{border:1px solid var(--stroke);color:var(--muted)}
+
+.maker{margin-bottom:44px}
+.maker-h{
+  display:flex;align-items:baseline;gap:10px;
+  padding-bottom:8px;margin-bottom:18px;
+  border-bottom:1px solid var(--stroke);
+}
+.maker-h h2{font-size:19px;font-weight:700;letter-spacing:.02em;margin:0}
+.maker-h .count{font-family:var(--mono);font-size:11px;color:var(--muted)}
+
+.fam{
+  background:var(--panel);border:1px solid var(--stroke);border-radius:12px;
+  padding:18px 20px 20px;margin-bottom:14px;
+}
+.fam-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.fam-name{font-size:15.5px;font-weight:700}
+.fam-tag{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.04em}
+.fam-note{color:var(--muted);font-size:13px;margin:6px 0 14px;max-width:68ch}
+
+.var-chips{display:flex;flex-wrap:wrap;gap:8px;overflow-x:auto;padding-bottom:2px}
+.v-chip{
+  flex:0 0 auto;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:7px 13px 8px;border-radius:10px;
+  font-size:12.5px;white-space:nowrap;
+}
+.v-chip .v-name{font-weight:600}
+.v-chip .v-code{font-family:var(--mono);font-size:10px;font-variant-numeric:tabular-nums;letter-spacing:.03em}
+.v-chip.in{background:var(--amber-soft);border:1px solid var(--amber)}
+.v-chip.in .v-name{color:var(--text)}
+.v-chip.in .v-code{color:var(--amber)}
+.v-chip.out{border:1px dashed var(--stroke);color:var(--muted)}
+.v-chip.out .v-name{color:var(--muted);font-weight:500}
+.v-chip.out .v-code{color:var(--muted);opacity:.7}
+
+.var-foot{
+  margin-top:40px;padding-top:20px;border-top:1px solid var(--stroke);
+  font-size:12px;color:var(--muted);line-height:1.9;
+}
+.var-foot code{font-family:var(--mono);color:var(--cyan)}
+
+@media (max-width:520px){
+  .var-wrap{padding:32px 16px 60px}
+  .fam{padding:15px 16px 16px}
+}

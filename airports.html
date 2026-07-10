@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>機庫檔案 — 機場與跑道</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b1220">
+<link rel="stylesheet" href="css/style.css?v=23">
+<link rel="stylesheet" href="css/airports.css?v=23">
+<script src="js/theme.js?v=23"></script>
+<script src="js/i18n.js?v=23"></script>
+</head>
+<body>
+
+<div class="apt-wrap">
+  <div class="fleet-head">
+    <div class="eyebrow" data-i18n="airports.eyebrow">HANGAR ARCHIVE / 機庫檔案</div>
+    <h1 data-i18n="airports.title">機場與跑道</h1>
+    <div class="sub" data-i18n="airports.lede">AIRPORT INDEX — 搜尋全球機場，查看跑道明細與 ICAO／IATA 代號</div>
+  </div>
+
+  <div class="fleet-toolbar">
+    <input type="search" id="apt-search" data-i18n-ph="airports.search" placeholder="搜尋機場名稱 / 城市 / 代號…">
+    <select class="ed-entry" id="apt-country"></select>
+    <select class="ed-entry" id="apt-type"></select>
+    <a class="ed-entry" href="index.html" data-i18n="fleet.back">← FLEET / 機隊列表</a>
+    <a class="ed-entry" href="variants.html" data-i18n="nav.variants">📋 機型家族</a>
+    <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
+    <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+  </div>
+
+  <div class="apt-count" id="apt-count"></div>
+
+  <div class="apt-list" id="apt-list"></div>
+  <div class="apt-more" id="apt-more" hidden></div>
+  <div class="apt-empty" id="apt-empty" hidden data-i18n="airports.empty">找不到符合的機場，換個關鍵字或代號試試。</div>
+</div>
+
+<!-- 機場詳情面板（沿用檢視器的滑出面板樣式 #panel） -->
+<aside id="panel" aria-hidden="true">
+  <div class="panel-head">
+    <div class="eyebrow" id="apt-p-type">AIRPORT</div>
+    <h2 id="apt-p-name">—</h2>
+    <div class="en" id="apt-p-loc"></div>
+    <div class="apt-badges" id="apt-p-badges"></div>
+    <button id="apt-p-close" aria-label="關閉面板" data-i18n-aria="viewer.panel.close">✕</button>
+  </div>
+  <div class="panel-body">
+    <dl id="apt-p-info"></dl>
+    <div class="rw-section-title" data-i18n="airports.detail.runways">RUNWAYS / 跑道</div>
+    <div id="apt-p-runways"></div>
+  </div>
+</aside>
+
+<script src="js/airports.js?v=23"></script>
+<script src="js/ui.js?v=23"></script>
+</body>
+</html>
