@@ -42,8 +42,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=29"),
-      fetch("data/countries.json?v=29"),
+      fetch("data/airports.json?v=31"),
+      fetch("data/countries.json?v=31"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -68,7 +68,11 @@ function escapeHTML(s){
   $("apt-country").addEventListener("change", applyAll);
   $("apt-type").addEventListener("change", applyAll);
   $("apt-fav-only").addEventListener("change", applyAll);
-  document.addEventListener("langchange", () => { I18N.apply(); applyAll(); });
+  document.addEventListener("langchange", () => {
+    I18N.apply(); applyAll();
+    const panel = $("panel");
+    if (panel.classList.contains("open") && panel.dataset.id) openAirport(panel.dataset.id);
+  });
 
   I18N.mountSelector($("btn-lang"));
   $("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
@@ -265,7 +269,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=29`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=31`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -368,7 +372,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=29`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=31`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
@@ -388,13 +392,14 @@ async function renderNotesView(id){
     }
   }
   if ($("panel").dataset.id !== id) return;   // 使用者已切到別座機場，避免非同步結果寫錯面板
-  if (!notes.text && !(notes.images && notes.images.length)){
+  const text = I18N.field(notes.text);   // 已發布內容為 {zh,en,ja}，本機草稿為純字串，field() 兩者皆可處理
+  if (!text && !(notes.images && notes.images.length)){
     view.innerHTML = `<div class="apt-notes-empty">${I18N.t("airports.detail.noNotes")}</div>`;
     return;
   }
   const imgs = (notes.images || []).map(src => `<img src="${escapeHTML(src)}" alt="">`).join("");
   view.innerHTML = badge +
-    (notes.text ? `<p class="apt-notes-text">${escapeHTML(notes.text)}</p>` : "") +
+    (text ? `<p class="apt-notes-text">${escapeHTML(text)}</p>` : "") +
     (imgs ? `<div class="apt-notes-gallery">${imgs}</div>` : "");
 }
 function renderEditingImages(){

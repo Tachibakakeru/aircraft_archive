@@ -390,6 +390,34 @@ $("gh-save").addEventListener("click", () => {
   toast("GitHub 設定已儲存");
 });
 
+// 設定碼複製／貼上：換裝置時不必重新手動輸入一長串 token
+$("gh-copy").addEventListener("click", async () => {
+  const cfg = readGhForm();
+  if (!cfg.owner || !cfg.repo || !cfg.token){ ghStatus("請先填寫完整設定再複製", false); return; }
+  const code = btoa(unescape(encodeURIComponent(JSON.stringify(cfg))));
+  try {
+    await navigator.clipboard.writeText(code);
+    ghStatus("已複製設定碼，到新裝置點「貼上設定碼」即可帶入", true);
+  } catch {
+    window.prompt("複製以下設定碼（Ctrl+C 或長按複製）：", code);
+  }
+});
+$("gh-paste").addEventListener("click", () => {
+  const raw = window.prompt("貼上從其他裝置複製的設定碼：");
+  if (!raw) return;
+  try {
+    const cfg = JSON.parse(decodeURIComponent(escape(atob(raw.trim()))));
+    $("gh-owner").value = cfg.owner || "";
+    $("gh-repo").value = cfg.repo || "";
+    $("gh-branch").value = cfg.branch || "main";
+    $("gh-path").value = cfg.path || "data";
+    $("gh-token").value = cfg.token || "";
+    ghStatus("已帶入設定，請按「測試連線」確認後再儲存", true);
+  } catch {
+    ghStatus("設定碼格式錯誤，請確認完整複製貼上", false);
+  }
+});
+
 $("gh-clear").addEventListener("click", () => {
   if (!confirm("清除 GitHub 設定？「儲存」將退回下載 JSON 方式。")) return;
   Storage.github.clearCfg();
