@@ -17,7 +17,9 @@
         "en": "Formerly Bombardier C Series, a 100-seat newcomer with composite wings and new engines.",
         "ja": "旧ボンバルディアCシリーズ。複合材の主翼と新型エンジンを持つ100席級の新鋭機。"
       },
-      "thumb": "assets/thumb_cs100.png"
+      "thumb": "assets/thumb_cs100.png",
+      "icao": "BCS1",
+      "iata": "221"
     },
     {
       "id": "cs300",
@@ -34,7 +36,9 @@
       "tagline": {
         "zh": "A220 加長型，兼顧經濟性與舒適度，跨足主流窄體市場。"
       },
-      "thumb": "assets/thumb_cs300.png"
+      "thumb": "assets/thumb_cs300.png",
+      "icao": "BCS3",
+      "iata": "223"
     },
     {
       "id": "a318",
@@ -51,7 +55,9 @@
       "tagline": {
         "zh": "A320 家族最短的成員，暱稱「嬰兒空巴」，可執行陡降進場。"
       },
-      "thumb": "assets/thumb_a318.png"
+      "thumb": "assets/thumb_a318.png",
+      "icao": "A318",
+      "iata": "318"
     },
     {
       "id": "a319",
@@ -68,7 +74,9 @@
       "tagline": {
         "zh": "A320 的縮短型，航程較長，是廉航與公務機改裝的熱門選擇。"
       },
-      "thumb": "assets/thumb_a319.png"
+      "thumb": "assets/thumb_a319.png",
+      "icao": "A319",
+      "iata": "319"
     },
     {
       "id": "a320",
@@ -87,7 +95,9 @@
         "en": "The first mass-produced airliner with digital fly-by-wire and sidestick controls.",
         "ja": "デジタル・フライバイワイヤとサイドスティックを初採用した量産旅客機。"
       },
-      "thumb": "assets/thumb_a320.png"
+      "thumb": "assets/thumb_a320.png",
+      "icao": "A320",
+      "iata": "320"
     },
     {
       "id": "a321",
@@ -104,7 +114,9 @@
       "tagline": {
         "zh": "A320 家族最長型，A321neo LR/XLR 讓窄體機飛出跨洋航程。"
       },
-      "thumb": "assets/thumb_a321.png"
+      "thumb": "assets/thumb_a321.png",
+      "icao": "A321",
+      "iata": "321"
     },
     {
       "id": "a332",
@@ -121,7 +133,9 @@
       "tagline": {
         "zh": "A330 的縮短長程型，雙發廣體的中堅，貨機版本亦廣受歡迎。"
       },
-      "thumb": "assets/thumb_a332.png"
+      "thumb": "assets/thumb_a332.png",
+      "icao": "A332",
+      "iata": "332"
     },
     {
       "id": "a333",
@@ -138,7 +152,9 @@
       "tagline": {
         "zh": "雙發廣體暢銷機，以可靠與低成本著稱的區域廣體主力。"
       },
-      "thumb": "assets/thumb_a333.png"
+      "thumb": "assets/thumb_a333.png",
+      "icao": "A333",
+      "iata": "333"
     },
     {
       "id": "a343",
@@ -155,7 +171,9 @@
       "tagline": {
         "zh": "四發長程廣體，在 ETOPS 尚未成熟的年代跨洋飛行的代表。"
       },
-      "thumb": "assets/thumb_a343.png"
+      "thumb": "assets/thumb_a343.png",
+      "icao": "A343",
+      "iata": "343"
     },
     {
       "id": "a346",
@@ -172,7 +190,9 @@
       "tagline": {
         "zh": "曾是世界最長的客機，四發長機身，載客量直逼早期 747。"
       },
-      "thumb": "assets/thumb_a346.png"
+      "thumb": "assets/thumb_a346.png",
+      "icao": "A346",
+      "iata": "346"
     },
     {
       "id": "a359",
@@ -189,7 +209,9 @@
       "tagline": {
         "zh": "碳纖維複合材料機身的新世代長程廣體，油耗與舒適度標竿。"
       },
-      "thumb": "assets/thumb_a359.png"
+      "thumb": "assets/thumb_a359.png",
+      "icao": "A359",
+      "iata": "359"
     },
     {
       "id": "a380",
@@ -208,7 +230,9 @@
         "en": "The largest passenger airliner ever built — a full-length double-decker with four engines.",
         "ja": "史上最大の旅客機。総二階建て・四発の空の巨人。"
       },
-      "thumb": "assets/thumb_a380.png"
+      "thumb": "assets/thumb_a380.png",
+      "icao": "A388",
+      "iata": "388"
     },
     {
       "id": "beluga",
@@ -225,7 +249,9 @@
       "tagline": {
         "zh": "以白鯨為名的超大貨艙運輸機，專門載運飛機部件於廠區間。"
       },
-      "thumb": "assets/thumb_beluga.png"
+      "thumb": "assets/thumb_beluga.png",
+      "icao": "A3ST",
+      "iata": ""
     },
     {
       "id": "b736",
@@ -242,7 +268,9 @@
       "tagline": {
         "zh": "737NG 家族最短型，與 A318 競爭百人級市場，產量最少。"
       },
-      "thumb": "assets/thumb_b736.png"
+      "thumb": "assets/thumb_b736.png",
+      "icao": "B736",
+      "iata": "736"
     },
     {
       "id": "b737",
@@ -259,7 +287,9 @@
       "tagline": {
         "zh": "737NG 基準型，BBJ 公務機與早期廉航機隊的骨幹。"
       },
-      "thumb": "assets/thumb_b737.png"
+      "thumb": "assets/thumb_b737.png",
+      "icao": "B737",
+      "iata": "737"
     },
     {
       "id": "b738",
@@ -278,7 +308,9 @@
         "en": "The workhorse of the 737NG generation, part of the best-selling jet family.",
         "ja": "737NG世代の主力、世界で最も売れたジェット旅客機ファミリーの一員。"
       },
-      "thumb": "assets/thumb_b738.png"
+      "thumb": "assets/thumb_b738.png",
+      "icao": "B738",
+      "iata": "738"
     },
     {
       "id": "b739",
@@ -295,7 +327,9 @@
       "tagline": {
         "zh": "737NG 最長型，737-900ER 加開安全門提升載客上限。"
       },
-      "thumb": "assets/thumb_b739.png"
+      "thumb": "assets/thumb_b739.png",
+      "icao": "B739",
+      "iata": "739"
     },
     {
       "id": "b744",
@@ -312,7 +346,9 @@
       "tagline": {
         "zh": "經典「空中女王」，雙層駝峰與四發長程，定義了跨洋旅行。"
       },
-      "thumb": "assets/thumb_b744.png"
+      "thumb": "assets/thumb_b744.png",
+      "icao": "B744",
+      "iata": "744"
     },
     {
       "id": "b748",
@@ -329,7 +365,9 @@
       "tagline": {
         "zh": "747 家族的最終世代，加長機身與新引擎，多作貨機服役。"
       },
-      "thumb": "assets/thumb_b748.png"
+      "thumb": "assets/thumb_b748.png",
+      "icao": "B748",
+      "iata": "748"
     },
     {
       "id": "b752",
@@ -346,7 +384,9 @@
       "tagline": {
         "zh": "推重比極高的窄體機，短跑道與高原機場的性能怪獸。"
       },
-      "thumb": "assets/thumb_b752.png"
+      "thumb": "assets/thumb_b752.png",
+      "icao": "B752",
+      "iata": "752"
     },
     {
       "id": "b753",
@@ -363,7 +403,9 @@
       "tagline": {
         "zh": "757 加長型，是最長的窄體客機之一，包機市場的寵兒。"
       },
-      "thumb": "assets/thumb_b753.png"
+      "thumb": "assets/thumb_b753.png",
+      "icao": "B753",
+      "iata": "753"
     },
     {
       "id": "b762",
@@ -380,7 +422,9 @@
       "tagline": {
         "zh": "波音首款雙發廣體，開啟了雙發跨洋 ETOPS 時代。"
       },
-      "thumb": "assets/thumb_b762.png"
+      "thumb": "assets/thumb_b762.png",
+      "icao": "B762",
+      "iata": "762"
     },
     {
       "id": "b763",
@@ -397,7 +441,9 @@
       "tagline": {
         "zh": "767 暢銷型，客貨兩用，至今仍是主力貨機平台。"
       },
-      "thumb": "assets/thumb_b763.png"
+      "thumb": "assets/thumb_b763.png",
+      "icao": "B763",
+      "iata": "763"
     },
     {
       "id": "b764",
@@ -414,7 +460,9 @@
       "tagline": {
         "zh": "767 最長型，換裝 777 式駕駛艙與翼尖延伸。"
       },
-      "thumb": "assets/thumb_b764.png"
+      "thumb": "assets/thumb_b764.png",
+      "icao": "B764",
+      "iata": "764"
     },
     {
       "id": "b772",
@@ -431,7 +479,9 @@
       "tagline": {
         "zh": "波音首款線傳飛控客機，777-200LR 締造最長航程紀錄。"
       },
-      "thumb": "assets/thumb_b772.png"
+      "thumb": "assets/thumb_b772.png",
+      "icao": "B772",
+      "iata": "772"
     },
     {
       "id": "b773",
@@ -448,7 +498,9 @@
       "tagline": {
         "zh": "777 加長型，以兩具巨型引擎取代四發，載客直追 747。"
       },
-      "thumb": "assets/thumb_b773.png"
+      "thumb": "assets/thumb_b773.png",
+      "icao": "B773",
+      "iata": "773"
     },
     {
       "id": "b788",
@@ -465,7 +517,9 @@
       "tagline": {
         "zh": "碳纖維複合材料夢幻客機，高艙壓與大舷窗改寫飛行體驗。"
       },
-      "thumb": "assets/thumb_b788.png"
+      "thumb": "assets/thumb_b788.png",
+      "icao": "B788",
+      "iata": "788"
     },
     {
       "id": "b789",
@@ -482,7 +536,9 @@
       "tagline": {
         "zh": "787 加長型，航程與載客兼備，成為長程樞紐的主力。"
       },
-      "thumb": "assets/thumb_b789.png"
+      "thumb": "assets/thumb_b789.png",
+      "icao": "B789",
+      "iata": "789"
     },
     {
       "id": "crj700",
@@ -499,7 +555,9 @@
       "tagline": {
         "zh": "龐巴迪支線噴射機，以 CRJ 系列開創區域噴射的黃金年代。"
       },
-      "thumb": "assets/thumb_crj700.png"
+      "thumb": "assets/thumb_crj700.png",
+      "icao": "CRJ7",
+      "iata": "CR7"
     },
     {
       "id": "crj900",
@@ -516,7 +574,9 @@
       "tagline": {
         "zh": "CRJ700 加長型，北美支線航空的主力機型之一。"
       },
-      "thumb": "assets/thumb_crj900.png"
+      "thumb": "assets/thumb_crj900.png",
+      "icao": "CRJ9",
+      "iata": "CR9"
     },
     {
       "id": "q400",
@@ -533,7 +593,9 @@
       "tagline": {
         "zh": "高速渦輪螺旋槳客機，主動抑震系統讓螺旋槳機安靜如噴射。"
       },
-      "thumb": "assets/thumb_q400.png"
+      "thumb": "assets/thumb_q400.png",
+      "icao": "DH8D",
+      "iata": "DH4"
     },
     {
       "id": "e170",
@@ -550,7 +612,9 @@
       "tagline": {
         "zh": "巴西航太的 E-Jet 家族基準型，四抽象座無中間座椅設計。"
       },
-      "thumb": "assets/thumb_e170.png"
+      "thumb": "assets/thumb_e170.png",
+      "icao": "E170",
+      "iata": "E70"
     },
     {
       "id": "e190",
@@ -567,7 +631,9 @@
       "tagline": {
         "zh": "E-Jet 加長暢銷型，填補支線與窄體之間的座位級距。"
       },
-      "thumb": "assets/thumb_e190.png"
+      "thumb": "assets/thumb_e190.png",
+      "icao": "E190",
+      "iata": "E90"
     },
     {
       "id": "atr42",
@@ -584,7 +650,9 @@
       "tagline": {
         "zh": "高翼雙螺旋槳短程支線客機，以低油耗經營稀薄航線見長。"
       },
-      "thumb": "assets/thumb_atr42.png"
+      "thumb": "assets/thumb_atr42.png",
+      "icao": "AT45",
+      "iata": "AT4"
     },
     {
       "id": "an225",
@@ -601,7 +669,9 @@
       "tagline": {
         "zh": "史上最大的飛機，六發、單機唯一，為運送暴風雪號太空梭而生。"
       },
-      "thumb": "assets/thumb_an225.png"
+      "thumb": "assets/thumb_an225.png",
+      "icao": "A225",
+      "iata": ""
     },
     {
       "id": "bae146",
@@ -618,7 +688,9 @@
       "tagline": {
         "zh": "四發高翼區域客機，以超低噪音著稱，市區機場的常客。"
       },
-      "thumb": "assets/thumb_bae146.png"
+      "thumb": "assets/thumb_bae146.png",
+      "icao": "B462",
+      "iata": "146"
     },
     {
       "id": "citation",
@@ -635,7 +707,9 @@
       "tagline": {
         "zh": "Citation 系列是史上最暢銷的公務噴射機家族之一。"
       },
-      "thumb": "assets/thumb_citation.png"
+      "thumb": "assets/thumb_citation.png",
+      "icao": "C56X",
+      "iata": ""
     },
     {
       "id": "pa28",
@@ -652,7 +726,9 @@
       "tagline": {
         "zh": "派普切羅基系列，訓練與私人飛行最普及的單發輕航機之一。"
       },
-      "thumb": "assets/thumb_pa28.png"
+      "thumb": "assets/thumb_pa28.png",
+      "icao": "P28A",
+      "iata": ""
     },
     {
       "id": "ask21",
@@ -669,7 +745,9 @@
       "tagline": {
         "zh": "無動力雙座教練滑翔機，全球飛行訓練與特技的經典機型。"
       },
-      "thumb": "assets/thumb_ask21.png"
+      "thumb": "assets/thumb_ask21.png",
+      "icao": "AS21",
+      "iata": ""
     },
     {
       "id": "heli",
@@ -686,7 +764,9 @@
       "tagline": {
         "zh": "以主旋翼產生升力與推力的旋翼航空器示範模型。"
       },
-      "thumb": "assets/thumb_heli.png"
+      "thumb": "assets/thumb_heli.png",
+      "icao": "A139",
+      "iata": ""
     }
   ]
 }

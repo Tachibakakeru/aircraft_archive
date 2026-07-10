@@ -122,6 +122,12 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
   font-family:var(--mono);font-size:10px;letter-spacing:.26em;
   color:var(--cyan);margin-bottom:6px;
 }
+.craft-code{
+  display:inline-block;margin-left:4px;padding:1px 6px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.08em;
+  color:var(--muted);background:var(--amber-soft);border-radius:4px;
+}
+.tl-meta .craft-code{margin-left:6px}
 .craft-card h2{font-size:20px;font-weight:700;letter-spacing:.03em}
 .craft-card .tagline{margin-top:6px;font-size:13px;line-height:1.7;color:var(--muted)}
 .craft-card .specs{
