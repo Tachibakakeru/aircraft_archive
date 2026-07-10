@@ -65,16 +65,23 @@ NAME_RULES = [
     ("gear",    r"gear|wheel|tyre|tire|bogie|oleo|ww|mgd|ngd"),
     ("vstab",   r"vstab|rudder|vertical|dorsal"),
     ("hstab",   r"hstab|stab|elevator|horizontal|tailplane"),
-    # 可動操縱面（逐片拆出供動畫）— flap 含 fairing 整流罩，一起連動但不參與鉸鏈估算
+    # 可動操縱面（逐片拆出供動畫）— fairing 整流罩沒有分件動畫來源，
+    # 維持靜態歸主翼（見 wing 規則），不強行跟著襟翼動
     ("slat",    r"slat|krueger|ible|oble"),
     ("spoiler", r"spoiler|speedbrake"),
     ("aileron", r"aileron"),
-    ("flap",    r"flap"),
+    ("flap",    r"flap(?!fairing)"),
     ("wing",    r"wing|winglet|fairing"),
     ("cockpit", r"cockpit|windshield|windscreen|canopy"),
     ("fuselage",r"fuselage|window|door|dorr|exit|apu|cargo|antenna|beacon|radome|belly"),
 ]
 GENERIC_NODE = re.compile(r"^(rootnode|node_\d+|scene|root|mesh_?\d*)$")
+ANIMATABLE = {"slat", "flap", "spoiler", "aileron"}
+# 不同機型的操縱面節點常混有支架／滑軌／鉸鏈五金／控制索等非本體幾何——
+# 這些若被當成獨立可動片各自估鉸鏈，會像先前 flap fairing 一樣拉偏軸向、
+# 穿模變形。凡命中即降級為 wing 靜態渲染，不參與動畫。
+STATIC_HINT = re.compile(r"fairing|support|track|tk\d|hinge|wire|bracket|rib", re.I)
+SUFFIX_RE = re.compile(r"[_.]\d+$")   # 去除 Blender 多材質分割產生的結尾編號
 
 def name_part(node_name):
     """節點名稱可辨識時回傳部位，否則 None。"""
@@ -83,6 +90,8 @@ def name_part(node_name):
         return None
     for pid, pat in NAME_RULES:
         if re.search(pat, n):
+            if pid in ANIMATABLE and STATIC_HINT.search(n):
+                return "wing"
             return pid
     return None
 
@@ -116,9 +125,6 @@ def classify(node_name, mat_name, bb_min, bb_max, dims, model_min, model_dims):
     if dims[0] > SPAN*0.5:                              return "wing"     # 大展幅
     if lateral > SPAN*0.10 and dims[1] < H*0.12:        return "wing"     # 翼面細件
     return "fuselage"
-
-# 可動操縱面（每片各自算鉸鏈，供檢視器展開動畫）
-ANIMATABLE = {"slat", "flap", "spoiler", "aileron"}
 
 def compute_hinge(P, stype):
     """由單片操縱面的烘焙後頂點推估鉸鏈軸與樞紐。P 只能是該面「本體」的
@@ -361,31 +367,20 @@ def convert(src, dst):
     tot_before = tot_after = 0
     for pid, plist in part_prims.items():
         if pid in ANIMATABLE:
-            # 逐「節點」拆成單片，各自算鉸鏈
+            # 逐「片」拆成單片各自算鉸鏈。有些機模把同一片操縱面依材質
+            # 拆成多個節點（如 slat2_001／slat2_002、flap_l_003…），
+            # 去掉結尾的 _001／.002 之類編號後歸併，避免同一片被誤判成
+            # 多片、各自估出不同鉸鏈而錯位。
             bynode = {}
             for p in plist:
-                bynode.setdefault(p["node"], []).append(p)
-            # 襟翼滑軌整流罩：依空間就近併入該片襟翼一起渲染／連動，
-            # 但鉸鏈軸只用「襟翼本體」估算——整流罩體積大會拉偏 PCA 估計
-            # （這是先前版本穿模變形的根因）。
-            hinge_src = bynode
-            if pid == "flap":
-                real = {n: v for n, v in bynode.items() if "fairing" not in str(n).lower()}
-                fair = {n: v for n, v in bynode.items() if "fairing" in str(n).lower()}
-                hinge_src = {n: list(v) for n, v in real.items()}
-                if real and fair:
-                    cent = {n: np.vstack([bake(p["pos"]) for p in v]).mean(0) for n, v in real.items()}
-                    for fn, fv in fair.items():
-                        fc = np.vstack([bake(p["pos"]) for p in fv]).mean(0)
-                        nn = min(cent, key=lambda rn: float(np.linalg.norm(cent[rn] - fc)))
-                        real[nn].extend(fv)   # 渲染幾何：襟翼＋整流罩
-                    bynode = real
+                key = SUFFIX_RE.sub("", str(p["node"]))
+                bynode.setdefault(key, []).append(p)
 
             npanel = nvsum = 0
             for node, nplist in bynode.items():
                 entries, bmn, bmx, vtot, before, after = encode_plist(nplist)
                 tot_before += before; tot_after += after
-                Ph = np.vstack([bake(p["pos"]) for p in hinge_src.get(node, nplist)])
+                Ph = np.vstack([bake(p["pos"]) for p in nplist])
                 axis, pivot, side = compute_hinge(Ph, pid)
                 surfaces.append({"t": pid,
                                  "ax": [round(float(x),4) for x in axis],
