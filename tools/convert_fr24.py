@@ -65,7 +65,12 @@ NAME_RULES = [
     ("gear",    r"gear|wheel|tyre|tire|bogie|oleo|ww|mgd|ngd"),
     ("vstab",   r"vstab|rudder|vertical|dorsal"),
     ("hstab",   r"hstab|stab|elevator|horizontal|tailplane"),
-    ("wing",    r"wing|slat|flap|spoiler|aileron|ible|oble|krueger"),
+    # 可動操縱面（逐片拆出供動畫）— flap 含 fairing 整流罩，一起連動但不參與鉸鏈估算
+    ("slat",    r"slat|krueger|ible|oble"),
+    ("spoiler", r"spoiler|speedbrake"),
+    ("aileron", r"aileron"),
+    ("flap",    r"flap"),
+    ("wing",    r"wing|winglet|fairing"),
     ("cockpit", r"cockpit|windshield|windscreen|canopy"),
     ("fuselage",r"fuselage|window|door|dorr|exit|apu|cargo|antenna|beacon|radome|belly"),
 ]
@@ -111,6 +116,31 @@ def classify(node_name, mat_name, bb_min, bb_max, dims, model_min, model_dims):
     if dims[0] > SPAN*0.5:                              return "wing"     # 大展幅
     if lateral > SPAN*0.10 and dims[1] < H*0.12:        return "wing"     # 翼面細件
     return "fuselage"
+
+# 可動操縱面（每片各自算鉸鏈，供檢視器展開動畫）
+ANIMATABLE = {"slat", "flap", "spoiler", "aileron"}
+
+def compute_hinge(P, stype):
+    """由單片操縱面的烘焙後頂點推估鉸鏈軸與樞紐。P 只能是該面「本體」的
+       頂點（不可混入 fairing 整流罩等附掛物，否則會拉偏軸向估計）。
+       烘焙座標：+X 機鼻、+Y 上、+Z 翼展（左右）。回傳 (axis, pivot, side)。"""
+    C = P.mean(0)
+    side = 1.0 if C[2] >= 0 else -1.0
+    # XZ 平面主成分 → 翼展方向（含後掠角）
+    XZ = P[:, [0, 2]] - C[[0, 2]]
+    w, v = np.linalg.eigh(XZ.T @ XZ)
+    a2 = v[:, int(np.argmax(w))]
+    axis = np.array([a2[0], 0.0, a2[1]], float)
+    n = np.linalg.norm(axis); axis = axis / (n if n else 1)
+    if axis[2] * side < 0: axis = -axis            # 軸朝翼尖（外側）
+    # 弦向（水平、垂直於軸），朝機鼻 +X
+    chord = np.array([-axis[2], 0.0, axis[0]], float)
+    if chord[0] < 0: chord = -chord
+    proj = (P - C) @ chord
+    edge = proj.min() if stype == "slat" else proj.max()   # 縫翼在後緣鉸接，其餘在前緣
+    pivot = C + chord * edge
+    pivot[1] = C[1]
+    return axis.tolist(), pivot.tolist(), side
 
 # ── 三視圖驗證輸出 ────────────────────────────────────────
 def render_views(parts, prefix):
@@ -289,16 +319,13 @@ def convert(src, dst):
         qpos = np.round((welded_pos - vmin) / vrange * 65535).astype(np.uint16)
         return qpos, vmin, vrange/65535.0, welded_uv, new_idx, nverts
 
-    out_parts, anchors, stats = {}, {}, {}
-    tot_before = tot_after = 0
-    for pid, plist in part_prims.items():
-        # 依「材質顏色 + 是否貼圖」分組合併
+    # 將一組 primitive 依材質合併、去重量化 → entries（部位與單片操縱面共用）
+    def encode_plist(plist):
         groups = {}
         for p in plist:
             mi = mat_info(p["mat"])
             gk = (tuple(round(c,3) for c in mi["color"]), mi["tex"])
-            groups.setdefault(gk, {"pos":[], "uv":[], "idx":[], "off":0})
-            g = groups[gk]
+            g = groups.setdefault(gk, {"pos":[], "uv":[], "idx":[], "off":0})
             g["idx"].append(p["idx"] + g["off"])
             g["pos"].append(bake(p["pos"]))
             g["off"] += len(p["pos"])
@@ -307,20 +334,16 @@ def convert(src, dst):
             else:
                 g["uv"].append(np.zeros((len(p["pos"]),2), np.float32))
 
-        entries, bmn, bmx, vtot = [], None, None, 0
+        entries, bmn, bmx, vtot, before, after = [], None, None, 0, 0, 0
         for (color, tex), g in groups.items():
             pos = np.vstack(g["pos"])
             uv  = np.vstack(g["uv"]) if tex else None
             idx = np.concatenate(g["idx"])
-            tot_before += len(pos)
-
+            before += len(pos)
             qpos, qo, qs, welded_uv, new_idx, nv = weld_and_quantize(pos, idx, uv)
-            tot_after += nv
-            vtot += nv
-            # 反量化後的實際包圍盒（供錨點/地面用原始 pos 即可）
+            after += nv; vtot += nv
             bmn = pos.min(0) if bmn is None else np.minimum(bmn, pos.min(0))
             bmx = pos.max(0) if bmx is None else np.maximum(bmx, pos.max(0))
-
             iw = 4 if nv > 65535 else 2
             idx_arr = new_idx.astype(np.uint32 if iw==4 else np.uint16)
             e = {"q": b64(qpos),
@@ -332,6 +355,48 @@ def convert(src, dst):
                 quv = np.round(np.clip(welded_uv,0,1) * 65535).astype(np.uint16)
                 e["u"] = b64(quv)
             entries.append(e)
+        return entries, bmn, bmx, vtot, before, after
+
+    out_parts, anchors, stats, surfaces = {}, {}, {}, []
+    tot_before = tot_after = 0
+    for pid, plist in part_prims.items():
+        if pid in ANIMATABLE:
+            # 逐「節點」拆成單片，各自算鉸鏈
+            bynode = {}
+            for p in plist:
+                bynode.setdefault(p["node"], []).append(p)
+            # 襟翼滑軌整流罩：依空間就近併入該片襟翼一起渲染／連動，
+            # 但鉸鏈軸只用「襟翼本體」估算——整流罩體積大會拉偏 PCA 估計
+            # （這是先前版本穿模變形的根因）。
+            hinge_src = bynode
+            if pid == "flap":
+                real = {n: v for n, v in bynode.items() if "fairing" not in str(n).lower()}
+                fair = {n: v for n, v in bynode.items() if "fairing" in str(n).lower()}
+                hinge_src = {n: list(v) for n, v in real.items()}
+                if real and fair:
+                    cent = {n: np.vstack([bake(p["pos"]) for p in v]).mean(0) for n, v in real.items()}
+                    for fn, fv in fair.items():
+                        fc = np.vstack([bake(p["pos"]) for p in fv]).mean(0)
+                        nn = min(cent, key=lambda rn: float(np.linalg.norm(cent[rn] - fc)))
+                        real[nn].extend(fv)   # 渲染幾何：襟翼＋整流罩
+                    bynode = real
+
+            npanel = nvsum = 0
+            for node, nplist in bynode.items():
+                entries, bmn, bmx, vtot, before, after = encode_plist(nplist)
+                tot_before += before; tot_after += after
+                Ph = np.vstack([bake(p["pos"]) for p in hinge_src.get(node, nplist)])
+                axis, pivot, side = compute_hinge(Ph, pid)
+                surfaces.append({"t": pid,
+                                 "ax": [round(float(x),4) for x in axis],
+                                 "pv": [round(float(x),3) for x in pivot],
+                                 "sd": side, "e": entries})
+                npanel += 1; nvsum += vtot
+            stats[pid] = (npanel, nvsum)
+            continue
+
+        entries, bmn, bmx, vtot, before, after = encode_plist(plist)
+        tot_before += before; tot_after += after
         out_parts[pid] = entries
         c = (bmn+bmx)/2
         anchors[pid] = [round(float(c[0]),2), round(float(bmx[1]),2),
@@ -341,6 +406,8 @@ def convert(src, dst):
     result = {"meta":{"source":"Flightradar24/fr24-3d-models (GPL-2.0)",
                       "model": src.split("/")[-1], "format": 2},
               "texture": texture_uri, "parts": out_parts, "anchors": anchors}
+    if surfaces:
+        result["surfaces"] = surfaces
     with open(dst, "w") as f:
         json.dump(result, f, separators=(",",":"))
     kb = len(json.dumps(result, separators=(',',':')))//1024

@@ -108,53 +108,85 @@ function init(DATA, MODEL){
   scene.add(airplane);
   const partGroups = {};
 
+  // 單一 entry → THREE.Mesh（部位與操縱面共用）
+  function makeMesh(e){
+    const geo = new THREE.BufferGeometry();
+    if (e.q){   // v2 量化格式：uint16 位置 → 反量化
+      const q = b64ToArray(e.q, Uint16Array);
+      const n = q.length / 3;
+      const pos = new Float32Array(q.length);
+      const [ox, oy, oz] = e.qo, [sx, sy, sz] = e.qs;
+      for (let i = 0; i < n; i++){
+        pos[i*3]   = q[i*3]   * sx + ox;
+        pos[i*3+1] = q[i*3+1] * sy + oy;
+        pos[i*3+2] = q[i*3+2] * sz + oz;
+      }
+      geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+      if (e.u){   // UV 也是 uint16 量化（0..65535 → 0..1）
+        const qu = b64ToArray(e.u, Uint16Array);
+        const uv = new Float32Array(qu.length);
+        for (let i = 0; i < qu.length; i++) uv[i] = qu[i] / 65535;
+        geo.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
+      }
+    } else {   // v1 舊格式（float32 位置）
+      geo.setAttribute("position", new THREE.BufferAttribute(b64ToArray(e.p, Float32Array), 3));
+      if (e.u) geo.setAttribute("uv", new THREE.BufferAttribute(b64ToArray(e.u, Float32Array), 2));
+    }
+    geo.setIndex(new THREE.BufferAttribute(b64ToArray(e.i, e.iw === 4 ? Uint32Array : Uint16Array), 1));
+    geo.computeVertexNormals();
+    const alpha = e.c[3] !== undefined ? e.c[3] : 1;
+    const m = new THREE.MeshStandardMaterial({
+      color: new THREE.Color(e.c[0], e.c[1], e.c[2]),
+      map: (e.t && liveryTex) ? liveryTex : null,
+      metalness: 0.15, roughness: 0.55, side: THREE.DoubleSide,
+      transparent: alpha < 1, opacity: alpha, depthWrite: alpha >= 1
+    });
+    return new THREE.Mesh(geo, m);
+  }
+
   for (const [pid, entries] of Object.entries(MODEL.parts)){
     const g = new THREE.Group();
     g.userData.partId = pid;
     g.userData.anchor = new THREE.Vector3(...(MODEL.anchors[pid] || [0,1,0]));
-    for (const e of entries){
-      const geo = new THREE.BufferGeometry();
-
-      if (e.q){   // v2 量化格式：uint16 位置 → 反量化
-        const q = b64ToArray(e.q, Uint16Array);
-        const n = q.length / 3;
-        const pos = new Float32Array(q.length);
-        const [ox, oy, oz] = e.qo, [sx, sy, sz] = e.qs;
-        for (let i = 0; i < n; i++){
-          pos[i*3]   = q[i*3]   * sx + ox;
-          pos[i*3+1] = q[i*3+1] * sy + oy;
-          pos[i*3+2] = q[i*3+2] * sz + oz;
-        }
-        geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
-        if (e.u){   // UV 也是 uint16 量化（0..65535 → 0..1）
-          const qu = b64ToArray(e.u, Uint16Array);
-          const uv = new Float32Array(qu.length);
-          for (let i = 0; i < qu.length; i++) uv[i] = qu[i] / 65535;
-          geo.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
-        }
-      } else {   // v1 舊格式（float32 位置）
-        geo.setAttribute("position", new THREE.BufferAttribute(b64ToArray(e.p, Float32Array), 3));
-        if (e.u) geo.setAttribute("uv", new THREE.BufferAttribute(b64ToArray(e.u, Float32Array), 2));
-      }
-
-      geo.setIndex(new THREE.BufferAttribute(b64ToArray(e.i, e.iw === 4 ? Uint32Array : Uint16Array), 1));
-      geo.computeVertexNormals();
-
-      const alpha = e.c[3] !== undefined ? e.c[3] : 1;
-      const m = new THREE.MeshStandardMaterial({
-        color: new THREE.Color(e.c[0], e.c[1], e.c[2]),
-        map: (e.t && liveryTex) ? liveryTex : null,
-        metalness: 0.15,
-        roughness: 0.55,
-        side: THREE.DoubleSide,
-        transparent: alpha < 1,
-        opacity: alpha,
-        depthWrite: alpha >= 1
-      });
-      g.add(new THREE.Mesh(geo, m));
-    }
+    for (const e of entries) g.add(makeMesh(e));
     airplane.add(g);
     partGroups[pid] = g;
+  }
+
+  // ── 可動操縱面：各片建鉸鏈 pivot，掛在主翼群組下（拾取／高亮歸主翼）──
+  const surfaces = [];
+  if (MODEL.surfaces && partGroups.wing){
+    for (const s of MODEL.surfaces){
+      const pivot = new THREE.Group();
+      pivot.position.set(s.pv[0], s.pv[1], s.pv[2]);
+      pivot.userData = { type: s.t, side: s.sd,
+        axis: new THREE.Vector3(s.ax[0], s.ax[1], s.ax[2]).normalize(),
+        base: new THREE.Vector3(s.pv[0], s.pv[1], s.pv[2]) };
+      for (const e of s.e){
+        const mesh = makeMesh(e);
+        mesh.position.set(-s.pv[0], -s.pv[1], -s.pv[2]);   // 幾何相對樞紐
+        pivot.add(mesh);
+      }
+      partGroups.wing.add(pivot);
+      surfaces.push(pivot);
+    }
+  }
+
+  // 展開角度：取材自 FlightGear 737NG 開源機模的實際操縱面偏轉角（GPL-2.0）
+  // https://github.com/omega13a/737-Next-Generation Models/LWing.xml
+  const DEPLOY = { flap: 0.52, slat: -0.44, spoiler: -0.79, aileron: 0.35 };
+  // Fowler 平移：襟翼隨展開往後（-X）並略下（-Y）滑出、縫翼往前（+X）下伸
+  const FOWLER = { flap: [-0.22, -0.05, 0], slat: [0.10, -0.05, 0] };
+  let deployTarget = 0, deployNow = 0;
+  function applyDeploy(){
+    for (const pv of surfaces){
+      const type = pv.userData.type;
+      let ang = (DEPLOY[type] || 0) * deployNow;
+      if (type !== "aileron") ang *= pv.userData.side;
+      pv.quaternion.setFromAxisAngle(pv.userData.axis, ang);
+      const f = FOWLER[type], b = pv.userData.base;
+      if (f) pv.position.set(b.x + f[0] * deployNow, b.y + f[1] * deployNow, b.z + f[2] * deployNow);
+    }
   }
 
   /* ── 視角控制 ── */
@@ -626,6 +658,22 @@ function init(DATA, MODEL){
     a.click();
   });
 
+  /* ── 展開操縱面（襟翼／縫翼／擾流板／副翼） ── */
+  const btnDeploy = document.getElementById("btn-deploy");
+  if (surfaces.length){
+    btnDeploy.hidden = false;
+    const syncDeploy = () => {
+      const on = deployTarget > 0.5;
+      btnDeploy.setAttribute("aria-pressed", String(on));
+      btnDeploy.textContent = I18N.t(on ? "viewer.deploy.stow" : "viewer.deploy");
+    };
+    btnDeploy.addEventListener("click", () => {
+      deployTarget = deployTarget > 0.5 ? 0 : 1;
+      syncDeploy();
+    });
+    document.addEventListener("langchange", syncDeploy);
+  }
+
   /* ── 深連結：載入時自動選取部位、還原相機 ── */
   const params = new URLSearchParams(location.search);
   const camParam = params.get("cam");
@@ -652,6 +700,10 @@ function init(DATA, MODEL){
   function tick(){
     requestAnimationFrame(tick);
     if (autoRotate && !dragging) airplane.rotation.y += 0.0022;
+    if (Math.abs(deployNow - deployTarget) > 0.0015){
+      deployNow += (deployTarget - deployNow) * 0.12;   // 平滑展開／收回
+      applyDeploy();
+    }
     applyCamera();
     updateCallout();
     updateHotspots();
