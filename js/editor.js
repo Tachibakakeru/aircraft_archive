@@ -346,6 +346,13 @@ $("btn-lock").addEventListener("click", () => {
   }
 });
 
+$("btn-changepw").addEventListener("click", () => {
+  if (confirm("變更本機密碼？會清除目前記住的密碼，重新整理後需要設定一組新密碼。\n\n記得同時到 Cloudflare 把 EDITOR_PASSWORD 改成同一組，兩邊才能對上。")) {
+    HANGAR_AUTH.changePassword();
+    location.reload();
+  }
+});
+
 // ── GitHub 設定對話框 ──
 const ghModal = $("gh-modal");
 
