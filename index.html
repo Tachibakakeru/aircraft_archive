@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>機庫檔案 HANGAR ARCHIVE</title>
-<link rel="stylesheet" href="css/style.css?v=18">
-<script src="js/theme.js?v=18"></script>
-<script src="js/i18n.js?v=18"></script>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b1220">
+<link rel="stylesheet" href="css/style.css?v=19">
+<script src="js/theme.js?v=19"></script>
+<script src="js/i18n.js?v=19"></script>
 </head>
 <body>
 
@@ -21,6 +24,11 @@
     <input type="search" id="fleet-search" data-i18n-ph="fleet.search" placeholder="搜尋機型 / 廠商…">
     <select class="ed-entry" id="fleet-cat"></select>
     <select class="ed-entry" id="fleet-sort"></select>
+    <span class="fleet-range" id="fleet-range" hidden>
+      <input type="number" class="ed-entry range-in" id="fleet-min" data-i18n-ph="fleet.range.min" placeholder="Min">
+      <span class="range-sep">–</span>
+      <input type="number" class="ed-entry range-in" id="fleet-max" data-i18n-ph="fleet.range.max" placeholder="Max">
+    </span>
     <button class="ed-entry" id="fleet-view"></button>
     <a class="ed-entry" href="compare.html" data-i18n="fleet.compare">⇄ 比較</a>
     <a class="ed-entry" href="editor.html" data-i18n="fleet.edit">✎ 編輯資料</a>
@@ -132,6 +140,9 @@
     const catSel = document.getElementById("fleet-cat");
     const sortSel = document.getElementById("fleet-sort");
     const viewBtn = document.getElementById("fleet-view");
+    const rangeWrap = document.getElementById("fleet-range");
+    const minIn = document.getElementById("fleet-min");
+    const maxIn = document.getElementById("fleet-max");
 
     const numOf = s => { const m = String(s).match(/[\d.]+/); return m ? parseFloat(m[0]) : 0; };
     const SORTS = {
@@ -139,6 +150,12 @@
       first: (a, b) => numOf(a.firstFlight) - numOf(b.firstFlight),
       seats: (a, b) => numOf(b.seats) - numOf(a.seats),
       span:  (a, b) => numOf(b.span) - numOf(a.span),
+    };
+    // 數值範圍篩選：套用在目前排序欄位上（延伸現有排序，不必另建欄位選單）
+    const FIELD_GETTER = {
+      first: a => numOf(a.firstFlight),
+      seats: a => numOf(a.seats),
+      span:  a => numOf(a.span),
     };
 
     const catKey = a => I18N.field(a.category);
@@ -156,6 +173,12 @@
       sortSel.innerHTML = ["name", "first", "seats", "span"].map(k =>
         `<option value="${k}"${k === scur ? " selected" : ""}>${I18N.t("fleet.sort.label")} · ${I18N.t("fleet.sort." + k)}</option>`).join("");
       viewBtn.textContent = view === "timeline" ? "▤ " + I18N.t("fleet.view.grid") : "🕒 " + I18N.t("fleet.view.timeline");
+      const getter = FIELD_GETTER[sortSel.value];
+      rangeWrap.hidden = !getter;
+      if (getter){
+        minIn.placeholder = I18N.t("fleet.range.min") + " " + I18N.t("fleet.sort." + sortSel.value);
+        maxIn.placeholder = I18N.t("fleet.range.max") + " " + I18N.t("fleet.sort." + sortSel.value);
+      }
     };
 
     const applyAll = () => {
@@ -164,9 +187,13 @@
       renderRecent();
       const q = search.value.trim().toLowerCase();
       const cat = catSel.value;
+      const getter = FIELD_GETTER[sortSel.value];
+      const min = minIn.value !== "" ? parseFloat(minIn.value) : null;
+      const max = maxIn.value !== "" ? parseFloat(maxIn.value) : null;
       let list = fleet.aircraft.filter(a =>
         (!cat || catId(a) === cat) &&
-        [a.name, a.manufacturer, I18N.field(a.category)].join(" ").toLowerCase().includes(q));
+        [a.name, a.manufacturer, I18N.field(a.category)].join(" ").toLowerCase().includes(q) &&
+        (!getter || ((min == null || getter(a) >= min) && (max == null || getter(a) <= max))));
       list = list.slice().sort(SORTS[sortSel.value] || SORTS.name);
       render(list);
     };
@@ -174,6 +201,8 @@
     search.addEventListener("input", applyAll);
     catSel.addEventListener("change", applyAll);
     sortSel.addEventListener("change", applyAll);
+    minIn.addEventListener("input", applyAll);
+    maxIn.addEventListener("input", applyAll);
     viewBtn.addEventListener("click", () => {
       view = view === "timeline" ? "grid" : "timeline";
       localStorage.setItem("hangar_view", view);
@@ -192,6 +221,6 @@ I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 </script>
 
-<script src="js/ui.js?v=18"></script>
+<script src="js/ui.js?v=19"></script>
 </body>
 </html>

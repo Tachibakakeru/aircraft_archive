@@ -1,0 +1,14 @@
+{
+  "name": "機庫檔案 HANGAR ARCHIVE",
+  "short_name": "機庫檔案",
+  "description": "飛行器 3D 互動圖鑑",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

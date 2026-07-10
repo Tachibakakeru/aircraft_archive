@@ -290,6 +290,13 @@ select.ed-entry{
 }
 select.ed-entry option{background:var(--bg-1);color:var(--text)}
 
+/* ── 列表：數值範圍篩選 ── */
+.fleet-range{display:inline-flex;align-items:center;gap:6px}
+.fleet-range[hidden]{display:none}
+.range-in{width:84px;text-align:center;-moz-appearance:textfield}
+.range-in::-webkit-outer-spin-button,.range-in::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.range-sep{color:var(--muted);font-family:var(--mono)}
+
 /* ── 比較頁：只顯示差異 ── */
 .cmp-difftoggle{
   display:inline-flex;align-items:center;gap:6px;

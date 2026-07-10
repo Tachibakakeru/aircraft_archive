@@ -22,4 +22,8 @@
       return this.get();
     }
   };
+
+  // PWA 離線快取（頁面自身路徑作為 scope，避免子路徑部署時跑掉）
+  if ("serviceWorker" in navigator)
+    navigator.serviceWorker.register("sw.js").catch(() => {});
 })();
