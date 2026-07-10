@@ -7,227 +7,48 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=23">
-<script src="js/theme.js?v=23"></script>
-<script src="js/i18n.js?v=23"></script>
+<link rel="stylesheet" href="css/style.css?v=25">
+<link rel="stylesheet" href="css/home.css?v=25">
+<script src="js/theme.js?v=25"></script>
+<script src="js/i18n.js?v=25"></script>
 </head>
 <body>
 
-<div class="fleet-wrap">
-  <div class="fleet-head">
+<div class="home-tools">
+  <button class="tool-btn" id="btn-lang" title="Language">繁中</button>
+  <button class="tool-btn" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+</div>
+
+<div class="home-wrap">
+  <div class="home-head">
     <div class="eyebrow" data-i18n="brand.eyebrow">HANGAR ARCHIVE / 機庫檔案</div>
-    <h1 data-i18n="fleet.title">機隊總覽</h1>
-    <div class="sub" data-i18n="fleet.sub">FLEET INDEX — 點選機型進入 3D 互動檢視</div>
+    <h1 data-i18n="home.title">歡迎光臨機庫</h1>
+    <div class="sub" data-i18n="home.sub">選擇要探索的資料庫</div>
   </div>
 
-  <div class="fleet-toolbar">
-    <input type="search" id="fleet-search" data-i18n-ph="fleet.search" placeholder="搜尋機型 / 廠商…">
-    <select class="ed-entry" id="fleet-cat"></select>
-    <select class="ed-entry" id="fleet-sort"></select>
-    <span class="fleet-range" id="fleet-range" hidden>
-      <input type="number" class="ed-entry range-in" id="fleet-min" data-i18n-ph="fleet.range.min" placeholder="Min">
-      <span class="range-sep">–</span>
-      <input type="number" class="ed-entry range-in" id="fleet-max" data-i18n-ph="fleet.range.max" placeholder="Max">
-    </span>
-    <button class="ed-entry" id="fleet-view"></button>
-    <a class="ed-entry" href="compare.html" data-i18n="fleet.compare">⇄ 比較</a>
-    <a class="ed-entry" href="variants.html" data-i18n="nav.variants">📋 機型家族</a>
-    <a class="ed-entry" href="airports.html" data-i18n="nav.airports">🛬 機場與跑道</a>
-    <a class="ed-entry" href="editor.html" data-i18n="fleet.edit">✎ 編輯資料</a>
-    <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
-    <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+  <div class="home-modes">
+    <a class="home-card" href="fleet.html">
+      <span class="icon">✈️</span>
+      <h2 data-i18n="home.fleet.title">飛行器圖鑑</h2>
+      <p data-i18n="home.fleet.desc">40 款機型的 3D 互動檢視、規格比對與家族系譜</p>
+      <span class="stat">40 AIRCRAFT</span>
+    </a>
+    <a class="home-card" href="airports.html">
+      <span class="icon">🛬</span>
+      <h2 data-i18n="home.airports.title">機場與跑道</h2>
+      <p data-i18n="home.airports.desc">全球機場搜尋、跑道明細與 ICAO／IATA 代號</p>
+      <span class="stat">85,716 AIRPORTS</span>
+    </a>
   </div>
 
-  <div class="fleet-recent" id="fleet-recent" hidden></div>
-
-  <div class="fleet-grid" id="fleet-grid"></div>
-
-  <div id="fleet-error" data-i18n-html="fleet.error">
-    無法載入機隊資料（<code>data/fleet.json</code>）。<br>
-    若你是直接雙擊開啟 HTML 檔案（<code>file://</code>），瀏覽器會阻擋資料讀取，
-    請在專案資料夾啟動本機伺服器後再開啟：<br>
-    <code>python3 -m http.server 8000</code> → 瀏覽 <code>http://localhost:8000</code>
-  </div>
-
-  <div class="fleet-foot">
-    3D MODELS: Flightradar24 / fr24-3d-models (GPL-2.0)<br>
-    <span data-i18n="fleet.foot.line2">新增機型流程請見 README.md — convert_fr24.py 轉換 → 撰寫 data JSON → 註冊至 fleet.json</span>
-  </div>
+  <div class="home-foot" data-i18n="home.foot">HANGAR ARCHIVE — 飛行器與機場的互動資料庫</div>
 </div>
 
 <script>
-(async () => {
-  const grid = document.getElementById("fleet-grid");
-  try {
-    const res = await fetch("data/fleet.json?v=23");
-    if (!res.ok) throw new Error(res.status);
-    const fleet = await res.json();
-
-    const F = v => I18N.field(v);   // 內容欄位多語言取值
-    const enc = encodeURIComponent;
-    const byId = id => fleet.aircraft.find(a => a.id === id);
-
-    let favs = new Set(JSON.parse(localStorage.getItem("hangar_favs") || "[]"));
-    let view = localStorage.getItem("hangar_view") || "grid";
-    const saveFavs = () => localStorage.setItem("hangar_favs", JSON.stringify([...favs]));
-    const toggleFav = id => { favs.has(id) ? favs.delete(id) : favs.add(id); saveFavs(); applyAll(); };
-    const star = id => `<button class="card-fav${favs.has(id) ? " on" : ""}" data-id="${id}" aria-pressed="${favs.has(id)}" title="${I18N.t("fleet.fav")}">${favs.has(id) ? "★" : "☆"}</button>`;
-
-    const codeBadge = a => {
-      const codes = [a.icao, a.iata].filter(Boolean);
-      return codes.length ? `<span class="craft-code">${codes.join(" · ")}</span>` : "";
-    };
-
-    const cardHTML = a => `
-      <a class="card-link" href="viewer.html?model=${enc(a.id)}">
-        <div class="thumb"><img src="${a.thumb}" alt="${a.name}" loading="lazy"></div>
-        <div class="body">
-          <div class="mfr">${a.manufacturer.toUpperCase()} / ${F(a.category)} ${codeBadge(a)}</div>
-          <h2>${a.name}</h2>
-          <div class="tagline">${F(a.tagline)}</div>
-          <div class="specs">
-            <span>${I18N.t("fleet.spec.first")}<b>${a.firstFlight}</b></span>
-            <span>${I18N.t("fleet.spec.span")}<b>${a.span}</b></span>
-            <span>${I18N.t("fleet.spec.seats")}<b>${a.seats}</b></span>
-          </div>
-        </div>
-      </a>
-      ${star(a.id)}
-      <a class="card-edit" href="editor.html?model=${enc(a.id)}" title="${I18N.t("fleet.edit.title")}">✎</a>`;
-
-    const bindFavs = root => root.querySelectorAll(".card-fav").forEach(b =>
-      b.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); toggleFav(b.dataset.id); }));
-
-    const renderGrid = list => {
-      grid.className = "fleet-grid";
-      // 收藏優先（穩定排序保留原順序）
-      list = list.slice().sort((a, b) => (favs.has(b.id) ? 1 : 0) - (favs.has(a.id) ? 1 : 0));
-      grid.innerHTML = list.map(a => `<div class="craft-card">${cardHTML(a)}</div>`).join("");
-      bindFavs(grid);
-    };
-
-    const renderTimeline = list => {
-      grid.className = "fleet-timeline";
-      const sorted = list.slice().sort((a, b) => numOf(a.firstFlight) - numOf(b.firstFlight));
-      grid.innerHTML = sorted.map(a => `
-        <div class="tl-row">
-          <div class="tl-year">${a.firstFlight}</div>
-          <div class="tl-line"><span class="tl-dot"></span></div>
-          <div class="tl-cardwrap">
-            <a class="tl-card" href="viewer.html?model=${enc(a.id)}">
-              <img src="${a.thumb}" alt="${a.name}" loading="lazy">
-              <div class="tl-info">
-                <h3>${a.name}</h3>
-                <div class="tl-meta">${a.manufacturer.toUpperCase()} · ${F(a.category)} · ${I18N.t("fleet.spec.seats")} ${a.seats} ${codeBadge(a)}</div>
-              </div>
-            </a>
-            ${star(a.id)}
-          </div>
-        </div>`).join("");
-      bindFavs(grid);
-    };
-
-    const render = list => view === "timeline" ? renderTimeline(list) : renderGrid(list);
-
-    const renderRecent = () => {
-      const el = document.getElementById("fleet-recent");
-      let ids = [];
-      try { ids = JSON.parse(localStorage.getItem("hangar_recent") || "[]"); } catch {}
-      ids = ids.filter(byId).slice(0, 8);
-      if (!ids.length){ el.hidden = true; return; }
-      el.hidden = false;
-      el.innerHTML = `<div class="fleet-recent-h">${I18N.t("fleet.recent")}</div>` +
-        `<div class="fleet-recent-row">` + ids.map(id => {
-          const a = byId(id);
-          return `<a class="recent-chip" href="viewer.html?model=${enc(id)}"><img src="${a.thumb}" alt="${a.name}"><span>${a.name}</span></a>`;
-        }).join("") + `</div>`;
-    };
-
-    const search = document.getElementById("fleet-search");
-    const catSel = document.getElementById("fleet-cat");
-    const sortSel = document.getElementById("fleet-sort");
-    const viewBtn = document.getElementById("fleet-view");
-    const rangeWrap = document.getElementById("fleet-range");
-    const minIn = document.getElementById("fleet-min");
-    const maxIn = document.getElementById("fleet-max");
-
-    const numOf = s => { const m = String(s).match(/[\d.]+/); return m ? parseFloat(m[0]) : 0; };
-    const SORTS = {
-      name:  (a, b) => a.name.localeCompare(b.name),
-      first: (a, b) => numOf(a.firstFlight) - numOf(b.firstFlight),
-      seats: (a, b) => numOf(b.seats) - numOf(a.seats),
-      span:  (a, b) => numOf(b.span) - numOf(a.span),
-    };
-    // 數值範圍篩選：套用在目前排序欄位上（延伸現有排序，不必另建欄位選單）
-    const FIELD_GETTER = {
-      first: a => numOf(a.firstFlight),
-      seats: a => numOf(a.seats),
-      span:  a => numOf(a.span),
-    };
-
-    const catKey = a => I18N.field(a.category);
-    const catId  = a => (a.category && a.category.zh) || I18N.field(a.category);
-
-    const buildControls = () => {
-      const cur = catSel.value;
-      const cats = [...new Set(fleet.aircraft.map(catId))];
-      catSel.innerHTML = `<option value="">${I18N.t("fleet.filter.all")}</option>` +
-        cats.map(c => {
-          const a = fleet.aircraft.find(x => catId(x) === c);
-          return `<option value="${c}"${c === cur ? " selected" : ""}>${catKey(a)}</option>`;
-        }).join("");
-      const scur = sortSel.value || "name";
-      sortSel.innerHTML = ["name", "first", "seats", "span"].map(k =>
-        `<option value="${k}"${k === scur ? " selected" : ""}>${I18N.t("fleet.sort.label")} · ${I18N.t("fleet.sort." + k)}</option>`).join("");
-      viewBtn.textContent = view === "timeline" ? "▤ " + I18N.t("fleet.view.grid") : "🕒 " + I18N.t("fleet.view.timeline");
-      const getter = FIELD_GETTER[sortSel.value];
-      rangeWrap.hidden = !getter;
-      if (getter){
-        minIn.placeholder = I18N.t("fleet.range.min") + " " + I18N.t("fleet.sort." + sortSel.value);
-        maxIn.placeholder = I18N.t("fleet.range.max") + " " + I18N.t("fleet.sort." + sortSel.value);
-      }
-    };
-
-    const applyAll = () => {
-      I18N.apply();
-      buildControls();
-      renderRecent();
-      const q = search.value.trim().toLowerCase();
-      const cat = catSel.value;
-      const getter = FIELD_GETTER[sortSel.value];
-      const min = minIn.value !== "" ? parseFloat(minIn.value) : null;
-      const max = maxIn.value !== "" ? parseFloat(maxIn.value) : null;
-      let list = fleet.aircraft.filter(a =>
-        (!cat || catId(a) === cat) &&
-        [a.name, a.manufacturer, I18N.field(a.category), a.icao, a.iata].join(" ").toLowerCase().includes(q) &&
-        (!getter || ((min == null || getter(a) >= min) && (max == null || getter(a) <= max))));
-      list = list.slice().sort(SORTS[sortSel.value] || SORTS.name);
-      render(list);
-    };
-
-    search.addEventListener("input", applyAll);
-    catSel.addEventListener("change", applyAll);
-    sortSel.addEventListener("change", applyAll);
-    minIn.addEventListener("input", applyAll);
-    maxIn.addEventListener("input", applyAll);
-    viewBtn.addEventListener("click", () => {
-      view = view === "timeline" ? "grid" : "timeline";
-      localStorage.setItem("hangar_view", view);
-      applyAll();
-    });
-    document.addEventListener("langchange", applyAll);
-
-    applyAll();
-  } catch (err) {
-    document.getElementById("fleet-error").style.display = "block";
-  }
-})();
-
-// 語言（點擊選擇）與主題按鈕
+I18N.apply();
 I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
+document.addEventListener("langchange", () => I18N.apply());
 </script>
-
-<script src="js/ui.js?v=23"></script>
 </body>
 </html>

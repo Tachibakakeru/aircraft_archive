@@ -22,12 +22,12 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=23`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=25`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=23`).then(r => { if(!r.ok) throw 0; return r.json(); })
+  fetch(`models/${MODEL_ID}.json?v=25`).then(r => { if(!r.ok) throw 0; return r.json(); })
 ]).then(([DATA, MODEL]) => init(DATA, MODEL))
   .catch(() => fail(
     `無法載入 <code>data/${MODEL_ID}.json</code> 或 <code>models/${MODEL_ID}.json</code>。<br>` +

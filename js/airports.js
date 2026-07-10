@@ -1,7 +1,8 @@
 "use strict";
 /* ═══════════════════════════════════════════════
-   機場與跑道 — 搜尋、篩選、跑道明細（依需求載入）
+   機場與跑道 — 搜尋、篩選、機場明細（依國家整批載入）
    資料來源：OurAirports（Public Domain），見 tools/build_airports.py
+   全量匯入：85,716 座機場、48,096 條跑道，未篩選類別或代號。
    ═══════════════════════════════════════════════ */
 
 const $ = id => document.getElementById(id);
@@ -9,13 +10,13 @@ const MAX_RESULTS = 200;
 
 let AIRPORTS = [];
 let COUNTRIES = {};
-const runwayCache = {};   // country code → { ident: [runway,...] }
+const detailCache = {};   // country code → { ident: {lat,lon,elev,region,runways} }
 
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=23"),
-      fetch("data/countries.json?v=23"),
+      fetch("data/airports.json?v=25"),
+      fetch("data/countries.json?v=25"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -60,12 +61,12 @@ function buildCountrySelect(){
   const codes = Object.keys(counts).sort((a, b) => countryName(a).localeCompare(countryName(b)));
   const sel = $("apt-country");
   sel.innerHTML = `<option value="">${I18N.t("airports.filter.allCountries")}</option>` +
-    codes.map(c => `<option value="${c}">${countryName(c)} (${counts[c]})</option>`).join("");
+    codes.map(c => `<option value="${c}">${countryName(c)} (${counts[c].toLocaleString()})</option>`).join("");
 }
 
 function buildTypeSelect(){
   const sel = $("apt-type");
-  const types = ["large_airport", "medium_airport", "small_airport", "seaplane_base", "heliport"];
+  const types = ["large_airport", "medium_airport", "small_airport", "seaplane_base", "heliport", "balloonport", "closed"];
   sel.innerHTML = `<option value="">${I18N.t("airports.filter.allTypes")}</option>` +
     types.map(t => `<option value="${t}">${I18N.t("airports.type." + t)}</option>`).join("");
 }
@@ -108,12 +109,12 @@ function render(list){
   emptyEl.hidden = true;
   list.sort((a, b) => a.name.localeCompare(b.name));
   const shown = list.slice(0, MAX_RESULTS);
-  countEl.innerHTML = `${I18N.t("airports.count.showing")} <b>${shown.length}</b> / ${list.length}`;
+  countEl.innerHTML = `${I18N.t("airports.count.showing")} <b>${shown.length.toLocaleString()}</b> / ${list.length.toLocaleString()}`;
 
   listEl.innerHTML = shown.map(a => {
     const codes = [a.icao, a.iata].filter(Boolean).map(c => `<span>${c}</span>`).join("");
     const loc = [a.city, countryName(a.country)].filter(Boolean).join(", ");
-    return `<button class="apt-row" data-id="${a.id}">
+    return `<button class="apt-row${a.type === "closed" ? " closed" : ""}" data-id="${a.id}">
       <span class="apt-type-dot ${a.type}"></span>
       <span class="apt-main">
         <span class="apt-name">${a.name}</span>
@@ -127,16 +128,18 @@ function render(list){
     row.addEventListener("click", () => openAirport(row.dataset.id)));
 
   moreEl.hidden = list.length <= MAX_RESULTS;
-  if (!moreEl.hidden) moreEl.textContent = I18N.t("airports.more").replace("{n}", list.length - MAX_RESULTS);
+  if (!moreEl.hidden) moreEl.textContent = I18N.t("airports.more").replace("{n}", (list.length - MAX_RESULTS).toLocaleString());
 }
 
-async function loadRunways(country){
-  if (!country) return {};
-  if (runwayCache[country]) return runwayCache[country];
+// 每個國家的機場明細（座標／標高／行政區碼／跑道清單）合併成一檔，
+// 點開該國第一座機場時整批載入、快取起來，同國其他機場不必再要求
+async function loadDetails(country){
+  const key = country || "ZZ";
+  if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/runways/${encodeURIComponent(country)}.json?v=23`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=25`);
     const d = r.ok ? await r.json() : {};
-    runwayCache[country] = d;
+    detailCache[key] = d;
     return d;
   } catch { return {}; }
 }
@@ -184,6 +187,34 @@ function runwayCardHTML(rw){
   </div>`;
 }
 
+/* ── 衛星影像（Esri World Imagery，公開免金鑰圖磚服務）──
+   依機場類別選縮放級別，組 3×3 圖磚拼成一張置中的空拍圖，
+   同時涵蓋機場全貌與跑道配置，不需額外地圖函式庫。 */
+const SAT_ZOOM = {
+  large_airport: 13, medium_airport: 14, small_airport: 15,
+  seaplane_base: 14, heliport: 16, balloonport: 15, closed: 14,
+};
+function tileXY(lon, lat, z){
+  const n = 2 ** z;
+  const x = Math.floor((lon + 180) / 360 * n);
+  const latRad = lat * Math.PI / 180;
+  const y = Math.floor((1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2 * n);
+  return { x: ((x % n) + n) % n, y: Math.max(0, Math.min(n - 1, y)) };
+}
+function satelliteHTML(lat, lon, type){
+  if (lat == null || lon == null) return "";
+  const z = SAT_ZOOM[type] || 14;
+  const { x: cx, y: cy } = tileXY(lon, lat, z);
+  let tiles = "";
+  for (let dy = -1; dy <= 1; dy++){
+    for (let dx = -1; dx <= 1; dx++){
+      const url = `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${cy + dy}/${cx + dx}`;
+      tiles += `<img src="${url}" alt="">`;
+    }
+  }
+  return `<div class="apt-sat">${tiles}</div><div class="apt-sat-credit">Imagery © Esri, Maxar, Earthstar Geographics</div>`;
+}
+
 async function openAirport(id){
   const a = AIRPORTS.find(x => x.id === id);
   if (!a) return;
@@ -195,12 +226,23 @@ async function openAirport(id){
   const badges = [a.icao, a.iata].filter(Boolean).map(c => `<span class="apt-badge">${c}</span>`);
   $("apt-p-badges").innerHTML = badges.join("");
 
+  $("apt-p-info").innerHTML = "";
+  $("apt-p-sat").innerHTML = "";
+  const rwEl = $("apt-p-runways");
+  rwEl.innerHTML = `<div class="apt-empty" style="padding:20px 0">${I18N.t("viewer.loading")}</div>`;
+  panel.classList.add("open");
+  panel.setAttribute("aria-hidden", "false");
+
+  const byIdent = await loadDetails(a.country);
+  const d = byIdent[a.id] || {};
+
+  $("apt-p-sat").innerHTML = satelliteHTML(d.lat, d.lon, a.type);
+
   const info = $("apt-p-info");
-  info.innerHTML = "";
   const rows = [
-    [I18N.t("airports.detail.coords"), (a.lat != null && a.lon != null) ? `${a.lat}, ${a.lon}` : "—"],
-    [I18N.t("airports.detail.elevation"), a.elev != null ? `${a.elev} ft (${Math.round(a.elev * M_PER_FT)} m)` : "—"],
-    [I18N.t("airports.detail.region"), a.region || "—"],
+    [I18N.t("airports.detail.coords"), (d.lat != null && d.lon != null) ? `${d.lat}, ${d.lon}` : "—"],
+    [I18N.t("airports.detail.elevation"), d.elev != null ? `${d.elev} ft (${Math.round(d.elev * M_PER_FT)} m)` : "—"],
+    [I18N.t("airports.detail.region"), d.region || "—"],
   ];
   rows.forEach(([k, v]) => {
     const row = document.createElement("div"); row.className = "spec-row";
@@ -209,13 +251,7 @@ async function openAirport(id){
     row.append(dt, dd); info.appendChild(row);
   });
 
-  const rwEl = $("apt-p-runways");
-  rwEl.innerHTML = `<div class="apt-empty" style="padding:20px 0">${I18N.t("viewer.loading")}</div>`;
-  panel.classList.add("open");
-  panel.setAttribute("aria-hidden", "false");
-
-  const byIdent = await loadRunways(a.country);
-  const rws = byIdent[a.id] || [];
+  const rws = d.runways || [];
   rwEl.innerHTML = rws.length
     ? rws.map(runwayCardHTML).join("")
     : `<div class="apt-empty" style="padding:20px 0">${I18N.t("airports.detail.norunways")}</div>`;

@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════════
+   首頁（模式選擇）樣式
+   ═══════════════════════════════════════════ */
+.home-wrap{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:48px 24px;text-align:center;
+}
+.home-tools{position:fixed;top:20px;right:24px;display:flex;gap:8px;z-index:2}
+.home-head{margin-bottom:52px}
+.home-head .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;color:var(--amber)}
+.home-head h1{
+  font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:.02em;
+  margin:14px 0 10px;text-wrap:balance;
+}
+.home-head .sub{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+
+.home-modes{
+  display:grid;grid-template-columns:repeat(2,minmax(220px,300px));gap:20px;
+  max-width:660px;width:100%;
+}
+.home-card{
+  position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:36px 24px 28px;
+  background:var(--panel);border:1px solid var(--stroke);border-radius:16px;
+  text-decoration:none;color:var(--text);
+  transition:border-color .2s, transform .2s;
+}
+.home-card:hover{border-color:var(--amber);transform:translateY(-4px)}
+.home-card .icon{font-size:38px;line-height:1}
+.home-card h2{font-size:18px;font-weight:700;letter-spacing:.02em}
+.home-card p{font-size:12.5px;color:var(--muted);line-height:1.7}
+.home-card .stat{
+  margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  color:var(--amber);
+}
+
+.home-foot{
+  margin-top:52px;font-family:var(--mono);font-size:10.5px;color:var(--muted);
+  letter-spacing:.04em;
+}
+
+@media (max-width:560px){
+  .home-modes{grid-template-columns:1fr;max-width:320px}
+}

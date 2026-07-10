@@ -65,7 +65,7 @@ function requireAuth(){
         ${firstTime ? '<input type="password" id="auth-confirm" placeholder="再次輸入確認…" autocomplete="off">' : ''}
         <div class="auth-err" id="auth-err"></div>
         <div class="auth-actions">
-          <a href="index.html" class="auth-cancel">← 返回列表</a>
+          <a href="fleet.html" class="auth-cancel">← 返回列表</a>
           <button id="auth-submit">${firstTime ? "設定並進入" : "解鎖"}</button>
         </div>
       </div>`;

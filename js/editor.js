@@ -338,7 +338,7 @@ $("btn-preview").addEventListener("click", () => {
 $("btn-lock").addEventListener("click", () => {
   if (confirm("鎖定編輯器並登出？下次進入需再次輸入密碼。")) {
     HANGAR_AUTH.logout();
-    location.href = "index.html";
+    location.href = "fleet.html";
   }
 });
 

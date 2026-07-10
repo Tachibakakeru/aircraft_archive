@@ -63,7 +63,7 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
   display:flex;gap:12px;align-items:center;
   margin-bottom:28px;
 }
-#fleet-search{
+#fleet-search, .search-input{
   flex:1;max-width:340px;
   font-family:var(--sans);font-size:14px;
   color:var(--text);
@@ -71,7 +71,8 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
   border:1px solid var(--stroke);
   border-radius:8px;padding:10px 14px;
 }
-#fleet-search:focus{outline:none;border-color:var(--amber)}
+#fleet-search:focus, .search-input:focus{outline:none;border-color:var(--amber)}
+.search-input::placeholder{color:var(--muted)}
 .ed-entry{
   font-family:var(--mono);font-size:11px;letter-spacing:.12em;
   color:var(--text);text-decoration:none;
