@@ -23,6 +23,9 @@ self.addEventListener("fetch", e => {
   const req = e.request;
   if (req.method !== "GET") return;
 
+  const url = new URL(req.url);
+  if (url.pathname.startsWith("/api/")) return;   // 即時 API：一律直連網路，不快取、不攔截
+
   if (req.mode === "navigate"){
     e.respondWith(fetch(req).catch(() => caches.match(req).then(r => r || caches.match("index.html"))));
     return;
@@ -31,7 +34,11 @@ self.addEventListener("fetch", e => {
   e.respondWith(
     caches.match(req).then(cached => {
       const network = fetch(req).then(res => {
-        if (res.ok) caches.open(CACHE).then(c => c.put(req, res.clone()));
+        if (res.ok){
+          // 先同步 clone，再進非同步的 caches.open()，避免頁面已讀完本體後才 clone 而噴錯
+          const copy = res.clone();
+          caches.open(CACHE).then(c => c.put(req, copy));
+        }
         return res;
       }).catch(() => cached);
       return cached || network;
