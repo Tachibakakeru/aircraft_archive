@@ -58,7 +58,7 @@ const GitHubStorage = (() => {
       const sha = await getSha(cfg, filePath);
       const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${filePath}`;
       const body = {
-        message: `更新 ${id} 資料（機庫檔案編輯器）`,
+        message: `更新 ${id} 資料（天空檔案編輯器）`,
         content: toB64(content),
         branch: cfg.branch || "main",
       };

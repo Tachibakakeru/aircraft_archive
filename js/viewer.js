@@ -1,6 +1,6 @@
 "use strict";
 /* ═══════════════════════════════════════════════
-   機庫檔案 — 3D 檢視器
+   天空檔案 — 3D 檢視器
    依 ?model=<id> 載入 data/<id>.json（部位文案）
    與 models/<id>.json（convert_fr24.py 產出的幾何）
    ═══════════════════════════════════════════════ */
@@ -22,12 +22,12 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=26`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=27`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=26`).then(r => { if(!r.ok) throw 0; return r.json(); })
+  fetch(`models/${MODEL_ID}.json?v=27`).then(r => { if(!r.ok) throw 0; return r.json(); })
 ]).then(([DATA, MODEL]) => init(DATA, MODEL))
   .catch(() => fail(
     `無法載入 <code>data/${MODEL_ID}.json</code> 或 <code>models/${MODEL_ID}.json</code>。<br>` +
@@ -48,7 +48,7 @@ function init(DATA, MODEL){
   } catch {}
   const F = v => I18N.field(v);   // 內容欄位多語言取值
 
-  document.title = `${I18N.specValue(I18N.field(DATA.title))} — HANGAR ARCHIVE`;
+  document.title = `${I18N.specValue(I18N.field(DATA.title))} — SKY ARCHIVE`;
   document.getElementById("craft-title").textContent = I18N.specValue(I18N.field(DATA.title));
   document.getElementById("craft-sub").textContent = I18N.specValue(I18N.field(DATA.sub)) || "";
   document.getElementById("credit").textContent =
@@ -537,7 +537,7 @@ function init(DATA, MODEL){
   document.addEventListener("langchange", () => {
     I18N.apply();
     const tTitle = I18N.specValue(I18N.field(DATA.title));
-    document.title = `${tTitle} — HANGAR ARCHIVE`;
+    document.title = `${tTitle} — SKY ARCHIVE`;
     document.getElementById("craft-title").textContent = tTitle;
     document.getElementById("craft-sub").textContent = I18N.specValue(I18N.field(DATA.sub)) || "";
     document.getElementById("spec-craft-name").textContent = tTitle;

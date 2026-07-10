@@ -23,8 +23,8 @@ function toggleFav(id){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=26"),
-      fetch("data/countries.json?v=26"),
+      fetch("data/airports.json?v=27"),
+      fetch("data/countries.json?v=27"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -193,7 +193,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=26`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=27`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;

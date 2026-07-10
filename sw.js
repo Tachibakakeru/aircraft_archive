@@ -1,5 +1,5 @@
 "use strict";
-/* 機庫檔案 — 離線快取（Service Worker）
+/* 天空檔案 — 離線快取（Service Worker）
    頁面：network-first（在線時永遠拿最新）；靜態資源／資料：
    stale-while-revalidate（先回快取，背景更新）。無版本耦合，
    ?v=N 等查詢字串照樣被當成獨立 URL 快取，部署後自動更新。 */

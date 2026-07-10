@@ -1,7 +1,7 @@
 {
-  "name": "機庫檔案 HANGAR ARCHIVE",
-  "short_name": "機庫檔案",
-  "description": "飛行器 3D 互動圖鑑",
+  "name": "天空檔案 SKY ARCHIVE",
+  "short_name": "天空檔案",
+  "description": "飛行器 3D 互動圖鑑與全球機場資料庫",
   "start_url": "index.html",
   "scope": ".",
   "display": "standalone",
