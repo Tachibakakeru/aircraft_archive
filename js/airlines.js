@@ -17,10 +17,24 @@ function toggleFav(id){
 }
 
 const ALLIANCE_KEYS = ["star", "skyteam", "oneworld", "none"];
+const TIER_KEYS = ["mainline", "regional", "lcc"];
+
+// 沒有取得官方商標授權，無法直接放各家真正的 logo 圖檔——改成依代號決定
+// 顏色的字母徽章，至少讓每家在列表上有自己專屬、穩定不變的識別色塊。
+function logoColor(id){
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) hash = (hash * 31 + id.charCodeAt(i)) >>> 0;
+  return `hsl(${hash % 360}, 60%, 42%)`;
+}
+function logoBadge(a, big){
+  const code = a.iata || a.icao || a.name.slice(0, 2).toUpperCase();
+  const cls = big ? "al-logo al-logo-big" : "al-logo";
+  return `<span class="${cls}" style="background:${logoColor(a.id)}">${code}</span>`;
+}
 
 (async () => {
   try {
-    const res = await fetch("data/airlines.json?v=70");
+    const res = await fetch("data/airlines.json?v=73");
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
     AIRLINES = data.airlines;
@@ -32,6 +46,7 @@ const ALLIANCE_KEYS = ["star", "skyteam", "oneworld", "none"];
   }
 
   buildAllianceSelect();
+  buildTierSelect();
   I18N.apply();
   applyAll();
 
@@ -40,9 +55,10 @@ const ALLIANCE_KEYS = ["star", "skyteam", "oneworld", "none"];
 
   $("al-search").addEventListener("input", applyAll);
   $("al-alliance").addEventListener("change", applyAll);
+  $("al-tier").addEventListener("change", applyAll);
   $("al-fav-only").addEventListener("change", applyAll);
   document.addEventListener("langchange", () => {
-    I18N.apply(); buildAllianceSelect(); applyAll();
+    I18N.apply(); buildAllianceSelect(); buildTierSelect(); applyAll();
     const panel = $("panel");
     if (panel.classList.contains("open") && panel.dataset.id) openAirline(panel.dataset.id);
   });
@@ -73,14 +89,24 @@ function buildAllianceSelect(){
   sel.value = cur;
 }
 
+function buildTierSelect(){
+  const sel = $("al-tier");
+  const cur = sel.value;
+  sel.innerHTML = `<option value="">${I18N.t("airlines.filter.allTiers")}</option>` +
+    TIER_KEYS.map(k => `<option value="${k}">${I18N.t("airlines.tier." + k)}</option>`).join("");
+  sel.value = cur;
+}
+
 function applyAll(){
   const q = $("al-search").value.trim().toLowerCase();
   const alliance = $("al-alliance").value;
+  const tier = $("al-tier").value;
   const favOnly = $("al-fav-only").checked;
 
   const list = AIRLINES.filter(a => {
     if (favOnly && !isFav(a.id)) return false;
     if (alliance && a.alliance !== alliance) return false;
+    if (tier && a.tier !== tier) return false;
     if (!q) return true;
     const hay = [a.name, a.icao, a.iata, I18N.field(a.country), a.country.zh, ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
     return hay.includes(q);
@@ -102,9 +128,11 @@ function render(list){
   listEl.innerHTML = list.map(a => {
     const fav = isFav(a.id);
     return `<div class="al-row" data-id="${a.id}" tabindex="0" role="button">
+      ${logoBadge(a)}
       <span class="al-alliance-dot ${a.alliance}"></span>
       <span class="al-main">
         <span class="al-name">${a.name}</span>
+        <span class="al-tier-tag al-tier-${a.tier}">${I18N.t("airlines.tier." + a.tier)}</span>
         <span class="al-loc">${I18N.field(a.country)} · ${I18N.t("airlines.founded")} ${a.founded}</span>
       </span>
       <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}">${fav ? "★" : "☆"}</button>
@@ -145,9 +173,15 @@ function openAirline(id){
   panel.dataset.id = id;
   syncFavButton();
 
+  const logoEl = $("al-p-logo");
+  logoEl.textContent = a.iata || a.icao || a.name.slice(0, 2).toUpperCase();
+  logoEl.className = "al-logo al-logo-big";
+  logoEl.style.background = logoColor(a.id);
   $("al-p-codes").textContent = [a.icao, a.iata].filter(Boolean).join(" · ");
   $("al-p-name").textContent = a.name;
   $("al-p-sub").textContent = `${I18N.field(a.country)} · ${I18N.t("airlines.founded")} ${a.founded}`;
+  $("al-p-tier").textContent = I18N.t("airlines.tier." + a.tier);
+  $("al-p-tier").className = "al-tier-tag al-tier-" + a.tier;
 
   const info = $("al-p-info");
   info.innerHTML = "";

@@ -17,6 +17,24 @@
   width:100%;
 }
 .al-row:hover{border-color:var(--amber)}
+.al-logo{
+  flex-shrink:0;width:30px;height:30px;border-radius:7px;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:9.5px;font-weight:700;color:#fff;
+  letter-spacing:.01em;text-shadow:0 1px 2px rgba(0,0,0,.35);
+}
+.al-logo-big{
+  width:56px;height:56px;border-radius:12px;font-size:17px;
+  margin-bottom:12px;box-shadow:0 4px 14px rgba(0,0,0,.3);
+}
+.al-tier-tag{
+  display:inline-block;padding:2px 7px;border-radius:4px;margin-left:8px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.05em;vertical-align:middle;
+}
+.al-tier-mainline{background:var(--amber-soft);color:var(--amber)}
+.al-tier-regional{background:rgba(111,211,239,.14);color:var(--cyan)}
+.al-tier-lcc{background:rgba(255,255,255,.08);color:var(--muted)}
+#al-p-tier{margin-left:0;margin-top:8px}
 .al-alliance-dot{
   flex-shrink:0;width:9px;height:9px;border-radius:50%;display:inline-block;
 }

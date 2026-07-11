@@ -21,7 +21,7 @@ const AptGlobe = (() => {
   let onRotateChange = null;   // (isAutoRotating) => void
 
   // 標籤模式：夠近、畫面上的候選點數量夠少時，才切換成牽引線版面
-  const LABEL_MAX_RADIUS = 2.0, LABEL_MAX_COUNT = 45, LABEL_MIN_DIST = 46, LEADER_LEN = 22;
+  const LABEL_MAX_RADIUS = 2.0, LABEL_MAX_COUNT = 45, LABEL_MIN_DIST = 46, LEADER_LEN = 32;
   let labelPositions = new Map();   // id → { sx, sy }（螢幕座標，label 模式啟用時才有效）
   let labelFrame = 0;
 
@@ -74,10 +74,13 @@ const AptGlobe = (() => {
     }
     const tex = new THREE.CanvasTexture(tileCanvas);
     tex.encoding = THREE.sRGBEncoding;
-    const geo = new THREE.PlaneGeometry(0.075, 0.075);
-    const mat = new THREE.MeshBasicMaterial({ map: tex });
+    const geo = new THREE.PlaneGeometry(0.1, 0.1);
+    // side: DoubleSide 是保險——lookAt() 理論上會讓貼圖正面朝外，但方向算
+    // 錯或轉一圈的話單面材質會直接被背面剔除、整塊貼片憑空消失且不報錯，
+    // 排查很麻煩，雙面材質從根本排除這整類問題。
+    const mat = new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide });
     groundPatch = new THREE.Mesh(geo, mat);
-    groundPatch.position.copy(latLonToVec3(lat, lon, 1.006));
+    groundPatch.position.copy(latLonToVec3(lat, lon, 1.01));
     groundPatch.lookAt(0, 0, 0);   // -Z 朝向球心，貼圖正面（+Z）自然朝外
     scene.add(groundPatch);
   }
@@ -350,10 +353,10 @@ const AptGlobe = (() => {
       const code = c.m.code || "";
       return `
         <line x1="${c.ax.toFixed(1)}" y1="${c.ay.toFixed(1)}" x2="${lx.toFixed(1)}" y2="${ly.toFixed(1)}" stroke="${color}" stroke-width="1" opacity="0.65"/>
-        <circle cx="${c.ax.toFixed(1)}" cy="${c.ay.toFixed(1)}" r="2" fill="${color}"/>
-        <circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="4.5" fill="${color}" stroke="rgba(0,0,0,.4)" stroke-width="1"/>
-        <line x1="${(lx - 10).toFixed(1)}" y1="${(ly + 8).toFixed(1)}" x2="${(lx + 10).toFixed(1)}" y2="${(ly + 8).toFixed(1)}" stroke="${color}" stroke-width="1"/>
-        ${code ? `<text x="${lx.toFixed(1)}" y="${(ly + 20).toFixed(1)}" text-anchor="middle" class="apt-globe-label-text" fill="${color}">${code}</text>` : ""}
+        <circle cx="${c.ax.toFixed(1)}" cy="${c.ay.toFixed(1)}" r="1.5" fill="${color}"/>
+        <circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="6" fill="${color}" stroke="rgba(0,0,0,.4)" stroke-width="1"/>
+        <line x1="${(lx - 12).toFixed(1)}" y1="${(ly + 9.5).toFixed(1)}" x2="${(lx + 12).toFixed(1)}" y2="${(ly + 9.5).toFixed(1)}" stroke="${color}" stroke-width="1"/>
+        ${code ? `<text x="${lx.toFixed(1)}" y="${(ly + 22).toFixed(1)}" text-anchor="middle" class="apt-globe-label-text" fill="${color}">${code}</text>` : ""}
       `;
     }).join("");
   }
@@ -367,7 +370,10 @@ const AptGlobe = (() => {
     // 縮放 Group 連子物件的「位置」也會一起被拉向球心，標記點會被拉進
     // 不透明的地球內部而整批消失，這是先前版本點一放大光點就不見的根因）。
     const s = Math.max(0.5, Math.min(1, radius / DEF_RADIUS));
-    markers.forEach(m => m.mesh.scale.setScalar(s));
+    // 有牽引線標籤的點，3D 世界裡的球體縮到近乎看不見，只留 2D 小錨點代表
+    // 真正座標——不然球體本身（半徑再小也還有實體）疊在錨點上會顯得比
+    // 牽引線另一端、真正該醒目的大頭針還大，主從順序整個顛倒。
+    markers.forEach(m => m.mesh.scale.setScalar(labelPositions.has(m.id) ? 0.05 : s));
     if (++labelFrame % 3 === 0) updateLabels();
     renderer.render(scene, camera);
   }

@@ -54,7 +54,8 @@
         "zh": "全球機隊規模最大的航空公司之一，達拉斯堡沃斯樞紐輻射全美與跨洋航線。",
         "en": "One of the largest airlines in the world by fleet size, with its Dallas/Fort Worth hub radiating flights across the US and overseas.",
         "ja": "世界最大級の機隊規模を誇る航空会社の一つ。ダラス・フォートワース・ハブから全米および国際線が広がる。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "dl",
@@ -107,7 +108,8 @@
         "zh": "亞特蘭大哈茲菲爾德樞紐是全球最繁忙機場之一，以準點與服務品質著稱。",
         "en": "Its Atlanta hub is one of the busiest airports in the world, and Delta is known for punctuality and service quality.",
         "ja": "ハブとするアトランタは世界最多の発着便数を誇る空港の一つ。定時性とサービス品質に定評がある。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ua",
@@ -160,7 +162,8 @@
         "zh": "美國三大傳統航空之一，芝加哥歐海爾樞紐銜接北美內陸與跨洋長程航線。",
         "en": "One of America's \"Big Three\" legacy carriers, with its Chicago O'Hare hub linking domestic routes to long-haul international flights.",
         "ja": "アメリカ三大レガシーキャリアの一つ。シカゴ・オヘア・ハブが北米内陸線と長距離国際線を結ぶ。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "wn",
@@ -207,7 +210,8 @@
         "zh": "全球最大廉價航空之一，機隊清一色 737，點對點航線網路取代傳統樞紐輻射。",
         "en": "One of the world's largest low-cost carriers, flying an all-737 fleet on a point-to-point network instead of a traditional hub-and-spoke system.",
         "ja": "世界最大級の格安航空会社。機隊は737一本化、ハブ&スポーク方式ではなく地点間直行の路線網を採用。"
-      }
+      },
+      "tier": "lcc"
     },
     {
       "id": "ac",
@@ -255,7 +259,8 @@
         "zh": "加拿大最大航空公司，多倫多皮爾遜樞紐銜接歐洲與亞太長程航線。",
         "en": "Canada's largest airline, with its Toronto Pearson hub connecting long-haul routes to Europe and Asia-Pacific.",
         "ja": "カナダ最大の航空会社。トロント・ピアソン・ハブがヨーロッパやアジア太平洋への長距離路線を結ぶ。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "lh",
@@ -307,7 +312,8 @@
         "zh": "星空聯盟創始成員之一，法蘭克福樞紐是歐陸轉機航班最密集的機場之一。",
         "en": "A founding member of Star Alliance; its Frankfurt hub is one of the busiest connecting airports in continental Europe.",
         "ja": "スターアライアンス創設メンバーの一つ。フランクフルト・ハブは欧州大陸で乗り継ぎ便が最も密集する空港の一つ。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "af",
@@ -353,7 +359,8 @@
         "zh": "天合聯盟創始成員，巴黎戴高樂樞紐是連結非洲航線最密集的歐洲航空。",
         "en": "A founding member of SkyTeam; its Paris CDG hub gives it Europe's densest network of routes into Africa.",
         "ja": "スカイチーム創設メンバー。パリ・シャルル・ド・ゴール・ハブを拠点に、欧州の航空会社の中でもアフリカ路線網が最も密。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "kl",
@@ -399,7 +406,8 @@
         "zh": "全球仍以原名持續營運至今最悠久的航空公司，1919 年創立。",
         "en": "The world's oldest airline still operating under its original name, founded in 1919.",
         "ja": "1919年創業、創業時の社名で現在も運航を続ける世界最古の航空会社。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ba",
@@ -451,7 +459,8 @@
         "zh": "英國國家航空，希斯洛樞紐長年是全球轉機流量最大的機場之一。",
         "en": "The UK's flag carrier; its Heathrow hub has long been one of the world's busiest connecting airports.",
         "ja": "イギリスのフラッグキャリア。ハブとするヒースロー空港は長年、世界有数の乗り継ぎ便数を誇る。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "fr",
@@ -492,7 +501,8 @@
         "zh": "歐洲載客量最大的廉價航空，機隊統一機型策略把維修訓練成本壓到最低。",
         "en": "Europe's largest low-cost carrier by passengers; a single-fleet-type strategy keeps maintenance and training costs to a minimum.",
         "ja": "旅客数で欧州最大の格安航空会社。機種統一戦略により整備・訓練コストを最小限に抑える。"
-      }
+      },
+      "tier": "lcc"
     },
     {
       "id": "tk",
@@ -543,7 +553,8 @@
         "zh": "以「飛航國家數量最多的航空公司」著稱，伊斯坦堡樞紐橫跨歐亞航線網路。",
         "en": "Known for flying to more countries than any other airline; its Istanbul hub spans a route network across Europe and Asia.",
         "ja": "就航国数が世界最多の航空会社として知られる。イスタンブール・ハブが欧州とアジアにまたがる路線網を形成。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ek",
@@ -584,7 +595,8 @@
         "zh": "全球最大 A380 營運商，機隊清一色廣體客機、不營運任何窄體機型。",
         "en": "The world's largest A380 operator, flying an all-wide-body fleet with no narrow-body aircraft at all.",
         "ja": "世界最大のA380運航会社。機隊はワイドボディ機のみで、ナローボディ機は一切運航しない。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "qr",
@@ -634,7 +646,8 @@
         "zh": "杜哈—奧克蘭航線是全球飛行距離數一數二的定期航班之一。",
         "en": "The Doha–Auckland route is one of the longest scheduled flights operated anywhere in the world.",
         "ja": "ドーハ―オークランド線は、世界でも屈指の飛行距離を誇る定期便の一つ。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ey",
@@ -684,7 +697,8 @@
         "zh": "阿布達比國家航空，較年輕但快速擴張，以高端頭等艙套房服務聞名。",
         "en": "Abu Dhabi's flag carrier; younger but fast-growing, known for its premium First Class suite service.",
         "ja": "アブダビのフラッグキャリア。歴史は浅いが急成長を遂げ、上質なファーストクラス・スイートで知られる。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "sq",
@@ -734,7 +748,8 @@
         "zh": "全球公認服務品質標竿之一，未加入任何航空聯盟仍維持龐大獨立航網。",
         "en": "Widely regarded as a global benchmark for service quality, maintaining a large independent network without joining any alliance.",
         "ja": "世界的にサービス品質の模範とされる航空会社。いずれのアライアンスにも属さず、独自に大規模な路線網を維持。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "cx",
@@ -784,7 +799,8 @@
         "zh": "香港代表性航空，以連結歐美與大洋洲的廣體長程航線網路為核心。",
         "en": "Hong Kong's flagship carrier, built around a wide-body long-haul network linking Europe, North America and Oceania.",
         "ja": "香港を代表する航空会社。欧米・オセアニアを結ぶワイドボディ機による長距離路線網が核。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "jl",
@@ -835,7 +851,8 @@
         "zh": "日本兩大航空之一，經 2010 年破產重整後轉為精實化營運的代表案例。",
         "en": "One of Japan's two major airlines; its post-2010 bankruptcy restructuring is a widely cited case study in lean operations.",
         "ja": "日本の二大航空会社の一つ。2010年の経営破綻後の再建は、効率経営の代表事例として知られる。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "nh",
@@ -891,7 +908,8 @@
         "zh": "日本機隊規模最大的航空，僅有的 3 架 A380 專飛夏威夷「Flying Honu」彩繪航班。",
         "en": "Japan's largest airline by fleet size; its only three A380s fly exclusively to Hawaii as the \"Flying Honu\" livery.",
         "ja": "日本最大の機隊規模を誇る航空会社。保有する3機のA380は「Flying Honu」塗装でハワイ線専用に運航。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ke",
@@ -946,7 +964,8 @@
         "zh": "韓國最大航空，正推動與韓亞航空合併，將成為全球前十大航空集團之一。",
         "en": "South Korea's largest airline, currently pursuing a merger with Asiana Airlines that would create a top-ten global airline group.",
         "ja": "韓国最大の航空会社。アシアナ航空との統合を進めており、実現すれば世界トップ10級の航空グループとなる。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "cz",
@@ -1001,7 +1020,8 @@
         "zh": "亞洲機隊規模最大的航空公司，2019 年退出天合聯盟轉為獨立營運。",
         "en": "Asia's largest airline by fleet size; it left SkyTeam in 2019 to operate independently.",
         "ja": "アジア最大の機隊規模を誇る航空会社。2019年にスカイチームを脱退し、独立系として運航。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "mu",
@@ -1052,7 +1072,8 @@
         "zh": "中國商用大飛機 C919 的全球首家營運商，上海為其樞紐核心。",
         "en": "The world's first operator of China's domestically built C919 airliner, with Shanghai as its core hub.",
         "ja": "中国国産旅客機C919を世界で初めて就航させた航空会社。上海を中核ハブとする。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "br",
@@ -1097,7 +1118,8 @@
         "zh": "台灣民營航空代表，Hello Kitty 彩繪機是其最知名的品牌行銷案例。",
         "en": "A leading privately-held Taiwanese carrier; its Hello Kitty livery aircraft are among its best-known branding campaigns.",
         "ja": "台湾を代表する民間航空会社。ハローキティのペイント機は同社ブランディングの代表例として知られる。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ci",
@@ -1147,7 +1169,8 @@
         "zh": "台灣國籍航空，貨運部門長年是全球航空貨運噸量排名前段班。",
         "en": "Taiwan's flag carrier; its cargo division has long ranked among the world's top airlines by freight tonnage.",
         "ja": "台湾のフラッグキャリア。貨物部門は長年、世界の航空貨物取扱量でトップクラスにランクされる。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "tg",
@@ -1197,7 +1220,8 @@
         "zh": "歷經破產重整大幅精簡機隊，泰國微笑服務仍是其航空品牌核心資產。",
         "en": "After a major bankruptcy restructuring that sharply downsized its fleet, Thailand's \"Smile\" service remains its core brand asset.",
         "ja": "経営破綻による大規模な機隊縮小を経てもなお、タイ式の「スマイル」サービスは同社ブランドの中核資産であり続ける。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "qf",
@@ -1249,7 +1273,8 @@
         "zh": "全球仍以原名持續營運最久的航空公司之一，「日出計畫」推動雪梨直飛倫敦/紐約。",
         "en": "One of the longest continuously operating airlines under its original name; \"Project Sunrise\" aims for nonstop Sydney–London/New York flights.",
         "ja": "創業時の社名で現在も運航を続ける、世界で最も歴史の長い航空会社の一つ。「サンライズ計画」でシドニー―ロンドン/ニューヨーク直行便を目指す。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "et",
@@ -1299,7 +1324,8 @@
         "zh": "非洲機隊規模最大、航點最多的航空公司，阿迪斯阿貝巴是連結非洲大陸的樞紐核心。",
         "en": "Africa's largest airline by fleet size and destination count; its Addis Ababa hub is the continent's key connecting point.",
         "ja": "機隊規模・就航都市数ともにアフリカ最大の航空会社。アディスアベバ・ハブはアフリカ大陸を結ぶ中核拠点。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "la",
@@ -1345,7 +1371,8 @@
         "zh": "智利 LAN 與巴西 TAM 於 2012 年合併而成，是拉丁美洲最大航空集團。",
         "en": "Formed by the 2012 merger of Chile's LAN and Brazil's TAM, making it the largest airline group in Latin America.",
         "ja": "2012年にチリのLANとブラジルのTAMが合併して誕生した、ラテンアメリカ最大の航空グループ。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "6e",
@@ -1386,7 +1413,8 @@
         "zh": "印度最大航空公司，全 Airbus 單走道機隊策略支撐其國內線市占率超過六成。",
         "en": "India's largest airline; an all-Airbus narrow-body fleet strategy underpins over 60% of its domestic market share.",
         "ja": "インド最大の航空会社。エアバスの単通路機に統一した機隊戦略により、国内線シェア6割超を維持。"
-      }
+      },
+      "tier": "lcc"
     },
     {
       "id": "jblu",
@@ -1433,7 +1461,8 @@
         "zh": "美國低成本航空先驅之一，以座位個人娛樂螢幕與較寬座距打出差異化。",
         "en": "A pioneer of the U.S. low-cost model, differentiated early on by seatback entertainment screens and extra legroom.",
         "ja": "米国の格安航空の先駆けの一つ。座席モニターとゆとりある座席間隔で差別化を図った。"
-      }
+      },
+      "tier": "lcc"
     },
     {
       "id": "alk",
@@ -1474,7 +1503,8 @@
         "zh": "美國西岸代表性航空，2021 年併購 Virgin America 後穩居第五大美籍航空。",
         "en": "The West Coast's flagship U.S. carrier; absorbing Virgin America in 2021 cemented it as America's fifth-largest airline.",
         "ja": "米国西海岸を代表する航空会社。2021年のヴァージン・アメリカ買収で米第5位の規模に。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ib",
@@ -1519,7 +1549,8 @@
         "zh": "西班牙國家航空，馬德里樞紐是連結拉丁美洲航線最密集的歐洲機場之一。",
         "en": "Spain's flag carrier; its Madrid hub is one of Europe's densest gateways into Latin America.",
         "ja": "スペインのフラッグキャリア。マドリード・ハブは中南米路線が最も密集する欧州の空港の一つ。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "sk",
@@ -1566,7 +1597,8 @@
         "zh": "由丹麥、挪威、瑞典三國政府共同持股的跨國航空，2024 年轉投天合聯盟。",
         "en": "A multinational carrier jointly backed by the Danish, Norwegian and Swedish governments, which switched to SkyTeam in 2024.",
         "ja": "デンマーク・ノルウェー・スウェーデン3カ国政府が出資する多国籍航空会社。2024年にスカイチームへ加盟。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ay",
@@ -1611,7 +1643,8 @@
         "zh": "地理位置讓赫爾辛基成為歐洲飛往東亞最短航線的樞紐之一，長年主打北極航線優勢。",
         "en": "Helsinki's location gives it some of Europe's shortest routes to East Asia, a polar-route advantage Finnair has long marketed.",
         "ja": "地理的優位からヘルシンキは欧州―東アジア間で最短ルートの一つとなり、北極ルートの強みを長年打ち出してきた。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "w6",
@@ -1647,7 +1680,8 @@
         "zh": "中東歐成長最快的廉價航空，全 Airbus 單走道機隊複製 Ryanair 式低成本模式。",
         "en": "Central and Eastern Europe's fastest-growing low-cost carrier, running an all-Airbus narrow-body fleet on a Ryanair-style cost model.",
         "ja": "中東欧で最も急成長する格安航空会社。全機エアバスの単通路機で、ライアンエアー式の低コストモデルを踏襲。"
-      }
+      },
+      "tier": "lcc"
     },
     {
       "id": "u2",
@@ -1694,7 +1728,8 @@
         "zh": "英國最大廉價航空，較同業更早進駐主要城市機場而非二線機場，票價策略走中間路線。",
         "en": "The UK's largest low-cost carrier; unlike many rivals it targets primary city airports rather than secondary ones, with a more middle-ground fare strategy.",
         "ja": "英国最大の格安航空会社。同業他社より早くから二次空港ではなく主要都市の空港に進出し、価格戦略も中間路線を取る。"
-      }
+      },
+      "tier": "lcc"
     },
     {
       "id": "tp",
@@ -1739,7 +1774,8 @@
         "zh": "葡萄牙國家航空，憑藉前殖民地淵源成為歐洲飛巴西與非洲葡語系國家的重要橋樑。",
         "en": "Portugal's flag carrier; former colonial ties make it a key bridge between Europe and Brazil or Lusophone Africa.",
         "ja": "ポルトガルのフラッグキャリア。旧植民地とのつながりから欧州とブラジル・ポルトガル語圏アフリカを結ぶ重要な架け橋に。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "lo",
@@ -1783,7 +1819,8 @@
         "zh": "全球仍在營運的航空公司中歷史數一數二悠久者，波蘭裔美國人是其北美航線的核心客群。",
         "en": "Among the world's oldest still-operating airlines; Polish-American communities are the core customer base for its North American routes.",
         "ja": "現存する航空会社の中でも屈指の歴史を誇る。北米路線の主要顧客層はポーランド系アメリカ人。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "sv",
@@ -1829,7 +1866,8 @@
         "zh": "沙烏地阿拉伯國家航空，每年朝聖季節（Hajj）承擔大量穆斯林前往麥加的專案航班。",
         "en": "Saudi Arabia's flag carrier, which runs a heavy seasonal load of Hajj pilgrimage charter flights to Mecca each year.",
         "ja": "サウジアラビアのフラッグキャリア。毎年の巡礼シーズン（ハッジ）にはメッカ向けの臨時便を大量に運航する。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ms",
@@ -1874,7 +1912,8 @@
         "zh": "非洲歷史最悠久的航空公司之一，開羅樞紐是連結中東與非洲航線的重要轉運點。",
         "en": "One of Africa's oldest airlines; its Cairo hub is a key transfer point between the Middle East and Africa.",
         "ja": "アフリカ最古級の航空会社の一つ。カイロ・ハブは中東とアフリカを結ぶ重要な乗り継ぎ拠点。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "at",
@@ -1919,7 +1958,8 @@
         "zh": "摩洛哥國家航空，卡薩布蘭加樞紐是連結西非法語系國家與歐洲的重要中繼站。",
         "en": "Morocco's flag carrier; its Casablanca hub is a key relay point between Francophone West Africa and Europe.",
         "ja": "モロッコのフラッグキャリア。カサブランカ・ハブは仏語圏西アフリカと欧州を結ぶ重要な中継地。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "kq",
@@ -1964,7 +2004,8 @@
         "zh": "東非代表性航空，暱稱「和平之翼」，奈洛比樞紐輻射東非與中非多座區域機場。",
         "en": "East Africa's flagship carrier, nicknamed \"the Pride of Africa\"; its Nairobi hub radiates flights across East and Central Africa.",
         "ja": "東アフリカを代表する航空会社。愛称は「プライド・オブ・アフリカ」。ナイロビ・ハブから東・中央アフリカ各地へ路線を展開。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "sa",
@@ -2004,7 +2045,8 @@
         "zh": "南非國家航空，2020 年一度破產重整、大幅縮減機隊，仍是非洲南部航線網路的骨幹。",
         "en": "South Africa's flag carrier; a 2020 bankruptcy restructuring sharply shrank its fleet, but it remains the backbone of Southern Africa's route network.",
         "ja": "南アフリカのフラッグキャリア。2020年に経営破綻し機隊を大幅縮小したが、南部アフリカの路線網の要であり続けている。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "vn",
@@ -2050,7 +2092,8 @@
         "zh": "越南國家航空，近年機隊快速汰換為新世代廣體機，是東南亞成長最快的航空市場代表之一。",
         "en": "Vietnam's flag carrier, which has rapidly modernized its widebody fleet as one of Southeast Asia's fastest-growing aviation markets.",
         "ja": "ベトナムのフラッグキャリア。近年ワイドボディ機隊を急速に新型化し、東南アジアで最も成長著しい航空市場の代表格。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ga",
@@ -2096,7 +2139,8 @@
         "zh": "印尼國家航空，峇里島航線是其國際觀光客運量的主力，機隊曾因財務重整大幅縮編。",
         "en": "Indonesia's flag carrier; Bali routes drive much of its international tourist traffic, and its fleet was sharply trimmed during a past financial restructuring.",
         "ja": "インドネシアのフラッグキャリア。バリ島路線が国際観光客輸送の主力で、過去の財務再建で機隊を大幅に縮小した。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "pr",
@@ -2141,7 +2185,8 @@
         "zh": "亞洲歷史最悠久、仍以原名持續營運的航空公司，龐大海外菲律賓勞工社群是其長程航線主力客群。",
         "en": "Asia's oldest airline still flying under its original name; overseas Filipino worker communities are the backbone of its long-haul demand.",
         "ja": "アジア最古、創業時の社名で今も運航を続ける航空会社。海外在住フィリピン人労働者の巨大なコミュニティが長距離路線の主要顧客層。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "mh",
@@ -2186,7 +2231,8 @@
         "zh": "馬來西亞國家航空，吉隆坡樞紐銜接東協區域網路，近年積極擴大寬體遠程航線。",
         "en": "Malaysia's flag carrier, whose Kuala Lumpur hub anchors an ASEAN regional network while it expands widebody long-haul routes.",
         "ja": "マレーシアのフラッグキャリア。クアラルンプール・ハブがASEAN域内網の要となる一方、近年はワイドボディ長距離路線を拡大中。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "ai",
@@ -2232,7 +2278,8 @@
         "zh": "印度國家航空，2022 年由塔塔集團收購後大舉汰換機隊、重塑品牌，是全球關注度最高的航空重整案例之一。",
         "en": "India's flag carrier, acquired by the Tata Group in 2022, is undergoing a major fleet renewal and rebrand watched closely across the industry.",
         "ja": "インドのフラッグキャリア。2022年にタタ・グループへ買収され、機隊刷新とブランド再構築を進める業界注目の再建事例。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "av",
@@ -2272,7 +2319,8 @@
         "zh": "全球第二悠久、仍在營運的航空公司，波哥大樞紐是安地斯山區飛北美航線的重要出發點。",
         "en": "The world's second-oldest still-operating airline; its Bogotá hub is a key departure point for Andean routes to North America.",
         "ja": "現存する航空会社として世界2番目に古い歴史を持つ。ボゴタ・ハブはアンデス地域から北米への重要な出発拠点。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "am",
@@ -2312,7 +2360,8 @@
         "zh": "墨西哥最大航空公司，墨西哥城樞紐是連結拉丁美洲與北美航線最密集的機場之一。",
         "en": "Mexico's largest airline; its Mexico City hub is one of the busiest gateways linking Latin America with North America.",
         "ja": "メキシコ最大の航空会社。メキシコシティ・ハブは中南米と北米を結ぶ路線が最も密集する空港の一つ。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "cm",
@@ -2347,7 +2396,8 @@
         "zh": "巴拿馬國家航空，「美洲中心」樞紐策略讓中美洲小國也能一站轉機直達全美洲主要城市。",
         "en": "Panama's flag carrier; its \"Hub of the Americas\" strategy lets travelers from small Central American nations reach major cities across the hemisphere with one connection.",
         "ja": "パナマのフラッグキャリア。「アメリカ大陸のハブ」戦略により、中米の小国からも一度の乗り継ぎで南北アメリカの主要都市へアクセス可能に。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "g3",
@@ -2383,7 +2433,8 @@
         "zh": "巴西低成本航空先驅，全 737 機隊主打國內線市場，近年與美國航空結盟擴大國際航點。",
         "en": "A pioneer of Brazil's low-cost model with an all-737 fleet focused on the domestic market, now expanding internationally through an American Airlines partnership.",
         "ja": "ブラジルの格安航空の先駆け。全737機隊で国内線市場を主戦場とし、近年はアメリカン航空との提携で国際線を拡大。"
-      }
+      },
+      "tier": "lcc"
     },
     {
       "id": "nz",
@@ -2428,7 +2479,8 @@
         "zh": "紐西蘭國家航空，機上安全示範影片以幽默創意聞名，長程航線多為跨太平洋唯一直飛選項。",
         "en": "New Zealand's flag carrier, famous for its creative safety-video productions; many of its long-haul routes are the only nonstop option across the Pacific.",
         "ja": "ニュージーランドのフラッグキャリア。ユニークな機内安全ビデオで知られ、長距離路線の多くが太平洋横断唯一の直行便。"
-      }
+      },
+      "tier": "mainline"
     },
     {
       "id": "su",
@@ -2473,6 +2525,718 @@
         "zh": "俄羅斯國家航空，全球歷史最悠久的持續營運航空公司之一，2022 年後因制裁被多聯盟暫停會籍、國際航線大幅萎縮。",
         "en": "Russia's flag carrier and one of the world's oldest continuously operating airlines; sanctions since 2022 suspended its alliance memberships and sharply shrank its international network.",
         "ja": "ロシアのフラッグキャリアで、現存する航空会社の中でも屈指の歴史を持つ。2022年以降の制裁でアライアンス資格が停止され、国際線網も大幅に縮小した。"
+      },
+      "tier": "mainline"
+    },
+    {
+      "id": "jx",
+      "name": "STARLUX Airlines",
+      "icao": "SJX",
+      "iata": "JX",
+      "country": {
+        "zh": "台灣",
+        "en": "Taiwan",
+        "ja": "台湾"
+      },
+      "founded": 2018,
+      "alliance": "none",
+      "tier": "mainline",
+      "hubs": [
+        "Taiwan Taoyuan"
+      ],
+      "fleetTotal": 20,
+      "fleet": [
+        {
+          "type": "Airbus A321neo",
+          "count": 14,
+          "fleetId": "a321"
+        },
+        {
+          "type": "Airbus A330neo",
+          "count": 6,
+          "fleetId": "a332"
+        }
+      ],
+      "routes": [
+        "Tokyo Narita",
+        "Penang",
+        "Los Angeles",
+        "San Francisco"
+      ],
+      "tagline": {
+        "zh": "長榮集團創辦人張國煒創立的精品全服務航空，主打新機隊與高端客艙體驗，2018 年成立即定位為非廉航。",
+        "en": "A boutique full-service carrier founded by EVA Air's former chairman, positioned from day one as a premium airline rather than a budget one.",
+        "ja": "エバー航空の元会長が創業した精品フルサービス航空。2018年の設立当初から格安ではなく高級路線を掲げる。"
+      }
+    },
+    {
+      "id": "it",
+      "name": "Tigerair Taiwan",
+      "icao": "TTW",
+      "iata": "IT",
+      "country": {
+        "zh": "台灣",
+        "en": "Taiwan",
+        "ja": "台湾"
+      },
+      "founded": 2014,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Taiwan Taoyuan",
+        "Kaohsiung"
+      ],
+      "fleetTotal": 10,
+      "fleet": [
+        {
+          "type": "Airbus A320",
+          "count": 10,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "Tokyo Narita",
+        "Osaka Kansai",
+        "Seoul Incheon",
+        "Okinawa"
+      ],
+      "tagline": {
+        "zh": "中華航空集團旗下廉價航空，主攻台灣飛日韓的短程觀光航線。",
+        "en": "China Airlines Group's low-cost arm, focused on short-haul leisure routes between Taiwan, Japan and Korea.",
+        "ja": "チャイナエアライン・グループ傘下の格安航空。台湾と日韓を結ぶ短距離観光路線が主力。"
+      }
+    },
+    {
+      "id": "mm",
+      "name": "Peach Aviation",
+      "icao": "APJ",
+      "iata": "MM",
+      "country": {
+        "zh": "日本",
+        "en": "Japan",
+        "ja": "日本"
+      },
+      "founded": 2011,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Osaka Kansai",
+        "Tokyo Narita"
+      ],
+      "fleetTotal": 30,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 30,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "Taipei Taoyuan",
+        "Seoul Incheon",
+        "Hong Kong",
+        "Sapporo"
+      ],
+      "tagline": {
+        "zh": "全日空集團的廉價航空品牌，粉紅色塗裝機隊是關西機場最鮮明的識別之一。",
+        "en": "ANA Group's low-cost brand; its pink-liveried fleet is one of the most recognizable sights at Kansai Airport.",
+        "ja": "ANAグループの格安航空ブランド。ピンクの機体は関西空港を象徴する光景の一つ。"
+      }
+    },
+    {
+      "id": "gk",
+      "name": "Jetstar Japan",
+      "icao": "JJP",
+      "iata": "GK",
+      "country": {
+        "zh": "日本",
+        "en": "Japan",
+        "ja": "日本"
+      },
+      "founded": 2012,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Tokyo Narita",
+        "Osaka Kansai"
+      ],
+      "fleetTotal": 25,
+      "fleet": [
+        {
+          "type": "Airbus A320",
+          "count": 25,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "Taipei Taoyuan",
+        "Hong Kong",
+        "Manila",
+        "Fukuoka"
+      ],
+      "tagline": {
+        "zh": "澳洲航空、日本航空與東京都政府合資成立的廉價航空，是 Jetstar 品牌在日本的在地化版本。",
+        "en": "A joint venture between Qantas, Japan Airlines and the Tokyo government — the localized Japanese version of the Jetstar brand.",
+        "ja": "カンタス航空、日本航空、東京都出資の合弁会社。ジェットスターブランドの日本版として展開。"
+      }
+    },
+    {
+      "id": "bc",
+      "name": "Skymark Airlines",
+      "icao": "SKY",
+      "iata": "BC",
+      "country": {
+        "zh": "日本",
+        "en": "Japan",
+        "ja": "日本"
+      },
+      "founded": 1996,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Tokyo Haneda"
+      ],
+      "fleetTotal": 30,
+      "fleet": [
+        {
+          "type": "Boeing 737-800",
+          "count": 30,
+          "fleetId": "b738"
+        }
+      ],
+      "routes": [
+        "Sapporo Shin-Chitose",
+        "Naha",
+        "Fukuoka",
+        "Nagasaki"
+      ],
+      "tagline": {
+        "zh": "日本首家獨立廉價航空，2015 年破產重整後轉手 ANA 系投資、聚焦國內線。",
+        "en": "Japan's first independent low-cost carrier; a 2015 bankruptcy restructuring brought in ANA-linked investors as it refocused on domestic routes.",
+        "ja": "日本初の独立系格安航空会社。2015年の経営破綻後にANA系資本が入り、国内線に軸足を置く。"
+      }
+    },
+    {
+      "id": "ak",
+      "name": "AirAsia",
+      "icao": "AXM",
+      "iata": "AK",
+      "country": {
+        "zh": "馬來西亞",
+        "en": "Malaysia",
+        "ja": "マレーシア"
+      },
+      "founded": 2001,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Kuala Lumpur"
+      ],
+      "fleetTotal": 200,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 200,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "Bangkok",
+        "Singapore",
+        "Jakarta",
+        "Ho Chi Minh City"
+      ],
+      "tagline": {
+        "zh": "「Now Everyone Can Fly」是其經典口號，東南亞規模最大的廉價航空集團，旗下含泰國、印尼、菲律賓等分支品牌。",
+        "en": "\"Now Everyone Can Fly\" is its signature slogan; Southeast Asia's largest LCC group, with sister brands across Thailand, Indonesia and the Philippines.",
+        "ja": "「Now Everyone Can Fly」を掲げる東南アジア最大のLCCグループ。タイ・インドネシア・フィリピンなどに姉妹ブランドを展開。"
+      }
+    },
+    {
+      "id": "5j",
+      "name": "Cebu Pacific",
+      "icao": "CEB",
+      "iata": "5J",
+      "country": {
+        "zh": "菲律賓",
+        "en": "Philippines",
+        "ja": "フィリピン"
+      },
+      "founded": 1988,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Manila Ninoy Aquino",
+        "Cebu"
+      ],
+      "fleetTotal": 90,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 70,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A330neo",
+          "count": 10,
+          "fleetId": "a332"
+        }
+      ],
+      "routes": [
+        "Singapore",
+        "Hong Kong",
+        "Dubai",
+        "Tokyo Narita"
+      ],
+      "tagline": {
+        "zh": "菲律賓載客量最大的航空公司，串連七千多座島嶼的國內線網路是其核心競爭力。",
+        "en": "The Philippines' largest airline by passengers, built on a domestic network stitching together over 7,000 islands.",
+        "ja": "フィリピン最大の旅客数を誇る航空会社。7000以上の島々を結ぶ国内線網が強みの核。"
+      }
+    },
+    {
+      "id": "vj",
+      "name": "VietJet Air",
+      "icao": "VJC",
+      "iata": "VJ",
+      "country": {
+        "zh": "越南",
+        "en": "Vietnam",
+        "ja": "ベトナム"
+      },
+      "founded": 2007,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Ho Chi Minh City",
+        "Hanoi Noi Bai"
+      ],
+      "fleetTotal": 100,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 100,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "Bangkok",
+        "Singapore",
+        "Taipei Taoyuan",
+        "Seoul Incheon"
+      ],
+      "tagline": {
+        "zh": "越南最大民營航空，機隊快速擴張速度是東南亞廉航中數一數二，帶動越南出境旅遊市場成長。",
+        "en": "Vietnam's largest private airline, expanding its fleet at one of the fastest paces among Southeast Asian LCCs and fueling the country's outbound travel boom.",
+        "ja": "ベトナム最大の民間航空会社。東南アジアのLCCの中でも屈指の速さで機隊を拡大し、同国の海外旅行需要の伸びを牽引。"
+      }
+    },
+    {
+      "id": "tr",
+      "name": "Scoot",
+      "icao": "TGW",
+      "iata": "TR",
+      "country": {
+        "zh": "新加坡",
+        "en": "Singapore",
+        "ja": "シンガポール"
+      },
+      "founded": 2011,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Singapore Changi"
+      ],
+      "fleetTotal": 50,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 35,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Boeing 787-8 / -9",
+          "count": 15,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "Tokyo Narita",
+        "Berlin",
+        "Athens",
+        "Gold Coast"
+      ],
+      "tagline": {
+        "zh": "新加坡航空集團的廉價品牌，是少數用波音 787 廣體機經營廉航長程航線的公司之一。",
+        "en": "Singapore Airlines Group's low-cost brand, one of the few LCCs operating long-haul widebody routes with Boeing 787s.",
+        "ja": "シンガポール航空グループの格安ブランド。ボーイング787のワイドボディ機で長距離LCC路線を運航する数少ない一社。"
+      }
+    },
+    {
+      "id": "f9",
+      "name": "Frontier Airlines",
+      "icao": "FFT",
+      "iata": "F9",
+      "country": {
+        "zh": "美國",
+        "en": "United States",
+        "ja": "アメリカ"
+      },
+      "founded": 1994,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Denver"
+      ],
+      "fleetTotal": 140,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 140,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "美國國內線為主",
+        "Cancún",
+        "San Juan"
+      ],
+      "tagline": {
+        "zh": "美國極致低成本航空（ULCC）代表，機尾動物彩繪是其品牌識別，票價拆到極細以壓低基本票價。",
+        "en": "A leading U.S. ultra-low-cost carrier known for its animal tail-fin liveries and heavily unbundled base fares.",
+        "ja": "米国を代表する超格安航空（ULCC）。動物の尾翼デザインが特徴で、基本運賃を極限まで切り詰める料金体系。"
+      }
+    },
+    {
+      "id": "y4",
+      "name": "Volaris",
+      "icao": "VOI",
+      "iata": "Y4",
+      "country": {
+        "zh": "墨西哥",
+        "en": "Mexico",
+        "ja": "メキシコ"
+      },
+      "founded": 2005,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Mexico City",
+        "Guadalajara"
+      ],
+      "fleetTotal": 130,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 130,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "Los Angeles",
+        "Las Vegas",
+        "Guatemala City",
+        "San Salvador"
+      ],
+      "tagline": {
+        "zh": "墨西哥最大廉價航空，以極低票價和跨美墨邊境航線快速拓展市占率。",
+        "en": "Mexico's largest low-cost carrier, rapidly gaining share through rock-bottom fares and cross-border U.S.–Mexico routes.",
+        "ja": "メキシコ最大の格安航空会社。格安運賃と米墨国境をまたぐ路線でシェアを急速に拡大。"
+      }
+    },
+    {
+      "id": "fz",
+      "name": "flydubai",
+      "icao": "FDB",
+      "iata": "FZ",
+      "country": {
+        "zh": "阿拉伯聯合大公國",
+        "en": "United Arab Emirates",
+        "ja": "アラブ首長国連邦"
+      },
+      "founded": 2008,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Dubai International"
+      ],
+      "fleetTotal": 85,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 85,
+          "fleetId": "b738"
+        }
+      ],
+      "routes": [
+        "Kathmandu",
+        "Baku",
+        "Zanzibar",
+        "Prague"
+      ],
+      "tagline": {
+        "zh": "杜拜政府成立的廉價航空，與 Emirates 互補航網，主攻 Emirates 較少直飛的次級城市。",
+        "en": "A Dubai government–founded LCC that complements Emirates' network, focusing on secondary cities Emirates doesn't fly nonstop.",
+        "ja": "ドバイ首長国政府が設立した格安航空。エミレーツ航空の路線網を補完し、直行便の少ない二次都市を開拓。"
+      }
+    },
+    {
+      "id": "pc",
+      "name": "Pegasus Airlines",
+      "icao": "PGT",
+      "iata": "PC",
+      "country": {
+        "zh": "土耳其",
+        "en": "Turkey",
+        "ja": "トルコ"
+      },
+      "founded": 1990,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Istanbul Sabiha Gökçen"
+      ],
+      "fleetTotal": 100,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 100,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "Berlin",
+        "London Stansted",
+        "Dubai",
+        "Tbilisi"
+      ],
+      "tagline": {
+        "zh": "土耳其最大廉價航空，以伊斯坦堡第二機場為基地，串連歐洲與中亞的短中程航線。",
+        "en": "Turkey's largest low-cost carrier, based at Istanbul's second airport and linking Europe with short- and medium-haul Central Asian routes.",
+        "ja": "トルコ最大の格安航空会社。イスタンブールの第二空港を拠点に、欧州と中央アジアを結ぶ中短距離路線を展開。"
+      }
+    },
+    {
+      "id": "vy",
+      "name": "Vueling",
+      "icao": "VLG",
+      "iata": "VY",
+      "country": {
+        "zh": "西班牙",
+        "en": "Spain",
+        "ja": "スペイン"
+      },
+      "founded": 2004,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Barcelona El Prat"
+      ],
+      "fleetTotal": 110,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 110,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "Rome Fiumicino",
+        "Paris Orly",
+        "Amsterdam",
+        "London Gatwick"
+      ],
+      "tagline": {
+        "zh": "西班牙廉價航空，隸屬 IAG 集團（英航／Iberia 同一控股），巴塞隆納樞紐是南歐短程航線主力。",
+        "en": "A Spanish low-cost carrier under the IAG group (the same holding company as British Airways and Iberia), anchored on short-haul Southern European routes from Barcelona.",
+        "ja": "スペインの格安航空会社。IAGグループ（ブリティッシュ・エアウェイズ／イベリアと同じ持株会社）傘下で、バルセロナを拠点に南欧短距離路線を展開。"
+      }
+    },
+    {
+      "id": "dy",
+      "name": "Norwegian Air Shuttle",
+      "icao": "NAX",
+      "iata": "DY",
+      "country": {
+        "zh": "挪威",
+        "en": "Norway",
+        "ja": "ノルウェー"
+      },
+      "founded": 1993,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Oslo Gardermoen"
+      ],
+      "fleetTotal": 80,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 80,
+          "fleetId": "b738"
+        }
+      ],
+      "routes": [
+        "London Gatwick",
+        "Barcelona",
+        "Málaga",
+        "Alicante"
+      ],
+      "tagline": {
+        "zh": "北歐最大廉價航空，曾以 787 廣體機挑戰跨大西洋廉航長程市場，後因財務壓力縮回歐洲短程本業。",
+        "en": "Scandinavia's largest LCC; it once challenged the transatlantic long-haul LCC market with 787s before financial pressure pushed it back to its core short-haul European business.",
+        "ja": "北欧最大の格安航空会社。かつて787型機で大西洋横断LCC市場に挑んだが、財務悪化により欧州短距離路線中心の本業へ回帰。"
+      }
+    },
+    {
+      "id": "uo",
+      "name": "HK Express",
+      "icao": "HKE",
+      "iata": "UO",
+      "country": {
+        "zh": "香港",
+        "en": "Hong Kong",
+        "ja": "香港"
+      },
+      "founded": 2013,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Hong Kong International"
+      ],
+      "fleetTotal": 30,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 30,
+          "fleetId": "a321"
+        }
+      ],
+      "routes": [
+        "Tokyo Narita",
+        "Osaka Kansai",
+        "Bangkok",
+        "Taipei Taoyuan"
+      ],
+      "tagline": {
+        "zh": "香港唯一的廉價航空，現為國泰航空集團旗下品牌，主攻東北亞與東南亞短程觀光航線。",
+        "en": "Hong Kong's only low-cost carrier, now part of the Cathay Pacific Group, focused on short-haul leisure routes across Northeast and Southeast Asia.",
+        "ja": "香港唯一の格安航空会社。現在はキャセイパシフィック・グループ傘下で、北東・東南アジアの短距離観光路線が主力。"
+      }
+    },
+    {
+      "id": "oo",
+      "name": "SkyWest Airlines",
+      "icao": "SKW",
+      "iata": "OO",
+      "country": {
+        "zh": "美國",
+        "en": "United States",
+        "ja": "アメリカ"
+      },
+      "founded": 1972,
+      "alliance": "none",
+      "tier": "regional",
+      "hubs": [
+        "多個美國區域樞紐（無自有主樞紐）"
+      ],
+      "fleetTotal": 480,
+      "fleet": [
+        {
+          "type": "Bombardier CRJ700 / 900",
+          "count": 250,
+          "fleetId": "crj900"
+        },
+        {
+          "type": "Embraer 175",
+          "count": 230
+        }
+      ],
+      "routes": [
+        "以美國支線網路為主，掛牌 United Express / Delta Connection / American Eagle / Alaska"
+      ],
+      "tagline": {
+        "zh": "美國機隊規模最大的區域航空，不用自己的品牌載客，而是替四大主要航空掛牌飛支線航班。",
+        "en": "The largest regional airline in the U.S. by fleet size; it doesn't carry passengers under its own brand, instead flying feeder routes under the liveries of all four major U.S. carriers.",
+        "ja": "米国最大の機隊規模を誇る地域航空会社。自社ブランドでは運航せず、米国四大航空会社の便名でフィーダー路線を担う。"
+      }
+    },
+    {
+      "id": "pg",
+      "name": "Bangkok Airways",
+      "icao": "BKP",
+      "iata": "PG",
+      "country": {
+        "zh": "泰國",
+        "en": "Thailand",
+        "ja": "タイ"
+      },
+      "founded": 1968,
+      "alliance": "none",
+      "tier": "regional",
+      "hubs": [
+        "Bangkok Suvarnabhumi",
+        "Koh Samui"
+      ],
+      "fleetTotal": 30,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 15,
+          "fleetId": "a320"
+        },
+        {
+          "type": "ATR 72",
+          "count": 15,
+          "fleetId": "atr42"
+        }
+      ],
+      "routes": [
+        "Chiang Mai",
+        "Phuket",
+        "Luang Prabang",
+        "Siem Reap"
+      ],
+      "tagline": {
+        "zh": "自稱「亞洲精品航空」，蘇美島機場正是該公司自建自營，主打泰國與中南半島小眾觀光航點。",
+        "en": "Self-styled \"Asia's Boutique Airline\"; it built and owns Koh Samui Airport itself, focusing on niche tourist destinations across Thailand and Indochina.",
+        "ja": "自称「アジアン・ブティック・エアライン」。サムイ空港は同社自らが建設・運営し、タイとインドシナのニッチな観光地を結ぶ。"
+      }
+    },
+    {
+      "id": "nk",
+      "name": "Spirit Airlines",
+      "icao": "NKS",
+      "iata": "NK",
+      "country": {
+        "zh": "美國",
+        "en": "United States",
+        "ja": "アメリカ"
+      },
+      "founded": 1980,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "Fort Lauderdale",
+        "Orlando"
+      ],
+      "fleetTotal": 190,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 190,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "美國國內線與加勒比海為主",
+        "Cancún",
+        "Santo Domingo"
+      ],
+      "tagline": {
+        "zh": "美國極致低成本航空先驅之一，招牌亮黃色機隊與逐項收費模式長年是業界話題。",
+        "en": "One of the original U.S. ultra-low-cost pioneers; its bright yellow fleet and à la carte fee model have long been an industry talking point.",
+        "ja": "米国の超格安航空の草分けの一つ。鮮やかな黄色い機体と細分化された追加料金体系が業界で長年話題に。"
       }
     }
   ]
