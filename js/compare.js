@@ -16,7 +16,7 @@ const aptDetailCache = {};   // country code → { ident: {lat,lon,elev,region,r
 const $ = id => document.getElementById(id);
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=43")).json();
+  fleet = await (await fetch("data/fleet.json?v=44")).json();
 
   const params = new URLSearchParams(location.search);
   mode = params.get("mode") === "airports" ? "airports" : "aircraft";
@@ -80,7 +80,7 @@ function syncModeUI(){
 async function ensureAirportsLoaded(){
   if (AIRPORTS) return;
   const [aRes, cRes] = await Promise.all([
-    fetch("data/airports.json?v=43"), fetch("data/countries.json?v=43"),
+    fetch("data/airports.json?v=44"), fetch("data/countries.json?v=44"),
   ]);
   const aData = await aRes.json();
   COUNTRIES = await cRes.json();
@@ -91,7 +91,7 @@ async function loadAptDetail(country){
   const key = country || "ZZ";
   if (aptDetailCache[key]) return aptDetailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=43`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=44`);
     const d = r.ok ? await r.json() : {};
     aptDetailCache[key] = d;
     return d;
@@ -102,7 +102,7 @@ let diffOnly = false;
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=43`)).json();
+  const d = await (await fetch(`data/${id}.json?v=44`)).json();
   dataCache[id] = d;
   return d;
 }
