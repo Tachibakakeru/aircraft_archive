@@ -2,18 +2,21 @@
 /* ═══════════════════════════════════════════════
    機場 3D 地球檢視 — 惰性載入（首次切到地圖模式才拉 Three.js CDN
    與初始化場景），球體貼衛星影像貼圖（assets/earth_daymap.jpg），
-   標示目前篩選結果的機場點位（收藏用琥珀色），點擊開詳情面板。
-   沿用 viewer.js 的拖曳旋轉／滾輪縮放手感。
+   標示目前篩選結果的機場點位（收藏用琥珀色），點擊開詳情面板並飛向
+   該點位。沿用 viewer.js 的拖曳旋轉／滾輪縮放／自動旋轉／重置視角手感。
    ═══════════════════════════════════════════════ */
 const AptGlobe = (() => {
   let ready = false, loading = null;
   let scene, camera, renderer, canvas, raf = 0;
-  let theta = 0.6, phi = 1.2, radius = 3.2;
-  const RAD_MIN = 1.6, RAD_MAX = 6;
+  const DEF_THETA = 0.6, DEF_PHI = 1.2, DEF_RADIUS = 3.2;
+  let theta = DEF_THETA, phi = DEF_PHI, radius = DEF_RADIUS;
+  const RAD_MIN = 1.15, RAD_MAX = 6;
   let autoRotate = true;
-  let markers = [];        // { mesh, id }
+  let flying = null;       // { fromTheta,fromPhi,fromRadius, toTheta,toPhi,toRadius, start, dur }
+  let markers = [];        // { mesh, id, lat, lon }
   let markerGroup;
   let onPick = null;       // (id) => void
+  let onRotateChange = null;   // (isAutoRotating) => void
 
   function themeColor(varName, fallback){
     const v = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
@@ -43,8 +46,17 @@ const AptGlobe = (() => {
     );
   }
 
-  async function init(container, pickCallback){
+  // latLonToVec3 反推鏡頭應該對齊的 theta/phi——讓鏡頭與該點位在
+  // 同一條從球心出發的射線上，該點才會落在畫面正中央。
+  function latLonToCamAngles(lat, lon){
+    const phi_ = (90 - lat) * Math.PI / 180;
+    const theta_ = (lon + 180) * Math.PI / 180;
+    return { theta: Math.PI - theta_, phi: phi_ };
+  }
+
+  async function init(container, pickCallback, rotateChangeCallback){
     onPick = pickCallback;
+    onRotateChange = rotateChangeCallback || null;
     await loadThree();
     if (ready) return;
     ready = true;
@@ -62,11 +74,13 @@ const AptGlobe = (() => {
 
     scene.add(new THREE.AmbientLight(0xffffff, 1));
 
-    // 實心球體貼衛星影像（NASA Blue Marble 日照面合成圖，經緯度等距投影）
+    // 實心球體貼衛星影像（NASA Blue Marble 日照面合成圖，經緯度等距投影，4096px）
     const earthTex = new THREE.TextureLoader().load("assets/earth_daymap.jpg");
     earthTex.encoding = THREE.sRGBEncoding;
+    earthTex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    earthTex.minFilter = THREE.LinearMipmapLinearFilter;
     const core = new THREE.Mesh(
-      new THREE.SphereGeometry(1, 48, 32),
+      new THREE.SphereGeometry(1, 64, 48),
       new THREE.MeshBasicMaterial({ map: earthTex })
     );
     scene.add(core);
@@ -100,10 +114,32 @@ const AptGlobe = (() => {
     camera.lookAt(0, 0, 0);
   }
 
+  // 點擊光點時鏡頭飛向該座標並拉近——取最短角度路徑，避免鏡頭繞遠路旋轉。
+  function flyTo(lat, lon, targetRadius){
+    const { theta: rawToTheta, phi: toPhi } = latLonToCamAngles(lat, lon);
+    let dTheta = rawToTheta - theta;
+    dTheta = ((dTheta + Math.PI) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2) - Math.PI;
+    flying = {
+      fromTheta: theta, fromPhi: phi, fromRadius: radius,
+      toTheta: theta + dTheta, toPhi, toRadius: targetRadius,
+      start: performance.now(), dur: 900,
+    };
+    autoRotate = false;
+  }
+
+  function advanceFlight(){
+    const t = Math.min(1, (performance.now() - flying.start) / flying.dur);
+    const ease = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;   // easeInOutQuad
+    theta = flying.fromTheta + (flying.toTheta - flying.fromTheta) * ease;
+    phi = flying.fromPhi + (flying.toPhi - flying.fromPhi) * ease;
+    radius = flying.fromRadius + (flying.toRadius - flying.fromRadius) * ease;
+    if (t >= 1) flying = null;
+  }
+
   function wireControls(){
     // moved 用「起點到目前位置」的直線距離（淨位移），不要用逐段位移累加——
     // 累加會把滑鼠/觸控自然的細微抖動也算進去，正常點擊也常常一路累加到
-    // 超過門檻，導致 pick() 幾乎永遠不會被觸發（點光點沒反應的根因）。
+    // 超過門檻，導致 pick() 幾乎永遠不會被觸發（點光點沒反應的根因之一）。
     let dragging = false, moved = 0, startX = 0, startY = 0, lastX = 0, lastY = 0, pinchDist = 0;
     const pointers = new Map();
     canvas.addEventListener("pointerdown", e => {
@@ -111,6 +147,7 @@ const AptGlobe = (() => {
       dragging = true; moved = 0;
       startX = lastX = e.clientX; startY = lastY = e.clientY;
       canvas.setPointerCapture(e.pointerId);
+      flying = null;
       pauseAutoRotate();
     });
     canvas.addEventListener("pointermove", e => {
@@ -140,6 +177,7 @@ const AptGlobe = (() => {
     canvas.addEventListener("pointercancel", endPointer);
     canvas.addEventListener("wheel", e => {
       e.preventDefault();
+      flying = null;
       radius *= (1 + Math.sign(e.deltaY) * 0.1);
     }, { passive: false });
   }
@@ -163,13 +201,22 @@ const AptGlobe = (() => {
       const dist = Math.hypot(sx - cx, sy - cy);
       if (dist < bestDist){ bestDist = dist; best = m; }
     });
-    if (best && onPick) onPick(best.id);
+    if (best){
+      flyTo(best.lat, best.lon, 1.7);
+      if (onPick) onPick(best.id);
+    }
   }
 
   function tick(){
     raf = requestAnimationFrame(tick);
-    if (autoRotate) theta += 0.0015;
+    if (flying) advanceFlight();
+    else if (autoRotate) theta += 0.0015;
     applyCamera();
+    // 縮放時標記點跟著等比縮小/放大：拉近時同一批機場間的螢幕間距會自然
+    // 變大，藉此把原本擠在一起看不清楚的光點分開；縮放同時稍微限制點的
+    // 世界座標尺寸，避免拉到很近時光點膨脹成一大坨。
+    const s = Math.max(0.35, Math.min(1, (radius - 1) / (DEF_RADIUS - 1)));
+    markerGroup.scale.setScalar(s);
     renderer.render(scene, camera);
   }
 
@@ -190,12 +237,23 @@ const AptGlobe = (() => {
       mesh.position.copy(latLonToVec3(p.lat, p.lon, 1.02));
       mesh.userData.id = p.id;
       markerGroup.add(mesh);
-      markers.push({ mesh, id: p.id });
+      markers.push({ mesh, id: p.id, lat: p.lat, lon: p.lon });
     });
   }
 
-  function pauseAutoRotate(){ autoRotate = false; }
-  function resumeAutoRotate(){ autoRotate = true; }
+  function setAutoRotate(on){
+    if (autoRotate === on) return;
+    autoRotate = on;
+    if (onRotateChange) onRotateChange(autoRotate);
+  }
+  function pauseAutoRotate(){ setAutoRotate(false); }
+  function resumeAutoRotate(){ setAutoRotate(true); }
+  function isAutoRotating(){ return autoRotate; }
+  function toggleAutoRotate(){ setAutoRotate(!autoRotate); return autoRotate; }
+  function resetView(){
+    flying = null;
+    theta = DEF_THETA; phi = DEF_PHI; radius = DEF_RADIUS;
+  }
 
   function destroy(){
     if (raf) cancelAnimationFrame(raf);
@@ -203,5 +261,8 @@ const AptGlobe = (() => {
     window.removeEventListener("resize", resize);
   }
 
-  return { init, setMarkers, resize, pauseAutoRotate, resumeAutoRotate, destroy, isReady: () => ready };
+  return {
+    init, setMarkers, resize, destroy, isReady: () => ready,
+    pauseAutoRotate, resumeAutoRotate, isAutoRotating, toggleAutoRotate, resetView,
+  };
 })();

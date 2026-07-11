@@ -323,6 +323,22 @@
   font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
   color:var(--muted);pointer-events:none;
 }
+.apt-globe-controls{
+  position:absolute;right:14px;top:14px;z-index:2;
+  display:flex;gap:8px;
+}
+.apt-globe-controls button{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+  color:var(--text);
+  background:var(--panel);
+  border:1px solid var(--stroke);
+  border-radius:6px;padding:7px 12px;cursor:pointer;
+  backdrop-filter:blur(8px);
+  transition:border-color .15s, color .15s;
+}
+.apt-globe-controls button:hover{border-color:var(--amber);color:var(--amber)}
+.apt-globe-controls button[aria-pressed="true"]{color:var(--amber);border-color:var(--amber);background:var(--amber-soft)}
 @media (max-width:640px){
   .apt-globe-wrap{height:min(60vh,480px)}
+  .apt-globe-controls button{padding:6px 9px;font-size:10px}
 }

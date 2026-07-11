@@ -246,8 +246,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=57"),
-      fetch("data/countries.json?v=57"),
+      fetch("data/airports.json?v=58"),
+      fetch("data/countries.json?v=58"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -274,6 +274,11 @@ function escapeHTML(s){
   $("apt-type").addEventListener("change", applyAll);
   $("apt-fav-only").addEventListener("change", applyAll);
   $("apt-view-toggle").addEventListener("click", toggleGlobeMode);
+  $("apt-globe-rotate").addEventListener("click", () => {
+    const on = AptGlobe.toggleAutoRotate();
+    $("apt-globe-rotate").setAttribute("aria-pressed", String(on));
+  });
+  $("apt-globe-reset").addEventListener("click", () => AptGlobe.resetView());
   document.addEventListener("langchange", () => {
     I18N.apply(); applyAll();
     const panel = $("panel");
@@ -323,6 +328,11 @@ function escapeHTML(s){
   document.addEventListener("click", e => {
     if (!$("sat-lightbox").hidden) return;
     const panel = $("panel");
+    // 地球畫布用滑鼠點擊會在 pointerup 之後多發一個原生 click 事件，晚於
+    // 我們自己在 pointerup 觸發的 pick() 一拍——不排除的話，滑鼠點光點
+    // 開面板後這裡會馬上把它關掉（觸控裝置沒有這個問題，這是「手機正常、
+    // PC 沒反應」的根因）。
+    if (e.target.closest("#apt-globe-canvas")) return;
     if (panel.classList.contains("open") && !panel.contains(e.target) && !e.target.closest(".apt-row"))
       closePanel();
   });
@@ -458,7 +468,9 @@ async function toggleGlobeMode(){
   $("apt-view-toggle").classList.toggle("active", globeMode);
   $("apt-globe-wrap").hidden = !globeMode;
   $("apt-list").hidden = globeMode;
-  if (globeMode && !AptGlobe.isReady()) await AptGlobe.init($("apt-globe-wrap"), id => openAirport(id));
+  if (globeMode && !AptGlobe.isReady())
+    await AptGlobe.init($("apt-globe-wrap"), id => openAirport(id),
+      on => $("apt-globe-rotate").setAttribute("aria-pressed", String(on)));
   else if (globeMode) AptGlobe.resize();
   applyAll();   // 重新套用目前篩選條件；render() 會依 globeMode 決定要不要順便更新地球標點
 }
@@ -550,7 +562,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=57`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=58`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -665,7 +677,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=57`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=58`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
