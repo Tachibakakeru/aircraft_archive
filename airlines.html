@@ -7,10 +7,10 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=73">
-<link rel="stylesheet" href="css/airlines.css?v=73">
-<script src="js/theme.js?v=73"></script>
-<script src="js/i18n.js?v=73"></script>
+<link rel="stylesheet" href="css/style.css?v=76">
+<link rel="stylesheet" href="css/airlines.css?v=76">
+<script src="js/theme.js?v=76"></script>
+<script src="js/i18n.js?v=76"></script>
 </head>
 <body>
 
@@ -58,10 +58,12 @@
     <h2 id="al-p-name">—</h2>
     <div class="en" id="al-p-sub"></div>
     <span class="al-tier-tag" id="al-p-tier"></span>
+    <button id="al-p-edit" class="apt-p-fav al-p-edit" title="編輯">✎</button>
     <button id="al-p-fav" class="apt-p-fav" aria-pressed="false" title="收藏">☆</button>
     <button id="al-p-close" class="panel-close-btn" aria-label="關閉面板" data-i18n-aria="viewer.panel.close">✕</button>
   </div>
   <div class="panel-body">
+    <img id="al-p-photo" class="al-p-photo" hidden alt="">
     <dl id="al-p-info"></dl>
 
     <div class="al-section-title" data-i18n="airlines.detail.fleet">FLEET / 機隊組成</div>
@@ -71,10 +73,61 @@
     <div id="al-p-routes"></div>
 
     <p class="al-p-tagline" id="al-p-tagline"></p>
+
+    <div class="al-edit" id="al-edit" hidden>
+      <div class="al-section-title">編輯 / EDIT</div>
+      <div class="al-edit-grid">
+        <label>公司名稱<input type="text" id="al-e-name"></label>
+        <label>ICAO<input type="text" id="al-e-icao" maxlength="4"></label>
+        <label>IATA<input type="text" id="al-e-iata" maxlength="3"></label>
+        <label>成立年份<input type="number" id="al-e-founded"></label>
+        <label>聯盟
+          <select id="al-e-alliance">
+            <option value="none">獨立營運</option>
+            <option value="star">星空聯盟</option>
+            <option value="skyteam">天合聯盟</option>
+            <option value="oneworld">寰宇一家</option>
+          </select>
+        </label>
+        <label>分級
+          <select id="al-e-tier">
+            <option value="">未分類</option>
+            <option value="mainline">Mainline</option>
+            <option value="regional">Regional</option>
+            <option value="lcc">LCC</option>
+          </select>
+        </label>
+      </div>
+      <label class="al-edit-full">國家／地區（中／英／日，逗號分隔可留同值）
+        <input type="text" id="al-e-country-zh" placeholder="中文">
+        <input type="text" id="al-e-country-en" placeholder="English">
+        <input type="text" id="al-e-country-ja" placeholder="日本語">
+      </label>
+      <label class="al-edit-full">主要樞紐（以逗號分隔）<input type="text" id="al-e-hubs" placeholder="TPE, TSA"></label>
+      <label class="al-edit-full">機隊總數<input type="number" id="al-e-fleettotal"></label>
+      <label class="al-edit-full">機隊組成（每行一筆，格式：機型：數量：對應機型ID（選填））
+        <textarea id="al-e-fleet" rows="3" placeholder="Airbus A350-900：14：a350"></textarea>
+      </label>
+      <label class="al-edit-full">代表性航線（以逗號分隔）<textarea id="al-e-routes" rows="2" placeholder="台北, 東京, 洛杉磯"></textarea></label>
+      <label class="al-edit-full">簡介（中文）<textarea id="al-e-tagline-zh" rows="3"></textarea></label>
+      <label class="al-edit-full">簡介（English）<textarea id="al-e-tagline-en" rows="3"></textarea></label>
+      <label class="al-edit-full">簡介（日本語）<textarea id="al-e-tagline-ja" rows="3"></textarea></label>
+      <label class="al-edit-full">自訂 Logo 網址（留空則使用官方尾翼 logo）<input type="text" id="al-e-customlogo" placeholder="https://... 或上傳"></label>
+      <label class="al-edit-full">封面照片
+        <input type="text" id="al-e-photo" placeholder="https://...">
+        <input type="file" id="al-e-photo-file" accept="image/*">
+      </label>
+      <div class="al-edit-actions">
+        <button id="al-edit-save">儲存到網站</button>
+        <button id="al-edit-clear" class="ghost">清除本機暫存</button>
+      </div>
+    </div>
   </div>
 </aside>
 
-<script src="js/airlines.js?v=73"></script>
-<script src="js/ui.js?v=73"></script>
+<script src="js/auth.js?v=76"></script>
+<script src="js/storage.js?v=76"></script>
+<script src="js/airlines.js?v=76"></script>
+<script src="js/ui.js?v=76"></script>
 </body>
 </html>

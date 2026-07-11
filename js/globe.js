@@ -43,6 +43,19 @@ const AptGlobe = (() => {
     return `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}`;
   }
 
+  function disposePatch(){
+    if (!groundPatch) return;
+    scene.remove(groundPatch);
+    groundPatch.geometry.dispose();
+    groundPatch.material.map.dispose();
+    groundPatch.material.dispose();
+    groundPatch = null;
+  }
+  function clearGroundPatch(){
+    patchReqId++;   // 讓還在下載中的舊請求作廢，回來時不會又把貼片加回去
+    disposePatch();
+  }
+
   async function showGroundPatch(lat, lon){
     const myReq = ++patchReqId;
     const { x: cx, y: cy } = tileXY(lon, lat, TILE_ZOOM);
@@ -64,14 +77,9 @@ const AptGlobe = (() => {
       }
     }
     await Promise.all(loads);
-    if (myReq !== patchReqId || !scene) return;   // 期間又飛到別的機場，這批已經過期
+    if (myReq !== patchReqId || !scene) return;   // 期間又飛到別的機場或被取消，這批已經過期
 
-    if (groundPatch){
-      scene.remove(groundPatch);
-      groundPatch.geometry.dispose();
-      groundPatch.material.map.dispose();
-      groundPatch.material.dispose();
-    }
+    disposePatch();
     const tex = new THREE.CanvasTexture(tileCanvas);
     tex.encoding = THREE.sRGBEncoding;
     const geo = new THREE.PlaneGeometry(0.1, 0.1);
@@ -424,5 +432,6 @@ const AptGlobe = (() => {
   return {
     init, setMarkers, resize, destroy, isReady: () => ready,
     pauseAutoRotate, resumeAutoRotate, isAutoRotating, toggleAutoRotate, resetView,
+    clearGroundPatch,
   };
 })();
