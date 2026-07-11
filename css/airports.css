@@ -54,6 +54,14 @@
 }
 .apt-row-fav:hover{border-color:var(--stroke)}
 .apt-row-fav.on{color:var(--amber)}
+.apt-row-cmp{
+  flex-shrink:0;width:26px;height:26px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;color:var(--muted);background:transparent;border:1px solid transparent;
+  cursor:pointer;transition:color .15s,border-color .15s;
+}
+.apt-row-cmp:hover{border-color:var(--stroke)}
+.apt-row-cmp.on{color:var(--cyan);border-color:var(--cyan)}
 .apt-empty{
   color:var(--muted);font-size:14px;text-align:center;padding:60px 20px;line-height:1.9;
 }

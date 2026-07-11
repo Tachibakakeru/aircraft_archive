@@ -1,0 +1,11 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#7b8aa3" stroke-width="3" opacity="0.55">
+    <path d="M120,200 L430,200 Q470,200 500,180 L560,158 Q572,154 572,164 Q572,174 552,184 L500,208
+             L470,208 L400,236 L360,236 L385,210 L300,210 L265,236 L228,236 L248,210 L120,210 Z"/>
+    <path d="M330,200 L330,120 L352,120 L372,200"/>
+  </g>
+  <text x="320" y="288" text-anchor="middle" font-family="monospace" font-size="15" letter-spacing="2"
+        fill="#7b8aa3" opacity="0.75">3D 模型未提供</text>
+  <text x="320" y="310" text-anchor="middle" font-family="monospace" font-size="10.5" letter-spacing="2.5"
+        fill="#7b8aa3" opacity="0.5">NO 3D MODEL AVAILABLE</text>
+</svg>

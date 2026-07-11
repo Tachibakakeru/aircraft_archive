@@ -7,6 +7,7 @@
 
 const $ = id => document.getElementById(id);
 const MAX_RESULTS = 200;
+const GLOBE_MAX = 3000;   // 地球標點上限，跟清單的 200 筆上限脫鉤（球體上稀疏點位不吃效能）
 
 let AIRPORTS = [];
 let COUNTRIES = {};
@@ -246,8 +247,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=48"),
-      fetch("data/countries.json?v=48"),
+      fetch("data/airports.json?v=50"),
+      fetch("data/countries.json?v=50"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -433,7 +434,9 @@ function applyAll(){
 
   let list;
   if (!q && !country && !type && !favOnly){
-    list = null;   // 尚未縮小範圍：不渲染，提示使用者搜尋
+    // 地圖模式下沒有篩選條件時，預設畫出全球大型機場，
+    // 不然切到地圖只會看到一顆空球體；清單模式仍維持「請先搜尋」
+    list = globeMode ? AIRPORTS.filter(a => a.type === "large_airport") : null;
   } else {
     list = AIRPORTS.filter(a => {
       if (favOnly && !isFav(a.id)) return false;
@@ -494,18 +497,20 @@ function render(list){
   list = list.slice().sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
   const shown = list.slice(0, MAX_RESULTS);
   countEl.innerHTML = `${I18N.t("airports.count.showing")} <b>${shown.length.toLocaleString()}</b> / ${list.length.toLocaleString()}`;
-  if (globeMode) refreshGlobeMarkers(shown);
+  if (globeMode) refreshGlobeMarkers(list.slice(0, GLOBE_MAX));
 
   listEl.innerHTML = shown.map(a => {
     const codes = [a.icao, a.iata].filter(Boolean).map(c => `<span>${c}</span>`).join("");
     const loc = [a.city, countryName(a.country)].filter(Boolean).join(", ");
     const fav = isFav(a.id);
+    const cmp = isInCompare(a.id);
     return `<div class="apt-row${a.type === "closed" ? " closed" : ""}" data-id="${a.id}" tabindex="0" role="button">
       <span class="apt-type-dot ${a.type}"></span>
       <span class="apt-main">
         <span class="apt-name">${a.name}</span>
         <span class="apt-loc">${loc}</span>
       </span>
+      <button class="apt-row-cmp${cmp ? " on" : ""}" data-cmp-id="${a.id}" aria-pressed="${cmp}" title="${I18N.t("airports.detail.addCompare")}">⇄</button>
       <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}">${fav ? "★" : "☆"}</button>
       <span class="apt-codes">${codes}</span>
     </div>`;
@@ -513,7 +518,7 @@ function render(list){
 
   listEl.querySelectorAll(".apt-row").forEach(row => {
     row.addEventListener("click", e => {
-      if (e.target.closest(".apt-row-fav")) return;
+      if (e.target.closest(".apt-row-fav") || e.target.closest(".apt-row-cmp")) return;
       openAirport(row.dataset.id);
     });
     row.addEventListener("keydown", e => {
@@ -526,6 +531,14 @@ function render(list){
       toggleFav(btn.dataset.favId);
       applyAll();
     }));
+  listEl.querySelectorAll(".apt-row-cmp").forEach(btn =>
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      toggleCompare(btn.dataset.cmpId);
+      btn.classList.toggle("on", isInCompare(btn.dataset.cmpId));
+      btn.setAttribute("aria-pressed", String(isInCompare(btn.dataset.cmpId)));
+      if ($("panel").dataset.id === btn.dataset.cmpId) syncCmpButton();
+    }));
 
   moreEl.hidden = globeMode || list.length <= MAX_RESULTS;
   if (!moreEl.hidden) moreEl.textContent = I18N.t("airports.more").replace("{n}", (list.length - MAX_RESULTS).toLocaleString());
@@ -537,7 +550,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=48`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=50`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -652,7 +665,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=48`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=50`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];

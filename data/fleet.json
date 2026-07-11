@@ -541,6 +541,86 @@
       "iata": "789"
     },
     {
+      "id": "dc9",
+      "name": "McDonnell Douglas DC-9-30",
+      "manufacturer": "McDonnell Douglas",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "1966",
+      "span": "27.25 m",
+      "seats": "90–115",
+      "tagline": {
+        "zh": "道格拉斯經典雙發窄體客機，尾置雙引擎奠定其暢銷數十年的基礎。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "DC93",
+      "iata": "D93",
+      "has3d": false
+    },
+    {
+      "id": "md80",
+      "name": "McDonnell Douglas MD-82",
+      "manufacturer": "McDonnell Douglas",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "1979",
+      "span": "32.87 m",
+      "seats": "130–172",
+      "tagline": {
+        "zh": "MD-80 系列主力型，DC-9 的加長進化版，曾是美國國內線的骨幹機種。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "MD82",
+      "iata": "M82",
+      "has3d": false
+    },
+    {
+      "id": "dc10",
+      "name": "McDonnell Douglas DC-10-30",
+      "manufacturer": "McDonnell Douglas",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "1970",
+      "span": "50.4 m",
+      "seats": "250–380",
+      "tagline": {
+        "zh": "三發廣體客機的先驅，機尾第二具引擎是其最鮮明的識別特徵。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "DC10",
+      "iata": "D10",
+      "has3d": false
+    },
+    {
+      "id": "md11",
+      "name": "McDonnell Douglas MD-11",
+      "manufacturer": "McDonnell Douglas",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "1990",
+      "span": "51.97 m",
+      "seats": "250–410",
+      "tagline": {
+        "zh": "DC-10 的最終進化型，換裝新翼尖小翼與玻璃座艙，曾是長程貨機主力。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "MD11",
+      "iata": "M11",
+      "has3d": false
+    },
+    {
       "id": "crj700",
       "name": "Bombardier CRJ700",
       "manufacturer": "Bombardier",

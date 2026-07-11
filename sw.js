@@ -10,7 +10,7 @@ const TILE_CACHE = "hangar-tiles-v1";
 const TILE_HOSTS = ["server.arcgisonline.com"];
 const TILE_LIMIT = 800;   // 圖磚快取上限筆數，超過時淘汰最舊的（Cache.keys() 近似插入序）
 const SHELL = ["index.html", "viewer.html", "compare.html", "editor.html",
-               "airports.html", "variants.html",
+               "airports.html", "variants.html", "airlines.html",
                "manifest.json", "assets/icon.svg"];
 
 self.addEventListener("install", e => {

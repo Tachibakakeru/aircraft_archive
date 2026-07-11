@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "note": "機隊規模與型別統計為概估數字（依公開常識彙整，非即時營運資料，實際機隊持續變動），航線僅列該公司代表性目的地，非完整航線網路。"
+  },
+  "airlines": [
+    {
+      "id": "aa", "name": "American Airlines", "icao": "AAL", "iata": "AA",
+      "country": "美國", "founded": 1926, "alliance": "oneworld",
+      "hubs": ["Dallas/Fort Worth", "Charlotte", "Chicago O'Hare"],
+      "fleetTotal": 950,
+      "fleet": [
+        { "type": "Airbus A321", "count": 219, "fleetId": "a321" },
+        { "type": "Boeing 737-800", "count": 304, "fleetId": "b738" },
+        { "type": "Boeing 787-8 / -9", "count": 89, "fleetId": "b789" },
+        { "type": "Boeing 777-300ER", "count": 20, "fleetId": "b773" }
+      ],
+      "routes": ["London Heathrow", "Tokyo Haneda", "São Paulo", "Mexico City", "Sydney"],
+      "tagline": { "zh": "全球機隊規模最大的航空公司之一，達拉斯堡沃斯樞紐輻射全美與跨洋航線。" }
+    },
+    {
+      "id": "dl", "name": "Delta Air Lines", "icao": "DAL", "iata": "DL",
+      "country": "美國", "founded": 1929, "alliance": "skyteam",
+      "hubs": ["Atlanta", "Detroit", "Minneapolis–Saint Paul"],
+      "fleetTotal": 980,
+      "fleet": [
+        { "type": "Airbus A321", "count": 127, "fleetId": "a321" },
+        { "type": "Boeing 737-900", "count": 179, "fleetId": "b739" },
+        { "type": "Airbus A350-900", "count": 19, "fleetId": "a359" },
+        { "type": "Boeing 767-400ER", "count": 21, "fleetId": "b764" }
+      ],
+      "routes": ["Paris CDG", "Amsterdam", "Tokyo Haneda", "Seoul Incheon", "Sydney"],
+      "tagline": { "zh": "亞特蘭大哈茲菲爾德樞紐是全球最繁忙機場之一，以準點與服務品質著稱。" }
+    },
+    {
+      "id": "ua", "name": "United Airlines", "icao": "UAL", "iata": "UA",
+      "country": "美國", "founded": 1926, "alliance": "star",
+      "hubs": ["Chicago O'Hare", "Denver", "Houston Intercontinental"],
+      "fleetTotal": 980,
+      "fleet": [
+        { "type": "Boeing 737-800 / MAX", "count": 172, "fleetId": "b738" },
+        { "type": "Airbus A320", "count": 96, "fleetId": "a320" },
+        { "type": "Boeing 777-200 / -300ER", "count": 74, "fleetId": "b772" },
+        { "type": "Boeing 787-8 / -9 / -10", "count": 71, "fleetId": "b789" }
+      ],
+      "routes": ["Frankfurt", "Tokyo Narita", "Hong Kong", "São Paulo", "Sydney"],
+      "tagline": { "zh": "美國三大傳統航空之一，芝加哥歐海爾樞紐銜接北美內陸與跨洋長程航線。" }
+    },
+    {
+      "id": "wn", "name": "Southwest Airlines", "icao": "SWA", "iata": "WN",
+      "country": "美國", "founded": 1967, "alliance": "none",
+      "hubs": ["Dallas Love Field", "Denver", "Chicago Midway"],
+      "fleetTotal": 800,
+      "fleet": [
+        { "type": "Boeing 737-700", "count": 400, "fleetId": "b737" },
+        { "type": "Boeing 737-800", "count": 207, "fleetId": "b738" },
+        { "type": "Boeing 737 MAX 8", "count": 193 }
+      ],
+      "routes": ["國內線為主（點對點網路）", "Cancún", "San José del Cabo", "Nassau", "San Juan"],
+      "tagline": { "zh": "全球最大廉價航空之一，機隊清一色 737，點對點航線網路取代傳統樞紐輻射。" }
+    },
+    {
+      "id": "ac", "name": "Air Canada", "icao": "ACA", "iata": "AC",
+      "country": "加拿大", "founded": 1937, "alliance": "star",
+      "hubs": ["Toronto Pearson", "Montréal–Trudeau", "Vancouver"],
+      "fleetTotal": 180,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 84, "fleetId": "a320" },
+        { "type": "Boeing 787-8 / -9", "count": 40, "fleetId": "b789" },
+        { "type": "Boeing 777-300ER", "count": 19, "fleetId": "b773" }
+      ],
+      "routes": ["London Heathrow", "Frankfurt", "Tokyo Narita", "São Paulo", "Sydney"],
+      "tagline": { "zh": "加拿大最大航空公司，多倫多皮爾遜樞紐銜接歐洲與亞太長程航線。" }
+    },
+    {
+      "id": "lh", "name": "Lufthansa", "icao": "DLH", "iata": "LH",
+      "country": "德國", "founded": 1953, "alliance": "star",
+      "hubs": ["Frankfurt", "Munich"],
+      "fleetTotal": 330,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 140, "fleetId": "a320" },
+        { "type": "Airbus A350-900", "count": 26, "fleetId": "a359" },
+        { "type": "Boeing 747-8", "count": 19, "fleetId": "b748" },
+        { "type": "Airbus A330", "count": 17, "fleetId": "a332" }
+      ],
+      "routes": ["New York JFK", "Singapore", "Tokyo Narita", "Beijing", "São Paulo"],
+      "tagline": { "zh": "星空聯盟創始成員之一，法蘭克福樞紐是歐陸轉機航班最密集的機場之一。" }
+    },
+    {
+      "id": "af", "name": "Air France", "icao": "AFR", "iata": "AF",
+      "country": "法國", "founded": 1933, "alliance": "skyteam",
+      "hubs": ["Paris Charles de Gaulle"],
+      "fleetTotal": 220,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 84, "fleetId": "a320" },
+        { "type": "Boeing 777-200 / -300ER", "count": 55, "fleetId": "b772" },
+        { "type": "Airbus A350-900", "count": 32, "fleetId": "a359" }
+      ],
+      "routes": ["New York JFK", "Tokyo Haneda", "Beijing", "São Paulo", "Nairobi"],
+      "tagline": { "zh": "天合聯盟創始成員，巴黎戴高樂樞紐是連結非洲航線最密集的歐洲航空。" }
+    },
+    {
+      "id": "kl", "name": "KLM", "icao": "KLM", "iata": "KL",
+      "country": "荷蘭", "founded": 1919, "alliance": "skyteam",
+      "hubs": ["Amsterdam Schiphol"],
+      "fleetTotal": 120,
+      "fleet": [
+        { "type": "Boeing 737 家族", "count": 55, "fleetId": "b738" },
+        { "type": "Boeing 777-200 / -300ER", "count": 27, "fleetId": "b772" },
+        { "type": "Boeing 787-9 / -10", "count": 22, "fleetId": "b789" }
+      ],
+      "routes": ["New York JFK", "Tokyo Narita", "Jakarta", "Nairobi", "Buenos Aires"],
+      "tagline": { "zh": "全球仍以原名持續營運至今最悠久的航空公司，1919 年創立。" }
+    },
+    {
+      "id": "ba", "name": "British Airways", "icao": "BAW", "iata": "BA",
+      "country": "英國", "founded": 1974, "alliance": "oneworld",
+      "hubs": ["London Heathrow", "London Gatwick"],
+      "fleetTotal": 280,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 90, "fleetId": "a320" },
+        { "type": "Boeing 777-200 / -300ER", "count": 58, "fleetId": "b772" },
+        { "type": "Airbus A380", "count": 12, "fleetId": "a380" },
+        { "type": "Boeing 787-8 / -9 / -10", "count": 32, "fleetId": "b789" }
+      ],
+      "routes": ["New York JFK", "Singapore", "Tokyo Haneda", "Johannesburg", "Sydney（經新加坡）"],
+      "tagline": { "zh": "英國國家航空，希斯洛樞紐長年是全球轉機流量最大的機場之一。" }
+    },
+    {
+      "id": "fr", "name": "Ryanair", "icao": "RYR", "iata": "FR",
+      "country": "愛爾蘭", "founded": 1984, "alliance": "none",
+      "hubs": ["Dublin", "40+ 個歐洲基地機場"],
+      "fleetTotal": 600,
+      "fleet": [
+        { "type": "Boeing 737-800", "count": 450, "fleetId": "b738" },
+        { "type": "Boeing 737 MAX 8-200", "count": 150 }
+      ],
+      "routes": ["歐洲短程點對點為主", "London Stansted", "Milan Bergamo", "Barcelona", "Kraków"],
+      "tagline": { "zh": "歐洲載客量最大的廉價航空，機隊統一機型策略把維修訓練成本壓到最低。" }
+    },
+    {
+      "id": "tk", "name": "Turkish Airlines", "icao": "THY", "iata": "TK",
+      "country": "土耳其", "founded": 1933, "alliance": "star",
+      "hubs": ["Istanbul Airport"],
+      "fleetTotal": 440,
+      "fleet": [
+        { "type": "Airbus A321", "count": 90, "fleetId": "a321" },
+        { "type": "Boeing 737 家族", "count": 130, "fleetId": "b738" },
+        { "type": "Airbus A330", "count": 40, "fleetId": "a332" },
+        { "type": "Boeing 777-300ER", "count": 33, "fleetId": "b773" }
+      ],
+      "routes": ["New York JFK", "Buenos Aires", "Cape Town", "Sydney（季節性）", "Tokyo Narita"],
+      "tagline": { "zh": "以「飛航國家數量最多的航空公司」著稱，伊斯坦堡樞紐橫跨歐亞航線網路。" }
+    },
+    {
+      "id": "ek", "name": "Emirates", "icao": "UAE", "iata": "EK",
+      "country": "阿拉伯聯合大公國", "founded": 1985, "alliance": "none",
+      "hubs": ["Dubai International"],
+      "fleetTotal": 260,
+      "fleet": [
+        { "type": "Airbus A380", "count": 115, "fleetId": "a380" },
+        { "type": "Boeing 777-200 / -300ER", "count": 135, "fleetId": "b773" }
+      ],
+      "routes": ["London Heathrow", "New York JFK", "Sydney", "Auckland", "São Paulo"],
+      "tagline": { "zh": "全球最大 A380 營運商，機隊清一色廣體客機、不營運任何窄體機型。" }
+    },
+    {
+      "id": "qr", "name": "Qatar Airways", "icao": "QTR", "iata": "QR",
+      "country": "卡達", "founded": 1993, "alliance": "oneworld",
+      "hubs": ["Hamad International (Doha)"],
+      "fleetTotal": 230,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 40, "fleetId": "a320" },
+        { "type": "Airbus A350-900 / -1000", "count": 55, "fleetId": "a359" },
+        { "type": "Boeing 777-200 / -300ER", "count": 60, "fleetId": "b773" },
+        { "type": "Boeing 787-8 / -9", "count": 30, "fleetId": "b789" }
+      ],
+      "routes": ["Auckland（全球最長航線之一）", "London Heathrow", "New York JFK", "Sydney"],
+      "tagline": { "zh": "杜哈—奧克蘭航線是全球飛行距離數一數二的定期航班之一。" }
+    },
+    {
+      "id": "ey", "name": "Etihad Airways", "icao": "ETD", "iata": "EY",
+      "country": "阿拉伯聯合大公國", "founded": 2003, "alliance": "none",
+      "hubs": ["Abu Dhabi International"],
+      "fleetTotal": 90,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 20, "fleetId": "a320" },
+        { "type": "Boeing 787-9 / -10", "count": 38, "fleetId": "b789" },
+        { "type": "Airbus A350-900", "count": 10, "fleetId": "a359" },
+        { "type": "Boeing 777-300ER", "count": 17, "fleetId": "b773" }
+      ],
+      "routes": ["London Heathrow", "New York JFK", "Sydney", "Seoul Incheon"],
+      "tagline": { "zh": "阿布達比國家航空，較年輕但快速擴張，以高端頭等艙套房服務聞名。" }
+    },
+    {
+      "id": "sq", "name": "Singapore Airlines", "icao": "SIA", "iata": "SQ",
+      "country": "新加坡", "founded": 1972, "alliance": "none",
+      "hubs": ["Singapore Changi"],
+      "fleetTotal": 140,
+      "fleet": [
+        { "type": "Airbus A350-900", "count": 60, "fleetId": "a359" },
+        { "type": "Boeing 777-300ER", "count": 32, "fleetId": "b773" },
+        { "type": "Airbus A380", "count": 12, "fleetId": "a380" },
+        { "type": "Boeing 787-10", "count": 17, "fleetId": "b789" }
+      ],
+      "routes": ["New York JFK / EWR（全球最長商業航班之一）", "London Heathrow", "Sydney", "Tokyo Narita"],
+      "tagline": { "zh": "全球公認服務品質標竿之一，未加入任何航空聯盟仍維持龐大獨立航網。" }
+    },
+    {
+      "id": "cx", "name": "Cathay Pacific", "icao": "CPA", "iata": "CX",
+      "country": "香港", "founded": 1946, "alliance": "oneworld",
+      "hubs": ["Hong Kong International"],
+      "fleetTotal": 100,
+      "fleet": [
+        { "type": "Airbus A321neo", "count": 20, "fleetId": "a321" },
+        { "type": "Airbus A330", "count": 40, "fleetId": "a333" },
+        { "type": "Boeing 777-300ER", "count": 26, "fleetId": "b773" },
+        { "type": "Airbus A350-900 / -1000", "count": 48, "fleetId": "a359" }
+      ],
+      "routes": ["London Heathrow", "New York JFK", "Sydney", "Vancouver"],
+      "tagline": { "zh": "香港代表性航空，以連結歐美與大洋洲的廣體長程航線網路為核心。" }
+    },
+    {
+      "id": "jl", "name": "Japan Airlines", "icao": "JAL", "iata": "JL",
+      "country": "日本", "founded": 1951, "alliance": "oneworld",
+      "hubs": ["Tokyo Haneda", "Tokyo Narita"],
+      "fleetTotal": 170,
+      "fleet": [
+        { "type": "Boeing 737-800", "count": 50, "fleetId": "b738" },
+        { "type": "Boeing 767-300", "count": 30, "fleetId": "b763" },
+        { "type": "Boeing 777-200 / -300ER", "count": 24, "fleetId": "b772" },
+        { "type": "Boeing 787-8 / -9", "count": 55, "fleetId": "b789" }
+      ],
+      "routes": ["New York JFK", "London Heathrow", "Sydney", "São Paulo（經達拉斯）"],
+      "tagline": { "zh": "日本兩大航空之一，經 2010 年破產重整後轉為精實化營運的代表案例。" }
+    },
+    {
+      "id": "nh", "name": "ANA All Nippon Airways", "icao": "ANA", "iata": "NH",
+      "country": "日本", "founded": 1952, "alliance": "star",
+      "hubs": ["Tokyo Haneda", "Tokyo Narita"],
+      "fleetTotal": 210,
+      "fleet": [
+        { "type": "Boeing 737-800", "count": 45, "fleetId": "b738" },
+        { "type": "Boeing 767-300", "count": 30, "fleetId": "b763" },
+        { "type": "Boeing 777-200 / -300ER", "count": 40, "fleetId": "b772" },
+        { "type": "Boeing 787 全系列", "count": 75, "fleetId": "b789" },
+        { "type": "Airbus A380", "count": 3, "fleetId": "a380" }
+      ],
+      "routes": ["New York JFK", "London Heathrow", "Sydney", "Mumbai"],
+      "tagline": { "zh": "日本機隊規模最大的航空，僅有的 3 架 A380 專飛夏威夷「Flying Honu」彩繪航班。" }
+    },
+    {
+      "id": "ke", "name": "Korean Air", "icao": "KAL", "iata": "KE",
+      "country": "韓國", "founded": 1962, "alliance": "skyteam",
+      "hubs": ["Seoul Incheon"],
+      "fleetTotal": 160,
+      "fleet": [
+        { "type": "Boeing 737-800 / MAX", "count": 25, "fleetId": "b738" },
+        { "type": "Airbus A330", "count": 30, "fleetId": "a332" },
+        { "type": "Boeing 777-200 / -300ER", "count": 35, "fleetId": "b772" },
+        { "type": "Boeing 747-8", "count": 10, "fleetId": "b748" },
+        { "type": "Airbus A380", "count": 10, "fleetId": "a380" }
+      ],
+      "routes": ["New York JFK", "London Heathrow", "São Paulo", "Nairobi"],
+      "tagline": { "zh": "韓國最大航空，正推動與韓亞航空合併，將成為全球前十大航空集團之一。" }
+    },
+    {
+      "id": "cz", "name": "China Southern Airlines", "icao": "CSN", "iata": "CZ",
+      "country": "中國", "founded": 1988, "alliance": "none",
+      "hubs": ["Guangzhou Baiyun"],
+      "fleetTotal": 880,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 400, "fleetId": "a320" },
+        { "type": "Boeing 737 家族", "count": 200, "fleetId": "b738" },
+        { "type": "Airbus A330", "count": 60, "fleetId": "a333" },
+        { "type": "Boeing 777-300ER", "count": 20, "fleetId": "b773" },
+        { "type": "Boeing 787-8 / -9", "count": 20, "fleetId": "b789" }
+      ],
+      "routes": ["Sydney", "Los Angeles", "Amsterdam", "Auckland"],
+      "tagline": { "zh": "亞洲機隊規模最大的航空公司，2019 年退出天合聯盟轉為獨立營運。" }
+    },
+    {
+      "id": "mu", "name": "China Eastern Airlines", "icao": "CES", "iata": "MU",
+      "country": "中國", "founded": 1988, "alliance": "skyteam",
+      "hubs": ["Shanghai Pudong", "Shanghai Hongqiao"],
+      "fleetTotal": 750,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 380, "fleetId": "a320" },
+        { "type": "Boeing 737 家族", "count": 150, "fleetId": "b738" },
+        { "type": "Airbus A330", "count": 55, "fleetId": "a333" },
+        { "type": "Boeing 777-300ER", "count": 20, "fleetId": "b773" }
+      ],
+      "routes": ["New York JFK", "Paris CDG", "Sydney", "Tokyo Narita"],
+      "tagline": { "zh": "中國商用大飛機 C919 的全球首家營運商，上海為其樞紐核心。" }
+    },
+    {
+      "id": "br", "name": "EVA Air", "icao": "EVA", "iata": "BR",
+      "country": "台灣", "founded": 1989, "alliance": "star",
+      "hubs": ["Taiwan Taoyuan"],
+      "fleetTotal": 90,
+      "fleet": [
+        { "type": "Airbus A321neo", "count": 24, "fleetId": "a321" },
+        { "type": "Boeing 777-300ER", "count": 34, "fleetId": "b773" },
+        { "type": "Boeing 787-9 / -10", "count": 18, "fleetId": "b789" }
+      ],
+      "routes": ["New York JFK", "Amsterdam", "Vienna", "London Heathrow（經曼谷）"],
+      "tagline": { "zh": "台灣民營航空代表，Hello Kitty 彩繪機是其最知名的品牌行銷案例。" }
+    },
+    {
+      "id": "ci", "name": "China Airlines", "icao": "CAL", "iata": "CI",
+      "country": "台灣", "founded": 1959, "alliance": "skyteam",
+      "hubs": ["Taiwan Taoyuan"],
+      "fleetTotal": 90,
+      "fleet": [
+        { "type": "Airbus A321neo", "count": 25, "fleetId": "a321" },
+        { "type": "Airbus A330", "count": 22, "fleetId": "a333" },
+        { "type": "Boeing 777-300ER", "count": 10, "fleetId": "b773" },
+        { "type": "Boeing 747-400F（貨機）", "count": 18, "fleetId": "b744" }
+      ],
+      "routes": ["New York JFK（經安克拉治或直飛）", "Amsterdam", "Vienna", "Frankfurt"],
+      "tagline": { "zh": "台灣國籍航空，貨運部門長年是全球航空貨運噸量排名前段班。" }
+    },
+    {
+      "id": "tg", "name": "Thai Airways", "icao": "THA", "iata": "TG",
+      "country": "泰國", "founded": 1960, "alliance": "star",
+      "hubs": ["Bangkok Suvarnabhumi"],
+      "fleetTotal": 70,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 20, "fleetId": "a320" },
+        { "type": "Airbus A350-900", "count": 12, "fleetId": "a359" },
+        { "type": "Boeing 777-200 / -300ER", "count": 20, "fleetId": "b772" },
+        { "type": "Boeing 787-8 / -9", "count": 8, "fleetId": "b789" }
+      ],
+      "routes": ["London Heathrow", "Frankfurt", "Sydney", "Tokyo Narita"],
+      "tagline": { "zh": "歷經破產重整大幅精簡機隊，泰國微笑服務仍是其航空品牌核心資產。" }
+    },
+    {
+      "id": "qf", "name": "Qantas", "icao": "QFA", "iata": "QF",
+      "country": "澳洲", "founded": 1920, "alliance": "oneworld",
+      "hubs": ["Sydney", "Melbourne", "Brisbane"],
+      "fleetTotal": 125,
+      "fleet": [
+        { "type": "Boeing 737-800", "count": 75, "fleetId": "b738" },
+        { "type": "Airbus A330", "count": 28, "fleetId": "a333" },
+        { "type": "Airbus A380", "count": 10, "fleetId": "a380" },
+        { "type": "Boeing 787-9", "count": 14, "fleetId": "b789" }
+      ],
+      "routes": ["London Heathrow（經新加坡／伯斯）", "Los Angeles", "Santiago", "Johannesburg"],
+      "tagline": { "zh": "全球仍以原名持續營運最久的航空公司之一，「日出計畫」推動雪梨直飛倫敦/紐約。" }
+    },
+    {
+      "id": "et", "name": "Ethiopian Airlines", "icao": "ETH", "iata": "ET",
+      "country": "衣索比亞", "founded": 1945, "alliance": "star",
+      "hubs": ["Addis Ababa Bole"],
+      "fleetTotal": 140,
+      "fleet": [
+        { "type": "Boeing 737-800 / MAX", "count": 30, "fleetId": "b738" },
+        { "type": "Airbus A350-900", "count": 19, "fleetId": "a359" },
+        { "type": "Boeing 777-200 / -300ER", "count": 20, "fleetId": "b772" },
+        { "type": "Boeing 787-8 / -9", "count": 22, "fleetId": "b789" }
+      ],
+      "routes": ["Beijing", "Washington Dulles", "São Paulo", "Tokyo Narita"],
+      "tagline": { "zh": "非洲機隊規模最大、航點最多的航空公司，阿迪斯阿貝巴是連結非洲大陸的樞紐核心。" }
+    },
+    {
+      "id": "la", "name": "LATAM Airlines", "icao": "LAN", "iata": "LA",
+      "country": "智利／巴西", "founded": 1929, "alliance": "oneworld",
+      "hubs": ["Santiago", "São Paulo Guarulhos"],
+      "fleetTotal": 340,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 220, "fleetId": "a320" },
+        { "type": "Boeing 787-8 / -9", "count": 40, "fleetId": "b789" },
+        { "type": "Boeing 767-300F（貨機）", "count": 20, "fleetId": "b763" }
+      ],
+      "routes": ["Miami", "Madrid", "Frankfurt", "Sydney（經奧克蘭）"],
+      "tagline": { "zh": "智利 LAN 與巴西 TAM 於 2012 年合併而成，是拉丁美洲最大航空集團。" }
+    },
+    {
+      "id": "6e", "name": "IndiGo", "icao": "IGO", "iata": "6E",
+      "country": "印度", "founded": 2006, "alliance": "none",
+      "hubs": ["Delhi", "Mumbai", "Bengaluru"],
+      "fleetTotal": 360,
+      "fleet": [
+        { "type": "Airbus A320 家族", "count": 340, "fleetId": "a320" },
+        { "type": "ATR 72", "count": 20 }
+      ],
+      "routes": ["以國內線為主", "Dubai", "Singapore", "Bangkok"],
+      "tagline": { "zh": "印度最大航空公司，全 Airbus 單走道機隊策略支撐其國內線市占率超過六成。" }
+    }
+  ]
+}

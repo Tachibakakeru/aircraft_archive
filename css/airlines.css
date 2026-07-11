@@ -1,0 +1,92 @@
+/* ═══════════════════════════════════════════
+   全球航空公司頁樣式
+   ═══════════════════════════════════════════ */
+.al-count{
+  font-family:var(--mono);font-size:12px;color:var(--muted);
+  margin-bottom:22px;
+}
+.al-count b{color:var(--amber);font-variant-numeric:tabular-nums}
+
+.al-list{display:flex;flex-direction:column;gap:8px}
+.al-row{
+  display:flex;align-items:center;gap:14px;
+  padding:12px 16px;
+  background:var(--panel);border:1px solid var(--stroke);border-radius:10px;
+  cursor:pointer;transition:border-color .15s;
+  text-align:left;font-family:var(--sans);color:var(--text);
+  width:100%;
+}
+.al-row:hover{border-color:var(--amber)}
+.al-alliance-dot{
+  flex-shrink:0;width:9px;height:9px;border-radius:50%;display:inline-block;
+}
+.al-alliance-dot.star{background:var(--cyan)}
+.al-alliance-dot.skyteam{background:var(--amber)}
+.al-alliance-dot.oneworld{background:transparent;border:1px solid var(--muted)}
+.al-alliance-dot.none{background:var(--muted);opacity:.4}
+.al-row .al-main{flex:1;min-width:0}
+.al-row .al-name{display:block;font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.al-row .al-loc{display:block;font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.al-codes{flex-shrink:0;display:flex;gap:6px;font-family:var(--mono);font-size:11px}
+.al-codes span{
+  padding:2px 8px;border-radius:5px;background:var(--amber-soft);color:var(--amber);
+  font-variant-numeric:tabular-nums;
+}
+.apt-row-fav{
+  flex-shrink:0;width:26px;height:26px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;color:var(--muted);background:transparent;border:1px solid transparent;
+  cursor:pointer;transition:color .15s,border-color .15s;
+}
+.apt-row-fav:hover{border-color:var(--stroke)}
+.apt-row-fav.on{color:var(--amber)}
+
+.al-empty{
+  color:var(--muted);font-size:14px;text-align:center;padding:60px 20px;line-height:1.9;
+}
+.al-disclaimer{
+  margin-top:24px;font-family:var(--mono);font-size:10.5px;line-height:1.9;
+  color:var(--muted);letter-spacing:.02em;
+}
+
+/* ── 詳情面板（沿用 #panel 樣式） ── */
+.apt-p-fav{
+  position:absolute;top:18px;right:58px;
+  width:32px;height:32px;border-radius:6px;
+  border:1px solid var(--stroke);background:transparent;color:var(--muted);
+  font-size:18px;cursor:pointer;transition:color .15s,border-color .15s;
+}
+.apt-p-fav:hover{border-color:var(--amber)}
+.apt-p-fav.on{color:var(--amber);border-color:var(--amber)}
+
+.al-section-title{
+  font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--cyan);
+  margin:26px 0 12px;
+}
+.al-fleet-row{
+  display:flex;align-items:center;gap:10px;
+  padding:9px 12px;margin-bottom:6px;
+  background:var(--bg-1);border:1px solid var(--stroke);border-radius:8px;
+  font-size:13px;
+}
+.al-fleet-type{flex:1;min-width:0}
+.al-fleet-count{
+  font-family:var(--mono);color:var(--amber);font-variant-numeric:tabular-nums;flex-shrink:0;
+}
+.al-fleet-3d{
+  flex-shrink:0;font-family:var(--mono);font-size:11px;color:var(--cyan);
+  text-decoration:none;padding:2px 8px;border:1px solid var(--stroke);border-radius:6px;
+  transition:border-color .15s;
+}
+.al-fleet-3d:hover{border-color:var(--cyan)}
+.al-route-chip{
+  display:inline-block;margin:0 6px 6px 0;padding:5px 11px;
+  font-size:12.5px;border-radius:20px;
+  background:var(--bg-1);border:1px solid var(--stroke);color:var(--text);
+}
+.al-p-tagline{margin-top:22px;font-size:14px;line-height:1.85;color:var(--text)}
+.al-empty-inline{color:var(--muted);font-size:13px;padding:8px 0}
+
+@media (max-width:640px){
+  .al-row{padding:10px 12px}
+}
