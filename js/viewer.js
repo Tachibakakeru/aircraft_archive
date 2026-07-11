@@ -22,12 +22,12 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=39`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=42`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=39`).then(r => { if(!r.ok) throw 0; return r.json(); })
+  fetch(`models/${MODEL_ID}.json?v=42`).then(r => { if(!r.ok) throw 0; return r.json(); })
 ]).then(([DATA, MODEL]) => init(DATA, MODEL))
   .catch(() => fail(
     `無法載入 <code>data/${MODEL_ID}.json</code> 或 <code>models/${MODEL_ID}.json</code>。<br>` +
@@ -581,6 +581,7 @@ function init(DATA, MODEL){
   function buildKeysHelp(){
     keysHelp.innerHTML = `<div class="kh-box"><h3>${I18N.t("viewer.keys.title")}</h3><dl>
       <dt>← →</dt><dd>${I18N.t("viewer.keys.parts")}</dd>
+      <dt>+ −</dt><dd>${I18N.t("viewer.keys.zoom")}</dd>
       <dt>Esc</dt><dd>${I18N.t("viewer.keys.close")}</dd>
       <dt>R</dt><dd>${I18N.t("viewer.keys.rotate")}</dd>
       <dt>0</dt><dd>${I18N.t("viewer.keys.reset")}</dd>
@@ -605,6 +606,14 @@ function init(DATA, MODEL){
       case "0": document.getElementById("btn-reset").click(); break;
       case "s": case "S": document.getElementById("btn-specs").click(); break;
       case "?": buildKeysHelp(); keysHelp.hidden = !keysHelp.hidden; break;
+      case "+": case "=":
+        radius *= 0.92; camDirty = true;
+        clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260);
+        e.preventDefault(); break;
+      case "-": case "_":
+        radius *= 1.08; camDirty = true;
+        clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260);
+        e.preventDefault(); break;
     }
   });
 

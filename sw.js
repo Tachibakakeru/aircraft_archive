@@ -5,6 +5,7 @@
    ?v=N 等查詢字串照樣被當成獨立 URL 快取，部署後自動更新。 */
 const CACHE = "hangar-v1";
 const SHELL = ["index.html", "viewer.html", "compare.html", "editor.html",
+               "airports.html", "variants.html",
                "manifest.json", "assets/icon.svg"];
 
 self.addEventListener("install", e => {
