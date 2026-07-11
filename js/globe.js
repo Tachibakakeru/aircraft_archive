@@ -22,6 +22,7 @@ const AptGlobe = (() => {
 
   // 標籤模式：夠近、畫面上的候選點數量夠少時，才切換成牽引線版面
   const LABEL_MAX_RADIUS = 2.0, LABEL_MAX_COUNT = 45, LABEL_MIN_DIST = 46, LEADER_LEN = 32;
+  const SPRITE_BASE = 0.065;   // 飛機圖示標記的基準世界尺寸（半徑 1 的球體上）
   let labelPositions = new Map();   // id → { sx, sy }（螢幕座標，label 模式啟用時才有效）
   let labelFrame = 0;
 
@@ -96,6 +97,55 @@ const AptGlobe = (() => {
   function themeColor(varName, fallback){
     const v = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
     return v || fallback;
+  }
+
+  // 標記點圖案：用飛機剪影取代原本的純色圓點，並依機場分類（跟清單頁
+  // .apt-type-dot 同一套色彩語彙）決定顏色，一眼就能看出機場等級，不用
+  // 額外點開才知道。收藏的機場再加一圈金色光暈區隔。
+  // Material Design "flight" icon 路徑（24×24 viewBox），素材本身無版權疑慮
+  // （通用幾何圖示，非特定品牌商標）。
+  const PLANE_PATH = "M21,16V14L13,9V3.5C13,2.67 12.33,2 11.5,2C10.67,2 10,2.67 10,3.5V9L2,14V16L10,13.5V19L7.5,20.5V22L11.5,21L15.5,22V20.5L13,19V13.5L21,16Z";
+  const TYPE_COLOR_VAR = {
+    large_airport: ["--amber", "#ffb547"],
+    medium_airport: ["--cyan", "#6fd3ef"],
+    small_airport: ["--muted", "#93a3ba"],
+    seaplane_base: ["--cyan", "#6fd3ef"],
+    heliport: ["--muted", "#93a3ba"],
+    balloonport: ["--muted", "#93a3ba"],
+    closed: ["--muted", "#93a3ba"],
+  };
+  let planeTextureCache = new Map();
+  function clearPlaneTextureCache(){
+    planeTextureCache.forEach(tex => tex.dispose());
+    planeTextureCache = new Map();
+  }
+  function planeTexture(type, fav){
+    const key = (type || "") + "|" + (fav ? "1" : "0");
+    if (planeTextureCache.has(key)) return planeTextureCache.get(key);
+    const [varName, fallback] = TYPE_COLOR_VAR[type] || TYPE_COLOR_VAR.small_airport;
+    const color = fav ? themeColor("--amber", "#ffb547") : themeColor(varName, fallback);
+
+    const size = 64;
+    const c = document.createElement("canvas");
+    c.width = c.height = size;
+    const ctx = c.getContext("2d");
+    ctx.save();
+    ctx.translate(size / 2, size / 2);
+    ctx.rotate(-Math.PI / 4);   // 圖示原始朝向斜向右上，轉正讓機頭朝上
+    if (fav){
+      ctx.shadowColor = "#ffd76a";
+      ctx.shadowBlur = size * 0.22;
+    }
+    ctx.scale(size / 24, size / 24);
+    ctx.translate(-12, -12);
+    ctx.fillStyle = color;
+    ctx.fill(new Path2D(PLANE_PATH));
+    ctx.restore();
+
+    const tex = new THREE.CanvasTexture(c);
+    tex.encoding = THREE.sRGBEncoding;
+    planeTextureCache.set(key, tex);
+    return tex;
   }
 
   function loadThree(){
@@ -378,10 +428,10 @@ const AptGlobe = (() => {
     // 縮放 Group 連子物件的「位置」也會一起被拉向球心，標記點會被拉進
     // 不透明的地球內部而整批消失，這是先前版本點一放大光點就不見的根因）。
     const s = Math.max(0.5, Math.min(1, radius / DEF_RADIUS));
-    // 有牽引線標籤的點，3D 世界裡的球體縮到近乎看不見，只留 2D 小錨點代表
-    // 真正座標——不然球體本身（半徑再小也還有實體）疊在錨點上會顯得比
+    // 有牽引線標籤的點，3D 世界裡的圖示縮到近乎看不見，只留 2D 小錨點代表
+    // 真正座標——不然圖示本身（縮再小也還有實體）疊在錨點上會顯得比
     // 牽引線另一端、真正該醒目的大頭針還大，主從順序整個顛倒。
-    markers.forEach(m => m.mesh.scale.setScalar(labelPositions.has(m.id) ? 0.05 : s));
+    markers.forEach(m => m.mesh.scale.setScalar((labelPositions.has(m.id) ? 0.05 : s) * SPRITE_BASE));
     if (++labelFrame % 3 === 0) updateLabels();
     renderer.render(scene, camera);
   }
@@ -394,18 +444,23 @@ const AptGlobe = (() => {
   }
 
   function setMarkers(points){
-    // points: [{ id, lat, lon, fav, code }]
+    // points: [{ id, lat, lon, fav, code, type }]
     clearMarkers();
-    const geo = new THREE.SphereGeometry(0.016, 8, 6);
-    const matAmber = new THREE.MeshBasicMaterial({ color: new THREE.Color(themeColor("--amber", "#ffb547")) });
-    const matCyan = new THREE.MeshBasicMaterial({ color: new THREE.Color(themeColor("--cyan", "#6fd3ef")) });
+    clearPlaneTextureCache();
+    const matCache = new Map();
     points.forEach(p => {
       if (p.lat == null || p.lon == null) return;
-      const mesh = new THREE.Mesh(geo, p.fav ? matAmber : matCyan);
-      mesh.position.copy(latLonToVec3(p.lat, p.lon, 1.02));
-      mesh.userData.id = p.id;
-      markerGroup.add(mesh);
-      markers.push({ mesh, id: p.id, lat: p.lat, lon: p.lon, code: p.code, fav: !!p.fav });
+      const key = (p.type || "") + "|" + (p.fav ? "1" : "0");
+      let mat = matCache.get(key);
+      if (!mat){
+        mat = new THREE.SpriteMaterial({ map: planeTexture(p.type, !!p.fav), transparent: true, depthWrite: false });
+        matCache.set(key, mat);
+      }
+      const sprite = new THREE.Sprite(mat);
+      sprite.position.copy(latLonToVec3(p.lat, p.lon, 1.02));
+      sprite.userData.id = p.id;
+      markerGroup.add(sprite);
+      markers.push({ mesh: sprite, id: p.id, lat: p.lat, lon: p.lon, code: p.code, fav: !!p.fav });
     });
   }
 
@@ -423,6 +478,14 @@ const AptGlobe = (() => {
     theta = DEF_THETA; phi = DEF_PHI; radius = DEF_RADIUS;
   }
 
+  // 從清單（而非直接點球面標記）選中機場時，鏡頭飛向該點位——不依賴該點
+  // 是否在目前 markers 陣列中，呼叫端直接把座標傳進來即可。
+  function focusOn(lat, lon){
+    if (lat == null || lon == null) return;
+    flyTo(lat, lon, 1.7);
+    showGroundPatch(lat, lon);
+  }
+
   function destroy(){
     if (raf) cancelAnimationFrame(raf);
     raf = 0;
@@ -432,6 +495,6 @@ const AptGlobe = (() => {
   return {
     init, setMarkers, resize, destroy, isReady: () => ready,
     pauseAutoRotate, resumeAutoRotate, isAutoRotating, toggleAutoRotate, resetView,
-    clearGroundPatch,
+    clearGroundPatch, focusOn,
   };
 })();

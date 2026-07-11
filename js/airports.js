@@ -483,7 +483,7 @@ async function refreshGlobeMarkers(shown){
   const points = shown.map(a => {
     const store = detailCache[a.country || "ZZ"] || {};
     const d = store[a.id];
-    return d ? { id: a.id, lat: d.lat, lon: d.lon, fav: isFav(a.id), code: a.icao || a.iata || "" } : null;
+    return d ? { id: a.id, lat: d.lat, lon: d.lon, fav: isFav(a.id), code: a.icao || a.iata || "", type: a.type } : null;
   }).filter(Boolean);
   AptGlobe.setMarkers(points);
 }
@@ -772,6 +772,8 @@ async function openAirport(id){
 
   const byIdent = await loadDetails(a.country);
   const d = byIdent[a.id] || {};
+
+  if (globeMode && typeof AptGlobe !== "undefined" && AptGlobe.isReady()) AptGlobe.focusOn(d.lat, d.lon);
 
   $("apt-p-sat").innerHTML = satelliteHTML(d.lat, d.lon, a.type);
 

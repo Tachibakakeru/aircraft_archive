@@ -138,7 +138,7 @@ function applyAll(){
     if (alliance && a.alliance !== alliance) return false;
     if (tier && a.tier !== tier) return false;
     if (!q) return true;
-    const hay = [a.name, a.icao, a.iata, I18N.field(a.country), a.country.zh, ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
+    const hay = [a.name, a.nameZh, a.icao, a.iata, I18N.field(a.country), a.country.zh, ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
     return hay.includes(q);
   }).sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
 
@@ -159,11 +159,12 @@ function render(list){
     const fav = isFav(a.id);
     const tierTag = a.tier ? `<span class="al-tier-tag al-tier-${a.tier}">${I18N.t("airlines.tier." + a.tier)}</span>` : "";
     const founded = a.founded ? ` · ${I18N.t("airlines.founded")} ${a.founded}` : "";
+    const nameZh = (a.nameZh && I18N.get() === "zh") ? ` <span class="al-name-zh">${a.nameZh}</span>` : "";
     return `<div class="al-row" data-id="${a.id}" tabindex="0" role="button">
       <span class="al-logo-slot"></span>
       <span class="al-alliance-dot ${a.alliance}"></span>
       <span class="al-main">
-        <span class="al-name">${a.name}</span>
+        <span class="al-name">${a.name}${nameZh}</span>
         ${tierTag}
         <span class="al-loc">${I18N.field(a.country)}${founded}</span>
       </span>
@@ -215,7 +216,7 @@ function openAirline(id){
 
   $("al-p-logo").replaceWith(Object.assign(makeLogoEl(a, true), { id: "al-p-logo" }));
   $("al-p-codes").textContent = [a.icao, a.iata].filter(Boolean).join(" · ");
-  $("al-p-name").textContent = a.name;
+  $("al-p-name").textContent = (a.nameZh && I18N.get() === "zh") ? `${a.name}（${a.nameZh}）` : a.name;
   $("al-p-sub").textContent = a.founded
     ? `${I18N.field(a.country)} · ${I18N.t("airlines.founded")} ${a.founded}`
     : I18N.field(a.country);
@@ -266,7 +267,7 @@ function closePanel(){
 
 // ── 編輯功能：僅本機暫存，需通過密碼驗證後點「儲存到網站」才會公開 ──
 const EDIT_FIELD_IDS = [
-  "al-e-name", "al-e-icao", "al-e-iata", "al-e-founded", "al-e-alliance", "al-e-tier",
+  "al-e-name", "al-e-namezh", "al-e-icao", "al-e-iata", "al-e-founded", "al-e-alliance", "al-e-tier",
   "al-e-country-zh", "al-e-country-en", "al-e-country-ja", "al-e-hubs", "al-e-fleettotal",
   "al-e-fleet", "al-e-routes", "al-e-tagline-zh", "al-e-tagline-en", "al-e-tagline-ja",
   "al-e-customlogo", "al-e-photo",
@@ -276,6 +277,7 @@ function openEditor(id){
   const a = AIRLINES.find(x => x.id === id);
   if (!a) return;
   $("al-e-name").value = a.name || "";
+  $("al-e-namezh").value = a.nameZh || "";
   $("al-e-icao").value = a.icao || "";
   $("al-e-iata").value = a.iata || "";
   $("al-e-founded").value = a.founded != null ? a.founded : "";
@@ -304,6 +306,8 @@ function currentEditTarget(){
 
 function applyEditForm(a){
   a.name = $("al-e-name").value.trim() || a.name;
+  const nameZh = $("al-e-namezh").value.trim();
+  if (nameZh) a.nameZh = nameZh; else delete a.nameZh;
   a.icao = $("al-e-icao").value.trim().toUpperCase() || null;
   a.iata = $("al-e-iata").value.trim().toUpperCase() || null;
   const founded = parseInt($("al-e-founded").value, 10);
