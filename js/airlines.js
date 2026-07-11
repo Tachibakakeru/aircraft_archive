@@ -20,7 +20,7 @@ const ALLIANCE_KEYS = ["star", "skyteam", "oneworld", "none"];
 
 (async () => {
   try {
-    const res = await fetch("data/airlines.json?v=50");
+    const res = await fetch("data/airlines.json?v=51");
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
     AIRLINES = data.airlines;
@@ -82,7 +82,7 @@ function applyAll(){
     if (favOnly && !isFav(a.id)) return false;
     if (alliance && a.alliance !== alliance) return false;
     if (!q) return true;
-    const hay = [a.name, a.icao, a.iata, a.country, ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
+    const hay = [a.name, a.icao, a.iata, I18N.field(a.country), a.country.zh, ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
     return hay.includes(q);
   }).sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
 
@@ -105,7 +105,7 @@ function render(list){
       <span class="al-alliance-dot ${a.alliance}"></span>
       <span class="al-main">
         <span class="al-name">${a.name}</span>
-        <span class="al-loc">${a.country} · ${I18N.t("airlines.founded")} ${a.founded}</span>
+        <span class="al-loc">${I18N.field(a.country)} · ${I18N.t("airlines.founded")} ${a.founded}</span>
       </span>
       <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}">${fav ? "★" : "☆"}</button>
       <span class="al-codes"><span>${a.icao}</span><span>${a.iata}</span></span>
@@ -147,7 +147,7 @@ function openAirline(id){
 
   $("al-p-codes").textContent = [a.icao, a.iata].filter(Boolean).join(" · ");
   $("al-p-name").textContent = a.name;
-  $("al-p-sub").textContent = `${a.country} · ${I18N.t("airlines.founded")} ${a.founded}`;
+  $("al-p-sub").textContent = `${I18N.field(a.country)} · ${I18N.t("airlines.founded")} ${a.founded}`;
 
   const info = $("al-p-info");
   info.innerHTML = "";

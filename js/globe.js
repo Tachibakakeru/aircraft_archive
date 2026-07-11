@@ -1,9 +1,9 @@
 "use strict";
 /* ═══════════════════════════════════════════════
    機場 3D 地球檢視 — 惰性載入（首次切到地圖模式才拉 Three.js CDN
-   與初始化場景），標示目前篩選結果的機場點位，點擊開詳情面板。
-   沿用 viewer.js 的拖曳旋轉／滾輪縮放手感與站台既有的深色科技風格
-   （格線球體＋色點），不使用真實地球材質貼圖。
+   與初始化場景），球體貼衛星影像貼圖（assets/earth_daymap.jpg），
+   標示目前篩選結果的機場點位（收藏用琥珀色），點擊開詳情面板。
+   沿用 viewer.js 的拖曳旋轉／滾輪縮放手感。
    ═══════════════════════════════════════════════ */
 const AptGlobe = (() => {
   let ready = false, loading = null;
@@ -55,35 +55,24 @@ const AptGlobe = (() => {
 
     renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.outputEncoding = THREE.sRGBEncoding;
 
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
 
-    scene.add(new THREE.AmbientLight(0xffffff, 0.9));
+    scene.add(new THREE.AmbientLight(0xffffff, 1));
 
-    // 實心暗色球體（機場密度視覺參考底）
+    // 實心球體貼衛星影像（NASA Blue Marble 日照面合成圖，經緯度等距投影）
+    const earthTex = new THREE.TextureLoader().load("assets/earth_daymap.jpg");
+    earthTex.encoding = THREE.sRGBEncoding;
     const core = new THREE.Mesh(
       new THREE.SphereGeometry(1, 48, 32),
-      new THREE.MeshBasicMaterial({ color: new THREE.Color(themeColor("--bg-1", "#141b2b")) })
+      new THREE.MeshBasicMaterial({ map: earthTex })
     );
     scene.add(core);
 
-    // 格線球體（經緯線，科技感輪廓）—— 用 --cyan 而非 --stroke，
-    // 因為 --stroke 是帶 alpha 的 rgba()，THREE.Color 不支援 alpha
-    // 通道會發出警告；透明度改用 material 自己的 opacity 控制。
-    const grid = new THREE.Mesh(
-      new THREE.SphereGeometry(1.001, 24, 16),
-      new THREE.MeshBasicMaterial({
-        color: new THREE.Color(themeColor("--cyan", "#6fd3ef")),
-        wireframe: true, transparent: true, opacity: 0.25,
-      })
-    );
-    scene.add(grid);
-
     markerGroup = new THREE.Group();
     scene.add(markerGroup);
-
-    raycaster = new THREE.Raycaster();
 
     resize();
     window.addEventListener("resize", resize);
@@ -151,17 +140,26 @@ const AptGlobe = (() => {
     }, { passive: false });
   }
 
-  let raycaster = null;
+  // 點位判定：用螢幕座標最近點而非 3D 光線投射，因為標記點半徑很小、
+  // 縮放時投影尺寸又會跟著變化，光線投射常常「點了但沒中」；
+  // 固定像素容許誤差不受縮放影響，點擊手感穩定得多。
   function pick(cx, cy){
-    if (!raycaster) return;
+    if (!markers.length) return;
     const rect = canvas.getBoundingClientRect();
-    const ndc = new THREE.Vector2(
-      ((cx - rect.left) / rect.width) * 2 - 1,
-      -((cy - rect.top) / rect.height) * 2 + 1
-    );
-    raycaster.setFromCamera(ndc, camera);
-    const hits = raycaster.intersectObjects(markerGroup.children);
-    if (hits.length && onPick) onPick(hits[0].object.userData.id);
+    const camDir = camera.position.clone().normalize();
+    const HIT_PX = 16;
+    let best = null, bestDist = HIT_PX;
+    markers.forEach(m => {
+      const normal = m.mesh.position.clone().normalize();
+      if (normal.dot(camDir) < 0.08) return;   // 背向鏡頭（地球另一面），視為被擋住
+      const proj = m.mesh.position.clone().project(camera);
+      if (proj.z > 1) return;
+      const sx = rect.left + (proj.x * 0.5 + 0.5) * rect.width;
+      const sy = rect.top + (-proj.y * 0.5 + 0.5) * rect.height;
+      const dist = Math.hypot(sx - cx, sy - cy);
+      if (dist < bestDist){ bestDist = dist; best = m; }
+    });
+    if (best && onPick) onPick(best.id);
   }
 
   function tick(){
@@ -179,7 +177,7 @@ const AptGlobe = (() => {
   function setMarkers(points){
     // points: [{ id, lat, lon, fav }]
     clearMarkers();
-    const geo = new THREE.SphereGeometry(0.012, 8, 6);
+    const geo = new THREE.SphereGeometry(0.016, 8, 6);
     const matAmber = new THREE.MeshBasicMaterial({ color: new THREE.Color(themeColor("--amber", "#ffb547")) });
     const matCyan = new THREE.MeshBasicMaterial({ color: new THREE.Color(themeColor("--cyan", "#6fd3ef")) });
     points.forEach(p => {

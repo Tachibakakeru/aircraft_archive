@@ -59,7 +59,6 @@ function aptCmpSearchScore(a, q){
 }
 
 function openAptCmpModal(){
-  if (!CMP_LIST.length) return;
   $("apt-cmp-modal").hidden = false;
   renderAptCmpPickers();
 }
@@ -247,8 +246,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=50"),
-      fetch("data/countries.json?v=50"),
+      fetch("data/airports.json?v=51"),
+      fetch("data/countries.json?v=51"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -314,6 +313,7 @@ function escapeHTML(s){
     syncCmpButton();
   });
   $("apt-cmp-go").addEventListener("click", openAptCmpModal);
+  $("apt-cmp-open").addEventListener("click", openAptCmpModal);
   $("apt-cmp-modal-close").addEventListener("click", closeAptCmpModal);
   document.addEventListener("keydown", e => {
     if (!$("sat-lightbox").hidden){ if (e.key === "Escape") closeSatLightbox(); return; }
@@ -550,7 +550,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=50`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=51`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -665,7 +665,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=50`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=51`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
