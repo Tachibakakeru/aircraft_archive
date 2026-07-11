@@ -42,8 +42,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=38"),
-      fetch("data/countries.json?v=38"),
+      fetch("data/airports.json?v=39"),
+      fetch("data/countries.json?v=39"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -269,7 +269,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=38`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=39`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -384,7 +384,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=38`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=39`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];

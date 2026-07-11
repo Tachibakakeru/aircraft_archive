@@ -72,6 +72,7 @@
 /* ── 衛星影像（Esri World Imagery，3×3 圖磚拼接） ── */
 .apt-sat{
   display:grid;
+  grid-auto-rows:1fr;
   aspect-ratio:1;overflow:hidden;border-radius:10px;
   border:1px solid var(--stroke);background:var(--bg-1);
   margin-top:4px;cursor:zoom-in;position:relative;
@@ -82,7 +83,7 @@
   content:"🔍";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   font-size:28px;background:rgba(0,0,0,.25);
 }
-.apt-sat img{width:100%;height:100%;display:block;object-fit:cover}
+.apt-sat img{width:100%;height:100%;min-width:0;min-height:0;display:block;object-fit:cover}
 .apt-sat-credit{
   font-family:var(--mono);font-size:9px;color:var(--muted);
   text-align:right;margin:4px 0 18px;opacity:.7;
@@ -107,11 +108,11 @@
 .sat-lb-toolbar button:hover{border-color:var(--amber);color:var(--amber)}
 #sat-lightbox-zoom{min-width:28px;text-align:center;color:var(--muted)}
 #sat-lightbox-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);
+  display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:1fr;
   width:min(80vh,80vw);aspect-ratio:1;
   border-radius:10px;overflow:hidden;border:1px solid var(--stroke);
 }
-#sat-lightbox-grid img{width:100%;height:100%;display:block;object-fit:cover}
+#sat-lightbox-grid img{width:100%;height:100%;min-width:0;min-height:0;display:block;object-fit:cover}
 
 /* ── 機場詳情面板（沿用 #panel 樣式） ── */
 .apt-badges{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
