@@ -20,7 +20,7 @@ const ALLIANCE_KEYS = ["star", "skyteam", "oneworld", "none"];
 
 (async () => {
   try {
-    const res = await fetch("data/airlines.json?v=51");
+    const res = await fetch("data/airlines.json?v=57");
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
     AIRLINES = data.airlines;

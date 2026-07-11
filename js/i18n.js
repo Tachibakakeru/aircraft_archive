@@ -41,6 +41,7 @@ const I18N_STRINGS = {
     // 比較頁
     "compare.title": "並排比較規格",
     "compare.add": "＋ 加入機型",
+    "compare.apt.add": "＋ 加入機場",
     "compare.remove": "移除",
     "compare.empty": "請於上方選擇至少一架機型開始比較。",
     "compare.basic": "基本資訊",
@@ -231,6 +232,7 @@ const I18N_STRINGS = {
     "viewer.spec.empty": "No detailed specifications yet. Add them in the editor.",
     "compare.title": "Compare Specifications",
     "compare.add": "＋ Add aircraft",
+    "compare.apt.add": "＋ Add airport",
     "compare.remove": "Remove",
     "compare.empty": "Select at least one aircraft above to compare.",
     "compare.basic": "Basic Info",
@@ -419,6 +421,7 @@ const I18N_STRINGS = {
     "viewer.spec.empty": "詳細諸元は未登録です。エディタで追加できます。",
     "compare.title": "諸元を並べて比較",
     "compare.add": "＋ 機種を追加",
+    "compare.apt.add": "＋ 空港を追加",
     "compare.remove": "削除",
     "compare.empty": "上部で機種を1つ以上選んでください。",
     "compare.basic": "基本情報",

@@ -101,11 +101,15 @@ const AptGlobe = (() => {
   }
 
   function wireControls(){
-    let dragging = false, moved = 0, lastX = 0, lastY = 0, pinchDist = 0;
+    // moved 用「起點到目前位置」的直線距離（淨位移），不要用逐段位移累加——
+    // 累加會把滑鼠/觸控自然的細微抖動也算進去，正常點擊也常常一路累加到
+    // 超過門檻，導致 pick() 幾乎永遠不會被觸發（點光點沒反應的根因）。
+    let dragging = false, moved = 0, startX = 0, startY = 0, lastX = 0, lastY = 0, pinchDist = 0;
     const pointers = new Map();
     canvas.addEventListener("pointerdown", e => {
       pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
-      dragging = true; moved = 0; lastX = e.clientX; lastY = e.clientY;
+      dragging = true; moved = 0;
+      startX = lastX = e.clientX; startY = lastY = e.clientY;
       canvas.setPointerCapture(e.pointerId);
       pauseAutoRotate();
     });
@@ -120,16 +124,16 @@ const AptGlobe = (() => {
       }
       if (!dragging) return;
       const dx = e.clientX - lastX, dy = e.clientY - lastY;
-      moved += Math.abs(dx) + Math.abs(dy);
       theta += dx * 0.006; phi -= dy * 0.006;
       lastX = e.clientX; lastY = e.clientY;
+      moved = Math.hypot(e.clientX - startX, e.clientY - startY);
     });
     function endPointer(e){
       pointers.delete(e.pointerId);
       if (pointers.size < 2) pinchDist = 0;
       if (pointers.size === 0){
         dragging = false;
-        if (moved < 6) pick(e.clientX, e.clientY);
+        if (moved < 10) pick(e.clientX, e.clientY);
       }
     }
     canvas.addEventListener("pointerup", endPointer);

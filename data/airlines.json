@@ -51,7 +51,9 @@
         "Sydney"
       ],
       "tagline": {
-        "zh": "全球機隊規模最大的航空公司之一，達拉斯堡沃斯樞紐輻射全美與跨洋航線。"
+        "zh": "全球機隊規模最大的航空公司之一，達拉斯堡沃斯樞紐輻射全美與跨洋航線。",
+        "en": "One of the largest airlines in the world by fleet size, with its Dallas/Fort Worth hub radiating flights across the US and overseas.",
+        "ja": "世界最大級の機隊規模を誇る航空会社の一つ。ダラス・フォートワース・ハブから全米および国際線が広がる。"
       }
     },
     {
@@ -102,7 +104,9 @@
         "Sydney"
       ],
       "tagline": {
-        "zh": "亞特蘭大哈茲菲爾德樞紐是全球最繁忙機場之一，以準點與服務品質著稱。"
+        "zh": "亞特蘭大哈茲菲爾德樞紐是全球最繁忙機場之一，以準點與服務品質著稱。",
+        "en": "Its Atlanta hub is one of the busiest airports in the world, and Delta is known for punctuality and service quality.",
+        "ja": "ハブとするアトランタは世界最多の発着便数を誇る空港の一つ。定時性とサービス品質に定評がある。"
       }
     },
     {
@@ -153,7 +157,9 @@
         "Sydney"
       ],
       "tagline": {
-        "zh": "美國三大傳統航空之一，芝加哥歐海爾樞紐銜接北美內陸與跨洋長程航線。"
+        "zh": "美國三大傳統航空之一，芝加哥歐海爾樞紐銜接北美內陸與跨洋長程航線。",
+        "en": "One of America's \"Big Three\" legacy carriers, with its Chicago O'Hare hub linking domestic routes to long-haul international flights.",
+        "ja": "アメリカ三大レガシーキャリアの一つ。シカゴ・オヘア・ハブが北米内陸線と長距離国際線を結ぶ。"
       }
     },
     {
@@ -198,7 +204,9 @@
         "San Juan"
       ],
       "tagline": {
-        "zh": "全球最大廉價航空之一，機隊清一色 737，點對點航線網路取代傳統樞紐輻射。"
+        "zh": "全球最大廉價航空之一，機隊清一色 737，點對點航線網路取代傳統樞紐輻射。",
+        "en": "One of the world's largest low-cost carriers, flying an all-737 fleet on a point-to-point network instead of a traditional hub-and-spoke system.",
+        "ja": "世界最大級の格安航空会社。機隊は737一本化、ハブ&スポーク方式ではなく地点間直行の路線網を採用。"
       }
     },
     {
@@ -221,7 +229,7 @@
       "fleetTotal": 180,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 84,
           "fleetId": "a320"
         },
@@ -244,7 +252,9 @@
         "Sydney"
       ],
       "tagline": {
-        "zh": "加拿大最大航空公司，多倫多皮爾遜樞紐銜接歐洲與亞太長程航線。"
+        "zh": "加拿大最大航空公司，多倫多皮爾遜樞紐銜接歐洲與亞太長程航線。",
+        "en": "Canada's largest airline, with its Toronto Pearson hub connecting long-haul routes to Europe and Asia-Pacific.",
+        "ja": "カナダ最大の航空会社。トロント・ピアソン・ハブがヨーロッパやアジア太平洋への長距離路線を結ぶ。"
       }
     },
     {
@@ -266,7 +276,7 @@
       "fleetTotal": 330,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 140,
           "fleetId": "a320"
         },
@@ -294,7 +304,9 @@
         "São Paulo"
       ],
       "tagline": {
-        "zh": "星空聯盟創始成員之一，法蘭克福樞紐是歐陸轉機航班最密集的機場之一。"
+        "zh": "星空聯盟創始成員之一，法蘭克福樞紐是歐陸轉機航班最密集的機場之一。",
+        "en": "A founding member of Star Alliance; its Frankfurt hub is one of the busiest connecting airports in continental Europe.",
+        "ja": "スターアライアンス創設メンバーの一つ。フランクフルト・ハブは欧州大陸で乗り継ぎ便が最も密集する空港の一つ。"
       }
     },
     {
@@ -315,7 +327,7 @@
       "fleetTotal": 220,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 84,
           "fleetId": "a320"
         },
@@ -338,7 +350,9 @@
         "Nairobi"
       ],
       "tagline": {
-        "zh": "天合聯盟創始成員，巴黎戴高樂樞紐是連結非洲航線最密集的歐洲航空。"
+        "zh": "天合聯盟創始成員，巴黎戴高樂樞紐是連結非洲航線最密集的歐洲航空。",
+        "en": "A founding member of SkyTeam; its Paris CDG hub gives it Europe's densest network of routes into Africa.",
+        "ja": "スカイチーム創設メンバー。パリ・シャルル・ド・ゴール・ハブを拠点に、欧州の航空会社の中でもアフリカ路線網が最も密。"
       }
     },
     {
@@ -359,7 +373,7 @@
       "fleetTotal": 120,
       "fleet": [
         {
-          "type": "Boeing 737 家族",
+          "type": "Boeing 737 family",
           "count": 55,
           "fleetId": "b738"
         },
@@ -382,7 +396,9 @@
         "Buenos Aires"
       ],
       "tagline": {
-        "zh": "全球仍以原名持續營運至今最悠久的航空公司，1919 年創立。"
+        "zh": "全球仍以原名持續營運至今最悠久的航空公司，1919 年創立。",
+        "en": "The world's oldest airline still operating under its original name, founded in 1919.",
+        "ja": "1919年創業、創業時の社名で現在も運航を続ける世界最古の航空会社。"
       }
     },
     {
@@ -404,7 +420,7 @@
       "fleetTotal": 280,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 90,
           "fleetId": "a320"
         },
@@ -432,7 +448,9 @@
         "Sydney（經新加坡）"
       ],
       "tagline": {
-        "zh": "英國國家航空，希斯洛樞紐長年是全球轉機流量最大的機場之一。"
+        "zh": "英國國家航空，希斯洛樞紐長年是全球轉機流量最大的機場之一。",
+        "en": "The UK's flag carrier; its Heathrow hub has long been one of the world's busiest connecting airports.",
+        "ja": "イギリスのフラッグキャリア。ハブとするヒースロー空港は長年、世界有数の乗り継ぎ便数を誇る。"
       }
     },
     {
@@ -471,7 +489,9 @@
         "Kraków"
       ],
       "tagline": {
-        "zh": "歐洲載客量最大的廉價航空，機隊統一機型策略把維修訓練成本壓到最低。"
+        "zh": "歐洲載客量最大的廉價航空，機隊統一機型策略把維修訓練成本壓到最低。",
+        "en": "Europe's largest low-cost carrier by passengers; a single-fleet-type strategy keeps maintenance and training costs to a minimum.",
+        "ja": "旅客数で欧州最大の格安航空会社。機種統一戦略により整備・訓練コストを最小限に抑える。"
       }
     },
     {
@@ -497,7 +517,7 @@
           "fleetId": "a321"
         },
         {
-          "type": "Boeing 737 家族",
+          "type": "Boeing 737 family",
           "count": 130,
           "fleetId": "b738"
         },
@@ -520,7 +540,9 @@
         "Tokyo Narita"
       ],
       "tagline": {
-        "zh": "以「飛航國家數量最多的航空公司」著稱，伊斯坦堡樞紐橫跨歐亞航線網路。"
+        "zh": "以「飛航國家數量最多的航空公司」著稱，伊斯坦堡樞紐橫跨歐亞航線網路。",
+        "en": "Known for flying to more countries than any other airline; its Istanbul hub spans a route network across Europe and Asia.",
+        "ja": "就航国数が世界最多の航空会社として知られる。イスタンブール・ハブが欧州とアジアにまたがる路線網を形成。"
       }
     },
     {
@@ -559,7 +581,9 @@
         "São Paulo"
       ],
       "tagline": {
-        "zh": "全球最大 A380 營運商，機隊清一色廣體客機、不營運任何窄體機型。"
+        "zh": "全球最大 A380 營運商，機隊清一色廣體客機、不營運任何窄體機型。",
+        "en": "The world's largest A380 operator, flying an all-wide-body fleet with no narrow-body aircraft at all.",
+        "ja": "世界最大のA380運航会社。機隊はワイドボディ機のみで、ナローボディ機は一切運航しない。"
       }
     },
     {
@@ -580,7 +604,7 @@
       "fleetTotal": 230,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 40,
           "fleetId": "a320"
         },
@@ -607,7 +631,9 @@
         "Sydney"
       ],
       "tagline": {
-        "zh": "杜哈—奧克蘭航線是全球飛行距離數一數二的定期航班之一。"
+        "zh": "杜哈—奧克蘭航線是全球飛行距離數一數二的定期航班之一。",
+        "en": "The Doha–Auckland route is one of the longest scheduled flights operated anywhere in the world.",
+        "ja": "ドーハ―オークランド線は、世界でも屈指の飛行距離を誇る定期便の一つ。"
       }
     },
     {
@@ -628,7 +654,7 @@
       "fleetTotal": 90,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 20,
           "fleetId": "a320"
         },
@@ -655,7 +681,9 @@
         "Seoul Incheon"
       ],
       "tagline": {
-        "zh": "阿布達比國家航空，較年輕但快速擴張，以高端頭等艙套房服務聞名。"
+        "zh": "阿布達比國家航空，較年輕但快速擴張，以高端頭等艙套房服務聞名。",
+        "en": "Abu Dhabi's flag carrier; younger but fast-growing, known for its premium First Class suite service.",
+        "ja": "アブダビのフラッグキャリア。歴史は浅いが急成長を遂げ、上質なファーストクラス・スイートで知られる。"
       }
     },
     {
@@ -703,7 +731,9 @@
         "Tokyo Narita"
       ],
       "tagline": {
-        "zh": "全球公認服務品質標竿之一，未加入任何航空聯盟仍維持龐大獨立航網。"
+        "zh": "全球公認服務品質標竿之一，未加入任何航空聯盟仍維持龐大獨立航網。",
+        "en": "Widely regarded as a global benchmark for service quality, maintaining a large independent network without joining any alliance.",
+        "ja": "世界的にサービス品質の模範とされる航空会社。いずれのアライアンスにも属さず、独自に大規模な路線網を維持。"
       }
     },
     {
@@ -751,7 +781,9 @@
         "Vancouver"
       ],
       "tagline": {
-        "zh": "香港代表性航空，以連結歐美與大洋洲的廣體長程航線網路為核心。"
+        "zh": "香港代表性航空，以連結歐美與大洋洲的廣體長程航線網路為核心。",
+        "en": "Hong Kong's flagship carrier, built around a wide-body long-haul network linking Europe, North America and Oceania.",
+        "ja": "香港を代表する航空会社。欧米・オセアニアを結ぶワイドボディ機による長距離路線網が核。"
       }
     },
     {
@@ -800,7 +832,9 @@
         "São Paulo（經達拉斯）"
       ],
       "tagline": {
-        "zh": "日本兩大航空之一，經 2010 年破產重整後轉為精實化營運的代表案例。"
+        "zh": "日本兩大航空之一，經 2010 年破產重整後轉為精實化營運的代表案例。",
+        "en": "One of Japan's two major airlines; its post-2010 bankruptcy restructuring is a widely cited case study in lean operations.",
+        "ja": "日本の二大航空会社の一つ。2010年の経営破綻後の再建は、効率経営の代表事例として知られる。"
       }
     },
     {
@@ -854,7 +888,9 @@
         "Mumbai"
       ],
       "tagline": {
-        "zh": "日本機隊規模最大的航空，僅有的 3 架 A380 專飛夏威夷「Flying Honu」彩繪航班。"
+        "zh": "日本機隊規模最大的航空，僅有的 3 架 A380 專飛夏威夷「Flying Honu」彩繪航班。",
+        "en": "Japan's largest airline by fleet size; its only three A380s fly exclusively to Hawaii as the \"Flying Honu\" livery.",
+        "ja": "日本最大の機隊規模を誇る航空会社。保有する3機のA380は「Flying Honu」塗装でハワイ線専用に運航。"
       }
     },
     {
@@ -907,7 +943,9 @@
         "Nairobi"
       ],
       "tagline": {
-        "zh": "韓國最大航空，正推動與韓亞航空合併，將成為全球前十大航空集團之一。"
+        "zh": "韓國最大航空，正推動與韓亞航空合併，將成為全球前十大航空集團之一。",
+        "en": "South Korea's largest airline, currently pursuing a merger with Asiana Airlines that would create a top-ten global airline group.",
+        "ja": "韓国最大の航空会社。アシアナ航空との統合を進めており、実現すれば世界トップ10級の航空グループとなる。"
       }
     },
     {
@@ -928,12 +966,12 @@
       "fleetTotal": 880,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 400,
           "fleetId": "a320"
         },
         {
-          "type": "Boeing 737 家族",
+          "type": "Boeing 737 family",
           "count": 200,
           "fleetId": "b738"
         },
@@ -960,7 +998,9 @@
         "Auckland"
       ],
       "tagline": {
-        "zh": "亞洲機隊規模最大的航空公司，2019 年退出天合聯盟轉為獨立營運。"
+        "zh": "亞洲機隊規模最大的航空公司，2019 年退出天合聯盟轉為獨立營運。",
+        "en": "Asia's largest airline by fleet size; it left SkyTeam in 2019 to operate independently.",
+        "ja": "アジア最大の機隊規模を誇る航空会社。2019年にスカイチームを脱退し、独立系として運航。"
       }
     },
     {
@@ -982,12 +1022,12 @@
       "fleetTotal": 750,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 380,
           "fleetId": "a320"
         },
         {
-          "type": "Boeing 737 家族",
+          "type": "Boeing 737 family",
           "count": 150,
           "fleetId": "b738"
         },
@@ -1009,7 +1049,9 @@
         "Tokyo Narita"
       ],
       "tagline": {
-        "zh": "中國商用大飛機 C919 的全球首家營運商，上海為其樞紐核心。"
+        "zh": "中國商用大飛機 C919 的全球首家營運商，上海為其樞紐核心。",
+        "en": "The world's first operator of China's domestically built C919 airliner, with Shanghai as its core hub.",
+        "ja": "中国国産旅客機C919を世界で初めて就航させた航空会社。上海を中核ハブとする。"
       }
     },
     {
@@ -1052,7 +1094,9 @@
         "London Heathrow（經曼谷）"
       ],
       "tagline": {
-        "zh": "台灣民營航空代表，Hello Kitty 彩繪機是其最知名的品牌行銷案例。"
+        "zh": "台灣民營航空代表，Hello Kitty 彩繪機是其最知名的品牌行銷案例。",
+        "en": "A leading privately-held Taiwanese carrier; its Hello Kitty livery aircraft are among its best-known branding campaigns.",
+        "ja": "台湾を代表する民間航空会社。ハローキティのペイント機は同社ブランディングの代表例として知られる。"
       }
     },
     {
@@ -1100,7 +1144,9 @@
         "Frankfurt"
       ],
       "tagline": {
-        "zh": "台灣國籍航空，貨運部門長年是全球航空貨運噸量排名前段班。"
+        "zh": "台灣國籍航空，貨運部門長年是全球航空貨運噸量排名前段班。",
+        "en": "Taiwan's flag carrier; its cargo division has long ranked among the world's top airlines by freight tonnage.",
+        "ja": "台湾のフラッグキャリア。貨物部門は長年、世界の航空貨物取扱量でトップクラスにランクされる。"
       }
     },
     {
@@ -1121,7 +1167,7 @@
       "fleetTotal": 70,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 20,
           "fleetId": "a320"
         },
@@ -1148,7 +1194,9 @@
         "Tokyo Narita"
       ],
       "tagline": {
-        "zh": "歷經破產重整大幅精簡機隊，泰國微笑服務仍是其航空品牌核心資產。"
+        "zh": "歷經破產重整大幅精簡機隊，泰國微笑服務仍是其航空品牌核心資產。",
+        "en": "After a major bankruptcy restructuring that sharply downsized its fleet, Thailand's \"Smile\" service remains its core brand asset.",
+        "ja": "経営破綻による大規模な機隊縮小を経てもなお、タイ式の「スマイル」サービスは同社ブランドの中核資産であり続ける。"
       }
     },
     {
@@ -1198,7 +1246,9 @@
         "Johannesburg"
       ],
       "tagline": {
-        "zh": "全球仍以原名持續營運最久的航空公司之一，「日出計畫」推動雪梨直飛倫敦/紐約。"
+        "zh": "全球仍以原名持續營運最久的航空公司之一，「日出計畫」推動雪梨直飛倫敦/紐約。",
+        "en": "One of the longest continuously operating airlines under its original name; \"Project Sunrise\" aims for nonstop Sydney–London/New York flights.",
+        "ja": "創業時の社名で現在も運航を続ける、世界で最も歴史の長い航空会社の一つ。「サンライズ計画」でシドニー―ロンドン/ニューヨーク直行便を目指す。"
       }
     },
     {
@@ -1246,7 +1296,9 @@
         "Tokyo Narita"
       ],
       "tagline": {
-        "zh": "非洲機隊規模最大、航點最多的航空公司，阿迪斯阿貝巴是連結非洲大陸的樞紐核心。"
+        "zh": "非洲機隊規模最大、航點最多的航空公司，阿迪斯阿貝巴是連結非洲大陸的樞紐核心。",
+        "en": "Africa's largest airline by fleet size and destination count; its Addis Ababa hub is the continent's key connecting point.",
+        "ja": "機隊規模・就航都市数ともにアフリカ最大の航空会社。アディスアベバ・ハブはアフリカ大陸を結ぶ中核拠点。"
       }
     },
     {
@@ -1268,7 +1320,7 @@
       "fleetTotal": 340,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 220,
           "fleetId": "a320"
         },
@@ -1290,7 +1342,9 @@
         "Sydney（經奧克蘭）"
       ],
       "tagline": {
-        "zh": "智利 LAN 與巴西 TAM 於 2012 年合併而成，是拉丁美洲最大航空集團。"
+        "zh": "智利 LAN 與巴西 TAM 於 2012 年合併而成，是拉丁美洲最大航空集團。",
+        "en": "Formed by the 2012 merger of Chile's LAN and Brazil's TAM, making it the largest airline group in Latin America.",
+        "ja": "2012年にチリのLANとブラジルのTAMが合併して誕生した、ラテンアメリカ最大の航空グループ。"
       }
     },
     {
@@ -1313,7 +1367,7 @@
       "fleetTotal": 360,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
+          "type": "Airbus A320 family",
           "count": 340,
           "fleetId": "a320"
         },
@@ -1329,7 +1383,9 @@
         "Bangkok"
       ],
       "tagline": {
-        "zh": "印度最大航空公司，全 Airbus 單走道機隊策略支撐其國內線市占率超過六成。"
+        "zh": "印度最大航空公司，全 Airbus 單走道機隊策略支撐其國內線市占率超過六成。",
+        "en": "India's largest airline; an all-Airbus narrow-body fleet strategy underpins over 60% of its domestic market share.",
+        "ja": "インド最大の航空会社。エアバスの単通路機に統一した機隊戦略により、国内線シェア6割超を維持。"
       }
     }
   ]

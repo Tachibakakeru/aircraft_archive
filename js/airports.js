@@ -109,7 +109,7 @@ function renderAptCmpPickers(){
   if (CMP_LIST.length < 4){
     const add = document.createElement("button");
     add.className = "cmp-add";
-    add.textContent = I18N.t("compare.add");
+    add.textContent = I18N.t("compare.apt.add");
     add.addEventListener("click", () => {
       CMP_LIST.push("");
       renderAptCmpPickers();
@@ -246,8 +246,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=51"),
-      fetch("data/countries.json?v=51"),
+      fetch("data/airports.json?v=57"),
+      fetch("data/countries.json?v=57"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -550,7 +550,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=51`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=57`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -665,7 +665,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=51`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=57`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
