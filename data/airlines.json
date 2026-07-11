@@ -2608,6 +2608,14 @@
           "type": "Airbus A330neo",
           "count": 6,
           "fleetId": "a332"
+        },
+        {
+          "type": "Airbus A350-941XWB",
+          "count": 10
+        },
+        {
+          "type": "Airbus A350-1041XWB",
+          "count": 15
         }
       ],
       "routes": [
