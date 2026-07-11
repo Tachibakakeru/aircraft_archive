@@ -137,6 +137,13 @@
 }
 .apt-p-cmp:hover{border-color:var(--cyan)}
 .apt-p-cmp.on{color:var(--cyan);border-color:var(--cyan)}
+.apt-p-share{
+  position:absolute;top:18px;right:138px;
+  width:32px;height:32px;border-radius:6px;
+  border:1px solid var(--stroke);background:transparent;color:var(--muted);
+  font-size:15px;cursor:pointer;transition:color .15s,border-color .15s;
+}
+.apt-p-share:hover{border-color:var(--amber);color:var(--amber)}
 
 /* ── 比較浮動列（累積待比較機場） ── */
 .apt-cmp-tray{
@@ -290,3 +297,24 @@
 .apt-cmp-modal-head h2{flex:1;font-size:18px;font-weight:700;letter-spacing:.02em}
 .apt-cmp-modal-body{flex:1;overflow-y:auto}
 .apt-cmp-hint{font-size:11.5px;color:var(--muted);margin:14px 24px 0;line-height:1.7}
+
+/* ── 3D 地球檢視 ── */
+#apt-view-toggle.active{background:var(--amber);color:var(--bg-0);border-color:var(--amber);font-weight:700}
+.apt-globe-wrap{
+  position:relative;
+  height:min(70vh,640px);margin:8px 0 24px;
+  border:1px solid var(--stroke);border-radius:14px;
+  background:radial-gradient(circle at 50% 40%,var(--bg-1),var(--bg-0));
+  overflow:hidden;
+}
+.apt-globe-wrap[hidden]{display:none}
+#apt-globe-canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none}
+#apt-globe-canvas:active{cursor:grabbing}
+.apt-globe-hint{
+  position:absolute;left:16px;bottom:14px;z-index:2;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  color:var(--muted);pointer-events:none;
+}
+@media (max-width:640px){
+  .apt-globe-wrap{height:min(60vh,480px)}
+}

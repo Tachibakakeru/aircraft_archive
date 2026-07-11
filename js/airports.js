@@ -246,8 +246,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=46"),
-      fetch("data/countries.json?v=46"),
+      fetch("data/airports.json?v=48"),
+      fetch("data/countries.json?v=48"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -273,6 +273,7 @@ function escapeHTML(s){
   $("apt-country").addEventListener("change", applyAll);
   $("apt-type").addEventListener("change", applyAll);
   $("apt-fav-only").addEventListener("change", applyAll);
+  $("apt-view-toggle").addEventListener("click", toggleGlobeMode);
   document.addEventListener("langchange", () => {
     I18N.apply(); applyAll();
     const panel = $("panel");
@@ -288,6 +289,22 @@ function escapeHTML(s){
     toggleFav(id);
     syncFavButton();
     applyAll();
+  });
+  $("apt-p-share").addEventListener("click", async () => {
+    const id = $("panel").dataset.id;
+    if (!id) return;
+    const a = AIRPORTS.find(x => x.id === id);
+    const url = `${location.origin}${location.pathname}?icao=${encodeURIComponent(id)}`;
+    if (navigator.share){
+      try { await navigator.share({ title: a ? a.name : id, url }); return; }
+      catch { return; }   // 使用者取消分享，不當錯誤處理
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      alert(I18N.t("airports.detail.shareCopied"));
+    } catch {
+      window.prompt(I18N.t("airports.detail.shareCopyManual"), url);
+    }
   });
   $("apt-p-cmp").addEventListener("click", () => {
     const id = $("panel").dataset.id;
@@ -430,6 +447,32 @@ function applyAll(){
   render(list);
 }
 
+/* ── 3D 地球檢視：切換時惰性初始化，標示目前篩選結果的機場點位 ── */
+let globeMode = false;
+let globeReqId = 0;   // 篩選變動很快時，避免舊一批座標請求晚回來蓋掉新結果
+async function toggleGlobeMode(){
+  globeMode = !globeMode;
+  $("apt-view-toggle").classList.toggle("active", globeMode);
+  $("apt-globe-wrap").hidden = !globeMode;
+  $("apt-list").hidden = globeMode;
+  if (globeMode && !AptGlobe.isReady()) await AptGlobe.init($("apt-globe-wrap"), id => openAirport(id));
+  else if (globeMode) AptGlobe.resize();
+  applyAll();   // 重新套用目前篩選條件；render() 會依 globeMode 決定要不要順便更新地球標點
+}
+
+async function refreshGlobeMarkers(shown){
+  const myReq = ++globeReqId;
+  const countries = [...new Set(shown.map(a => a.country).filter(Boolean))];
+  await Promise.all(countries.map(loadDetails));
+  if (myReq !== globeReqId) return;   // 篩選條件已經又變了，這批結果過期
+  const points = shown.map(a => {
+    const store = detailCache[a.country || "ZZ"] || {};
+    const d = store[a.id];
+    return d ? { id: a.id, lat: d.lat, lon: d.lon, fav: isFav(a.id) } : null;
+  }).filter(Boolean);
+  AptGlobe.setMarkers(points);
+}
+
 function render(list){
   const listEl = $("apt-list"), moreEl = $("apt-more"), emptyEl = $("apt-empty"), countEl = $("apt-count");
 
@@ -437,18 +480,21 @@ function render(list){
     listEl.innerHTML = ""; moreEl.hidden = true;
     emptyEl.hidden = false; emptyEl.textContent = I18N.t("airports.prompt");
     countEl.textContent = "";
+    if (globeMode) refreshGlobeMarkers([]);
     return;
   }
   if (!list.length){
     listEl.innerHTML = ""; moreEl.hidden = true;
     emptyEl.hidden = false; emptyEl.textContent = I18N.t("airports.empty");
     countEl.textContent = "";
+    if (globeMode) refreshGlobeMarkers([]);
     return;
   }
   emptyEl.hidden = true;
   list = list.slice().sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
   const shown = list.slice(0, MAX_RESULTS);
   countEl.innerHTML = `${I18N.t("airports.count.showing")} <b>${shown.length.toLocaleString()}</b> / ${list.length.toLocaleString()}`;
+  if (globeMode) refreshGlobeMarkers(shown);
 
   listEl.innerHTML = shown.map(a => {
     const codes = [a.icao, a.iata].filter(Boolean).map(c => `<span>${c}</span>`).join("");
@@ -481,7 +527,7 @@ function render(list){
       applyAll();
     }));
 
-  moreEl.hidden = list.length <= MAX_RESULTS;
+  moreEl.hidden = globeMode || list.length <= MAX_RESULTS;
   if (!moreEl.hidden) moreEl.textContent = I18N.t("airports.more").replace("{n}", (list.length - MAX_RESULTS).toLocaleString());
 }
 
@@ -491,7 +537,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=46`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=48`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -606,7 +652,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=46`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=48`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];

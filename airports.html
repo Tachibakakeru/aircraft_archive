@@ -7,11 +7,11 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=46">
-<link rel="stylesheet" href="css/compare.css?v=46">
-<link rel="stylesheet" href="css/airports.css?v=46">
-<script src="js/theme.js?v=46"></script>
-<script src="js/i18n.js?v=46"></script>
+<link rel="stylesheet" href="css/style.css?v=48">
+<link rel="stylesheet" href="css/compare.css?v=48">
+<link rel="stylesheet" href="css/airports.css?v=48">
+<script src="js/theme.js?v=48"></script>
+<script src="js/i18n.js?v=48"></script>
 </head>
 <body>
 
@@ -27,6 +27,7 @@
     <select class="ed-entry" id="apt-country"></select>
     <select class="ed-entry" id="apt-type"></select>
     <label class="ed-entry apt-fav-toggle"><input type="checkbox" id="apt-fav-only"><span data-i18n="airports.favonly">⭐ 只看收藏</span></label>
+    <button class="ed-entry" id="apt-view-toggle" data-i18n="airports.view.globe">🌐 地圖</button>
     <a class="ed-entry" href="index.html" data-i18n="nav.home">🏠 首頁</a>
     <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
     <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
@@ -37,6 +38,10 @@
   <div class="apt-list" id="apt-list"></div>
   <div class="apt-more" id="apt-more" hidden></div>
   <div class="apt-empty" id="apt-empty" hidden data-i18n="airports.empty">找不到符合的機場，換個關鍵字或代號試試。</div>
+
+  <div class="apt-globe-wrap" id="apt-globe-wrap" hidden>
+    <div class="apt-globe-hint" data-i18n="airports.view.globeHint">拖曳旋轉・滾輪縮放・點擊光點開啟機場</div>
+  </div>
 
   <div class="apt-legend">
     <span class="apt-legend-item"><span class="apt-type-dot large_airport"></span><span data-i18n="airports.type.large_airport">大型機場</span></span>
@@ -56,6 +61,7 @@
     <h2 id="apt-p-name">—</h2>
     <div class="en" id="apt-p-loc"></div>
     <div class="apt-badges" id="apt-p-badges"></div>
+    <button id="apt-p-share" class="apt-p-share" data-i18n-title="airports.detail.share" title="分享連結">🔗</button>
     <button id="apt-p-cmp" class="apt-p-cmp" aria-pressed="false" data-i18n-title="airports.detail.addCompare" title="加入比較">⇄</button>
     <button id="apt-p-fav" class="apt-p-fav" aria-pressed="false" title="收藏">☆</button>
     <button id="apt-p-close" class="panel-close-btn" aria-label="關閉面板" data-i18n-aria="viewer.panel.close">✕</button>
@@ -123,9 +129,10 @@
   </div>
 </div>
 
-<script src="js/auth.js?v=46"></script>
-<script src="js/storage.js?v=46"></script>
-<script src="js/airports.js?v=46"></script>
-<script src="js/ui.js?v=46"></script>
+<script src="js/auth.js?v=48"></script>
+<script src="js/storage.js?v=48"></script>
+<script src="js/globe.js?v=48"></script>
+<script src="js/airports.js?v=48"></script>
+<script src="js/ui.js?v=48"></script>
 </body>
 </html>
