@@ -7,9 +7,9 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=42">
-<script src="js/theme.js?v=42"></script>
-<script src="js/i18n.js?v=42"></script>
+<link rel="stylesheet" href="css/style.css?v=43">
+<script src="js/theme.js?v=43"></script>
+<script src="js/i18n.js?v=43"></script>
 </head>
 <body>
 
@@ -30,6 +30,7 @@
       <input type="number" class="ed-entry range-in" id="fleet-max" data-i18n-ph="fleet.range.max" placeholder="Max">
     </span>
     <button class="ed-entry" id="fleet-view"></button>
+    <label class="ed-entry apt-fav-toggle"><input type="checkbox" id="fleet-fav-only"><span data-i18n="fleet.favonly">⭐ 只看收藏</span></label>
     <a class="ed-entry" href="compare.html" data-i18n="fleet.compare">⇄ 比較</a>
     <a class="ed-entry" href="variants.html" data-i18n="nav.variants">📋 機型家族</a>
     <a class="ed-entry" href="editor.html" data-i18n="fleet.edit">✎ 編輯資料</a>
@@ -59,7 +60,7 @@
 (async () => {
   const grid = document.getElementById("fleet-grid");
   try {
-    const res = await fetch("data/fleet.json?v=42");
+    const res = await fetch("data/fleet.json?v=43");
     if (!res.ok) throw new Error(res.status);
     const fleet = await res.json();
 
@@ -150,6 +151,7 @@
     const rangeWrap = document.getElementById("fleet-range");
     const minIn = document.getElementById("fleet-min");
     const maxIn = document.getElementById("fleet-max");
+    const favOnly = document.getElementById("fleet-fav-only");
 
     const numOf = s => { const m = String(s).match(/[\d.]+/); return m ? parseFloat(m[0]) : 0; };
     const SORTS = {
@@ -198,6 +200,7 @@
       const min = minIn.value !== "" ? parseFloat(minIn.value) : null;
       const max = maxIn.value !== "" ? parseFloat(maxIn.value) : null;
       let list = fleet.aircraft.filter(a =>
+        (!favOnly.checked || favs.has(a.id)) &&
         (!cat || catId(a) === cat) &&
         [a.name, a.manufacturer, I18N.field(a.category), a.icao, a.iata].join(" ").toLowerCase().includes(q) &&
         (!getter || ((min == null || getter(a) >= min) && (max == null || getter(a) <= max))));
@@ -208,6 +211,7 @@
     search.addEventListener("input", applyAll);
     catSel.addEventListener("change", applyAll);
     sortSel.addEventListener("change", applyAll);
+    favOnly.addEventListener("change", applyAll);
     minIn.addEventListener("input", applyAll);
     maxIn.addEventListener("input", applyAll);
     viewBtn.addEventListener("click", () => {
@@ -228,6 +232,6 @@ I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 </script>
 
-<script src="js/ui.js?v=42"></script>
+<script src="js/ui.js?v=43"></script>
 </body>
 </html>
