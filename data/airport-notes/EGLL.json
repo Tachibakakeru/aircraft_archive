@@ -4,5 +4,7 @@
     "en": "London Heathrow Airport opened in 1946 and is the UK's busiest airport and a major European hub. It has 4 terminals (Terminal 2, 3, 4, 5; the original Terminal 1 has been demolished) and 2 parallel runways (09L/27R, 09R/27L), both equipped with instrument landing systems for low-visibility approaches. Due to very high demand, the airport has long been the subject of policy debate over runway capacity and a proposed third runway. Heathrow is the main base for British Airways and has large maintenance hangars.",
     "ja": "ロンドン・ヒースロー空港は1946年に開港し、英国で最も忙しい空港であり欧州の主要ハブです。ターミナルは4つ（ターミナル2、3、4、5。旧ターミナル1は解体済み）、平行滑走路2本（09L/27R、09R/27L）を有し、いずれも計器着陸装置により低視程進入に対応しています。旺盛な需要により、滑走路容量や第3滑走路建設を巡る政策論争が長年続いています。ブリティッシュ・エアウェイズの本拠地であり、大型整備格納庫もあります。"
   },
-  "images": []
+  "images": [],
+  "catIls": "IIIb",
+  "terminals": 4
 }

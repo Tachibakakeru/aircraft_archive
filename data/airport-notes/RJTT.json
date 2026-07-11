@@ -4,5 +4,7 @@
     "en": "Tokyo Haneda Airport opened in 1931 and is one of Japan's busiest airports. It has 3 terminals: Terminal 1 and 2 (domestic) and Terminal 3 (international, opened in 2010 alongside the fourth runway). It has 4 runways (16R/34L, 04/22, 16L/34R, 05/23), with instrument landing systems (ILS) on several approaches enabling precision approaches in low visibility. The airport hosts large maintenance hangars operated by ANA and JAL. Haneda is only about 15 km from central Tokyo and is known for excellent on-time performance and convenient access.",
     "ja": "東京羽田空港は1931年に開港し、日本有数の繁忙空港です。第1・第2ターミナル（国内線）と第3ターミナル（国際線、2010年にD滑走路供用開始とともに開業）の3つのターミナルがあります。滑走路は4本（16R/34L、04/22、16L/34R、05/23）で、一部の進入方向には計器着陸装置（ILS）が整備され、低視程下でも精密進入が可能です。ANAやJALの大型整備格納庫（ハンガー）も構内にあります。都心からわずか約15kmと近く、高い定時運航率とアクセスの良さで知られています。"
   },
-  "images": []
+  "images": [],
+  "catIls": "IIIb",
+  "terminals": 3
 }

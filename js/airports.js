@@ -20,6 +20,30 @@ function toggleFav(id){
   localStorage.setItem(FAV_KEY, JSON.stringify([...FAVS]));
 }
 
+/* ── 加入比較（最多 4 座，交給 compare.html?mode=airports 頁面實際比較） ── */
+const CMP_KEY = "hangar_apt_compare";
+let CMP_LIST = JSON.parse(localStorage.getItem(CMP_KEY) || "[]");
+function isInCompare(id){ return CMP_LIST.includes(id); }
+function toggleCompare(id){
+  if (CMP_LIST.includes(id)) CMP_LIST = CMP_LIST.filter(x => x !== id);
+  else if (CMP_LIST.length < 4) CMP_LIST.push(id);
+  else { alert("最多同時比較 4 座機場，請先移除一座再加入。"); return; }
+  localStorage.setItem(CMP_KEY, JSON.stringify(CMP_LIST));
+  renderCompareTray();
+}
+function renderCompareTray(){
+  const tray = $("apt-cmp-tray");
+  tray.hidden = !CMP_LIST.length;
+  if (!CMP_LIST.length) return;
+  $("apt-cmp-chips").innerHTML = CMP_LIST.map(id => {
+    const a = AIRPORTS.find(x => x.id === id);
+    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="移除">✕</button></span>`;
+  }).join("");
+  $("apt-cmp-chips").querySelectorAll("button").forEach(b =>
+    b.addEventListener("click", () => toggleCompare(b.dataset.id)));
+  $("apt-cmp-go").href = `compare.html?mode=airports&ids=${CMP_LIST.join(",")}`;
+}
+
 /* ── 機場備註／照片（本機自訂內容，僅存於使用者瀏覽器） ── */
 const NOTES_KEY = "hangar_apt_notes";
 function loadNotesStore(){
@@ -42,8 +66,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=44"),
-      fetch("data/countries.json?v=44"),
+      fetch("data/airports.json?v=45"),
+      fetch("data/countries.json?v=45"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -59,6 +83,7 @@ function escapeHTML(s){
   buildTypeSelect();
   I18N.apply();
   applyAll();
+  renderCompareTray();
 
   // 深連結：?icao=XXXX 直接開啟
   const wantId = new URLSearchParams(location.search).get("icao");
@@ -84,6 +109,12 @@ function escapeHTML(s){
     syncFavButton();
     applyAll();
   });
+  $("apt-p-cmp").addEventListener("click", () => {
+    const id = $("panel").dataset.id;
+    if (!id) return;
+    toggleCompare(id);
+    syncCmpButton();
+  });
   document.addEventListener("keydown", e => {
     if (!$("sat-lightbox").hidden){ if (e.key === "Escape") closeSatLightbox(); return; }
     if (e.key === "Escape") closePanel();
@@ -101,7 +132,9 @@ function escapeHTML(s){
     if (sat) openSatLightbox(parseFloat(sat.dataset.lat), parseFloat(sat.dataset.lon), parseInt(sat.dataset.zoom, 10));
   });
   $("sat-lb-close").addEventListener("click", e => { e.stopPropagation(); closeSatLightbox(); });
-  $("sat-lb-in").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.min(19, satState.zoom + 1); renderSatLightbox(); });
+  // 上限訂在 17：Esri 免費影像超過這個縮放層級後，同一批 5×5 圖磚常常各自
+  // 來自不同解析度／拍攝時間的來源，拼起來會很明顯不連貫（不是排列錯位）。
+  $("sat-lb-in").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.min(17, satState.zoom + 1); renderSatLightbox(); });
   $("sat-lb-out").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.max(2, satState.zoom - 1); renderSatLightbox(); });
   $("sat-lightbox").addEventListener("click", e => { e.stopPropagation(); if (e.target.id === "sat-lightbox") closeSatLightbox(); });
 
@@ -166,6 +199,14 @@ function syncFavButton(){
   btn.classList.toggle("on", !!on);
   btn.setAttribute("aria-pressed", String(!!on));
   btn.textContent = on ? "★" : "☆";
+}
+
+function syncCmpButton(){
+  const id = $("panel").dataset.id;
+  const on = id && isInCompare(id);
+  const btn = $("apt-p-cmp");
+  btn.classList.toggle("on", !!on);
+  btn.setAttribute("aria-pressed", String(!!on));
 }
 
 function countryName(code){ return (COUNTRIES[code] || code || "—"); }
@@ -269,7 +310,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=44`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=45`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -384,7 +425,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=44`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=45`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
@@ -460,6 +501,7 @@ async function openAirport(id){
   const panel = $("panel");
   panel.dataset.id = id;
   syncFavButton();
+  syncCmpButton();
   closeNotesEditor();
   renderNotesView(id);
   $("apt-p-type").textContent = I18N.t("airports.type." + a.type) || a.type;

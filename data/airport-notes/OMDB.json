@@ -4,5 +4,7 @@
     "en": "Dubai International Airport opened in 1960 and is one of the world's busiest airports for international passengers, serving as the main hub for Emirates. It has 3 terminals, with Terminal 3 being one of the largest single airport buildings in the world, used exclusively by Emirates. It has 2 parallel runways, and large maintenance facilities such as Emirates Engineering are based around the airport.",
     "ja": "ドバイ国際空港は1960年に開港し、国際旅客数で世界有数の繁忙空港であり、エミレーツ航空の主要ハブです。ターミナルは3つあり、うちターミナル3はエミレーツ航空専用で、世界最大級の単一ターミナル建築の一つです。平行滑走路2本を有し、構内にはエミレーツ・エンジニアリングなど大規模な整備拠点があります。"
   },
-  "images": []
+  "images": [],
+  "catIls": "IIIb",
+  "terminals": 3
 }

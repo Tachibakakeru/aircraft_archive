@@ -4,5 +4,7 @@
     "en": "Madrid Barajas Airport opened in 1928 and is Spain's busiest airport and the hub for Iberia. It has 4 terminals; Terminal 4, designed by architect Richard Rogers, is renowned for its flowing wooden roof and has won architectural awards. It has 4 runways and is the site of Iberia's main maintenance base.",
     "ja": "マドリード・バラハス空港は1928年に開港し、スペインで最も忙しい空港でありイベリア航空のハブです。ターミナルは4つあり、うちターミナル4は建築家リチャード・ロジャースの設計で、流線型の木製屋根で知られ建築賞も受賞しています。滑走路は4本で、イベリア航空の主要整備基地もここにあります。"
   },
-  "images": []
+  "images": [],
+  "catIls": "IIIb",
+  "terminals": 4
 }

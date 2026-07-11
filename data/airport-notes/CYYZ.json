@@ -4,5 +4,7 @@
     "en": "Toronto Pearson International Airport is Canada's busiest airport and the main hub for Air Canada. It has 2 terminals (Terminal 1 and 3) and 5 runways. Large cargo and aircraft maintenance facilities operate around the airport, making it Canada's principal aviation gateway.",
     "ja": "トロント・ピアソン国際空港はカナダで最も忙しい空港であり、エア・カナダの主要ハブです。ターミナルは2つ（ターミナル1・3）、滑走路は5本です。構内には大規模な貨物・航空機整備施設があり、カナダの主要な航空玄関口となっています。"
   },
-  "images": []
+  "images": [],
+  "catIls": "IIIb",
+  "terminals": 2
 }

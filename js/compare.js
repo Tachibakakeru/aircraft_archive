@@ -16,7 +16,7 @@ const aptDetailCache = {};   // country code → { ident: {lat,lon,elev,region,r
 const $ = id => document.getElementById(id);
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=44")).json();
+  fleet = await (await fetch("data/fleet.json?v=45")).json();
 
   const params = new URLSearchParams(location.search);
   mode = params.get("mode") === "airports" ? "airports" : "aircraft";
@@ -75,12 +75,13 @@ function syncModeUI(){
     b.classList.toggle("active", b.dataset.mode === mode));
   $("cmp-size").style.display = mode === "aircraft" ? "" : "none";
   $("cmp-h1").textContent = I18N.t(mode === "airports" ? "compare.title.airports" : "compare.title");
+  $("cmp-apt-hint").hidden = mode !== "airports";
 }
 
 async function ensureAirportsLoaded(){
   if (AIRPORTS) return;
   const [aRes, cRes] = await Promise.all([
-    fetch("data/airports.json?v=44"), fetch("data/countries.json?v=44"),
+    fetch("data/airports.json?v=45"), fetch("data/countries.json?v=45"),
   ]);
   const aData = await aRes.json();
   COUNTRIES = await cRes.json();
@@ -91,18 +92,29 @@ async function loadAptDetail(country){
   const key = country || "ZZ";
   if (aptDetailCache[key]) return aptDetailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=44`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=45`);
     const d = r.ok ? await r.json() : {};
     aptDetailCache[key] = d;
     return d;
   } catch { return {}; }
 }
 
+// 已發布的機場補充資料（CAT 降落等級／航廈數等結構化欄位，見機場頁的發布功能）
+const aptNotesCache = {};
+async function loadAptNotes(id){
+  if (id in aptNotesCache) return aptNotesCache[id];
+  try {
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=45`);
+    aptNotesCache[id] = r.ok ? await r.json() : null;
+  } catch { aptNotesCache[id] = null; }
+  return aptNotesCache[id];
+}
+
 let diffOnly = false;
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=44`)).json();
+  const d = await (await fetch(`data/${id}.json?v=45`)).json();
   dataCache[id] = d;
   return d;
 }
@@ -408,12 +420,17 @@ async function renderAptTable(){
   const metaOf = {};
   ids.forEach(id => { metaOf[id] = AIRPORTS.find(a => a.id === id); });
   const countries = [...new Set(ids.map(id => metaOf[id] && metaOf[id].country).filter(Boolean))];
-  await Promise.all(countries.map(loadAptDetail));
+  const [, notesArr] = await Promise.all([
+    Promise.all(countries.map(loadAptDetail)),
+    Promise.all(ids.map(loadAptNotes)),
+  ]);
   const detailOf = id => {
     const m = metaOf[id];
     const store = aptDetailCache[(m && m.country) || "ZZ"] || {};
     return store[id] || null;
   };
+  const notesOf = {};
+  ids.forEach((id, i) => { notesOf[id] = notesArr[i]; });
 
   let html = "<thead><tr><th></th>";
   ids.forEach(id => {
@@ -440,6 +457,11 @@ async function renderAptTable(){
   html += catBlockApt(I18N.t("compare.apt.location"), [
     [I18N.t("compare.apt.elev"), id => { const d = detailOf(id); return d && d.elev != null ? fmtFt(d.elev) : null; }],
     [I18N.t("compare.apt.coords"), id => { const d = detailOf(id); return d ? `${d.lat.toFixed(4)}, ${d.lon.toFixed(4)}` : null; }],
+  ], ids);
+
+  html += catBlockApt(I18N.t("compare.apt.facilities"), [
+    [I18N.t("compare.apt.catIls"), id => (notesOf[id] && notesOf[id].catIls) || null],
+    [I18N.t("compare.apt.terminals"), id => (notesOf[id] && notesOf[id].terminals) || null],
   ], ids);
 
   html += catBlockApt(I18N.t("compare.apt.runways"), [

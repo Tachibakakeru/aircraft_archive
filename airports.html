@@ -7,10 +7,10 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=44">
-<link rel="stylesheet" href="css/airports.css?v=44">
-<script src="js/theme.js?v=44"></script>
-<script src="js/i18n.js?v=44"></script>
+<link rel="stylesheet" href="css/style.css?v=45">
+<link rel="stylesheet" href="css/airports.css?v=45">
+<script src="js/theme.js?v=45"></script>
+<script src="js/i18n.js?v=45"></script>
 </head>
 <body>
 
@@ -55,6 +55,7 @@
     <h2 id="apt-p-name">—</h2>
     <div class="en" id="apt-p-loc"></div>
     <div class="apt-badges" id="apt-p-badges"></div>
+    <button id="apt-p-cmp" class="apt-p-cmp" aria-pressed="false" data-i18n-title="airports.detail.addCompare" title="加入比較">⇄</button>
     <button id="apt-p-fav" class="apt-p-fav" aria-pressed="false" title="收藏">☆</button>
     <button id="apt-p-close" class="panel-close-btn" aria-label="關閉面板" data-i18n-aria="viewer.panel.close">✕</button>
   </div>
@@ -100,9 +101,14 @@
   <div class="apt-sat-credit">Imagery © Esri, Maxar, Earthstar Geographics</div>
 </div>
 
-<script src="js/auth.js?v=44"></script>
-<script src="js/storage.js?v=44"></script>
-<script src="js/airports.js?v=44"></script>
-<script src="js/ui.js?v=44"></script>
+<div class="apt-cmp-tray" id="apt-cmp-tray" hidden>
+  <div class="apt-cmp-chips" id="apt-cmp-chips"></div>
+  <a class="apt-cmp-go" id="apt-cmp-go" href="compare.html?mode=airports" data-i18n="airports.detail.compareGo">⇄ 開始比較</a>
+</div>
+
+<script src="js/auth.js?v=45"></script>
+<script src="js/storage.js?v=45"></script>
+<script src="js/airports.js?v=45"></script>
+<script src="js/ui.js?v=45"></script>
 </body>
 </html>

@@ -4,5 +4,7 @@
     "en": "Frankfurt Airport opened in 1936 and is Germany's largest airport and a major European cargo hub. It has Terminal 1 and 2, plus Terminal 3 which opened in 2021, with 4 runways in total. The airport is the main hub for Lufthansa and headquarters of Lufthansa Technik, hosting one of the world's largest aircraft maintenance hangar complexes.",
     "ja": "フランクフルト空港は1936年に開港し、ドイツ最大の空港であり欧州の主要貨物ハブです。ターミナル1・2に加え、2021年開業のターミナル3があり、滑走路は合計4本です。ルフトハンザ航空の主要ハブであり、ルフトハンザ・テクニークの本社所在地でもあり、世界最大級の航空機整備格納庫群を有します。"
   },
-  "images": []
+  "images": [],
+  "catIls": "IIIb",
+  "terminals": 3
 }
