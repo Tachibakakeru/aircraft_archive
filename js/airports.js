@@ -13,6 +13,36 @@ let AIRPORTS = [];
 let COUNTRIES = {};
 const detailCache = {};   // country code → { ident: {lat,lon,elev,region,runways} }
 
+/* ── 機場⇄航空公司交叉連結：反查「以此機場為樞紐的航空公司」──
+   資料來自 data/airline_geo.json（航空公司頁面用同一份離線比對結果），
+   兩份小檔案惰性載入，只有真的開到有對應資料的機場才會抓公司名稱清單。 */
+let HUB_INDEX = null;      // icao → [airlineId, ...]
+let AIRLINE_NAMES = null;  // airlineId → { name, nameZh }
+async function loadHubIndex(){
+  if (HUB_INDEX) return HUB_INDEX;
+  HUB_INDEX = {};
+  try {
+    const res = await fetch("data/airline_geo.json?v=76");
+    const geo = res.ok ? await res.json() : {};
+    Object.entries(geo).forEach(([airlineId, g]) => {
+      (g.hubs || []).forEach(h => {
+        (HUB_INDEX[h.icao] = HUB_INDEX[h.icao] || []).push(airlineId);
+      });
+    });
+  } catch { /* 交叉連結為附加功能，載入失敗不影響機場頁主要功能 */ }
+  return HUB_INDEX;
+}
+async function loadAirlineNames(){
+  if (AIRLINE_NAMES) return AIRLINE_NAMES;
+  AIRLINE_NAMES = {};
+  try {
+    const res = await fetch("data/airlines.json?v=76");
+    const data = res.ok ? await res.json() : { airlines: [] };
+    data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
+  } catch { /* 同上 */ }
+  return AIRLINE_NAMES;
+}
+
 const FAV_KEY = "hangar_apt_favs";
 let FAVS = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
 function isFav(id){ return FAVS.has(id); }
@@ -796,6 +826,26 @@ async function openAirport(id){
     : `<div class="apt-empty" style="padding:20px 0">${I18N.t("airports.detail.norunways")}</div>`;
 
   history.replaceState(null, "", `?icao=${encodeURIComponent(id)}`);
+  renderHubAirlines(id);
+}
+
+async function renderHubAirlines(id){
+  const titleEl = $("apt-p-airlines-title"), listEl = $("apt-p-airlines");
+  titleEl.hidden = true;
+  listEl.innerHTML = "";
+  const hubIndex = await loadHubIndex();
+  const airlineIds = hubIndex[id];
+  if (!airlineIds || !airlineIds.length) return;
+  if ($("panel").dataset.id !== id) return;   // 期間使用者已切到別的機場
+
+  const names = await loadAirlineNames();
+  if ($("panel").dataset.id !== id) return;
+  titleEl.hidden = false;
+  listEl.innerHTML = airlineIds.map(aid => {
+    const a = names[aid];
+    const label = a ? (I18N.get() === "zh" && a.nameZh ? a.nameZh : a.name) : aid;
+    return `<a class="apt-p-airline-chip" href="airlines.html?id=${encodeURIComponent(aid)}">${label}</a>`;
+  }).join("");
 }
 
 function closePanel(){

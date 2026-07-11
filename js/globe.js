@@ -17,6 +17,7 @@ const AptGlobe = (() => {
   let flying = null;       // { fromTheta,fromPhi,fromRadius, toTheta,toPhi,toRadius, start, dur }
   let markers = [];        // { mesh, id, lat, lon, code, fav }
   let markerGroup;
+  let routeGroup;          // 航線弧線（供航空公司頁「航線地圖」使用）
   let onPick = null;       // (id) => void
   let onRotateChange = null;   // (isAutoRotating) => void
 
@@ -217,6 +218,8 @@ const AptGlobe = (() => {
 
     markerGroup = new THREE.Group();
     scene.add(markerGroup);
+    routeGroup = new THREE.Group();
+    scene.add(routeGroup);
 
     resize();
     window.addEventListener("resize", resize);
@@ -464,6 +467,53 @@ const AptGlobe = (() => {
     });
   }
 
+  // 航線弧線：兩點間沿大圓球面插值（slerp），中段依角距離拱起一點高度，
+  // 純視覺呈現「弧線」感，不代表真實航路（真實航路受風向、空域管制影響）。
+  function greatCircleArcPoints(lat1, lon1, lat2, lon2, segments){
+    const p1 = latLonToVec3(lat1, lon1, 1).normalize();
+    const p2 = latLonToVec3(lat2, lon2, 1).normalize();
+    const angle = p1.angleTo(p2);
+    const sinAngle = Math.sin(angle);
+    const pts = [];
+    for (let i = 0; i <= segments; i++){
+      const t = i / segments;
+      let a, b;
+      if (sinAngle < 1e-6){ a = 1 - t; b = t; }
+      else { a = Math.sin((1 - t) * angle) / sinAngle; b = Math.sin(t * angle) / sinAngle; }
+      const dir = new THREE.Vector3(
+        p1.x * a + p2.x * b, p1.y * a + p2.y * b, p1.z * a + p2.z * b
+      ).normalize();
+      const lift = 1 + Math.sin(t * Math.PI) * 0.12 * (angle / Math.PI);
+      pts.push(dir.multiplyScalar(lift));
+    }
+    return pts;
+  }
+
+  function clearRoutes(){
+    if (!routeGroup) return;
+    routeGroup.children.slice().forEach(line => {
+      routeGroup.remove(line);
+      line.geometry.dispose();
+      line.material.dispose();
+    });
+  }
+
+  // arcs: [{ fromLat, fromLon, toLat, toLon, color }]
+  function setRoutes(arcs){
+    clearRoutes();
+    if (!routeGroup) return;
+    arcs.forEach(a => {
+      if (a.fromLat == null || a.toLat == null) return;
+      const pts = greatCircleArcPoints(a.fromLat, a.fromLon, a.toLat, a.toLon, 48);
+      const geo = new THREE.BufferGeometry().setFromPoints(pts);
+      const mat = new THREE.LineBasicMaterial({
+        color: new THREE.Color(a.color || themeColor("--amber", "#ffb547")),
+        transparent: true, opacity: 0.85,
+      });
+      routeGroup.add(new THREE.Line(geo, mat));
+    });
+  }
+
   function setAutoRotate(on){
     if (autoRotate === on) return;
     autoRotate = on;
@@ -495,6 +545,6 @@ const AptGlobe = (() => {
   return {
     init, setMarkers, resize, destroy, isReady: () => ready,
     pauseAutoRotate, resumeAutoRotate, isAutoRotating, toggleAutoRotate, resetView,
-    clearGroundPatch, focusOn,
+    clearGroundPatch, focusOn, setRoutes, clearRoutes,
   };
 })();

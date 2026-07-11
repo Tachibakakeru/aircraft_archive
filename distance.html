@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天空檔案 — 距離與飛行時間計算器</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b1220">
+<link rel="stylesheet" href="css/style.css?v=76">
+<link rel="stylesheet" href="css/airports.css?v=76">
+<link rel="stylesheet" href="css/distance.css?v=76">
+<script src="js/theme.js?v=76"></script>
+<script src="js/i18n.js?v=76"></script>
+</head>
+<body>
+
+<div class="fleet-wrap dist-wrap">
+  <div class="fleet-head">
+    <a class="eyebrow home-link" href="index.html" data-i18n="distance.eyebrow">SKY ARCHIVE / 天空檔案</a>
+    <h1 data-i18n="distance.title">距離與飛行時間計算器</h1>
+    <div class="sub" data-i18n="distance.lede">DISTANCE CALCULATOR — 選擇兩座機場與機型，計算大圓距離與預估飛行時間</div>
+  </div>
+
+  <div class="fleet-toolbar">
+    <a class="ed-entry" href="airports.html" data-i18n="nav.airports">🛬 機場與跑道</a>
+    <a class="ed-entry" href="fleet.html" data-i18n="nav.fleet">✈️ 飛行器圖鑑</a>
+    <a class="ed-entry" href="index.html" data-i18n="nav.home">🏠 首頁</a>
+    <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
+    <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+  </div>
+
+  <div class="dist-form">
+    <div class="dist-field">
+      <label data-i18n="distance.from">出發機場</label>
+      <div class="apt-cmp-picker" id="dist-from-picker">
+        <input type="text" class="apt-cmp-search" id="dist-from-input" data-i18n-ph="distance.searchPh" placeholder="搜尋機場名稱 / 城市 / 代號…" autocomplete="off">
+        <div class="apt-cmp-suggest" hidden></div>
+      </div>
+    </div>
+    <div class="dist-swap">
+      <button id="dist-swap-btn" title="交換" data-i18n-title="distance.swap">⇄</button>
+    </div>
+    <div class="dist-field">
+      <label data-i18n="distance.to">抵達機場</label>
+      <div class="apt-cmp-picker" id="dist-to-picker">
+        <input type="text" class="apt-cmp-search" id="dist-to-input" data-i18n-ph="distance.searchPh" placeholder="搜尋機場名稱 / 城市 / 代號…" autocomplete="off">
+        <div class="apt-cmp-suggest" hidden></div>
+      </div>
+    </div>
+    <div class="dist-field">
+      <label data-i18n="distance.aircraft">機型</label>
+      <select id="dist-aircraft" class="ed-entry"></select>
+    </div>
+  </div>
+
+  <div class="dist-result" id="dist-result" hidden>
+    <div class="dist-route" id="dist-route"></div>
+    <div class="dist-stats">
+      <div class="dist-stat">
+        <div class="dist-stat-label" data-i18n="distance.greatCircle">大圓距離</div>
+        <div class="dist-stat-value" id="dist-km">—</div>
+      </div>
+      <div class="dist-stat">
+        <div class="dist-stat-label" data-i18n="distance.flightTime">預估飛行時間</div>
+        <div class="dist-stat-value" id="dist-time">—</div>
+      </div>
+      <div class="dist-stat">
+        <div class="dist-stat-label" data-i18n="distance.cruiseSpeed">巡航速度</div>
+        <div class="dist-stat-value" id="dist-speed">—</div>
+      </div>
+    </div>
+    <div class="dist-hint" data-i18n="distance.hint">＊飛行時間為大圓距離除以巡航速度後，另加 30 分鐘估算滑行／爬升／下降緩衝，僅供參考，實際受航路、風向與空域管制影響。</div>
+  </div>
+  <div class="dist-empty" id="dist-empty" data-i18n="distance.empty">選擇出發機場、抵達機場與機型後即可計算。</div>
+</div>
+
+<script src="js/distance.js?v=76"></script>
+<script src="js/ui.js?v=76"></script>
+</body>
+</html>

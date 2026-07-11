@@ -93,6 +93,10 @@
 .apt-p-fav:hover{border-color:var(--amber)}
 .apt-p-fav.on{color:var(--amber);border-color:var(--amber)}
 .al-p-edit{right:98px}
+.al-p-cmp{right:138px}
+.al-p-cmp:hover{border-color:var(--cyan)}
+.al-p-cmp.on{color:var(--cyan);border-color:var(--cyan)}
+#al-view-toggle.active{background:var(--amber);color:var(--bg-0);border-color:var(--amber);font-weight:700}
 
 .al-p-photo{
   width:100%;max-height:180px;object-fit:cover;
@@ -160,6 +164,8 @@
   font-size:12.5px;border-radius:20px;
   background:var(--bg-1);border:1px solid var(--stroke);color:var(--text);
 }
+.al-hub-link{color:var(--cyan);text-decoration:none;border-bottom:1px dotted var(--cyan)}
+.al-hub-link:hover{border-bottom-style:solid}
 .al-p-tagline{margin-top:22px;font-size:14px;line-height:1.85;color:var(--text)}
 .al-empty-inline{color:var(--muted);font-size:13px;padding:8px 0}
 

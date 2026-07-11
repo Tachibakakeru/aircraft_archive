@@ -1,0 +1,2798 @@
+{
+ "aa": {
+  "hubs": [
+   {
+    "text": "Dallas/Fort Worth",
+    "icao": "KDFW",
+    "lat": 32.8968,
+    "lon": -97.038
+   },
+   {
+    "text": "Charlotte",
+    "icao": "KCLT",
+    "lat": 35.214,
+    "lon": -80.9431
+   },
+   {
+    "text": "Chicago O'Hare",
+    "icao": "KORD",
+    "lat": 41.9786,
+    "lon": -87.9048
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Tokyo Haneda",
+    "icao": "RJTT",
+    "lat": 35.5497,
+    "lon": 139.787
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   },
+   {
+    "text": "Mexico City",
+    "icao": "MMMX",
+    "lat": 19.4358,
+    "lon": -99.0703
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   }
+  ]
+ },
+ "dl": {
+  "hubs": [
+   {
+    "text": "Atlanta",
+    "icao": "KATL",
+    "lat": 33.6367,
+    "lon": -84.4281
+   },
+   {
+    "text": "Detroit",
+    "icao": "KDTW",
+    "lat": 42.2138,
+    "lon": -83.3538
+   },
+   {
+    "text": "Minneapolis–Saint Paul",
+    "icao": "KMSP",
+    "lat": 44.8801,
+    "lon": -93.2217
+   }
+  ],
+  "routes": [
+   {
+    "text": "Paris CDG",
+    "icao": "LFPG",
+    "lat": 49.009,
+    "lon": 2.5541
+   },
+   {
+    "text": "Amsterdam",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   },
+   {
+    "text": "Tokyo Haneda",
+    "icao": "RJTT",
+    "lat": 35.5497,
+    "lon": 139.787
+   },
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   }
+  ]
+ },
+ "ua": {
+  "hubs": [
+   {
+    "text": "Chicago O'Hare",
+    "icao": "KORD",
+    "lat": 41.9786,
+    "lon": -87.9048
+   },
+   {
+    "text": "Denver",
+    "icao": "KDEN",
+    "lat": 39.86,
+    "lon": -104.6738
+   },
+   {
+    "text": "Houston Intercontinental",
+    "icao": "KIAH",
+    "lat": 29.9844,
+    "lon": -95.3414
+   }
+  ],
+  "routes": [
+   {
+    "text": "Frankfurt",
+    "icao": "EDDF",
+    "lat": 50.0267,
+    "lon": 8.5584
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Hong Kong",
+    "icao": "VHHH",
+    "lat": 22.3118,
+    "lon": 113.9149
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   }
+  ]
+ },
+ "wn": {
+  "hubs": [
+   {
+    "text": "Dallas Love Field",
+    "icao": "KDAL",
+    "lat": 32.8448,
+    "lon": -96.8477
+   },
+   {
+    "text": "Denver",
+    "icao": "KDEN",
+    "lat": 39.86,
+    "lon": -104.6738
+   },
+   {
+    "text": "Chicago Midway",
+    "icao": "KMDW",
+    "lat": 41.786,
+    "lon": -87.7524
+   }
+  ],
+  "routes": [
+   {
+    "text": "Cancún",
+    "icao": "MMUN",
+    "lat": 21.0408,
+    "lon": -86.8735
+   },
+   {
+    "text": "San José del Cabo",
+    "icao": "MMSD",
+    "lat": 23.1519,
+    "lon": -109.7207
+   },
+   {
+    "text": "Nassau",
+    "icao": "MYNN",
+    "lat": 25.039,
+    "lon": -77.4662
+   },
+   {
+    "text": "San Juan",
+    "icao": "TJSJ",
+    "lat": 18.4394,
+    "lon": -66.0018
+   }
+  ]
+ },
+ "ac": {
+  "hubs": [
+   {
+    "text": "Toronto Pearson",
+    "icao": "CYYZ",
+    "lat": 43.6759,
+    "lon": -79.6294
+   },
+   {
+    "text": "Montréal–Trudeau",
+    "icao": "CYUL",
+    "lat": 45.4678,
+    "lon": -73.7423
+   },
+   {
+    "text": "Vancouver",
+    "icao": "CYVR",
+    "lat": 49.1939,
+    "lon": -123.184
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Frankfurt",
+    "icao": "EDDF",
+    "lat": 50.0267,
+    "lon": 8.5584
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   }
+  ]
+ },
+ "lh": {
+  "hubs": [
+   {
+    "text": "Frankfurt",
+    "icao": "EDDF",
+    "lat": 50.0267,
+    "lon": 8.5584
+   },
+   {
+    "text": "Munich",
+    "icao": "EDDM",
+    "lat": 48.3538,
+    "lon": 11.7861
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Singapore",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Beijing",
+    "icao": "ZBAA",
+    "lat": 40.0773,
+    "lon": 116.5967
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   }
+  ]
+ },
+ "af": {
+  "hubs": [
+   {
+    "text": "Paris Charles de Gaulle",
+    "icao": "LFPG",
+    "lat": 49.009,
+    "lon": 2.5541
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Tokyo Haneda",
+    "icao": "RJTT",
+    "lat": 35.5497,
+    "lon": 139.787
+   },
+   {
+    "text": "Beijing",
+    "icao": "ZBAA",
+    "lat": 40.0773,
+    "lon": 116.5967
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   },
+   {
+    "text": "Nairobi",
+    "icao": "HKJK",
+    "lat": -1.3189,
+    "lon": 36.9282
+   }
+  ]
+ },
+ "kl": {
+  "hubs": [
+   {
+    "text": "Amsterdam Schiphol",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Jakarta",
+    "icao": "WIII",
+    "lat": -6.1256,
+    "lon": 106.656
+   },
+   {
+    "text": "Nairobi",
+    "icao": "HKJK",
+    "lat": -1.3189,
+    "lon": 36.9282
+   },
+   {
+    "text": "Buenos Aires",
+    "icao": "SABE",
+    "lat": -34.5594,
+    "lon": -58.4155
+   }
+  ]
+ },
+ "ba": {
+  "hubs": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "London Gatwick",
+    "icao": "EGKK",
+    "lat": 51.1487,
+    "lon": -0.1857
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Singapore",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   },
+   {
+    "text": "Tokyo Haneda",
+    "icao": "RJTT",
+    "lat": 35.5497,
+    "lon": 139.787
+   },
+   {
+    "text": "Johannesburg",
+    "icao": "FAOR",
+    "lat": -26.1401,
+    "lon": 28.2468
+   },
+   {
+    "text": "Sydney（經新加坡）",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   }
+  ]
+ },
+ "fr": {
+  "hubs": [
+   {
+    "text": "Dublin",
+    "icao": "EIDW",
+    "lat": 53.4287,
+    "lon": -6.2621
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Stansted",
+    "icao": "EGSS",
+    "lat": 51.885,
+    "lon": 0.235
+   },
+   {
+    "text": "Milan Bergamo",
+    "icao": "LIME",
+    "lat": 45.6694,
+    "lon": 9.7089
+   },
+   {
+    "text": "Barcelona",
+    "icao": "LEBL",
+    "lat": 41.2971,
+    "lon": 2.0785
+   },
+   {
+    "text": "Kraków",
+    "icao": "EPKK",
+    "lat": 50.0777,
+    "lon": 19.7848
+   }
+  ]
+ },
+ "tk": {
+  "hubs": [
+   {
+    "text": "Istanbul Airport",
+    "icao": "LTFM",
+    "lat": 41.2749,
+    "lon": 28.7321
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Buenos Aires",
+    "icao": "SABE",
+    "lat": -34.5594,
+    "lon": -58.4155
+   },
+   {
+    "text": "Cape Town",
+    "icao": "FACT",
+    "lat": -33.974,
+    "lon": 18.6043
+   },
+   {
+    "text": "Sydney（季節性）",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "ek": {
+  "hubs": [
+   {
+    "text": "Dubai International",
+    "icao": "OMDB",
+    "lat": 25.2498,
+    "lon": 55.371
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Auckland",
+    "icao": "NZAA",
+    "lat": -37.012,
+    "lon": 174.7863
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   }
+  ]
+ },
+ "qr": {
+  "hubs": [
+   {
+    "text": "Hamad International (Doha)",
+    "icao": "OTHH",
+    "lat": 25.2731,
+    "lon": 51.6081
+   }
+  ],
+  "routes": [
+   {
+    "text": "Auckland（全球最長航線之一）",
+    "icao": "NZAA",
+    "lat": -37.012,
+    "lon": 174.7863
+   },
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   }
+  ]
+ },
+ "ey": {
+  "hubs": [
+   {
+    "text": "Abu Dhabi International",
+    "icao": "OMAA",
+    "lat": 24.441,
+    "lon": 54.6492
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   }
+  ]
+ },
+ "sq": {
+  "hubs": [
+   {
+    "text": "Singapore Changi",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK / EWR（全球最長商業航班之一）",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "cx": {
+  "hubs": [
+   {
+    "text": "Hong Kong International",
+    "icao": "VHHH",
+    "lat": 22.3118,
+    "lon": 113.9149
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Vancouver",
+    "icao": "CYVR",
+    "lat": 49.1939,
+    "lon": -123.184
+   }
+  ]
+ },
+ "jl": {
+  "hubs": [
+   {
+    "text": "Tokyo Haneda",
+    "icao": "RJTT",
+    "lat": 35.5497,
+    "lon": 139.787
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "São Paulo（經達拉斯）",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   }
+  ]
+ },
+ "nh": {
+  "hubs": [
+   {
+    "text": "Tokyo Haneda",
+    "icao": "RJTT",
+    "lat": 35.5497,
+    "lon": 139.787
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Mumbai",
+    "icao": "VABB",
+    "lat": 19.0887,
+    "lon": 72.8679
+   }
+  ]
+ },
+ "ke": {
+  "hubs": [
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   },
+   {
+    "text": "Nairobi",
+    "icao": "HKJK",
+    "lat": -1.3189,
+    "lon": 36.9282
+   }
+  ]
+ },
+ "cz": {
+  "hubs": [
+   {
+    "text": "Guangzhou Baiyun",
+    "icao": "ZGGG",
+    "lat": 23.3924,
+    "lon": 113.299
+   }
+  ],
+  "routes": [
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Los Angeles",
+    "icao": "KLAX",
+    "lat": 33.9425,
+    "lon": -118.408
+   },
+   {
+    "text": "Amsterdam",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   },
+   {
+    "text": "Auckland",
+    "icao": "NZAA",
+    "lat": -37.012,
+    "lon": 174.7863
+   }
+  ]
+ },
+ "mu": {
+  "hubs": [
+   {
+    "text": "Shanghai Pudong",
+    "icao": "ZSPD",
+    "lat": 31.1434,
+    "lon": 121.805
+   },
+   {
+    "text": "Shanghai Hongqiao",
+    "icao": "ZSSS",
+    "lat": 31.1981,
+    "lon": 121.3343
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Paris CDG",
+    "icao": "LFPG",
+    "lat": 49.009,
+    "lon": 2.5541
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "br": {
+  "hubs": [
+   {
+    "text": "Taiwan Taoyuan",
+    "icao": "RCTP",
+    "lat": 25.0777,
+    "lon": 121.233
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Amsterdam",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   },
+   {
+    "text": "Vienna",
+    "icao": "LOWW",
+    "lat": 48.1103,
+    "lon": 16.5697
+   },
+   {
+    "text": "London Heathrow（經曼谷）",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   }
+  ]
+ },
+ "ci": {
+  "hubs": [
+   {
+    "text": "Taiwan Taoyuan",
+    "icao": "RCTP",
+    "lat": 25.0777,
+    "lon": 121.233
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK（經安克拉治或直飛）",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Amsterdam",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   },
+   {
+    "text": "Vienna",
+    "icao": "LOWW",
+    "lat": 48.1103,
+    "lon": 16.5697
+   },
+   {
+    "text": "Frankfurt",
+    "icao": "EDDF",
+    "lat": 50.0267,
+    "lon": 8.5584
+   }
+  ]
+ },
+ "tg": {
+  "hubs": [
+   {
+    "text": "Bangkok Suvarnabhumi",
+    "icao": "VTBS",
+    "lat": 13.6811,
+    "lon": 100.747
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Frankfurt",
+    "icao": "EDDF",
+    "lat": 50.0267,
+    "lon": 8.5584
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "qf": {
+  "hubs": [
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Melbourne",
+    "icao": "YMML",
+    "lat": -37.6707,
+    "lon": 144.8379
+   },
+   {
+    "text": "Brisbane",
+    "icao": "YBBN",
+    "lat": -27.3842,
+    "lon": 153.117
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow（經新加坡／伯斯）",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Los Angeles",
+    "icao": "KLAX",
+    "lat": 33.9425,
+    "lon": -118.408
+   },
+   {
+    "text": "Santiago",
+    "icao": "SCEL",
+    "lat": -33.393,
+    "lon": -70.7858
+   },
+   {
+    "text": "Johannesburg",
+    "icao": "FAOR",
+    "lat": -26.1401,
+    "lon": 28.2468
+   }
+  ]
+ },
+ "et": {
+  "hubs": [
+   {
+    "text": "Addis Ababa Bole",
+    "icao": "HAAB",
+    "lat": 8.9779,
+    "lon": 38.7993
+   }
+  ],
+  "routes": [
+   {
+    "text": "Beijing",
+    "icao": "ZBAA",
+    "lat": 40.0773,
+    "lon": 116.5967
+   },
+   {
+    "text": "Washington Dulles",
+    "icao": "KIAD",
+    "lat": 38.9445,
+    "lon": -77.4558
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "la": {
+  "hubs": [
+   {
+    "text": "Santiago",
+    "icao": "SCEL",
+    "lat": -33.393,
+    "lon": -70.7858
+   },
+   {
+    "text": "São Paulo Guarulhos",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   }
+  ],
+  "routes": [
+   {
+    "text": "Miami",
+    "icao": "KMIA",
+    "lat": 25.796,
+    "lon": -80.2898
+   },
+   {
+    "text": "Madrid",
+    "icao": "LEMD",
+    "lat": 40.4934,
+    "lon": -3.5722
+   },
+   {
+    "text": "Frankfurt",
+    "icao": "EDDF",
+    "lat": 50.0267,
+    "lon": 8.5584
+   },
+   {
+    "text": "Sydney（經奧克蘭）",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   }
+  ]
+ },
+ "6e": {
+  "hubs": [
+   {
+    "text": "Delhi",
+    "icao": "VIDP",
+    "lat": 28.5556,
+    "lon": 77.0952
+   },
+   {
+    "text": "Mumbai",
+    "icao": "VABB",
+    "lat": 19.0887,
+    "lon": 72.8679
+   },
+   {
+    "text": "Bengaluru",
+    "icao": "VOBL",
+    "lat": 13.1979,
+    "lon": 77.7063
+   }
+  ],
+  "routes": [
+   {
+    "text": "Dubai",
+    "icao": "OMDB",
+    "lat": 25.2498,
+    "lon": 55.371
+   },
+   {
+    "text": "Singapore",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   },
+   {
+    "text": "Bangkok",
+    "icao": "VTBS",
+    "lat": 13.6811,
+    "lon": 100.747
+   }
+  ]
+ },
+ "jblu": {
+  "hubs": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Boston Logan",
+    "icao": "KBOS",
+    "lat": 42.362,
+    "lon": -71.0079
+   },
+   {
+    "text": "Fort Lauderdale",
+    "icao": "KFLL",
+    "lat": 26.0726,
+    "lon": -80.1527
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Cancún",
+    "icao": "MMUN",
+    "lat": 21.0408,
+    "lon": -86.8735
+   },
+   {
+    "text": "San Juan",
+    "icao": "TJSJ",
+    "lat": 18.4394,
+    "lon": -66.0018
+   },
+   {
+    "text": "Bogotá",
+    "icao": "SKBO",
+    "lat": 4.7016,
+    "lon": -74.1469
+   }
+  ]
+ },
+ "alk": {
+  "hubs": [
+   {
+    "text": "Seattle–Tacoma",
+    "icao": "KSEA",
+    "lat": 47.4479,
+    "lon": -122.3103
+   },
+   {
+    "text": "Portland",
+    "icao": "KPDX",
+    "lat": 45.5887,
+    "lon": -122.598
+   },
+   {
+    "text": "Los Angeles",
+    "icao": "KLAX",
+    "lat": 33.9425,
+    "lon": -118.408
+   }
+  ],
+  "routes": [
+   {
+    "text": "Anchorage",
+    "icao": "PANC",
+    "lat": 61.179,
+    "lon": -149.9926
+   },
+   {
+    "text": "Honolulu",
+    "icao": "PHNL",
+    "lat": 21.3184,
+    "lon": -157.9257
+   },
+   {
+    "text": "Mexico City",
+    "icao": "MMMX",
+    "lat": 19.4358,
+    "lon": -99.0703
+   },
+   {
+    "text": "Cancún",
+    "icao": "MMUN",
+    "lat": 21.0408,
+    "lon": -86.8735
+   }
+  ]
+ },
+ "ib": {
+  "hubs": [
+   {
+    "text": "Madrid Barajas",
+    "icao": "LEMD",
+    "lat": 40.4934,
+    "lon": -3.5722
+   }
+  ],
+  "routes": [
+   {
+    "text": "Buenos Aires",
+    "icao": "SABE",
+    "lat": -34.5594,
+    "lon": -58.4155
+   },
+   {
+    "text": "Mexico City",
+    "icao": "MMMX",
+    "lat": 19.4358,
+    "lon": -99.0703
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   }
+  ]
+ },
+ "sk": {
+  "hubs": [
+   {
+    "text": "Copenhagen",
+    "icao": "EKCH",
+    "lat": 55.6179,
+    "lon": 12.656
+   },
+   {
+    "text": "Stockholm Arlanda",
+    "icao": "ESSA",
+    "lat": 59.6485,
+    "lon": 17.9288
+   },
+   {
+    "text": "Oslo",
+    "icao": "ENGM",
+    "lat": 60.1939,
+    "lon": 11.1004
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Chicago O'Hare",
+    "icao": "KORD",
+    "lat": 41.9786,
+    "lon": -87.9048
+   },
+   {
+    "text": "Bangkok",
+    "icao": "VTBS",
+    "lat": 13.6811,
+    "lon": 100.747
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "ay": {
+  "hubs": [
+   {
+    "text": "Helsinki Vantaa",
+    "icao": "EFHK",
+    "lat": 60.3184,
+    "lon": 24.9633
+   }
+  ],
+  "routes": [
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Shanghai Pudong",
+    "icao": "ZSPD",
+    "lat": 31.1434,
+    "lon": 121.805
+   },
+   {
+    "text": "Bangkok",
+    "icao": "VTBS",
+    "lat": 13.6811,
+    "lon": 100.747
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   }
+  ]
+ },
+ "w6": {
+  "hubs": [
+   {
+    "text": "Budapest",
+    "icao": "LHBP",
+    "lat": 47.4302,
+    "lon": 19.2624
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Luton",
+    "icao": "EGGW",
+    "lat": 51.8747,
+    "lon": -0.3683
+   },
+   {
+    "text": "Abu Dhabi",
+    "icao": "OMAA",
+    "lat": 24.441,
+    "lon": 54.6492
+   },
+   {
+    "text": "Milan",
+    "icao": "LIML",
+    "lat": 45.4451,
+    "lon": 9.2767
+   }
+  ]
+ },
+ "u2": {
+  "hubs": [
+   {
+    "text": "London Gatwick",
+    "icao": "EGKK",
+    "lat": 51.1487,
+    "lon": -0.1857
+   },
+   {
+    "text": "London Luton",
+    "icao": "EGGW",
+    "lat": 51.8747,
+    "lon": -0.3683
+   },
+   {
+    "text": "Milan Malpensa",
+    "icao": "LIMC",
+    "lat": 45.6306,
+    "lon": 8.7281
+   }
+  ],
+  "routes": [
+   {
+    "text": "Nice",
+    "icao": "LFMN",
+    "lat": 43.6584,
+    "lon": 7.2159
+   },
+   {
+    "text": "Barcelona",
+    "icao": "LEBL",
+    "lat": 41.2971,
+    "lon": 2.0785
+   },
+   {
+    "text": "Amsterdam",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   }
+  ]
+ },
+ "tp": {
+  "hubs": [
+   {
+    "text": "Lisbon",
+    "icao": "LPPT",
+    "lat": 38.7813,
+    "lon": -9.1359
+   }
+  ],
+  "routes": [
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   },
+   {
+    "text": "Rio de Janeiro",
+    "icao": "SBRJ",
+    "lat": -22.9104,
+    "lon": -43.1628
+   },
+   {
+    "text": "Luanda",
+    "icao": "FNLU",
+    "lat": -8.8584,
+    "lon": 13.2312
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   }
+  ]
+ },
+ "lo": {
+  "hubs": [
+   {
+    "text": "Warsaw Chopin",
+    "icao": "EPWA",
+    "lat": 52.1657,
+    "lon": 20.9671
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Chicago O'Hare",
+    "icao": "KORD",
+    "lat": 41.9786,
+    "lon": -87.9048
+   },
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "sv": {
+  "hubs": [
+   {
+    "text": "Jeddah",
+    "icao": "OEJN",
+    "lat": 21.6802,
+    "lon": 39.1574
+   },
+   {
+    "text": "Riyadh",
+    "icao": "OERK",
+    "lat": 24.9576,
+    "lon": 46.6988
+   }
+  ],
+  "routes": [
+   {
+    "text": "Jakarta",
+    "icao": "WIII",
+    "lat": -6.1256,
+    "lon": 106.656
+   },
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Cairo",
+    "icao": "HECA",
+    "lat": 30.1115,
+    "lon": 31.3967
+   }
+  ]
+ },
+ "ms": {
+  "hubs": [
+   {
+    "text": "Cairo",
+    "icao": "HECA",
+    "lat": 30.1115,
+    "lon": 31.3967
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Riyadh",
+    "icao": "OERK",
+    "lat": 24.9576,
+    "lon": 46.6988
+   },
+   {
+    "text": "Kuwait City",
+    "icao": "OKKK",
+    "lat": 29.2245,
+    "lon": 47.9698
+   }
+  ]
+ },
+ "at": {
+  "hubs": [
+   {
+    "text": "Casablanca",
+    "icao": "GMMN",
+    "lat": 33.3675,
+    "lon": -7.59
+   }
+  ],
+  "routes": [
+   {
+    "text": "Paris CDG",
+    "icao": "LFPG",
+    "lat": 49.009,
+    "lon": 2.5541
+   },
+   {
+    "text": "Montreal",
+    "icao": "CYUL",
+    "lat": 45.4678,
+    "lon": -73.7423
+   },
+   {
+    "text": "Dakar",
+    "icao": "GOBD",
+    "lat": 14.6709,
+    "lon": -17.0728
+   },
+   {
+    "text": "Abidjan",
+    "icao": "DIAP",
+    "lat": 5.2614,
+    "lon": -3.9263
+   }
+  ]
+ },
+ "kq": {
+  "hubs": [
+   {
+    "text": "Nairobi Jomo Kenyatta",
+    "icao": "HKJK",
+    "lat": -1.3189,
+    "lon": 36.9282
+   }
+  ],
+  "routes": [
+   {
+    "text": "Amsterdam",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   },
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Guangzhou",
+    "icao": "ZGGG",
+    "lat": 23.3924,
+    "lon": 113.299
+   },
+   {
+    "text": "Mumbai",
+    "icao": "VABB",
+    "lat": 19.0887,
+    "lon": 72.8679
+   }
+  ]
+ },
+ "sa": {
+  "hubs": [
+   {
+    "text": "Johannesburg OR Tambo",
+    "icao": "FAOR",
+    "lat": -26.1401,
+    "lon": 28.2468
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Perth",
+    "icao": "YPPH",
+    "lat": -31.9403,
+    "lon": 115.967
+   },
+   {
+    "text": "Accra",
+    "icao": "DGAA",
+    "lat": 5.6052,
+    "lon": -0.1668
+   },
+   {
+    "text": "São Paulo",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   }
+  ]
+ },
+ "vn": {
+  "hubs": [
+   {
+    "text": "Hanoi Noi Bai",
+    "icao": "VVNB",
+    "lat": 21.2212,
+    "lon": 105.807
+   },
+   {
+    "text": "Ho Chi Minh City",
+    "icao": "VVTS",
+    "lat": 10.8188,
+    "lon": 106.652
+   }
+  ],
+  "routes": [
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Frankfurt",
+    "icao": "EDDF",
+    "lat": 50.0267,
+    "lon": 8.5584
+   },
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   }
+  ]
+ },
+ "ga": {
+  "hubs": [
+   {
+    "text": "Jakarta Soekarno-Hatta",
+    "icao": "WIII",
+    "lat": -6.1256,
+    "lon": 106.656
+   },
+   {
+    "text": "Denpasar Bali",
+    "icao": "WADD",
+    "lat": -8.7484,
+    "lon": 115.1671
+   }
+  ],
+  "routes": [
+   {
+    "text": "Amsterdam",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   },
+   {
+    "text": "Tokyo Haneda",
+    "icao": "RJTT",
+    "lat": 35.5497,
+    "lon": 139.787
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   }
+  ]
+ },
+ "pr": {
+  "hubs": [
+   {
+    "text": "Manila Ninoy Aquino",
+    "icao": "RPLL",
+    "lat": 14.5086,
+    "lon": 121.02
+   }
+  ],
+  "routes": [
+   {
+    "text": "Los Angeles",
+    "icao": "KLAX",
+    "lat": 33.9425,
+    "lon": -118.408
+   },
+   {
+    "text": "Toronto",
+    "icao": "CYYZ",
+    "lat": 43.6759,
+    "lon": -79.6294
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "mh": {
+  "hubs": [
+   {
+    "text": "Kuala Lumpur",
+    "icao": "WMKK",
+    "lat": 2.7456,
+    "lon": 101.71
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Jeddah",
+    "icao": "OEJN",
+    "lat": 21.6802,
+    "lon": 39.1574
+   }
+  ]
+ },
+ "ai": {
+  "hubs": [
+   {
+    "text": "Delhi",
+    "icao": "VIDP",
+    "lat": 28.5556,
+    "lon": 77.0952
+   },
+   {
+    "text": "Mumbai",
+    "icao": "VABB",
+    "lat": 19.0887,
+    "lon": 72.8679
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Heathrow",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Singapore",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   },
+   {
+    "text": "Sydney",
+    "icao": "YSSY",
+    "lat": -33.9461,
+    "lon": 151.177
+   }
+  ]
+ },
+ "av": {
+  "hubs": [
+   {
+    "text": "Bogotá El Dorado",
+    "icao": "SKBO",
+    "lat": 4.7016,
+    "lon": -74.1469
+   }
+  ],
+  "routes": [
+   {
+    "text": "Miami",
+    "icao": "KMIA",
+    "lat": 25.796,
+    "lon": -80.2898
+   },
+   {
+    "text": "Madrid",
+    "icao": "LEMD",
+    "lat": 40.4934,
+    "lon": -3.5722
+   },
+   {
+    "text": "Los Angeles",
+    "icao": "KLAX",
+    "lat": 33.9425,
+    "lon": -118.408
+   },
+   {
+    "text": "Buenos Aires",
+    "icao": "SABE",
+    "lat": -34.5594,
+    "lon": -58.4155
+   }
+  ]
+ },
+ "am": {
+  "hubs": [
+   {
+    "text": "Mexico City",
+    "icao": "MMMX",
+    "lat": 19.4358,
+    "lon": -99.0703
+   }
+  ],
+  "routes": [
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Madrid",
+    "icao": "LEMD",
+    "lat": 40.4934,
+    "lon": -3.5722
+   },
+   {
+    "text": "Paris CDG",
+    "icao": "LFPG",
+    "lat": 49.009,
+    "lon": 2.5541
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "cm": {
+  "hubs": [
+   {
+    "text": "Panama City Tocumen",
+    "icao": "MPTO",
+    "lat": 9.0714,
+    "lon": -79.3835
+   }
+  ],
+  "routes": [
+   {
+    "text": "Miami",
+    "icao": "KMIA",
+    "lat": 25.796,
+    "lon": -80.2898
+   },
+   {
+    "text": "New York JFK",
+    "icao": "KJFK",
+    "lat": 40.6394,
+    "lon": -73.7793
+   },
+   {
+    "text": "Buenos Aires",
+    "icao": "SABE",
+    "lat": -34.5594,
+    "lon": -58.4155
+   },
+   {
+    "text": "Santiago",
+    "icao": "SCEL",
+    "lat": -33.393,
+    "lon": -70.7858
+   }
+  ]
+ },
+ "g3": {
+  "hubs": [
+   {
+    "text": "São Paulo Congonhas",
+    "icao": "SBSP",
+    "lat": -23.6277,
+    "lon": -46.6546
+   },
+   {
+    "text": "São Paulo Guarulhos",
+    "icao": "SBGR",
+    "lat": -23.4313,
+    "lon": -46.47
+   }
+  ],
+  "routes": [
+   {
+    "text": "Buenos Aires",
+    "icao": "SABE",
+    "lat": -34.5594,
+    "lon": -58.4155
+   },
+   {
+    "text": "Santiago",
+    "icao": "SCEL",
+    "lat": -33.393,
+    "lon": -70.7858
+   },
+   {
+    "text": "Orlando",
+    "icao": "KMCO",
+    "lat": 28.4294,
+    "lon": -81.309
+   }
+  ]
+ },
+ "nz": {
+  "hubs": [
+   {
+    "text": "Auckland",
+    "icao": "NZAA",
+    "lat": -37.012,
+    "lon": 174.7863
+   }
+  ],
+  "routes": [
+   {
+    "text": "Los Angeles",
+    "icao": "KLAX",
+    "lat": 33.9425,
+    "lon": -118.408
+   },
+   {
+    "text": "London Heathrow（經洛杉磯）",
+    "icao": "EGLL",
+    "lat": 51.4707,
+    "lon": -0.4599
+   },
+   {
+    "text": "Shanghai Pudong",
+    "icao": "ZSPD",
+    "lat": 31.1434,
+    "lon": 121.805
+   },
+   {
+    "text": "Buenos Aires",
+    "icao": "SABE",
+    "lat": -34.5594,
+    "lon": -58.4155
+   }
+  ]
+ },
+ "su": {
+  "hubs": [
+   {
+    "text": "Moscow Sheremetyevo",
+    "icao": "UUEE",
+    "lat": 55.9769,
+    "lon": 37.4112
+   }
+  ],
+  "routes": [
+   {
+    "text": "北京",
+    "icao": "ZBAA",
+    "lat": 40.0773,
+    "lon": 116.5967
+   },
+   {
+    "text": "杜拜",
+    "icao": "OMDB",
+    "lat": 25.2498,
+    "lon": 55.371
+   },
+   {
+    "text": "伊斯坦堡",
+    "icao": "LTFM",
+    "lat": 41.2749,
+    "lon": 28.7321
+   }
+  ]
+ },
+ "jx": {
+  "hubs": [
+   {
+    "text": "Taiwan Taoyuan",
+    "icao": "RCTP",
+    "lat": 25.0777,
+    "lon": 121.233
+   }
+  ],
+  "routes": [
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Penang",
+    "icao": "WMKP",
+    "lat": 5.2963,
+    "lon": 100.2762
+   },
+   {
+    "text": "Los Angeles",
+    "icao": "KLAX",
+    "lat": 33.9425,
+    "lon": -118.408
+   },
+   {
+    "text": "San Francisco",
+    "icao": "KSFO",
+    "lat": 37.6198,
+    "lon": -122.3748
+   }
+  ]
+ },
+ "it": {
+  "hubs": [
+   {
+    "text": "Taiwan Taoyuan",
+    "icao": "RCTP",
+    "lat": 25.0777,
+    "lon": 121.233
+   },
+   {
+    "text": "Kaohsiung",
+    "icao": "RCKH",
+    "lat": 22.5771,
+    "lon": 120.35
+   }
+  ],
+  "routes": [
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Osaka Kansai",
+    "icao": "RJBB",
+    "lat": 34.4273,
+    "lon": 135.244
+   },
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   },
+   {
+    "text": "Okinawa",
+    "icao": "ROAH",
+    "lat": 26.1924,
+    "lon": 127.6398
+   }
+  ]
+ },
+ "mm": {
+  "hubs": [
+   {
+    "text": "Osaka Kansai",
+    "icao": "RJBB",
+    "lat": 34.4273,
+    "lon": 135.244
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ],
+  "routes": [
+   {
+    "text": "Taipei Taoyuan",
+    "icao": "RCTP",
+    "lat": 25.0777,
+    "lon": 121.233
+   },
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   },
+   {
+    "text": "Hong Kong",
+    "icao": "VHHH",
+    "lat": 22.3118,
+    "lon": 113.9149
+   },
+   {
+    "text": "Sapporo",
+    "icao": "RJCC",
+    "lat": 42.7748,
+    "lon": 141.6904
+   }
+  ]
+ },
+ "gk": {
+  "hubs": [
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Osaka Kansai",
+    "icao": "RJBB",
+    "lat": 34.4273,
+    "lon": 135.244
+   }
+  ],
+  "routes": [
+   {
+    "text": "Taipei Taoyuan",
+    "icao": "RCTP",
+    "lat": 25.0777,
+    "lon": 121.233
+   },
+   {
+    "text": "Hong Kong",
+    "icao": "VHHH",
+    "lat": 22.3118,
+    "lon": 113.9149
+   },
+   {
+    "text": "Manila",
+    "icao": "RPLL",
+    "lat": 14.5086,
+    "lon": 121.02
+   },
+   {
+    "text": "Fukuoka",
+    "icao": "RJFF",
+    "lat": 33.5859,
+    "lon": 130.451
+   }
+  ]
+ },
+ "bc": {
+  "hubs": [
+   {
+    "text": "Tokyo Haneda",
+    "icao": "RJTT",
+    "lat": 35.5497,
+    "lon": 139.787
+   }
+  ],
+  "routes": [
+   {
+    "text": "Sapporo Shin-Chitose",
+    "icao": "RJCC",
+    "lat": 42.7748,
+    "lon": 141.6904
+   },
+   {
+    "text": "Naha",
+    "icao": "ROAH",
+    "lat": 26.1924,
+    "lon": 127.6398
+   },
+   {
+    "text": "Fukuoka",
+    "icao": "RJFF",
+    "lat": 33.5859,
+    "lon": 130.451
+   },
+   {
+    "text": "Nagasaki",
+    "icao": "RJFU",
+    "lat": 32.9169,
+    "lon": 129.914
+   }
+  ]
+ },
+ "ak": {
+  "hubs": [
+   {
+    "text": "Kuala Lumpur",
+    "icao": "WMKK",
+    "lat": 2.7456,
+    "lon": 101.71
+   }
+  ],
+  "routes": [
+   {
+    "text": "Bangkok",
+    "icao": "VTBS",
+    "lat": 13.6811,
+    "lon": 100.747
+   },
+   {
+    "text": "Singapore",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   },
+   {
+    "text": "Jakarta",
+    "icao": "WIII",
+    "lat": -6.1256,
+    "lon": 106.656
+   },
+   {
+    "text": "Ho Chi Minh City",
+    "icao": "VVTS",
+    "lat": 10.8188,
+    "lon": 106.652
+   }
+  ]
+ },
+ "5j": {
+  "hubs": [
+   {
+    "text": "Manila Ninoy Aquino",
+    "icao": "RPLL",
+    "lat": 14.5086,
+    "lon": 121.02
+   },
+   {
+    "text": "Cebu",
+    "icao": "RPVM",
+    "lat": 10.3093,
+    "lon": 123.9797
+   }
+  ],
+  "routes": [
+   {
+    "text": "Singapore",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   },
+   {
+    "text": "Hong Kong",
+    "icao": "VHHH",
+    "lat": 22.3118,
+    "lon": 113.9149
+   },
+   {
+    "text": "Dubai",
+    "icao": "OMDB",
+    "lat": 25.2498,
+    "lon": 55.371
+   },
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   }
+  ]
+ },
+ "vj": {
+  "hubs": [
+   {
+    "text": "Ho Chi Minh City",
+    "icao": "VVTS",
+    "lat": 10.8188,
+    "lon": 106.652
+   },
+   {
+    "text": "Hanoi Noi Bai",
+    "icao": "VVNB",
+    "lat": 21.2212,
+    "lon": 105.807
+   }
+  ],
+  "routes": [
+   {
+    "text": "Bangkok",
+    "icao": "VTBS",
+    "lat": 13.6811,
+    "lon": 100.747
+   },
+   {
+    "text": "Singapore",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   },
+   {
+    "text": "Taipei Taoyuan",
+    "icao": "RCTP",
+    "lat": 25.0777,
+    "lon": 121.233
+   },
+   {
+    "text": "Seoul Incheon",
+    "icao": "RKSI",
+    "lat": 37.4691,
+    "lon": 126.451
+   }
+  ]
+ },
+ "tr": {
+  "hubs": [
+   {
+    "text": "Singapore Changi",
+    "icao": "WSSS",
+    "lat": 1.3502,
+    "lon": 103.994
+   }
+  ],
+  "routes": [
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Berlin",
+    "icao": "EDDB",
+    "lat": 52.3617,
+    "lon": 13.5023
+   },
+   {
+    "text": "Athens",
+    "icao": "LGAV",
+    "lat": 37.9364,
+    "lon": 23.9445
+   },
+   {
+    "text": "Gold Coast",
+    "icao": "YBCG",
+    "lat": -28.166,
+    "lon": 153.5066
+   }
+  ]
+ },
+ "f9": {
+  "hubs": [
+   {
+    "text": "Denver",
+    "icao": "KDEN",
+    "lat": 39.86,
+    "lon": -104.6738
+   }
+  ],
+  "routes": [
+   {
+    "text": "Cancún",
+    "icao": "MMUN",
+    "lat": 21.0408,
+    "lon": -86.8735
+   },
+   {
+    "text": "San Juan",
+    "icao": "TJSJ",
+    "lat": 18.4394,
+    "lon": -66.0018
+   }
+  ]
+ },
+ "y4": {
+  "hubs": [
+   {
+    "text": "Mexico City",
+    "icao": "MMMX",
+    "lat": 19.4358,
+    "lon": -99.0703
+   },
+   {
+    "text": "Guadalajara",
+    "icao": "MMGL",
+    "lat": 20.5233,
+    "lon": -103.3101
+   }
+  ],
+  "routes": [
+   {
+    "text": "Los Angeles",
+    "icao": "KLAX",
+    "lat": 33.9425,
+    "lon": -118.408
+   },
+   {
+    "text": "Las Vegas",
+    "icao": "KLAS",
+    "lat": 36.0834,
+    "lon": -115.1518
+   },
+   {
+    "text": "Guatemala City",
+    "icao": "MGGT",
+    "lat": 14.5829,
+    "lon": -90.5275
+   },
+   {
+    "text": "San Salvador",
+    "icao": "MYSM",
+    "lat": 24.063,
+    "lon": -74.5232
+   }
+  ]
+ },
+ "fz": {
+  "hubs": [
+   {
+    "text": "Dubai International",
+    "icao": "OMDB",
+    "lat": 25.2498,
+    "lon": 55.371
+   }
+  ],
+  "routes": [
+   {
+    "text": "Kathmandu",
+    "icao": "VNKT",
+    "lat": 27.6966,
+    "lon": 85.3591
+   },
+   {
+    "text": "Baku",
+    "icao": "UBBB",
+    "lat": 40.4728,
+    "lon": 50.0509
+   },
+   {
+    "text": "Zanzibar",
+    "icao": "HTZA",
+    "lat": -6.222,
+    "lon": 39.2249
+   },
+   {
+    "text": "Prague",
+    "icao": "LKPR",
+    "lat": 50.1009,
+    "lon": 14.2599
+   }
+  ]
+ },
+ "pc": {
+  "hubs": [
+   {
+    "text": "Istanbul Sabiha Gökçen",
+    "icao": "LTFJ",
+    "lat": 40.8986,
+    "lon": 29.3092
+   }
+  ],
+  "routes": [
+   {
+    "text": "Berlin",
+    "icao": "EDDB",
+    "lat": 52.3617,
+    "lon": 13.5023
+   },
+   {
+    "text": "London Stansted",
+    "icao": "EGSS",
+    "lat": 51.885,
+    "lon": 0.235
+   },
+   {
+    "text": "Dubai",
+    "icao": "OMDB",
+    "lat": 25.2498,
+    "lon": 55.371
+   },
+   {
+    "text": "Tbilisi",
+    "icao": "UGTB",
+    "lat": 41.6692,
+    "lon": 44.9547
+   }
+  ]
+ },
+ "vy": {
+  "hubs": [
+   {
+    "text": "Barcelona El Prat",
+    "icao": "LEBL",
+    "lat": 41.2971,
+    "lon": 2.0785
+   }
+  ],
+  "routes": [
+   {
+    "text": "Rome Fiumicino",
+    "icao": "LIRF",
+    "lat": 41.8045,
+    "lon": 12.252
+   },
+   {
+    "text": "Paris Orly",
+    "icao": "LFPO",
+    "lat": 48.7295,
+    "lon": 2.359
+   },
+   {
+    "text": "Amsterdam",
+    "icao": "EHAM",
+    "lat": 52.3086,
+    "lon": 4.7639
+   },
+   {
+    "text": "London Gatwick",
+    "icao": "EGKK",
+    "lat": 51.1487,
+    "lon": -0.1857
+   }
+  ]
+ },
+ "dy": {
+  "hubs": [
+   {
+    "text": "Oslo Gardermoen",
+    "icao": "ENGM",
+    "lat": 60.1939,
+    "lon": 11.1004
+   }
+  ],
+  "routes": [
+   {
+    "text": "London Gatwick",
+    "icao": "EGKK",
+    "lat": 51.1487,
+    "lon": -0.1857
+   },
+   {
+    "text": "Barcelona",
+    "icao": "LEBL",
+    "lat": 41.2971,
+    "lon": 2.0785
+   },
+   {
+    "text": "Málaga",
+    "icao": "LEMG",
+    "lat": 36.6749,
+    "lon": -4.4991
+   },
+   {
+    "text": "Alicante",
+    "icao": "LEAL",
+    "lat": 38.2822,
+    "lon": -0.5582
+   }
+  ]
+ },
+ "uo": {
+  "hubs": [
+   {
+    "text": "Hong Kong International",
+    "icao": "VHHH",
+    "lat": 22.3118,
+    "lon": 113.9149
+   }
+  ],
+  "routes": [
+   {
+    "text": "Tokyo Narita",
+    "icao": "RJAA",
+    "lat": 35.7686,
+    "lon": 140.3887
+   },
+   {
+    "text": "Osaka Kansai",
+    "icao": "RJBB",
+    "lat": 34.4273,
+    "lon": 135.244
+   },
+   {
+    "text": "Bangkok",
+    "icao": "VTBS",
+    "lat": 13.6811,
+    "lon": 100.747
+   },
+   {
+    "text": "Taipei Taoyuan",
+    "icao": "RCTP",
+    "lat": 25.0777,
+    "lon": 121.233
+   }
+  ]
+ },
+ "pg": {
+  "hubs": [
+   {
+    "text": "Bangkok Suvarnabhumi",
+    "icao": "VTBS",
+    "lat": 13.6811,
+    "lon": 100.747
+   }
+  ],
+  "routes": [
+   {
+    "text": "Chiang Mai",
+    "icao": "VTCC",
+    "lat": 18.7668,
+    "lon": 98.9626
+   },
+   {
+    "text": "Phuket",
+    "icao": "VTSP",
+    "lat": 8.1133,
+    "lon": 98.3174
+   },
+   {
+    "text": "Siem Reap",
+    "icao": "VDSA",
+    "lat": 13.3697,
+    "lon": 104.2238
+   }
+  ]
+ },
+ "nk": {
+  "hubs": [
+   {
+    "text": "Fort Lauderdale",
+    "icao": "KFLL",
+    "lat": 26.0726,
+    "lon": -80.1527
+   },
+   {
+    "text": "Orlando",
+    "icao": "KMCO",
+    "lat": 28.4294,
+    "lon": -81.309
+   }
+  ],
+  "routes": [
+   {
+    "text": "Cancún",
+    "icao": "MMUN",
+    "lat": 21.0408,
+    "lon": -86.8735
+   },
+   {
+    "text": "Santo Domingo",
+    "icao": "MDSD",
+    "lat": 18.4297,
+    "lon": -69.6689
+   }
+  ]
+ }
+}

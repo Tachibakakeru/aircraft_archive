@@ -8,6 +8,8 @@
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
 <link rel="stylesheet" href="css/style.css?v=76">
+<link rel="stylesheet" href="css/compare.css?v=76">
+<link rel="stylesheet" href="css/airports.css?v=76">
 <link rel="stylesheet" href="css/airlines.css?v=76">
 <script src="js/theme.js?v=76"></script>
 <script src="js/i18n.js?v=76"></script>
@@ -26,11 +28,22 @@
     <select class="ed-entry" id="al-alliance"></select>
     <select class="ed-entry" id="al-tier"></select>
     <label class="ed-entry apt-fav-toggle"><input type="checkbox" id="al-fav-only"><span data-i18n="airports.favonly">⭐ 只看收藏</span></label>
+    <button class="ed-entry" id="al-view-toggle" data-i18n="airlines.view.map">🌐 航線地圖</button>
+    <button class="ed-entry" id="al-cmp-open" data-i18n="fleet.compare">⇄ 比較</button>
     <a class="ed-entry" href="fleet.html" data-i18n="nav.fleet">✈️ 飛行器圖鑑</a>
     <a class="ed-entry" href="airports.html" data-i18n="nav.airports">🛬 機場與跑道</a>
+    <a class="ed-entry" href="distance.html" data-i18n="nav.distance">📏 距離計算</a>
     <a class="ed-entry" href="index.html" data-i18n="nav.home">🏠 首頁</a>
     <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
     <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+  </div>
+
+  <div class="apt-globe-wrap" id="al-globe-wrap" hidden>
+    <div class="apt-globe-controls">
+      <button id="al-globe-rotate" aria-pressed="true" data-i18n="viewer.rotate">自動旋轉</button>
+      <button id="al-globe-reset" data-i18n="viewer.reset">重置視角</button>
+    </div>
+    <div class="apt-globe-hint" data-i18n="airlines.view.mapHint">拖曳旋轉・滾輪縮放・點選左側航空公司查看其航線</div>
   </div>
 
   <div class="al-count" id="al-count"></div>
@@ -58,6 +71,7 @@
     <h2 id="al-p-name">—</h2>
     <div class="en" id="al-p-sub"></div>
     <span class="al-tier-tag" id="al-p-tier"></span>
+    <button id="al-p-cmp" class="apt-p-fav al-p-cmp" aria-pressed="false" data-i18n-title="airports.detail.addCompare" title="加入比較">⇄</button>
     <button id="al-p-edit" class="apt-p-fav al-p-edit" title="編輯">✎</button>
     <button id="al-p-fav" class="apt-p-fav" aria-pressed="false" title="收藏">☆</button>
     <button id="al-p-close" class="panel-close-btn" aria-label="關閉面板" data-i18n-aria="viewer.panel.close">✕</button>
@@ -126,8 +140,27 @@
   </div>
 </aside>
 
+<div class="apt-cmp-tray" id="al-cmp-tray" hidden>
+  <div class="apt-cmp-chips" id="al-cmp-chips"></div>
+  <button class="apt-cmp-go" id="al-cmp-go" data-i18n="airports.detail.compareGo">⇄ 開始比較</button>
+</div>
+
+<div class="apt-cmp-modal" id="al-cmp-modal" hidden>
+  <div class="apt-cmp-modal-head">
+    <h2 data-i18n="airlines.compareTitle">航空公司比較</h2>
+    <button id="al-cmp-modal-close" class="ed-entry" aria-label="關閉" data-i18n-aria="viewer.panel.close">✕</button>
+  </div>
+  <div class="apt-cmp-modal-body">
+    <div class="cmp-pickers" id="al-cmp-pickers"></div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table" id="al-cmp-table"></table>
+    </div>
+  </div>
+</div>
+
 <script src="js/auth.js?v=76"></script>
 <script src="js/storage.js?v=76"></script>
+<script src="js/globe.js?v=76"></script>
 <script src="js/airlines.js?v=76"></script>
 <script src="js/ui.js?v=76"></script>
 </body>
