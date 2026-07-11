@@ -249,3 +249,44 @@
     border-radius:20px 20px 0 0;
   }
 }
+
+/* ── 機場比較：搜尋選擇器 ── */
+.apt-cmp-picker{position:relative;min-width:200px}
+.apt-cmp-search{
+  width:100%;font-family:var(--sans);font-size:14px;
+  color:var(--text);background:var(--panel);
+  border:1px solid var(--stroke);border-radius:8px;
+  padding:9px 12px;
+}
+.apt-cmp-search:focus{outline:none;border-color:var(--amber)}
+.apt-cmp-suggest{
+  position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:60;
+  max-height:280px;overflow-y:auto;
+  background:var(--panel);border:1px solid var(--stroke);border-radius:8px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+.apt-cmp-opt{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:9px 12px;cursor:pointer;font-size:13px;
+  border-bottom:1px solid var(--stroke);
+}
+.apt-cmp-opt:last-child{border-bottom:none}
+.apt-cmp-opt:hover{background:var(--amber-soft)}
+.apt-cmp-opt-name{color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.apt-cmp-opt-code{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+
+/* ── 機場比較：全頁彈窗 ── */
+.apt-cmp-modal{
+  position:fixed;inset:0;z-index:90;
+  display:flex;flex-direction:column;
+  background:var(--bg-0);
+}
+.apt-cmp-modal[hidden]{display:none}
+.apt-cmp-modal-head{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  padding:16px 24px;border-bottom:1px solid var(--stroke);
+  background:var(--bg-1);
+}
+.apt-cmp-modal-head h2{flex:1;font-size:18px;font-weight:700;letter-spacing:.02em}
+.apt-cmp-modal-body{flex:1;overflow-y:auto}
+.apt-cmp-hint{font-size:11.5px;color:var(--muted);margin:14px 24px 0;line-height:1.7}

@@ -20,7 +20,7 @@ function toggleFav(id){
   localStorage.setItem(FAV_KEY, JSON.stringify([...FAVS]));
 }
 
-/* ── 加入比較（最多 4 座，交給 compare.html?mode=airports 頁面實際比較） ── */
+/* ── 加入比較（最多 4 座，就地開全頁彈窗比較，跟機型比較頁完全分開） ── */
 const CMP_KEY = "hangar_apt_compare";
 let CMP_LIST = JSON.parse(localStorage.getItem(CMP_KEY) || "[]");
 function isInCompare(id){ return CMP_LIST.includes(id); }
@@ -30,6 +30,7 @@ function toggleCompare(id){
   else { alert("最多同時比較 4 座機場，請先移除一座再加入。"); return; }
   localStorage.setItem(CMP_KEY, JSON.stringify(CMP_LIST));
   renderCompareTray();
+  if (!$("apt-cmp-modal").hidden) renderAptCmpPickers();
 }
 function renderCompareTray(){
   const tray = $("apt-cmp-tray");
@@ -41,7 +42,186 @@ function renderCompareTray(){
   }).join("");
   $("apt-cmp-chips").querySelectorAll("button").forEach(b =>
     b.addEventListener("click", () => toggleCompare(b.dataset.id)));
-  $("apt-cmp-go").href = `compare.html?mode=airports&ids=${CMP_LIST.join(",")}`;
+}
+
+let aptCmpDiffOnly = false;
+const APT_CMP_TYPE_RANK = {
+  large_airport: 0, medium_airport: 1, small_airport: 2,
+  seaplane_base: 3, heliport: 4, balloonport: 5, closed: 6,
+};
+function aptCmpSearchScore(a, q){
+  const typeRank = APT_CMP_TYPE_RANK[a.type] ?? 7;
+  const name = a.name.toLowerCase();
+  if ((a.icao && a.icao.toLowerCase() === q) || (a.iata && a.iata.toLowerCase() === q)) return typeRank;
+  if (name.startsWith(q)) return 10 + typeRank;
+  return 20 + typeRank;
+}
+
+function openAptCmpModal(){
+  if (!CMP_LIST.length) return;
+  $("apt-cmp-modal").hidden = false;
+  renderAptCmpPickers();
+}
+function closeAptCmpModal(){ $("apt-cmp-modal").hidden = true; }
+
+function renderAptCmpPickers(){
+  const wrap = $("apt-cmp-pickers");
+  wrap.innerHTML = "";
+  CMP_LIST.forEach((id, i) => {
+    const meta = AIRPORTS.find(a => a.id === id);
+    const box = document.createElement("div");
+    box.className = "apt-cmp-picker";
+    box.innerHTML = `
+      <input type="text" class="apt-cmp-search" value="${meta ? meta.name.replace(/"/g, "&quot;") : ""}"
+        placeholder="${I18N.t("compare.apt.search")}" autocomplete="off">
+      <div class="apt-cmp-suggest" hidden></div>`;
+    const input = box.querySelector(".apt-cmp-search");
+    const suggest = box.querySelector(".apt-cmp-suggest");
+    input.addEventListener("input", () => {
+      const q = input.value.trim().toLowerCase();
+      if (!q){ suggest.hidden = true; return; }
+      const matches = AIRPORTS
+        .filter(a =>
+          a.name.toLowerCase().includes(q) ||
+          (a.icao && a.icao.toLowerCase().includes(q)) ||
+          (a.iata && a.iata.toLowerCase().includes(q)))
+        .sort((a, b) => aptCmpSearchScore(a, q) - aptCmpSearchScore(b, q))
+        .slice(0, 8);
+      if (!matches.length){ suggest.hidden = true; return; }
+      suggest.innerHTML = matches.map(a =>
+        `<div class="apt-cmp-opt" data-id="${a.id}">
+          <span class="apt-cmp-opt-name">${a.name}</span>
+          <span class="apt-cmp-opt-code">${[a.icao, a.iata].filter(Boolean).join(" · ")}</span>
+        </div>`).join("");
+      suggest.hidden = false;
+    });
+    suggest.addEventListener("mousedown", async e => {
+      const opt = e.target.closest(".apt-cmp-opt");
+      if (!opt) return;
+      CMP_LIST[i] = opt.dataset.id;
+      localStorage.setItem(CMP_KEY, JSON.stringify(CMP_LIST));
+      suggest.hidden = true;
+      renderCompareTray(); renderAptCmpPickers(); await renderAptCmpTable();
+    });
+    input.addEventListener("blur", () => setTimeout(() => { suggest.hidden = true; }, 150));
+    wrap.appendChild(box);
+  });
+  if (CMP_LIST.length < 4){
+    const add = document.createElement("button");
+    add.className = "cmp-add";
+    add.textContent = I18N.t("compare.add");
+    add.addEventListener("click", () => {
+      CMP_LIST.push("");
+      renderAptCmpPickers();
+      const inputs = wrap.querySelectorAll(".apt-cmp-search");
+      inputs[inputs.length - 1].focus();
+    });
+    wrap.appendChild(add);
+  }
+  renderAptCmpTable();
+}
+
+async function renderAptCmpTable(){
+  const table = $("apt-cmp-table");
+  const ids = CMP_LIST.filter(Boolean);
+  if (!ids.length){ table.innerHTML = ""; return; }
+
+  const metaOf = {};
+  ids.forEach(id => { metaOf[id] = AIRPORTS.find(a => a.id === id); });
+  const countries = [...new Set(ids.map(id => metaOf[id] && metaOf[id].country).filter(Boolean))];
+  const [, notesArr] = await Promise.all([
+    Promise.all(countries.map(loadDetails)),
+    Promise.all(ids.map(fetchPublished)),
+  ]);
+  const detailOf = id => {
+    const m = metaOf[id];
+    const store = detailCache[(m && m.country) || "ZZ"] || {};
+    return store[id] || null;
+  };
+  const notesOf = {};
+  ids.forEach((id, i) => { notesOf[id] = notesArr[i]; });
+
+  let html = "<thead><tr><th></th>";
+  ids.forEach(id => {
+    const m = metaOf[id];
+    html += `<th><div class="craft-head">
+      <h2>${m.name}</h2>
+      <div class="mfr">${[m.icao, m.iata].filter(Boolean).join(" · ") || "—"}</div>
+      <div><button class="remove" data-id="${id}">${I18N.t("compare.remove")}</button></div>
+    </div></th>`;
+  });
+  html += "</tr></thead><tbody>";
+
+  const fmtFt = ft => ft == null ? null : I18N.specValue(`${Math.round(ft * 0.3048)} m (${Math.round(ft)} ft)`);
+
+  html += catBlockAptCmp(I18N.t("compare.basic"), [
+    [I18N.t("compare.apt.country"), id => (COUNTRIES[metaOf[id].country] || metaOf[id].country || "—")],
+    [I18N.t("compare.apt.city"), id => metaOf[id].city || "—"],
+    [I18N.t("compare.apt.type"), id => I18N.t("airports.type." + metaOf[id].type)],
+  ], ids);
+
+  html += catBlockAptCmp(I18N.t("compare.apt.location"), [
+    [I18N.t("compare.apt.elev"), id => { const d = detailOf(id); return d && d.elev != null ? fmtFt(d.elev) : null; }],
+    [I18N.t("compare.apt.coords"), id => { const d = detailOf(id); return d ? `${d.lat.toFixed(4)}, ${d.lon.toFixed(4)}` : null; }],
+  ], ids);
+
+  html += catBlockAptCmp(I18N.t("compare.apt.facilities"), [
+    [I18N.t("compare.apt.catIls"), id => (notesOf[id] && notesOf[id].catIls) || null],
+    [I18N.t("compare.apt.terminals"), id => (notesOf[id] && notesOf[id].terminals) || null],
+  ], ids);
+
+  html += catBlockAptCmp(I18N.t("compare.apt.runways"), [
+    [I18N.t("compare.apt.rwCount"), id => {
+      const d = detailOf(id);
+      return d && d.runways ? d.runways.filter(r => !r.closed).length : null;
+    }],
+    [I18N.t("compare.apt.rwLongest"), id => {
+      const d = detailOf(id);
+      if (!d || !d.runways || !d.runways.length) return null;
+      const longest = Math.max(0, ...d.runways.filter(r => !r.closed).map(r => r.len || 0));
+      return longest ? fmtFt(longest) : null;
+    }],
+    [I18N.t("compare.apt.rwSurf"), id => {
+      const d = detailOf(id);
+      if (!d || !d.runways) return null;
+      const surfs = [...new Set(d.runways.filter(r => !r.closed && r.surf).map(r => surfName(r.surf)))];
+      return surfs.length ? surfs.join(" / ") : null;
+    }],
+    [I18N.t("compare.apt.rwLit"), id => {
+      const d = detailOf(id);
+      return d && d.runways ? d.runways.filter(r => !r.closed && r.lit).length : null;
+    }],
+  ], ids);
+
+  html += "</tbody>";
+  table.innerHTML = html;
+
+  table.querySelectorAll(".remove").forEach(btn => {
+    btn.addEventListener("click", () => {
+      CMP_LIST = CMP_LIST.filter(x => x !== btn.dataset.id);
+      localStorage.setItem(CMP_KEY, JSON.stringify(CMP_LIST));
+      renderCompareTray(); renderAptCmpPickers();
+      if (!CMP_LIST.length) closeAptCmpModal();
+    });
+  });
+}
+
+function catBlockAptCmp(catName, rows, ids){
+  let rowsHtml = "";
+  rows.forEach(([label, getter]) => {
+    const vals = ids.map(getter);
+    const strVals = vals.map(v => v == null ? null : String(v));
+    const allSame = strVals.every(v => v === strVals[0]);
+    if (aptCmpDiffOnly && allSame) return;
+    rowsHtml += `<tr><td class="label-cell">${label}</td>`;
+    strVals.forEach(v => {
+      if (v == null) rowsHtml += `<td class="val na">—</td>`;
+      else rowsHtml += `<td class="val${!allSame ? " diff" : ""}">${v}</td>`;
+    });
+    rowsHtml += "</tr>";
+  });
+  if (!rowsHtml) return "";
+  return `<tr class="cat-row"><td colspan="${ids.length + 1}">${catName}</td></tr>` + rowsHtml;
 }
 
 /* ── 機場備註／照片（本機自訂內容，僅存於使用者瀏覽器） ── */
@@ -66,8 +246,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=45"),
-      fetch("data/countries.json?v=45"),
+      fetch("data/airports.json?v=46"),
+      fetch("data/countries.json?v=46"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -115,8 +295,11 @@ function escapeHTML(s){
     toggleCompare(id);
     syncCmpButton();
   });
+  $("apt-cmp-go").addEventListener("click", openAptCmpModal);
+  $("apt-cmp-modal-close").addEventListener("click", closeAptCmpModal);
   document.addEventListener("keydown", e => {
     if (!$("sat-lightbox").hidden){ if (e.key === "Escape") closeSatLightbox(); return; }
+    if (!$("apt-cmp-modal").hidden){ if (e.key === "Escape") closeAptCmpModal(); return; }
     if (e.key === "Escape") closePanel();
   });
   document.addEventListener("click", e => {
@@ -132,9 +315,7 @@ function escapeHTML(s){
     if (sat) openSatLightbox(parseFloat(sat.dataset.lat), parseFloat(sat.dataset.lon), parseInt(sat.dataset.zoom, 10));
   });
   $("sat-lb-close").addEventListener("click", e => { e.stopPropagation(); closeSatLightbox(); });
-  // 上限訂在 17：Esri 免費影像超過這個縮放層級後，同一批 5×5 圖磚常常各自
-  // 來自不同解析度／拍攝時間的來源，拼起來會很明顯不連貫（不是排列錯位）。
-  $("sat-lb-in").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.min(17, satState.zoom + 1); renderSatLightbox(); });
+  $("sat-lb-in").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.min(19, satState.zoom + 1); renderSatLightbox(); });
   $("sat-lb-out").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.max(2, satState.zoom - 1); renderSatLightbox(); });
   $("sat-lightbox").addEventListener("click", e => { e.stopPropagation(); if (e.target.id === "sat-lightbox") closeSatLightbox(); });
 
@@ -310,7 +491,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=45`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=46`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -425,7 +606,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=45`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=46`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];

@@ -26,6 +26,10 @@ self.addEventListener("fetch", e => {
 
   const url = new URL(req.url);
   if (url.protocol !== "http:" && url.protocol !== "https:") return;   // Cache API 不支援 chrome-extension: 等其他協定
+  if (url.origin !== self.location.origin) return;   // 只管自己網域的資源；第三方（如衛星圖磚）交給瀏覽器原生快取，
+                                                       // 不要塞進我們自己的 Cache——快取一堆跨網域 opaque 回應在手機
+                                                       // Safari 這類對 SW 快取容量管理較激進的瀏覽器上，容易在容量
+                                                       // 壓力下被部分淘汰、部分保留，造成同一批圖磚新舊混雜的怪異畫面。
   if (url.pathname.startsWith("/api/")) return;   // 即時 API：一律直連網路，不快取、不攔截
 
   if (req.mode === "navigate"){

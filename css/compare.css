@@ -51,7 +51,6 @@ body{min-height:100vh}
 
 .cmp-table-wrap{padding:24px;overflow-x:auto}
 .cmp-empty{color:var(--muted);font-size:15px;padding:40px 0;text-align:center}
-.cmp-apt-hint{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.7}
 
 .cmp-table{border-collapse:collapse;width:100%;min-width:max-content}
 .cmp-table th, .cmp-table td{
@@ -111,38 +110,3 @@ body{min-height:100vh}
 @media (max-width:640px){
   .cmp-table thead th{min-width:150px}
 }
-
-/* ── 模式切換（機型／機場） ── */
-.cmp-modes{display:flex;gap:2px;background:var(--panel);border:1px solid var(--stroke);border-radius:8px;padding:2px}
-.cmp-mode-btn{
-  font-family:var(--mono);font-size:11px;letter-spacing:.1em;
-  color:var(--muted);background:transparent;border:none;border-radius:6px;
-  padding:7px 14px;cursor:pointer;transition:all .15s;
-}
-.cmp-mode-btn:hover{color:var(--text)}
-.cmp-mode-btn.active{background:var(--amber);color:var(--bg-0);font-weight:700}
-
-/* ── 機場搜尋選擇器 ── */
-.cmp-apt-picker{position:relative;min-width:200px}
-.cmp-apt-search{
-  width:100%;font-family:var(--sans);font-size:14px;
-  color:var(--text);background:var(--panel);
-  border:1px solid var(--stroke);border-radius:8px;
-  padding:9px 12px;
-}
-.cmp-apt-search:focus{outline:none;border-color:var(--amber)}
-.cmp-apt-suggest{
-  position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:20;
-  max-height:280px;overflow-y:auto;
-  background:var(--panel);border:1px solid var(--stroke);border-radius:8px;
-  box-shadow:0 8px 24px rgba(0,0,0,.35);
-}
-.cmp-apt-opt{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;
-  padding:9px 12px;cursor:pointer;font-size:13px;
-  border-bottom:1px solid var(--stroke);
-}
-.cmp-apt-opt:last-child{border-bottom:none}
-.cmp-apt-opt:hover{background:var(--amber-soft)}
-.cmp-apt-opt-name{color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.cmp-apt-opt-code{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
