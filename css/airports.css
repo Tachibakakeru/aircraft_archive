@@ -318,6 +318,14 @@
 .apt-globe-wrap[hidden]{display:none}
 #apt-globe-canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none}
 #apt-globe-canvas:active{cursor:grabbing}
+#apt-globe-labels{
+  position:absolute;inset:0;z-index:1;
+  pointer-events:none;
+}
+.apt-globe-label-text{
+  font-family:var(--mono);font-size:10px;letter-spacing:.04em;
+  paint-order:stroke;stroke:rgba(0,0,0,.55);stroke-width:2.5px;stroke-linejoin:round;
+}
 .apt-globe-hint{
   position:absolute;left:16px;bottom:14px;z-index:2;
   font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;

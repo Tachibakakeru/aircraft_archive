@@ -1387,6 +1387,1093 @@
         "en": "India's largest airline; an all-Airbus narrow-body fleet strategy underpins over 60% of its domestic market share.",
         "ja": "インド最大の航空会社。エアバスの単通路機に統一した機隊戦略により、国内線シェア6割超を維持。"
       }
+    },
+    {
+      "id": "jblu",
+      "name": "JetBlue Airways",
+      "icao": "JBU",
+      "iata": "B6",
+      "country": {
+        "zh": "美國",
+        "en": "United States",
+        "ja": "アメリカ"
+      },
+      "founded": 1998,
+      "alliance": "none",
+      "hubs": [
+        "New York JFK",
+        "Boston Logan",
+        "Fort Lauderdale"
+      ],
+      "fleetTotal": 290,
+      "fleet": [
+        {
+          "type": "Airbus A320",
+          "count": 130,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A321",
+          "count": 90,
+          "fleetId": "a321"
+        },
+        {
+          "type": "Embraer 190",
+          "count": 60,
+          "fleetId": "e190"
+        }
+      ],
+      "routes": [
+        "London Heathrow",
+        "Cancún",
+        "San Juan",
+        "Bogotá"
+      ],
+      "tagline": {
+        "zh": "美國低成本航空先驅之一，以座位個人娛樂螢幕與較寬座距打出差異化。",
+        "en": "A pioneer of the U.S. low-cost model, differentiated early on by seatback entertainment screens and extra legroom.",
+        "ja": "米国の格安航空の先駆けの一つ。座席モニターとゆとりある座席間隔で差別化を図った。"
+      }
+    },
+    {
+      "id": "alk",
+      "name": "Alaska Airlines",
+      "icao": "ASA",
+      "iata": "AS",
+      "country": {
+        "zh": "美國",
+        "en": "United States",
+        "ja": "アメリカ"
+      },
+      "founded": 1932,
+      "alliance": "oneworld",
+      "hubs": [
+        "Seattle–Tacoma",
+        "Portland",
+        "Los Angeles"
+      ],
+      "fleetTotal": 315,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 235,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Embraer 175",
+          "count": 80
+        }
+      ],
+      "routes": [
+        "Anchorage",
+        "Honolulu",
+        "Mexico City",
+        "Cancún"
+      ],
+      "tagline": {
+        "zh": "美國西岸代表性航空，2021 年併購 Virgin America 後穩居第五大美籍航空。",
+        "en": "The West Coast's flagship U.S. carrier; absorbing Virgin America in 2021 cemented it as America's fifth-largest airline.",
+        "ja": "米国西海岸を代表する航空会社。2021年のヴァージン・アメリカ買収で米第5位の規模に。"
+      }
+    },
+    {
+      "id": "ib",
+      "name": "Iberia",
+      "icao": "IBE",
+      "iata": "IB",
+      "country": {
+        "zh": "西班牙",
+        "en": "Spain",
+        "ja": "スペイン"
+      },
+      "founded": 1927,
+      "alliance": "oneworld",
+      "hubs": [
+        "Madrid Barajas"
+      ],
+      "fleetTotal": 90,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 55,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 17,
+          "fleetId": "a332"
+        },
+        {
+          "type": "Airbus A350-900",
+          "count": 16,
+          "fleetId": "a359"
+        }
+      ],
+      "routes": [
+        "Buenos Aires",
+        "Mexico City",
+        "New York JFK",
+        "São Paulo"
+      ],
+      "tagline": {
+        "zh": "西班牙國家航空，馬德里樞紐是連結拉丁美洲航線最密集的歐洲機場之一。",
+        "en": "Spain's flag carrier; its Madrid hub is one of Europe's densest gateways into Latin America.",
+        "ja": "スペインのフラッグキャリア。マドリード・ハブは中南米路線が最も密集する欧州の空港の一つ。"
+      }
+    },
+    {
+      "id": "sk",
+      "name": "SAS Scandinavian Airlines",
+      "icao": "SAS",
+      "iata": "SK",
+      "country": {
+        "zh": "瑞典／挪威／丹麥",
+        "en": "Sweden / Norway / Denmark",
+        "ja": "スウェーデン／ノルウェー／デンマーク"
+      },
+      "founded": 1946,
+      "alliance": "skyteam",
+      "hubs": [
+        "Copenhagen",
+        "Stockholm Arlanda",
+        "Oslo"
+      ],
+      "fleetTotal": 130,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 80,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A350-900",
+          "count": 8,
+          "fleetId": "a359"
+        },
+        {
+          "type": "Boeing 737 家族",
+          "count": 20,
+          "fleetId": "b738"
+        }
+      ],
+      "routes": [
+        "New York JFK",
+        "Chicago O'Hare",
+        "Bangkok",
+        "Tokyo Narita"
+      ],
+      "tagline": {
+        "zh": "由丹麥、挪威、瑞典三國政府共同持股的跨國航空，2024 年轉投天合聯盟。",
+        "en": "A multinational carrier jointly backed by the Danish, Norwegian and Swedish governments, which switched to SkyTeam in 2024.",
+        "ja": "デンマーク・ノルウェー・スウェーデン3カ国政府が出資する多国籍航空会社。2024年にスカイチームへ加盟。"
+      }
+    },
+    {
+      "id": "ay",
+      "name": "Finnair",
+      "icao": "FIN",
+      "iata": "AY",
+      "country": {
+        "zh": "芬蘭",
+        "en": "Finland",
+        "ja": "フィンランド"
+      },
+      "founded": 1923,
+      "alliance": "oneworld",
+      "hubs": [
+        "Helsinki Vantaa"
+      ],
+      "fleetTotal": 70,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 40,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A350-900",
+          "count": 19,
+          "fleetId": "a359"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 7,
+          "fleetId": "a332"
+        }
+      ],
+      "routes": [
+        "Tokyo Narita",
+        "Shanghai Pudong",
+        "Bangkok",
+        "New York JFK"
+      ],
+      "tagline": {
+        "zh": "地理位置讓赫爾辛基成為歐洲飛往東亞最短航線的樞紐之一，長年主打北極航線優勢。",
+        "en": "Helsinki's location gives it some of Europe's shortest routes to East Asia, a polar-route advantage Finnair has long marketed.",
+        "ja": "地理的優位からヘルシンキは欧州―東アジア間で最短ルートの一つとなり、北極ルートの強みを長年打ち出してきた。"
+      }
+    },
+    {
+      "id": "w6",
+      "name": "Wizz Air",
+      "icao": "WZZ",
+      "iata": "W6",
+      "country": {
+        "zh": "匈牙利",
+        "en": "Hungary",
+        "ja": "ハンガリー"
+      },
+      "founded": 2003,
+      "alliance": "none",
+      "hubs": [
+        "Budapest",
+        "20+ 個歐洲基地機場"
+      ],
+      "fleetTotal": 220,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 220,
+          "fleetId": "a321"
+        }
+      ],
+      "routes": [
+        "中東歐短程點對點為主",
+        "London Luton",
+        "Abu Dhabi",
+        "Milan"
+      ],
+      "tagline": {
+        "zh": "中東歐成長最快的廉價航空，全 Airbus 單走道機隊複製 Ryanair 式低成本模式。",
+        "en": "Central and Eastern Europe's fastest-growing low-cost carrier, running an all-Airbus narrow-body fleet on a Ryanair-style cost model.",
+        "ja": "中東欧で最も急成長する格安航空会社。全機エアバスの単通路機で、ライアンエアー式の低コストモデルを踏襲。"
+      }
+    },
+    {
+      "id": "u2",
+      "name": "easyJet",
+      "icao": "EZY",
+      "iata": "U2",
+      "country": {
+        "zh": "英國",
+        "en": "United Kingdom",
+        "ja": "イギリス"
+      },
+      "founded": 1995,
+      "alliance": "none",
+      "hubs": [
+        "London Gatwick",
+        "London Luton",
+        "Milan Malpensa"
+      ],
+      "fleetTotal": 340,
+      "fleet": [
+        {
+          "type": "Airbus A319",
+          "count": 100,
+          "fleetId": "a319"
+        },
+        {
+          "type": "Airbus A320",
+          "count": 180,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A321",
+          "count": 60,
+          "fleetId": "a321"
+        }
+      ],
+      "routes": [
+        "歐洲短程點對點為主",
+        "Nice",
+        "Barcelona",
+        "Amsterdam"
+      ],
+      "tagline": {
+        "zh": "英國最大廉價航空，較同業更早進駐主要城市機場而非二線機場，票價策略走中間路線。",
+        "en": "The UK's largest low-cost carrier; unlike many rivals it targets primary city airports rather than secondary ones, with a more middle-ground fare strategy.",
+        "ja": "英国最大の格安航空会社。同業他社より早くから二次空港ではなく主要都市の空港に進出し、価格戦略も中間路線を取る。"
+      }
+    },
+    {
+      "id": "tp",
+      "name": "TAP Air Portugal",
+      "icao": "TAP",
+      "iata": "TP",
+      "country": {
+        "zh": "葡萄牙",
+        "en": "Portugal",
+        "ja": "ポルトガル"
+      },
+      "founded": 1945,
+      "alliance": "star",
+      "hubs": [
+        "Lisbon"
+      ],
+      "fleetTotal": 100,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 65,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 15,
+          "fleetId": "a332"
+        },
+        {
+          "type": "Airbus A321neo LR",
+          "count": 20,
+          "fleetId": "a321"
+        }
+      ],
+      "routes": [
+        "São Paulo",
+        "Rio de Janeiro",
+        "Luanda",
+        "New York JFK"
+      ],
+      "tagline": {
+        "zh": "葡萄牙國家航空，憑藉前殖民地淵源成為歐洲飛巴西與非洲葡語系國家的重要橋樑。",
+        "en": "Portugal's flag carrier; former colonial ties make it a key bridge between Europe and Brazil or Lusophone Africa.",
+        "ja": "ポルトガルのフラッグキャリア。旧植民地とのつながりから欧州とブラジル・ポルトガル語圏アフリカを結ぶ重要な架け橋に。"
+      }
+    },
+    {
+      "id": "lo",
+      "name": "LOT Polish Airlines",
+      "icao": "LOT",
+      "iata": "LO",
+      "country": {
+        "zh": "波蘭",
+        "en": "Poland",
+        "ja": "ポーランド"
+      },
+      "founded": 1929,
+      "alliance": "star",
+      "hubs": [
+        "Warsaw Chopin"
+      ],
+      "fleetTotal": 80,
+      "fleet": [
+        {
+          "type": "Embraer 175 / 190",
+          "count": 30
+        },
+        {
+          "type": "Boeing 737 家族",
+          "count": 20,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Boeing 787-8 / -9",
+          "count": 15,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "New York JFK",
+        "Chicago O'Hare",
+        "Seoul Incheon",
+        "Tokyo Narita"
+      ],
+      "tagline": {
+        "zh": "全球仍在營運的航空公司中歷史數一數二悠久者，波蘭裔美國人是其北美航線的核心客群。",
+        "en": "Among the world's oldest still-operating airlines; Polish-American communities are the core customer base for its North American routes.",
+        "ja": "現存する航空会社の中でも屈指の歴史を誇る。北米路線の主要顧客層はポーランド系アメリカ人。"
+      }
+    },
+    {
+      "id": "sv",
+      "name": "Saudia",
+      "icao": "SVA",
+      "iata": "SV",
+      "country": {
+        "zh": "沙烏地阿拉伯",
+        "en": "Saudi Arabia",
+        "ja": "サウジアラビア"
+      },
+      "founded": 1945,
+      "alliance": "skyteam",
+      "hubs": [
+        "Jeddah",
+        "Riyadh"
+      ],
+      "fleetTotal": 150,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 50,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Boeing 777-300ER",
+          "count": 45,
+          "fleetId": "b773"
+        },
+        {
+          "type": "Boeing 787-9 / -10",
+          "count": 35,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "Jakarta",
+        "London Heathrow",
+        "New York JFK",
+        "Cairo"
+      ],
+      "tagline": {
+        "zh": "沙烏地阿拉伯國家航空，每年朝聖季節（Hajj）承擔大量穆斯林前往麥加的專案航班。",
+        "en": "Saudi Arabia's flag carrier, which runs a heavy seasonal load of Hajj pilgrimage charter flights to Mecca each year.",
+        "ja": "サウジアラビアのフラッグキャリア。毎年の巡礼シーズン（ハッジ）にはメッカ向けの臨時便を大量に運航する。"
+      }
+    },
+    {
+      "id": "ms",
+      "name": "EgyptAir",
+      "icao": "MSR",
+      "iata": "MS",
+      "country": {
+        "zh": "埃及",
+        "en": "Egypt",
+        "ja": "エジプト"
+      },
+      "founded": 1932,
+      "alliance": "star",
+      "hubs": [
+        "Cairo"
+      ],
+      "fleetTotal": 75,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 30,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Boeing 737 家族",
+          "count": 20,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Boeing 787-9",
+          "count": 10,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "London Heathrow",
+        "New York JFK",
+        "Riyadh",
+        "Kuwait City"
+      ],
+      "tagline": {
+        "zh": "非洲歷史最悠久的航空公司之一，開羅樞紐是連結中東與非洲航線的重要轉運點。",
+        "en": "One of Africa's oldest airlines; its Cairo hub is a key transfer point between the Middle East and Africa.",
+        "ja": "アフリカ最古級の航空会社の一つ。カイロ・ハブは中東とアフリカを結ぶ重要な乗り継ぎ拠点。"
+      }
+    },
+    {
+      "id": "at",
+      "name": "Royal Air Maroc",
+      "icao": "RAM",
+      "iata": "AT",
+      "country": {
+        "zh": "摩洛哥",
+        "en": "Morocco",
+        "ja": "モロッコ"
+      },
+      "founded": 1957,
+      "alliance": "oneworld",
+      "hubs": [
+        "Casablanca"
+      ],
+      "fleetTotal": 60,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 35,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Boeing 787-8 / -9",
+          "count": 10,
+          "fleetId": "b789"
+        },
+        {
+          "type": "Embraer 190",
+          "count": 10,
+          "fleetId": "e190"
+        }
+      ],
+      "routes": [
+        "Paris CDG",
+        "Montreal",
+        "Dakar",
+        "Abidjan"
+      ],
+      "tagline": {
+        "zh": "摩洛哥國家航空，卡薩布蘭加樞紐是連結西非法語系國家與歐洲的重要中繼站。",
+        "en": "Morocco's flag carrier; its Casablanca hub is a key relay point between Francophone West Africa and Europe.",
+        "ja": "モロッコのフラッグキャリア。カサブランカ・ハブは仏語圏西アフリカと欧州を結ぶ重要な中継地。"
+      }
+    },
+    {
+      "id": "kq",
+      "name": "Kenya Airways",
+      "icao": "KQA",
+      "iata": "KQ",
+      "country": {
+        "zh": "肯亞",
+        "en": "Kenya",
+        "ja": "ケニア"
+      },
+      "founded": 1977,
+      "alliance": "skyteam",
+      "hubs": [
+        "Nairobi Jomo Kenyatta"
+      ],
+      "fleetTotal": 40,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 15,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Embraer 190",
+          "count": 10,
+          "fleetId": "e190"
+        },
+        {
+          "type": "Boeing 787-8",
+          "count": 9,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "Amsterdam",
+        "London Heathrow",
+        "Guangzhou",
+        "Mumbai"
+      ],
+      "tagline": {
+        "zh": "東非代表性航空，暱稱「和平之翼」，奈洛比樞紐輻射東非與中非多座區域機場。",
+        "en": "East Africa's flagship carrier, nicknamed \"the Pride of Africa\"; its Nairobi hub radiates flights across East and Central Africa.",
+        "ja": "東アフリカを代表する航空会社。愛称は「プライド・オブ・アフリカ」。ナイロビ・ハブから東・中央アフリカ各地へ路線を展開。"
+      }
+    },
+    {
+      "id": "sa",
+      "name": "South African Airways",
+      "icao": "SAA",
+      "iata": "SA",
+      "country": {
+        "zh": "南非",
+        "en": "South Africa",
+        "ja": "南アフリカ"
+      },
+      "founded": 1934,
+      "alliance": "none",
+      "hubs": [
+        "Johannesburg OR Tambo"
+      ],
+      "fleetTotal": 15,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 8,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 5,
+          "fleetId": "a332"
+        }
+      ],
+      "routes": [
+        "London Heathrow",
+        "Perth",
+        "Accra",
+        "São Paulo"
+      ],
+      "tagline": {
+        "zh": "南非國家航空，2020 年一度破產重整、大幅縮減機隊，仍是非洲南部航線網路的骨幹。",
+        "en": "South Africa's flag carrier; a 2020 bankruptcy restructuring sharply shrank its fleet, but it remains the backbone of Southern Africa's route network.",
+        "ja": "南アフリカのフラッグキャリア。2020年に経営破綻し機隊を大幅縮小したが、南部アフリカの路線網の要であり続けている。"
+      }
+    },
+    {
+      "id": "vn",
+      "name": "Vietnam Airlines",
+      "icao": "HVN",
+      "iata": "VN",
+      "country": {
+        "zh": "越南",
+        "en": "Vietnam",
+        "ja": "ベトナム"
+      },
+      "founded": 1956,
+      "alliance": "skyteam",
+      "hubs": [
+        "Hanoi Noi Bai",
+        "Ho Chi Minh City"
+      ],
+      "fleetTotal": 95,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 55,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A350-900",
+          "count": 14,
+          "fleetId": "a359"
+        },
+        {
+          "type": "Boeing 787-9 / -10",
+          "count": 15,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "Tokyo Narita",
+        "Sydney",
+        "Frankfurt",
+        "Seoul Incheon"
+      ],
+      "tagline": {
+        "zh": "越南國家航空，近年機隊快速汰換為新世代廣體機，是東南亞成長最快的航空市場代表之一。",
+        "en": "Vietnam's flag carrier, which has rapidly modernized its widebody fleet as one of Southeast Asia's fastest-growing aviation markets.",
+        "ja": "ベトナムのフラッグキャリア。近年ワイドボディ機隊を急速に新型化し、東南アジアで最も成長著しい航空市場の代表格。"
+      }
+    },
+    {
+      "id": "ga",
+      "name": "Garuda Indonesia",
+      "icao": "GIA",
+      "iata": "GA",
+      "country": {
+        "zh": "印尼",
+        "en": "Indonesia",
+        "ja": "インドネシア"
+      },
+      "founded": 1949,
+      "alliance": "skyteam",
+      "hubs": [
+        "Jakarta Soekarno-Hatta",
+        "Denpasar Bali"
+      ],
+      "fleetTotal": 70,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 45,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 15,
+          "fleetId": "a332"
+        },
+        {
+          "type": "Boeing 777-300ER",
+          "count": 8,
+          "fleetId": "b773"
+        }
+      ],
+      "routes": [
+        "Amsterdam",
+        "Tokyo Haneda",
+        "Sydney",
+        "Seoul Incheon"
+      ],
+      "tagline": {
+        "zh": "印尼國家航空，峇里島航線是其國際觀光客運量的主力，機隊曾因財務重整大幅縮編。",
+        "en": "Indonesia's flag carrier; Bali routes drive much of its international tourist traffic, and its fleet was sharply trimmed during a past financial restructuring.",
+        "ja": "インドネシアのフラッグキャリア。バリ島路線が国際観光客輸送の主力で、過去の財務再建で機隊を大幅に縮小した。"
+      }
+    },
+    {
+      "id": "pr",
+      "name": "Philippine Airlines",
+      "icao": "PAL",
+      "iata": "PR",
+      "country": {
+        "zh": "菲律賓",
+        "en": "Philippines",
+        "ja": "フィリピン"
+      },
+      "founded": 1941,
+      "alliance": "none",
+      "hubs": [
+        "Manila Ninoy Aquino"
+      ],
+      "fleetTotal": 55,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 25,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 12,
+          "fleetId": "a333"
+        },
+        {
+          "type": "Airbus A350-900",
+          "count": 6,
+          "fleetId": "a359"
+        }
+      ],
+      "routes": [
+        "Los Angeles",
+        "Toronto",
+        "Sydney",
+        "Tokyo Narita"
+      ],
+      "tagline": {
+        "zh": "亞洲歷史最悠久、仍以原名持續營運的航空公司，龐大海外菲律賓勞工社群是其長程航線主力客群。",
+        "en": "Asia's oldest airline still flying under its original name; overseas Filipino worker communities are the backbone of its long-haul demand.",
+        "ja": "アジア最古、創業時の社名で今も運航を続ける航空会社。海外在住フィリピン人労働者の巨大なコミュニティが長距離路線の主要顧客層。"
+      }
+    },
+    {
+      "id": "mh",
+      "name": "Malaysia Airlines",
+      "icao": "MAS",
+      "iata": "MH",
+      "country": {
+        "zh": "馬來西亞",
+        "en": "Malaysia",
+        "ja": "マレーシア"
+      },
+      "founded": 1947,
+      "alliance": "oneworld",
+      "hubs": [
+        "Kuala Lumpur"
+      ],
+      "fleetTotal": 75,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 45,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 15,
+          "fleetId": "a333"
+        },
+        {
+          "type": "Airbus A350-900",
+          "count": 6,
+          "fleetId": "a359"
+        }
+      ],
+      "routes": [
+        "London Heathrow",
+        "Sydney",
+        "Tokyo Narita",
+        "Jeddah"
+      ],
+      "tagline": {
+        "zh": "馬來西亞國家航空，吉隆坡樞紐銜接東協區域網路，近年積極擴大寬體遠程航線。",
+        "en": "Malaysia's flag carrier, whose Kuala Lumpur hub anchors an ASEAN regional network while it expands widebody long-haul routes.",
+        "ja": "マレーシアのフラッグキャリア。クアラルンプール・ハブがASEAN域内網の要となる一方、近年はワイドボディ長距離路線を拡大中。"
+      }
+    },
+    {
+      "id": "ai",
+      "name": "Air India",
+      "icao": "AIC",
+      "iata": "AI",
+      "country": {
+        "zh": "印度",
+        "en": "India",
+        "ja": "インド"
+      },
+      "founded": 1932,
+      "alliance": "star",
+      "hubs": [
+        "Delhi",
+        "Mumbai"
+      ],
+      "fleetTotal": 130,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 60,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Boeing 777-200 / -300ER",
+          "count": 25,
+          "fleetId": "b772"
+        },
+        {
+          "type": "Boeing 787-8",
+          "count": 27,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "London Heathrow",
+        "New York JFK",
+        "Singapore",
+        "Sydney"
+      ],
+      "tagline": {
+        "zh": "印度國家航空，2022 年由塔塔集團收購後大舉汰換機隊、重塑品牌，是全球關注度最高的航空重整案例之一。",
+        "en": "India's flag carrier, acquired by the Tata Group in 2022, is undergoing a major fleet renewal and rebrand watched closely across the industry.",
+        "ja": "インドのフラッグキャリア。2022年にタタ・グループへ買収され、機隊刷新とブランド再構築を進める業界注目の再建事例。"
+      }
+    },
+    {
+      "id": "av",
+      "name": "Avianca",
+      "icao": "AVA",
+      "iata": "AV",
+      "country": {
+        "zh": "哥倫比亞",
+        "en": "Colombia",
+        "ja": "コロンビア"
+      },
+      "founded": 1919,
+      "alliance": "star",
+      "hubs": [
+        "Bogotá El Dorado"
+      ],
+      "fleetTotal": 140,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 120,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 12,
+          "fleetId": "a332"
+        }
+      ],
+      "routes": [
+        "Miami",
+        "Madrid",
+        "Los Angeles",
+        "Buenos Aires"
+      ],
+      "tagline": {
+        "zh": "全球第二悠久、仍在營運的航空公司，波哥大樞紐是安地斯山區飛北美航線的重要出發點。",
+        "en": "The world's second-oldest still-operating airline; its Bogotá hub is a key departure point for Andean routes to North America.",
+        "ja": "現存する航空会社として世界2番目に古い歴史を持つ。ボゴタ・ハブはアンデス地域から北米への重要な出発拠点。"
+      }
+    },
+    {
+      "id": "am",
+      "name": "Aeroméxico",
+      "icao": "AMX",
+      "iata": "AM",
+      "country": {
+        "zh": "墨西哥",
+        "en": "Mexico",
+        "ja": "メキシコ"
+      },
+      "founded": 1934,
+      "alliance": "skyteam",
+      "hubs": [
+        "Mexico City"
+      ],
+      "fleetTotal": 150,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 100,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Boeing 787-8 / -9",
+          "count": 22,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "New York JFK",
+        "Madrid",
+        "Paris CDG",
+        "Tokyo Narita"
+      ],
+      "tagline": {
+        "zh": "墨西哥最大航空公司，墨西哥城樞紐是連結拉丁美洲與北美航線最密集的機場之一。",
+        "en": "Mexico's largest airline; its Mexico City hub is one of the busiest gateways linking Latin America with North America.",
+        "ja": "メキシコ最大の航空会社。メキシコシティ・ハブは中南米と北米を結ぶ路線が最も密集する空港の一つ。"
+      }
+    },
+    {
+      "id": "cm",
+      "name": "Copa Airlines",
+      "icao": "CMP",
+      "iata": "CM",
+      "country": {
+        "zh": "巴拿馬",
+        "en": "Panama",
+        "ja": "パナマ"
+      },
+      "founded": 1947,
+      "alliance": "star",
+      "hubs": [
+        "Panama City Tocumen"
+      ],
+      "fleetTotal": 100,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 100,
+          "fleetId": "b738"
+        }
+      ],
+      "routes": [
+        "Miami",
+        "New York JFK",
+        "Buenos Aires",
+        "Santiago"
+      ],
+      "tagline": {
+        "zh": "巴拿馬國家航空，「美洲中心」樞紐策略讓中美洲小國也能一站轉機直達全美洲主要城市。",
+        "en": "Panama's flag carrier; its \"Hub of the Americas\" strategy lets travelers from small Central American nations reach major cities across the hemisphere with one connection.",
+        "ja": "パナマのフラッグキャリア。「アメリカ大陸のハブ」戦略により、中米の小国からも一度の乗り継ぎで南北アメリカの主要都市へアクセス可能に。"
+      }
+    },
+    {
+      "id": "g3",
+      "name": "GOL Linhas Aéreas",
+      "icao": "GLO",
+      "iata": "G3",
+      "country": {
+        "zh": "巴西",
+        "en": "Brazil",
+        "ja": "ブラジル"
+      },
+      "founded": 2001,
+      "alliance": "none",
+      "hubs": [
+        "São Paulo Congonhas",
+        "São Paulo Guarulhos"
+      ],
+      "fleetTotal": 140,
+      "fleet": [
+        {
+          "type": "Boeing 737 家族",
+          "count": 140,
+          "fleetId": "b738"
+        }
+      ],
+      "routes": [
+        "巴西國內線為主",
+        "Buenos Aires",
+        "Santiago",
+        "Orlando"
+      ],
+      "tagline": {
+        "zh": "巴西低成本航空先驅，全 737 機隊主打國內線市場，近年與美國航空結盟擴大國際航點。",
+        "en": "A pioneer of Brazil's low-cost model with an all-737 fleet focused on the domestic market, now expanding internationally through an American Airlines partnership.",
+        "ja": "ブラジルの格安航空の先駆け。全737機隊で国内線市場を主戦場とし、近年はアメリカン航空との提携で国際線を拡大。"
+      }
+    },
+    {
+      "id": "nz",
+      "name": "Air New Zealand",
+      "icao": "ANZ",
+      "iata": "NZ",
+      "country": {
+        "zh": "紐西蘭",
+        "en": "New Zealand",
+        "ja": "ニュージーランド"
+      },
+      "founded": 1940,
+      "alliance": "star",
+      "hubs": [
+        "Auckland"
+      ],
+      "fleetTotal": 100,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 45,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Boeing 777-200 / -300ER",
+          "count": 12,
+          "fleetId": "b772"
+        },
+        {
+          "type": "Boeing 787-9",
+          "count": 14,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "Los Angeles",
+        "London Heathrow（經洛杉磯）",
+        "Shanghai Pudong",
+        "Buenos Aires"
+      ],
+      "tagline": {
+        "zh": "紐西蘭國家航空，機上安全示範影片以幽默創意聞名，長程航線多為跨太平洋唯一直飛選項。",
+        "en": "New Zealand's flag carrier, famous for its creative safety-video productions; many of its long-haul routes are the only nonstop option across the Pacific.",
+        "ja": "ニュージーランドのフラッグキャリア。ユニークな機内安全ビデオで知られ、長距離路線の多くが太平洋横断唯一の直行便。"
+      }
+    },
+    {
+      "id": "su",
+      "name": "Aeroflot",
+      "icao": "AFL",
+      "iata": "SU",
+      "country": {
+        "zh": "俄羅斯",
+        "en": "Russia",
+        "ja": "ロシア"
+      },
+      "founded": 1923,
+      "alliance": "none",
+      "hubs": [
+        "Moscow Sheremetyevo"
+      ],
+      "fleetTotal": 180,
+      "fleet": [
+        {
+          "type": "Airbus A320 家族",
+          "count": 90,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Boeing 777-300ER",
+          "count": 15,
+          "fleetId": "b773"
+        },
+        {
+          "type": "Airbus A330",
+          "count": 20,
+          "fleetId": "a332"
+        }
+      ],
+      "routes": [
+        "國際線因制裁大幅縮減",
+        "北京",
+        "杜拜",
+        "伊斯坦堡"
+      ],
+      "tagline": {
+        "zh": "俄羅斯國家航空，全球歷史最悠久的持續營運航空公司之一，2022 年後因制裁被多聯盟暫停會籍、國際航線大幅萎縮。",
+        "en": "Russia's flag carrier and one of the world's oldest continuously operating airlines; sanctions since 2022 suspended its alliance memberships and sharply shrank its international network.",
+        "ja": "ロシアのフラッグキャリアで、現存する航空会社の中でも屈指の歴史を持つ。2022年以降の制裁でアライアンス資格が停止され、国際線網も大幅に縮小した。"
+      }
     }
   ]
 }

@@ -3,20 +3,84 @@
    機場 3D 地球檢視 — 惰性載入（首次切到地圖模式才拉 Three.js CDN
    與初始化場景），球體貼衛星影像貼圖（assets/earth_daymap.jpg），
    標示目前篩選結果的機場點位（收藏用琥珀色），點擊開詳情面板並飛向
-   該點位。沿用 viewer.js 的拖曳旋轉／滾輪縮放／自動旋轉／重置視角手感。
+   該點位。拉近到夠近、光點會擠在一起時，改用「小錨點＋牽引線＋大頭針
+   ＋代號」的 2D 版面配置分開顯示（svgLabels），避免重疊到點不到。
+   沿用 viewer.js 的拖曳旋轉／滾輪縮放／自動旋轉／重置視角手感。
    ═══════════════════════════════════════════════ */
 const AptGlobe = (() => {
   let ready = false, loading = null;
-  let scene, camera, renderer, canvas, raf = 0;
+  let scene, camera, renderer, canvas, svgLabels, raf = 0;
   const DEF_THETA = 0.6, DEF_PHI = 1.2, DEF_RADIUS = 3.2;
   let theta = DEF_THETA, phi = DEF_PHI, radius = DEF_RADIUS;
   const RAD_MIN = 1.15, RAD_MAX = 6;
   let autoRotate = true;
   let flying = null;       // { fromTheta,fromPhi,fromRadius, toTheta,toPhi,toRadius, start, dur }
-  let markers = [];        // { mesh, id, lat, lon }
+  let markers = [];        // { mesh, id, lat, lon, code, fav }
   let markerGroup;
   let onPick = null;       // (id) => void
   let onRotateChange = null;   // (isAutoRotating) => void
+
+  // 標籤模式：夠近、畫面上的候選點數量夠少時，才切換成牽引線版面
+  const LABEL_MAX_RADIUS = 2.0, LABEL_MAX_COUNT = 45, LABEL_MIN_DIST = 46, LEADER_LEN = 22;
+  let labelPositions = new Map();   // id → { sx, sy }（螢幕座標，label 模式啟用時才有效）
+  let labelFrame = 0;
+
+  // 飛到某機場時貼一小塊真實衛星圖磚在該處球面上（沿用機場衛星縮圖同一套
+  // Esri World Imagery 圖磚服務），球體本身的貼圖解析度有上限，這塊局部
+  // 高解析貼片讓「飛近後看得到地面細節」這件事真的成立，不是整顆球都無限
+  // 清晰（那需要完整的多層級圖磚金字塔，超出這裡合理的實作規模）。
+  const TILE_ZOOM = 15, TILE_RADIUS = 1;   // 3×3 圖磚
+  let groundPatch = null, patchReqId = 0;
+
+  function tileXY(lon, lat, z){
+    const n = 2 ** z;
+    const x = Math.floor((lon + 180) / 360 * n);
+    const latRad = lat * Math.PI / 180;
+    const y = Math.floor((1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2 * n);
+    return { x: ((x % n) + n) % n, y: Math.max(0, Math.min(n - 1, y)) };
+  }
+  function tileURL(z, x, y){
+    return `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}`;
+  }
+
+  async function showGroundPatch(lat, lon){
+    const myReq = ++patchReqId;
+    const { x: cx, y: cy } = tileXY(lon, lat, TILE_ZOOM);
+    const span = TILE_RADIUS * 2 + 1;
+    const tileCanvas = document.createElement("canvas");
+    tileCanvas.width = tileCanvas.height = 256 * span;
+    const ctx = tileCanvas.getContext("2d");
+    const loads = [];
+    for (let dy = -TILE_RADIUS; dy <= TILE_RADIUS; dy++){
+      for (let dx = -TILE_RADIUS; dx <= TILE_RADIUS; dx++){
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        const px = (dx + TILE_RADIUS) * 256, py = (dy + TILE_RADIUS) * 256;
+        loads.push(new Promise(resolve => {
+          img.onload = () => { ctx.drawImage(img, px, py, 256, 256); resolve(); };
+          img.onerror = resolve;
+          img.src = tileURL(TILE_ZOOM, cx + dx, cy + dy);
+        }));
+      }
+    }
+    await Promise.all(loads);
+    if (myReq !== patchReqId || !scene) return;   // 期間又飛到別的機場，這批已經過期
+
+    if (groundPatch){
+      scene.remove(groundPatch);
+      groundPatch.geometry.dispose();
+      groundPatch.material.map.dispose();
+      groundPatch.material.dispose();
+    }
+    const tex = new THREE.CanvasTexture(tileCanvas);
+    tex.encoding = THREE.sRGBEncoding;
+    const geo = new THREE.PlaneGeometry(0.075, 0.075);
+    const mat = new THREE.MeshBasicMaterial({ map: tex });
+    groundPatch = new THREE.Mesh(geo, mat);
+    groundPatch.position.copy(latLonToVec3(lat, lon, 1.006));
+    groundPatch.lookAt(0, 0, 0);   // -Z 朝向球心，貼圖正面（+Z）自然朝外
+    scene.add(groundPatch);
+  }
 
   function themeColor(varName, fallback){
     const v = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
@@ -65,6 +129,11 @@ const AptGlobe = (() => {
     canvas.id = "apt-globe-canvas";
     container.appendChild(canvas);
 
+    svgLabels = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svgLabels.id = "apt-globe-labels";
+    svgLabels.setAttribute("aria-hidden", "true");
+    container.appendChild(svgLabels);
+
     renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.outputEncoding = THREE.sRGBEncoding;
@@ -99,6 +168,8 @@ const AptGlobe = (() => {
     const w = canvas.parentElement.clientWidth, h = canvas.parentElement.clientHeight;
     renderer.setSize(w, h, false);
     canvas.style.width = w + "px"; canvas.style.height = h + "px";
+    svgLabels.setAttribute("width", w); svgLabels.setAttribute("height", h);
+    svgLabels.setAttribute("viewBox", `0 0 ${w} ${h}`);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
   }
@@ -139,7 +210,7 @@ const AptGlobe = (() => {
   function wireControls(){
     // moved 用「起點到目前位置」的直線距離（淨位移），不要用逐段位移累加——
     // 累加會把滑鼠/觸控自然的細微抖動也算進去，正常點擊也常常一路累加到
-    // 超過門檻，導致 pick() 幾乎永遠不會被觸發（點光點沒反應的根因之一）。
+    // 超過門檻，導致 pick() 幾乎永遠不會被觸發。
     let dragging = false, moved = 0, startX = 0, startY = 0, lastX = 0, lastY = 0, pinchDist = 0;
     const pointers = new Map();
     canvas.addEventListener("pointerdown", e => {
@@ -182,29 +253,109 @@ const AptGlobe = (() => {
     }, { passive: false });
   }
 
+  function projectMarker(m, rect, camDir){
+    const normal = m.mesh.position.clone().normalize();
+    if (normal.dot(camDir) < 0.08) return null;   // 背向鏡頭（地球另一面），視為被擋住
+    const proj = m.mesh.position.clone().project(camera);
+    if (proj.z > 1) return null;
+    return { sx: (proj.x * 0.5 + 0.5) * rect.width, sy: (-proj.y * 0.5 + 0.5) * rect.height };
+  }
+
   // 點位判定：用螢幕座標最近點而非 3D 光線投射，因為標記點半徑很小、
   // 縮放時投影尺寸又會跟著變化，光線投射常常「點了但沒中」；
-  // 固定像素容許誤差不受縮放影響，點擊手感穩定得多。
+  // 固定像素容許誤差不受縮放影響，點擊手感穩定得多。label 模式下優先比對
+  // 牽引線移開後的大頭針位置（使用者實際會去點的地方）。
   function pick(cx, cy){
     if (!markers.length) return;
     const rect = canvas.getBoundingClientRect();
-    const camDir = camera.position.clone().normalize();
+    const localX = cx - rect.left, localY = cy - rect.top;
     const HIT_PX = 16;
     let best = null, bestDist = HIT_PX;
+
+    if (labelPositions.size){
+      markers.forEach(m => {
+        const lp = labelPositions.get(m.id);
+        if (!lp) return;
+        const dist = Math.hypot(lp.sx - localX, lp.sy - localY);
+        if (dist < bestDist){ bestDist = dist; best = m; }
+      });
+      if (best){ flyTo(best.lat, best.lon, 1.7); showGroundPatch(best.lat, best.lon); if (onPick) onPick(best.id); return; }
+    }
+
+    const camDir = camera.position.clone().normalize();
     markers.forEach(m => {
-      const normal = m.mesh.position.clone().normalize();
-      if (normal.dot(camDir) < 0.08) return;   // 背向鏡頭（地球另一面），視為被擋住
-      const proj = m.mesh.position.clone().project(camera);
-      if (proj.z > 1) return;
-      const sx = rect.left + (proj.x * 0.5 + 0.5) * rect.width;
-      const sy = rect.top + (-proj.y * 0.5 + 0.5) * rect.height;
-      const dist = Math.hypot(sx - cx, sy - cy);
+      const p = projectMarker(m, rect, camDir);
+      if (!p) return;
+      const dist = Math.hypot(p.sx - localX, p.sy - localY);
       if (dist < bestDist){ bestDist = dist; best = m; }
     });
     if (best){
       flyTo(best.lat, best.lon, 1.7);
+      showGroundPatch(best.lat, best.lon);
       if (onPick) onPick(best.id);
     }
+  }
+
+  // 拉近到夠近、候選點數量夠少時，切成「小錨點＋牽引線＋大頭針＋代號」
+  // 版面：用貪婪演算法把彼此太近的大頭針依序往外挪開，直到不再重疊。
+  function updateLabels(){
+    const rect = { width: canvas.clientWidth, height: canvas.clientHeight };
+    if (!rect.width || !rect.height) return;
+    const camDir = camera.position.clone().normalize();
+    const cx0 = rect.width / 2, cy0 = rect.height / 2;
+
+    // 45° 視角下，即使拉得很近，前半球絕大多數點還是會投影到畫面裡的
+    // 某處（不會被視角邊界裁掉）——不能只靠「有沒有投影在畫面內」篩選，
+    // 否則候選數量幾乎不會隨縮放減少。改成：一律先收集全部候選，
+    // 再依「離畫面正中央（=目前鏡頭正對的位置）多近」排序，只取最近的
+    // 一批做牽引線版面，其餘維持一般小點顯示，不會整批消失。
+    const candidates = [];
+    markers.forEach(m => {
+      const p = projectMarker(m, rect, camDir);
+      if (!p) return;
+      const centerDist = Math.hypot(p.sx - cx0, p.sy - cy0);
+      candidates.push({ m, ax: p.sx, ay: p.sy, centerDist });
+    });
+
+    const active = radius < LABEL_MAX_RADIUS && candidates.length > 0;
+    labelPositions.clear();
+
+    if (!active){
+      if (svgLabels.childElementCount) svgLabels.innerHTML = "";
+      return;
+    }
+
+    candidates.sort((a, b) => a.centerDist - b.centerDist);
+    const nearby = candidates.slice(0, LABEL_MAX_COUNT);
+    nearby.sort((a, b) => (b.m.fav ? 1 : 0) - (a.m.fav ? 1 : 0));
+    const placed = [];
+    nearby.forEach(c => {
+      let lx = c.ax, ly = c.ay - LEADER_LEN, tries = 0;
+      // 用黃金角螺旋往外找空位，涵蓋整個圓周（不像 abs(sin) 只會往上偏移，
+      // 密集區域很容易探不到真正的空位，導致部分大頭針還是疊在一起）。
+      while (tries < 24 && placed.some(p => Math.hypot(p.lx - lx, p.ly - ly) < LABEL_MIN_DIST)){
+        const ang = tries * 137.5 * Math.PI / 180;
+        const dist = LEADER_LEN + tries * 8;
+        lx = c.ax + Math.cos(ang) * dist;
+        ly = c.ay + Math.sin(ang) * dist;
+        tries++;
+      }
+      placed.push({ lx, ly, c });
+      labelPositions.set(c.m.id, { sx: lx, sy: ly });
+    });
+
+    const cyan = themeColor("--cyan", "#6fd3ef"), amber = themeColor("--amber", "#ffb547");
+    svgLabels.innerHTML = placed.map(({ lx, ly, c }) => {
+      const color = c.m.fav ? amber : cyan;
+      const code = c.m.code || "";
+      return `
+        <line x1="${c.ax.toFixed(1)}" y1="${c.ay.toFixed(1)}" x2="${lx.toFixed(1)}" y2="${ly.toFixed(1)}" stroke="${color}" stroke-width="1" opacity="0.65"/>
+        <circle cx="${c.ax.toFixed(1)}" cy="${c.ay.toFixed(1)}" r="2" fill="${color}"/>
+        <circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="4.5" fill="${color}" stroke="rgba(0,0,0,.4)" stroke-width="1"/>
+        <line x1="${(lx - 10).toFixed(1)}" y1="${(ly + 8).toFixed(1)}" x2="${(lx + 10).toFixed(1)}" y2="${(ly + 8).toFixed(1)}" stroke="${color}" stroke-width="1"/>
+        ${code ? `<text x="${lx.toFixed(1)}" y="${(ly + 20).toFixed(1)}" text-anchor="middle" class="apt-globe-label-text" fill="${color}">${code}</text>` : ""}
+      `;
+    }).join("");
   }
 
   function tick(){
@@ -212,21 +363,24 @@ const AptGlobe = (() => {
     if (flying) advanceFlight();
     else if (autoRotate) theta += 0.0015;
     applyCamera();
-    // 縮放時標記點跟著等比縮小/放大：拉近時同一批機場間的螢幕間距會自然
-    // 變大，藉此把原本擠在一起看不清楚的光點分開；縮放同時稍微限制點的
-    // 世界座標尺寸，避免拉到很近時光點膨脹成一大坨。
-    const s = Math.max(0.35, Math.min(1, (radius - 1) / (DEF_RADIUS - 1)));
-    markerGroup.scale.setScalar(s);
+    // 每個標記點各自的世界座標尺寸依縮放程度微調（不是整組 Group 縮放——
+    // 縮放 Group 連子物件的「位置」也會一起被拉向球心，標記點會被拉進
+    // 不透明的地球內部而整批消失，這是先前版本點一放大光點就不見的根因）。
+    const s = Math.max(0.5, Math.min(1, radius / DEF_RADIUS));
+    markers.forEach(m => m.mesh.scale.setScalar(s));
+    if (++labelFrame % 3 === 0) updateLabels();
     renderer.render(scene, camera);
   }
 
   function clearMarkers(){
     markers.forEach(m => markerGroup.remove(m.mesh));
     markers = [];
+    labelPositions.clear();
+    if (svgLabels) svgLabels.innerHTML = "";
   }
 
   function setMarkers(points){
-    // points: [{ id, lat, lon, fav }]
+    // points: [{ id, lat, lon, fav, code }]
     clearMarkers();
     const geo = new THREE.SphereGeometry(0.016, 8, 6);
     const matAmber = new THREE.MeshBasicMaterial({ color: new THREE.Color(themeColor("--amber", "#ffb547")) });
@@ -237,7 +391,7 @@ const AptGlobe = (() => {
       mesh.position.copy(latLonToVec3(p.lat, p.lon, 1.02));
       mesh.userData.id = p.id;
       markerGroup.add(mesh);
-      markers.push({ mesh, id: p.id, lat: p.lat, lon: p.lon });
+      markers.push({ mesh, id: p.id, lat: p.lat, lon: p.lon, code: p.code, fav: !!p.fav });
     });
   }
 

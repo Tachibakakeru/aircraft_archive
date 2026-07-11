@@ -246,8 +246,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=58"),
-      fetch("data/countries.json?v=58"),
+      fetch("data/airports.json?v=70"),
+      fetch("data/countries.json?v=70"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -483,7 +483,7 @@ async function refreshGlobeMarkers(shown){
   const points = shown.map(a => {
     const store = detailCache[a.country || "ZZ"] || {};
     const d = store[a.id];
-    return d ? { id: a.id, lat: d.lat, lon: d.lon, fav: isFav(a.id) } : null;
+    return d ? { id: a.id, lat: d.lat, lon: d.lon, fav: isFav(a.id), code: a.icao || a.iata || "" } : null;
   }).filter(Boolean);
   AptGlobe.setMarkers(points);
 }
@@ -562,7 +562,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=58`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=70`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -677,7 +677,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=58`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=70`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
