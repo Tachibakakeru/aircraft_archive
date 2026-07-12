@@ -21,7 +21,7 @@ let fromId = null, toId = null;
 async function loadDetails(country){
   if (!country || detailCache[country]) return detailCache[country] || {};
   try {
-    const res = await fetch(`data/details/${country}.json?v=76`);
+    const res = await fetch(`data/details/${country}.json?v=79`);
     detailCache[country] = res.ok ? await res.json() : {};
   } catch { detailCache[country] = {}; }
   return detailCache[country];
@@ -40,7 +40,7 @@ async function airportCoords(id){
 async function cruiseSpeedKmh(id){
   if (speedCache[id] != null) return speedCache[id];
   try {
-    const res = await fetch(`data/${id}.json?v=76`);
+    const res = await fetch(`data/${id}.json?v=79`);
     if (!res.ok) throw new Error();
     const d = await res.json();
     let kmh = null;
@@ -71,6 +71,32 @@ function haversineKm(lat1, lon1, lat2, lon2){
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
+// 噴射氣流粗估模型：中緯度（南北緯約 30–60 度）高空盛行西風，順著風向飛
+// （由西向東）較快、頂風飛（由東向西）較慢，同一條航線兩個方向的實際飛行
+// 時間常常差 30 分鐘以上。這裡用「大圓路徑起始方位角的東西分量」×「緯度
+// 權重（在中緯度最強、赤道與極區趨近於零）」估出順風／頂風分量，屬簡化
+// 概算，不是真實氣象資料——真實噴流強度隨季節、高度、當年天氣系統變動
+// 極大（範圍大致 50～400+ km/h）。
+const JET_STREAM_KMH = 130;   // 中緯度巡航高度的概估平均風速
+function initialBearingRad(lat1, lon1, lat2, lon2){
+  const toRad = d => d * Math.PI / 180;
+  const φ1 = toRad(lat1), φ2 = toRad(lat2), Δλ = toRad(lon2 - lon1);
+  const y = Math.sin(Δλ) * Math.cos(φ2);
+  const x = Math.cos(φ1) * Math.sin(φ2) - Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ);
+  return Math.atan2(y, x);
+}
+function windComponentKmh(lat1, lon1, lat2, lon2){
+  const bearing = initialBearingRad(lat1, lon1, lat2, lon2);
+  const eastComponent = Math.sin(bearing);   // 正東 = 1（順風）、正西 = -1（頂風）
+  const avgAbsLat = Math.min(90, (Math.abs(lat1) + Math.abs(lat2)) / 2);
+  const latFactor = Math.sin(avgAbsLat * Math.PI / 90);   // 中緯度（約45°）最強，赤道／極區趨近 0
+  return JET_STREAM_KMH * eastComponent * latFactor;
+}
+function effectiveSpeedKmh(cruiseKmh, lat1, lon1, lat2, lon2){
+  const wind = windComponentKmh(lat1, lon1, lat2, lon2);
+  return Math.max(cruiseKmh * 0.5, cruiseKmh + wind);   // 極端頂風時設下限，避免算出離譜的龜速
+}
+
 function fmtHours(h){
   const totalMin = Math.round(h * 60);
   const hh = Math.floor(totalMin / 60), mm = totalMin % 60;
@@ -80,8 +106,8 @@ function fmtHours(h){
 (async () => {
   try {
     const [aRes, fRes] = await Promise.all([
-      fetch("data/airports.json?v=76"),
-      fetch("data/fleet.json?v=76"),
+      fetch("data/airports.json?v=79"),
+      fetch("data/fleet.json?v=79"),
     ]);
     AIRPORTS = (await aRes.json()).airports;
     FLEET = (await fRes.json()).aircraft;
@@ -199,11 +225,16 @@ async function recalc(){
   $("dist-km").textContent = `${Math.round(km).toLocaleString()} km ／ ${Math.round(nmi).toLocaleString()} nmi`;
 
   if (kmh){
-    const hours = km / kmh + 0.5;   // +30 分鐘滑行／爬升／下降緩衝
-    $("dist-time").textContent = fmtHours(hours);
-    $("dist-speed").textContent = `${kmh.toLocaleString()} km/h`;
+    const outboundKmh = effectiveSpeedKmh(kmh, from.lat, from.lon, to.lat, to.lon);
+    const returnKmh = effectiveSpeedKmh(kmh, to.lat, to.lon, from.lat, from.lon);
+    const outboundH = km / outboundKmh + 0.5;   // +30 分鐘滑行／爬升／下降緩衝
+    const returnH = km / returnKmh + 0.5;
+    $("dist-time").textContent = fmtHours(outboundH);
+    $("dist-time-return").textContent = fmtHours(returnH);
+    $("dist-speed").textContent = `${Math.round(outboundKmh).toLocaleString()} km/h`;
   } else {
     $("dist-time").textContent = "—";
+    $("dist-time-return").textContent = "—";
     $("dist-speed").textContent = "—";
   }
   resultEl.hidden = false;

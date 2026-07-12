@@ -22,7 +22,7 @@ async function loadHubIndex(){
   if (HUB_INDEX) return HUB_INDEX;
   HUB_INDEX = {};
   try {
-    const res = await fetch("data/airline_geo.json?v=76");
+    const res = await fetch("data/airline_geo.json?v=79");
     const geo = res.ok ? await res.json() : {};
     Object.entries(geo).forEach(([airlineId, g]) => {
       (g.hubs || []).forEach(h => {
@@ -36,7 +36,7 @@ async function loadAirlineNames(){
   if (AIRLINE_NAMES) return AIRLINE_NAMES;
   AIRLINE_NAMES = {};
   try {
-    const res = await fetch("data/airlines.json?v=76");
+    const res = await fetch("data/airlines.json?v=79");
     const data = res.ok ? await res.json() : { airlines: [] };
     data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
   } catch { /* 同上 */ }
@@ -276,8 +276,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=76"),
-      fetch("data/countries.json?v=76"),
+      fetch("data/airports.json?v=79"),
+      fetch("data/countries.json?v=79"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -592,7 +592,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=76`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=79`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -707,7 +707,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=76`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=79`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];

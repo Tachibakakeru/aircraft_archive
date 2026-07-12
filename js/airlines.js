@@ -16,6 +16,75 @@ const EDIT_LS_KEY = "hangar_edit_airlines";
 let AIRLINE_GEO = {};
 let globeMode = false;
 
+// 國家名稱中英對照：72 家人工彙整的公司 country.zh 是正確翻譯的中文，
+// 但另外 503 家由 OpenFlights 資料批次生成的公司 country.zh/en 目前是
+// 同一個英文原文（未翻譯）——搜尋「中國」只會比對到前者，漏掉後者，
+// 反之搜尋「China」也漏掉已翻譯成中文的那些。這份對照表讓搜尋時不論
+// 用中文或英文輸入國家名稱，都能涵蓋到所有語言版本的資料。
+// （只影響「國家」欄位的比對，不會讓航空公司自己的名稱被連帶誤配對。）
+const COUNTRY_ZH = {
+  "Afghanistan": "阿富汗", "Albania": "阿爾巴尼亞", "Algeria": "阿爾及利亞",
+  "Angola": "安哥拉", "Antigua and Barbuda": "安地卡及巴布達", "Argentina": "阿根廷",
+  "Armenia": "亞美尼亞", "Aruba": "阿魯巴", "Australia": "澳洲", "Austria": "奧地利",
+  "Azerbaijan": "亞塞拜然", "Bahamas": "巴哈馬", "Bahrain": "巴林",
+  "Bangladesh": "孟加拉", "Belarus": "白俄羅斯", "Belgium": "比利時",
+  "Belize": "貝里斯", "Bhutan": "不丹", "Bolivia": "玻利維亞",
+  "Bosnia and Herzegovina": "波士尼亞與赫塞哥維納", "Botswana": "波札那",
+  "Brazil": "巴西", "Brunei": "汶萊", "Bulgaria": "保加利亞",
+  "Burkina Faso": "布吉納法索", "Burma": "緬甸", "Cambodia": "柬埔寨",
+  "Canada": "加拿大", "Cayman Islands": "開曼群島", "Chile": "智利",
+  "China": "中國", "Colombia": "哥倫比亞", "Cook Islands": "庫克群島",
+  "Costa Rica": "哥斯大黎加", "Croatia": "克羅埃西亞", "Cuba": "古巴",
+  "Cyprus": "賽普勒斯", "Czech Republic": "捷克",
+  "Democratic People's Republic of Korea": "北韓", "Denmark": "丹麥",
+  "Djibouti": "吉布地", "Dominican Republic": "多明尼加", "Ecuador": "厄瓜多",
+  "Egypt": "埃及", "Equatorial Guinea": "赤道幾內亞", "Eritrea": "厄利垂亞",
+  "Estonia": "愛沙尼亞", "Ethiopia": "衣索比亞", "Faroe Islands": "法羅群島",
+  "Fiji": "斐濟", "Finland": "芬蘭", "France": "法國",
+  "French Guiana": "法屬圭亞那", "French Polynesia": "法屬玻里尼西亞",
+  "Georgia": "喬治亞", "Germany": "德國", "Greece": "希臘", "Haiti": "海地",
+  "Hong Kong": "香港", "Hong Kong SAR of China": "香港", "Hungary": "匈牙利",
+  "Iceland": "冰島", "India": "印度", "Indonesia": "印尼", "Iran": "伊朗",
+  "Iraq": "伊拉克", "Ireland": "愛爾蘭", "Israel": "以色列", "Italy": "義大利",
+  "Ivory Coast": "象牙海岸", "Jamaica": "牙買加", "Japan": "日本",
+  "Jordan": "約旦", "Kazakhstan": "哈薩克", "Kenya": "肯亞",
+  "Kiribati": "吉里巴斯", "Kuwait": "科威特", "Kyrgyzstan": "吉爾吉斯",
+  "Lao Peoples Democratic Republic": "寮國", "Latvia": "拉脫維亞",
+  "Lebanon": "黎巴嫩", "Libya": "利比亞", "Lithuania": "立陶宛",
+  "Luxembourg": "盧森堡", "Macao": "澳門", "Madagascar": "馬達加斯加",
+  "Malawi": "馬拉威", "Malaysia": "馬來西亞", "Maldives": "馬爾地夫",
+  "Malta": "馬爾他", "Mauritania": "茅利塔尼亞", "Mauritius": "模里西斯",
+  "Mexico": "墨西哥", "Moldova": "摩爾多瓦", "Mongolia": "蒙古",
+  "Montenegro": "蒙特內哥羅", "Morocco": "摩洛哥", "Mozambique": "莫三比克",
+  "Myanmar": "緬甸", "Namibia": "納米比亞", "Nauru": "諾魯", "Nepal": "尼泊爾",
+  "Netherlands": "荷蘭", "New Zealand": "紐西蘭", "Nigeria": "奈及利亞",
+  "Norway": "挪威", "Oman": "阿曼", "Pakistan": "巴基斯坦", "Panama": "巴拿馬",
+  "Papua New Guinea": "巴布亞紐幾內亞", "Paraguay": "巴拉圭", "Peru": "秘魯",
+  "Philippines": "菲律賓", "Poland": "波蘭", "Portugal": "葡萄牙",
+  "Qatar": "卡達", "Republic of Korea": "韓國", "Romania": "羅馬尼亞",
+  "Russia": "俄羅斯", "Russian Federation": "俄羅斯", "Rwanda": "盧安達",
+  "Samoa": "薩摩亞", "Sao Tome and Principe": "聖多美普林西比",
+  "Saudi Arabia": "沙烏地阿拉伯", "Serbia": "塞爾維亞", "Seychelles": "塞席爾",
+  "Singapore": "新加坡", "Slovakia": "斯洛伐克", "Slovenia": "斯洛維尼亞",
+  "Solomon Islands": "索羅門群島", "South Africa": "南非", "South Korea": "韓國",
+  "Spain": "西班牙", "Sri Lanka": "斯里蘭卡", "Sudan": "蘇丹",
+  "Suriname": "蘇利南", "Sweden": "瑞典", "Switzerland": "瑞士",
+  "Syrian Arab Republic": "敘利亞", "Taiwan": "台灣", "Tanzania": "坦尚尼亞",
+  "Thailand": "泰國", "Trinidad and Tobago": "千里達及托巴哥",
+  "Tunisia": "突尼西亞", "Turkey": "土耳其", "Turkmenistan": "土庫曼",
+  "Ukraine": "烏克蘭", "United Arab Emirates": "阿聯酋",
+  "United Kingdom": "英國", "United States": "美國", "Uzbekistan": "烏茲別克",
+  "Vanuatu": "萬那杜", "Venezuela": "委內瑞拉", "Vietnam": "越南",
+  "Yemen": "葉門", "Zimbabwe": "辛巴威",
+};
+const COUNTRY_EN = Object.fromEntries(Object.entries(COUNTRY_ZH).map(([en, zh]) => [zh, en]));
+function countryAliases(a){
+  const out = [];
+  if (COUNTRY_ZH[a.country.en]) out.push(COUNTRY_ZH[a.country.en]);
+  if (COUNTRY_EN[a.country.zh]) out.push(COUNTRY_EN[a.country.zh]);
+  return out;
+}
+
 const FAV_KEY = "hangar_airline_favs";
 let FAVS = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
 function isFav(id){ return FAVS.has(id); }
@@ -219,7 +288,7 @@ function makeLogoEl(a, big){
   }
   if (!FULL_DATA){
     try {
-      const res = await fetch("data/airlines.json?v=76");
+      const res = await fetch("data/airlines.json?v=79");
       if (!res.ok) throw new Error(res.status);
       FULL_DATA = await res.json();
     } catch {
@@ -231,7 +300,7 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=76");
+    const geoRes = await fetch("data/airline_geo.json?v=79");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -276,6 +345,10 @@ function makeLogoEl(a, big){
   $("al-cmp-modal-close").addEventListener("click", closeAlCmpModal);
   document.addEventListener("keydown", e => { if (e.key === "Escape") closePanel(); });
   document.addEventListener("click", e => {
+    // 拖曳／點擊地球畫布旋轉視角時，放開滑鼠會在 pointerup 之後多發一個
+    // 原生 click 事件——不排除的話，只是想轉一下地球看航線，面板就被這裡
+    // 誤判成「點擊面板外」給關掉了，弧線也跟著被清空，整個看不到結果。
+    if (e.target.closest("#apt-globe-canvas")) return;
     const panel = $("panel");
     if (panel.classList.contains("open") && !panel.contains(e.target) && !e.target.closest(".al-row") && !e.target.closest(".auth-gate"))
       closePanel();
@@ -366,7 +439,7 @@ function applyAll(){
     if (alliance && a.alliance !== alliance) return false;
     if (tier && a.tier !== tier) return false;
     if (!q) return true;
-    const hay = [a.name, a.nameZh, a.icao, a.iata, I18N.field(a.country), a.country.zh, ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
+    const hay = [a.name, a.nameZh, a.icao, a.iata, I18N.field(a.country), a.country.zh, a.country.en, ...countryAliases(a), ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
     return hay.includes(q);
   }).sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
 

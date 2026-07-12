@@ -7,11 +7,11 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=76">
-<link rel="stylesheet" href="css/airports.css?v=76">
-<link rel="stylesheet" href="css/distance.css?v=76">
-<script src="js/theme.js?v=76"></script>
-<script src="js/i18n.js?v=76"></script>
+<link rel="stylesheet" href="css/style.css?v=79">
+<link rel="stylesheet" href="css/airports.css?v=79">
+<link rel="stylesheet" href="css/distance.css?v=79">
+<script src="js/theme.js?v=79"></script>
+<script src="js/i18n.js?v=79"></script>
 </head>
 <body>
 
@@ -62,20 +62,24 @@
         <div class="dist-stat-value" id="dist-km">—</div>
       </div>
       <div class="dist-stat">
-        <div class="dist-stat-label" data-i18n="distance.flightTime">預估飛行時間</div>
+        <div class="dist-stat-label" data-i18n="distance.flightTime">預估飛行時間（去程）</div>
         <div class="dist-stat-value" id="dist-time">—</div>
+      </div>
+      <div class="dist-stat">
+        <div class="dist-stat-label" data-i18n="distance.flightTimeReturn">預估飛行時間（回程）</div>
+        <div class="dist-stat-value" id="dist-time-return">—</div>
       </div>
       <div class="dist-stat">
         <div class="dist-stat-label" data-i18n="distance.cruiseSpeed">巡航速度</div>
         <div class="dist-stat-value" id="dist-speed">—</div>
       </div>
     </div>
-    <div class="dist-hint" data-i18n="distance.hint">＊飛行時間為大圓距離除以巡航速度後，另加 30 分鐘估算滑行／爬升／下降緩衝，僅供參考，實際受航路、風向與空域管制影響。</div>
+    <div class="dist-hint" data-i18n="distance.hint">＊飛行時間已概估中高緯度高空盛行西風（噴射氣流）的順風／頂風影響，兩個方向時間因此不同；為大圓距離除以（巡航速度±風速分量）後，另加 30 分鐘估算滑行／爬升／下降緩衝，僅供參考，實際受航路、季節、天氣系統與空域管制影響甚大。</div>
   </div>
   <div class="dist-empty" id="dist-empty" data-i18n="distance.empty">選擇出發機場、抵達機場與機型後即可計算。</div>
 </div>
 
-<script src="js/distance.js?v=76"></script>
-<script src="js/ui.js?v=76"></script>
+<script src="js/distance.js?v=79"></script>
+<script src="js/ui.js?v=79"></script>
 </body>
 </html>
