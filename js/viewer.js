@@ -22,12 +22,12 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=80`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=84`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=80`).then(r => { if(!r.ok) throw 0; return r.json(); })
+  fetch(`models/${MODEL_ID}.json?v=84`).then(r => { if(!r.ok) throw 0; return r.json(); })
 ]).then(([DATA, MODEL]) => init(DATA, MODEL))
   .catch(() => fail(
     `無法載入 <code>data/${MODEL_ID}.json</code> 或 <code>models/${MODEL_ID}.json</code>。<br>` +
@@ -485,6 +485,56 @@ function init(DATA, MODEL){
     }
   }
 
+  /* ── 座位示意圖：純前端依「座位配置」與「最大載客量」規格算出來的通用
+     示意圖，不代表任何一家航空公司的實際艙等配置（同機型、不同公司的
+     座位數與艙等區塊都不一樣，沒有「該機型的官方座位圖」這種東西）。 */
+  function parseAbreast(configStr){
+    // "3+3 六排並列" → [3,3]；雙層機（"3+4+3 主艙 / 2+2 上艙"）只取主艙那組
+    const m = (configStr || "").split("/")[0].match(/^\s*(\d(?:\+\d){1,3})/);
+    return m ? m[1].split("+").map(Number) : null;
+  }
+  function parseMaxSeats(str){
+    const m = (str || "").match(/(\d[\d,]*)\s*人/g);
+    if (!m) return null;
+    const nums = m.map(s => parseInt(s.replace(/[^\d]/g, ""), 10));
+    return Math.max(...nums);
+  }
+  function seatMapSVG(blocks, maxSeats){
+    const abreast = blocks.reduce((a, b) => a + b, 0);
+    const rows = Math.max(1, Math.min(60, Math.round((maxSeats || abreast * 20) / abreast)));
+    const seatW = 9, seatH = 7, gapX = 1.5, gapY = 1.5, aisleW = 6, pad = 10;
+    const totalW = blocks.reduce((sum, b) => sum + b * (seatW + gapX), 0) + (blocks.length - 1) * aisleW;
+    const w = totalW + pad * 2, h = rows * (seatH + gapY) + pad * 2;
+    let rects = "";
+    for (let r = 0; r < rows; r++){
+      let x = pad;
+      const y = pad + r * (seatH + gapY);
+      blocks.forEach(b => {
+        for (let s = 0; s < b; s++){
+          rects += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${seatW}" height="${seatH}" rx="1.5" class="seat-cell"/>`;
+          x += seatW + gapX;
+        }
+        x += aisleW - gapX;
+      });
+    }
+    return `<svg viewBox="0 0 ${w.toFixed(1)} ${h.toFixed(1)}" class="seatmap-svg" preserveAspectRatio="xMidYMin meet">${rects}</svg>`;
+  }
+  function buildSeatMap(){
+    const wrap = document.getElementById("seatmap-wrap");
+    if (!wrap) return;
+    const perf = DATA.specifications && DATA.specifications["機組員與載客"];
+    const row = (perf || []).find(([k]) => k.includes("座位配置"));
+    const maxRow = (perf || []).find(([k]) => k.includes("最大載客量"));
+    const blocks = row && parseAbreast(F(row[1]));
+    if (!blocks){ wrap.hidden = true; return; }
+    const maxSeats = maxRow ? parseMaxSeats(F(maxRow[1])) : null;
+    wrap.hidden = false;
+    wrap.innerHTML = `<div class="seatmap-title">${I18N.t("viewer.seatmap.title")}</div>` +
+      seatMapSVG(blocks, maxSeats) +
+      `<div class="seatmap-hint">${I18N.t("viewer.seatmap.hint")}</div>`;
+  }
+  buildSeatMap();
+
   /* ── 詳細規格抽屜 ── */
   const specDrawer = document.getElementById("spec-drawer");
   const specBody = document.getElementById("spec-body");
@@ -550,6 +600,7 @@ function init(DATA, MODEL){
       if (tag && PARTS[id]) tag.textContent = I18N.spec(F(PARTS[id].name));
     }
     buildSpecs();
+    buildSeatMap();
     if (selected && selected.userData.partId) selectPart(selected.userData.partId);
   });
 

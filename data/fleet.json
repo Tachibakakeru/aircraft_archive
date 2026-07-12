@@ -847,6 +847,160 @@
       "thumb": "assets/thumb_heli.png",
       "icao": "A139",
       "iata": ""
+    },
+    {
+      "id": "b707",
+      "name": "Boeing 707-320",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "1957",
+      "span": "44.42 m",
+      "seats": "140–189",
+      "tagline": {
+        "zh": "噴射客機時代的開創者，四發後掠翼奠定戰後幹線客機的基本型態。",
+        "en": "The aircraft that launched the jet age — its four-engine swept-wing layout set the template for postwar mainline airliners.",
+        "ja": "ジェット旅客機時代を切り開いた機体。4発後退翼のレイアウトは戦後の幹線旅客機の原型となった。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B703",
+      "iata": "703",
+      "has3d": false
+    },
+    {
+      "id": "b717",
+      "name": "Boeing 717",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "1998",
+      "span": "28.45 m",
+      "seats": "106–134",
+      "tagline": {
+        "zh": "原麥道 MD-95，波音併購麥道後改名的最後一代 DC-9 血統機型，尾置雙發、T 尾翼經典構型。",
+        "en": "Originally the McDonnell Douglas MD-95, renamed after the Boeing–McDonnell Douglas merger — the last of the DC-9 lineage, with rear-mounted engines and a T-tail.",
+        "ja": "元マクドネル・ダグラスMD-95。ボーイングとの合併後に改称された、DC-9系譜最後の機体。後部エンジンとT字尾翼が特徴。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B712",
+      "iata": "717",
+      "has3d": false
+    },
+    {
+      "id": "b727",
+      "name": "Boeing 727-200",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "1963",
+      "span": "32.92 m",
+      "seats": "134–189",
+      "tagline": {
+        "zh": "三發尾置引擎、中央引擎採 S 型進氣道的經典幹線機，1960～80 年代美國國內線主力。",
+        "en": "A tri-jet with rear-mounted engines and an S-duct center engine — the workhorse of US domestic routes from the 1960s to the 1980s.",
+        "ja": "後部3発エンジン、中央エンジンはSダクト吸気の名機。1960〜80年代の米国国内線の主力だった。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B722",
+      "iata": "722",
+      "has3d": false
+    },
+    {
+      "id": "c909",
+      "name": "COMAC C909 (ARJ21)",
+      "manufacturer": "COMAC",
+      "category": {
+        "zh": "支線客機",
+        "en": "Regional jet",
+        "ja": "リージョナルジェット"
+      },
+      "firstFlight": "2008",
+      "span": "27.28 m",
+      "seats": "78–97",
+      "tagline": {
+        "zh": "原名 ARJ21「翔鳳」，中國首款自製支線噴射客機，2024 年為拓展外銷市場更名 C909。",
+        "en": "Originally the ARJ21 \"Xiangfeng\", China's first domestically developed regional jet — renamed C909 in 2024 for export markets.",
+        "ja": "旧称ARJ21「翔鳳」。中国初の国産リージョナルジェットで、輸出市場向けに2024年C909へ改称。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AR21",
+      "iata": "909",
+      "has3d": false
+    },
+    {
+      "id": "c919",
+      "name": "COMAC C919",
+      "manufacturer": "COMAC",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2017",
+      "span": "35.8 m",
+      "seats": "158–192",
+      "tagline": {
+        "zh": "中國商飛研製的單走道幹線客機，2023 年投入商業營運，目標與 A320／737 家族競爭。",
+        "en": "COMAC's single-aisle mainline jet, entering commercial service in 2023 as China's answer to the A320 and 737 families.",
+        "ja": "中国商飛が開発した単通路幹線機。2023年に商業運航を開始し、A320／737ファミリーに挑む。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C919",
+      "iata": "919",
+      "has3d": false
+    },
+    {
+      "id": "c929",
+      "name": "COMAC C929",
+      "manufacturer": "COMAC",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "研發中",
+      "span": "約 50.9 m",
+      "seats": "約 280–440",
+      "tagline": {
+        "zh": "中國商飛研發中的雙走道廣體客機，原與俄羅斯合作（CR929），俄方退出後由中方獨立推進，規格為公開目標值、尚未定案。",
+        "en": "COMAC's twin-aisle wide-body under development — originally a joint program with Russia (CR929) before Russia withdrew; China is now advancing it alone. Specs below are publicly stated targets, not finalized.",
+        "ja": "中国商飛が開発中の双通路ワイドボディ機。当初はロシアとの共同開発（CR929）だったが、ロシア撤退後は中国単独で推進。仕様は公表目標値で未確定。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C929",
+      "iata": "929",
+      "has3d": false
+    },
+    {
+      "id": "c939",
+      "name": "COMAC C939",
+      "manufacturer": "COMAC",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "概念階段",
+      "span": "未公布",
+      "seats": "未公布",
+      "tagline": {
+        "zh": "中國商飛規劃中的下一代大型廣體客機，僅在產業規劃與展會中被提及，官方公開技術規格極少，本頁暫不提供推測數據。",
+        "en": "A next-generation large wide-body reportedly planned by COMAC, mentioned only in industry roadmaps and trade shows. Almost no official technical specifications are public — this page intentionally omits speculative numbers.",
+        "ja": "中国商飛が計画中とされる次世代大型ワイドボディ機。業界ロードマップや展示会での言及のみで、公式な技術仕様はほぼ非公開。本ページでは推測数値を掲載しない。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": null,
+      "iata": null,
+      "has3d": false
     }
   ]
 }

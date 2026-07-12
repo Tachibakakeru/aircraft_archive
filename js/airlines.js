@@ -300,7 +300,7 @@ function makeLogoEl(a, big){
   }
   if (!FULL_DATA){
     try {
-      const res = await fetch("data/airlines.json?v=80");
+      const res = await fetch("data/airlines.json?v=84");
       if (!res.ok) throw new Error(res.status);
       FULL_DATA = await res.json();
     } catch {
@@ -312,11 +312,11 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=80");
+    const geoRes = await fetch("data/airline_geo.json?v=84");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=80");
+    const codesRes = await fetch("data/airport_codes.json?v=84");
     if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -557,15 +557,21 @@ function escHTML(s){
 
 // 樞紐機場：查得到對應機場座標時（見 data/airline_geo.json）連結到機場頁，
 // 查不到就純文字顯示——不是每筆都保證能對應到，見 meta.note 說明。
+// &globe=1：從這裡點過去機場頁時，順便切到 3D 地圖並直接飛向該機場，
+// 不用使用者自己再手動切換地圖模式、找半天。
+function airportLinkHref(icao){
+  return `airports.html?icao=${encodeURIComponent(icao)}&globe=1`;
+}
+
 function hubsHTML(a){
   if (!a.hubs || !a.hubs.length) return "—";
   const geo = AIRLINE_GEO[a.id];
   const byText = new Map((geo && geo.hubs || []).map(h => [h.text, h.icao]));
   return a.hubs.map(h => {
     const icao = byText.get(h);
-    if (icao) return `<a class="al-hub-link" href="airports.html?icao=${encodeURIComponent(icao)}">${escHTML(h)}</a>`;
+    if (icao) return `<a class="al-hub-link" href="${airportLinkHref(icao)}">${escHTML(h)}</a>`;
     const resolved = resolveAirportCode(h);
-    if (resolved) return `<a class="al-hub-link" href="airports.html?icao=${encodeURIComponent(resolved.id)}">${escHTML(resolved.name)}</a>`;
+    if (resolved) return `<a class="al-hub-link" href="${airportLinkHref(resolved.id)}">${escHTML(resolved.name)}</a>`;
     return escHTML(h);
   }).join(" / ");
 }
@@ -576,9 +582,9 @@ function routesHTML(a){
   const byText = new Map((geo && geo.routes || []).map(r => [r.text, r.icao]));
   return a.routes.map(r => {
     const icao = byText.get(r);
-    if (icao) return `<a class="al-route-chip" href="airports.html?icao=${encodeURIComponent(icao)}">${escHTML(r)}</a>`;
+    if (icao) return `<a class="al-route-chip" href="${airportLinkHref(icao)}">${escHTML(r)}</a>`;
     const resolved = resolveAirportCode(r);
-    if (resolved) return `<a class="al-route-chip" href="airports.html?icao=${encodeURIComponent(resolved.id)}">${escHTML(resolved.name)}</a>`;
+    if (resolved) return `<a class="al-route-chip" href="${airportLinkHref(resolved.id)}">${escHTML(resolved.name)}</a>`;
     return `<span class="al-route-chip">${escHTML(r)}</span>`;
   }).join("");
 }

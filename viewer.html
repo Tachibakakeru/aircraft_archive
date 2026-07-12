@@ -7,7 +7,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=80">
+<link rel="stylesheet" href="css/style.css?v=84">
 </head>
 <body class="viewer">
 
@@ -80,7 +80,10 @@
     <h2 id="spec-craft-name">詳細規格</h2>
     <button id="spec-close" aria-label="關閉規格" data-i18n-aria="viewer.spec.close">✕</button>
   </div>
-  <div class="panel-body" id="spec-body"></div>
+  <div class="panel-body">
+    <div id="seatmap-wrap" class="seatmap-wrap" hidden></div>
+    <div id="spec-body"></div>
+  </div>
 </aside>
 
 <div class="credit" id="credit"></div>
@@ -91,8 +94,8 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="js/theme.js?v=80"></script>
-<script src="js/i18n.js?v=80"></script>
-<script src="js/viewer.js?v=80"></script>
+<script src="js/theme.js?v=84"></script>
+<script src="js/i18n.js?v=84"></script>
+<script src="js/viewer.js?v=84"></script>
 </body>
 </html>

@@ -413,6 +413,22 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
 .spec-cat .spec-row dd{font-family:var(--mono);letter-spacing:.02em;text-align:right;color:var(--text)}
 .spec-empty{color:var(--muted);font-size:13px;line-height:1.9;padding:20px 0}
 
+.seatmap-wrap{
+  padding-bottom:20px;margin-bottom:18px;
+  border-bottom:1px solid var(--stroke);
+  text-align:center;
+}
+.seatmap-title{
+  font-family:var(--mono);font-size:11px;letter-spacing:.2em;
+  color:var(--amber);text-align:left;margin-bottom:12px;
+}
+.seatmap-svg{width:100%;max-height:340px;display:block;margin:0 auto}
+.seat-cell{fill:var(--cyan);opacity:.55}
+.seatmap-hint{
+  font-size:11px;color:var(--muted);line-height:1.7;
+  text-align:left;margin-top:12px;
+}
+
 .controls{
   position:fixed;left:24px;bottom:96px;z-index:5;
   display:flex;flex-direction:column;gap:8px;
