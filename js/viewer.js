@@ -22,21 +22,26 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=84`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=90`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
+// 3D 模型是可選的（如 DC-9、707 家族等尚未建過幾何的機型只有規格文案，
+// 見 fleet.json 的 has3d:false）——models/<id>.json 404 時不當作致命錯誤，
+// 一律 fallback 成空殼模型，讓 init() 照常畫出規格抽屜，只是場景裡沒有
+// 機身可看（PARTS/PART_ORDER 也一併 fallback 成空，見 init() 開頭）。
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=84`).then(r => { if(!r.ok) throw 0; return r.json(); })
-]).then(([DATA, MODEL]) => init(DATA, MODEL))
+  fetch(`models/${MODEL_ID}.json?v=90`).then(r => r.ok ? r.json() : null).catch(() => null)
+]).then(([DATA, MODEL]) => init(DATA, MODEL || { parts: {}, anchors: {}, meta: {} }))
   .catch(() => fail(
-    `無法載入 <code>data/${MODEL_ID}.json</code> 或 <code>models/${MODEL_ID}.json</code>。<br>` +
+    `無法載入 <code>data/${MODEL_ID}.json</code>。<br>` +
     `請確認機型 ID 正確；若以 <code>file://</code> 開啟，請改用本機伺服器：<br>` +
     `<code>python3 -m http.server 8000</code>`
   ));
 
 function init(DATA, MODEL){
-  const PARTS = DATA.parts;
+  const has3D = !!(MODEL.parts && Object.keys(MODEL.parts).length);
+  const PARTS = DATA.parts || {};
   const PART_ORDER = DATA.partOrder || Object.keys(PARTS);
 
   // 記錄最近瀏覽（供列表頁顯示），最多保留 10 筆、最新在前
@@ -51,8 +56,9 @@ function init(DATA, MODEL){
   document.title = `${I18N.specValue(I18N.field(DATA.title))} — SKY ARCHIVE`;
   document.getElementById("craft-title").textContent = I18N.specValue(I18N.field(DATA.title));
   document.getElementById("craft-sub").textContent = I18N.specValue(I18N.field(DATA.sub)) || "";
-  document.getElementById("credit").textContent =
-    (MODEL.meta && MODEL.meta.source) ? `3D MODEL: ${MODEL.meta.source}` : "";
+  document.getElementById("credit").textContent = !has3D
+    ? I18N.t("viewer.no3d")
+    : (MODEL.meta && MODEL.meta.source) ? `3D MODEL: ${MODEL.meta.source}` : "";
   I18N.apply();
 
   /* ── Three.js 場景 ── */
@@ -591,6 +597,7 @@ function init(DATA, MODEL){
     document.getElementById("craft-title").textContent = tTitle;
     document.getElementById("craft-sub").textContent = I18N.specValue(I18N.field(DATA.sub)) || "";
     document.getElementById("spec-craft-name").textContent = tTitle;
+    if (!has3D) document.getElementById("credit").textContent = I18N.t("viewer.no3d");
     document.querySelectorAll("#chips .chip").forEach(c => {
       const id = c.dataset.part;
       if (PARTS[id]) c.textContent = I18N.spec(F(PARTS[id].name));

@@ -40,6 +40,7 @@ const I18N_STRINGS = {
     "viewer.spec.empty": "此機型尚未填入詳細規格。可在編輯器中補充。",
     "viewer.seatmap.title": "SEAT MAP / 座位配置示意圖",
     "viewer.seatmap.hint": "＊依本頁「座位配置」與「最大載客量」規格自動產生的通用示意圖，僅供參考。實際座位數、艙等區塊與排數由各航空公司自行決定，同機型不同公司的配置常有差異。",
+    "viewer.no3d": "此機型目前尚無 3D 模型，僅提供規格資訊",
     // 比較頁
     "compare.title": "並排比較規格",
     "compare.add": "＋ 加入機型",
@@ -269,6 +270,7 @@ const I18N_STRINGS = {
     "viewer.spec.empty": "No detailed specifications yet. Add them in the editor.",
     "viewer.seatmap.title": "SEAT MAP",
     "viewer.seatmap.hint": "＊Generic schematic generated from this page's \"seating layout\" and \"max seating\" specs — for reference only. Actual seat counts, cabin classes, and row counts are set by each airline and commonly differ between operators of the same type.",
+    "viewer.no3d": "No 3D model available for this type yet — specifications only",
     "compare.title": "Compare Specifications",
     "compare.add": "＋ Add aircraft",
     "compare.apt.add": "＋ Add airport",
@@ -495,6 +497,7 @@ const I18N_STRINGS = {
     "viewer.spec.empty": "詳細諸元は未登録です。エディタで追加できます。",
     "viewer.seatmap.title": "座席配置図（概略）",
     "viewer.seatmap.hint": "＊本ページの「座席配置」「最大座席数」諸元から自動生成した概略図で、参考用です。実際の座席数・クラス区分・列数は各航空会社が独自に決定しており、同一機種でも航空会社によって配置が異なります。",
+    "viewer.no3d": "この機種の3Dモデルは未対応です。諸元のみ表示しています",
     "compare.title": "諸元を並べて比較",
     "compare.add": "＋ 機種を追加",
     "compare.apt.add": "＋ 空港を追加",

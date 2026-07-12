@@ -97,6 +97,16 @@ function countryAliases(a){
   return out;
 }
 
+// 公司在地化名稱：跟機場頁 localName() 同一套邏輯，中文顯示 nameZh、
+// 日文顯示 nameJa，兩者都只收錄有公認譯名的公司（見上方常數），沒有的
+// 維持英文原名，不機翻猜測。
+function localAirlineName(a){
+  const cur = I18N.get();
+  if (cur === "zh") return a.nameZh || null;
+  if (cur === "ja") return a.nameJa || null;
+  return null;
+}
+
 const FAV_KEY = "hangar_airline_favs";
 let FAVS = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
 function isFav(id){ return FAVS.has(id); }
@@ -155,6 +165,7 @@ function renderAlCmpPickers(){
         .filter(a =>
           a.name.toLowerCase().includes(q) ||
           (a.nameZh && a.nameZh.includes(q)) ||
+          (a.nameJa && a.nameJa.includes(q)) ||
           (a.icao && a.icao.toLowerCase().includes(q)) ||
           (a.iata && a.iata.toLowerCase().includes(q)))
         .slice(0, 8);
@@ -300,7 +311,7 @@ function makeLogoEl(a, big){
   }
   if (!FULL_DATA){
     try {
-      const res = await fetch("data/airlines.json?v=84");
+      const res = await fetch("data/airlines.json?v=90");
       if (!res.ok) throw new Error(res.status);
       FULL_DATA = await res.json();
     } catch {
@@ -312,11 +323,11 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=84");
+    const geoRes = await fetch("data/airline_geo.json?v=90");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=84");
+    const codesRes = await fetch("data/airport_codes.json?v=90");
     if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -435,7 +446,14 @@ function showAirlineRoutes(id){
   const geo = AIRLINE_GEO[id];
   const hubs = resolveLatLon(a && a.hubs, geo && geo.hubs);
   const routes = resolveLatLon(a && a.routes, geo && geo.routes);
-  if (!hubs.length){ AptGlobe.setRoutes([]); return; }
+  if (!hubs.length){
+    // 沒有可定位的樞紐座標——除了清掉舊航線弧線，也要一併清掉地面貼圖，
+    // 否則使用者剛才在地圖上直接點過的機場衛星貼片會卡在原地，換看
+    // 下一家沒有樞紐座標的公司時畫面上仍殘留著舊的地面圖磚。
+    AptGlobe.setRoutes([]);
+    AptGlobe.clearGroundPatch();
+    return;
+  }
   const arcs = [];
   hubs.forEach(hub => {
     routes.forEach(r => arcs.push({ fromLat: hub.lat, fromLon: hub.lon, toLat: r.lat, toLon: r.lon }));
@@ -471,7 +489,7 @@ function applyAll(){
     if (alliance && a.alliance !== alliance) return false;
     if (tier && a.tier !== tier) return false;
     if (!q) return true;
-    const hay = [a.name, a.nameZh, a.icao, a.iata, I18N.field(a.country), a.country.zh, a.country.en, ...countryAliases(a), ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
+    const hay = [a.name, a.nameZh, a.nameJa, a.icao, a.iata, I18N.field(a.country), a.country.zh, a.country.en, ...countryAliases(a), ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
     return hay.includes(q);
   }).sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
 
@@ -493,12 +511,12 @@ function render(list){
     const cmp = isInCompare(a.id);
     const tierTag = a.tier ? `<span class="al-tier-tag al-tier-${a.tier}">${I18N.t("airlines.tier." + a.tier)}</span>` : "";
     const founded = a.founded ? ` · ${I18N.t("airlines.founded")} ${a.founded}` : "";
-    const nameZh = (a.nameZh && I18N.get() === "zh") ? ` <span class="al-name-zh">${a.nameZh}</span>` : "";
+    const localTag = localAirlineName(a) ? ` <span class="al-name-zh">${localAirlineName(a)}</span>` : "";
     return `<div class="al-row" data-id="${a.id}" tabindex="0" role="button">
       <span class="al-logo-slot"></span>
       <span class="al-alliance-dot ${a.alliance}"></span>
       <span class="al-main">
-        <span class="al-name">${a.name}${nameZh}</span>
+        <span class="al-name">${a.name}${localTag}</span>
         ${tierTag}
         <span class="al-loc">${I18N.field(a.country)}${founded}</span>
       </span>
@@ -604,7 +622,7 @@ function openAirline(id){
 
   $("al-p-logo").replaceWith(Object.assign(makeLogoEl(a, true), { id: "al-p-logo" }));
   $("al-p-codes").textContent = [a.icao, a.iata].filter(Boolean).join(" · ");
-  $("al-p-name").textContent = (a.nameZh && I18N.get() === "zh") ? `${a.name}（${a.nameZh}）` : a.name;
+  $("al-p-name").textContent = localAirlineName(a) ? `${a.name}（${localAirlineName(a)}）` : a.name;
   $("al-p-sub").textContent = a.founded
     ? `${I18N.field(a.country)} · ${I18N.t("airlines.founded")} ${a.founded}`
     : I18N.field(a.country);
@@ -663,7 +681,7 @@ function closePanel(){
 
 // ── 編輯功能：僅本機暫存，需通過密碼驗證後點「儲存到網站」才會公開 ──
 const EDIT_FIELD_IDS = [
-  "al-e-name", "al-e-namezh", "al-e-icao", "al-e-iata", "al-e-founded", "al-e-alliance", "al-e-tier",
+  "al-e-name", "al-e-namezh", "al-e-nameja", "al-e-icao", "al-e-iata", "al-e-founded", "al-e-alliance", "al-e-tier",
   "al-e-country-zh", "al-e-country-en", "al-e-country-ja", "al-e-hubs", "al-e-fleettotal",
   "al-e-fleet", "al-e-routes", "al-e-tagline-zh", "al-e-tagline-en", "al-e-tagline-ja",
   "al-e-customlogo", "al-e-photo",
@@ -674,6 +692,7 @@ function openEditor(id){
   if (!a) return;
   $("al-e-name").value = a.name || "";
   $("al-e-namezh").value = a.nameZh || "";
+  $("al-e-nameja").value = a.nameJa || "";
   $("al-e-icao").value = a.icao || "";
   $("al-e-iata").value = a.iata || "";
   $("al-e-founded").value = a.founded != null ? a.founded : "";
@@ -704,6 +723,8 @@ function applyEditForm(a){
   a.name = $("al-e-name").value.trim() || a.name;
   const nameZh = $("al-e-namezh").value.trim();
   if (nameZh) a.nameZh = nameZh; else delete a.nameZh;
+  const nameJa = $("al-e-nameja").value.trim();
+  if (nameJa) a.nameJa = nameJa; else delete a.nameJa;
   a.icao = $("al-e-icao").value.trim().toUpperCase() || null;
   a.iata = $("al-e-iata").value.trim().toUpperCase() || null;
   const founded = parseInt($("al-e-founded").value, 10);
