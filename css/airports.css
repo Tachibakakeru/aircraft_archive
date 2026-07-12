@@ -38,6 +38,7 @@
 .apt-type-dot.closed{background:transparent;border:1px solid var(--muted)}
 .apt-row .apt-main{flex:1;min-width:0}
 .apt-row .apt-name{display:block;font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.apt-name-local{font-weight:400;font-size:12px;color:var(--muted)}
 .apt-row .apt-loc{display:block;font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .apt-row .apt-codes{
   flex-shrink:0;display:flex;gap:6px;font-family:var(--mono);font-size:11px;
@@ -275,6 +276,8 @@
 
 /* ── 機場比較：搜尋選擇器 ── */
 .apt-cmp-picker{position:relative;min-width:200px}
+.apt-country-picker{min-width:170px;max-width:220px}
+.apt-country-picker .apt-cmp-search{padding:10px 14px;font-family:var(--mono);font-size:11px}
 .apt-cmp-search{
   width:100%;font-family:var(--sans);font-size:14px;
   color:var(--text);background:var(--panel);

@@ -163,7 +163,9 @@
   display:inline-block;margin:0 6px 6px 0;padding:5px 11px;
   font-size:12.5px;border-radius:20px;
   background:var(--bg-1);border:1px solid var(--stroke);color:var(--text);
+  text-decoration:none;transition:border-color .15s,color .15s;
 }
+a.al-route-chip:hover{border-color:var(--cyan);color:var(--cyan)}
 .al-hub-link{color:var(--cyan);text-decoration:none;border-bottom:1px dotted var(--cyan)}
 .al-hub-link:hover{border-bottom-style:solid}
 .al-p-tagline{margin-top:22px;font-size:14px;line-height:1.85;color:var(--text)}

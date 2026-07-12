@@ -22,7 +22,7 @@ async function loadHubIndex(){
   if (HUB_INDEX) return HUB_INDEX;
   HUB_INDEX = {};
   try {
-    const res = await fetch("data/airline_geo.json?v=79");
+    const res = await fetch("data/airline_geo.json?v=80");
     const geo = res.ok ? await res.json() : {};
     Object.entries(geo).forEach(([airlineId, g]) => {
       (g.hubs || []).forEach(h => {
@@ -36,7 +36,7 @@ async function loadAirlineNames(){
   if (AIRLINE_NAMES) return AIRLINE_NAMES;
   AIRLINE_NAMES = {};
   try {
-    const res = await fetch("data/airlines.json?v=79");
+    const res = await fetch("data/airlines.json?v=80");
     const data = res.ok ? await res.json() : { airlines: [] };
     data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
   } catch { /* 同上 */ }
@@ -185,7 +185,7 @@ async function renderAptCmpTable(){
   const fmtFt = ft => ft == null ? null : I18N.specValue(`${Math.round(ft * 0.3048)} m (${Math.round(ft)} ft)`);
 
   html += catBlockAptCmp(I18N.t("compare.basic"), [
-    [I18N.t("compare.apt.country"), id => (COUNTRIES[metaOf[id].country] || metaOf[id].country || "—")],
+    [I18N.t("compare.apt.country"), id => countryName(metaOf[id].country)],
     [I18N.t("compare.apt.city"), id => metaOf[id].city || "—"],
     [I18N.t("compare.apt.type"), id => I18N.t("airports.type." + metaOf[id].type)],
   ], ids);
@@ -276,8 +276,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=79"),
-      fetch("data/countries.json?v=79"),
+      fetch("data/airports.json?v=80"),
+      fetch("data/countries.json?v=80"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -300,7 +300,7 @@ function escapeHTML(s){
   if (wantId && AIRPORTS.some(a => a.id === wantId)) openAirport(wantId);
 
   $("apt-search").addEventListener("input", applyAll);
-  $("apt-country").addEventListener("change", applyAll);
+  wireCountryPicker();
   $("apt-type").addEventListener("change", applyAll);
   $("apt-fav-only").addEventListener("change", applyAll);
   $("apt-view-toggle").addEventListener("click", toggleGlobeMode);
@@ -310,7 +310,7 @@ function escapeHTML(s){
   });
   $("apt-globe-reset").addEventListener("click", () => AptGlobe.resetView());
   document.addEventListener("langchange", () => {
-    I18N.apply(); applyAll();
+    I18N.apply(); buildCountrySelect(); applyAll();
     const panel = $("panel");
     if (panel.classList.contains("open") && panel.dataset.id) openAirport(panel.dataset.id);
   });
@@ -448,15 +448,81 @@ function syncCmpButton(){
   btn.setAttribute("aria-pressed", String(!!on));
 }
 
-function countryName(code){ return (COUNTRIES[code] || code || "—"); }
+// 機場中文／日文名稱：只收錄「有普遍認定譯名」的知名機場（見
+// tools 產生腳本），其餘沒有收錄的機場維持原英文名稱，不機翻猜測。
+function airportLocalNamePlain(a){
+  const cur = I18N.get();
+  const local = cur === "zh" ? a.nameZh : cur === "ja" ? a.nameJa : null;
+  return local ? `${a.name}（${local}）` : a.name;
+}
+function airportLocalName(a){
+  const cur = I18N.get();
+  const local = cur === "zh" ? a.nameZh : cur === "ja" ? a.nameJa : null;
+  return local ? `${a.name} <span class="apt-name-local">${local}</span>` : a.name;
+}
 
+function countryName(code){
+  const c = COUNTRIES[code];
+  if (!c) return code || "—";
+  return c[I18N.get()] || c.en || code;
+}
+
+let COUNTRY_COUNTS = {};
 function buildCountrySelect(){
-  const counts = {};
-  AIRPORTS.forEach(a => { if (a.country) counts[a.country] = (counts[a.country] || 0) + 1; });
-  const codes = Object.keys(counts).sort((a, b) => countryName(a).localeCompare(countryName(b)));
-  const sel = $("apt-country");
-  sel.innerHTML = `<option value="">${I18N.t("airports.filter.allCountries")}</option>` +
-    codes.map(c => `<option value="${c}">${countryName(c)} (${counts[c].toLocaleString()})</option>`).join("");
+  COUNTRY_COUNTS = {};
+  AIRPORTS.forEach(a => { if (a.country) COUNTRY_COUNTS[a.country] = (COUNTRY_COUNTS[a.country] || 0) + 1; });
+  renderCountrySuggest("");
+  const cur = $("apt-country").value;
+  const meta = COUNTRIES[cur];
+  $("apt-country-input").value = cur && meta ? `${countryName(cur)} (${COUNTRY_COUNTS[cur].toLocaleString()})` : "";
+}
+
+// 國家篩選：文字輸入依「目前語言」的國名字首篩選（例：英文介面打 "J" 只列
+// J 開頭的國家，"Ja" 再縮小到 Ja 開頭；中日文介面用該語言的國名字首比對）。
+function renderCountrySuggest(q){
+  const suggest = $("apt-country-suggest");
+  const ql = q.trim().toLowerCase();
+  const codes = Object.keys(COUNTRY_COUNTS)
+    .filter(c => !ql || countryName(c).toLowerCase().startsWith(ql))
+    .sort((a, b) => countryName(a).localeCompare(countryName(b)));
+  if (!codes.length && ql){ suggest.hidden = true; return; }
+  const allOpt = ql ? "" : `<div class="apt-cmp-opt" data-code="">
+      <span class="apt-cmp-opt-name">${I18N.t("airports.filter.allCountries")}</span>
+    </div>`;
+  suggest.innerHTML = allOpt + codes.map(c =>
+    `<div class="apt-cmp-opt" data-code="${c}">
+      <span class="apt-cmp-opt-name">${countryName(c)}</span>
+      <span class="apt-cmp-opt-code">${COUNTRY_COUNTS[c].toLocaleString()}</span>
+    </div>`).join("");
+  suggest.hidden = false;
+}
+
+function wireCountryPicker(){
+  const hidden = $("apt-country"), input = $("apt-country-input"), suggest = $("apt-country-suggest");
+  input.addEventListener("focus", () => renderCountrySuggest(""));
+  input.addEventListener("input", () => renderCountrySuggest(input.value));
+  suggest.addEventListener("mousedown", e => {
+    const opt = e.target.closest(".apt-cmp-opt");
+    if (!opt) return;
+    const code = opt.dataset.code;
+    hidden.value = code;
+    input.value = code ? `${countryName(code)} (${COUNTRY_COUNTS[code].toLocaleString()})` : "";
+    suggest.hidden = true;
+    applyAll();
+  });
+  input.addEventListener("blur", () => {
+    setTimeout(() => {
+      suggest.hidden = true;
+      // 使用者打了字但沒有從清單點選，還原成目前實際套用的篩選狀態，
+      // 避免輸入框文字跟真正的篩選條件對不上。
+      const code = hidden.value;
+      input.value = code ? `${countryName(code)} (${(COUNTRY_COUNTS[code] || 0).toLocaleString()})` : "";
+    }, 150);
+  });
+  // 清空文字框＋失焦＝清除篩選（比對照原生 <select> 的「所有國家」選項）
+  input.addEventListener("keydown", e => {
+    if (e.key === "Escape"){ input.value = ""; suggest.hidden = true; input.blur(); }
+  });
 }
 
 function buildTypeSelect(){
@@ -483,7 +549,7 @@ function applyAll(){
       if (country && a.country !== country) return false;
       if (type && a.type !== type) return false;
       if (!q) return true;
-      const hay = [a.name, a.city, countryName(a.country), a.icao, a.iata].filter(Boolean).join(" ").toLowerCase();
+      const hay = [a.name, a.nameZh, a.nameJa, a.city, countryName(a.country), a.icao, a.iata].filter(Boolean).join(" ").toLowerCase();
       return hay.includes(q);
     });
   }
@@ -549,7 +615,7 @@ function render(list){
     return `<div class="apt-row${a.type === "closed" ? " closed" : ""}" data-id="${a.id}" tabindex="0" role="button">
       <span class="apt-type-dot ${a.type}"></span>
       <span class="apt-main">
-        <span class="apt-name">${a.name}</span>
+        <span class="apt-name">${airportLocalName(a)}</span>
         <span class="apt-loc">${loc}</span>
       </span>
       <button class="apt-row-cmp${cmp ? " on" : ""}" data-cmp-id="${a.id}" aria-pressed="${cmp}" title="${I18N.t("airports.detail.addCompare")}">⇄</button>
@@ -592,7 +658,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=79`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=80`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -707,7 +773,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=79`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=80`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
@@ -787,7 +853,7 @@ async function openAirport(id){
   closeNotesEditor();
   renderNotesView(id);
   $("apt-p-type").textContent = I18N.t("airports.type." + a.type) || a.type;
-  $("apt-p-name").textContent = a.name;
+  $("apt-p-name").textContent = airportLocalNamePlain(a);
   $("apt-p-loc").textContent = [a.city, countryName(a.country)].filter(Boolean).join(", ");
 
   const badges = [a.icao, a.iata].filter(Boolean).map(c => `<span class="apt-badge">${c}</span>`);

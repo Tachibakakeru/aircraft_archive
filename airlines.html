@@ -7,12 +7,12 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=79">
-<link rel="stylesheet" href="css/compare.css?v=79">
-<link rel="stylesheet" href="css/airports.css?v=79">
-<link rel="stylesheet" href="css/airlines.css?v=79">
-<script src="js/theme.js?v=79"></script>
-<script src="js/i18n.js?v=79"></script>
+<link rel="stylesheet" href="css/style.css?v=80">
+<link rel="stylesheet" href="css/compare.css?v=80">
+<link rel="stylesheet" href="css/airports.css?v=80">
+<link rel="stylesheet" href="css/airlines.css?v=80">
+<script src="js/theme.js?v=80"></script>
+<script src="js/i18n.js?v=80"></script>
 </head>
 <body>
 
@@ -118,12 +118,12 @@
         <input type="text" id="al-e-country-en" placeholder="English">
         <input type="text" id="al-e-country-ja" placeholder="日本語">
       </label>
-      <label class="al-edit-full">主要樞紐（以逗號分隔）<input type="text" id="al-e-hubs" placeholder="TPE, TSA"></label>
+      <label class="al-edit-full">主要樞紐（以逗號分隔，可直接輸入 ICAO/IATA 代碼如 NRT／RJAA，顯示時會自動轉成機場名稱並上連結）<input type="text" id="al-e-hubs" placeholder="RCTP, NRT"></label>
       <label class="al-edit-full">機隊總數<input type="number" id="al-e-fleettotal"></label>
       <label class="al-edit-full">機隊組成（每行一筆，格式：機型：數量：對應機型ID（選填））
         <textarea id="al-e-fleet" rows="3" placeholder="Airbus A350-900：14：a350"></textarea>
       </label>
-      <label class="al-edit-full">代表性航線（以逗號分隔）<textarea id="al-e-routes" rows="2" placeholder="台北, 東京, 洛杉磯"></textarea></label>
+      <label class="al-edit-full">代表性航線（以逗號分隔，同樣可輸入 ICAO/IATA 代碼）<textarea id="al-e-routes" rows="2" placeholder="NRT, LAX, 洛杉磯"></textarea></label>
       <label class="al-edit-full">簡介（中文）<textarea id="al-e-tagline-zh" rows="3"></textarea></label>
       <label class="al-edit-full">簡介（English）<textarea id="al-e-tagline-en" rows="3"></textarea></label>
       <label class="al-edit-full">簡介（日本語）<textarea id="al-e-tagline-ja" rows="3"></textarea></label>
@@ -158,10 +158,10 @@
   </div>
 </div>
 
-<script src="js/auth.js?v=79"></script>
-<script src="js/storage.js?v=79"></script>
-<script src="js/globe.js?v=79"></script>
-<script src="js/airlines.js?v=79"></script>
-<script src="js/ui.js?v=79"></script>
+<script src="js/auth.js?v=80"></script>
+<script src="js/storage.js?v=80"></script>
+<script src="js/globe.js?v=80"></script>
+<script src="js/airlines.js?v=80"></script>
+<script src="js/ui.js?v=80"></script>
 </body>
 </html>

@@ -16,6 +16,18 @@ const EDIT_LS_KEY = "hangar_edit_airlines";
 let AIRLINE_GEO = {};
 let globeMode = false;
 
+// 機場代碼自動連結：data/airport_codes.json 是 ICAO/IATA 代碼 → 機場名稱／
+// 座標的完整索引（涵蓋所有有代碼的機場，19,308 筆）。編輯樞紐／航線時
+// 直接輸入代碼（如 "NRT"），不需要等離線腳本重新比對，顯示時就能即時
+// 解析出真正的機場名稱並連結到機場頁。
+let AIRPORT_CODES = {};
+function resolveAirportCode(text){
+  const code = text.trim().toUpperCase();
+  if (!/^[A-Z0-9]{3,4}$/.test(code)) return null;
+  const r = AIRPORT_CODES[code];
+  return r ? { id: r.id, name: r.city || r.name, lat: r.lat, lon: r.lon } : null;
+}
+
 // 國家名稱中英對照：72 家人工彙整的公司 country.zh 是正確翻譯的中文，
 // 但另外 503 家由 OpenFlights 資料批次生成的公司 country.zh/en 目前是
 // 同一個英文原文（未翻譯）——搜尋「中國」只會比對到前者，漏掉後者，
@@ -288,7 +300,7 @@ function makeLogoEl(a, big){
   }
   if (!FULL_DATA){
     try {
-      const res = await fetch("data/airlines.json?v=79");
+      const res = await fetch("data/airlines.json?v=80");
       if (!res.ok) throw new Error(res.status);
       FULL_DATA = await res.json();
     } catch {
@@ -300,9 +312,13 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=79");
+    const geoRes = await fetch("data/airline_geo.json?v=80");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
+  try {
+    const codesRes = await fetch("data/airport_codes.json?v=80");
+    if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
+  } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
   buildAllianceSelect();
   buildTierSelect();
@@ -398,18 +414,34 @@ function refreshHubMarkers(){
   AptGlobe.setMarkers(points);
 }
 
+// 樞紐／航線座標：優先用離線腳本比對好的 data/airline_geo.json（涵蓋既有
+// 描述性文字），查不到的再看是不是直接輸入的 ICAO/IATA 代碼（即時解析，
+// 不必等離線腳本重新跑一輪就能馬上在地圖上看到剛編輯好的樞紐／航線）。
+function resolveLatLon(texts, geoList){
+  const byText = new Map((geoList || []).map(g => [g.text, g]));
+  const out = [];
+  (texts || []).forEach(t => {
+    const g = byText.get(t);
+    if (g){ out.push({ lat: g.lat, lon: g.lon }); return; }
+    const r = resolveAirportCode(t);
+    if (r) out.push({ lat: r.lat, lon: r.lon });
+  });
+  return out;
+}
+
 function showAirlineRoutes(id){
   if (!globeMode || !AptGlobe.isReady()) return;
+  const a = AIRLINES.find(x => x.id === id);
   const geo = AIRLINE_GEO[id];
-  if (!geo || !geo.hubs.length){ AptGlobe.setRoutes([]); return; }
+  const hubs = resolveLatLon(a && a.hubs, geo && geo.hubs);
+  const routes = resolveLatLon(a && a.routes, geo && geo.routes);
+  if (!hubs.length){ AptGlobe.setRoutes([]); return; }
   const arcs = [];
-  geo.hubs.forEach(hub => {
-    (geo.routes || []).forEach(r => {
-      arcs.push({ fromLat: hub.lat, fromLon: hub.lon, toLat: r.lat, toLon: r.lon });
-    });
+  hubs.forEach(hub => {
+    routes.forEach(r => arcs.push({ fromLat: hub.lat, fromLon: hub.lon, toLat: r.lat, toLon: r.lon }));
   });
   AptGlobe.setRoutes(arcs);
-  AptGlobe.focusOn(geo.hubs[0].lat, geo.hubs[0].lon);
+  AptGlobe.focusOn(hubs[0].lat, hubs[0].lon);
 }
 
 function buildAllianceSelect(){
@@ -531,10 +563,24 @@ function hubsHTML(a){
   const byText = new Map((geo && geo.hubs || []).map(h => [h.text, h.icao]));
   return a.hubs.map(h => {
     const icao = byText.get(h);
-    return icao
-      ? `<a class="al-hub-link" href="airports.html?icao=${encodeURIComponent(icao)}">${escHTML(h)}</a>`
-      : escHTML(h);
+    if (icao) return `<a class="al-hub-link" href="airports.html?icao=${encodeURIComponent(icao)}">${escHTML(h)}</a>`;
+    const resolved = resolveAirportCode(h);
+    if (resolved) return `<a class="al-hub-link" href="airports.html?icao=${encodeURIComponent(resolved.id)}">${escHTML(resolved.name)}</a>`;
+    return escHTML(h);
   }).join(" / ");
+}
+
+function routesHTML(a){
+  if (!a.routes || !a.routes.length) return "";
+  const geo = AIRLINE_GEO[a.id];
+  const byText = new Map((geo && geo.routes || []).map(r => [r.text, r.icao]));
+  return a.routes.map(r => {
+    const icao = byText.get(r);
+    if (icao) return `<a class="al-route-chip" href="airports.html?icao=${encodeURIComponent(icao)}">${escHTML(r)}</a>`;
+    const resolved = resolveAirportCode(r);
+    if (resolved) return `<a class="al-route-chip" href="airports.html?icao=${encodeURIComponent(resolved.id)}">${escHTML(resolved.name)}</a>`;
+    return `<span class="al-route-chip">${escHTML(r)}</span>`;
+  }).join("");
 }
 
 function openAirline(id){
@@ -588,7 +634,7 @@ function openAirline(id){
       ${f.fleetId ? `<a class="al-fleet-3d" href="viewer.html?model=${encodeURIComponent(f.fleetId)}">🔗 3D</a>` : ""}
     </div>`).join("") || `<div class="al-empty-inline">—</div>`;
 
-  $("al-p-routes").innerHTML = (a.routes || []).map(r => `<span class="al-route-chip">${r}</span>`).join("");
+  $("al-p-routes").innerHTML = routesHTML(a);
 
   $("al-p-tagline").textContent = I18N.field(a.tagline) || I18N.t("airlines.detail.noData");
 
@@ -603,7 +649,10 @@ function closePanel(){
   panel.classList.remove("open");
   panel.setAttribute("aria-hidden", "true");
   history.replaceState(null, "", location.pathname);
-  if (globeMode && typeof AptGlobe !== "undefined" && AptGlobe.isReady()) AptGlobe.setRoutes([]);
+  if (globeMode && typeof AptGlobe !== "undefined" && AptGlobe.isReady()){
+    AptGlobe.setRoutes([]);
+    AptGlobe.clearGroundPatch();
+  }
 }
 
 // ── 編輯功能：僅本機暫存，需通過密碼驗證後點「儲存到網站」才會公開 ──
