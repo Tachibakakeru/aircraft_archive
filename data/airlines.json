@@ -4837,19 +4837,27 @@
       "icao": "CCA",
       "iata": "CA",
       "country": {
-        "zh": "China",
+        "zh": "中國",
         "en": "China",
-        "ja": "China"
+        "ja": "中国"
       },
-      "founded": null,
-      "alliance": "none",
-      "tier": null,
-      "hubs": [],
+      "founded": 1988,
+      "alliance": "star",
+      "tier": "mainline",
+      "hubs": [
+        "PEA",
+        "CTU"
+      ],
       "fleetTotal": null,
       "fleet": [],
       "routes": [],
-      "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "tagline": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "logoSrc": "flightaware_logos",
+      "nameZh": "中國國際航空"
     },
     {
       "id": "cva",
