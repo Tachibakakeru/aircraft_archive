@@ -4841,15 +4841,20 @@
         "en": "China",
         "ja": "China"
       },
-      "founded": null,
-      "alliance": "none",
-      "tier": null,
+      "founded": 1988,
+      "alliance": "star",
+      "tier": "mainline",
       "hubs": [],
       "fleetTotal": null,
       "fleet": [],
       "routes": [],
-      "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "tagline": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "logoSrc": "flightaware_logos",
+      "nameZh": "中國國際航空"
     },
     {
       "id": "cva",
