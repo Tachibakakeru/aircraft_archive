@@ -4844,7 +4844,10 @@
       "founded": 1988,
       "alliance": "star",
       "tier": "mainline",
-      "hubs": [],
+      "hubs": [
+        "PEA",
+        "CTU"
+      ],
       "fleetTotal": null,
       "fleet": [],
       "routes": [],
