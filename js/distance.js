@@ -21,7 +21,7 @@ let fromId = null, toId = null;
 async function loadDetails(country){
   if (!country || detailCache[country]) return detailCache[country] || {};
   try {
-    const res = await fetch(`data/details/${country}.json?v=90`);
+    const res = await fetch(`data/details/${country}.json?v=91`);
     detailCache[country] = res.ok ? await res.json() : {};
   } catch { detailCache[country] = {}; }
   return detailCache[country];
@@ -40,7 +40,7 @@ async function airportCoords(id){
 async function cruiseSpeedKmh(id){
   if (speedCache[id] != null) return speedCache[id];
   try {
-    const res = await fetch(`data/${id}.json?v=90`);
+    const res = await fetch(`data/${id}.json?v=91`);
     if (!res.ok) throw new Error();
     const d = await res.json();
     let kmh = null;
@@ -106,8 +106,8 @@ function fmtHours(h){
 (async () => {
   try {
     const [aRes, fRes] = await Promise.all([
-      fetch("data/airports.json?v=90"),
-      fetch("data/fleet.json?v=90"),
+      fetch("data/airports.json?v=91"),
+      fetch("data/fleet.json?v=91"),
     ]);
     AIRPORTS = (await aRes.json()).airports;
     FLEET = (await fRes.json()).aircraft;

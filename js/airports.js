@@ -38,7 +38,7 @@ async function loadHubIndex(){
   if (HUB_INDEX) return HUB_INDEX;
   HUB_INDEX = {};
   try {
-    const res = await fetch("data/airline_geo.json?v=90");
+    const res = await fetch("data/airline_geo.json?v=91");
     const geo = res.ok ? await res.json() : {};
     Object.entries(geo).forEach(([airlineId, g]) => {
       (g.hubs || []).forEach(h => {
@@ -52,7 +52,7 @@ async function loadAirlineNames(){
   if (AIRLINE_NAMES) return AIRLINE_NAMES;
   AIRLINE_NAMES = {};
   try {
-    const res = await fetch("data/airlines.json?v=90");
+    const res = await fetch("data/airlines.json?v=91");
     const data = res.ok ? await res.json() : { airlines: [] };
     data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
   } catch { /* 同上 */ }
@@ -292,8 +292,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=90"),
-      fetch("data/countries.json?v=90"),
+      fetch("data/airports.json?v=91"),
+      fetch("data/countries.json?v=91"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -305,7 +305,7 @@ function escapeHTML(s){
     return;
   }
   try {
-    const res = await fetch("data/city_names.json?v=90");
+    const res = await fetch("data/city_names.json?v=91");
     if (res.ok) CITY_NAMES = await res.json();
   } catch { /* 城市層級翻譯為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -695,7 +695,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=90`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=91`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -770,6 +770,20 @@ function mosaicImgs(lat, lon, z, r){
       tiles += `<img src="${tileURL(z, cx + dx, cy + dy)}" alt="">`;
   return tiles;
 }
+// 節點版（放大檢視用）：回傳實際 <img> 元素陣列而非 HTML 字串，讓預載完成
+// 後可以把同一批已載入的節點直接搬進可視格線，見 renderSatLightbox()。
+function mosaicImgEls(lat, lon, z, r){
+  const { x: cx, y: cy } = tileXY(lon, lat, z);
+  const imgs = [];
+  for (let dy = -r; dy <= r; dy++)
+    for (let dx = -r; dx <= r; dx++){
+      const img = document.createElement("img");
+      img.src = tileURL(z, cx + dx, cy + dy);
+      img.alt = "";
+      imgs.push(img);
+    }
+  return imgs;
+}
 function satelliteHTML(lat, lon, type){
   if (lat == null || lon == null) return "";
   const z = SAT_ZOOM[type] || 14;
@@ -790,16 +804,20 @@ function renderSatLightbox(){
   $("sat-lightbox-zoom").textContent = "z" + zoom;
   // 25 張圖磚各自非同步載入，若載完幾張就先顯示，放大/縮小切換時
   // 會看到一半新一半舊、順序亂跳的拼貼；改成全部預載完成才一次換上。
-  const temp = document.createElement("div");
-  temp.innerHTML = mosaicImgs(lat, lon, zoom, 2);
-  const imgs = [...temp.querySelectorAll("img")];
+  // 預載完直接搬移同一批 <img> 節點進格線，不透過 innerHTML 字串化再
+  // 重新解析——後者等於讓瀏覽器把 25 張圖磚重新抓一次，手機瀏覽器記憶體
+  // 壓力大、快取不保證命中，二次抓取偶爾抓到跟預覽時不同的圖磚，格線
+  // 看起來就會東拼西湊對不上（這正是行動裝置回報「放大後畫面跑掉」的成因）。
+  const imgs = mosaicImgEls(lat, lon, zoom, 2);
   Promise.all(imgs.map(img => new Promise(resolve => {
     if (img.complete) return resolve();
     img.addEventListener("load", resolve, { once: true });
     img.addEventListener("error", resolve, { once: true });
   }))).then(() => {
     if (!satState || satState.lat !== lat || satState.lon !== lon || satState.zoom !== zoom) return;
-    $("sat-lightbox-grid").innerHTML = temp.innerHTML;
+    const grid = $("sat-lightbox-grid");
+    grid.innerHTML = "";
+    imgs.forEach(img => grid.appendChild(img));
   });
 }
 function closeSatLightbox(){ $("sat-lightbox").hidden = true; satState = null; }
@@ -810,7 +828,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=90`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=91`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
