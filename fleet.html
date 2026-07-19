@@ -197,6 +197,21 @@
       }
     };
 
+    // 搜尋／篩選／排序狀態同步進網址查詢字串，讓「上一頁」能還原到離開時的
+    // 搜尋結果，而不是回到未篩選的完整列表（純 JS 變數狀態在整頁導覽後會
+    // 遺失，網址才是瀏覽器歷史記錄實際記得的東西）。
+    const syncUrl = () => {
+      const p = new URLSearchParams();
+      if (search.value.trim()) p.set("q", search.value.trim());
+      if (catSel.value) p.set("cat", catSel.value);
+      if (sortSel.value && sortSel.value !== "name") p.set("sort", sortSel.value);
+      if (minIn.value !== "") p.set("min", minIn.value);
+      if (maxIn.value !== "") p.set("max", maxIn.value);
+      if (favOnly.checked) p.set("fav", "1");
+      const qs = p.toString();
+      history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+    };
+
     const applyAll = () => {
       I18N.apply();
       buildControls();
@@ -213,6 +228,7 @@
         (!getter || ((min == null || getter(a) >= min) && (max == null || getter(a) <= max))));
       list = list.slice().sort(SORTS[sortSel.value] || SORTS.name);
       render(list);
+      syncUrl();
     };
 
     search.addEventListener("input", applyAll);
@@ -227,6 +243,17 @@
       applyAll();
     });
     document.addEventListener("langchange", applyAll);
+
+    // 從網址查詢字串還原搜尋／篩選／排序狀態（見 syncUrl）。catSel 的選項要
+    // 先靠 buildControls() 用 fleet 資料生出來，才能正確設回 cat 的值。
+    buildControls();
+    const restoreParams = new URLSearchParams(location.search);
+    if (restoreParams.has("q")) search.value = restoreParams.get("q");
+    if (restoreParams.has("cat")) catSel.value = restoreParams.get("cat");
+    if (restoreParams.has("sort")) sortSel.value = restoreParams.get("sort");
+    if (restoreParams.has("min")) minIn.value = restoreParams.get("min");
+    if (restoreParams.has("max")) maxIn.value = restoreParams.get("max");
+    if (restoreParams.get("fav") === "1") favOnly.checked = true;
 
     applyAll();
   } catch (err) {
