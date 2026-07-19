@@ -541,6 +541,28 @@
       "iata": "789"
     },
     {
+      "id": "dreamlifter",
+      "name": "Boeing 747-400 Dreamlifter",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "貨機",
+        "en": "Freighter",
+        "ja": "貨物機"
+      },
+      "firstFlight": "2006",
+      "span": "64.4 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "由 747-400 客機大幅改裝的超大型運輸機，全球僅 4 架，專責波音 787 機身部件跨廠運送。",
+        "en": "A radically modified 747-400 with a bulbous fuselage — only 4 exist, shuttling 787 fuselage sections between Boeing's factories.",
+        "ja": "747-400を大幅改造した超大型輸送機。世界に4機のみ、787の胴体部品を工場間輸送する専用機。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B74S",
+      "iata": "",
+      "has3d": false
+    },
+    {
       "id": "dc9",
       "name": "McDonnell Douglas DC-9-30",
       "manufacturer": "McDonnell Douglas",
