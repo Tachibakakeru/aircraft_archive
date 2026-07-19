@@ -27,15 +27,17 @@
   if ("serviceWorker" in navigator)
     navigator.serviceWorker.register("sw.js").catch(() => {});
 
-  // 「← FLEET / 機隊列表」麵包屑連結原本寫死 href="fleet.html"，從機型
-  // 檢視器等頁面點回去會遺失離開機隊列表時的搜尋／篩選狀態（跟瀏覽器
-  // 「上一頁」不同，這是頁面自己的連結，網址本來就沒有帶查詢字串可還原）。
-  // fleet.html 每次篩選狀態變動時會把查詢字串存進 sessionStorage，這裡
-  // 讀回來接到連結後面，讓「回機隊列表」也能停留在原本的搜尋結果。
+  // 連回機隊列表的連結（不論是 viewer.html 等頁面的「← FLEET」麵包屑，
+  // 還是 distance.html／airlines.html 工具列上的「✈️ 飛行器圖鑑」）原本
+  // 都寫死 href="fleet.html"，點回去會遺失離開機隊列表時的搜尋／篩選
+  // 狀態（跟瀏覽器「上一頁」不同，這是頁面自己的連結，網址本來就沒有
+  // 帶查詢字串可還原）。fleet.html 每次篩選狀態變動時會把查詢字串存進
+  // sessionStorage，這裡讀回來接到「所有」連到 fleet.html 的連結後面，
+  // 不限定樣式或 class，讓從任何頁面回機隊列表都能停留在原本的搜尋結果。
   function restoreFleetBackLink(){
     const q = sessionStorage.getItem("hangar_fleet_query");
     if (!q) return;
-    document.querySelectorAll('a.back[href="fleet.html"]').forEach(a => {
+    document.querySelectorAll('a[href="fleet.html"]').forEach(a => {
       a.href = "fleet.html?" + q;
     });
   }

@@ -14,7 +14,7 @@ const dataCache = {};
 let idA = "b738", idB = "a320";
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=98")).json();
+  fleet = await (await fetch("data/fleet.json?v=99")).json();
 
   const params = new URLSearchParams(location.search);
   const pa = params.get("a"), pb = params.get("b");
@@ -35,7 +35,7 @@ let idA = "b738", idB = "a320";
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=98`)).json();
+  const d = await (await fetch(`data/${id}.json?v=99`)).json();
   dataCache[id] = d;
   return d;
 }
