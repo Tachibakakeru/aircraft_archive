@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天空檔案 — 波音 vs 空巴</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b1220">
+<link rel="stylesheet" href="css/style.css?v=94">
+<link rel="stylesheet" href="css/versus.css?v=94">
+<script src="js/theme.js?v=94"></script>
+<script src="js/i18n.js?v=94"></script>
+</head>
+<body>
+
+<div class="vs-topbar">
+  <a class="back" href="fleet.html" data-i18n="fleet.back">← FLEET / 機隊列表</a>
+  <div class="vs-title">
+    <span class="eyebrow" data-i18n="versus.eyebrow">VERSUS / 機廠對比</span>
+    <h1 data-i18n="versus.title">波音 vs 空巴 · 部位設計對比</h1>
+  </div>
+  <button id="btn-lang" class="tool-btn" title="Language">繁中</button>
+  <button id="btn-theme" class="tool-btn" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+</div>
+
+<p class="vs-sub" data-i18n="versus.sub">選兩架機型，逐部位比較設計取捨；點各部位「✎ 編輯」可補文字與照片。</p>
+
+<div class="vs-pickers">
+  <div class="vs-picker-col">
+    <label data-i18n="versus.pickA">機型 A</label>
+    <select id="vs-pick-a"></select>
+  </div>
+  <div class="vs-vs">VS</div>
+  <div class="vs-picker-col">
+    <label data-i18n="versus.pickB">機型 B</label>
+    <select id="vs-pick-b"></select>
+  </div>
+</div>
+
+<div class="vs-heads" id="vs-heads"></div>
+
+<div class="vs-rows" id="vs-rows"></div>
+
+<script src="js/versus.js?v=94"></script>
+<script src="js/ui.js?v=94"></script>
+</body>
+</html>
