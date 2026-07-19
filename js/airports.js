@@ -38,7 +38,7 @@ async function loadHubIndex(){
   if (HUB_INDEX) return HUB_INDEX;
   HUB_INDEX = {};
   try {
-    const res = await fetch("data/airline_geo.json?v=97");
+    const res = await fetch("data/airline_geo.json?v=98");
     const geo = res.ok ? await res.json() : {};
     Object.entries(geo).forEach(([airlineId, g]) => {
       (g.hubs || []).forEach(h => {
@@ -52,7 +52,7 @@ async function loadAirlineNames(){
   if (AIRLINE_NAMES) return AIRLINE_NAMES;
   AIRLINE_NAMES = {};
   try {
-    const res = await fetch("data/airlines.json?v=97");
+    const res = await fetch("data/airlines.json?v=98");
     const data = res.ok ? await res.json() : { airlines: [] };
     data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
   } catch { /* 同上 */ }
@@ -292,8 +292,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=97"),
-      fetch("data/countries.json?v=97"),
+      fetch("data/airports.json?v=98"),
+      fetch("data/countries.json?v=98"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -305,7 +305,7 @@ function escapeHTML(s){
     return;
   }
   try {
-    const res = await fetch("data/city_names.json?v=97");
+    const res = await fetch("data/city_names.json?v=98");
     if (res.ok) CITY_NAMES = await res.json();
   } catch { /* 城市層級翻譯為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -695,7 +695,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=97`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=98`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -811,7 +811,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=97`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=98`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
