@@ -122,7 +122,7 @@ function isInCompare(id){ return CMP_LIST.includes(id); }
 function toggleCompare(id){
   if (CMP_LIST.includes(id)) CMP_LIST = CMP_LIST.filter(x => x !== id);
   else if (CMP_LIST.length < 4) CMP_LIST.push(id);
-  else { alert("最多同時比較 4 家航空公司，請先移除一家再加入。"); return; }
+  else { alert(I18N.t("airlines.cmp.limit")); return; }
   localStorage.setItem(CMP_KEY, JSON.stringify(CMP_LIST));
   renderCompareTray();
   if (!$("al-cmp-modal").hidden) renderAlCmpPickers();
@@ -133,7 +133,7 @@ function renderCompareTray(){
   if (!CMP_LIST.length) return;
   $("al-cmp-chips").innerHTML = CMP_LIST.map(id => {
     const a = AIRLINES.find(x => x.id === id);
-    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="移除">✕</button></span>`;
+    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="${I18N.t("compare.remove")}">✕</button></span>`;
   }).join("");
   $("al-cmp-chips").querySelectorAll("button").forEach(b =>
     b.addEventListener("click", () => toggleCompare(b.dataset.id)));
@@ -311,23 +311,23 @@ function makeLogoEl(a, big){
   }
   if (!FULL_DATA){
     try {
-      const res = await fetch("data/airlines.json?v=95");
+      const res = await fetch("data/airlines.json?v=96");
       if (!res.ok) throw new Error(res.status);
       FULL_DATA = await res.json();
     } catch {
       $("al-list").innerHTML = "";
       $("al-empty").hidden = false;
-      $("al-empty").textContent = "無法載入航空公司資料（data/airlines.json）。";
+      $("al-empty").textContent = I18N.t("airlines.loaderror");
       return;
     }
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=95");
+    const geoRes = await fetch("data/airline_geo.json?v=96");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=95");
+    const codesRes = await fetch("data/airport_codes.json?v=96");
     if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 

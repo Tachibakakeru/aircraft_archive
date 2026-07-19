@@ -38,7 +38,7 @@ async function loadHubIndex(){
   if (HUB_INDEX) return HUB_INDEX;
   HUB_INDEX = {};
   try {
-    const res = await fetch("data/airline_geo.json?v=95");
+    const res = await fetch("data/airline_geo.json?v=96");
     const geo = res.ok ? await res.json() : {};
     Object.entries(geo).forEach(([airlineId, g]) => {
       (g.hubs || []).forEach(h => {
@@ -52,7 +52,7 @@ async function loadAirlineNames(){
   if (AIRLINE_NAMES) return AIRLINE_NAMES;
   AIRLINE_NAMES = {};
   try {
-    const res = await fetch("data/airlines.json?v=95");
+    const res = await fetch("data/airlines.json?v=96");
     const data = res.ok ? await res.json() : { airlines: [] };
     data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
   } catch { /* 同上 */ }
@@ -74,7 +74,7 @@ function isInCompare(id){ return CMP_LIST.includes(id); }
 function toggleCompare(id){
   if (CMP_LIST.includes(id)) CMP_LIST = CMP_LIST.filter(x => x !== id);
   else if (CMP_LIST.length < 4) CMP_LIST.push(id);
-  else { alert("最多同時比較 4 座機場，請先移除一座再加入。"); return; }
+  else { alert(I18N.t("airports.cmp.limit")); return; }
   localStorage.setItem(CMP_KEY, JSON.stringify(CMP_LIST));
   renderCompareTray();
   if (!$("apt-cmp-modal").hidden) renderAptCmpPickers();
@@ -85,7 +85,7 @@ function renderCompareTray(){
   if (!CMP_LIST.length) return;
   $("apt-cmp-chips").innerHTML = CMP_LIST.map(id => {
     const a = AIRPORTS.find(x => x.id === id);
-    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="移除">✕</button></span>`;
+    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="${I18N.t("compare.remove")}">✕</button></span>`;
   }).join("");
   $("apt-cmp-chips").querySelectorAll("button").forEach(b =>
     b.addEventListener("click", () => toggleCompare(b.dataset.id)));
@@ -292,8 +292,8 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=95"),
-      fetch("data/countries.json?v=95"),
+      fetch("data/airports.json?v=96"),
+      fetch("data/countries.json?v=96"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
@@ -301,11 +301,11 @@ function escapeHTML(s){
   } catch {
     $("apt-list").innerHTML = "";
     $("apt-empty").hidden = false;
-    $("apt-empty").textContent = "無法載入機場資料（data/airports.json）。";
+    $("apt-empty").textContent = I18N.t("airports.loaderror");
     return;
   }
   try {
-    const res = await fetch("data/city_names.json?v=95");
+    const res = await fetch("data/city_names.json?v=96");
     if (res.ok) CITY_NAMES = await res.json();
   } catch { /* 城市層級翻譯為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -410,7 +410,7 @@ function escapeHTML(s){
     if (!id) return;
     const text = $("apt-p-notes-text").value.trim();
     try { setNotes(id, { text, images: editingImages }); }
-    catch { alert("儲存失敗，圖片可能過大，建議改用圖片網址。"); return; }
+    catch { alert(I18N.t("airports.notes.savefail")); return; }
     renderNotesView(id);
     closeNotesEditor();
   });
@@ -419,7 +419,7 @@ function escapeHTML(s){
     if (!id) return;
     const text = $("apt-p-notes-text").value.trim();
     const notes = { text, images: editingImages };
-    if (!text && !notes.images.length){ alert("請先輸入內容再發布。"); return; }
+    if (!text && !notes.images.length){ alert(I18N.t("airports.notes.empty")); return; }
     await requireAuth();   // 需通過與資料編輯器共用的密碼驗證，否則只會存在本機
     const btn = $("apt-p-notes-publish");
     const orig = btn.textContent;
@@ -695,7 +695,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=95`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=96`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -704,13 +704,20 @@ async function loadDetails(country){
 
 const M_PER_FT = 0.3048;
 const SURF_NAMES = {
-  ASP: "瀝青 Asphalt", "ASPH-G": "瀝青 Asphalt", CON: "混凝土 Concrete", TURF: "草地 Turf",
-  GRVL: "碎石 Gravel", GRS: "草地 Turf", DIRT: "泥地 Dirt", WATER: "水面 Water", SAND: "沙地 Sand",
+  ASP:      { zh: "瀝青", en: "Asphalt", ja: "アスファルト" },
+  "ASPH-G": { zh: "瀝青", en: "Asphalt", ja: "アスファルト" },
+  CON:      { zh: "混凝土", en: "Concrete", ja: "コンクリート" },
+  TURF:     { zh: "草地", en: "Turf", ja: "芝地" },
+  GRVL:     { zh: "碎石", en: "Gravel", ja: "砂利" },
+  GRS:      { zh: "草地", en: "Turf", ja: "芝地" },
+  DIRT:     { zh: "泥地", en: "Dirt", ja: "土" },
+  WATER:    { zh: "水面", en: "Water", ja: "水面" },
+  SAND:     { zh: "沙地", en: "Sand", ja: "砂地" },
 };
 function surfName(code){
   if (!code) return "—";
   const key = String(code).toUpperCase();
-  return SURF_NAMES[key] || code;
+  return SURF_NAMES[key] ? I18N.field(SURF_NAMES[key]) : code;
 }
 
 function compassSVG(le, he){
@@ -804,7 +811,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=95`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=96`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
