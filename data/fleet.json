@@ -906,10 +906,9 @@
         "en": "A tri-jet with rear-mounted engines and an S-duct center engine — the workhorse of US domestic routes from the 1960s to the 1980s.",
         "ja": "後部3発エンジン、中央エンジンはSダクト吸気の名機。1960〜80年代の米国国内線の主力だった。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_b727.png",
       "icao": "B722",
-      "iata": "722",
-      "has3d": false
+      "iata": "722"
     },
     {
       "id": "c909",

@@ -14,7 +14,9 @@ def parse_ac3d(path):
     {"name", "loc":(x,y,z)（已含祖先累加）, "verts":Nx4, "tris":Mx3 index}。
     僅支援平移（loc），不支援旋轉矩陣（"rot"）——目前處理過的 FGAddon 機模皆未使用。
     允許同名物件重複出現，呼叫端自行以 name 分類再合併。"""
-    lines = open(path, encoding="utf-8", errors="replace").read().split("\n")
+    # 濾掉空白行：少數來源檔案（如 727-230.ac）行尾字元異常，每行內容後都夾帶
+    # 一個空白行，會讓位置式掃描（numvert/refs 行數對應）整批錯位。
+    lines = [l for l in open(path, encoding="utf-8", errors="replace").read().split("\n") if l.strip()]
     idx = [0]
 
     def parse_one(parent_loc):
@@ -31,8 +33,13 @@ def parse_ac3d(path):
                 idx[0] += 2   # "data N" 本行 + 接下來一行字串本體
             elif l.startswith("numvert"):
                 n = int(l.split()[1])
-                verts = np.array([list(map(float, lines[idx[0]+1+k].split()))
-                                   for k in range(n)])
+                rows = [list(map(float, lines[idx[0]+1+k].split())) for k in range(n)]
+                # 少數來源檔案有單行頂點資料損毀（欄位數不為 3），
+                # 該物件幾何不可信，以空陣列處理並略過，不中斷整批解析。
+                if all(len(r) == 3 for r in rows):
+                    verts = np.array(rows)
+                else:
+                    verts = np.zeros((0, 3))
                 idx[0] += 1 + n
             elif l.startswith("numsurf"):
                 n = int(l.split()[1])
@@ -53,7 +60,7 @@ def parse_ac3d(path):
 
         world_loc = (parent_loc[0]+loc[0], parent_loc[1]+loc[1], parent_loc[2]+loc[2])
         leaves = []
-        if verts is not None:
+        if verts is not None and len(verts) > 0:
             leaves.append({"name": name, "loc": world_loc, "verts": verts,
                             "tris": np.array(tris, dtype=np.int64) if tris else np.zeros((0,3), dtype=np.int64)})
         for _ in range(kids):
