@@ -575,10 +575,9 @@
       "tagline": {
         "zh": "MD-80 系列主力型，DC-9 的加長進化版，曾是美國國內線的骨幹機種。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_md80.png",
       "icao": "MD82",
-      "iata": "M82",
-      "has3d": false
+      "iata": "M82"
     },
     {
       "id": "dc10",
@@ -614,10 +613,9 @@
       "tagline": {
         "zh": "DC-10 的最終進化型，換裝新翼尖小翼與玻璃座艙，曾是長程貨機主力。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_md11.png",
       "icao": "MD11",
-      "iata": "M11",
-      "has3d": false
+      "iata": "M11"
     },
     {
       "id": "crj700",
