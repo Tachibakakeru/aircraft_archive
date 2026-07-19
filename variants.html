@@ -7,10 +7,10 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=94">
-<link rel="stylesheet" href="css/variants.css?v=94">
-<script src="js/theme.js?v=94"></script>
-<script src="js/i18n.js?v=94"></script>
+<link rel="stylesheet" href="css/style.css?v=95">
+<link rel="stylesheet" href="css/variants.css?v=95">
+<script src="js/theme.js?v=95"></script>
+<script src="js/i18n.js?v=95"></script>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     <a class="eyebrow home-link" href="index.html" data-i18n="variants.eyebrow">SKY ARCHIVE / 天空檔案 — REFERENCE</a>
     <h1 data-i18n="variants.title">機型家族與次型號對照</h1>
     <p class="var-lede" data-i18n="variants.lede">
-      天空檔案目前收錄 51 個機型條目，多數對應到某個機型家族裡的「一個」次型號
+      天空檔案目前收錄 52 個機型條目，多數對應到某個機型家族裡的「一個」次型號
       （如 737-800 只是 737NG 家族四型之一）。本表依製造商整理各家族的完整
       次型號系譜，標出本站目前收錄哪一型、以及該型的 ICAO／IATA 機型代號。
     </p>
@@ -155,11 +155,12 @@
 
     <div class="fam">
       <div class="fam-top"><div class="fam-name">747 家族</div><div class="fam-tag">2023 年結束生產</div></div>
-      <div class="fam-note">收錄 -400 與最終型 -8；早期 -100／-200／-300／SP 停產已久未收錄。2023 年最後一架 747-8F 貨機出廠，全家族正式停產。</div>
+      <div class="fam-note">收錄 -400 與最終型 -8；早期 -100／-200／-300／SP 停產已久未收錄。2023 年最後一架 747-8F 貨機出廠，全家族正式停產。另收錄 -400 大幅改裝而成的 Dreamlifter（僅規格資料，查無開源 3D 模型）——全球僅 4 架，專責波音廠區間運送 787 機身部件，不對外銷售。</div>
       <div class="var-chips">
         <div class="v-chip out"><span class="v-name">747-100 / -200 / -300 / SP</span><span class="v-code">早期型</span></div>
         <div class="v-chip in"><span class="v-name">747-400</span><span class="v-code">B744 · 744</span></div>
         <div class="v-chip in"><span class="v-name">747-8</span><span class="v-code">B748 · 748</span></div>
+        <div class="v-chip in"><span class="v-name">747-400 Dreamlifter（-400 改裝）</span><span class="v-code">B74S</span></div>
       </div>
     </div>
 
@@ -213,8 +214,8 @@
     <div class="maker-h"><h2>McDonnell Douglas</h2><span class="count">2 個家族</span></div>
 
     <div class="fam">
-      <div class="fam-top"><div class="fam-name">DC-9 / MD-80 / MD-90 家族</div><div class="fam-tag">尾置雙引擎窄體，無 3D 模型</div></div>
-      <div class="fam-note">來源模型庫（Flightradar24/fr24-3d-models）未收錄任何麥道機型，本站僅提供規格資料、無 3D 檢視。DC-9 一路加長演化成 MD-80 系列，最終型 MD-90 換裝 V2500 引擎；1997 年麥道併入波音後，衍生型 MD-95 更名為 717 繼續生產（機體掛 Boeing 廠徽，但仍屬這支尾置雙發的 DC-9 系譜，故列在此處而非 Boeing 分類下）。</div>
+      <div class="fam-top"><div class="fam-name">DC-9 / MD-80 / MD-90 家族</div><div class="fam-tag">尾置雙引擎窄體</div></div>
+      <div class="fam-note">MD-82、717 的 3D 模型取自 FlightGear 開源機庫（非本站主要來源 Flightradar24/fr24-3d-models，該庫未收錄麥道機型）。DC-9 本身唯一找到的開源模型為非商用授權（CC BY-NC-SA），故僅提供規格資料、無 3D 檢視。DC-9 一路加長演化成 MD-80 系列，最終型 MD-90 換裝 V2500 引擎；1997 年麥道併入波音後，衍生型 MD-95 更名為 717 繼續生產（機體掛 Boeing 廠徽，但仍屬這支尾置雙發的 DC-9 系譜，故列在此處而非 Boeing 分類下）。</div>
       <div class="var-chips">
         <div class="v-chip out"><span class="v-name">DC-9-10 / -20</span><span class="v-code">DC91</span></div>
         <div class="v-chip in"><span class="v-name">DC-9-30</span><span class="v-code">DC93 · D93</span></div>
@@ -227,8 +228,8 @@
     </div>
 
     <div class="fam">
-      <div class="fam-top"><div class="fam-name">DC-10 / MD-11 家族</div><div class="fam-tag">三發廣體，無 3D 模型</div></div>
-      <div class="fam-note">同樣缺乏可轉換的 3D 模型來源，僅提供規格資料。DC-10 是三發廣體的先驅，機尾第二具引擎經機身根部進氣；MD-11 是其換裝新翼與玻璃座艙的最終進化型，也是麥道獨立設計的最後一款機種，退役客機多轉為貨機服役。</div>
+      <div class="fam-top"><div class="fam-name">DC-10 / MD-11 家族</div><div class="fam-tag">三發廣體</div></div>
+      <div class="fam-note">3D 模型同樣取自 FlightGear 開源機庫。DC-10 是三發廣體的先驅，機尾第二具引擎經機身根部進氣；MD-11 是其換裝新翼與玻璃座艙的最終進化型，也是麥道獨立設計的最後一款機種，退役客機多轉為貨機服役。</div>
       <div class="var-chips">
         <div class="v-chip out"><span class="v-name">DC-10-10</span><span class="v-code">DC10 系列</span></div>
         <div class="v-chip in"><span class="v-name">DC-10-30</span><span class="v-code">DC10 · D10</span></div>
@@ -398,6 +399,6 @@ I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 document.addEventListener("langchange", () => I18N.apply());
 </script>
-<script src="js/ui.js?v=94"></script>
+<script src="js/ui.js?v=95"></script>
 </body>
 </html>
