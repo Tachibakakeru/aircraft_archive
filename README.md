@@ -160,6 +160,10 @@ python3 tools/make_thumb.py models/a380.json assets/thumb_a380.png
 - 3D 模型來源：[Flightradar24/fr24-3d-models](https://github.com/Flightradar24/fr24-3d-models)，
   採 **GPL-2.0** 授權。本專案對模型的修改（格式轉換、部位分類）依同授權釋出，
   轉換工具 `tools/convert_fr24.py` 即為修改流程的完整原始碼。
+- Boeing 707 模型另行取自 [FlightGear FGAddon](https://sourceforge.net/p/flightgear/fgaddon/HEAD/tree/trunk/Aircraft/707/)
+  「Lake of Constance Hangar」707（Copyright M.Kraus），採 **GPL-3.0** 授權。
+  本專案將原始 AC3D（`.ac`）格式轉換為站內部位分件 JSON，轉換工具
+  `tools/convert_ac3d_707.py` 為完整原始碼；貼圖／識別標誌未沿用來源檔案。
 - 網站程式碼與文案：自行撰寫。
 - Three.js：MIT License，經 cdnjs 載入。
 

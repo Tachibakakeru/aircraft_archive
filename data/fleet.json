@@ -865,10 +865,9 @@
         "en": "The aircraft that launched the jet age — its four-engine swept-wing layout set the template for postwar mainline airliners.",
         "ja": "ジェット旅客機時代を切り開いた機体。4発後退翼のレイアウトは戦後の幹線旅客機の原型となった。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_b707.png",
       "icao": "B703",
-      "iata": "703",
-      "has3d": false
+      "iata": "703"
     },
     {
       "id": "b717",
