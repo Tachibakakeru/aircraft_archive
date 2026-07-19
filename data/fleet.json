@@ -595,10 +595,9 @@
       "tagline": {
         "zh": "三發廣體客機的先驅，機尾第二具引擎是其最鮮明的識別特徵。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_dc10.png",
       "icao": "DC10",
-      "iata": "D10",
-      "has3d": false
+      "iata": "D10"
     },
     {
       "id": "md11",
@@ -886,10 +885,9 @@
         "en": "Originally the McDonnell Douglas MD-95, renamed after the Boeing–McDonnell Douglas merger — the last of the DC-9 lineage, with rear-mounted engines and a T-tail.",
         "ja": "元マクドネル・ダグラスMD-95。ボーイングとの合併後に改称された、DC-9系譜最後の機体。後部エンジンとT字尾翼が特徴。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_b717.png",
       "icao": "B712",
-      "iata": "717",
-      "has3d": false
+      "iata": "717"
     },
     {
       "id": "b727",
