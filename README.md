@@ -169,8 +169,14 @@ python3 tools/make_thumb.py models/a380.json assets/thumb_a380.png
 - McDonnell Douglas MD-82、MD-11 模型取自第三方 FlightGear 社群維護專案
   [Octal450/MD-80](https://github.com/Octal450/MD-80)、
   [Octal450/MD-11](https://github.com/Octal450/MD-11)，皆為 **GPL-2.0** 授權
-  （非 FGAddon 官方機庫，逐一確認過授權條款；同系列的 DC-9 因僅找到
-  CC BY-NC-SA 4.0〔禁止商業使用〕授權的來源模型，故未收錄，僅提供規格資料）。
+  （非 FGAddon 官方機庫，逐一確認過授權條款）。
+- McDonnell Douglas DC-9-30 模型取自
+  [FGMEMBERS-NONGPL/DC-9-32](https://github.com/FGMEMBERS-NONGPL/DC-9-32)，
+  作者 **Lester Boffo**，採 **CC BY-NC-SA 4.0** 授權（非商業使用／具名歸屬／
+  以同授權分享）——與其他機型的 GPL 授權不同，本站為非商業性質的興趣資料庫，
+  符合此授權範圍；轉出的 `models/dc9.json` 依 ShareAlike 條款同樣採
+  CC BY-NC-SA 4.0 釋出，若他人取用本站的 DC-9 模型資料，需比照遵守
+  非商業／具名歸屬／同授權分享三項條件，與站上其餘 GPL 授權的機型不同。
 - 網站程式碼與文案：自行撰寫。
 - Three.js：MIT License，經 cdnjs 載入。
 

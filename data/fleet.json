@@ -577,10 +577,9 @@
       "tagline": {
         "zh": "道格拉斯經典雙發窄體客機，尾置雙引擎奠定其暢銷數十年的基礎。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_dc9.png",
       "icao": "DC93",
-      "iata": "D93",
-      "has3d": false
+      "iata": "D93"
     },
     {
       "id": "md80",
