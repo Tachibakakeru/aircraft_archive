@@ -13618,6 +13618,60 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "柬埔寨航空",
       "nameJa": "エア・カンボジア"
+    },
+    {
+      "id": "bav",
+      "name": "Bamboo Airways",
+      "icao": "BAV",
+      "iata": "QH",
+      "callsign": "BAMBOO",
+      "country": {
+        "zh": "越南",
+        "en": "Vietnam",
+        "ja": "ベトナム"
+      },
+      "founded": 2017,
+      "alliance": "none",
+      "tier": "hybrid",
+      "hubs": [
+        "Hanoi Noi Bai",
+        "Ho Chi Minh City",
+        "Da Nang"
+      ],
+      "fleetTotal": 30,
+      "fleet": [
+        {
+          "type": "Airbus A320-200",
+          "count": 10,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A321-200",
+          "count": 17,
+          "fleetId": "a321"
+        },
+        {
+          "type": "Boeing 787-9",
+          "count": 3,
+          "fleetId": "b789"
+        }
+      ],
+      "routes": [
+        "Tokyo Narita",
+        "Seoul Incheon",
+        "Taipei Taoyuan",
+        "Singapore Changi",
+        "Bangkok Suvarnabhumi",
+        "Melbourne"
+      ],
+      "tagline": {
+        "zh": "越南定期航班中最年輕的航空公司之一，2018 年底首航，定位介於全服務與廉價之間的混合型航空。以 A320/A321 為主力，曾引進波音 787 拓展長程國際線，是越南少數具備寬體機隊的民營航空。",
+        "en": "One of Vietnam's youngest scheduled carriers, launching operations in late 2018 with a hybrid positioning between full-service and low-cost. Operating primarily A320-family aircraft alongside Boeing 787-9s, Bamboo Airways stands out among Vietnamese private airlines for pursuing long-haul international routes.",
+        "ja": "2018年末に就航したベトナムの新興航空会社。フルサービスとLCCの中間に位置するハイブリッド型の運航モデルを採用。A320ファミリーを主力とし、ボーイング787-9も保有。ベトナムの民間航空会社の中でも数少ない長距離国際線への挑戦を続ける存在。"
+      },
+      "logoSrc": "flightaware_logos",
+      "nameZh": "越竹航空",
+      "nameJa": "バンブー・エアウェイズ"
     }
   ]
 }
