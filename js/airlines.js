@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 /* ═══════════════════════════════════════════════
    全球航空公司 — 獨立於飛行器圖鑑（機型）與機場跑道之外的第三個資料庫
    資料來源：data/airlines.json（手動彙整的概估資料，非即時營運資料）
@@ -311,7 +311,7 @@ function makeLogoEl(a, big){
   }
   if (!FULL_DATA){
     try {
-      const res = await fetch("data/airlines.json?v=117");
+      const res = await fetch("data/airlines.json?v=118");
       if (!res.ok) throw new Error(res.status);
       FULL_DATA = await res.json();
     } catch {
@@ -323,11 +323,11 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=117");
+    const geoRes = await fetch("data/airline_geo.json?v=118");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=117");
+    const codesRes = await fetch("data/airport_codes.json?v=118");
     if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -387,6 +387,7 @@ function makeLogoEl(a, big){
     await requireAuth();
     openEditor(id);
   });
+  $("al-add-new").addEventListener("click", openNewAirlineForm);
   wireEditForm();
 
   $("al-view-toggle").addEventListener("click", toggleGlobeMode);
@@ -677,6 +678,17 @@ function closePanel(){
     AptGlobe.setRoutes([]);
     AptGlobe.clearGroundPatch();
   }
+}
+
+async function openNewAirlineForm(){
+  if (!FULL_DATA) return;
+  await requireAuth();
+  const newId = "custom-" + Date.now();
+  const blank = { id: newId, name: "", alliance: "none", country: { zh: "", en: "", ja: "" } };
+  FULL_DATA.airlines.push(blank);
+  AIRLINES.push(blank);
+  openAirline(newId);
+  openEditor(newId);
 }
 
 // ── 編輯功能：僅本機暫存，需通過密碼驗證後點「儲存到網站」才會公開 ──

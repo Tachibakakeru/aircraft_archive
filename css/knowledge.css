@@ -23,8 +23,17 @@ body{min-height:100vh}
 .kn-sub{font-size:13px;color:var(--muted);padding:14px 24px 0;max-width:760px}
 
 .kn-panel-section{padding:22px 24px}
+.kn-section-head{display:flex;align-items:center;gap:12px}
 .kn-panel-section h2{font-size:16px;font-weight:700}
+.kn-add-btn{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  padding:3px 10px;border-radius:6px;
+  border:1px solid var(--stroke);background:transparent;color:var(--muted);
+  cursor:pointer;transition:border-color .15s,color .15s;white-space:nowrap;
+}
+.kn-add-btn:hover{border-color:var(--amber);color:var(--amber)}
 .kn-hint{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);margin-top:4px}
+#kn-new-fields{margin-bottom:12px;padding:12px;border-radius:8px;border:1px solid var(--stroke);background:var(--bg-1)}
 
 /* ── 儀表面板：深色金屬底板 + 鉚釘裝飾 ── */
 .kn-panel-wrap{

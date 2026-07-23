@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 /* ═══════════════════════════════════════════════
    機場與跑道 — 搜尋、篩選、機場明細（依國家整批載入）
    資料來源：OurAirports（Public Domain），見 tools/build_airports.py
@@ -38,7 +38,7 @@ async function loadHubIndex(){
   if (HUB_INDEX) return HUB_INDEX;
   HUB_INDEX = {};
   try {
-    const res = await fetch("data/airline_geo.json?v=117");
+    const res = await fetch("data/airline_geo.json?v=118");
     const geo = res.ok ? await res.json() : {};
     Object.entries(geo).forEach(([airlineId, g]) => {
       (g.hubs || []).forEach(h => {
@@ -52,12 +52,16 @@ async function loadAirlineNames(){
   if (AIRLINE_NAMES) return AIRLINE_NAMES;
   AIRLINE_NAMES = {};
   try {
-    const res = await fetch("data/airlines.json?v=117");
+    const res = await fetch("data/airlines.json?v=118");
     const data = res.ok ? await res.json() : { airlines: [] };
     data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
   } catch { /* 同上 */ }
   return AIRLINE_NAMES;
 }
+
+const CUSTOM_APT_KEY = "hangar_apt_custom";
+function loadCustomAirports(){ try { return JSON.parse(localStorage.getItem(CUSTOM_APT_KEY) || "[]"); } catch { return []; } }
+function saveCustomAirports(arr){ localStorage.setItem(CUSTOM_APT_KEY, JSON.stringify(arr)); }
 
 const FAV_KEY = "hangar_apt_favs";
 let FAVS = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
@@ -292,12 +296,16 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=117"),
-      fetch("data/countries.json?v=117"),
+      fetch("data/airports.json?v=118"),
+      fetch("data/countries.json?v=118"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
     AIRPORTS = aData.airports;
+    // 合併本機自訂機場（_custom: true），跳過與資料庫重複的 id
+    const customs = loadCustomAirports();
+    const existingIds = new Set(AIRPORTS.map(a => a.id));
+    customs.forEach(c => { if (!existingIds.has(c.id)) AIRPORTS.push(c); });
   } catch {
     $("apt-list").innerHTML = "";
     $("apt-empty").hidden = false;
@@ -305,7 +313,7 @@ function escapeHTML(s){
     return;
   }
   try {
-    const res = await fetch("data/city_names.json?v=117");
+    const res = await fetch("data/city_names.json?v=118");
     if (res.ok) CITY_NAMES = await res.json();
   } catch { /* 城市層級翻譯為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -454,7 +462,51 @@ function escapeHTML(s){
     renderEditingImages();
     e.target.value = "";
   });
+
+  // 新增自訂機場
+  $("apt-add-new").addEventListener("click", () => { $("apt-add-modal").hidden = false; });
+  $("apt-add-close").addEventListener("click", closeAddModal);
+  $("apt-add-cancel").addEventListener("click", closeAddModal);
+  $("apt-add-modal").addEventListener("click", e => { if (e.target === $("apt-add-modal")) closeAddModal(); });
+  $("apt-add-save").addEventListener("click", saveCustomAirport);
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && !$("apt-add-modal").hidden) closeAddModal();
+  });
 })();
+
+function closeAddModal(){
+  $("apt-add-modal").hidden = true;
+  ["apt-add-name","apt-add-city","apt-add-country","apt-add-icao","apt-add-iata","apt-add-lat","apt-add-lon"].forEach(id => { $(id).value = ""; });
+  $("apt-add-type").value = "large_airport";
+}
+
+function saveCustomAirport(){
+  const name = $("apt-add-name").value.trim();
+  if (!name){ alert("請填入機場名稱"); return; }
+  const icao = $("apt-add-icao").value.trim().toUpperCase() || null;
+  const iata = $("apt-add-iata").value.trim().toUpperCase() || null;
+  const id = icao || ("custom-" + Date.now());
+  if (AIRPORTS.some(a => a.id === id)){ alert("已有相同 ICAO 代碼的機場，請直接搜尋它。"); return; }
+  const lat = parseFloat($("apt-add-lat").value);
+  const lon = parseFloat($("apt-add-lon").value);
+  const airport = {
+    id, name,
+    city:    $("apt-add-city").value.trim() || null,
+    country: $("apt-add-country").value.trim().toUpperCase() || "ZZ",
+    icao, iata,
+    type:    $("apt-add-type").value,
+    _custom: true,
+    ...(isFinite(lat) && isFinite(lon) ? { lat, lon } : {}),
+  };
+  const customs = loadCustomAirports();
+  customs.push(airport);
+  saveCustomAirports(customs);
+  AIRPORTS.push(airport);
+  buildCountrySelect();
+  applyAll();
+  closeAddModal();
+  openAirport(id);
+}
 
 function syncFavButton(){
   const id = $("panel").dataset.id;
@@ -695,7 +747,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=117`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=118`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -811,7 +863,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=117`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=118`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
@@ -906,8 +958,12 @@ async function openAirport(id){
 
   const byIdent = await loadDetails(a.country);
   const d = byIdent[a.id] || {};
+  // 自訂機場：detail 檔無資料時，回退到機場物件直接存的座標
+  const lat = d.lat ?? a.lat ?? null;
+  const lon = d.lon ?? a.lon ?? null;
+  if (lat != null && lon != null) { d.lat = lat; d.lon = lon; }
 
-  if (globeMode && typeof AptGlobe !== "undefined" && AptGlobe.isReady()) AptGlobe.focusOn(d.lat, d.lon);
+  if (globeMode && typeof AptGlobe !== "undefined" && AptGlobe.isReady()) AptGlobe.focusOn(lat, lon);
 
   $("apt-p-sat").innerHTML = satelliteHTML(d.lat, d.lon, a.type);
 

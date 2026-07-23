@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 /* ═══════════════════════════════════════════════
    距離與飛行時間計算器 — 選兩座機場與一款機型，算大圓距離
    （haversine 公式）與粗估飛行時間（距離 / 巡航速度 + 30 分鐘
@@ -21,7 +21,7 @@ let fromId = null, toId = null;
 async function loadDetails(country){
   if (!country || detailCache[country]) return detailCache[country] || {};
   try {
-    const res = await fetch(`data/details/${country}.json?v=117`);
+    const res = await fetch(`data/details/${country}.json?v=118`);
     detailCache[country] = res.ok ? await res.json() : {};
   } catch { detailCache[country] = {}; }
   return detailCache[country];
@@ -40,7 +40,7 @@ async function airportCoords(id){
 async function cruiseSpeedKmh(id){
   if (speedCache[id] != null) return speedCache[id];
   try {
-    const res = await fetch(`data/${id}.json?v=117`);
+    const res = await fetch(`data/${id}.json?v=118`);
     if (!res.ok) throw new Error();
     const d = await res.json();
     let kmh = null;
@@ -106,8 +106,8 @@ function fmtHours(h){
 (async () => {
   try {
     const [aRes, fRes] = await Promise.all([
-      fetch("data/airports.json?v=117"),
-      fetch("data/fleet.json?v=117"),
+      fetch("data/airports.json?v=118"),
+      fetch("data/fleet.json?v=118"),
     ]);
     AIRPORTS = (await aRes.json()).airports;
     FLEET = (await fRes.json()).aircraft;

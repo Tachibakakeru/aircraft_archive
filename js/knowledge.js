@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 /* ═══════════════════════════════════════════════
    航空小知識 — 互動座艙儀表面板 + 補充知識卡片
    資料來源 data/knowledge.json（單一檔案，topics 陣列）。
@@ -74,6 +74,8 @@ let TOPICS = [];
 let byId = {};
 let currentTopicId = null;
 let editingImages = [];
+let isNewTopic = false;
+let newTopicScene = null;
 
 const LOCAL_KEY = "hangar_knowledge_local";
 function loadLocal(){ try { return JSON.parse(localStorage.getItem(LOCAL_KEY) || "{}"); } catch { return {}; } }
@@ -83,6 +85,10 @@ function saveLocalOverride(id, override){
   store[id] = override;
   localStorage.setItem(LOCAL_KEY, JSON.stringify(store));
 }
+
+const CUSTOM_TOPICS_KEY = "hangar_knowledge_custom";
+function loadCustomTopics(){ try { return JSON.parse(localStorage.getItem(CUSTOM_TOPICS_KEY) || "[]"); } catch { return []; } }
+function saveCustomTopics(arr){ try { localStorage.setItem(CUSTOM_TOPICS_KEY, JSON.stringify(arr)); } catch { alert("暫存失敗：資料可能過大"); } }
 function mergedTopic(id){
   const base = byId[id];
   if (!base) return null;
@@ -563,12 +569,71 @@ function openEditor(){
   $("kn-edit-fact").value = F(t.fact) || "";
   editingImages = (t.images || []).filter(im => im.src).map(im => im.src);
   renderEditingImages();
+  $("kn-new-fields").hidden = true;
   $("kn-view").hidden = true;
   $("kn-edit").hidden = false;
 }
 function closeEditor(){
   $("kn-edit").hidden = true;
   $("kn-view").hidden = false;
+  $("kn-new-fields").hidden = true;
+  isNewTopic = false;
+}
+
+function openNewTopic(sceneKey){
+  isNewTopic = true;
+  newTopicScene = sceneKey;
+  currentTopicId = null;
+  editingImages = [];
+  $("kn-edit-label").value = "";
+  $("kn-edit-name").value = "";
+  $("kn-edit-summary").value = "";
+  $("kn-edit-fact").value = "";
+  $("kn-edit-imgs").innerHTML = "";
+  $("kn-edit-scene").value = sceneKey;
+  $("kn-new-fields").hidden = false;
+  $("kn-view").hidden = true;
+  $("kn-edit").hidden = false;
+  $("kn-overlay").hidden = false;
+}
+
+function addNewTopic(){
+  const nameText = $("kn-edit-name").value.trim();
+  if (!nameText){ alert("請填入知識名稱"); return null; }
+  const sceneKey = $("kn-edit-scene").value || newTopicScene || "instrument";
+  const rawLabel = $("kn-edit-label").value.trim().toUpperCase();
+  const label = rawLabel || nameText.slice(0, 8).toUpperCase();
+  const id = "custom-" + Date.now();
+  const lang = I18N.get();
+  const topic = {
+    id, label, sceneKey,
+    category: sceneKey, hotspot: sceneKey,
+    name:    { zh: "", en: "", ja: "", [lang]: nameText },
+    summary: { zh: "", en: "", ja: "" },
+    fact:    { zh: "", en: "", ja: "" },
+    images:  editingImages.map(src => ({ src, caption: "" })),
+    _custom: true,
+  };
+  const summaryText = $("kn-edit-summary").value.trim();
+  if (summaryText) topic.summary[lang] = summaryText;
+  const factText = $("kn-edit-fact").value.trim();
+  if (factText) topic.fact[lang] = factText;
+
+  byId[id] = topic;
+  TOPICS.push(topic);
+  if (SCENES[sceneKey]) SCENES[sceneKey].topics.push({ id, label });
+
+  const customs = loadCustomTopics();
+  customs.push(topic);
+  saveCustomTopics(customs);
+
+  renderTrack(sceneKey);
+  isNewTopic = false;
+  currentTopicId = id;
+  closeEditor();
+  scrollToTopic(sceneKey, id);
+  openDetail(id);
+  return topic;
 }
 function renderEditingImages(){
   $("kn-edit-imgs").innerHTML = editingImages.map((src, i) =>
@@ -608,7 +673,7 @@ function downscaleImg(file, maxW, quality){
 async function boot(){
   let data;
   try {
-    const res = await fetch("data/knowledge.json?v=117");
+    const res = await fetch("data/knowledge.json?v=118");
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {
@@ -618,6 +683,15 @@ async function boot(){
   }
   TOPICS = data.topics;
   byId = Object.fromEntries(TOPICS.map(t => [t.id, t]));
+
+  // 合併本機自訂知識條目
+  const existingIds = new Set(TOPICS.map(t => t.id));
+  loadCustomTopics().forEach(t => {
+    if (existingIds.has(t.id)) return;   // 已發布到 server 就不重複加
+    byId[t.id] = t;
+    TOPICS.push(t);
+    if (SCENES[t.sceneKey]) SCENES[t.sceneKey].topics.push({ id: t.id, label: t.label });
+  });
 
   I18N.apply();
   Object.keys(SCENES).forEach(renderTrack);
@@ -649,9 +723,13 @@ async function boot(){
   document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("kn-overlay").hidden) closeDetail(); });
 
   $("kn-view-edit").addEventListener("click", openEditor);
-  $("kn-edit-cancel").addEventListener("click", closeEditor);
+  $("kn-edit-cancel").addEventListener("click", () => {
+    if (isNewTopic){ closeEditor(); $("kn-overlay").hidden = true; }
+    else closeEditor();
+  });
 
   $("kn-edit-save").addEventListener("click", () => {
+    if (isNewTopic){ addNewTopic(); return; }
     const override = buildOverride();
     saveLocalOverride(currentTopicId, override);
     closeEditor();
@@ -659,6 +737,26 @@ async function boot(){
   });
 
   $("kn-edit-publish").addEventListener("click", async () => {
+    if (isNewTopic){
+      const topic = addNewTopic();
+      if (!topic) return;
+      // 繼續發布到 server
+      await requireAuth();
+      const btn = $("kn-edit-publish");
+      const orig = btn.textContent;
+      btn.disabled = true; btn.textContent = I18N.t("knowledge.edit.publishing");
+      try {
+        const result = await Storage.save("knowledge", { topics: TOPICS.map(t => byId[t.id]) });
+        if (result.ok){
+          // 發布成功後清除本機自訂（已進入 server 資料）
+          saveCustomTopics(loadCustomTopics().filter(c => c.id !== topic.id));
+          delete byId[topic.id]._custom;
+        }
+        alert(result.message);
+      } catch { alert(I18N.t("knowledge.edit.savefail")); }
+      finally { btn.disabled = false; btn.textContent = orig; }
+      return;
+    }
     const hasAny = $("kn-edit-name").value.trim() || $("kn-edit-summary").value.trim() || editingImages.length;
     if (!hasAny){ alert(I18N.t("knowledge.edit.empty")); return; }
     await requireAuth();
@@ -680,6 +778,11 @@ async function boot(){
     }
     closeEditor();
     openDetail(currentTopicId);
+  });
+
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".kn-add-btn");
+    if (btn) openNewTopic(btn.dataset.scene);
   });
 
   $("kn-edit-imgadd").addEventListener("click", () => {
