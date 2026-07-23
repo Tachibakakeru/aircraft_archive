@@ -11,7 +11,7 @@ let selected = [];      // 目前比較的機型 id 陣列
 const $ = id => document.getElementById(id);
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=99")).json();
+  fleet = await (await fetch("data/fleet.json?v=117")).json();
 
   // 初始：網址帶 ?ids=a320,b738 或預設兩架
   const urlIds = (new URLSearchParams(location.search).get("ids") || "").split(",").filter(Boolean);
@@ -44,7 +44,7 @@ let diffOnly = false;
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=99`)).json();
+  const d = await (await fetch(`data/${id}.json?v=117`)).json();
   dataCache[id] = d;
   return d;
 }

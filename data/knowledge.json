@@ -1,0 +1,928 @@
+{
+  "topics": [
+    {
+      "id": "asi",
+      "category": "instrument",
+      "hotspot": "asi",
+      "name": {
+        "zh": "空速表",
+        "en": "Airspeed Indicator (ASI)",
+        "ja": "対気速度計（ASI）"
+      },
+      "summary": {
+        "zh": "顯示飛機相對於周圍空氣的移動速度（指示空速 IAS），不是對地實際速度。",
+        "en": "Shows the aircraft's speed through the surrounding air (indicated airspeed, IAS) — not its speed over the ground.",
+        "ja": "機体が周囲の空気に対して移動する速度（指示対気速度 IAS）を示す。対地速度ではない。"
+      },
+      "fact": {
+        "zh": "指示空速在高空會比真實空速（TAS）低，因為空氣稀薄、動壓變小——這也是為什麼噴射客機在高空巡航時「感覺」比實際地速慢的原因之一。",
+        "en": "At high altitude, indicated airspeed reads lower than true airspeed (TAS) because thinner air produces less dynamic pressure — one reason a cruising jet can \"feel\" slower than its actual ground speed.",
+        "ja": "高高度では大気が薄く動圧が小さいため、指示対気速度は実対気速度（TAS）より低く出る。巡航中のジェット機が実際の対地速度より「遅く感じる」理由の一つ。"
+      },
+      "images": []
+    },
+    {
+      "id": "ai",
+      "category": "instrument",
+      "hotspot": "ai",
+      "name": {
+        "zh": "姿態指示器（人工地平儀）",
+        "en": "Attitude Indicator (AI)",
+        "ja": "姿勢指示器（人工水平儀）"
+      },
+      "summary": {
+        "zh": "顯示機身相對於地平線的俯仰與滾轉角度，是儀器飛行（IFR）最核心的儀表。",
+        "en": "Shows the aircraft's pitch and bank relative to the horizon — the single most critical instrument for instrument flight (IFR).",
+        "ja": "機体の水平線に対するピッチとバンク角を表示する、計器飛行（IFR）で最も重要な計器。"
+      },
+      "fact": {
+        "zh": "姿態指示器又稱「人工地平儀」，在雲中或夜間看不到真實地平線時，飛行員完全依賴這具儀表判斷姿態，故障時極易導致空間迷向。",
+        "en": "Also called the \"artificial horizon.\" In cloud or at night with no visible horizon, pilots rely on it entirely for orientation — its failure is a leading cause of spatial disorientation.",
+        "ja": "「人工水平儀」とも呼ばれる。雲中や夜間で実際の地平線が見えないとき、パイロットはこの計器だけを頼りに姿勢を判断する。故障すると空間識失調を招きやすい。"
+      },
+      "images": []
+    },
+    {
+      "id": "alt",
+      "category": "instrument",
+      "hotspot": "alt",
+      "name": {
+        "zh": "高度表與 QNH",
+        "en": "Altimeter & QNH",
+        "ja": "高度計とQNH"
+      },
+      "summary": {
+        "zh": "高度表其實是一具氣壓計，靠測量大氣壓力換算高度；旁邊的 Kollsman 窗口可設定基準氣壓值（QNH），確保顯示的是海平面高度而非任意基準。",
+        "en": "The altimeter is really a barometer that converts air pressure into altitude. The Kollsman window lets you set a reference pressure (QNH) so the reading is true sea-level altitude, not an arbitrary baseline.",
+        "ja": "高度計は実際には気圧計で、気圧を高度に換算している。コルスマン窓で基準気圧（QNH）を設定することで、任意の基準ではなく海抜高度が表示される。"
+      },
+      "fact": {
+        "zh": "QNH／QFE／QNE 是三種不同基準：QNH 顯示海拔高度、QFE 顯示相對機場的高度（落地時歸零）、QNE（標準大氣壓 1013.25 hPa／29.92 inHg）用於高空巡航的「飛行高度層」，切換時機由飛航規則明訂。",
+        "en": "QNH, QFE, and QNE are three different references: QNH gives altitude above sea level; QFE reads zero at the airport elevation; QNE uses the standard pressure (1013.25 hPa / 29.92 inHg) for high-altitude \"flight levels.\" Rules specify exactly when to switch between them.",
+        "ja": "QNH／QFE／QNEは3種類の基準。QNHは海抜高度、QFEは空港標高を基準（着陸時にゼロ）、QNE（標準気圧1013.25hPa／29.92inHg）は高高度の「フライトレベル」に使用。切り替えのタイミングは航空規則で定められている。"
+      },
+      "images": []
+    },
+    {
+      "id": "tc",
+      "category": "instrument",
+      "hotspot": "tc",
+      "name": {
+        "zh": "轉彎協調器",
+        "en": "Turn Coordinator",
+        "ja": "旋回計（ターンコーディネーター）"
+      },
+      "summary": {
+        "zh": "顯示飛機的滾轉率與轉彎方向，內建的小球（inclinometer）則指示轉彎是否「協調」——側滑或內滑都會讓小球偏離中央。",
+        "en": "Shows roll rate and turn direction. The built-in inclinometer ball indicates whether the turn is \"coordinated\" — a slip or skid pushes the ball off-center.",
+        "ja": "ロール率と旋回方向を示す。内蔵の傾斜計（ボール）は旋回が「協調」しているかを示し、スリップやスキッドがあるとボールが中心からずれる。"
+      },
+      "fact": {
+        "zh": "「踩球」（step on the ball）是飛行訓練的經典口訣：小球偏向哪一側，就踩哪一側的方向舵把它踩回中間，讓轉彎維持協調、不側滑。",
+        "en": "\"Step on the ball\" is a classic flight-training mnemonic: press the rudder pedal on whichever side the ball has drifted to, bringing it back to center for a coordinated, slip-free turn.",
+        "ja": "「ボールを踏め」は飛行訓練の定番の合言葉。ボールが偏った側のラダーを踏んで中央に戻すことで、スリップのない協調旋回になる。"
+      },
+      "images": []
+    },
+    {
+      "id": "hdg",
+      "category": "instrument",
+      "hotspot": "hdg",
+      "name": {
+        "zh": "航向指示器",
+        "en": "Heading Indicator (HI)",
+        "ja": "方位指示器（HI）"
+      },
+      "summary": {
+        "zh": "顯示機頭指向的磁方位，本質是一具陀螺儀，需要定期對照磁羅盤校正（陀螺會隨時間漂移）。",
+        "en": "Shows the magnetic heading the nose is pointing to. It's fundamentally a gyroscope, so it must be periodically cross-checked against the magnetic compass since gyros drift over time.",
+        "ja": "機首が向く磁方位を示す。本質はジャイロスコープであり、経時的にドリフトするため定期的に磁気コンパスと照合する必要がある。"
+      },
+      "fact": {
+        "zh": "現代客機已改用雷射環或光纖陀螺的慣性參考系統（IRS），精度遠高於傳統陀螺儀，但「航向指示器」這個儀表位置與角色至今仍保留在標準六儀表佈局中。",
+        "en": "Modern airliners use ring-laser or fiber-optic gyro inertial reference systems (IRS), far more accurate than mechanical gyros — but the heading indicator's position and role still persist in the classic six-pack layout.",
+        "ja": "現代の旅客機はリングレーザーや光ファイバージャイロを用いた慣性基準装置（IRS）を採用し、機械式ジャイロより格段に高精度だが、「方位指示器」の位置と役割は今も標準6計器配置に残っている。"
+      },
+      "images": []
+    },
+    {
+      "id": "vsi",
+      "category": "instrument",
+      "hotspot": "vsi",
+      "name": {
+        "zh": "垂直速度表",
+        "en": "Vertical Speed Indicator (VSI)",
+        "ja": "昇降計（VSI）"
+      },
+      "summary": {
+        "zh": "顯示飛機目前的爬升或下降速率（呎/分鐘），靠測量大氣壓力變化率運作。",
+        "en": "Shows the aircraft's current rate of climb or descent (feet per minute), derived from the rate of change in air pressure.",
+        "ja": "現在の上昇・降下率（フィート/分）を、気圧の変化率から算出して表示する。"
+      },
+      "fact": {
+        "zh": "VSI 存在約 6～9 秒的反應延遲（因為要靠壓力「變化」而非瞬時值），現代客機常另外配備瞬時垂直速度表（IVSI）改善這個延遲。",
+        "en": "The VSI has a built-in lag of about 6–9 seconds, since it relies on a *rate of change* rather than an instantaneous value. Modern airliners often add an Instantaneous VSI (IVSI) to reduce this lag.",
+        "ja": "VSIは瞬時値ではなく気圧の「変化率」に依存するため、約6〜9秒の遅れがある。現代の旅客機はこの遅れを減らすため瞬時昇降計（IVSI）を併用することが多い。"
+      },
+      "images": []
+    },
+    {
+      "id": "mach",
+      "category": "aerodynamics",
+      "hotspot": null,
+      "name": {
+        "zh": "馬赫數",
+        "en": "Mach Number",
+        "ja": "マッハ数"
+      },
+      "summary": {
+        "zh": "飛行速度與當地音速的比值，馬赫 1.0 即為音速；巡航噴射客機通常在馬赫 0.78～0.85 之間飛行。",
+        "en": "The ratio of flight speed to the local speed of sound — Mach 1.0 equals the speed of sound. Cruising jetliners typically fly around Mach 0.78–0.85.",
+        "ja": "飛行速度と現地の音速との比。マッハ1.0が音速に相当する。巡航中のジェット旅客機は通常マッハ0.78〜0.85程度で飛行する。"
+      },
+      "fact": {
+        "zh": "音速並非固定值，會隨氣溫下降而降低——這也是為什麼同樣的「指示空速」，在高空更容易接近音障。",
+        "en": "The speed of sound isn't fixed — it drops as temperature falls. That's why the same indicated airspeed can push you closer to the sound barrier at high altitude.",
+        "ja": "音速は一定ではなく、気温が下がると低下する。そのため同じ指示対気速度でも、高高度ではより音速に近づきやすい。"
+      },
+      "images": []
+    },
+    {
+      "id": "wake",
+      "category": "atc",
+      "hotspot": null,
+      "name": {
+        "zh": "尾流亂流",
+        "en": "Wake Turbulence",
+        "ja": "後方乱気流（ウェイクタービュランス）"
+      },
+      "summary": {
+        "zh": "機翼產生升力的同時，也會在翼尖捲出強烈的渦流，跟在後方的飛機可能因此劇烈翻滾。機型越大、速度越慢、越乾淨（起降構型），尾流越強。",
+        "en": "As a wing generates lift, it also sheds powerful vortices from its tips — a trailing aircraft can be violently upset by them. Bigger, slower, \"cleaner\" (landing-configured) aircraft generate stronger wake.",
+        "ja": "主翼は揚力を生む一方、翼端に強い渦を巻き上げる。後続機はこれによって激しく揺さぶられることがある。機体が大きく、速度が遅く、着陸形態（クリーン）であるほど後方乱気流は強くなる。"
+      },
+      "fact": {
+        "zh": "管制員會依前後機種的「重量級別」（輕型／中型／重型／超重型）安排最小間隔，A380 這類超重型機的尾流間隔規定甚至比一般重型機更長。",
+        "en": "Controllers apply minimum separation based on weight category (Light/Medium/Heavy/Super). Super-heavy types like the A380 require even longer spacing than ordinary Heavy-category aircraft.",
+        "ja": "管制官は前後の機体の重量区分（軽量／中量／重量／超重量）に応じて最小間隔を設定する。A380のような超重量機は、通常の重量機よりもさらに長い後方乱気流間隔が必要となる。"
+      },
+      "images": []
+    },
+    {
+      "id": "ils",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "儀器降落系統",
+        "en": "Instrument Landing System (ILS)",
+        "ja": "計器着陸装置（ILS）"
+      },
+      "summary": {
+        "zh": "由地面發射的無線電導航系統，提供水平（Localizer）與垂直（Glide Slope）兩道電子引導波束，讓飛機在低能見度下精確對準跑道下降。",
+        "en": "A ground-based radio navigation system broadcasting two guidance beams — horizontal (Localizer) and vertical (Glide Slope) — letting aircraft track precisely down to the runway in low visibility.",
+        "ja": "地上から発射される無線航法システムで、水平方向（ローカライザー）と垂直方向（グライドスロープ）の2つの電波ビームを送信し、低視程下でも滑走路へ正確に誘導する。"
+      },
+      "fact": {
+        "zh": "ILS 依精度分為 CAT I／II／IIIa／IIIb／IIIc 等級，CAT IIIc 理論上能支援「零視程」自動降落，但實務上機場設施與航空公司簽派限制通常還是會設定最低標準。",
+        "en": "ILS is graded CAT I/II/IIIa/IIIb/IIIc by precision. CAT IIIc could theoretically support a \"zero visibility\" autoland, but in practice airport infrastructure and airline dispatch rules still set minimums.",
+        "ja": "ILSは精度によりCAT I／II／IIIa／IIIb／IIIcに分類される。理論上CAT IIIcは「視程ゼロ」でのオートランドに対応するが、実際には空港設備や航空会社の運航規定により最低基準が設けられる。"
+      },
+      "images": []
+    },
+    {
+      "id": "squawk",
+      "category": "atc",
+      "hotspot": null,
+      "name": {
+        "zh": "雷達詢答機與 Squawk 代碼",
+        "en": "Transponder & Squawk Codes",
+        "ja": "トランスポンダーとスコーク・コード"
+      },
+      "summary": {
+        "zh": "飛機上的電子詢答機會回應地面雷達的詢問，回報一組四位數代碼（squawk code）與高度，讓管制員在雷達幕上識別、追蹤該航班。",
+        "en": "The aircraft's transponder replies to ground radar interrogation with a four-digit code (squawk) and altitude, letting controllers identify and track the flight on their radar scope.",
+        "ja": "機上のトランスポンダーは地上レーダーの照会に応答し、4桁のコード（スコーク）と高度を送信する。管制官はこれによりレーダー画面上で当該便を識別・追跡できる。"
+      },
+      "fact": {
+        "zh": "有幾組國際通用的緊急代碼：7500 代表劫機、7600 代表通訊失效、7700 代表一般緊急狀況——一旦設定，地面管制系統會立即警示。",
+        "en": "A few codes are internationally standardized for emergencies: 7500 = hijacking, 7600 = radio failure, 7700 = general emergency. Setting any of these instantly alerts ground control systems.",
+        "ja": "国際的に共通の緊急コードがある。7500はハイジャック、7600は通信機故障、7700は一般緊急事態。これらを設定すると地上の管制システムに即座に警報が入る。"
+      },
+      "images": []
+    },
+    {
+      "id": "holding",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "等待航線",
+        "en": "Holding Pattern",
+        "ja": "待機パターン（ホールディング）"
+      },
+      "summary": {
+        "zh": "當飛機需要在空中等待（如跑道壅塞、天氣暫時不允許降落）時，依標準程序飛行的橢圓形「賽道」航線，通常以特定導航點為中心。",
+        "en": "A standardized oval \"racetrack\" flight path used when an aircraft needs to wait in the air — for runway congestion or temporary weather — usually centered on a specific navigation fix.",
+        "ja": "滑走路の混雑や一時的な悪天候などで空中待機が必要なとき、特定の航法ポイントを中心に飛行する標準化された楕円形の「トラック」経路。"
+      },
+      "fact": {
+        "zh": "標準等待航線是右轉、每邊飛行 1 分鐘（低空）或 1.5 分鐘（高空），但實務上依風向與空域限制，也可能採左轉等待。",
+        "en": "Standard holds use right turns with 1-minute legs (below 14,000 ft) or 1.5-minute legs (above) — but left-hand holds are also used depending on wind and airspace constraints.",
+        "ja": "標準的な待機パターンは右旋回で、各辺の飛行時間は1分（低高度）または1.5分（高高度）。ただし風向や空域の制約により左旋回の待機も用いられる。"
+      },
+      "images": []
+    },
+    {
+      "id": "jetstream",
+      "category": "weather",
+      "hotspot": null,
+      "name": {
+        "zh": "噴射氣流",
+        "en": "Jet Stream",
+        "ja": "ジェット気流"
+      },
+      "summary": {
+        "zh": "對流層頂附近、時速可達 200 公里以上的高空強風帶，通常由西向東流動（中緯度地區）。",
+        "en": "A band of powerful high-altitude wind near the tropopause, often exceeding 200 km/h, generally flowing west-to-east at mid-latitudes.",
+        "ja": "対流圏界面付近を吹く強風帯で、時速200kmを超えることもある。中緯度地域では通常西から東へ流れる。"
+      },
+      "fact": {
+        "zh": "航空公司規劃跨太平洋／跨大西洋航線時，會刻意「借用」噴射氣流的順風縮短飛行時間、省油，這也是為什麼同段航線去程與回程的飛行時間常常差距一小時以上。",
+        "en": "Airlines deliberately route trans-Pacific/trans-Atlantic flights to ride the jet stream's tailwind, saving time and fuel — which is why the same route can take an hour or more longer in one direction than the other.",
+        "ja": "航空会社は太平洋・大西洋横断便のルートを、ジェット気流の追い風を利用するよう意図的に設計し、時間と燃料を節約する。同一区間でも往復で1時間以上の所要時間差が出るのはこのため。"
+      },
+      "images": []
+    },
+    {
+      "id": "stall",
+      "category": "aerodynamics",
+      "hotspot": null,
+      "name": {
+        "zh": "失速",
+        "en": "Stall",
+        "ja": "失速（ストール）"
+      },
+      "summary": {
+        "zh": "當機翼攻角（迎角）超過臨界值，氣流無法平順附著在翼面上，升力驟降的現象——與飛行速度無關，任何速度下攻角過大都可能失速。",
+        "en": "When a wing's angle of attack exceeds a critical value, airflow can no longer stay attached to the surface and lift drops sharply — this can happen at any airspeed if the angle of attack is too high.",
+        "ja": "主翼の迎え角が臨界値を超えると気流が翼面に沿えなくなり、揚力が急激に低下する現象。速度に関係なく、迎え角が大きすぎればどんな速度でも失速し得る。"
+      },
+      "fact": {
+        "zh": "「失速」是攻角問題不是速度問題，這個觀念常被誤解；飛機在陡峭爬升或急轉彎時，即使空速夠快，也可能因攻角過大而失速。",
+        "en": "Stall is an angle-of-attack problem, not a speed problem — a commonly misunderstood point. An aircraft in a steep climb or hard turn can stall even at high airspeed if the angle of attack gets too large.",
+        "ja": "失速は迎え角の問題であり速度の問題ではない、という点はよく誤解される。急上昇や急旋回中は、対気速度が十分でも迎え角が大きすぎれば失速し得る。"
+      },
+      "images": []
+    },
+    {
+      "id": "runway-numbering",
+      "category": "airport",
+      "hotspot": null,
+      "name": {
+        "zh": "跑道編號",
+        "en": "Runway Numbering",
+        "ja": "滑走路番号"
+      },
+      "summary": {
+        "zh": "跑道編號取自其磁方位角除以 10 並四捨五入（如磁向 274° 的跑道編號為 27），同一條跑道兩端編號恰好相差 18（180°）。",
+        "en": "A runway's number is its magnetic heading divided by 10 and rounded (a runway on magnetic heading 274° is numbered 27). The two ends of the same runway always differ by 18 (180°).",
+        "ja": "滑走路番号は磁方位を10で割って四捨五入した数値（磁方位274°なら27）。同一滑走路の両端の番号は必ず18（180°）違う。"
+      },
+      "fact": {
+        "zh": "地球磁場會緩慢漂移，機場的跑道編號因此需要定期依最新磁偏角重新測量、更新油漆——部分機場因此在使用數十年間換過不只一次跑道編號。",
+        "en": "Earth's magnetic field slowly drifts, so runway numbers occasionally need remeasuring and repainting — some airports have changed their runway numbers more than once over the decades.",
+        "ja": "地球の磁場は緩やかに移動するため、滑走路番号は定期的に再測量・再塗装が必要になる。数十年の運用中に番号が複数回変更された空港も存在する。"
+      },
+      "images": []
+    },
+    {
+      "id": "windshear",
+      "category": "weather",
+      "hotspot": null,
+      "name": {
+        "zh": "風切",
+        "en": "Wind Shear",
+        "ja": "ウィンドシア"
+      },
+      "summary": {
+        "zh": "短距離內風向或風速的劇烈變化，低空風切（如雷雨伴隨的下爆流 microburst）對起降階段的飛機威脅最大，可能同時造成空速驟增又驟減。",
+        "en": "A sudden change in wind speed or direction over a short distance. Low-level shear (like a thunderstorm microburst) is most dangerous during takeoff and landing, capable of causing both a sudden airspeed gain and loss.",
+        "ja": "短距離で風向・風速が急激に変化する現象。低高度でのウィンドシア（雷雨に伴うマイクロバーストなど）は離着陸時に最も危険で、対気速度の急増と急減を同時に引き起こすことがある。"
+      },
+      "fact": {
+        "zh": "現代客機普遍配備機載風切偵測雷達，多數大型機場也裝設低空風切警報系統（LLWAS），一旦偵測到危險風切會立即警示塔台與航機。",
+        "en": "Modern airliners carry onboard wind-shear detection radar, and most major airports have Low-Level Wind Shear Alert Systems (LLWAS) that immediately warn both tower and aircraft when hazardous shear is detected.",
+        "ja": "現代の旅客機には機上ウィンドシア検知レーダーが搭載され、主要空港の多くには低高度ウィンドシア警報システム（LLWAS）が設置されている。危険なウィンドシアを検知すると管制塔と航空機に即座に警報が出る。"
+      },
+      "images": []
+    },
+    {
+      "id": "v-speeds",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "起飛決斷速度 V1／VR／V2",
+        "en": "Takeoff Speeds: V1 / VR / V2",
+        "ja": "離陸速度 V1／VR／V2"
+      },
+      "summary": {
+        "zh": "V1 是起飛滾行中的「決斷速度」，超過這個速度後即使發生問題也必須繼續起飛而非煞停；VR 是拉起機頭離地的速度；V2 是單發失效狀況下仍能安全爬升的最低速度。",
+        "en": "V1 is the takeoff \"decision speed\" — beyond it, the crew must continue the takeoff even if a problem occurs, rather than abort. VR is the speed to rotate the nose up. V2 is the minimum safe climb speed with one engine out.",
+        "ja": "V1は離陸中の「決断速度」で、これを超えると問題が発生しても離陸を中止せず継続しなければならない。VRは機首を引き起こす速度。V2はエンジン1基停止時でも安全に上昇できる最低速度。"
+      },
+      "fact": {
+        "zh": "V1 並非固定值，會隨飛機重量、跑道長度、風向風速、機場標高與氣溫逐次計算，同一架飛機在不同天、不同機場的 V1 幾乎都不一樣。",
+        "en": "V1 isn't a fixed number — it's recalculated for every takeoff based on weight, runway length, wind, airport elevation, and temperature. The same aircraft rarely has the same V1 twice.",
+        "ja": "V1は固定値ではなく、機体重量・滑走路長・風・空港標高・気温に応じて毎回計算される。同じ機体でも日や空港が変われば同じV1になることはほぼない。"
+      },
+      "images": []
+    },
+    {
+      "id": "flight-level",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "飛航空層",
+        "en": "Flight Level",
+        "ja": "フライトレベル"
+      },
+      "summary": {
+        "zh": "高空巡航時，飛機的「高度」改用標準大氣壓（1013.25 hPa／29.92 inHg，即 QNE）為基準表示，稱為飛航空層（如 FL350 代表以標準氣壓算出的 35,000 呎）。",
+        "en": "During high-altitude cruise, an aircraft's \"altitude\" is expressed relative to standard pressure (1013.25 hPa / 29.92 inHg, i.e. QNE) and called a flight level — FL350 means 35,000 ft computed on standard pressure.",
+        "ja": "高高度巡航中は、機体の「高度」は標準気圧（1013.25hPa／29.92inHg、QNE）を基準に表され、フライトレベルと呼ばれる。FL350は標準気圧で算出した35,000フィートを意味する。"
+      },
+      "fact": {
+        "zh": "這套統一基準的用意是讓所有高空飛機用同一套「假想高度」互相保持間隔，不受各地實際氣壓差異影響——地面附近才切換回以 QNH 為準的真實高度。",
+        "en": "This common reference lets all high-altitude traffic maintain separation using the same \"virtual altitude,\" unaffected by local pressure variations — only near the ground do aircraft switch back to true QNH-based altitude.",
+        "ja": "この統一基準の狙いは、すべての高高度機が現地の気圧差に影響されない同一の「仮想高度」で間隔を保つこと。地表付近に近づいて初めてQNH基準の実高度に切り替える。"
+      },
+      "images": []
+    },
+    {
+      "id": "etops",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "ETOPS",
+        "en": "ETOPS",
+        "ja": "ETOPS（イートップス）"
+      },
+      "summary": {
+        "zh": "雙發動機延程飛行審定（Extended-range Twin-engine Operations），規範雙發客機在單發失效狀況下，必須能在多少分鐘內飛抵可供備降的機場。",
+        "en": "Extended-range Twin-engine Operations — a certification governing how many minutes a twin-engine airliner may fly from a suitable diversion airport in the event of a single-engine failure.",
+        "ja": "双発機延長運航（Extended-range Twin-engine Operations）の略。片発停止時に代替空港まで何分以内に到達できるかを定める双発旅客機の運航認証。"
+      },
+      "fact": {
+        "zh": "現代高可靠度引擎已能取得 ETOPS-370（單發也能撐 370 分鐘）等級的認證，讓雙發客機得以直飛過去只有三、四發客機才能執飛的跨洋長程航線。",
+        "en": "Today's highly reliable engines can achieve ETOPS-370 certification (370 minutes on one engine), letting twin-engine jets fly ultra-long-haul oceanic routes once reserved for three- and four-engine aircraft.",
+        "ja": "現代の高信頼性エンジンはETOPS-370（片発でも370分飛行可能）の認証を取得できるようになり、かつては3発・4発機しか運航できなかった長距離洋上ルートを双発機が直行できるようになった。"
+      },
+      "images": []
+    },
+    {
+      "id": "adf",
+      "category": "instrument",
+      "hotspot": "adf",
+      "name": {
+        "zh": "無線電羅盤 ADF",
+        "en": "Automatic Direction Finder (ADF)",
+        "ja": "自動方向探知機（ADF）"
+      },
+      "summary": {
+        "zh": "指向地面 NDB 電台方向的儀表，指針永遠指向電台，不是飛機航向；需搭配航向指示器判讀。",
+        "en": "Points toward a ground NDB station's direction — the needle always points at the station, not the aircraft's heading, so it must be read together with the heading indicator.",
+        "ja": "地上のNDB局の方向を指す計器。指針は常に局の方向を指し、機首方位ではないため、方位指示器と併せて読む必要がある。"
+      },
+      "fact": {
+        "zh": "RMI（無線電磁指示器）是 ADF 的進階版，指針背景會隨飛機航向轉動，讓飛行員不必再心算相對方位，直接讀出電台的磁方位。",
+        "en": "The RMI (Radio Magnetic Indicator) is an upgraded ADF whose card rotates with the aircraft's heading, letting pilots read the station's magnetic bearing directly instead of mentally computing relative bearing.",
+        "ja": "RMI（無線磁方位指示器）はADFの発展形で、カード自体が機首方位に応じて回転するため、相対方位を暗算せずに局の磁方位を直接読み取れる。"
+      },
+      "images": []
+    },
+    {
+      "id": "dme",
+      "category": "instrument",
+      "hotspot": "dme",
+      "name": {
+        "zh": "測距儀 DME",
+        "en": "Distance Measuring Equipment (DME)",
+        "ja": "測距儀（DME）"
+      },
+      "summary": {
+        "zh": "透過飛機詢答機與地面電台之間電波往返的時間差，計算出飛機與該電台的斜距（非水平距離）。",
+        "en": "Measures the round-trip time of a radio signal between the aircraft's transponder and a ground station to compute the slant-range distance (not horizontal distance) to that station.",
+        "ja": "機上トランスポンダーと地上局の間で電波が往復する時間差から、局までの斜距離（水平距離ではない）を算出する装置。"
+      },
+      "fact": {
+        "zh": "DME 顯示的是「斜距」（slant range），飛機在電台正上方低空掠過時，即使水平距離為零，DME 仍會顯示接近飛機實際高度的數字，而非 0。",
+        "en": "DME shows \"slant range\" — when an aircraft passes low directly over a station, the DME reading approaches the aircraft's actual altitude rather than dropping to zero, even though horizontal distance is zero.",
+        "ja": "DMEが示すのは「斜距離」。局の真上を低高度で通過すると、水平距離はゼロでもDMEの表示は実際の高度に近い値になり、ゼロにはならない。"
+      },
+      "images": []
+    },
+    {
+      "id": "radalt",
+      "category": "instrument",
+      "hotspot": "radalt",
+      "name": {
+        "zh": "無線電高度表",
+        "en": "Radio/Radar Altimeter",
+        "ja": "電波高度計（レーダー高度計）"
+      },
+      "summary": {
+        "zh": "向正下方發射無線電波、依反射時間計算飛機距離地面的實際高度（AGL），與依氣壓運作的一般高度表原理完全不同。",
+        "en": "Transmits a radio wave straight down and measures the return time to compute the aircraft's true height above ground (AGL) — a completely different principle from the pressure-based altimeter.",
+        "ja": "直下に電波を発射し、反射までの時間から実際の対地高度（AGL）を算出する。気圧を利用する通常の高度計とは原理がまったく異なる。"
+      },
+      "fact": {
+        "zh": "無線電高度表只在低空（通常 2,500 呎以下）才會顯示讀數，主要用於精確進場（如 ILS CAT II/III）與近地警告系統（GPWS/EGPWS）判斷。",
+        "en": "A radio altimeter only produces readings at low altitude (typically below 2,500 ft) and is mainly used for precision approaches (ILS CAT II/III) and ground proximity warning systems (GPWS/EGPWS).",
+        "ja": "電波高度計は低高度（通常2,500フィート以下）でのみ数値を示し、主に精密進入（ILS CAT II/III）や対地接近警報装置（GPWS/EGPWS）に使用される。"
+      },
+      "images": []
+    },
+    {
+      "id": "standby",
+      "category": "instrument",
+      "hotspot": "standby",
+      "name": {
+        "zh": "備用儀表",
+        "en": "Standby Instruments",
+        "ja": "予備計器（スタンバイ計器）"
+      },
+      "summary": {
+        "zh": "獨立於主要飛行電腦與電源系統之外的小型備用姿態、空速、高度儀表，供主系統全部失效時仍能維持基本飛行。",
+        "en": "Small backup attitude, airspeed, and altitude indicators independent of the main flight computers and power system, keeping basic flight possible if the primary systems fail entirely.",
+        "ja": "主要な飛行コンピューターや電源系統から独立した小型の予備姿勢・速度・高度計器で、主系統が全て故障しても最低限の飛行を維持できる。"
+      },
+      "fact": {
+        "zh": "現代客機的備用姿態儀通常內建自己的電池與陀螺，即使全機失去外部電力，仍可獨立運作至少 30 分鐘以上。",
+        "en": "The standby attitude indicator on modern airliners typically has its own battery and gyro, letting it keep working independently for at least 30 minutes even after a total loss of external power.",
+        "ja": "現代の旅客機の予備姿勢指示器は通常、専用のバッテリーとジャイロを内蔵しており、外部電源を完全に失っても最低30分以上は単独で作動し続けられる。"
+      },
+      "images": []
+    },
+    {
+      "id": "efis",
+      "category": "instrument",
+      "hotspot": "efis",
+      "name": {
+        "zh": "電子飛行儀表系統 EFIS",
+        "en": "Electronic Flight Instrument System (EFIS)",
+        "ja": "電子飛行計器システム（EFIS）"
+      },
+      "summary": {
+        "zh": "以液晶螢幕整合顯示姿態、空速、高度等資訊的「玻璃座艙」，取代傳統一具具獨立的機械儀表。",
+        "en": "A \"glass cockpit\" that displays attitude, airspeed, altitude and more on LCD screens, replacing a row of separate mechanical instruments.",
+        "ja": "姿勢・速度・高度などの情報を液晶画面に統合表示する「グラスコックピット」。従来の独立した機械式計器の並びを置き換える。"
+      },
+      "fact": {
+        "zh": "玻璃座艙的普及大幅減少了座艙儀表數量與飛行員的「掃描」負擔，但也讓「備用機械儀表」的存在更加重要——一旦螢幕與電腦系統故障，仍需要純機械儀表兜底。",
+        "en": "Glass cockpits greatly reduced the number of instruments and the pilot's visual scanning workload — but this makes standby mechanical instruments even more important as a fallback if the screens and computers fail.",
+        "ja": "グラスコックピットの普及により計器の数とパイロットの走査負担は大幅に減ったが、その分、画面やコンピューターが故障した際の予備機械式計器の重要性はより高まっている。"
+      },
+      "images": []
+    },
+    {
+      "id": "decision-height",
+      "category": "airport",
+      "hotspot": null,
+      "name": {
+        "zh": "決斷高度 DA(H)",
+        "en": "Decision Height / DA(H)",
+        "ja": "決心高度 DA(H)"
+      },
+      "summary": {
+        "zh": "精確進場時，飛行員必須在此高度前判斷是否能看見跑道環境並繼續降落，否則必須重飛（waved off/go-around）。",
+        "en": "During a precision approach, the pilot must decide by this height whether the runway environment is in sight to continue landing — otherwise a go-around is mandatory.",
+        "ja": "精密進入において、パイロットはこの高度までに滑走路環境を視認できるかを判断しなければならない。視認できなければ着陸復行（ゴーアラウンド）が義務となる。"
+      },
+      "fact": {
+        "zh": "DH（決斷「高度」，相對機場）與 DA（決斷「海拔」，相對海平面）常被交替使用，實務上依儀降系統類別（CAT I/II/III）而有不同數值與判斷標準。",
+        "en": "DH (Decision Height, relative to the airport) and DA (Decision Altitude, relative to sea level) are often used interchangeably; the exact figures and criteria depend on the ILS category (CAT I/II/III).",
+        "ja": "DH（決心「高度」、空港基準）とDA（決心「海抜高度」、海面基準）は混同して使われることが多く、実際の数値と判断基準はILSのカテゴリー（CAT I/II/III）によって異なる。"
+      },
+      "images": []
+    },
+    {
+      "id": "weight-balance",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "重心與配重",
+        "en": "Weight & Balance",
+        "ja": "重量重心（ウェイト・アンド・バランス）"
+      },
+      "summary": {
+        "zh": "起飛前必須計算飛機的總重量與重心位置（CG），確保落在安全範圍內——重心太前或太後都會嚴重影響操縱性與失速特性。",
+        "en": "Before every takeoff, total weight and center of gravity (CG) must be calculated and kept within safe limits — a CG too far forward or aft seriously affects controllability and stall behavior.",
+        "ja": "離陸前には総重量と重心位置（CG）を計算し、安全範囲内に収める必要がある。重心が前すぎても後ろすぎても操縦性や失速特性に重大な影響を及ぼす。"
+      },
+      "fact": {
+        "zh": "貨機或客機艙單異動（如乘客座位分佈不均、貨艙裝載順序）都可能讓重心偏移，因此每次起飛前都要重新計算，而非套用固定數值。",
+        "en": "Any change to the load manifest — uneven passenger seating, cargo loading order — can shift the CG, which is why weight and balance is recalculated before every single takeoff rather than using a fixed number.",
+        "ja": "座席配置の偏りや貨物の積載順序などマニフェストの変更は重心を動かしうるため、固定値を使い回すのではなく毎回の離陸前に再計算される。"
+      },
+      "images": []
+    },
+    {
+      "id": "mtow",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "最大起飛重量 MTOW",
+        "en": "Maximum Takeoff Weight (MTOW)",
+        "ja": "最大離陸重量（MTOW）"
+      },
+      "summary": {
+        "zh": "飛機結構與性能允許的最大起飛總重，實際能起飛的重量還要視當天跑道長度、氣溫、機場標高與風向修正到更保守的數字。",
+        "en": "The maximum takeoff weight allowed by the aircraft's structure and performance — the actual weight permitted on a given day is often further limited by runway length, temperature, airport elevation, and wind.",
+        "ja": "機体の構造・性能上許容される最大離陸重量。実際に許可される重量は滑走路長・気温・空港標高・風向によってさらに保守的な数値に修正される。"
+      },
+      "fact": {
+        "zh": "同一架飛機在酷熱高原機場（如高溫、高海拔的機場）起飛時，空氣密度較低、引擎與機翼效率下降，允許的起飛重量可能遠低於結構上限的 MTOW。",
+        "en": "The same aircraft taking off from a \"hot and high\" airport (high temperature, high elevation) faces lower air density and reduced engine/wing efficiency, so the allowable takeoff weight can be well below the structural MTOW.",
+        "ja": "高温・高標高の「ホット・アンド・ハイ」空港から離陸する場合、空気密度が低くエンジンや主翼の効率が落ちるため、許容離陸重量が構造上限のMTOWを大きく下回ることがある。"
+      },
+      "images": []
+    },
+    {
+      "id": "thrust-reverser",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "逆噴射",
+        "en": "Thrust Reverser",
+        "ja": "逆噴射（スラストリバーサー）"
+      },
+      "summary": {
+        "zh": "落地後將噴射引擎廢氣導流向前，產生反向推力協助減速，通常搭配煞車與擾流板一起使用縮短滑行距離。",
+        "en": "After landing, jet exhaust is redirected forward to produce reverse thrust that helps slow the aircraft, usually working together with brakes and spoilers to shorten the landing roll.",
+        "ja": "着陸後にジェット排気を前方に向け直し、逆推力を発生させて減速を助ける装置。通常ブレーキやスポイラーと併用して着陸滑走距離を短縮する。"
+      },
+      "fact": {
+        "zh": "逆噴射在跑道濕滑或結冰時特別重要，因為輪胎煞車摩擦力下降，但氣動力減速（逆噴射、擾流板）不受跑道摩擦係數影響。",
+        "en": "Thrust reversers are especially valuable on wet or icy runways, since tire braking friction drops in those conditions while aerodynamic deceleration (reversers, spoilers) is unaffected by runway friction.",
+        "ja": "逆噴射は濡れた滑走路や凍結した滑走路で特に重要となる。タイヤブレーキの摩擦力はそうした状況で低下するが、空力的な減速（逆噴射・スポイラー）は滑走路の摩擦係数に左右されないためである。"
+      },
+      "images": []
+    },
+    {
+      "id": "flaps-slats",
+      "category": "aerodynamics",
+      "hotspot": null,
+      "name": {
+        "zh": "襟翼與縫翼",
+        "en": "Flaps & Slats",
+        "ja": "フラップとスラット"
+      },
+      "summary": {
+        "zh": "起降時從機翼後緣（襟翼）與前緣（縫翼）伸出的裝置，增加翼面積與弧度，讓飛機在低速下仍能產生足夠升力。",
+        "en": "Devices extended from a wing's trailing edge (flaps) and leading edge (slats) during takeoff and landing, increasing wing area and camber so enough lift is generated at low speed.",
+        "ja": "離着陸時に主翼の後縁（フラップ）と前縁（スラット）から展開される装置で、翼面積とキャンバーを増やし、低速でも十分な揚力を得られるようにする。"
+      },
+      "fact": {
+        "zh": "全展開的襟翼縫翼能讓失速速度大幅降低，這也是為什麼客機能以遠低於巡航速度的速度安全起降——差別可達每小時上百公里。",
+        "en": "Fully extended flaps and slats substantially lower the stall speed — this is why airliners can safely take off and land at speeds far below cruise speed, sometimes over a hundred km/h slower.",
+        "ja": "フラップとスラットを完全に展開すると失速速度が大幅に下がる。これが旅客機が巡航速度よりはるかに遅い速度——時に時速100km以上遅い速度——で安全に離着陸できる理由である。"
+      },
+      "images": []
+    },
+    {
+      "id": "crosswind",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "側風限制",
+        "en": "Crosswind Limits",
+        "ja": "横風制限"
+      },
+      "summary": {
+        "zh": "每款機型都有經認證的最大側風分量限制，超過此限制起降的操縱難度與風險大幅增加，可能導致偏出跑道。",
+        "en": "Every aircraft type has a certified maximum crosswind component; exceeding it makes takeoff and landing significantly harder to control and raises the risk of a runway excursion.",
+        "ja": "各機種には認証された最大横風成分の限度があり、これを超えると離着陸の操縦難度と、滑走路逸脱のリスクが大きく高まる。"
+      },
+      "fact": {
+        "zh": "飛行員常用「蟹式進場」（crab）搭配落地前「側滑修正」（sideslip / de-crab）的技巧因應側風，讓機身在觸地瞬間與跑道方向對齊。",
+        "en": "Pilots often combine a \"crab\" approach with a sideslip correction (de-crab) just before touchdown to handle crosswind, aligning the fuselage with the runway direction right at the moment of touchdown.",
+        "ja": "パイロットは横風に対処するため、進入中は「クラブ」（機首を風上に向ける）を用い、接地直前に「サイドスリップ修正（デクラブ）」を行い、接地の瞬間に機体を滑走路方向へ合わせる技術をよく使う。"
+      },
+      "images": []
+    },
+    {
+      "id": "rvr",
+      "category": "weather",
+      "hotspot": null,
+      "name": {
+        "zh": "跑道視程 RVR",
+        "en": "Runway Visual Range (RVR)",
+        "ja": "滑走路視距離（RVR）"
+      },
+      "summary": {
+        "zh": "沿跑道設置的透視儀量測出的實際能見距離，用來判斷當下天氣是否符合起降的最低視程標準，比一般能見度報告更精確。",
+        "en": "The actual visibility distance measured by transmissometers along the runway, used to judge whether current weather meets the minimum visibility standard for takeoff/landing — more precise than a general visibility report.",
+        "ja": "滑走路沿いに設置された透視計で計測される実際の視認距離。離着陸に必要な最低視程基準を満たしているかを判断するために用いられ、一般的な視程報告より精密である。"
+      },
+      "fact": {
+        "zh": "低能見度大霧中，機場可能會發布「低能見度程序」（LVP），限制同時在滑行道與跑道上的飛機數量，避免地面碰撞風險。",
+        "en": "In dense fog with very low visibility, airports may activate Low Visibility Procedures (LVP), limiting how many aircraft can be on taxiways and runways at once to avoid the risk of ground collisions.",
+        "ja": "視程が著しく低い濃霧の中では、空港は低視程運航方式（LVP）を発動し、誘導路や滑走路上に同時に存在できる航空機の数を制限して地上衝突のリスクを避けることがある。"
+      },
+      "images": []
+    },
+    {
+      "id": "vor",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "特高頻全向信標 VOR",
+        "en": "VHF Omnidirectional Range (VOR)",
+        "ja": "全方向式無線標識（VOR）"
+      },
+      "summary": {
+        "zh": "地面發射的無線電導航設施，飛機接收後可判斷自己位於電台的哪個磁方位角（radial）上，是傳統航路導航的骨幹系統之一。",
+        "en": "A ground-based radio navigation aid that lets an aircraft determine which magnetic bearing (radial) it is on relative to the station — one of the backbone systems of traditional airway navigation.",
+        "ja": "地上から発射される無線航法援助施設で、機体が局に対してどの磁方位（ラジアル）上にいるかを判断できる。従来の航空路航法を支える基幹システムの一つ。"
+      },
+      "fact": {
+        "zh": "多具 VOR 電台的方位角交叉能定出飛機精確位置，這正是衛星導航（GPS/GNSS）普及前，飛機在航路上定位的主要方式。",
+        "en": "Crossing radials from multiple VOR stations can pinpoint an aircraft's exact position — this was the primary way aircraft fixed their position on airways before satellite navigation (GPS/GNSS) became widespread.",
+        "ja": "複数のVOR局のラジアルを交差させることで機体の正確な位置を特定できる。これは衛星航法（GPS/GNSS）が普及する以前、航空路上で位置を測定する主要な方法だった。"
+      },
+      "images": []
+    },
+    {
+      "id": "rnav",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "區域導航與衛星進場 RNAV",
+        "en": "Area Navigation / GPS Approach (RNAV)",
+        "ja": "広域航法／GPS進入（RNAV）"
+      },
+      "summary": {
+        "zh": "不依賴單一地面電台、而是綜合衛星定位與機載導航資料庫計算出精確航跡的導航方式，讓飛機能沿任意設計航線飛行，不必繞經傳統電台。",
+        "en": "A navigation method that doesn't depend on a single ground station, instead combining satellite positioning and an onboard navigation database to compute a precise track — letting aircraft fly along any designed route instead of routing via traditional stations.",
+        "ja": "単一の地上局に依存せず、衛星測位と機上航法データベースを組み合わせて精密な航跡を算出する航法方式。従来の局を経由せず、任意に設計された経路を飛行できる。"
+      },
+      "fact": {
+        "zh": "RNP（Required Navigation Performance）是 RNAV 的進階規範，要求飛機不僅要飛在航線上，還要能即時監控並警示自身導航誤差是否超出容許範圍。",
+        "en": "RNP (Required Navigation Performance) is an advanced RNAV specification requiring the aircraft not just to fly the route, but to continuously monitor and alert if its own navigation error exceeds the allowed tolerance.",
+        "ja": "RNP（Required Navigation Performance）はRNAVの発展規格で、経路上を飛行するだけでなく、自機の航法誤差が許容範囲を超えていないか常時監視・警告する能力まで要求する。"
+      },
+      "images": []
+    },
+    {
+      "id": "transition-altitude",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "轉換高度與轉換空層",
+        "en": "Transition Altitude / Transition Level",
+        "ja": "移行高度／移行フライトレベル"
+      },
+      "summary": {
+        "zh": "爬升通過轉換高度後，飛行員將高度表基準從 QNH 切換為標準大氣壓（QNE），開始以飛航空層（Flight Level）報告高度；下降通過轉換空層時則反向切換回 QNH。",
+        "en": "Climbing through the transition altitude, pilots switch the altimeter reference from QNH to standard pressure (QNE) and begin reporting altitude as a flight level; descending through the transition level, they switch back to QNH.",
+        "ja": "移行高度を上昇通過する際、パイロットは高度計の基準をQNHから標準気圧（QNE）に切り替え、フライトレベルで高度を報告し始める。移行フライトレベルを降下通過する際は逆にQNHへ戻す。"
+      },
+      "fact": {
+        "zh": "不同國家的轉換高度差異很大——美國全境固定為 18,000 呎，歐洲許多機場僅 3,000～6,000 呎，飛行員跨境飛行必須留意當地數值。",
+        "en": "The transition altitude varies hugely by country — fixed at 18,000 ft across the entire United States, but as low as 3,000–6,000 ft at many European airports — so pilots flying internationally must check the local value.",
+        "ja": "移行高度は国によって大きく異なり、アメリカ全土では一律18,000フィートだが、ヨーロッパの多くの空港ではわずか3,000〜6,000フィートしかない。国際飛行を行うパイロットは現地の数値を必ず確認する必要がある。"
+      },
+      "images": []
+    },
+    {
+      "id": "airspace-class",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "空域分類 A–G",
+        "en": "Airspace Classification (Class A–G)",
+        "ja": "空域分類（クラスA〜G）"
+      },
+      "summary": {
+        "zh": "國際民航依管制服務與飛航規則將空域分為 A 到 G 共七級，等級愈高（如 A 級）飛航限制與管制服務愈嚴格，通常對應高空繁忙航路。",
+        "en": "International civil aviation divides airspace into seven classes, A through G, based on required ATC services and flight rules — higher classes (like A) mean stricter flight restrictions and ATC service, typically corresponding to busy high-altitude airways.",
+        "ja": "国際民間航空では、管制サービスと飛行規則に基づき空域をA〜Gの7クラスに分類する。クラスが上位（Aなど）になるほど飛行制限と管制サービスが厳格になり、通常は混雑した高高度航空路に対応する。"
+      },
+      "fact": {
+        "zh": "台灣桃園、松山周邊等主要機場管制區多屬 C 級空域，一般小型機需與管制員取得許可才能進入；未管制的 G 級空域則常見於低空、偏遠地區。",
+        "en": "The controlled airspace around major airports such as Taipei Taoyuan and Songshan is mostly Class C, requiring small aircraft to obtain ATC clearance to enter; uncontrolled Class G airspace is more common at low altitude in remote areas.",
+        "ja": "台北桃園・松山などの主要空港周辺の管制区の多くはクラスCに属し、小型機が進入するには管制官の許可が必要となる。一方、無管制のクラスG空域は低高度・遠隔地でよく見られる。"
+      },
+      "images": []
+    },
+    {
+      "id": "notam",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "飛航公告 NOTAM",
+        "en": "NOTAM (Notice to Air Missions)",
+        "ja": "飛行情報通報（NOTAM）"
+      },
+      "summary": {
+        "zh": "「Notice to Air Missions」（原稱 Notice to Airmen）的縮寫，通知飛行員機場設施異動、跑道關閉、導航設備故障等即時、暫時性資訊，起飛前簽派必查項目之一。",
+        "en": "Notifies pilots of temporary, time-critical information such as airport facility changes, runway closures, and navaid outages — a mandatory item for dispatchers and pilots to check before every flight.",
+        "ja": "「Notice to Air Missions」（旧称Notice to Airmen）の略。空港施設の変更、滑走路閉鎖、航法援助施設の故障など即時性・一時性のある情報をパイロットに通知する、出発前の必須確認項目の一つ。"
+      },
+      "fact": {
+        "zh": "NOTAM 傳統上以高度濃縮的電報式英文縮寫撰寫，資訊量大又難讀，近年多國逐步推動格式簡化與圖像化，降低飛行員誤讀重要公告的風險。",
+        "en": "NOTAMs have traditionally been written in dense, telegram-style abbreviated English that's hard to parse; many countries are now working to simplify the format and add graphics to reduce the risk of pilots missing critical notices.",
+        "ja": "NOTAMは伝統的に電報のように高度に省略された英語で書かれ、情報量が多く読みにくい。近年は多くの国で書式の簡素化や図式化が進められ、パイロットが重要な通報を見落とすリスクの低減が図られている。"
+      },
+      "images": []
+    },
+    {
+      "id": "great-circle",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "大圓航線",
+        "en": "Great Circle Route",
+        "ja": "大圏航路（グレートサークルルート）"
+      },
+      "summary": {
+        "zh": "球面上兩點之間最短距離的路徑，長程國際航班多沿大圓航線飛行以節省時間與燃油，因此地圖上常呈現弧形而非直線。",
+        "en": "The shortest path between two points on a sphere; long-haul international flights largely follow great circle routes to save time and fuel, which is why they often appear as curves rather than straight lines on a flat map.",
+        "ja": "球面上の2点間の最短経路。長距離国際線の多くは時間と燃料を節約するため大圏航路を飛行するため、平面地図上ではしばしば直線ではなく弧を描いて表示される。"
+      },
+      "fact": {
+        "zh": "這也是為什麼從台北飛紐約這類長程航線常會刻意北飛，經過阿拉斯加、北極圈附近再南下——那條看似繞遠路的弧線，其實才是球面上真正的最短距離。",
+        "en": "This is why long routes like Taipei to New York often deliberately fly north over Alaska and near the Arctic before heading south — that seemingly roundabout arc is actually the true shortest path on a sphere.",
+        "ja": "台北からニューヨークのような長距離路線が、あえてアラスカや北極圏付近を経由してから南下する理由もこれで、一見遠回りに見えるその弧こそが、球面上の本当の最短距離なのである。"
+      },
+      "images": []
+    },
+    {
+      "id": "adsb",
+      "category": "navigation",
+      "hotspot": null,
+      "name": {
+        "zh": "廣播式自動相關監視 ADS-B",
+        "en": "ADS-B (Automatic Dependent Surveillance–Broadcast)",
+        "ja": "放送型自動従属監視（ADS-B）"
+      },
+      "summary": {
+        "zh": "飛機透過機載 GPS 定位後，主動廣播自身位置、高度、速度等資訊給地面與其他飛機接收，取代傳統雷達成為新一代空中交通監視技術。",
+        "en": "The aircraft determines its own position via onboard GPS and actively broadcasts its position, altitude, speed and more for ground stations and other aircraft to receive — a next-generation air traffic surveillance technology replacing traditional radar.",
+        "ja": "機体が自らの機上GPSで位置を測定し、位置・高度・速度などの情報を能動的に放送して地上や他機に受信させる、従来のレーダーに代わる次世代の航空交通監視技術。"
+      },
+      "fact": {
+        "zh": "由於 ADS-B 訊號未加密，一般民眾也能用便宜的接收設備收聽並在網路航班追蹤網站上即時看到全球班機動態，這也是本站距離計算等功能背後常見的資料來源之一。",
+        "en": "Because ADS-B signals are unencrypted, ordinary people can receive them with cheap equipment and see live global flight traffic on flight-tracking websites — one of the common data sources behind features like this site's distance calculator.",
+        "ja": "ADS-B信号は暗号化されていないため、一般の人でも安価な受信機器で受信でき、フライトトラッキングサイトで世界中の便のリアルタイムな動きを見ることができる。これは本サイトの距離計算などの機能を支える一般的なデータ源の一つでもある。"
+      },
+      "images": []
+    },
+    {
+      "id": "pressurization",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "座艙加壓",
+        "en": "Cabin Pressurization",
+        "ja": "客室与圧（キャビン・プレッシャライゼーション）"
+      },
+      "summary": {
+        "zh": "客機巡航高度的外界氣壓極低、空氣稀薄無法直接呼吸，因此座艙會維持在相當於較低高度（通常約 6,000～8,000 呎）的人工加壓環境。",
+        "en": "At an airliner's cruise altitude, outside air pressure is far too low to breathe directly, so the cabin is kept artificially pressurized to an equivalent altitude of roughly 6,000–8,000 ft.",
+        "ja": "旅客機の巡航高度では外気圧が低すぎて直接呼吸できないため、客室内はおよそ6,000〜8,000フィート相当の高度に人工的に加圧・維持される。"
+      },
+      "fact": {
+        "zh": "座艙「高度」並非海平面（0 呎），而是刻意維持在約 6,000～8,000 呎等效高度，這也是搭機時常感覺耳鳴、身體較易疲倦、口渴的原因之一。",
+        "en": "Cabin \"altitude\" isn't sea level (0 ft) — it's deliberately maintained around an equivalent 6,000–8,000 ft, which is one reason passengers often feel ear discomfort, fatigue, or thirst during a flight.",
+        "ja": "客室の「高度」は海面（0フィート）ではなく、意図的に約6,000〜8,000フィート相当に維持されている。搭乗中に耳鳴りや疲労感、喉の渇きを感じやすい理由の一つでもある。"
+      },
+      "images": []
+    },
+    {
+      "id": "deicing",
+      "category": "weather",
+      "hotspot": null,
+      "name": {
+        "zh": "除冰與防冰系統",
+        "en": "De-icing / Anti-icing",
+        "ja": "除氷・防氷システム"
+      },
+      "summary": {
+        "zh": "分為地面除冰（起飛前噴灑除冰液清除機身積冰）與飛行中防冰（引擎、機翼前緣持續加熱防止結冰）兩大類，防止結冰破壞氣動外形或阻塞感測器。",
+        "en": "Divided into ground de-icing (spraying de-icing fluid before takeoff to remove ice buildup) and in-flight anti-icing (continuously heating engine and wing leading edges to prevent ice formation), both preventing ice from disrupting aerodynamic shape or blocking sensors.",
+        "ja": "地上除氷（離陸前に除氷液を散布して機体の着氷を除去）と、飛行中の防氷（エンジンや主翼前縁を継続的に加熱して着氷を防止）の2種類に大別され、氷が空力形状を損なったりセンサーを塞いだりするのを防ぐ。"
+      },
+      "fact": {
+        "zh": "機翼上薄薄一層看似不起眼的霜或冰，就可能大幅改變氣流特性、提高失速速度，因此即使只是外觀上的薄冰，起飛前也絕對不能忽視。",
+        "en": "Even a thin, seemingly harmless layer of frost or ice on a wing can significantly alter airflow and raise the stall speed — so a thin coat of ice can never be ignored before takeoff, no matter how minor it looks.",
+        "ja": "主翼にできた一見わずかな霜や氷でも、気流の性質を大きく変え、失速速度を高めてしまうことがある。そのため見た目が薄い氷であっても、離陸前に決して軽視してはならない。"
+      },
+      "images": []
+    },
+    {
+      "id": "apu",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "輔助動力系統 APU",
+        "en": "Auxiliary Power Unit (APU)",
+        "ja": "補助動力装置（APU）"
+      },
+      "summary": {
+        "zh": "裝在機尾的小型燃氣渦輪引擎，主引擎未啟動時負責供電與供應空調氣源，也用來啟動主引擎，讓飛機停靠空橋時不必仰賴地面電源車。",
+        "en": "A small gas turbine engine in the tail that provides electrical power and air conditioning bleed air before the main engines are started, and is also used to start the main engines — letting the aircraft avoid relying on a ground power cart while parked at the gate.",
+        "ja": "機尾に搭載された小型ガスタービンエンジンで、主エンジン始動前に電力と空調用エアを供給し、主エンジンの始動にも使用される。これによりスポット駐機中に地上電源車に頼る必要がなくなる。"
+      },
+      "fact": {
+        "zh": "部分機場基於噪音與排放考量會限制 APU 使用時間，改要求飛機接上地面電源與空調車（GPU/PCA），降低機坪周邊環境影響。",
+        "en": "Some airports restrict APU usage time due to noise and emissions concerns, requiring aircraft to connect to ground power and air conditioning units (GPU/PCA) instead, reducing environmental impact around the ramp.",
+        "ja": "一部の空港では騒音や排出ガスへの配慮からAPUの使用時間を制限し、代わりに地上電源・空調車（GPU/PCA）の接続を求めることがあり、エプロン周辺の環境負荷を低減している。"
+      },
+      "images": []
+    },
+    {
+      "id": "fuel-dumping",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "燃油傾卸",
+        "en": "Fuel Dumping",
+        "ja": "燃料投棄（フューエルダンピング）"
+      },
+      "summary": {
+        "zh": "部分大型客機裝有燃油傾卸系統，在起飛後不久若需緊急返航或轉降，可在空中排放燃油以降低重量至最大落地重量以下，減輕結構負擔。",
+        "en": "Some large airliners are equipped with a fuel jettison system that can dump fuel in flight shortly after takeoff if an emergency return or diversion is needed, reducing weight below maximum landing weight to ease structural stress.",
+        "ja": "一部の大型旅客機には燃料投棄システムが搭載されており、離陸直後に緊急帰還や代替空港への着陸が必要になった場合、空中で燃料を放出して最大着陸重量以下まで重量を下げ、機体構造への負荷を軽減できる。"
+      },
+      "fact": {
+        "zh": "並非所有機型都有燃油傾卸能力（許多中小型客機的最大起飛重量與最大落地重量差距不大，設計上就不需要），這類機型緊急落地時反而常需要先在空中盤旋耗油。",
+        "en": "Not every aircraft type has fuel dumping capability — many small and mid-size airliners have little gap between maximum takeoff weight and maximum landing weight, so it's not designed in; these types often instead have to circle and burn off fuel before an emergency landing.",
+        "ja": "すべての機種が燃料投棄機能を持つわけではない。多くの中小型旅客機は最大離陸重量と最大着陸重量の差が小さく設計上不要なため、こうした機種は緊急着陸の際にむしろ空中で旋回しながら燃料を消費する必要がある。"
+      },
+      "images": []
+    },
+    {
+      "id": "pitot-static",
+      "category": "instrument",
+      "hotspot": null,
+      "name": {
+        "zh": "皮托靜壓系統",
+        "en": "Pitot-Static System",
+        "ja": "ピトー静圧系統"
+      },
+      "summary": {
+        "zh": "由機身上的皮托管（測動壓）與靜壓孔（測靜壓）組成，是空速表、高度表、垂直速度表等傳統飛行儀表數據的共同來源。",
+        "en": "Composed of pitot tubes (measuring dynamic pressure) and static ports (measuring static pressure) on the fuselage, this is the shared data source behind traditional flight instruments like the airspeed indicator, altimeter, and VSI.",
+        "ja": "機体に取り付けられたピトー管（動圧を測定）と静圧孔（静圧を測定）から成り、対気速度計・高度計・昇降計といった従来型飛行計器のデータの共通の供給源となっている。"
+      },
+      "fact": {
+        "zh": "皮托管結冰或被異物（如昆蟲）堵塞是航空史上多起空速指示失效事故的成因，因此現代客機的皮托管都配有持續運作的電熱防冰功能。",
+        "en": "Pitot tube icing or blockage (e.g. by insects) has been the cause of multiple airspeed-indication failure accidents in aviation history, which is why modern airliners' pitot tubes are fitted with continuously operating electric heating to prevent icing.",
+        "ja": "ピトー管の着氷や異物（昆虫など）による閉塞は、航空史上いくつもの対気速度指示異常事故の原因となってきた。そのため現代の旅客機のピトー管には、常時作動する電熱式防氷機能が装備されている。"
+      },
+      "images": []
+    },
+    {
+      "id": "edto",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "延程飛行 EDTO",
+        "en": "EDTO (Extended Diversion Time Operations)",
+        "ja": "延長洋上運航（EDTO）"
+      },
+      "summary": {
+        "zh": "Extended Diversion Time Operations，國際民航組織（ICAO）採用的新一代規範，涵蓋所有機型（不限雙發）在偏遠航路上飛行、遠離可用備降機場時的相關限制。",
+        "en": "A newer ICAO framework covering all aircraft types (not just twins) operating on remote routes far from an available diversion airport, superseding the twin-engine-only scope of the earlier ETOPS concept.",
+        "ja": "ICAOが採用する新しい規範で、双発機に限らずすべての機種を対象に、利用可能な代替空港から離れた遠隔ルートを飛行する際の制限を定める。"
+      },
+      "fact": {
+        "zh": "EDTO 可視為 ETOPS 概念的擴大版——原本 ETOPS 只規範雙發客機，EDTO 則進一步涵蓋三、四發機型與貨機等更廣泛的機隊，統一國際間對「延程飛行」的規範用語。",
+        "en": "EDTO can be seen as an expanded version of the ETOPS concept — while ETOPS originally only governed twin-engine airliners, EDTO extends the same idea to three- and four-engine types and cargo aircraft, unifying the international terminology for \"extended range\" flight.",
+        "ja": "EDTOはETOPSの概念を拡張したものと言える。ETOPSはもともと双発旅客機のみを対象としていたが、EDTOはこれを3発・4発機や貨物機など、より広範な機隊にまで適用し、「延長運航」に関する国際的な用語を統一するものである。"
+      },
+      "images": []
+    },
+    {
+      "id": "fdr-cvr",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "飛航紀錄器 FDR／CVR",
+        "en": "FDR / CVR (Flight Recorders / \"Black Box\")",
+        "ja": "飛行記録装置 FDR／CVR（ブラックボックス）"
+      },
+      "summary": {
+        "zh": "飛航資料紀錄器（FDR）持續記錄飛機各項飛行參數，座艙語音紀錄器（CVR）錄下駕駛艙內對話與聲音，事故調查時是還原事發經過的關鍵證據。",
+        "en": "The Flight Data Recorder (FDR) continuously logs flight parameters, while the Cockpit Voice Recorder (CVR) records conversations and sounds in the cockpit — together the key evidence investigators use to reconstruct what happened in an accident.",
+        "ja": "フライトデータレコーダー（FDR）は各種飛行パラメーターを継続的に記録し、コックピットボイスレコーダー（CVR）は操縦室内の会話や音声を録音する。事故調査において経緯を再現する重要な証拠となる。"
+      },
+      "fact": {
+        "zh": "「黑盒子」其實外觀是鮮豔的橘色，方便事故現場搜尋人員辨識；其外殼設計需通過極端撞擊、高溫燃燒與深海高壓的認證測試，確保資訯即使在嚴重事故中也能被完整取出。",
+        "en": "The \"black box\" is actually painted bright orange to help accident investigators find it at the scene; its casing must pass certification tests for extreme impact, high-temperature fire, and deep-sea pressure to ensure the data survives even a severe accident.",
+        "ja": "「ブラックボックス」という呼び名とは裏腹に、実際の外観は捜索しやすいよう鮮やかなオレンジ色に塗装されている。その筐体は極端な衝撃・高温での燃焼・深海の高圧に耐える認証試験に合格する必要があり、深刻な事故でもデータが完全な形で取り出せるよう設計されている。"
+      },
+      "images": []
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天空檔案 — 航空小知識</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b1220">
+<link rel="stylesheet" href="css/style.css?v=117">
+<link rel="stylesheet" href="css/knowledge.css?v=117">
+<script src="js/theme.js?v=117"></script>
+<script src="js/i18n.js?v=117"></script>
+</head>
+<body>
+
+<div class="kn-topbar">
+  <a class="back" href="index.html" data-i18n="nav.home">🏠 首頁</a>
+  <div class="kn-title">
+    <span class="eyebrow" data-i18n="knowledge.eyebrow">KNOWLEDGE / 航空小知識</span>
+    <h1 data-i18n="knowledge.title">航空小知識</h1>
+  </div>
+  <button id="btn-lang" class="tool-btn" title="Language">繁中</button>
+  <button id="btn-theme" class="tool-btn" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+</div>
+
+<p class="kn-sub" data-i18n="knowledge.sub">點擊儀表面板或卡片，認識飛行背後的原理——空速、QNH，以及更多常見航空知識。</p>
+
+<section class="kn-panel-section">
+  <h2 data-i18n="knowledge.panel.title">座艙儀表面板</h2>
+  <p class="kn-hint" data-i18n="knowledge.panel.hint">點擊任一儀表查看解說・左右滑動瀏覽更多</p>
+  <div class="kn-panel-wrap">
+    <div class="kn-track kn-track-gauges" data-track="instrument" role="group" aria-label="cockpit instrument panel"></div>
+  </div>
+</section>
+
+<section class="kn-panel-section">
+  <h2 data-i18n="knowledge.scene.runway.title">跑道與起飛</h2>
+  <p class="kn-hint" data-i18n="knowledge.scene.hint">點擊任一圖示查看解說・左右滑動瀏覽更多</p>
+  <div class="kn-panel-wrap">
+    <div class="kn-track" data-track="runway" role="group" aria-label="runway and takeoff"></div>
+  </div>
+</section>
+
+<section class="kn-panel-section">
+  <h2 data-i18n="knowledge.scene.nav.title">航路與導航</h2>
+  <p class="kn-hint" data-i18n="knowledge.scene.hint">點擊任一圖示查看解說・左右滑動瀏覽更多</p>
+  <div class="kn-panel-wrap">
+    <div class="kn-track" data-track="nav" role="group" aria-label="en-route and navigation"></div>
+  </div>
+</section>
+
+<section class="kn-panel-section">
+  <h2 data-i18n="knowledge.scene.systems.title">系統與航機性能</h2>
+  <p class="kn-hint" data-i18n="knowledge.scene.hint">點擊任一圖示查看解說・左右滑動瀏覽更多</p>
+  <div class="kn-panel-wrap">
+    <div class="kn-track" data-track="systems" role="group" aria-label="systems and performance"></div>
+  </div>
+</section>
+
+<div id="kn-empty" class="kn-empty" hidden data-i18n="knowledge.loaderror"></div>
+
+<div class="kn-overlay" id="kn-overlay" hidden>
+  <div class="kn-modal" role="dialog" aria-modal="true">
+    <button class="kn-modal-close" id="kn-modal-close" data-i18n="knowledge.detail.close">✕ 關閉</button>
+
+    <div class="kn-view" id="kn-view">
+      <div class="kn-view-badge" id="kn-view-badge"></div>
+      <h3 id="kn-view-name"></h3>
+      <p class="kn-view-summary" id="kn-view-summary"></p>
+      <p class="kn-view-fact" id="kn-view-fact"></p>
+      <div class="kn-view-gallery" id="kn-view-gallery"></div>
+      <button class="kn-editbtn" id="kn-view-edit" data-i18n="knowledge.detail.edit">✎ 編輯</button>
+    </div>
+
+    <div class="kn-edit" id="kn-edit" hidden>
+      <label data-i18n="knowledge.edit.name">名稱</label>
+      <input type="text" id="kn-edit-name" class="kn-edit-input">
+      <label data-i18n="knowledge.edit.summary">簡介</label>
+      <textarea id="kn-edit-summary" class="kn-edit-textarea" rows="3"></textarea>
+      <label data-i18n="knowledge.edit.fact">💡 冷知識</label>
+      <textarea id="kn-edit-fact" class="kn-edit-textarea" rows="3"></textarea>
+      <label data-i18n="knowledge.edit.images">圖片</label>
+      <div class="kn-edit-imgs" id="kn-edit-imgs"></div>
+      <div class="kn-edit-addrow">
+        <input type="text" id="kn-edit-imgurl" class="kn-edit-imgurl" data-i18n-placeholder="knowledge.edit.imgurl" placeholder="圖片網址…">
+        <button type="button" id="kn-edit-imgadd" data-i18n="knowledge.edit.imgadd">＋ 加入</button>
+        <button type="button" id="kn-edit-imgfile" data-i18n="knowledge.edit.imgfile">📁 上傳</button>
+        <input type="file" id="kn-edit-file" accept="image/*" multiple hidden>
+      </div>
+      <div class="kn-edit-actions">
+        <button type="button" id="kn-edit-cancel" class="kn-btn-ghost" data-i18n="knowledge.edit.cancel">取消</button>
+        <button type="button" id="kn-edit-save" class="kn-btn-ghost" data-i18n="knowledge.edit.save">儲存草稿（僅本機）</button>
+        <button type="button" id="kn-edit-publish" class="kn-btn-primary" data-i18n="knowledge.edit.publish">🚀 發布</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/auth.js?v=117"></script>
+<script src="js/storage.js?v=117"></script>
+<script src="js/knowledge.js?v=117"></script>
+<script src="js/ui.js?v=117"></script>
+</body>
+</html>

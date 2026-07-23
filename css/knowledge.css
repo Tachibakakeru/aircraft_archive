@@ -1,0 +1,247 @@
+/* ═══════════════════════════════════════════
+   航空小知識頁樣式
+   ═══════════════════════════════════════════ */
+body{min-height:100vh}
+
+.kn-topbar{
+  position:sticky;top:0;z-index:10;
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  padding:16px 24px;
+  background:var(--bg-1);
+  border-bottom:1px solid var(--stroke);
+}
+.kn-topbar .back{
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;
+  color:var(--muted);text-decoration:none;white-space:nowrap;
+  transition:color .15s;
+}
+.kn-topbar .back:hover{color:var(--amber)}
+.kn-title{flex:1}
+.kn-title .eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--muted)}
+.kn-title h1{font-size:20px;font-weight:700;letter-spacing:.03em;margin-top:4px}
+
+.kn-sub{font-size:13px;color:var(--muted);padding:14px 24px 0;max-width:760px}
+
+.kn-panel-section{padding:22px 24px}
+.kn-panel-section h2{font-size:16px;font-weight:700}
+.kn-hint{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);margin-top:4px}
+
+/* ── 儀表面板：深色金屬底板 + 鉚釘裝飾 ── */
+.kn-panel-wrap{
+  position:relative;
+  overflow:hidden;
+  margin:16px auto 0;
+  max-width:760px;
+  border-radius:16px;
+  padding:20px;
+  background:
+    radial-gradient(circle at 8px 8px, rgba(255,255,255,.06) 1.5px, transparent 1.6px) 0 0/28px 28px,
+    linear-gradient(155deg,#1a2233,#0d1420 70%);
+  border:1px solid var(--stroke);
+  box-shadow:inset 0 0 40px rgba(0,0,0,.5);
+}
+:root[data-theme="light"] .kn-panel-wrap{
+  background:
+    radial-gradient(circle at 8px 8px, rgba(0,0,0,.08) 1.5px, transparent 1.6px) 0 0/28px 28px,
+    linear-gradient(155deg,#26344a,#151f30 70%);
+}
+/* 連續橫向捲動軌道：一整排項目，內容三倍複製做無限循環（見 knowledge.js
+   renderTrack／wireLoop）。觸控／觸控板靠原生 scroll-snap 完成順暢的滑動與
+   吸附動畫；滑鼠則用簡單拖曳改 scrollLeft，放開後一樣交給原生 snap 吸附。 */
+.kn-track{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;-ms-overflow-style:none;
+  cursor:grab;user-select:none;-webkit-user-select:none;
+}
+.kn-track::-webkit-scrollbar{display:none}
+.kn-track.kn-dragging{cursor:grabbing;scroll-snap-type:none}
+/* scroll-snap-align:center 呼應轉盤選取器「選中項置中」；transform/opacity
+   由 JS 隨捲動即時更新（見 updateCoverflow），這裡不加 transition——要跟手勢
+   同步連續變化，不是切到才變。 */
+.kn-item{
+  flex:0 0 25%;min-width:0;scroll-snap-align:center;
+  display:flex;flex-direction:column;align-items:center;
+  transform-origin:center;
+}
+.kn-track-gauges .kn-item{flex-basis:33.3334%}
+.kn-item svg{width:100%;height:auto;display:block}
+.kn-item:focus-visible{outline:2px solid var(--amber);outline-offset:-2px;border-radius:12px}
+.kn-item-name{
+  margin-top:2px;padding:0 6px;max-width:100%;
+  font-family:var(--sans);font-size:11px;line-height:1.3;text-align:center;
+  color:var(--muted);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+
+.kn-gauge{cursor:pointer}
+.kn-gauge:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:50%}
+.kn-g-bezel{fill:#05070c;stroke:#3a4356;stroke-width:3}
+.kn-g-face{fill:#0d1119;stroke:rgba(255,255,255,.12);stroke-width:1}
+.kn-gauge:hover .kn-g-bezel, .kn-gauge:focus-visible .kn-g-bezel{stroke:var(--amber)}
+.kn-tick{stroke:#8a97ad;stroke-width:1}
+.kn-tick.major{stroke:#d7deea;stroke-width:1.6}
+.kn-g-hub{fill:#c7cede;stroke:#05070c;stroke-width:1}
+.kn-g-label{
+  fill:#d7deea;font-family:var(--mono);font-size:13px;font-weight:700;
+  text-anchor:middle;letter-spacing:.06em;
+}
+.kn-g-unit{fill:#8a97ad;font-family:var(--mono);font-size:8px;text-anchor:middle;letter-spacing:.08em}
+.kn-g-glare{fill:rgba(255,255,255,.06);pointer-events:none}
+.kn-needle{stroke-linecap:round}
+.kn-needle-long{stroke:#e9eef6;stroke-width:2.6}
+.kn-needle-short{stroke:#ffb547;stroke-width:3.4}
+.kn-arc{fill:none;stroke-width:5}
+.kn-arc-green{stroke:#4caf6f}
+.kn-arc-yellow{stroke:#e0c34a}
+.kn-ai-sky{fill:#3f7fb0}
+.kn-ai-ground{fill:#6a4a2c}
+.kn-ai-horizon{stroke:#e9eef6;stroke-width:1.6}
+.kn-ai-wings{fill:none;stroke:#ffb547;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.kn-kollsman{fill:#05070c;stroke:#8a97ad;stroke-width:1}
+.kn-kollsman-txt{fill:#ffb547;font-family:var(--mono);font-size:9px;text-anchor:middle}
+.kn-tc-wing{fill:none;stroke:#e9eef6;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.kn-tc-body{fill:#e9eef6}
+.kn-tc-tube{fill:#05070c;stroke:#8a97ad;stroke-width:1}
+.kn-tc-ball{fill:#ffb547}
+.kn-hdg-letter{fill:#d7deea;font-family:var(--mono);font-size:11px;font-weight:700;text-anchor:middle}
+.kn-hdg-lubber{fill:#ffb547}
+
+/* ── 通用可點擊圖示（準星 + 標籤），供其餘三個場景使用 ── */
+.kn-hotspot{cursor:pointer}
+.kn-hotspot:focus-visible{outline:none}
+.kn-hs-ring{fill:rgba(255,255,255,.03);stroke:rgba(255,255,255,.22);stroke-width:1;stroke-dasharray:3 4}
+.kn-hs-tick{stroke:rgba(255,255,255,.35);stroke-width:1.4}
+.kn-hotspot:hover .kn-hs-ring, .kn-hotspot:focus-visible .kn-hs-ring{
+  stroke:var(--amber);stroke-dasharray:none;fill:var(--amber-soft);
+}
+.kn-hs-label{
+  fill:#d7deea;font-family:var(--mono);font-size:11px;font-weight:700;
+  text-anchor:middle;letter-spacing:.04em;
+}
+
+/* 跑道與起飛 */
+.kn-rwy-strip{fill:#20242e;stroke:#8a97ad;stroke-width:1}
+.kn-rwy-dash{stroke:#d7deea;stroke-width:2.4}
+.kn-rwy-num{fill:#d7deea;font-family:var(--mono);font-size:11px;font-weight:700;text-anchor:middle}
+.kn-vspeed-plane{fill:#e9eef6}
+.kn-vspeed-arrow{fill:none;stroke:#ffb547;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.kn-wake-wing{stroke:#e9eef6;stroke-width:2;stroke-linecap:round}
+.kn-wake-spiral{fill:none;stroke:#6fd3ef;stroke-width:1.6;stroke-linecap:round}
+.kn-cloud{fill:#3a4356}
+.kn-shear-arrow{fill:none;stroke:#ffb547;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* 航路與導航 */
+.kn-ils-mast{fill:#8a97ad}
+.kn-ils-beam{stroke:#6fd3ef;stroke-width:1.6;stroke-dasharray:4 3}
+.kn-ils-plane{fill:#e9eef6}
+.kn-holding-track{fill:none;stroke:#6fd3ef;stroke-width:2}
+.kn-holding-arrow{fill:none;stroke:#6fd3ef;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.kn-fl-line{stroke:#8a97ad;stroke-width:1.4}
+.kn-fl-line.major{stroke:#e9eef6;stroke-width:2}
+.kn-fl-text{fill:#8a97ad;font-family:var(--mono);font-size:9px}
+.kn-jet-ribbon{fill:none;stroke:#6fd3ef;stroke-width:2.2;stroke-linecap:round}
+.kn-jet-arrow{fill:none;stroke:#6fd3ef;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* 系統與航機性能 */
+.kn-squawk-box{fill:#05070c;stroke:#8a97ad;stroke-width:1}
+.kn-squawk-text{fill:#ff6b6b;font-family:var(--mono);font-size:13px;font-weight:700;text-anchor:middle}
+.kn-stall-wing{fill:none;stroke:#e9eef6;stroke-width:2}
+.kn-stall-flow{fill:none;stroke:#6fd3ef;stroke-width:1.4}
+.kn-stall-flow-bad{fill:none;stroke:#ffb547;stroke-width:1.4}
+.kn-etops-ring{fill:none;stroke:#6fd3ef;stroke-width:1.4;stroke-dasharray:3 3}
+.kn-etops-engine{fill:#8a97ad}
+.kn-etops-plane{fill:#e9eef6}
+
+.kn-empty{padding:40px 24px;color:var(--muted);font-size:13px;text-align:center}
+
+/* ── 詳情 / 編輯彈窗 ── */
+.kn-overlay{
+  position:fixed;inset:0;z-index:50;
+  background:rgba(4,8,16,.72);
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+}
+.kn-overlay[hidden]{display:none}
+.kn-modal{
+  position:relative;width:100%;max-width:560px;max-height:86vh;overflow-y:auto;
+  background:var(--bg-1);border:1px solid var(--stroke);border-radius:16px;
+  padding:28px 24px 24px;
+}
+.kn-modal-close{
+  position:absolute;top:14px;right:14px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+  color:var(--muted);background:transparent;border:1px solid var(--stroke);border-radius:6px;
+  padding:5px 10px;cursor:pointer;transition:all .15s;
+}
+.kn-modal-close:hover{color:var(--amber);border-color:var(--amber)}
+
+.kn-view-badge{
+  display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  color:var(--cyan);border:1px solid var(--cyan);border-radius:999px;
+  padding:2px 9px;margin-bottom:8px;
+}
+#kn-view-name{font-size:19px;font-weight:700;padding-right:70px}
+.kn-view-summary{font-size:13.5px;line-height:1.8;color:var(--text);margin-top:10px}
+.kn-view-fact{
+  font-size:12.5px;line-height:1.7;color:var(--muted);margin-top:10px;
+  background:var(--amber-soft);border-radius:8px;padding:9px 11px;
+}
+.kn-view-fact:empty, .kn-view-gallery:empty{display:none}
+.kn-view-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-top:12px}
+.kn-view-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;border:1px solid var(--stroke)}
+
+.kn-editbtn{
+  margin-top:16px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  color:var(--muted);background:transparent;
+  border:1px solid var(--stroke);border-radius:6px;padding:6px 12px;cursor:pointer;
+  transition:all .15s;
+}
+.kn-editbtn:hover{color:var(--amber);border-color:var(--amber)}
+
+.kn-edit{display:flex;flex-direction:column;gap:8px}
+.kn-edit label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted);margin-top:6px}
+.kn-edit-input, .kn-edit-textarea, .kn-edit-imgurl{
+  font-family:var(--sans);font-size:13.5px;color:var(--text);
+  background:var(--panel);border:1px solid var(--stroke);border-radius:8px;
+  padding:9px 11px;resize:vertical;width:100%;
+}
+.kn-edit-input:focus, .kn-edit-textarea:focus, .kn-edit-imgurl:focus{outline:none;border-color:var(--amber)}
+
+.kn-edit-imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px}
+.kn-edit-imgs:empty{display:none}
+.kn-edit-imgitem{position:relative;aspect-ratio:4/3;border-radius:7px;overflow:hidden;border:1px solid var(--stroke)}
+.kn-edit-imgitem img{width:100%;height:100%;object-fit:cover;display:block}
+.kn-edit-imgdel{
+  position:absolute;top:3px;right:3px;
+  width:20px;height:20px;line-height:20px;text-align:center;padding:0;
+  background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:11px;
+}
+.kn-edit-imgdel:hover{background:var(--amber);color:var(--bg-0)}
+
+.kn-edit-addrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.kn-edit-addrow .kn-edit-imgurl{flex:1;min-width:140px}
+.kn-edit-addrow button{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;white-space:nowrap;
+  color:var(--text);background:var(--panel);border:1px solid var(--stroke);border-radius:8px;
+  padding:8px 12px;cursor:pointer;transition:all .15s;
+}
+.kn-edit-addrow button:hover{border-color:var(--amber);color:var(--amber)}
+
+.kn-edit-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-top:8px}
+.kn-btn-ghost, .kn-btn-primary{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
+  border-radius:8px;padding:9px 15px;cursor:pointer;transition:all .15s;
+}
+.kn-btn-ghost{color:var(--muted);background:transparent;border:1px solid var(--stroke)}
+.kn-btn-ghost:hover{color:var(--text);border-color:var(--text)}
+.kn-btn-primary{color:var(--bg-0);background:var(--amber);border:1px solid var(--amber);font-weight:700}
+.kn-btn-primary:hover{filter:brightness(1.08)}
+.kn-btn-primary:disabled, .kn-btn-ghost:disabled{opacity:.6;cursor:default}
+
+@media (max-width: 640px){
+  .kn-modal{padding:24px 16px 18px}
+}
