@@ -1,7 +1,8 @@
-/* ═══════════════════════════════════════════
-   航空小知識頁樣式
-   ═══════════════════════════════════════════ */
+﻿/* ????????????????????????????????????????????   ?芰征撠霅?璅??
+   ????????????????????????????????????????????*/
 body{min-height:100vh}
+
+.kn-page-head{padding:40px 24px 0;max-width:1080px;margin:0 auto}
 
 .kn-topbar{
   position:sticky;top:0;z-index:10;
@@ -35,7 +36,7 @@ body{min-height:100vh}
 .kn-hint{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);margin-top:4px}
 #kn-new-fields{margin-bottom:12px;padding:12px;border-radius:8px;border:1px solid var(--stroke);background:var(--bg-1)}
 
-/* ── 儀表面板：深色金屬底板 + 鉚釘裝飾 ── */
+/* ?? ?銵券?選?瘛梯?惇摨 + ??鋆ˇ ?? */
 .kn-panel-wrap{
   position:relative;
   overflow:hidden;
@@ -54,9 +55,9 @@ body{min-height:100vh}
     radial-gradient(circle at 8px 8px, rgba(0,0,0,.08) 1.5px, transparent 1.6px) 0 0/28px 28px,
     linear-gradient(155deg,#26344a,#151f30 70%);
 }
-/* 連續橫向捲動軌道：一整排項目，內容三倍複製做無限循環（見 knowledge.js
-   renderTrack／wireLoop）。觸控／觸控板靠原生 scroll-snap 完成順暢的滑動與
-   吸附動畫；滑鼠則用簡單拖曳改 scrollLeft，放開後一樣交給原生 snap 吸附。 */
+/* ???璈怠??脣?頠?嚗??湔??嚗摰嫣???鋆賢??⊿?敺芰嚗? knowledge.js
+   renderTrack嚗ireLoop嚗孛?改?閫豢?輸??? scroll-snap 摰??????
+   ?賊??嚗?曌??函陛?格??單 scrollLeft嚗??銝璅?漱蝯血???snap ?賊???*/
 .kn-track{
   display:flex;
   overflow-x:auto;
@@ -67,9 +68,8 @@ body{min-height:100vh}
 }
 .kn-track::-webkit-scrollbar{display:none}
 .kn-track.kn-dragging{cursor:grabbing;scroll-snap-type:none}
-/* scroll-snap-align:center 呼應轉盤選取器「選中項置中」；transform/opacity
-   由 JS 隨捲動即時更新（見 updateCoverflow），這裡不加 transition——要跟手勢
-   同步連續變化，不是切到才變。 */
+/* scroll-snap-align:center ?潭?頧?詨??具銝剝?蝵桐葉??transform/opacity
+   ??JS ?冽???堆?閬?updateCoverflow嚗??ㄐ銝? transition??頝???   ?郊???霈?嚗??臬??唳?霈?*/
 .kn-item{
   flex:0 0 25%;min-width:0;scroll-snap-align:center;
   display:flex;flex-direction:column;align-items:center;
@@ -118,7 +118,7 @@ body{min-height:100vh}
 .kn-hdg-letter{fill:#d7deea;font-family:var(--mono);font-size:11px;font-weight:700;text-anchor:middle}
 .kn-hdg-lubber{fill:#ffb547}
 
-/* ── 通用可點擊圖示（準星 + 標籤），供其餘三個場景使用 ── */
+/* ?? ??舫???蝷綽?皞? + 璅惜嚗?靘擗???臭蝙???? */
 .kn-hotspot{cursor:pointer}
 .kn-hotspot:focus-visible{outline:none}
 .kn-hs-ring{fill:rgba(255,255,255,.03);stroke:rgba(255,255,255,.22);stroke-width:1;stroke-dasharray:3 4}
@@ -131,7 +131,7 @@ body{min-height:100vh}
   text-anchor:middle;letter-spacing:.04em;
 }
 
-/* 跑道與起飛 */
+/* 頝??絲憌?*/
 .kn-rwy-strip{fill:#20242e;stroke:#8a97ad;stroke-width:1}
 .kn-rwy-dash{stroke:#d7deea;stroke-width:2.4}
 .kn-rwy-num{fill:#d7deea;font-family:var(--mono);font-size:11px;font-weight:700;text-anchor:middle}
@@ -142,7 +142,7 @@ body{min-height:100vh}
 .kn-cloud{fill:#3a4356}
 .kn-shear-arrow{fill:none;stroke:#ffb547;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* 航路與導航 */
+/* ?芾楝????*/
 .kn-ils-mast{fill:#8a97ad}
 .kn-ils-beam{stroke:#6fd3ef;stroke-width:1.6;stroke-dasharray:4 3}
 .kn-ils-plane{fill:#e9eef6}
@@ -154,7 +154,7 @@ body{min-height:100vh}
 .kn-jet-ribbon{fill:none;stroke:#6fd3ef;stroke-width:2.2;stroke-linecap:round}
 .kn-jet-arrow{fill:none;stroke:#6fd3ef;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 
-/* 系統與航機性能 */
+/* 蝟餌絞?璈扯 */
 .kn-squawk-box{fill:#05070c;stroke:#8a97ad;stroke-width:1}
 .kn-squawk-text{fill:#ff6b6b;font-family:var(--mono);font-size:13px;font-weight:700;text-anchor:middle}
 .kn-stall-wing{fill:none;stroke:#e9eef6;stroke-width:2}
@@ -166,7 +166,7 @@ body{min-height:100vh}
 
 .kn-empty{padding:40px 24px;color:var(--muted);font-size:13px;text-align:center}
 
-/* ── 詳情 / 編輯彈窗 ── */
+/* ?? 閰單? / 蝺刻摩敶? ?? */
 .kn-overlay{
   position:fixed;inset:0;z-index:50;
   background:rgba(4,8,16,.72);

@@ -311,7 +311,7 @@ function makeLogoEl(a, big){
   }
   if (!FULL_DATA){
     try {
-      const res = await fetch("data/airlines.json?v=118");
+      const res = await fetch("data/airlines.json?v=119");
       if (!res.ok) throw new Error(res.status);
       FULL_DATA = await res.json();
     } catch {
@@ -323,11 +323,11 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=118");
+    const geoRes = await fetch("data/airline_geo.json?v=119");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=118");
+    const codesRes = await fetch("data/airport_codes.json?v=119");
     if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -387,7 +387,7 @@ function makeLogoEl(a, big){
     await requireAuth();
     openEditor(id);
   });
-  $("al-add-new").addEventListener("click", openNewAirlineForm);
+  $("al-add-new").addEventListener("click", e => { e.stopPropagation(); openNewAirlineForm(); });
   wireEditForm();
 
   $("al-view-toggle").addEventListener("click", toggleGlobeMode);
@@ -671,6 +671,12 @@ function openAirline(id){
 
 function closePanel(){
   const panel = $("panel");
+  // 若正在建立新條目但未儲存（名稱空白），移除暫存的 blank
+  const id = panel.dataset.id;
+  if (id && id.startsWith("custom-")) {
+    const idx = FULL_DATA ? FULL_DATA.airlines.findIndex(a => a.id === id && !a.name) : -1;
+    if (idx >= 0) FULL_DATA.airlines.splice(idx, 1);
+  }
   panel.classList.remove("open");
   panel.setAttribute("aria-hidden", "true");
   history.replaceState(null, "", location.pathname);
@@ -685,8 +691,7 @@ async function openNewAirlineForm(){
   await requireAuth();
   const newId = "custom-" + Date.now();
   const blank = { id: newId, name: "", alliance: "none", country: { zh: "", en: "", ja: "" } };
-  FULL_DATA.airlines.push(blank);
-  AIRLINES.push(blank);
+  FULL_DATA.airlines.push(blank); // AIRLINES === FULL_DATA.airlines — only push once
   openAirline(newId);
   openEditor(newId);
 }
@@ -816,6 +821,8 @@ function wireEditForm(){
       btn.textContent = original;
     }
   });
+
+  $("al-edit-cancel").addEventListener("click", () => closePanel());
 
   $("al-edit-clear").addEventListener("click", () => {
     if (!confirm("確定清除所有航空公司的本機暫存編輯？將還原成網站原始資料。")) return;

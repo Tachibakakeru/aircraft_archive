@@ -38,7 +38,7 @@ async function loadHubIndex(){
   if (HUB_INDEX) return HUB_INDEX;
   HUB_INDEX = {};
   try {
-    const res = await fetch("data/airline_geo.json?v=118");
+    const res = await fetch("data/airline_geo.json?v=119");
     const geo = res.ok ? await res.json() : {};
     Object.entries(geo).forEach(([airlineId, g]) => {
       (g.hubs || []).forEach(h => {
@@ -52,7 +52,7 @@ async function loadAirlineNames(){
   if (AIRLINE_NAMES) return AIRLINE_NAMES;
   AIRLINE_NAMES = {};
   try {
-    const res = await fetch("data/airlines.json?v=118");
+    const res = await fetch("data/airlines.json?v=119");
     const data = res.ok ? await res.json() : { airlines: [] };
     data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
   } catch { /* 同上 */ }
@@ -296,13 +296,24 @@ function escapeHTML(s){
 (async () => {
   try {
     const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=118"),
-      fetch("data/countries.json?v=118"),
+      fetch("data/airports.json?v=119"),
+      fetch("data/countries.json?v=119"),
     ]);
     const aData = await aRes.json();
     COUNTRIES = await cRes.json();
     AIRPORTS = aData.airports;
-    // 合併本機自訂機場（_custom: true），跳過與資料庫重複的 id
+    // 合併已發布的自訂機場（airports_custom.json）
+    try {
+      const cr = await fetch("data/airports_custom.json");
+      if (cr.ok) {
+        const published = await cr.json();
+        const pubIds = new Set(published.map(a => a.id));
+        published.forEach(c => { if (!AIRPORTS.find(a => a.id === c.id)) AIRPORTS.push(c); });
+        // 更新 localStorage，移除已發布的（避免重複）
+        saveCustomAirports(loadCustomAirports().filter(c => !pubIds.has(c.id)));
+      }
+    } catch { /* airports_custom.json 不存在時忽略 */ }
+    // 合併本機自訂機場（未發布），跳過與資料庫重複的 id
     const customs = loadCustomAirports();
     const existingIds = new Set(AIRPORTS.map(a => a.id));
     customs.forEach(c => { if (!existingIds.has(c.id)) AIRPORTS.push(c); });
@@ -313,7 +324,7 @@ function escapeHTML(s){
     return;
   }
   try {
-    const res = await fetch("data/city_names.json?v=118");
+    const res = await fetch("data/city_names.json?v=119");
     if (res.ok) CITY_NAMES = await res.json();
   } catch { /* 城市層級翻譯為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -469,6 +480,7 @@ function escapeHTML(s){
   $("apt-add-cancel").addEventListener("click", closeAddModal);
   $("apt-add-modal").addEventListener("click", e => { if (e.target === $("apt-add-modal")) closeAddModal(); });
   $("apt-add-save").addEventListener("click", saveCustomAirport);
+  $("apt-add-publish").addEventListener("click", publishCustomAirports);
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && $("apt-add-modal").style.display !== "none") closeAddModal();
   });
@@ -478,6 +490,15 @@ function closeAddModal(){
   $("apt-add-modal").style.display = "none";
   ["apt-add-name","apt-add-city","apt-add-country","apt-add-icao","apt-add-iata","apt-add-lat","apt-add-lon"].forEach(id => { $(id).value = ""; });
   $("apt-add-type").value = "large_airport";
+}
+
+async function publishCustomAirports(){
+  await requireAuth();
+  const customs = loadCustomAirports();
+  // 合併已在 AIRPORTS 陣列中的已發布自訂機場（由 airports_custom.json 載入的）
+  const allCustom = AIRPORTS.filter(a => a._custom);
+  const result = await Storage.save("airports_custom", allCustom);
+  alert(result.message);
 }
 
 function saveCustomAirport(){
@@ -747,7 +768,7 @@ async function loadDetails(country){
   const key = country || "ZZ";
   if (detailCache[key]) return detailCache[key];
   try {
-    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=118`);
+    const r = await fetch(`data/details/${encodeURIComponent(key)}.json?v=119`);
     const d = r.ok ? await r.json() : {};
     detailCache[key] = d;
     return d;
@@ -863,7 +884,7 @@ const publishedCache = {};
 async function fetchPublished(id){
   if (id in publishedCache) return publishedCache[id];
   try {
-    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=118`);
+    const r = await fetch(`data/airport-notes/${encodeURIComponent(id)}.json?v=119`);
     publishedCache[id] = r.ok ? await r.json() : null;
   } catch { publishedCache[id] = null; }
   return publishedCache[id];
