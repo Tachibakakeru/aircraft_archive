@@ -388,7 +388,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "法國航空",
       "nameJa": "エールフランス航空",
-      "callsign": "AIR FRANCE"
+      "callsign": "AIRFRANS"
     },
     {
       "id": "kl",
@@ -863,7 +863,8 @@
       "tier": "mainline",
       "logoSrc": "flightaware_logos",
       "nameZh": "國泰航空",
-      "nameJa": "キャセイパシフィック航空"
+      "nameJa": "キャセイパシフィック航空",
+      "callsign": "CATHAY"
     },
     {
       "id": "jl",
@@ -919,7 +920,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "日本航空",
       "nameJa": "日本航空",
-      "callsign": "JAPAN AIR"
+      "callsign": "JAPANAIR"
     },
     {
       "id": "nh",
@@ -1040,7 +1041,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "大韓航空",
       "nameJa": "大韓航空",
-      "callsign": "KOREAN AIR"
+      "callsign": "KOREANAIR"
     },
     {
       "id": "cz",
@@ -1479,7 +1480,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "拉塔姆航空",
       "nameJa": "ラタム航空",
-      "callsign": "LATAM"
+      "callsign": "LAN CHILE"
     },
     {
       "id": "6e",
@@ -1918,7 +1919,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "葡萄牙航空",
       "nameJa": "TAPポルトガル航空",
-      "callsign": "TAP"
+      "callsign": "AIR PORTUGAL"
     },
     {
       "id": "lo",
@@ -1967,7 +1968,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "波蘭航空",
       "nameJa": "ポーランド航空",
-      "callsign": "LOT"
+      "callsign": "POLLOT"
     },
     {
       "id": "sv",
@@ -2118,7 +2119,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "摩洛哥皇家航空",
       "nameJa": "ロイヤルエアモロッコ",
-      "callsign": "ROYAL AIR MAROC"
+      "callsign": "ROYALAIR MAROC"
     },
     {
       "id": "kq",
@@ -2263,7 +2264,8 @@
       "tier": "mainline",
       "logoSrc": "flightaware_logos",
       "nameZh": "越南航空",
-      "nameJa": "ベトナム航空"
+      "nameJa": "ベトナム航空",
+      "callsign": "VIET NAM"
     },
     {
       "id": "ga",
@@ -2594,7 +2596,8 @@
       "tier": "mainline",
       "logoSrc": "flightaware_logos",
       "nameZh": "巴拿馬航空",
-      "nameJa": "コパ航空"
+      "nameJa": "コパ航空",
+      "callsign": "COPA"
     },
     {
       "id": "g3",
@@ -2911,7 +2914,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "日本捷星航空",
       "nameJa": "ジェットスター・ジャパン",
-      "callsign": "ORANGE SHUTTLE"
+      "callsign": "ORANGE LINER"
     },
     {
       "id": "bc",
@@ -2990,7 +2993,8 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "亞洲航空",
-      "nameJa": "エアアジア"
+      "nameJa": "エアアジア",
+      "callsign": "RED CAP"
     },
     {
       "id": "5j",
@@ -3035,7 +3039,8 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "宿霧太平洋航空",
-      "nameJa": "セブパシフィック航空"
+      "nameJa": "セブパシフィック航空",
+      "callsign": "CEBU"
     },
     {
       "id": "vj",
@@ -3142,7 +3147,8 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "酷航",
-      "nameJa": "スクート"
+      "nameJa": "スクート",
+      "callsign": "GO CAT"
     },
     {
       "id": "f9",
@@ -3181,7 +3187,7 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "邊疆航空",
       "nameJa": "フロンティア航空",
-      "callsign": "FRONTIER"
+      "callsign": "FRONTIER FLIGHT"
     },
     {
       "id": "y4",
@@ -3261,7 +3267,8 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "飛杜拜航空",
-      "nameJa": "フライドバイ"
+      "nameJa": "フライドバイ",
+      "callsign": "SKYDUBAI"
     },
     {
       "id": "pc",
@@ -3420,7 +3427,8 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "香港快運航空",
-      "nameJa": "香港エクスプレス"
+      "nameJa": "香港エクスプレス",
+      "callsign": "HONGKONG SHUTTLE"
     },
     {
       "id": "oo",
@@ -3506,7 +3514,8 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "曼谷航空",
-      "nameJa": "バンコクエアウェイズ"
+      "nameJa": "バンコクエアウェイズ",
+      "callsign": "BANGKOK AIR"
     },
     {
       "id": "nk",
@@ -3586,7 +3595,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ANSETT"
     },
     {
       "id": "aaf",
@@ -3606,7 +3616,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "AIGLE AZUR"
     },
     {
       "id": "aah",
@@ -3626,7 +3637,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ALOHA"
     },
     {
       "id": "aar",
@@ -3667,7 +3679,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AFRIQIYAH"
     },
     {
       "id": "aay",
@@ -3687,7 +3700,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ALLEGIANT"
     },
     {
       "id": "tus",
@@ -3727,7 +3741,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ASTRAL CARGO"
     },
     {
       "id": "adr",
@@ -3747,7 +3762,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "ADRIA"
     },
     {
       "id": "aea",
@@ -3768,7 +3784,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "AIR EUROPA"
+      "callsign": "EUROPA"
     },
     {
       "id": "aee",
@@ -3809,7 +3825,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ACE AIR"
     },
     {
       "id": "uty",
@@ -3829,7 +3846,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "UNITY"
     },
     {
       "id": "afg",
@@ -3849,7 +3867,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ARIANA"
     },
     {
       "id": "aci",
@@ -3869,7 +3888,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIRCALIN"
     },
     {
       "id": "snc",
@@ -3889,7 +3909,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NIGHT CARGO"
     },
     {
       "id": "nmb",
@@ -3909,7 +3930,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NAMIBIA"
     },
     {
       "id": "sli",
@@ -3929,7 +3951,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "COSTERA"
     },
     {
       "id": "agx",
@@ -3949,7 +3972,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "GENEX"
     },
     {
       "id": "ahy",
@@ -3969,7 +3993,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AZAL"
     },
     {
       "id": "aia",
@@ -3989,7 +4014,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AVIES"
     },
     {
       "id": "abq",
@@ -4030,7 +4056,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR BERLIN"
     },
     {
       "id": "abd",
@@ -4050,7 +4077,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ATLANTA"
     },
     {
       "id": "tht",
@@ -4070,7 +4098,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TAHITI AIRLINES"
     },
     {
       "id": "aiz",
@@ -4090,7 +4119,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ARKIA"
     },
     {
       "id": "ajm",
@@ -4110,7 +4140,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "JAMAICA"
     },
     {
       "id": "amc",
@@ -4130,7 +4161,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR MALTA"
     },
     {
       "id": "ajx",
@@ -4151,7 +4183,8 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "nameJa": "エアージャパン"
+      "nameJa": "エアージャパン",
+      "callsign": "AIR JAPAN"
     },
     {
       "id": "akl",
@@ -4171,7 +4204,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "KIRIBATI"
     },
     {
       "id": "awe",
@@ -4191,7 +4225,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CACTUS"
     },
     {
       "id": "awi",
@@ -4211,7 +4246,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "WISCONSIN"
     },
     {
       "id": "rsi",
@@ -4231,7 +4267,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR SUNSHINE"
     },
     {
       "id": "aml",
@@ -4271,7 +4308,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AMTRAN"
     },
     {
       "id": "amu",
@@ -4291,7 +4329,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR MACAO"
     },
     {
       "id": "amv",
@@ -4311,7 +4350,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AMC AIRLINES"
     },
     {
       "id": "sey",
@@ -4331,7 +4371,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SEYCHELLES"
     },
     {
       "id": "ane",
@@ -4351,7 +4392,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR NOSTRUM"
     },
     {
       "id": "ang",
@@ -4371,7 +4413,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NIUGINI"
     },
     {
       "id": "aby",
@@ -4391,7 +4434,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ARABIA"
     },
     {
       "id": "bti",
@@ -4433,7 +4477,8 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "nameJa": "エアーニッポン"
+      "nameJa": "エアーニッポン",
+      "callsign": "ANK AIR"
     },
     {
       "id": "ano",
@@ -4453,7 +4498,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TOPEND"
     },
     {
       "id": "ant",
@@ -4473,7 +4519,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR NORTH"
     },
     {
       "id": "are",
@@ -4493,7 +4540,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LAN COLOMBIA"
     },
     {
       "id": "arg",
@@ -4534,7 +4582,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR SINAI"
     },
     {
       "id": "asq",
@@ -4554,7 +4603,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ACEY"
     },
     {
       "id": "atc",
@@ -4574,7 +4624,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TANZANIA"
     },
     {
       "id": "vbw",
@@ -4594,7 +4645,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BURKINA"
     },
     {
       "id": "spm",
@@ -4614,7 +4666,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SAINT-PIERRE"
     },
     {
       "id": "aua",
@@ -4655,7 +4708,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "WOW AIR"
     },
     {
       "id": "aul",
@@ -4675,7 +4729,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ARCHANGELSK AIR"
     },
     {
       "id": "aur",
@@ -4695,7 +4750,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AYLINE"
     },
     {
       "id": "avn",
@@ -4715,7 +4771,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR VAN"
     },
     {
       "id": "tah",
@@ -4755,7 +4812,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SYLT-AIR"
     },
     {
       "id": "fwi",
@@ -4775,7 +4833,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FRENCH WEST"
     },
     {
       "id": "axb",
@@ -4795,7 +4854,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "EXPRESS INDIA"
     },
     {
       "id": "axl",
@@ -4815,7 +4875,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "EXEL COMMUTER"
     },
     {
       "id": "aza",
@@ -4856,7 +4917,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BOLIVIA"
     },
     {
       "id": "azw",
@@ -4876,7 +4938,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR ZIMBABWE"
     },
     {
       "id": "oca",
@@ -4896,7 +4959,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "AROSCA"
     },
     {
       "id": "sdm",
@@ -4917,7 +4981,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "ROSSIYA"
+      "callsign": "RUSSIA"
     },
     {
       "id": "egf",
@@ -4937,7 +5001,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "EAGLE FLIGHT"
     },
     {
       "id": "bot",
@@ -4957,7 +5022,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BOTSWANA"
     },
     {
       "id": "vta",
@@ -4977,7 +5043,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR TAHITI"
     },
     {
       "id": "vas",
@@ -4997,7 +5064,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ATRAN"
     },
     {
       "id": "cca",
@@ -5047,7 +5115,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CHATHAM"
     },
     {
       "id": "dah",
@@ -5068,7 +5137,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "TASSILI"
+      "callsign": "AIR ALGERIE"
     },
     {
       "id": "dla",
@@ -5088,7 +5157,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "DOLOMITI"
     },
     {
       "id": "dnv",
@@ -5108,7 +5178,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "DONAVIA"
     },
     {
       "id": "ein",
@@ -5128,7 +5199,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SHAMROCK"
     },
     {
       "id": "fji",
@@ -5148,7 +5220,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PACIFIC"
     },
     {
       "id": "fli",
@@ -5168,7 +5241,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FAROELINE"
     },
     {
       "id": "flz",
@@ -5188,7 +5262,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR FLORIDA"
     },
     {
       "id": "fxi",
@@ -5208,7 +5283,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FAXI"
     },
     {
       "id": "gap",
@@ -5228,7 +5304,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIRPHIL"
     },
     {
       "id": "grl",
@@ -5248,7 +5325,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GREENLAND"
     },
     {
       "id": "gti",
@@ -5268,7 +5346,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GIANT"
     },
     {
       "id": "guy",
@@ -5288,7 +5367,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GREEN BIRD"
     },
     {
       "id": "jza",
@@ -5308,7 +5388,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "JAZZ"
     },
     {
       "id": "kkk",
@@ -5328,7 +5409,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "ATLASJET"
     },
     {
       "id": "kor",
@@ -5348,7 +5430,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR KORYO"
     },
     {
       "id": "kzr",
@@ -5368,7 +5451,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ASTANALINE"
     },
     {
       "id": "lbc",
@@ -5388,7 +5472,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "ALBANIAN"
     },
     {
       "id": "lne",
@@ -5408,7 +5493,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AEROLANE"
     },
     {
       "id": "mau",
@@ -5428,7 +5514,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIRMAURITIUS"
     },
     {
       "id": "mdg",
@@ -5448,7 +5535,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR MADAGASCAR"
     },
     {
       "id": "mld",
@@ -5468,7 +5556,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR MOLDOVA"
     },
     {
       "id": "nig",
@@ -5488,7 +5577,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AEROLINE"
     },
     {
       "id": "rea",
@@ -5508,7 +5598,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AER ARANN"
     },
     {
       "id": "reu",
@@ -5528,7 +5619,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "REUNION"
     },
     {
       "id": "rka",
@@ -5568,7 +5660,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "AIRLINAIR"
     },
     {
       "id": "rnv",
@@ -5588,7 +5681,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "ARMAVIA"
     },
     {
       "id": "rpb",
@@ -5608,7 +5702,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AEROREPUBLICA"
     },
     {
       "id": "syl",
@@ -5628,7 +5723,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR YAKUTIA"
     },
     {
       "id": "tao",
@@ -5648,7 +5744,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TRANS-AEROMAR"
     },
     {
       "id": "tfl",
@@ -5668,7 +5765,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ORANGE"
     },
     {
       "id": "tok",
@@ -5688,7 +5786,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BALUS"
     },
     {
       "id": "trs",
@@ -5709,7 +5808,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "TRANSAT"
+      "callsign": "CITRUS"
     },
     {
       "id": "tsc",
@@ -5730,7 +5829,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "SUNWING"
+      "callsign": "AIR TRANSAT"
     },
     {
       "id": "twn",
@@ -5750,7 +5849,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TWINARROW"
     },
     {
       "id": "glg",
@@ -5770,7 +5870,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GALAPAGOS"
     },
     {
       "id": "dru",
@@ -5790,7 +5891,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MIRNY"
     },
     {
       "id": "bbc",
@@ -5831,7 +5933,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BAHAMAS"
     },
     {
       "id": "bls",
@@ -5851,7 +5954,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BEARSKIN"
     },
     {
       "id": "bma",
@@ -5871,7 +5975,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GOSLING"
     },
     {
       "id": "bmj",
@@ -5891,7 +5996,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BEMIDJI"
     },
     {
       "id": "bmr",
@@ -5911,7 +6017,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "MIDLAND"
     },
     {
       "id": "bpa",
@@ -5931,7 +6038,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "BLUE PANORAMA"
     },
     {
       "id": "bps",
@@ -5971,7 +6079,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BERING AIR"
     },
     {
       "id": "bru",
@@ -5991,7 +6100,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BELARUS AVIA"
     },
     {
       "id": "bvt",
@@ -6011,7 +6121,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BERJAYA"
     },
     {
       "id": "dat",
@@ -6031,7 +6142,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "DAUNTLESS"
     },
     {
       "id": "ibb",
@@ -6051,7 +6163,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BINTER"
     },
     {
       "id": "lzb",
@@ -6071,7 +6184,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FLYING BULGARIA"
     },
     {
       "id": "icl",
@@ -6091,7 +6205,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CAL"
     },
     {
       "id": "mpe",
@@ -6131,7 +6246,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CAIR"
     },
     {
       "id": "bwa",
@@ -6151,7 +6267,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CARIBBEAN AIRLINES"
     },
     {
       "id": "krp",
@@ -6171,7 +6288,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CARPATAIR"
     },
     {
       "id": "cpn",
@@ -6191,7 +6309,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CASPIAN"
     },
     {
       "id": "cay",
@@ -6211,7 +6330,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CAYMAN"
     },
     {
       "id": "cua",
@@ -6231,7 +6351,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LIANHANG"
     },
     {
       "id": "sdr",
@@ -6251,7 +6372,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SUNDAIR"
     },
     {
       "id": "bcy",
@@ -6271,7 +6393,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CITY-IRELAND"
     },
     {
       "id": "cfe",
@@ -6291,7 +6414,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FLYER"
     },
     {
       "id": "caw",
@@ -6311,7 +6435,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "COMMERCIAL"
     },
     {
       "id": "uca",
@@ -6331,7 +6456,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "COMMUTAIR"
     },
     {
       "id": "cpz",
@@ -6351,7 +6477,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "COMPASS ROSE"
     },
     {
       "id": "cfg",
@@ -6412,7 +6539,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CONTINENTAL"
     },
     {
       "id": "vcv",
@@ -6432,7 +6560,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CONVIASA"
     },
     {
       "id": "cai",
@@ -6452,7 +6581,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CORENDON"
     },
     {
       "id": "crl",
@@ -6472,7 +6602,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CORSAIR"
     },
     {
       "id": "ccm",
@@ -6492,7 +6623,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CORSICA"
     },
     {
       "id": "ctn",
@@ -6512,7 +6644,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CROATIA"
     },
     {
       "id": "cub",
@@ -6532,7 +6665,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CUBANA"
     },
     {
       "id": "cyp",
@@ -6552,7 +6686,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CYPRUS"
     },
     {
       "id": "csa",
@@ -6593,7 +6728,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "DANISH"
     },
     {
       "id": "dao",
@@ -6613,7 +6749,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "DALO AIRLINES"
     },
     {
       "id": "dwt",
@@ -6633,7 +6770,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "DARWIN"
     },
     {
       "id": "udn",
@@ -6653,7 +6791,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "DNIEPRO"
     },
     {
       "id": "hda",
@@ -6673,7 +6812,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "DRAGON"
     },
     {
       "id": "drk",
@@ -6693,7 +6833,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ROYAL BHUTAN"
     },
     {
       "id": "eze",
@@ -6713,7 +6854,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "EASTFLIGHT"
     },
     {
       "id": "edw",
@@ -6733,7 +6875,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "EDELWEISS"
     },
     {
       "id": "ely",
@@ -6774,7 +6917,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BURAQAIR"
     },
     {
       "id": "ert",
@@ -6794,7 +6938,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ERITREAN"
     },
     {
       "id": "eca",
@@ -6814,7 +6959,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "EUROCYPRIA"
     },
     {
       "id": "elo",
@@ -6834,7 +6980,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "EUROLOT"
     },
     {
       "id": "eal",
@@ -6854,7 +7001,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "STAR WING"
     },
     {
       "id": "ewg",
@@ -6935,7 +7083,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FIREFLY"
     },
     {
       "id": "fab",
@@ -6955,7 +7104,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FIRST AIR"
     },
     {
       "id": "xax",
@@ -6975,7 +7125,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "XANADU"
     },
     {
       "id": "lil",
@@ -6995,7 +7146,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LITHUANIA AIR"
     },
     {
       "id": "bee",
@@ -7015,7 +7167,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "JERSEY"
     },
     {
       "id": "fre",
@@ -7035,7 +7188,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FREEDOM"
     },
     {
       "id": "gbl",
@@ -7055,7 +7209,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GEEBEE AIRWAYS"
     },
     {
       "id": "gzp",
@@ -7075,7 +7230,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GAZPROMAVIA"
     },
     {
       "id": "tgz",
@@ -7095,7 +7251,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TAMAZI"
     },
     {
       "id": "gmi",
@@ -7115,7 +7272,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "GERMANIA"
     },
     {
       "id": "gwi",
@@ -7135,7 +7293,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GERMAN WINGS"
     },
     {
       "id": "gow",
@@ -7155,7 +7314,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GOAIR"
     },
     {
       "id": "gjs",
@@ -7176,7 +7336,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "EXPRESSJET"
+      "callsign": "LINDBERGH"
     },
     {
       "id": "gao",
@@ -7196,7 +7356,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GOLDEN"
     },
     {
       "id": "gfa",
@@ -7257,7 +7418,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "HAGELAND"
     },
     {
       "id": "chh",
@@ -7298,7 +7460,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "HAPAG LLOYD"
     },
     {
       "id": "hal",
@@ -7339,7 +7502,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "HELIJET"
     },
     {
       "id": "oaw",
@@ -7359,7 +7523,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "HELVETIC"
     },
     {
       "id": "ado",
@@ -7401,7 +7566,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BAUHINIA"
     },
     {
       "id": "qxe",
@@ -7422,7 +7588,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "HORIZON"
+      "callsign": "HORIZON AIR"
     },
     {
       "id": "ibx",
@@ -7443,7 +7609,8 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "nameJa": "アイベックスエアラインズ"
+      "nameJa": "アイベックスエアラインズ",
+      "callsign": "IBEX"
     },
     {
       "id": "rac",
@@ -7483,7 +7650,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ICEAIR"
     },
     {
       "id": "awq",
@@ -7503,7 +7671,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "WAGON AIR"
     },
     {
       "id": "suw",
@@ -7523,7 +7692,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "ASTAIR"
     },
     {
       "id": "isk",
@@ -7543,7 +7713,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "INTERSKY"
     },
     {
       "id": "ira",
@@ -7563,7 +7734,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "IRANAIR"
     },
     {
       "id": "irc",
@@ -7583,7 +7755,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ASEMAN"
     },
     {
       "id": "iaw",
@@ -7646,7 +7819,8 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "radarbox_logos",
-      "nameJa": "日本アジア航空"
+      "nameJa": "日本アジア航空",
+      "callsign": "JET ASIA"
     },
     {
       "id": "jta",
@@ -7667,7 +7841,8 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "nameJa": "日本トランスオーシャン航空"
+      "nameJa": "日本トランスオーシャン航空",
+      "callsign": "JAI OCEAN"
     },
     {
       "id": "jzr",
@@ -7687,7 +7862,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "JAZEERA"
     },
     {
       "id": "jja",
@@ -7707,7 +7883,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "JEJU AIR"
     },
     {
       "id": "jai",
@@ -7727,7 +7904,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "JET AIRWAYS"
     },
     {
       "id": "jsa",
@@ -7747,7 +7925,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "JETSTAR ASIA"
     },
     {
       "id": "exs",
@@ -7768,7 +7947,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "JET2"
+      "callsign": "CHANNEX"
     },
     {
       "id": "jfu",
@@ -7808,7 +7987,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BEAUTY"
     },
     {
       "id": "jst",
@@ -7850,7 +8030,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "JUNEYAO"
+      "callsign": "AIR JUNEYAO"
     },
     {
       "id": "klc",
@@ -7870,7 +8050,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CITY"
     },
     {
       "id": "kmf",
@@ -7890,7 +8071,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "KAMGAR"
     },
     {
       "id": "ken",
@@ -7910,7 +8092,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "KENMORE"
     },
     {
       "id": "kfr",
@@ -7930,7 +8113,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "KINGFISHER"
     },
     {
       "id": "kgl",
@@ -7950,7 +8134,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "KOGALYM"
     },
     {
       "id": "kil",
@@ -7970,7 +8155,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "AIR KUBAN"
     },
     {
       "id": "kac",
@@ -8011,7 +8197,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "KUZU CARGO"
     },
     {
       "id": "lrc",
@@ -8031,7 +8218,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LACSA"
     },
     {
       "id": "dsm",
@@ -8051,7 +8239,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "LAN AR"
     },
     {
       "id": "lxp",
@@ -8071,7 +8260,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LANEX"
     },
     {
       "id": "lpe",
@@ -8091,7 +8281,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LANPERU"
     },
     {
       "id": "lao",
@@ -8111,7 +8302,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LAO"
     },
     {
       "id": "lda",
@@ -8131,7 +8323,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LAUDA AIR"
     },
     {
       "id": "lia",
@@ -8151,7 +8344,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LIAT"
     },
     {
       "id": "laa",
@@ -8171,7 +8365,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LIBAIR"
     },
     {
       "id": "lam",
@@ -8191,7 +8386,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MOZAMBIQUE"
     },
     {
       "id": "lni",
@@ -8212,7 +8408,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "LION INTL"
+      "callsign": "LION INTER"
     },
     {
       "id": "gec",
@@ -8232,7 +8428,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LUFTHANSA CARGO"
     },
     {
       "id": "clh",
@@ -8253,7 +8450,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "LUFTHANSA CARGO"
+      "callsign": "HANSALINE"
     },
     {
       "id": "lgl",
@@ -8273,7 +8470,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LUXAIR"
     },
     {
       "id": "maa",
@@ -8293,7 +8491,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MAS CARGA"
     },
     {
       "id": "mgl",
@@ -8313,7 +8512,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MONGOL AIR"
     },
     {
       "id": "mnb",
@@ -8333,7 +8533,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BLACK SEA"
     },
     {
       "id": "irm",
@@ -8353,7 +8554,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MAHAN AIR"
     },
     {
       "id": "scw",
@@ -8373,7 +8575,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SCANWING"
     },
     {
       "id": "malm-aviation",
@@ -8393,7 +8596,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SCANWING"
     },
     {
       "id": "mac",
@@ -8413,7 +8617,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MALTA CHARTER"
     },
     {
       "id": "mda",
@@ -8454,7 +8659,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "TULCA"
     },
     {
       "id": "mph",
@@ -8474,7 +8680,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MARTINAIR"
     },
     {
       "id": "myd",
@@ -8494,7 +8701,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MYLAND"
     },
     {
       "id": "iss",
@@ -8514,7 +8722,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MERIDIANA"
     },
     {
       "id": "ash",
@@ -8534,7 +8743,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR SHUTTLE"
     },
     {
       "id": "mxa",
@@ -8595,7 +8805,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MIDEX"
     },
     {
       "id": "mon",
@@ -8615,7 +8826,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "MONARCH"
     },
     {
       "id": "mgx",
@@ -8635,7 +8847,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "MONTENEGRO"
     },
     {
       "id": "mal",
@@ -8675,7 +8888,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GROMOV AIRLINE"
     },
     {
       "id": "msi",
@@ -8695,7 +8909,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MOTOR SICH"
     },
     {
       "id": "uba",
@@ -8715,7 +8930,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "UNIONAIR"
     },
     {
       "id": "ron",
@@ -8735,7 +8951,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "OUR AIRLINE"
     },
     {
       "id": "rna",
@@ -8755,7 +8972,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ROYAL NEPAL"
     },
     {
       "id": "eja",
@@ -8775,7 +8993,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "EXECJET"
     },
     {
       "id": "nea",
@@ -8795,7 +9014,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NEW ENGLAND"
     },
     {
       "id": "ntj",
@@ -8815,7 +9035,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "NEXTJET"
     },
     {
       "id": "nly",
@@ -8835,7 +9056,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "FLYNIKI"
     },
     {
       "id": "nok",
@@ -8855,7 +9077,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NOK AIR"
     },
     {
       "id": "nwa",
@@ -8875,7 +9098,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NORTHWEST"
     },
     {
       "id": "plr",
@@ -8895,7 +9119,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "POLARIS"
     },
     {
       "id": "lbt",
@@ -8915,7 +9140,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NOUVELAIR"
     },
     {
       "id": "nvr",
@@ -8935,7 +9161,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NAVIGATOR"
     },
     {
       "id": "kne",
@@ -8955,7 +9182,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NAS EXPRESS"
     },
     {
       "id": "one",
@@ -8975,7 +9203,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "OCEAN AIR"
     },
     {
       "id": "oal",
@@ -9037,7 +9266,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "OMNI-EXPRESS"
     },
     {
       "id": "ohy",
@@ -9057,7 +9287,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "ONUR AIR"
     },
     {
       "id": "oea",
@@ -9077,7 +9308,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "ORIENT THAI"
     },
     {
       "id": "ogn",
@@ -9097,7 +9329,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ORIGIN"
     },
     {
       "id": "ola",
@@ -9117,7 +9350,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "OVERLAND"
     },
     {
       "id": "pic",
@@ -9137,7 +9371,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PACIFIC AIRLINES"
     },
     {
       "id": "pco",
@@ -9157,7 +9392,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PASCO"
     },
     {
       "id": "pia",
@@ -9177,7 +9413,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PAKISTAN"
     },
     {
       "id": "ptb",
@@ -9197,7 +9434,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PASSAREDO"
     },
     {
       "id": "pen",
@@ -9217,7 +9455,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "PENINSULA"
     },
     {
       "id": "pdt",
@@ -9237,7 +9476,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PIEDMONT"
     },
     {
       "id": "flg",
@@ -9257,7 +9497,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "FLAGSHIP"
     },
     {
       "id": "pao",
@@ -9277,7 +9518,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "POLYNESIAN"
     },
     {
       "id": "poe",
@@ -9318,7 +9560,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PORTUGALIA"
     },
     {
       "id": "prf",
@@ -9338,7 +9581,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PRECISION AIR"
     },
     {
       "id": "rxa",
@@ -9358,7 +9602,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "REX"
     },
     {
       "id": "rpa",
@@ -9399,7 +9644,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR RAROTONGA"
     },
     {
       "id": "rba",
@@ -9419,7 +9665,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BRUNEI"
     },
     {
       "id": "rja",
@@ -9440,7 +9687,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "ALIA"
+      "callsign": "JORDANIAN"
     },
     {
       "id": "royal-nepal-airlines",
@@ -9460,7 +9707,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ROYAL NEPAL"
     },
     {
       "id": "rlu",
@@ -9500,7 +9748,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "RWANDAIR"
     },
     {
       "id": "rya",
@@ -9520,7 +9769,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "RYAN AIR"
     },
     {
       "id": "rae",
@@ -9540,7 +9790,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "REGIONAL EUROPE"
     },
     {
       "id": "rzo",
@@ -9560,7 +9811,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR AZORES"
     },
     {
       "id": "sai",
@@ -9580,7 +9832,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "SHAHEEN AIR"
     },
     {
       "id": "say",
@@ -9620,7 +9873,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SIBERIAN AIRLINES"
     },
     {
       "id": "sbs",
@@ -9640,7 +9894,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SEABORNE"
     },
     {
       "id": "sce",
@@ -9660,7 +9915,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SCENIC"
     },
     {
       "id": "srilankan-airlines",
@@ -9680,7 +9936,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SRILANKAN"
     },
     {
       "id": "scx",
@@ -9784,7 +10041,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SATA"
     },
     {
       "id": "sjy",
@@ -9804,7 +10062,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SRIWIJAYA"
     },
     {
       "id": "sqc",
@@ -9824,7 +10083,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "SINGCARGO"
     },
     {
       "id": "srq",
@@ -9864,7 +10124,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SKYTOUR"
     },
     {
       "id": "sud",
@@ -9884,7 +10145,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SUDANAIR"
     },
     {
       "id": "swr",
@@ -9905,7 +10167,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "SWISS"
+      "callsign": "SWISSAIR"
     },
     {
       "id": "swissair",
@@ -9926,7 +10188,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "SWISS"
+      "callsign": "SWISSAIR"
     },
     {
       "id": "swu",
@@ -9946,7 +10208,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "EUROSWISS"
     },
     {
       "id": "sxs",
@@ -9966,7 +10229,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SUNEXPRESS"
     },
     {
       "id": "syr",
@@ -9986,7 +10250,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SYRIANAIR"
     },
     {
       "id": "cdg",
@@ -10006,7 +10271,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SHANDONG"
     },
     {
       "id": "cqh",
@@ -10026,7 +10292,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR SPRING"
     },
     {
       "id": "csc",
@@ -10046,7 +10313,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SI CHUAN"
     },
     {
       "id": "csh",
@@ -10066,7 +10334,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SHANGHAI AIR"
     },
     {
       "id": "csz",
@@ -10107,7 +10376,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ECHO ROMEO"
     },
     {
       "id": "jkk",
@@ -10127,7 +10397,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SPANAIR"
     },
     {
       "id": "nse",
@@ -10187,7 +10458,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "SANTA BARBARA"
     },
     {
       "id": "sku",
@@ -10207,7 +10479,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AEROSKY"
     },
     {
       "id": "skx",
@@ -10227,7 +10500,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SKY EXPRESS"
     },
     {
       "id": "slk",
@@ -10247,7 +10521,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "SILKAIR"
     },
     {
       "id": "slm",
@@ -10267,7 +10542,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SURINAM"
     },
     {
       "id": "snj",
@@ -10288,7 +10564,8 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "nameJa": "スカイネットアジア航空"
+      "nameJa": "スカイネットアジア航空",
+      "callsign": "NEWSKY"
     },
     {
       "id": "sol",
@@ -10308,7 +10585,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SOLOMON"
     },
     {
       "id": "sov",
@@ -10328,7 +10606,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "SARATOV AIR"
     },
     {
       "id": "tcf",
@@ -10348,7 +10627,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "MERCURY"
     },
     {
       "id": "vsv",
@@ -10368,7 +10648,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "VLASTA"
     },
     {
       "id": "tam",
@@ -10409,7 +10690,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TUNAIR"
     },
     {
       "id": "tcw",
@@ -10429,7 +10711,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "KESTREL"
     },
     {
       "id": "tcx",
@@ -10449,7 +10732,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "KESTREL"
     },
     {
       "id": "tgn",
@@ -10489,7 +10773,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "THAI ASIA"
     },
     {
       "id": "tjt",
@@ -10509,7 +10794,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TWINJET"
     },
     {
       "id": "tom",
@@ -10530,7 +10816,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "TOMJET"
+      "callsign": "TOM JET"
     },
     {
       "id": "tos",
@@ -10550,7 +10836,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TROPISER"
     },
     {
       "id": "tpa",
@@ -10570,7 +10857,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TAMPA"
     },
     {
       "id": "tna",
@@ -10590,7 +10878,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "TAIWAN"
     },
     {
       "id": "tra",
@@ -10631,7 +10920,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CABOVERDE"
     },
     {
       "id": "abs",
@@ -10651,7 +10941,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ATHABASKA"
     },
     {
       "id": "tso",
@@ -10671,7 +10962,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "TRANSOVIET"
     },
     {
       "id": "tua",
@@ -10691,7 +10983,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TURKMENISTAN"
     },
     {
       "id": "tui",
@@ -10711,7 +11004,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TUI JET"
     },
     {
       "id": "tvs",
@@ -10732,7 +11026,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "THAI SMILE"
+      "callsign": "SKYTRAVEL"
     },
     {
       "id": "blx",
@@ -10752,7 +11046,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BLUESCAN"
     },
     {
       "id": "dta",
@@ -10772,7 +11067,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "DTA"
     },
     {
       "id": "lap",
@@ -10792,7 +11088,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PARAGUAYA"
     },
     {
       "id": "lof",
@@ -10812,7 +11109,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "WATERSKI"
     },
     {
       "id": "rot",
@@ -10854,7 +11152,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "SIBERIA"
+      "callsign": "SVERDLOVSK AIR"
     },
     {
       "id": "usa",
@@ -10935,7 +11233,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "UZBEK"
     },
     {
       "id": "aui",
@@ -10955,7 +11254,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "UKRAINE INTERNATIONAL"
     },
     {
       "id": "vlu",
@@ -10975,7 +11275,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "VALUAIR"
     },
     {
       "id": "vfc",
@@ -10996,7 +11297,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "VOLOTEA"
+      "callsign": "VASCO AIR"
     },
     {
       "id": "mov",
@@ -11016,7 +11317,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "MOV AIR"
     },
     {
       "id": "vda",
@@ -11036,7 +11338,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "VOLGA"
     },
     {
       "id": "vrd",
@@ -11056,7 +11359,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "REDWOOD"
     },
     {
       "id": "vir",
@@ -11098,7 +11402,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "VIRGIN"
+      "callsign": "VELOCITY"
     },
     {
       "id": "wlc",
@@ -11118,7 +11422,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "WELCOMEAIR"
     },
     {
       "id": "wja",
@@ -11159,7 +11464,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "WESTERN"
     },
     {
       "id": "wif",
@@ -11179,7 +11485,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "WIDEROE"
     },
     {
       "id": "won",
@@ -11199,7 +11506,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "WINGS ABADI"
     },
     {
       "id": "seu",
@@ -11219,7 +11527,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "STARWAY"
     },
     {
       "id": "cxa",
@@ -11239,7 +11548,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "XIAMEN AIR"
     },
     {
       "id": "llm",
@@ -11259,7 +11569,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "YAMAL"
     },
     {
       "id": "iye",
@@ -11279,7 +11590,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "YEMENI"
     },
     {
       "id": "tan",
@@ -11299,7 +11611,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "HONDURAS"
     },
     {
       "id": "royal-air-cambodge",
@@ -11340,7 +11653,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "AIR BUSAN"
+      "callsign": "AIRCOACH"
     },
     {
       "id": "glp",
@@ -11360,7 +11673,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "GLOBUS"
     },
     {
       "id": "jas",
@@ -11401,7 +11715,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "UNITED BANGLADESH"
     },
     {
       "id": "ffv",
@@ -11442,7 +11757,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "TRANSAVIA FRANCE"
+      "callsign": "FRANCE SOLEIL"
     },
     {
       "id": "mku",
@@ -11483,7 +11798,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "UKRAINE INTERNATIONAL"
+      "callsign": "GLORY"
     },
     {
       "id": "rwz",
@@ -11543,7 +11858,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SEA WING"
     },
     {
       "id": "esr",
@@ -11585,7 +11901,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "JEJU AIR"
+      "callsign": "JIN AIR"
     },
     {
       "id": "flb",
@@ -11625,7 +11941,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SHREEAIR"
     },
     {
       "id": "cap",
@@ -11666,7 +11983,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "TIANJIN AIR"
+      "callsign": "BO HAI"
     },
     {
       "id": "sqh",
@@ -11686,7 +12003,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "SASQUATCH"
     },
     {
       "id": "enj",
@@ -11826,7 +12144,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ALMASRIA"
     },
     {
       "id": "mse",
@@ -11906,7 +12225,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "OASIS"
     },
     {
       "id": "stp",
@@ -11966,7 +12286,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "CHONG QING"
     },
     {
       "id": "gdc",
@@ -12006,7 +12327,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "WEST CHINA"
     },
     {
       "id": "joy",
@@ -12127,7 +12449,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "KALSTAR"
     },
     {
       "id": "ger",
@@ -12147,7 +12470,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GERMAN EAGLE"
     },
     {
       "id": "tbz",
@@ -12227,7 +12551,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SKY MOLDOVA"
     },
     {
       "id": "skv",
@@ -12247,7 +12572,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MAPLE"
     },
     {
       "id": "twb",
@@ -12268,7 +12594,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "TWAY"
+      "callsign": "TWAYAIR"
     },
     {
       "id": "srn",
@@ -12288,7 +12614,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SPRINTAIR"
     },
     {
       "id": "mrs",
@@ -12368,7 +12695,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GALILEO"
     },
     {
       "id": "bur",
@@ -12408,7 +12736,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ALBASTAR"
     },
     {
       "id": "mai",
@@ -12448,7 +12777,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ARABIA EGYPT"
     },
     {
       "id": "orc",
@@ -12508,7 +12838,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NILE BIRD"
     },
     {
       "id": "xoj",
@@ -12569,7 +12900,7 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos",
-      "callsign": "IBERIA EXPRESS"
+      "callsign": "IBEREXPRESS"
     },
     {
       "id": "sco",
@@ -12610,7 +12941,8 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "radarbox_logos",
-      "nameJa": "エアアジア・ジャパン"
+      "nameJa": "エアアジア・ジャパン",
+      "callsign": "WING ASIA"
     },
     {
       "id": "xsr",
@@ -12650,7 +12982,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "HEBEI AIR"
     },
     {
       "id": "kbz",
@@ -12690,7 +13023,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NESMA"
     },
     {
       "id": "rjd",
@@ -12730,7 +13064,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MALINDO EXPRESS"
     },
     {
       "id": "vvc",
@@ -12750,7 +13085,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "VIVA AIR COLOMBIA"
     },
     {
       "id": "fcm",
@@ -12810,7 +13146,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "VILLA AIR"
     },
     {
       "id": "gmr",
@@ -12830,7 +13167,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "GOLDEN MYANMAR"
     },
     {
       "id": "cnf",
@@ -12890,7 +13228,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "NATIONAL CARGO"
     },
     {
       "id": "xau",
@@ -12910,7 +13249,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "PEARL"
     },
     {
       "id": "rmk",
@@ -12950,7 +13290,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "YETI AIRLINES"
     },
     {
       "id": "asl",
@@ -12970,7 +13311,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "AIR SERBIA"
     },
     {
       "id": "ltu",
@@ -12990,7 +13332,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "LTU"
     },
     {
       "id": "eny",
@@ -13051,7 +13394,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "RELAX"
     },
     {
       "id": "sjo",
@@ -13073,7 +13417,7 @@
       "tagline": {},
       "logoSrc": "flightaware_logos",
       "nameJa": "春秋航空日本",
-      "callsign": "SPRING JAPAN"
+      "callsign": "JEY SPRING"
     },
     {
       "id": "rsp",
@@ -13113,7 +13457,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "GREENSTAR"
     },
     {
       "id": "pbd",
@@ -13133,7 +13478,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "POBEDA"
     },
     {
       "id": "tnu",
@@ -13233,7 +13579,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "VISTARA"
     },
     {
       "id": "wen",
@@ -13253,7 +13600,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "ENCORE"
     },
     {
       "id": "ppl",
@@ -13293,7 +13641,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "MAPLE"
     },
     {
       "id": "pya",
@@ -13333,7 +13682,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BOUTIQUE"
     },
     {
       "id": "feg",
@@ -13353,7 +13703,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "SKY EGYPT"
     },
     {
       "id": "voe",
@@ -13373,7 +13724,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "VOLOTEA"
     },
     {
       "id": "iam",
@@ -13453,7 +13805,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BOLIVIANA"
     },
     {
       "id": "ubg",
@@ -13473,7 +13826,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "BANGLA STAR"
     },
     {
       "id": "ibk",
@@ -13493,7 +13847,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "logoSrc": "radarbox_logos",
+      "callsign": "NORTRANS"
     },
     {
       "id": "idx",
@@ -13633,7 +13988,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "TEZJET"
     },
     {
       "id": "sry",
@@ -13673,7 +14029,8 @@
       "fleet": [],
       "routes": [],
       "tagline": {},
-      "logoSrc": "flightaware_logos"
+      "logoSrc": "flightaware_logos",
+      "callsign": "THAIVIET JET"
     },
     {
       "id": "cbg",
@@ -13700,7 +14057,7 @@
       "name": "Air Cambodia",
       "icao": "KHV",
       "iata": "K6",
-      "callsign": "CAMBODIA AIR",
+      "callsign": "ANGKOR AIR",
       "country": {
         "zh": "柬埔寨",
         "en": "Cambodia",
