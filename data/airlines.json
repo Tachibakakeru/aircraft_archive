@@ -2787,7 +2787,8 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "星宇航空",
-      "nameJa": "スターラックス航空"
+      "nameJa": "スターラックス航空",
+      "callsign": "STARWALKER"
     },
     {
       "id": "it",
