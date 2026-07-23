@@ -57,4 +57,8 @@
   document.addEventListener("click", e => {
     if (moved && e.target.closest(".fleet-recent-row")) { e.stopPropagation(); e.preventDefault(); moved = false; }
   }, true);
+  // 防止拖曳圖片/連結觸發原生 drag 搶走 pointer capture
+  document.addEventListener("dragstart", e => {
+    if (e.target.closest(".fleet-recent-row")) e.preventDefault();
+  });
 })();

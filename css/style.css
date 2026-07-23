@@ -176,7 +176,7 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
 }
 .recent-chip:hover{border-color:var(--amber)}
 .recent-chip img{width:44px;height:30px;object-fit:contain;border-radius:5px;
-  background:linear-gradient(180deg,#152238,#0e1729)}
+  background:linear-gradient(180deg,#152238,#0e1729);-webkit-user-drag:none;pointer-events:none}
 .recent-chip span{font-size:13px;white-space:nowrap}
 
 /* ── 時間軸檢視 ── */
