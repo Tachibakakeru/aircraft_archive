@@ -464,18 +464,18 @@ function escapeHTML(s){
   });
 
   // 新增自訂機場
-  $("apt-add-new").addEventListener("click", () => { $("apt-add-modal").hidden = false; });
+  $("apt-add-new").addEventListener("click", () => { $("apt-add-modal").style.display = "flex"; });
   $("apt-add-close").addEventListener("click", closeAddModal);
   $("apt-add-cancel").addEventListener("click", closeAddModal);
   $("apt-add-modal").addEventListener("click", e => { if (e.target === $("apt-add-modal")) closeAddModal(); });
   $("apt-add-save").addEventListener("click", saveCustomAirport);
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape" && !$("apt-add-modal").hidden) closeAddModal();
+    if (e.key === "Escape" && $("apt-add-modal").style.display !== "none") closeAddModal();
   });
 })();
 
 function closeAddModal(){
-  $("apt-add-modal").hidden = true;
+  $("apt-add-modal").style.display = "none";
   ["apt-add-name","apt-add-city","apt-add-country","apt-add-icao","apt-add-iata","apt-add-lat","apt-add-lon"].forEach(id => { $(id).value = ""; });
   $("apt-add-type").value = "large_airport";
 }
