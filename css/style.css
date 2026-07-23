@@ -166,7 +166,8 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
 /* ── 最近瀏覽 ── */
 .fleet-recent{margin-bottom:26px}
 .fleet-recent-h{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:10px}
-.fleet-recent-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}
+.fleet-recent-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.fleet-recent-row::-webkit-scrollbar{display:none}
 .recent-chip{
   flex:0 0 auto;display:flex;align-items:center;gap:8px;
   text-decoration:none;color:var(--text);

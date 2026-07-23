@@ -37,12 +37,24 @@
   else init();
 })();
 
-// 滑鼠滾輪 → 水平捲動（適用所有 overflow-x 橫列）
-document.addEventListener("wheel", e => {
-  const el = e.target.closest(".fleet-recent-row, .cmp-table-wrap, .ed-parts");
-  if (!el) return;
-  e.preventDefault();
-  // deltaMode: 0=px, 1=line(≈40px), 2=page
-  const delta = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * el.clientWidth : e.deltaY;
-  el.scrollLeft += delta;
-}, { passive: false });
+// 滑鼠拖曳水平捲動（fleet-recent-row 拖曳手勢，觸控原生支援不需處理）
+(function(){
+  let row = null, startX = 0, startScroll = 0, moved = false;
+  document.addEventListener("pointerdown", e => {
+    const r = e.target.closest(".fleet-recent-row");
+    if (!r || e.pointerType !== "mouse") return;
+    row = r; moved = false; startX = e.clientX; startScroll = r.scrollLeft;
+  });
+  document.addEventListener("pointermove", e => {
+    if (!row) return;
+    const dx = e.clientX - startX;
+    if (!moved && Math.abs(dx) > 4) { moved = true; row.style.cursor = "grabbing"; }
+    if (moved) row.scrollLeft = startScroll - dx;
+  });
+  function end(){ if (row) { row.style.cursor = ""; row = null; } }
+  document.addEventListener("pointerup", end);
+  document.addEventListener("pointercancel", end);
+  document.addEventListener("click", e => {
+    if (moved && e.target.closest(".fleet-recent-row")) { e.stopPropagation(); e.preventDefault(); moved = false; }
+  }, true);
+})();

@@ -433,17 +433,18 @@ function centerItem(key, item){
   const track = trackEl(key);
   const targetLeft = item.offsetLeft + item.offsetWidth / 2 - track.clientWidth / 2;
   track.style.scrollSnapType = "none";
-  track.scrollTo({ left: targetLeft, behavior: "smooth" });
-  let done = false;
-  function finish(){
-    if (done) return;
-    done = true;
-    clearTimeout(fallback);
-    track.removeEventListener("scrollend", finish);
-    track.style.scrollSnapType = "";
-  }
-  track.addEventListener("scrollend", finish, { once: true });
-  const fallback = setTimeout(finish, 500);
+  const from = track.scrollLeft;
+  const dist = targetLeft - from;
+  if (!dist){ track.style.scrollSnapType = ""; return; }
+  const duration = 350;
+  const t0 = performance.now();
+  (function step(now){
+    const p = Math.min((now - t0) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3); // ease-out cubic
+    track.scrollLeft = from + dist * ease;
+    if (p < 1) requestAnimationFrame(step);
+    else track.style.scrollSnapType = "";
+  })(t0);
 }
 
 // 內容複製三份（前／中／後），一開始捲到中間那份，並讓第一項置中對齊
@@ -705,7 +706,7 @@ async function boot(){
       // 「置中的那個節點」換成內容三倍複製中的另一份拷貝，但主題其實沒變。
       if (item.dataset.topic !== centeredTopicId(key)) {
         centerItem(key, item);
-        setTimeout(() => openDetail(item.dataset.topic), 300);
+        setTimeout(() => openDetail(item.dataset.topic), 360);
       } else {
         openDetail(item.dataset.topic);
       }

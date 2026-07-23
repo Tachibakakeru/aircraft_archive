@@ -7,9 +7,9 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=120">
-<script src="js/theme.js?v=120"></script>
-<script src="js/i18n.js?v=120"></script>
+<link rel="stylesheet" href="css/style.css?v=121">
+<script src="js/theme.js?v=121"></script>
+<script src="js/i18n.js?v=121"></script>
 </head>
 <body>
 
@@ -64,7 +64,7 @@
 (async () => {
   const grid = document.getElementById("fleet-grid");
   try {
-    const res = await fetch("data/fleet.json?v=120");
+    const res = await fetch("data/fleet.json?v=121");
     if (!res.ok) throw new Error(res.status);
     const fleet = await res.json();
 
@@ -271,7 +271,7 @@ I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 </script>
 
-<script src="js/ui.js?v=120"></script>
+<script src="js/ui.js?v=121"></script>
 </body>
 </html>
 
