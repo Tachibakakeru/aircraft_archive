@@ -2997,21 +2997,43 @@
       "tier": "lcc",
       "hubs": [
         "Ho Chi Minh City",
-        "Hanoi Noi Bai"
+        "Hanoi Noi Bai",
+        "Da Nang",
+        "Hai Phong",
+        "Nha Trang"
       ],
-      "fleetTotal": 100,
+      "fleetTotal": 104,
       "fleet": [
         {
-          "type": "Airbus A320 家族",
-          "count": 100,
+          "type": "Airbus A320-200",
+          "count": 30,
           "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A321-200",
+          "count": 50,
+          "fleetId": "a321"
+        },
+        {
+          "type": "Airbus A321neo",
+          "count": 18,
+          "fleetId": "a321neo"
+        },
+        {
+          "type": "Airbus A330-300",
+          "count": 6,
+          "fleetId": "a330"
         }
       ],
       "routes": [
-        "Bangkok",
-        "Singapore",
+        "Bangkok Suvarnabhumi",
+        "Singapore Changi",
         "Taipei Taoyuan",
-        "Seoul Incheon"
+        "Seoul Incheon",
+        "Tokyo Narita",
+        "Kuala Lumpur",
+        "Hong Kong",
+        "Sydney"
       ],
       "tagline": {
         "zh": "越南最大民營航空，機隊快速擴張速度是東南亞廉航中數一數二，帶動越南出境旅遊市場成長。",
@@ -3020,7 +3042,7 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "越捷航空",
-      "nameJa": "ベトジェットエア"
+      "nameJa": "ベトジェット・エア"
     },
     {
       "id": "tr",
@@ -13542,6 +13564,60 @@
       "routes": [],
       "tagline": {},
       "logoSrc": "flightaware_logos"
+    },
+    {
+      "id": "k6",
+      "name": "Air Cambodia",
+      "icao": "KHV",
+      "iata": "K6",
+      "callsign": "CAMBODIA AIR",
+      "country": {
+        "zh": "柬埔寨",
+        "en": "Cambodia",
+        "ja": "カンボジア"
+      },
+      "founded": 2009,
+      "alliance": "none",
+      "tier": "mainline",
+      "hubs": [
+        "Phnom Penh",
+        "Siem Reap"
+      ],
+      "fleetTotal": 6,
+      "fleet": [
+        {
+          "type": "Airbus A320-200",
+          "count": 2,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A321-200",
+          "count": 1,
+          "fleetId": "a321"
+        },
+        {
+          "type": "ATR 72-600",
+          "count": 3,
+          "fleetId": "atr72"
+        }
+      ],
+      "routes": [
+        "Ho Chi Minh City",
+        "Hanoi",
+        "Phu Quoc",
+        "Bangkok Suvarnabhumi",
+        "Guangzhou",
+        "Nanning",
+        "Hong Kong"
+      ],
+      "tagline": {
+        "zh": "柬埔寨旗艦航空，前身為柬埔寨國家航空（Cambodia Angkor Air），2025 年 1 月更名。以金邊與暹粒為雙樞紐，串聯東南亞與大中華地區航線，並肩負連接吳哥窟遺址旅遊客流的重要任務。",
+        "en": "Cambodia's national flag carrier, rebranded from Cambodia Angkor Air in January 2025. Operating from twin hubs at Phnom Penh and Siem Reap, it connects the kingdom with Southeast Asia and Greater China, playing a vital role in serving travellers to the Angkor Wat temple complex.",
+        "ja": "2025年1月にカンボジア・アンコール・エアから改称したカンボジアの国営航空会社。プノンペンとシェムリアップをダブルハブとし、東南アジアおよび大中華圏への地域路線を運航。アンコールワットを訪れる観光客の玄関口として重要な役割を担う。"
+      },
+      "logoSrc": "flightaware_logos",
+      "nameZh": "柬埔寨航空",
+      "nameJa": "エア・カンボジア"
     }
   ]
 }
