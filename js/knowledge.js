@@ -703,8 +703,8 @@ async function boot(){
     function activate(item){
       // 用主題 id（不是 DOM 節點）比對是否已置中：wireLoop 的無縫跳位可能讓
       // 「置中的那個節點」換成內容三倍複製中的另一份拷貝，但主題其實沒變。
-      if (item.dataset.topic === centeredTopicId(key)) openDetail(item.dataset.topic);
-      else centerItem(key, item);
+      if (item.dataset.topic !== centeredTopicId(key)) centerItem(key, item);
+      openDetail(item.dataset.topic);
     }
     trackElement.addEventListener("click", e => {
       const item = e.target.closest("[data-topic]");

@@ -36,3 +36,11 @@
     document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
+
+// 滑鼠滾輪 → 水平捲動（適用所有 overflow-x 橫列）
+document.addEventListener("wheel", e => {
+  const el = e.target.closest(".fleet-recent-row, .kn-track, .cmp-table-wrap, .ed-parts");
+  if (!el) return;
+  e.preventDefault();
+  el.scrollLeft += e.deltaY;
+}, { passive: false });

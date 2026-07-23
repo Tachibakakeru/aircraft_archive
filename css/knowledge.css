@@ -23,7 +23,7 @@ body{min-height:100vh}
 
 .kn-sub{font-size:13px;color:var(--muted);padding:14px 24px 0;max-width:760px}
 
-.kn-panel-section{padding:22px 24px}
+.kn-panel-section{padding:22px 24px;max-width:1080px;margin:0 auto}
 .kn-section-head{display:flex;align-items:center;gap:12px}
 .kn-panel-section h2{font-size:16px;font-weight:700}
 .kn-add-btn{
