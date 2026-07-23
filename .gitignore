@@ -4,3 +4,6 @@ models_src/
 
 __pycache__/
 *.pyc
+
+# 本機 token 備份，不進版本控制
+json token/
