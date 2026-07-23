@@ -39,8 +39,10 @@
 
 // 滑鼠滾輪 → 水平捲動（適用所有 overflow-x 橫列）
 document.addEventListener("wheel", e => {
-  const el = e.target.closest(".fleet-recent-row, .kn-track, .cmp-table-wrap, .ed-parts");
+  const el = e.target.closest(".fleet-recent-row, .cmp-table-wrap, .ed-parts");
   if (!el) return;
   e.preventDefault();
-  el.scrollLeft += e.deltaY;
+  // deltaMode: 0=px, 1=line(≈40px), 2=page
+  const delta = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * el.clientWidth : e.deltaY;
+  el.scrollLeft += delta;
 }, { passive: false });
