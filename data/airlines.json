@@ -2828,7 +2828,8 @@
       },
       "logoSrc": "flightaware_logos",
       "nameZh": "台灣虎航",
-      "nameJa": "タイガーエア台湾"
+      "nameJa": "タイガーエア台湾",
+      "callsign": "SMART CAT"
     },
     {
       "id": "mm",
