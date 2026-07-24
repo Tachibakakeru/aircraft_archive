@@ -2756,25 +2756,22 @@
       "hubs": [
         "Taiwan Taoyuan"
       ],
-      "fleetTotal": 45,
+      "fleetTotal": 24,
       "fleet": [
         {
           "type": "Airbus A321neo",
-          "count": 14,
+          "count": 13,
           "fleetId": "a321"
         },
         {
-          "type": "Airbus A330neo",
-          "count": 6,
+          "type": "Airbus A330-900",
+          "count": 5,
           "fleetId": "a332"
         },
         {
-          "type": "Airbus A350-941XWB",
-          "count": 10
-        },
-        {
-          "type": "Airbus A350-1041XWB",
-          "count": 15
+          "type": "Airbus A350-900",
+          "count": 6,
+          "fleetId": "a359"
         }
       ],
       "routes": [
@@ -2810,11 +2807,16 @@
         "Taiwan Taoyuan",
         "Kaohsiung"
       ],
-      "fleetTotal": 10,
+      "fleetTotal": 15,
       "fleet": [
         {
-          "type": "Airbus A320",
-          "count": 10,
+          "type": "Airbus A320ceo",
+          "count": 11,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A320neo",
+          "count": 4,
           "fleetId": "a320"
         }
       ],
@@ -8639,20 +8641,41 @@
       "icao": "MDA",
       "iata": "AE",
       "country": {
-        "zh": "Taiwan",
+        "zh": "台灣",
         "en": "Taiwan",
-        "ja": "Taiwan"
+        "ja": "台湾"
       },
-      "founded": null,
+      "founded": 1991,
       "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
+      "tier": "regional",
+      "hubs": [
+        "TSA",
+        "RMQ",
+        "KHH"
+      ],
+      "fleetTotal": 9,
+      "fleet": [
+        {
+          "type": "ATR 72-600",
+          "count": 9,
+          "fleetId": "atr72"
+        }
+      ],
+      "routes": [
+        "KNH",
+        "MZG",
+        "TTT",
+        "XMN"
+      ],
+      "tagline": {
+        "zh": "中華航空旗下子公司，主要經營台灣國內線及部分區域短程國際與兩岸航線。",
+        "en": "A subsidiary of China Airlines, primarily operating domestic flights within Taiwan and select regional/cross-strait routes.",
+        "ja": "チャイナエアラインの子会社で、主に台湾国内線や一部の近距離国際線・両岸路線を運航する。"
+      },
       "logoSrc": "flightaware_logos",
-      "callsign": "MANDARIN"
+      "callsign": "MANDARIN",
+      "nameZh": "華信航空",
+      "nameJa": "マンダリン航空"
     },
     {
       "id": "mno",
@@ -11812,20 +11835,40 @@
       "icao": "UIA",
       "iata": "B7",
       "country": {
-        "zh": "Taiwan",
+        "zh": "台灣",
         "en": "Taiwan",
-        "ja": "Taiwan"
+        "ja": "台湾"
       },
-      "founded": null,
+      "founded": 1996,
       "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
+      "tier": "regional",
+      "hubs": [
+        "TSA",
+        "KHH"
+      ],
+      "fleetTotal": 14,
+      "fleet": [
+        {
+          "type": "ATR 72-600",
+          "count": 14,
+          "fleetId": "atr72"
+        }
+      ],
+      "routes": [
+        "KNH",
+        "MZG",
+        "LZN",
+        "TTT"
+      ],
+      "tagline": {
+        "zh": "長榮航空旗下子公司，也是目前台灣國內線市占率與規模最大的航空公司。",
+        "en": "A subsidiary of EVA Air and the largest operator of domestic flights in Taiwan by market share.",
+        "ja": "エバー航空の子会社であり、台湾最大の国内線運航規模とシェアを誇る。"
+      },
       "logoSrc": "flightaware_logos",
-      "callsign": "GLORY"
+      "callsign": "GLORY",
+      "nameZh": "立榮航空",
+      "nameJa": "ユニー航空"
     },
     {
       "id": "rwz",
