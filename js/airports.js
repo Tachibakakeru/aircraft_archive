@@ -665,8 +665,9 @@ function buildTypeSelect(){
     types.map(t => `<option value="${t}">${I18N.t("airports.type." + t)}</option>`).join("");
 }
 
+function normVariants(s){ return s.replace(/台/g, "臺"); }
 function applyAll(){
-  const q = $("apt-search").value.trim().toLowerCase();
+  const q = normVariants($("apt-search").value.trim().toLowerCase());
   const country = $("apt-country").value;
   const type = $("apt-type").value;
   const favOnly = $("apt-fav-only").checked;
@@ -683,10 +684,10 @@ function applyAll(){
       if (type && a.type !== type) return false;
       if (!q) return true;
       const cityHit = cityLocalName(a.city, a.country);
-      const hay = [
+      const hay = normVariants([
         a.name, a.nameZh, a.nameJa, a.city, countryName(a.country), a.icao, a.iata,
         cityHit && cityHit.zh, cityHit && cityHit.ja,
-      ].filter(Boolean).join(" ").toLowerCase();
+      ].filter(Boolean).join(" ").toLowerCase());
       return hay.includes(q);
     });
   }
@@ -968,9 +969,7 @@ function closeDataEditor(){
   $("apt-data-edit").hidden = true;
   $("apt-p-data-edit").hidden = false;
 }
-function saveDataEditLocal(){
-  const id = $("panel").dataset.id;
-  if (!id) return;
+function collectFormEdit(id){
   const edit = {};
   const name = $("apt-e-name").value.trim(); if (name) edit.name = name;
   const nameZh = $("apt-e-namezh").value.trim(); if (nameZh) edit.nameZh = nameZh;
@@ -980,10 +979,17 @@ function saveDataEditLocal(){
   const iata = $("apt-e-iata").value.trim().toUpperCase(); if (iata) edit.iata = iata;
   edit.type = $("apt-e-type").value;
   setAptDataEdit(id, edit);
+}
+function saveDataEditLocal(){
+  const id = $("panel").dataset.id;
+  if (!id) return;
+  collectFormEdit(id);
   closeDataEditor();
   openAirport(id);
 }
 async function publishDataEdits(){
+  const id = $("panel").dataset.id;
+  if (id && !$("apt-data-edit").hidden) collectFormEdit(id);
   const allEdits = loadAptDataEdits();
   if (!Object.keys(allEdits).length){ alert("沒有本機修改需要發布。"); return; }
   const btn = $("apt-e-publish");
