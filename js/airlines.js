@@ -493,7 +493,14 @@ function applyAll(){
     if (!q) return true;
     const hay = [a.name, a.nameZh, a.nameJa, a.icao, a.iata, a.callsign, I18N.field(a.country), a.country.zh, a.country.en, ...countryAliases(a), ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
     return hay.includes(q);
-  }).sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
+  }).sort((a, b) => {
+    if (favOnly && !q && !alliance && !tier){
+      const ca = (a.country && (a.country.zh || a.country.en)) || "";
+      const cb = (b.country && (b.country.zh || b.country.en)) || "";
+      return ca.localeCompare(cb, "zh-Hant") || a.name.localeCompare(b.name);
+    }
+    return (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name);
+  });
 
   render(list);
 }
