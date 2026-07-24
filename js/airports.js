@@ -740,7 +740,10 @@ function render(list){
     return;
   }
   emptyEl.hidden = true;
-  list = list.slice().sort((a, b) => (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
+  const favOnlyMode = $("apt-fav-only").checked && !$("apt-search").value.trim() && !$("apt-country").value && !$("apt-type").value;
+  list = list.slice().sort((a, b) => favOnlyMode
+    ? countryName(a.country).localeCompare(countryName(b.country), "zh-Hant") || a.name.localeCompare(b.name)
+    : (isFav(b.id) ? 1 : 0) - (isFav(a.id) ? 1 : 0) || a.name.localeCompare(b.name));
   const shown = list.slice(0, MAX_RESULTS);
   countEl.innerHTML = `${I18N.t("airports.count.showing")} <b>${shown.length.toLocaleString()}</b> / ${list.length.toLocaleString()}`;
   if (globeMode) refreshGlobeMarkers(list.slice(0, GLOBE_MAX));
