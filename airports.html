@@ -7,11 +7,11 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=123">
-<link rel="stylesheet" href="css/compare.css?v=123">
-<link rel="stylesheet" href="css/airports.css?v=123">
-<script src="js/theme.js?v=123"></script>
-<script src="js/i18n.js?v=123"></script>
+<link rel="stylesheet" href="css/style.css?v=124">
+<link rel="stylesheet" href="css/compare.css?v=124">
+<link rel="stylesheet" href="css/airports.css?v=124">
+<script src="js/theme.js?v=124"></script>
+<script src="js/i18n.js?v=124"></script>
 </head>
 <body>
 
@@ -77,6 +77,7 @@
     <button id="apt-p-share" class="apt-p-share" data-i18n-title="airports.detail.share" title="分享連結">🔗</button>
     <button id="apt-p-cmp" class="apt-p-cmp" aria-pressed="false" data-i18n-title="airports.detail.addCompare" title="加入比較">⇄</button>
     <button id="apt-p-fav" class="apt-p-fav" aria-pressed="false" title="收藏">☆</button>
+    <button id="apt-p-data-edit" class="apt-p-fav" title="編輯資料">✎</button>
     <button id="apt-p-close" class="panel-close-btn" aria-label="關閉面板" data-i18n-aria="viewer.panel.close">✕</button>
   </div>
   <div class="panel-body">
@@ -87,6 +88,32 @@
 
     <div class="rw-section-title" id="apt-p-airlines-title" hidden data-i18n="airports.detail.airlines">AIRLINES / 以此為樞紐的航空公司</div>
     <div id="apt-p-airlines" class="apt-p-airlines"></div>
+
+    <div id="apt-data-edit" class="al-edit" hidden>
+      <div class="al-section-title">編輯資料 / EDIT DATA</div>
+      <div class="al-edit-grid">
+        <label class="al-edit-full">名稱（英文）<input type="text" id="apt-e-name" maxlength="120"></label>
+        <label class="al-edit-full">中文名稱<input type="text" id="apt-e-namezh" placeholder="例：桃園國際機場"></label>
+        <label class="al-edit-full">日文名稱<input type="text" id="apt-e-nameja" placeholder="例：台湾桃園国際空港"></label>
+        <label>城市<input type="text" id="apt-e-city"></label>
+        <label>國家代碼（2碼）<input type="text" id="apt-e-country" maxlength="2" placeholder="TW"></label>
+        <label>IATA（3碼）<input type="text" id="apt-e-iata" maxlength="3" placeholder="TPE"></label>
+        <label class="al-edit-full">類型<select id="apt-e-type">
+          <option value="large_airport">大型機場</option>
+          <option value="medium_airport">中型機場</option>
+          <option value="small_airport">小型機場</option>
+          <option value="heliport">直升機場</option>
+          <option value="seaplane_base">水上機場</option>
+          <option value="balloonport">熱氣球場</option>
+          <option value="closed">已關閉</option>
+        </select></label>
+      </div>
+      <div class="al-edit-actions">
+        <button id="apt-e-cancel" class="ghost">取消</button>
+        <button id="apt-e-save">儲存本機</button>
+        <button id="apt-e-publish">☁ 儲存到網站</button>
+      </div>
+    </div>
 
     <div class="apt-notes-title">
       <span data-i18n="airports.detail.notes">NOTES / 備註與歷史資訊</span>
@@ -195,11 +222,11 @@
   </div>
 </div>
 
-<script src="js/auth.js?v=123"></script>
-<script src="js/storage.js?v=123"></script>
-<script src="js/globe.js?v=123"></script>
-<script src="js/airports.js?v=123"></script>
-<script src="js/ui.js?v=123"></script>
+<script src="js/auth.js?v=124"></script>
+<script src="js/storage.js?v=124"></script>
+<script src="js/globe.js?v=124"></script>
+<script src="js/airports.js?v=124"></script>
+<script src="js/ui.js?v=124"></script>
 </body>
 </html>
 

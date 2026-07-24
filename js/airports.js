@@ -274,6 +274,16 @@ function catBlockAptCmp(catName, rows, ids){
   return `<tr class="cat-row"><td colspan="${ids.length + 1}">${catName}</td></tr>` + rowsHtml;
 }
 
+/* ── 機場資料編輯（本機草稿） ── */
+const APT_EDIT_LS_KEY = "hangar_apt_data_edits";
+function loadAptDataEdits(){ try { return JSON.parse(localStorage.getItem(APT_EDIT_LS_KEY) || "{}"); } catch { return {}; } }
+function getAptDataEdit(id){ return loadAptDataEdits()[id] || null; }
+function setAptDataEdit(id, edit){
+  const store = loadAptDataEdits();
+  if (edit && Object.keys(edit).length) store[id] = edit; else delete store[id];
+  localStorage.setItem(APT_EDIT_LS_KEY, JSON.stringify(store));
+}
+
 /* ── 機場備註／照片（本機自訂內容，僅存於使用者瀏覽器） ── */
 const NOTES_KEY = "hangar_apt_notes";
 function loadNotesStore(){
@@ -313,6 +323,17 @@ function escapeHTML(s){
         saveCustomAirports(loadCustomAirports().filter(c => !pubIds.has(c.id)));
       }
     } catch { /* airports_custom.json 不存在時忽略 */ }
+    // 合併已發布的資料修改（airports_data_edits.json）
+    try {
+      const er = await fetch("data/airports_data_edits.json");
+      if (er.ok) {
+        const edits = await er.json();
+        Object.entries(edits).forEach(([id, edit]) => {
+          const apt = AIRPORTS.find(a => a.id === id);
+          if (apt) Object.assign(apt, edit);
+        });
+      }
+    } catch { /* 尚無已發布的資料修改時忽略 */ }
     // 合併本機自訂機場（未發布），跳過與資料庫重複的 id
     const customs = loadCustomAirports();
     const existingIds = new Set(AIRPORTS.map(a => a.id));
@@ -420,6 +441,12 @@ function escapeHTML(s){
   $("sat-lb-in").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.min(19, satState.zoom + 1); renderSatLightbox(); });
   $("sat-lb-out").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.max(2, satState.zoom - 1); renderSatLightbox(); });
   $("sat-lightbox").addEventListener("click", e => { e.stopPropagation(); if (e.target.id === "sat-lightbox") closeSatLightbox(); });
+
+  // 機場資料編輯
+  $("apt-p-data-edit").addEventListener("click", () => openDataEditor($("panel").dataset.id));
+  $("apt-e-cancel").addEventListener("click", closeDataEditor);
+  $("apt-e-save").addEventListener("click", saveDataEditLocal);
+  $("apt-e-publish").addEventListener("click", publishDataEdits);
 
   // 機場備註／照片編輯
   $("apt-p-edit").addEventListener("click", () => openNotesEditor($("panel").dataset.id));
@@ -922,6 +949,68 @@ function renderEditingImages(){
   el.querySelectorAll(".apt-notes-imgdel").forEach(btn =>
     btn.addEventListener("click", () => { editingImages.splice(+btn.dataset.i, 1); renderEditingImages(); }));
 }
+function openDataEditor(id){
+  if (!id) return;
+  const base = AIRPORTS.find(x => x.id === id) || {};
+  const edit = getAptDataEdit(id) || {};
+  const a = { ...base, ...edit };
+  $("apt-e-name").value = a.name || "";
+  $("apt-e-namezh").value = a.nameZh || "";
+  $("apt-e-nameja").value = a.nameJa || "";
+  $("apt-e-city").value = a.city || "";
+  $("apt-e-country").value = a.country || "";
+  $("apt-e-iata").value = a.iata || "";
+  $("apt-e-type").value = a.type || "large_airport";
+  $("apt-data-edit").hidden = false;
+  $("apt-p-data-edit").hidden = true;
+}
+function closeDataEditor(){
+  $("apt-data-edit").hidden = true;
+  $("apt-p-data-edit").hidden = false;
+}
+function saveDataEditLocal(){
+  const id = $("panel").dataset.id;
+  if (!id) return;
+  const edit = {};
+  const name = $("apt-e-name").value.trim(); if (name) edit.name = name;
+  const nameZh = $("apt-e-namezh").value.trim(); if (nameZh) edit.nameZh = nameZh;
+  const nameJa = $("apt-e-nameja").value.trim(); if (nameJa) edit.nameJa = nameJa;
+  const city = $("apt-e-city").value.trim(); if (city) edit.city = city;
+  const country = $("apt-e-country").value.trim().toUpperCase(); if (country) edit.country = country;
+  const iata = $("apt-e-iata").value.trim().toUpperCase(); if (iata) edit.iata = iata;
+  edit.type = $("apt-e-type").value;
+  setAptDataEdit(id, edit);
+  closeDataEditor();
+  openAirport(id);
+}
+async function publishDataEdits(){
+  const allEdits = loadAptDataEdits();
+  if (!Object.keys(allEdits).length){ alert("沒有本機修改需要發布。"); return; }
+  const btn = $("apt-e-publish");
+  btn.disabled = true;
+  const orig = btn.textContent;
+  btn.textContent = "發布中…";
+  try {
+    await requireAuth();
+    const result = await Storage.save("airports_data_edits", allEdits);
+    if (result.ok){
+      Object.entries(allEdits).forEach(([id, edit]) => {
+        const apt = AIRPORTS.find(a => a.id === id);
+        if (apt) Object.assign(apt, edit);
+      });
+      localStorage.removeItem(APT_EDIT_LS_KEY);
+      alert(result.message || "發布成功！");
+      const curId = $("panel").dataset.id;
+      if (curId) openAirport(curId);
+    } else {
+      alert(result.message || "發布失敗。");
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = orig;
+  }
+}
+
 function openNotesEditor(id){
   if (!id) return;
   const notes = getNotes(id);
@@ -955,12 +1044,15 @@ function downscaleImg(file, maxW, quality){
 }
 
 async function openAirport(id){
-  const a = AIRPORTS.find(x => x.id === id);
-  if (!a) return;
+  const base = AIRPORTS.find(x => x.id === id);
+  if (!base) return;
+  const _draft = getAptDataEdit(id);
+  const a = _draft ? { ...base, ..._draft } : base;
   const panel = $("panel");
   panel.dataset.id = id;
   syncFavButton();
   syncCmpButton();
+  closeDataEditor();
   closeNotesEditor();
   renderNotesView(id);
   $("apt-p-type").textContent = I18N.t("airports.type." + a.type) || a.type;

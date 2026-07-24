@@ -156,6 +156,20 @@
   font-size:15px;cursor:pointer;transition:color .15s,border-color .15s;
 }
 .apt-p-share:hover{border-color:var(--amber);color:var(--amber)}
+#apt-p-data-edit{right:178px}
+
+/* ── 資料編輯表單 ── */
+.al-edit{margin-top:28px;padding-top:18px;border-top:1px solid var(--stroke)}
+.al-edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.al-edit label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--muted);margin-bottom:12px}
+.al-edit-full{grid-column:1 / -1}
+.al-edit input[type="text"],.al-edit select{display:block;width:100%;margin-top:5px;background:var(--bg-1);border:1px solid var(--stroke);border-radius:6px;padding:8px 10px;color:var(--text);font-family:var(--sans);font-size:13px;box-sizing:border-box}
+.al-edit input:focus,.al-edit select:focus{outline:none;border-color:var(--amber)}
+.al-edit-actions{display:flex;gap:10px;margin-top:6px}
+.al-edit-actions button{font-family:var(--mono);font-size:12px;letter-spacing:.05em;padding:9px 16px;border-radius:6px;cursor:pointer;border:1px solid var(--amber);background:var(--amber);color:var(--bg-0);font-weight:700}
+.al-edit-actions button.ghost{background:transparent;color:var(--muted);border-color:var(--stroke)}
+.al-edit-actions button:hover{opacity:.88}
+.al-section-title{font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--cyan);margin:26px 0 12px}
 
 /* ── 比較浮動列（累積待比較機場） ── */
 .apt-cmp-tray{
