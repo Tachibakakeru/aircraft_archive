@@ -12634,7 +12634,7 @@
       "id": "kea",
       "name": "Korea Express Air",
       "icao": "KEA",
-      "iata": "",
+      "iata": "KW",
       "country": {
         "zh": "韓國",
         "en": "South Korea",
@@ -12666,7 +12666,8 @@
       },
       "logoSrc": "radarbox_logos",
       "nameZh": "韓國快運航空",
-      "nameJa": "コリアエクスプレスエア"
+      "nameJa": "コリアエクスプレスエア",
+      "callsign": "KOREA EXPRESS"
     },
     {
       "id": "eza",
