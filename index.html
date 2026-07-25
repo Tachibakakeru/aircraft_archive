@@ -65,10 +65,10 @@ document.addEventListener("langchange", () => I18N.apply());
 (async () => {
   const fmt = n => n.toLocaleString();
   const [fleet, airlines, airports, knowledge] = await Promise.all([
-    fetch("data/fleet.json").then(r => r.json()),
-    fetch("data/airlines.json").then(r => r.json()),
-    fetch("data/airport_count.json").then(r => r.json()),
-    fetch("data/knowledge.json").then(r => r.json()),
+    fetch("data/fleet.json?v=127").then(r => r.json()),
+    fetch("data/airlines.json?v=127").then(r => r.json()),
+    fetch("data/airport_count.json?v=127").then(r => r.json()),
+    fetch("data/knowledge.json?v=127").then(r => r.json()),
   ]);
   document.getElementById("stat-aircraft").textContent = `${fmt(fleet.aircraft.length)} AIRCRAFT`;
   document.getElementById("stat-airports").textContent = `${fmt(airports.count)} AIRPORTS`;
