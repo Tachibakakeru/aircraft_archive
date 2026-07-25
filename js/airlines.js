@@ -384,15 +384,29 @@ function makeLogoEl(a, big){
 
 (async () => {
   const local = localStorage.getItem(EDIT_LS_KEY);
-  if (local){
-    try { FULL_DATA = JSON.parse(local); } catch { FULL_DATA = null; }
-  }
-  if (!FULL_DATA){
-    try {
-      const res = await fetch("data/airlines.json?v=128");
-      if (!res.ok) throw new Error(res.status);
-      FULL_DATA = await res.json();
-    } catch {
+  try {
+    const res = await fetch("data/airlines.json?v=130");
+    if (!res.ok) throw new Error(res.status);
+    FULL_DATA = await res.json();
+    // 本機草稿只依 id 疊加在伺服器資料上，不整批取代——否則舊草稿
+    // 會把草稿存檔後才新增的公司全部蓋掉（曾導致頁面永遠停在 577 家）
+    if (local){
+      try {
+        const draft = JSON.parse(local);
+        const byId = new Map(FULL_DATA.airlines.map(a => [a.id, a]));
+        draft.airlines.forEach(d => {
+          const base = byId.get(d.id);
+          if (base) Object.assign(base, d);
+          else FULL_DATA.airlines.push(d);
+        });
+      } catch { /* 草稿毀損時忽略，改用純伺服器資料 */ }
+    }
+  } catch {
+    // 離線／伺服器失敗：退回本機草稿，至少還能看到自己編過的資料
+    if (local){
+      try { FULL_DATA = JSON.parse(local); } catch { FULL_DATA = null; }
+    }
+    if (!FULL_DATA){
       $("al-list").innerHTML = "";
       $("al-empty").hidden = false;
       $("al-empty").textContent = I18N.t("airlines.loaderror");
@@ -401,11 +415,11 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=128");
+    const geoRes = await fetch("data/airline_geo.json?v=130");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=128");
+    const codesRes = await fetch("data/airport_codes.json?v=130");
     if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
