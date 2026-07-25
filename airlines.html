@@ -7,12 +7,12 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=125">
-<link rel="stylesheet" href="css/compare.css?v=125">
-<link rel="stylesheet" href="css/airports.css?v=125">
-<link rel="stylesheet" href="css/airlines.css?v=125">
-<script src="js/theme.js?v=125"></script>
-<script src="js/i18n.js?v=125"></script>
+<link rel="stylesheet" href="css/style.css?v=127">
+<link rel="stylesheet" href="css/compare.css?v=127">
+<link rel="stylesheet" href="css/airports.css?v=127">
+<link rel="stylesheet" href="css/airlines.css?v=127">
+<script src="js/theme.js?v=127"></script>
+<script src="js/i18n.js?v=127"></script>
 </head>
 <body>
 
@@ -122,12 +122,24 @@
         <input type="text" id="al-e-country-en" placeholder="English">
         <input type="text" id="al-e-country-ja" placeholder="日本語">
       </label>
-      <label class="al-edit-full">主要樞紐（以逗號分隔，可直接輸入 ICAO/IATA 代碼如 NRT／RJAA，顯示時會自動轉成機場名稱並上連結）<input type="text" id="al-e-hubs" placeholder="RCTP, NRT"></label>
+      <label class="al-edit-full">主要樞紐
+        <div class="al-tag-wrap" id="al-e-hubs-wrap">
+          <div class="al-tag-chips" id="al-e-hubs-chips"></div>
+          <input type="text" class="al-tag-input" id="al-e-hubs-input" placeholder="輸入 ICAO/IATA 或機場名稱…" autocomplete="off">
+          <div class="al-tag-suggest" id="al-e-hubs-suggest" hidden></div>
+        </div>
+      </label>
       <label class="al-edit-full">機隊總數<input type="number" id="al-e-fleettotal"></label>
       <label class="al-edit-full">機隊組成（每行一筆，格式：機型：數量：對應機型ID（選填））
         <textarea id="al-e-fleet" rows="3" placeholder="Airbus A350-900：14：a350"></textarea>
       </label>
-      <label class="al-edit-full">代表性航線（以逗號分隔，同樣可輸入 ICAO/IATA 代碼）<textarea id="al-e-routes" rows="2" placeholder="NRT, LAX, 洛杉磯"></textarea></label>
+      <label class="al-edit-full">代表性航線
+        <div class="al-tag-wrap" id="al-e-routes-wrap">
+          <div class="al-tag-chips" id="al-e-routes-chips"></div>
+          <input type="text" class="al-tag-input" id="al-e-routes-input" placeholder="輸入 ICAO/IATA 或機場名稱…" autocomplete="off">
+          <div class="al-tag-suggest" id="al-e-routes-suggest" hidden></div>
+        </div>
+      </label>
       <label class="al-edit-full">簡介（中文）<textarea id="al-e-tagline-zh" rows="3"></textarea></label>
       <label class="al-edit-full">簡介（English）<textarea id="al-e-tagline-en" rows="3"></textarea></label>
       <label class="al-edit-full">簡介（日本語）<textarea id="al-e-tagline-ja" rows="3"></textarea></label>
@@ -163,11 +175,11 @@
   </div>
 </div>
 
-<script src="js/auth.js?v=125"></script>
-<script src="js/storage.js?v=125"></script>
-<script src="js/globe.js?v=125"></script>
-<script src="js/airlines.js?v=125"></script>
-<script src="js/ui.js?v=125"></script>
+<script src="js/auth.js?v=127"></script>
+<script src="js/storage.js?v=127"></script>
+<script src="js/globe.js?v=127"></script>
+<script src="js/airlines.js?v=127"></script>
+<script src="js/ui.js?v=127"></script>
 </body>
 </html>
 

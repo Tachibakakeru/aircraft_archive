@@ -21,6 +21,83 @@ let globeMode = false;
 // 直接輸入代碼（如 "NRT"），不需要等離線腳本重新比對，顯示時就能即時
 // 解析出真正的機場名稱並連結到機場頁。
 let AIRPORT_CODES = {};
+function searchAirports(q){
+  if (!q || q.length < 2) return [];
+  const upper = q.toUpperCase();
+  const lower = q.toLowerCase();
+  const results = [];
+  for (const [code, a] of Object.entries(AIRPORT_CODES)){
+    if (code.startsWith(upper) || (a.name && a.name.toLowerCase().includes(lower)) || (a.city && a.city.toLowerCase().includes(lower)))
+      results.push([code, a]);
+    if (results.length >= 8) break;
+  }
+  return results.sort(([ca], [cb]) => {
+    const rank = c => c === upper ? 0 : c.startsWith(upper) ? 1 : 2;
+    return rank(ca) - rank(cb);
+  });
+}
+
+function makeTagInput(inputId, suggestId, chipsId, onChange){
+  const chips = [];
+  function renderChips(){
+    const el = $(chipsId);
+    el.innerHTML = chips.map((c, i) =>
+      `<span class="al-tag-chip">${escHTML(c.display)}<button type="button" data-i="${i}" title="移除">✕</button></span>`
+    ).join("");
+    el.querySelectorAll("button[data-i]").forEach(b =>
+      b.addEventListener("click", e => { e.stopPropagation(); chips.splice(+b.dataset.i, 1); renderChips(); onChange && onChange(); })
+    );
+  }
+  function addChip(display, code, airportId){
+    chips.push({ display, code, airportId });
+    renderChips();
+    $(inputId).value = "";
+    $(suggestId).hidden = true;
+    onChange && onChange();
+  }
+  $(inputId).addEventListener("input", () => {
+    const q = $(inputId).value.trim();
+    if (q.length < 2){ $(suggestId).hidden = true; return; }
+    const res = searchAirports(q);
+    if (!res.length){ $(suggestId).hidden = true; return; }
+    $(suggestId).innerHTML = res.map(([code, a]) =>
+      `<div class="al-tag-opt" data-code="${escHTML(code)}" data-id="${escHTML(a.id)}" data-name="${escHTML(a.city || a.name)}">
+        <span>${escHTML(a.city || a.name)}</span><span class="al-tag-opt-code">${escHTML(code)}</span>
+      </div>`
+    ).join("");
+    $(suggestId).hidden = false;
+  });
+  $(inputId).addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === "Tab"){
+      const q = $(inputId).value.trim();
+      if (!q) return;
+      const resolved = resolveAirportCode(q);
+      addChip(resolved ? (resolved.name) : q, q.toUpperCase(), resolved ? resolved.id : null);
+      e.preventDefault();
+    }
+  });
+  $(suggestId).addEventListener("mousedown", e => {
+    const opt = e.target.closest(".al-tag-opt");
+    if (!opt) return;
+    e.preventDefault();
+    addChip(opt.dataset.name, opt.dataset.code, opt.dataset.id);
+  });
+  $(inputId).addEventListener("blur", () => setTimeout(() => { $(suggestId).hidden = true; }, 150));
+  return {
+    get(){ return chips.map(c => c.code || c.display); },
+    set(values){
+      chips.length = 0;
+      (values || []).forEach(v => {
+        const resolved = resolveAirportCode(v);
+        chips.push({ display: resolved ? resolved.name : v, code: v, airportId: resolved ? resolved.id : null });
+      });
+      renderChips();
+    }
+  };
+}
+
+let hubTagInput, routeTagInput;
+
 function resolveAirportCode(text){
   const code = text.trim().toUpperCase();
   if (!/^[A-Z0-9]{3,4}$/.test(code)) return null;
@@ -707,8 +784,8 @@ async function openNewAirlineForm(){
 // ── 編輯功能：僅本機暫存，需通過密碼驗證後點「儲存到網站」才會公開 ──
 const EDIT_FIELD_IDS = [
   "al-e-name", "al-e-namezh", "al-e-nameja", "al-e-icao", "al-e-iata", "al-e-callsign", "al-e-founded", "al-e-alliance", "al-e-tier",
-  "al-e-country-zh", "al-e-country-en", "al-e-country-ja", "al-e-hubs", "al-e-fleettotal",
-  "al-e-fleet", "al-e-routes", "al-e-tagline-zh", "al-e-tagline-en", "al-e-tagline-ja",
+  "al-e-country-zh", "al-e-country-en", "al-e-country-ja", "al-e-fleettotal",
+  "al-e-fleet", "al-e-tagline-zh", "al-e-tagline-en", "al-e-tagline-ja",
   "al-e-customlogo", "al-e-photo",
 ];
 
@@ -727,10 +804,10 @@ function openEditor(id){
   $("al-e-country-zh").value = (a.country && a.country.zh) || "";
   $("al-e-country-en").value = (a.country && a.country.en) || "";
   $("al-e-country-ja").value = (a.country && a.country.ja) || "";
-  $("al-e-hubs").value = (a.hubs || []).join(", ");
+  hubTagInput.set(a.hubs || []);
   $("al-e-fleettotal").value = a.fleetTotal != null ? a.fleetTotal : "";
   $("al-e-fleet").value = (a.fleet || []).map(f => [f.type, f.count, f.fleetId || ""].join("：")).join("\n");
-  $("al-e-routes").value = (a.routes || []).join(", ");
+  routeTagInput.set(a.routes || []);
   $("al-e-tagline-zh").value = (a.tagline && a.tagline.zh) || "";
   $("al-e-tagline-en").value = (a.tagline && a.tagline.en) || "";
   $("al-e-tagline-ja").value = (a.tagline && a.tagline.ja) || "";
@@ -764,7 +841,7 @@ function applyEditForm(a){
     en: $("al-e-country-en").value.trim(),
     ja: $("al-e-country-ja").value.trim(),
   };
-  a.hubs = $("al-e-hubs").value.split(",").map(s => s.trim()).filter(Boolean);
+  a.hubs = hubTagInput.get();
   const fleetTotal = parseInt($("al-e-fleettotal").value, 10);
   a.fleetTotal = Number.isFinite(fleetTotal) ? fleetTotal : null;
   a.fleet = $("al-e-fleet").value.split("\n").map(line => {
@@ -774,7 +851,7 @@ function applyEditForm(a){
     if (!Number.isFinite(count)) return null;
     return { type: parts[0], count, ...(parts[2] ? { fleetId: parts[2] } : {}) };
   }).filter(Boolean);
-  a.routes = $("al-e-routes").value.split(",").map(s => s.trim()).filter(Boolean);
+  a.routes = routeTagInput.get();
   a.tagline = {
     zh: $("al-e-tagline-zh").value.trim(),
     en: $("al-e-tagline-en").value.trim(),
@@ -792,6 +869,15 @@ function persistDraft(){
 }
 
 function wireEditForm(){
+  function tagChanged(){
+    const a = currentEditTarget();
+    if (!a) return;
+    applyEditForm(a);
+    persistDraft();
+  }
+  hubTagInput = makeTagInput("al-e-hubs-input", "al-e-hubs-suggest", "al-e-hubs-chips", tagChanged);
+  routeTagInput = makeTagInput("al-e-routes-input", "al-e-routes-suggest", "al-e-routes-chips", tagChanged);
+
   EDIT_FIELD_IDS.forEach(id => {
     $(id).addEventListener("input", () => {
       const a = currentEditTarget();

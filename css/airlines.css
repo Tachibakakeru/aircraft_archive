@@ -171,6 +171,29 @@ a.al-route-chip:hover{border-color:var(--cyan);color:var(--cyan)}
 .al-p-tagline{margin-top:22px;font-size:14px;line-height:1.85;color:var(--text)}
 .al-empty-inline{color:var(--muted);font-size:13px;padding:8px 0}
 
+/* ── 樞紐／航線 tag-input ── */
+.al-tag-wrap{
+  position:relative;margin-top:5px;
+  background:var(--bg-1);border:1px solid var(--stroke);border-radius:6px;
+  padding:6px 8px;min-height:38px;display:flex;flex-wrap:wrap;gap:4px;align-items:center;
+}
+.al-tag-wrap:focus-within{border-color:var(--amber)}
+.al-tag-chip{
+  display:inline-flex;align-items:center;gap:4px;
+  background:var(--amber-soft);color:var(--amber);
+  border-radius:4px;padding:3px 8px;font-size:12px;font-family:var(--mono);white-space:nowrap;
+}
+.al-tag-chip button{background:none;border:none;color:inherit;cursor:pointer;padding:0;font-size:14px;line-height:1}
+.al-tag-input{flex:1;min-width:120px;background:transparent;border:none;outline:none;color:var(--text);font-family:var(--sans);font-size:13px;padding:2px 4px}
+.al-tag-suggest{
+  position:absolute;left:0;right:0;top:calc(100% + 2px);z-index:60;
+  background:var(--panel);border:1px solid var(--stroke);border-radius:6px;
+  box-shadow:0 4px 16px rgba(0,0,0,.28);overflow:hidden;max-height:220px;overflow-y:auto;
+}
+.al-tag-opt{padding:9px 12px;cursor:pointer;font-size:13px;display:flex;align-items:center;gap:8px}
+.al-tag-opt:hover{background:var(--amber-soft)}
+.al-tag-opt-code{font-family:var(--mono);font-size:11px;color:var(--muted);flex-shrink:0}
+
 @media (max-width:640px){
   .al-row{padding:10px 12px}
 }
