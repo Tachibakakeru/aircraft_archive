@@ -420,7 +420,7 @@ function makeLogoEl(a, big){
 (async () => {
   const local = localStorage.getItem(EDIT_LS_KEY);
   try {
-    const res = await fetch("data/airlines.json?v=131");
+    const res = await fetch("data/airlines.json?v=132");
     if (!res.ok) throw new Error(res.status);
     FULL_DATA = await res.json();
     // 本機草稿只依 id 疊加在伺服器資料上，不整批取代——否則舊草稿
@@ -450,11 +450,11 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=131");
+    const geoRes = await fetch("data/airline_geo.json?v=132");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=131");
+    const codesRes = await fetch("data/airport_codes.json?v=132");
     if (codesRes.ok){ AIRPORT_CODES = await codesRes.json(); MULTI_AIRPORT_CITIES = null; }
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -743,6 +743,11 @@ function routesHTML(a){
 }
 
 function openAirline(id){
+  // 切去別家公司時，順便捨棄前一家「未按儲存本機」的編輯——否則點列表
+  // 切換公司不會觸發 closePanel()（見下方 document click 的 .al-row
+  // 排除），未儲存的變動會繼續留在記憶體裡。id 相同代表是編輯器自己
+  // 即時預覽觸發的重繪，不能在這裡誤把剛打的字給還原掉。
+  if (editSnapshot && editSnapshot.id !== id) revertEditSnapshot();
   const a = AIRLINES.find(x => x.id === id);
   if (!a) return;
   const panel = $("panel");
@@ -805,6 +810,7 @@ function openAirline(id){
 
 function closePanel(){
   const panel = $("panel");
+  revertEditSnapshot();   // 捨棄編輯器裡「未按儲存本機」的變動，見 takeEditSnapshot 說明
   // 若正在建立新條目但未儲存（名稱空白），移除暫存的 blank
   const id = panel.dataset.id;
   if (id && id.startsWith("custom-")) {
@@ -862,6 +868,7 @@ function openEditor(id){
   $("al-e-tagline-ja").value = (a.tagline && a.tagline.ja) || "";
   $("al-e-customlogo").value = a.customLogo || "";
   $("al-e-photo").value = a.photo || "";
+  takeEditSnapshot(a);
   $("al-edit").hidden = false;
   $("al-edit").scrollIntoView({ block: "nearest" });
 }
@@ -917,12 +924,34 @@ function persistDraft(){
   catch { toast("暫存失敗：資料可能過大"); }
 }
 
+// 編輯快照：applyEditForm() 直接改在 AIRLINES/FULL_DATA 的物件本體上，
+// 打字當下就能即時預覽，但這代表沒有明確按「儲存本機」的變動也已經
+// 生效在記憶體裡——如果同時每次 input 都呼叫 persistDraft()，等於連
+// 手滑打錯字、還沒按儲存就切走頁面，也會被寫進 localStorage 永久留著。
+// 進編輯器時存一份快照，「取消」（含按 Esc、點面板外）才把物件內容
+// 還原回快照；「儲存本機」則把快照往前推到當下這一刻，之後取消只會
+// 復原那之後的變動。
+let editSnapshot = null;
+
+function takeEditSnapshot(a){
+  editSnapshot = JSON.parse(JSON.stringify(a));
+}
+
+function revertEditSnapshot(){
+  if (!editSnapshot) return;
+  const a = AIRLINES.find(x => x.id === editSnapshot.id);
+  if (a){
+    Object.keys(a).forEach(k => delete a[k]);
+    Object.assign(a, editSnapshot);
+  }
+  editSnapshot = null;
+}
+
 function wireEditForm(){
   function tagChanged(){
     const a = currentEditTarget();
     if (!a) return;
     applyEditForm(a);
-    persistDraft();
   }
   hubTagInput = makeTagInput("al-e-hubs-input", "al-e-hubs-suggest", "al-e-hubs-chips", tagChanged);
   routeTagInput = makeTagInput("al-e-routes-input", "al-e-routes-suggest", "al-e-routes-chips", tagChanged);
@@ -932,7 +961,6 @@ function wireEditForm(){
       const a = currentEditTarget();
       if (!a) return;
       applyEditForm(a);
-      persistDraft();
       openAirline(a.id);
       $("al-edit").hidden = false;
     });
@@ -948,22 +976,37 @@ function wireEditForm(){
       if (!a || !file) return;
       $(textId).value = await downscale(file, maxW, q, mime);
       applyEditForm(a);
-      persistDraft();
       openAirline(a.id);
       $("al-edit").hidden = false;
       e.target.value = "";
     });
   });
 
+  $("al-edit-save-local").addEventListener("click", () => {
+    const a = currentEditTarget();
+    if (!a) return;
+    applyEditForm(a);
+    persistDraft();
+    takeEditSnapshot(a);   // 重新設定基準點，之後「取消」只會復原這次之後的變動
+    openAirline(a.id);
+    toast("已儲存本機暫存");
+  });
+
   $("al-edit-save").addEventListener("click", async () => {
     const btn = $("al-edit-save");
+    const a = currentEditTarget();
+    if (!a) return;
+    applyEditForm(a);
     const original = btn.textContent;
     btn.disabled = true;
     btn.textContent = "儲存中…";
     try {
       const result = await Storage.save("airlines", FULL_DATA);
       toast(result.message);
-      if (result.ok && result.pushed) localStorage.removeItem(EDIT_LS_KEY);
+      if (result.ok && result.pushed){
+        localStorage.removeItem(EDIT_LS_KEY);
+        editSnapshot = null;   // 已成功發布到網站，不該再被「取消」還原掉
+      }
       applyAll();
     } catch (e){
       toast("儲存失敗：" + e.message);
