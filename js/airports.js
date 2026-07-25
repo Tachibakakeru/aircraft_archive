@@ -339,11 +339,13 @@ function escapeHTML(s){
     const existingIds = new Set(AIRPORTS.map(a => a.id));
     customs.forEach(c => { if (!existingIds.has(c.id)) AIRPORTS.push(c); });
   } catch {
+    $("apt-loading").hidden = true;
     $("apt-list").innerHTML = "";
     $("apt-empty").hidden = false;
     $("apt-empty").textContent = I18N.t("airports.loaderror");
     return;
   }
+  $("apt-loading").hidden = true;
   try {
     const res = await fetch("data/city_names.json?v=128");
     if (res.ok) CITY_NAMES = await res.json();

@@ -11,4 +11,4 @@ class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
         pass  # suppress per-request noise
 
 if __name__ == "__main__":
-    http.server.test(HandlerClass=NoCacheHandler, port=8000, bind="")
+    http.server.test(HandlerClass=NoCacheHandler, port=8000)
