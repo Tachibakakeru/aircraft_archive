@@ -996,7 +996,8 @@
       "founded": 1962,
       "alliance": "skyteam",
       "hubs": [
-        "Seoul Incheon"
+        "ICN",
+        "GMP"
       ],
       "fleetTotal": 160,
       "fleet": [
@@ -1027,10 +1028,10 @@
         }
       ],
       "routes": [
-        "New York JFK",
-        "London Heathrow",
-        "São Paulo",
-        "Nairobi"
+        "JFK",
+        "LHR",
+        "GRU",
+        "NBO"
       ],
       "tagline": {
         "zh": "韓國最大航空，正推動與韓亞航空合併，將成為全球前十大航空集團之一。",
@@ -3653,16 +3654,57 @@
         "en": "Republic of Korea",
         "ja": "Republic of Korea"
       },
-      "founded": null,
-      "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
+      "founded": 1988,
+      "alliance": "star",
+      "tier": "mainline",
+      "hubs": [
+        "ICN",
+        "GMP"
+      ],
+      "fleetTotal": 73,
+      "fleet": [
+        {
+          "type": "Airbus A321",
+          "count": 28,
+          "fleetId": "a321"
+        },
+        {
+          "type": "Airbus A330-300",
+          "count": 15,
+          "fleetId": "a333"
+        },
+        {
+          "type": "Airbus A350-900",
+          "count": 15,
+          "fleetId": "a359"
+        },
+        {
+          "type": "Boeing 777-200ER",
+          "count": 9,
+          "fleetId": "b772"
+        },
+        {
+          "type": "Airbus A380-841",
+          "count": 6,
+          "fleetId": "a380"
+        }
+      ],
+      "routes": [
+        "LAX",
+        "JFK",
+        "FRA",
+        "NRT",
+        "SYD"
+      ],
+      "tagline": {
+        "zh": "韓國第二大航空公司，以高品質服務著稱，目前正與大韓航空進行合併程序。",
+        "en": "South Korea's second-largest airline, known for high-quality service, currently undergoing a merger with Korean Air.",
+        "ja": "韓国第2位の航空会社。高品質なサービスで知られ、現在大韓航空との統合手続きが進行中。"
+      },
       "logoSrc": "flightaware_logos",
-      "callsign": "ASIANA"
+      "callsign": "ASIANA",
+      "nameZh": "韓亞航空",
+      "nameJa": "アシアナ航空"
     },
     {
       "id": "aaw",
@@ -7889,16 +7931,38 @@
         "en": "Republic of Korea",
         "ja": "Republic of Korea"
       },
-      "founded": null,
-      "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
+      "founded": 2005,
+      "alliance": "value",
+      "tier": "lcc",
+      "hubs": [
+        "CJU",
+        "GMP",
+        "ICN"
+      ],
+      "fleetTotal": 40,
+      "fleet": [
+        {
+          "type": "Boeing 737-800 / MAX",
+          "count": 40,
+          "fleetId": "b738"
+        }
+      ],
+      "routes": [
+        "KIX",
+        "NRT",
+        "BKK",
+        "TPE",
+        "GUM"
+      ],
+      "tagline": {
+        "zh": "韓國首家且規模最大的低成本航空公司(LCC)，以濟州島為基地，航線遍布亞太地區。",
+        "en": "South Korea's first and largest low-cost carrier (LCC), based in Jeju Island, with a network covering the Asia-Pacific region.",
+        "ja": "韓国初にして最大のLCC（格安航空会社）。済州島を拠点とし、アジア太平洋地域にネットワークを広げる。"
+      },
       "logoSrc": "flightaware_logos",
-      "callsign": "JEJU AIR"
+      "callsign": "JEJU AIR",
+      "nameZh": "濟州航空",
+      "nameJa": "チェジュ航空"
     },
     {
       "id": "jai",
@@ -11692,16 +11756,42 @@
         "en": "Republic of Korea",
         "ja": "Republic of Korea"
       },
-      "founded": null,
+      "founded": 2007,
       "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
+      "tier": "lcc",
+      "hubs": [
+        "PUS",
+        "GMP"
+      ],
+      "fleetTotal": 21,
+      "fleet": [
+        {
+          "type": "Airbus A320",
+          "count": 6,
+          "fleetId": "a320"
+        },
+        {
+          "type": "Airbus A321 / neo",
+          "count": 15,
+          "fleetId": "a321"
+        }
+      ],
+      "routes": [
+        "FUK",
+        "KIX",
+        "TPE",
+        "DAD",
+        "GUM"
+      ],
+      "tagline": {
+        "zh": "韓亞航空旗下的低成本航空，以釜山金海國際機場為主要樞紐，深耕韓國南部市場。",
+        "en": "A low-cost carrier subsidiary of Asiana Airlines, operating primarily from its hub at Busan Gimhae International Airport.",
+        "ja": "アシアナ航空傘下のLCC。釜山金海国際空港を主要ハブとし、韓国南部市場に注力している。"
+      },
       "logoSrc": "flightaware_logos",
-      "callsign": "AIRCOACH"
+      "callsign": "AIRCOACH",
+      "nameZh": "釜山航空",
+      "nameJa": "エアプサン"
     },
     {
       "id": "glp",
@@ -11942,16 +12032,36 @@
         "en": "South Korea",
         "ja": "South Korea"
       },
-      "founded": null,
-      "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
+      "founded": 2007,
+      "alliance": "ufly",
+      "tier": "lcc",
+      "hubs": [
+        "GMP",
+        "ICN"
+      ],
+      "fleetTotal": 14,
+      "fleet": [
+        {
+          "type": "Boeing 737-800 / MAX",
+          "count": 14,
+          "fleetId": "b738"
+        }
+      ],
+      "routes": [
+        "NRT",
+        "KIX",
+        "TPE",
+        "BKK"
+      ],
+      "tagline": {
+        "zh": "曾因財務危機停飛，於2023年重新復航的低成本航空公司。",
+        "en": "A low-cost carrier that resumed operations in 2023 after being grounded due to financial difficulties.",
+        "ja": "財務危機による運航停止を経て、2023年に運航を再開したLCC。"
+      },
       "logoSrc": "flightaware_logos",
-      "callsign": "EASTAR"
+      "callsign": "EASTAR",
+      "nameZh": "易斯達航空",
+      "nameJa": "イースター航空"
     },
     {
       "id": "jna",
@@ -11963,16 +12073,42 @@
         "en": "South Korea",
         "ja": "South Korea"
       },
-      "founded": null,
+      "founded": 2008,
       "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
+      "tier": "lcc",
+      "hubs": [
+        "GMP",
+        "ICN"
+      ],
+      "fleetTotal": 27,
+      "fleet": [
+        {
+          "type": "Boeing 737-800 / MAX",
+          "count": 23,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Boeing 777-200ER",
+          "count": 4,
+          "fleetId": "b772"
+        }
+      ],
+      "routes": [
+        "HNL",
+        "GUM",
+        "KIX",
+        "TPE",
+        "BKK"
+      ],
+      "tagline": {
+        "zh": "大韓航空旗下的低成本航空，是韓國唯一營運廣體客機(777)的低成本航空公司。",
+        "en": "A low-cost subsidiary of Korean Air, and the only South Korean LCC operating wide-body aircraft (Boeing 777).",
+        "ja": "大韓航空傘下のLCC。韓国のLCCとして唯一、広胴機（ボーイング777）を運航する。"
+      },
       "logoSrc": "flightaware_logos",
-      "callsign": "JIN AIR"
+      "callsign": "JIN AIR",
+      "nameZh": "真航空",
+      "nameJa": "ジンエアー"
     },
     {
       "id": "flb",
@@ -12463,15 +12599,33 @@
         "en": "South Korea",
         "ja": "South Korea"
       },
-      "founded": null,
+      "founded": 2005,
       "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
-      "logoSrc": "radarbox_logos"
+      "tier": "regional",
+      "hubs": [
+        "YNY"
+      ],
+      "fleetTotal": 3,
+      "fleet": [
+        {
+          "type": "Embraer ERJ-145",
+          "count": 3,
+          "fleetId": "e145"
+        }
+      ],
+      "routes": [
+        "PUS",
+        "CJU",
+        "KKJ"
+      ],
+      "tagline": {
+        "zh": "韓國的區域航空公司，曾以襄陽國際機場為基地，營運50座級的客機，目前暫停營運中。",
+        "en": "A South Korean regional airline formerly based at Yangyang Airport. Currently suspended operations.",
+        "ja": "かつて襄陽国際空港を拠点とした韓国の地域航空会社。現在は運航停止中。"
+      },
+      "logoSrc": "radarbox_logos",
+      "nameZh": "可依航空",
+      "nameJa": "コリアエクスプレスエア"
     },
     {
       "id": "eza",
@@ -12671,16 +12825,43 @@
         "en": "South Korea",
         "ja": "South Korea"
       },
-      "founded": null,
+      "founded": 2010,
       "alliance": "none",
-      "tier": null,
-      "hubs": [],
-      "fleetTotal": null,
-      "fleet": [],
-      "routes": [],
-      "tagline": {},
+      "tier": "lcc",
+      "hubs": [
+        "GMP",
+        "ICN",
+        "TAE"
+      ],
+      "fleetTotal": 31,
+      "fleet": [
+        {
+          "type": "Boeing 737-800 / MAX",
+          "count": 28,
+          "fleetId": "b738"
+        },
+        {
+          "type": "Airbus A330-300",
+          "count": 3,
+          "fleetId": "a333"
+        }
+      ],
+      "routes": [
+        "NRT",
+        "KIX",
+        "TPE",
+        "SYD",
+        "ZAG"
+      ],
+      "tagline": {
+        "zh": "韓國第三大低成本航空公司，近年積極擴張中長程航線，甚至飛航至雪梨及歐洲。",
+        "en": "South Korea's third-largest LCC, actively expanding into medium- and long-haul routes including Sydney and Europe.",
+        "ja": "韓国第3位のLCC。近年はシドニーやヨーロッパなど、中長距離路線の拡大に積極的。"
+      },
       "logoSrc": "flightaware_logos",
-      "callsign": "TWAYAIR"
+      "callsign": "TWAYAIR",
+      "nameZh": "德威航空",
+      "nameJa": "ティーウェイ航空"
     },
     {
       "id": "srn",
@@ -14268,6 +14449,117 @@
       "logoSrc": "flightaware_logos",
       "nameZh": "越竹航空",
       "nameJa": "バンブー・エアウェイズ"
+    },
+    {
+      "id": "asv",
+      "name": "Air Seoul",
+      "icao": "ASV",
+      "iata": "RS",
+      "country": {
+        "zh": "韓國",
+        "en": "South Korea",
+        "ja": "韓国"
+      },
+      "founded": 2015,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "ICN"
+      ],
+      "fleetTotal": 6,
+      "fleet": [
+        {
+          "type": "Airbus A321",
+          "count": 6,
+          "fleetId": "a321"
+        }
+      ],
+      "routes": [
+        "NRT",
+        "KIX",
+        "FUK",
+        "DAD",
+        "CXR"
+      ],
+      "tagline": {
+        "zh": "韓亞航空旗下的第二家低成本航空公司，總部位於首爾，主要飛航國際短程航線。",
+        "en": "A low-cost carrier subsidiary of Asiana Airlines based in Seoul, focusing primarily on short-haul international routes.",
+        "ja": "アシアナ航空傘下の2番目のLCC。ソウルを拠点とし、主に国際短距離路線を運航する。"
+      },
+      "nameZh": "首爾航空",
+      "nameJa": "エアソウル",
+      "callsign": "AIR SEOUL",
+      "logoSrc": "flightaware_logos"
+    },
+    {
+      "id": "eok",
+      "name": "Aero K",
+      "icao": "EOK",
+      "iata": "RF",
+      "country": {
+        "zh": "韓國",
+        "en": "South Korea",
+        "ja": "韓国"
+      },
+      "founded": 2016,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "CJJ"
+      ],
+      "fleetTotal": 6,
+      "fleet": [
+        {
+          "type": "Airbus A320",
+          "count": 6,
+          "fleetId": "a320"
+        }
+      ],
+      "routes": [
+        "CJU",
+        "NRT",
+        "TPE",
+        "CRK",
+        "DAD"
+      ],
+      "tagline": {
+        "zh": "以清州國際機場為基地的韓國低成本航空，致力於以創新形象顛覆傳統航空市場。",
+        "en": "A South Korean LCC based at Cheongju International Airport, aiming to disrupt the traditional aviation market with an innovative image.",
+        "ja": "清州国際空港を拠点とする韓国のLCC。革新的なイメージで従来の航空市場に変革をもたらすことを目指す。"
+      },
+      "nameZh": "可依航空",
+      "nameJa": "エアロK",
+      "callsign": "AERO K",
+      "logoSrc": "flightaware_logos"
+    },
+    {
+      "id": "fgw",
+      "name": "Parata Airlines",
+      "icao": "PTA",
+      "iata": "WE",
+      "country": {
+        "zh": "韓國",
+        "en": "South Korea",
+        "ja": "韓国"
+      },
+      "founded": 2016,
+      "alliance": "none",
+      "tier": "lcc",
+      "hubs": [
+        "YNY"
+      ],
+      "fleetTotal": 0,
+      "fleet": [],
+      "routes": [],
+      "tagline": {
+        "zh": "前身為江原航空(Fly Gangwon)，更名後重新出發，是一家韓國低成本航空公司。",
+        "en": "Formerly known as Fly Gangwon, rebranded and relaunched as a South Korean LCC.",
+        "ja": "旧フライカンウォン。名称変更して再出発した韓国のLCC。"
+      },
+      "nameZh": "帕拉塔航空",
+      "nameJa": "パラタ航空",
+      "callsign": "GANGWON",
+      "logoSrc": "flightaware_logos"
     }
   ]
 }
