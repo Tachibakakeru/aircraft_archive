@@ -1,11 +1,11 @@
 {
-  "RCMQ": {
-    "name": "Taichung International Airport / Ching Chuang Kang Air Base",
-    "nameZh": "臺中清泉崗機場 / 台中國際機場",
-    "nameJa": "台中国際空港",
-    "city": "Taichung (Qingshui)",
-    "country": "TW",
-    "iata": "RMQ",
+  "RKNY": {
+    "name": "Yangyang International Airport",
+    "nameZh": "襄陽國際機場",
+    "nameJa": "襄陽国際空港",
+    "city": "Gonghang-ro",
+    "country": "KR",
+    "iata": "YNY",
     "type": "large_airport"
   }
 }
