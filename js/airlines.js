@@ -389,7 +389,7 @@ function makeLogoEl(a, big){
   }
   if (!FULL_DATA){
     try {
-      const res = await fetch("data/airlines.json?v=127");
+      const res = await fetch("data/airlines.json?v=128");
       if (!res.ok) throw new Error(res.status);
       FULL_DATA = await res.json();
     } catch {
@@ -401,11 +401,11 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=127");
+    const geoRes = await fetch("data/airline_geo.json?v=128");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=127");
+    const codesRes = await fetch("data/airport_codes.json?v=128");
     if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
