@@ -133,7 +133,7 @@ async function requireAuth(){
         ${firstTime ? '<input type="password" id="auth-confirm" placeholder="再次輸入確認…" autocomplete="off">' : ''}
         <div class="auth-err" id="auth-err"></div>
         <div class="auth-actions">
-          <a href="fleet.html" class="auth-cancel">← 返回列表</a>
+          <button type="button" id="auth-cancel" class="auth-cancel">← 返回列表</button>
           <button id="auth-submit">${firstTime ? "設定並進入" : "解鎖"}</button>
         </div>
       </div>`;
@@ -171,6 +171,7 @@ async function requireAuth(){
       }
     }
 
+    gate.querySelector("#auth-cancel").addEventListener("click", () => gate.remove());
     btn.addEventListener("click", submit);
     gate.addEventListener("keydown", e => { if (e.key === "Enter") submit(); });
   });

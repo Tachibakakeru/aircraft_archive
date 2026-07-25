@@ -31,25 +31,25 @@
       <span class="icon">✈️</span>
       <h2 data-i18n="home.fleet.title">飛行器圖鑑</h2>
       <p data-i18n="home.fleet.desc">52 款機型的 3D 互動檢視、規格比對與家族系譜</p>
-      <span class="stat">52 AIRCRAFT</span>
+      <span class="stat" id="stat-aircraft">— AIRCRAFT</span>
     </a>
     <a class="home-card" href="airports.html">
       <span class="icon">🛬</span>
       <h2 data-i18n="home.airports.title">機場與跑道</h2>
       <p data-i18n="home.airports.desc">全球機場搜尋、跑道明細與 ICAO／IATA 代號</p>
-      <span class="stat">85,716 AIRPORTS</span>
+      <span class="stat" id="stat-airports">— AIRPORTS</span>
     </a>
     <a class="home-card" href="airlines.html">
       <span class="icon">🏢</span>
       <h2 data-i18n="home.airlines.title">全球航空公司</h2>
       <p data-i18n="home.airlines.desc">公司資訊、機隊組成與代表性航線</p>
-      <span class="stat">575 AIRLINES</span>
+      <span class="stat" id="stat-airlines">— AIRLINES</span>
     </a>
     <a class="home-card" href="knowledge.html">
       <span class="icon">💡</span>
       <h2 data-i18n="home.knowledge.title">航空小知識</h2>
       <p data-i18n="home.knowledge.desc">互動座艙儀表面板與飛航冷知識，點一點就懂</p>
-      <span class="stat">18 TOPICS</span>
+      <span class="stat" id="stat-topics">— TOPICS</span>
     </a>
   </div>
 
@@ -61,6 +61,20 @@ I18N.apply();
 I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 document.addEventListener("langchange", () => I18N.apply());
+
+(async () => {
+  const fmt = n => n.toLocaleString();
+  const [fleet, airlines, airports, knowledge] = await Promise.all([
+    fetch("data/fleet.json").then(r => r.json()),
+    fetch("data/airlines.json").then(r => r.json()),
+    fetch("data/airport_count.json").then(r => r.json()),
+    fetch("data/knowledge.json").then(r => r.json()),
+  ]);
+  document.getElementById("stat-aircraft").textContent = `${fmt(fleet.aircraft.length)} AIRCRAFT`;
+  document.getElementById("stat-airports").textContent = `${fmt(airports.count)} AIRPORTS`;
+  document.getElementById("stat-airlines").textContent = `${fmt(airlines.airlines.length)} AIRLINES`;
+  document.getElementById("stat-topics").textContent = `${fmt(knowledge.topics.length)} TOPICS`;
+})();
 </script>
 </body>
 </html>
