@@ -7,10 +7,10 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=128">
-<link rel="stylesheet" href="css/home.css?v=128">
-<script src="js/theme.js?v=128"></script>
-<script src="js/i18n.js?v=128"></script>
+<link rel="stylesheet" href="css/style.css?v=131">
+<link rel="stylesheet" href="css/home.css?v=131">
+<script src="js/theme.js?v=131"></script>
+<script src="js/i18n.js?v=131"></script>
 </head>
 <body>
 
@@ -65,10 +65,10 @@ document.addEventListener("langchange", () => I18N.apply());
 (async () => {
   const fmt = n => n.toLocaleString();
   const [fleet, airlines, airports, knowledge] = await Promise.all([
-    fetch("data/fleet.json?v=128").then(r => r.json()),
-    fetch("data/airlines.json?v=128").then(r => r.json()),
-    fetch("data/airport_count.json?v=128").then(r => r.json()),
-    fetch("data/knowledge.json?v=128").then(r => r.json()),
+    fetch("data/fleet.json?v=131").then(r => r.json()),
+    fetch("data/airlines.json?v=131").then(r => r.json()),
+    fetch("data/airport_count.json?v=131").then(r => r.json()),
+    fetch("data/knowledge.json?v=131").then(r => r.json()),
   ]);
   document.getElementById("stat-aircraft").textContent = `${fmt(fleet.aircraft.length)} AIRCRAFT`;
   document.getElementById("stat-airports").textContent = `${fmt(airports.count)} AIRPORTS`;

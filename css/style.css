@@ -40,6 +40,10 @@
   --scene-bg-0:#9fb0c8;
 }
 *{margin:0;padding:0;box-sizing:border-box}
+/* hidden 屬性必須永遠有效：元件自己的 display 宣告（如 .al-p-photo 的
+   display:block）優先序高於瀏覽器預設的 [hidden]{display:none}，會讓
+   element.hidden = true 失效——圖片殘留上一筆資料的 src 就是這樣來的。 */
+[hidden]{display:none !important}
 body{
   font-family:var(--sans);
   color:var(--text);

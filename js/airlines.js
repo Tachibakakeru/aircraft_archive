@@ -60,11 +60,12 @@ function makeTagInput(inputId, suggestId, chipsId, onChange){
     if (q.length < 2){ $(suggestId).hidden = true; return; }
     const res = searchAirports(q);
     if (!res.length){ $(suggestId).hidden = true; return; }
-    $(suggestId).innerHTML = res.map(([code, a]) =>
-      `<div class="al-tag-opt" data-code="${escHTML(code)}" data-id="${escHTML(a.id)}" data-name="${escHTML(a.city || a.name)}">
-        <span>${escHTML(a.city || a.name)}</span><span class="al-tag-opt-code">${escHTML(code)}</span>
-      </div>`
-    ).join("");
+    $(suggestId).innerHTML = res.map(([code, a]) => {
+      const label = airportDisplayName(a);
+      return `<div class="al-tag-opt" data-code="${escHTML(code)}" data-id="${escHTML(a.id)}" data-name="${escHTML(label)}">
+        <span>${escHTML(label)}</span><span class="al-tag-opt-code">${escHTML(code)}</span>
+      </div>`;
+    }).join("");
     $(suggestId).hidden = false;
   });
   $(inputId).addEventListener("keydown", e => {
@@ -98,11 +99,45 @@ function makeTagInput(inputId, suggestId, chipsId, onChange){
 
 let hubTagInput, routeTagInput;
 
+// 同城多機場消歧義：仁川(RKSI)與金浦(RKSS)的 city 都是 "Seoul"，只顯示
+// city 會變成「Seoul / Seoul」看不出差別。這裡先算出哪些城市有一座以上
+// 機場，只有這些城市才把機場本身的專名補在城市前面（→「Incheon Seoul」、
+// 「Gimpo Seoul」），單一機場的城市維持原本簡潔的城市名。
+let MULTI_AIRPORT_CITIES = null;
+function buildMultiAirportCities(){
+  // AIRPORT_CODES 同時用 ICAO 與 IATA 當 key 指向同一座機場，必須先用
+  // r.id 去重，否則每座機場都會被算成兩筆、每個城市都誤判為多機場。
+  const cityIds = new Map();
+  Object.values(AIRPORT_CODES).forEach(r => {
+    if (!r.city) return;
+    const key = r.city.toLowerCase();
+    if (!cityIds.has(key)) cityIds.set(key, new Set());
+    cityIds.get(key).add(r.id);
+  });
+  MULTI_AIRPORT_CITIES = new Set(
+    [...cityIds].filter(([, ids]) => ids.size > 1).map(([city]) => city)
+  );
+}
+
+// 從機場全名取出可辨識的專名：去掉 International / Airport 這類每座機場
+// 都有的通用字。若剩下的專名已包含城市名（如「Tokyo Haneda」對 Tokyo），
+// 就直接用它，不要疊成「Tokyo Haneda Tokyo」。
+function airportDisplayName(r){
+  if (!r.city) return r.name;
+  if (!MULTI_AIRPORT_CITIES) buildMultiAirportCities();
+  if (!MULTI_AIRPORT_CITIES.has(r.city.toLowerCase())) return r.city;
+  const proper = (r.name || "")
+    .replace(/\b(international|regional|municipal|metropolitan|airport|airfield|airbase|air\s+base)\b/gi, "")
+    .replace(/\s+/g, " ").trim();
+  if (!proper) return r.city;
+  return proper.toLowerCase().includes(r.city.toLowerCase()) ? proper : `${proper} ${r.city}`;
+}
+
 function resolveAirportCode(text){
   const code = text.trim().toUpperCase();
   if (!/^[A-Z0-9]{3,4}$/.test(code)) return null;
   const r = AIRPORT_CODES[code];
-  return r ? { id: r.id, name: r.city || r.name, lat: r.lat, lon: r.lon } : null;
+  return r ? { id: r.id, name: airportDisplayName(r), lat: r.lat, lon: r.lon } : null;
 }
 
 // 國家名稱中英對照：72 家人工彙整的公司 country.zh 是正確翻譯的中文，
@@ -385,7 +420,7 @@ function makeLogoEl(a, big){
 (async () => {
   const local = localStorage.getItem(EDIT_LS_KEY);
   try {
-    const res = await fetch("data/airlines.json?v=130");
+    const res = await fetch("data/airlines.json?v=131");
     if (!res.ok) throw new Error(res.status);
     FULL_DATA = await res.json();
     // 本機草稿只依 id 疊加在伺服器資料上，不整批取代——否則舊草稿
@@ -415,12 +450,12 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=130");
+    const geoRes = await fetch("data/airline_geo.json?v=131");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=130");
-    if (codesRes.ok) AIRPORT_CODES = await codesRes.json();
+    const codesRes = await fetch("data/airport_codes.json?v=131");
+    if (codesRes.ok){ AIRPORT_CODES = await codesRes.json(); MULTI_AIRPORT_CITIES = null; }
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
   buildAllianceSelect();
@@ -903,16 +938,21 @@ function wireEditForm(){
     });
   });
 
-  $("al-e-photo-file").addEventListener("change", async e => {
-    const a = currentEditTarget();
-    const file = e.target.files[0];
-    if (!a || !file) return;
-    $("al-e-photo").value = await downscale(file, 1400, 0.82);
-    applyEditForm(a);
-    persistDraft();
-    openAirline(a.id);
-    $("al-edit").hidden = false;
-    e.target.value = "";
+  // 本機上傳：轉成 data URI 寫回對應的網址欄位，後續流程與貼網址完全相同。
+  // logo 只會顯示在小方塊裡，縮到 256px 就夠，避免 data URI 撐爆 localStorage。
+  [["al-e-photo-file", "al-e-photo", 1400, 0.82, "image/jpeg"],
+   ["al-e-logo-file",  "al-e-customlogo", 256, 0.9, "image/png"]].forEach(([fileId, textId, maxW, q, mime]) => {
+    $(fileId).addEventListener("change", async e => {
+      const a = currentEditTarget();
+      const file = e.target.files[0];
+      if (!a || !file) return;
+      $(textId).value = await downscale(file, maxW, q, mime);
+      applyEditForm(a);
+      persistDraft();
+      openAirline(a.id);
+      $("al-edit").hidden = false;
+      e.target.value = "";
+    });
   });
 
   $("al-edit-save").addEventListener("click", async () => {
@@ -943,7 +983,9 @@ function wireEditForm(){
 }
 
 // 上傳圖片壓縮，避免 JSON 過大（與 editor.js 同一手法）
-function downscale(file, maxW, quality){
+// mime 預設 JPEG（封面照片用）；logo 要傳 image/png 才留得住透明背景，
+// 否則透明區塊會被畫成黑色方塊。
+function downscale(file, maxW, quality, mime = "image/jpeg"){
   return new Promise(resolve => {
     const img = new Image();
     img.onload = () => {
@@ -952,7 +994,7 @@ function downscale(file, maxW, quality){
       c.width = Math.round(img.width * scale);
       c.height = Math.round(img.height * scale);
       c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
-      resolve(c.toDataURL("image/jpeg", quality));
+      resolve(c.toDataURL(mime, quality));
     };
     img.onerror = () => resolve("");
     img.src = URL.createObjectURL(file);
