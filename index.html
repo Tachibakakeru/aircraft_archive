@@ -66,7 +66,7 @@ document.addEventListener("langchange", () => I18N.apply());
   const fmt = n => n.toLocaleString();
   const [fleet, airlines, airports, knowledge] = await Promise.all([
     fetch("data/fleet.json?v=131").then(r => r.json()),
-    fetch("data/airlines.json?v=132").then(r => r.json()),
+    fetch("data/airlines.json?v=133").then(r => r.json()),
     fetch("data/airport_count.json?v=131").then(r => r.json()),
     fetch("data/knowledge.json?v=131").then(r => r.json()),
   ]);
