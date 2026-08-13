@@ -1,11 +1,9 @@
 {
-  "RKNY": {
-    "name": "Yangyang International Airport",
-    "nameZh": "襄陽國際機場",
-    "nameJa": "襄陽国際空港",
-    "city": "Gonghang-ro",
-    "country": "KR",
-    "iata": "YNY",
+  "KMEM": {
+    "name": "Memphis International Airport (Frederick W. Smith International Airport,)",
+    "city": "Memphis",
+    "country": "US",
+    "iata": "MEM",
     "type": "large_airport"
   }
 }
