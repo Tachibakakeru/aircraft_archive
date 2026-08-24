@@ -22,7 +22,7 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=128`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=142`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 // 3D 模型是可選的（如 DC-9、707 家族等尚未建過幾何的機型只有規格文案，
@@ -275,6 +275,7 @@ function init(DATA, MODEL){
   }
 
   let selected = null;
+  let selectedPartId = null;
   let hovered = null;
 
   function setEmissive(group, hex, intensity){
@@ -310,9 +311,9 @@ function init(DATA, MODEL){
   const coLabel = document.getElementById("callout-label");
 
   PART_ORDER.forEach(id => {
-    if (!partGroups[id] || !PARTS[id]) return;   // 該機型缺此部位則不顯示
+    if (!PARTS[id]) return;
     const b = document.createElement("button");
-    b.className = "chip";
+    b.className = partGroups[id] ? "chip" : "chip chip-photo";
     b.textContent = I18N.spec(F(PARTS[id].name));
     b.dataset.part = id;
     b.addEventListener("click", () => selectPart(id));
@@ -322,8 +323,9 @@ function init(DATA, MODEL){
   function selectPart(id){
     if (!PARTS[id]) return;
     if (selected) setEmissive(selected, 0x000000, 0);
-    selected = partGroups[id];
-    setEmissive(selected, 0xffb547, 0.4);
+    selected = partGroups[id] || null;
+    selectedPartId = id;
+    if (selected) setEmissive(selected, 0xffb547, 0.4);
 
     const d = PARTS[id];
     document.getElementById("p-title").textContent = I18N.spec(F(d.name));
@@ -356,9 +358,17 @@ function init(DATA, MODEL){
         el.addEventListener("error", () => { fig.style.display = "none"; });
         fig.appendChild(el);
         const cap = F(img.caption);
-        if (cap){
+        if (cap || img.source){
           const c = document.createElement("figcaption");
-          c.textContent = cap;
+          if (cap) c.append(document.createTextNode(cap));
+          if (img.source){
+            const source = document.createElement("a");
+            source.href = img.source;
+            source.target = "_blank";
+            source.rel = "noopener noreferrer";
+            source.textContent = I18N.t("media.source");
+            c.appendChild(source);
+          }
           fig.appendChild(c);
         }
         gal.appendChild(fig);
@@ -398,9 +408,9 @@ function init(DATA, MODEL){
 
     panel.classList.add("open");
     panel.setAttribute("aria-hidden", "false");
-    coLabel.textContent = d.en;
-    coLabel.style.display = "block";
-    coDot.style.display = coLine.style.display = "";
+    coLabel.textContent = d.en || I18N.spec(F(d.name));
+    coLabel.style.display = selected ? "block" : "none";
+    coDot.style.display = coLine.style.display = selected ? "" : "none";
 
     document.querySelectorAll(".chip").forEach(c =>
       c.classList.toggle("active", c.dataset.part === id));
@@ -411,6 +421,7 @@ function init(DATA, MODEL){
   function deselect(){
     if (selected) setEmissive(selected, 0x000000, 0);
     selected = null;
+    selectedPartId = null;
     panel.classList.remove("open");
     panel.setAttribute("aria-hidden", "true");
     coLabel.style.display = "none";
@@ -482,8 +493,8 @@ function init(DATA, MODEL){
       el.style.display = "";
       el.style.left = ((v.x + 1) / 2 * innerWidth) + "px";
       el.style.top  = ((-v.y + 1) / 2 * innerHeight) + "px";
-      el.classList.toggle("active", selected === g);
-      el.classList.toggle("dimmed", selected && selected !== g);
+      el.classList.toggle("active", selectedPartId === id);
+      el.classList.toggle("dimmed", selectedPartId && selectedPartId !== id);
     }
   }
 
@@ -604,7 +615,7 @@ function init(DATA, MODEL){
     }
     buildSpecs();
     buildSeatMap();
-    if (selected && selected.userData.partId) selectPart(selected.userData.partId);
+    if (selectedPartId) selectPart(selectedPartId);
   });
 
   /* ── 單位切換（雙單位 / 公制 / 英制） ── */
@@ -615,15 +626,15 @@ function init(DATA, MODEL){
   document.addEventListener("unitchange", () => {
     syncUnit();
     buildSpecs();
-    if (selected && selected.userData.partId) selectPart(selected.userData.partId);
+    if (selectedPartId) selectPart(selectedPartId);
   });
 
   /* ── 鍵盤操作 ── */
-  const visibleParts = () => PART_ORDER.filter(id => partGroups[id] && PARTS[id]);
+  const visibleParts = () => PART_ORDER.filter(id => PARTS[id]);
   function stepPart(dir){
     const list = visibleParts();
     if (!list.length) return;
-    const cur = selected && selected.userData.partId;
+    const cur = selectedPartId;
     let i = list.indexOf(cur);
     i = i < 0 ? (dir > 0 ? 0 : list.length - 1) : (i + dir + list.length) % list.length;
     selectPart(list[i]);
@@ -680,7 +691,7 @@ function init(DATA, MODEL){
   function updateURL(){
     const p = new URLSearchParams();
     p.set("model", MODEL_ID);
-    if (selected && selected.userData.partId) p.set("part", selected.userData.partId);
+    if (selectedPartId) p.set("part", selectedPartId);
     if (camDirty) p.set("cam", camStr());
     history.replaceState(null, "", `?${p.toString()}`);
   }
@@ -698,7 +709,7 @@ function init(DATA, MODEL){
     const list = visibleParts();
     if (!list.length) return;
     autoRotate = false; btnRotate.setAttribute("aria-pressed", "false");
-    let i = Math.max(0, list.indexOf(selected && selected.userData.partId));
+    let i = Math.max(0, list.indexOf(selectedPartId));
     selectPart(list[i]);
     btnTour.setAttribute("aria-pressed", "true");
     btnTour.textContent = I18N.t("viewer.tour.stop");
@@ -749,7 +760,7 @@ function init(DATA, MODEL){
     }
   }
   const wantPart = params.get("part");
-  if (wantPart && PARTS[wantPart] && partGroups[wantPart]) selectPart(wantPart);
+  if (wantPart && PARTS[wantPart]) selectPart(wantPart);
 
   /* ── 渲染迴圈 ── */
   function resize(){

@@ -2,16 +2,24 @@
   "title": "Boeing 737-800",
   "sub": "737NG — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
       "summary": "737 的機身截面直徑 3.76 公尺，血統可追溯至 1950 年代的 707——波音以既有截面延伸出整個 737 家族，優點是產線成熟、成本低。737-800 是 NG 世代的加長型，機身容納 162 至 189 名乘客。",
       "specs": [
@@ -33,11 +41,41 @@
         ]
       ],
       "fact": "737 的機身截面與 60 年前的 707 幾乎相同——同一個模具家族撐起了波音大半個世紀的窄體機產品線，是航空工業「演化而非革命」的經典案例。",
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "機身外徑約 3.76 m，比 A320 的 3.95 m 窄。",
+          "en": "The 3.76 m fuselage is narrower than the A320's 3.95 m body.",
+          "ja": "胴体外径は約3.76 mで、A320の3.95 mより細身です。"
+        },
+        {
+          "zh": "典型 737-800 每側有前後主艙門與兩個機翼上方逃生窗。",
+          "en": "A typical 737-800 has forward/aft main doors and two overwing exits per side.",
+          "ja": "標準的な737-800は各側に前後ドアと主翼上2か所の非常口があります。"
+        },
+        {
+          "zh": "駕駛艙側窗下緣與機鼻輪廓較有折角。",
+          "en": "The cockpit side-window sill and nose contour are comparatively angular.",
+          "ja": "操縦席側窓の下端と機首輪郭は比較的角張っています。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b738/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Forward_fuselage_of_Virgin_Australia_(VH-YFC)_Boeing_737-81D_at_Sydney_Airport.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
       "summary": "與 A320 的側桿哲學相反，737 保留傳統中央駕駛盤與鋼纜液壓混合操縱系統，讓飛行員能直接感受舵面回饋。737NG 換裝六具大型液晶顯示器，但整體布局刻意與舊世代保持相似，降低機隊轉訓成本。",
       "specs": [
@@ -59,11 +97,41 @@
         ]
       ],
       "fact": "737 駕駛艙中央保留了兩個會隨配平轉動的黑白配平輪，緊急時可以手搖操作——這個從 1967 年沿用至今的機械設計，是駕駛艙裡最復古的角落。",
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "正副駕駛前方都有傳統駕駛盤與中央操縱柱。",
+          "en": "Conventional yokes and control columns sit in front of both pilots.",
+          "ja": "両席の正面に操縦輪とコントロールコラムがあります。"
+        },
+        {
+          "zh": "737NG 典型配置為六具大型顯示器，中央仍保留大量實體旋鈕。",
+          "en": "The 737NG normally has six large displays while retaining many physical controls.",
+          "ja": "737NGは通常6面の大型表示器と多数の物理操作部を備えます。"
+        },
+        {
+          "zh": "中央座艙可見會隨配平轉動的黑白配平輪。",
+          "en": "Black-and-white manual trim wheels remain prominent on the centre pedestal.",
+          "ja": "中央ペデスタルには白黒模様の手動トリムホイールがあります。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b738/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:The_Flight_Deck_of_the_Boeing_737-800._(2956276002).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
       "summary": "737NG 換裝全新設計的機翼，翼弦加大、翼展加寬，燃油容量比舊世代多 30%。翼尖可加裝 2.4 公尺高的融合式小翼（blended winglet），巡航省油約 3–4%，也成為 NG 世代最容易辨認的特徵。",
       "specs": [
@@ -85,11 +153,41 @@
         ]
       ],
       "fact": "很多航空公司加裝小翼不只為了省油——小翼上的航空公司標誌在登機時正對乘客視線，是絕佳的廣告看板，堪稱「會飛的招牌」。",
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "後掠約 25°，NG 機翼通常搭配高舉小翼。",
+          "en": "The NG wing is swept about 25 degrees and often carries a tall winglet.",
+          "ja": "後退角は約25度で、多くは背の高いウイングレットを備えます。"
+        },
+        {
+          "zh": "翼面比 A320 略大，但僅靠翼形不容易遠距分辨。",
+          "en": "Wing area is slightly larger than the A320's, though planform alone is subtle at distance.",
+          "ja": "翼面積はA320よりわずかに大きいものの、遠方では翼形だけの判別は困難です。"
+        },
+        {
+          "zh": "從客艙向外看可搭配扁平引擎短艙確認為 737NG。",
+          "en": "From the cabin, pair the wing view with the flattened nacelle to confirm a 737NG.",
+          "ja": "客室からは平たいナセルと合わせて737NGを確認できます。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b738/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-800_American_Airlines,_clean_and_shiny_wing_%2B_winglet_(4898075792).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "TURBOFAN ENGINE",
       "summary": "737NG 全系列採用 CFM56-7B 渦輪扇引擎。由於 737 設計之初搭配的是細長的低旁通比引擎，機腹離地很近，換裝大直徑的 CFM56 時工程師只能把短艙「壓扁」，並將附件齒輪箱移到引擎兩側。",
       "specs": [
@@ -111,11 +209,41 @@
         ]
       ],
       "fact": "從正面看，737 的引擎進氣口不是圓形而是「壓扁的鵝蛋形」——航空迷暱稱它為倉鼠頰囊（hamster pouch），是 737 最經典的辨識特徵。",
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "CFM56-7B 進氣口底部明顯扁平，不是完整圓形。",
+          "en": "The CFM56-7B inlet has a visibly flattened lower lip rather than a full circle.",
+          "ja": "CFM56-7Bの吸気口下面は明確に平たく、真円ではありません。"
+        },
+        {
+          "zh": "附件齒輪箱移到側面，讓短艙能塞進低矮的機翼下方。",
+          "en": "Accessories were moved to the sides so the nacelle fits beneath the low wing.",
+          "ja": "低い主翼下に収めるため補機類が側面へ移されています。"
+        },
+        {
+          "zh": "737-800 固定使用 CFM56-7B，可把扁平短艙視為強辨識點。",
+          "en": "The 737-800 uses the CFM56-7B; its flattened nacelle is a strong identifier.",
+          "ja": "737-800はCFM56-7Bを使用し、平たいナセルが強い識別点です。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b738/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:CFM-56_Lauda_737.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
       "summary": "垂直尾翼提供偏航穩定性，後緣方向舵負責協調轉彎與側風修正。737NG 的垂直尾翼較舊世代加高，搭配背鰭（dorsal fin）改善大側滑角時的方向穩定性。",
       "specs": [
@@ -137,11 +265,41 @@
         ]
       ],
       "fact": "737 方向舵由單一液壓作動器驅動的設計曾在 1990 年代兩起事故後被徹底重新設計——如今的 737 方向舵系統有多重備援，是適航史上的重要一課。",
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "尾翼前緣下方有明顯背鰭，平順連到機背。",
+          "en": "A prominent dorsal fin blends the fin's leading edge into the upper fuselage.",
+          "ja": "垂直尾翼前縁下には胴体へ連なる大きなドーサルフィンがあります。"
+        },
+        {
+          "zh": "方向舵後緣較筆直，垂尾頂端略向後收尖。",
+          "en": "The rudder trailing edge is straight and the fin tip tapers aft.",
+          "ja": "方向舵後縁は直線的で、尾翼上端は後方へ細くなります。"
+        },
+        {
+          "zh": "尾翼塗裝可辨航空公司，不足以單獨判斷機型。",
+          "en": "Tail paint identifies the operator, not necessarily the aircraft type.",
+          "ja": "尾翼塗装は運航会社の手掛かりであり、機種の確定材料ではありません。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b738/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:LN-RCY_Boeing_737-800_Tail_Scheme_(7510635508).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
       "summary": "水平尾翼提供俯仰穩定性，升降舵控制機頭上下。整片安定面由螺桿機構驅動配平，飛行中依載重與速度自動或手動調整攻角。",
       "specs": [
@@ -163,11 +321,41 @@
         ]
       ],
       "fact": "起飛前機師會依載重表把配平設到指定刻度——設錯配平導致的起飛事故在航空史上屢見不鮮，因此 737 起飛前的配平檢查有專屬的警告系統把關。",
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "水平尾翼低置於機尾兩側，外形後掠。",
+          "en": "Low-mounted swept horizontal stabilizers extend from either side of the tail.",
+          "ja": "後退した水平尾翼は胴体尾部の低い位置に付きます。"
+        },
+        {
+          "zh": "由下方可同時觀察外露主輪與尾翼配置。",
+          "en": "A view from below can reveal both the exposed main wheels and tail arrangement.",
+          "ja": "下方からは露出主輪と尾翼配置を同時に確認できます。"
+        },
+        {
+          "zh": "水平尾翼不是 737 與 A320 最強的單一辨識點。",
+          "en": "The horizontal tail is not a strong standalone discriminator between 737 and A320.",
+          "ja": "水平尾翼だけでは737とA320の判別力は高くありません。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b738/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-800_Tail_from_Below.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
       "summary": "737 採前三點式起落架，主起落架收入機腹輪艙後「沒有艙門完全遮蔽」，輪胎胎面直接暴露在機腹外——這是為了簡化結構減輕重量的取捨，也讓 737 從地面就能一眼認出。",
       "specs": [
@@ -189,8 +377,184 @@
         ]
       ],
       "fact": "下次在機場看到機腹貼著兩塊「黑色圓餅」的飛機，那就是 737——外露的主輪胎面兼作輪艙的氣動整流面，替每架飛機省下數十公斤艙門重量。",
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "主起落架收起後沒有完整外側艙門，輪胎胎面可從機腹看見。",
+          "en": "The retracted main gear lacks full outer doors, leaving tyre faces visible from below.",
+          "ja": "主脚格納時も完全な外扉がなく、機腹からタイヤ面が見えます。"
+        },
+        {
+          "zh": "機身離地較低，前起落架看起來短。",
+          "en": "Low fuselage clearance gives the nose gear a short appearance.",
+          "ja": "胴体の地上高が低く、前脚は短く見えます。"
+        },
+        {
+          "zh": "外露主輪是區分 737 與 A320 最可靠的地面特徵之一。",
+          "en": "Exposed main-wheel faces are among the most reliable ground-level 737/A320 cues.",
+          "ja": "露出した主輪は737とA320を見分ける有力な地上識別点です。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b738/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:737-800_main_gear_bay_(3858029769).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "737-800 的機身較窄、離地較低，機鼻略尖，駕駛艙窗框線條較有稜角；CFM56-7B 短艙底部扁平，主起落架收起後仍可看見輪胎胎面。",
+        "en": "The 737-800 sits low on a relatively narrow fuselage, with a pointed nose, angular cockpit glazing, flattened CFM56-7B nacelles and exposed main-wheel faces when retracted.",
+        "ja": "737-800は細めの胴体と低い姿勢、やや尖った機首、角張った操縦席窓、下面が平たいCFM56-7Bナセル、格納後も見える主輪が特徴です。"
+      },
+      "fact": {
+        "zh": "辨識時至少同時核對機鼻、引擎短艙與起落架；小翼可能因航空公司改裝而不同。",
+        "en": "Identify it from the nose, nacelles and landing gear together; winglets vary by operator and retrofit.",
+        "ja": "機首・ナセル・脚を組み合わせて判別してください。ウイングレットは運航会社や改修で異なります。"
+      },
+      "bullets": [
+        {
+          "zh": "機腹離地低，主輪收入機腹後胎面外露。",
+          "en": "Low ground clearance; main-wheel faces remain exposed when retracted.",
+          "ja": "地上高が低く、格納後も主輪のタイヤ面が露出します。"
+        },
+        {
+          "zh": "機鼻與駕駛艙窗較尖、窗框折線較明顯。",
+          "en": "Pointed nose and relatively angular cockpit-window geometry.",
+          "ja": "機首が尖り気味で、操縦席窓の輪郭が角張っています。"
+        },
+        {
+          "zh": "737NG 常見融合式或 Split Scimitar 小翼，但也可能沒有。",
+          "en": "737NG aircraft may have blended or Split Scimitar winglets, or none.",
+          "ja": "737NGにはブレンデッド／スプリット・シミター型、または未装備があります。"
+        }
+      ],
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b738/overview.jpg",
+          "caption": {
+            "zh": "實機側面外型參考",
+            "en": "Real-aircraft side-profile reference",
+            "ja": "実機側面外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-800_(TC-SNR)_01.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "en": "WINGTIP DEVICE",
+      "summary": {
+        "zh": "737-800 可見高而向外彎曲的融合式小翼，也可能後續改裝 Split Scimitar 上下分叉小翼；早期或特定營運者也可能沒有小翼。",
+        "en": "A 737-800 may carry tall blended winglets, retrofitted Split Scimitar devices, or no winglet at all.",
+        "ja": "737-800には背の高いブレンデッド・ウイングレット、上下に分かれるスプリット・シミター型、または未装備があります。"
+      },
+      "fact": {
+        "zh": "翼尖能縮小翼尖渦與誘導阻力，但構型並非唯一機型證據，必須搭配機鼻與引擎判讀。",
+        "en": "Wingtip devices reduce induced drag, but configuration alone is not proof of type; cross-check the nose and engines.",
+        "ja": "翼端装置は誘導抗力を減らしますが、それだけで機種は確定できません。機首とエンジンも確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "融合式小翼由翼端平滑上彎，外形修長。",
+          "en": "Blended winglets curve smoothly upward from the tip.",
+          "ja": "ブレンデッド型は翼端から滑らかに上方へ伸びます。"
+        },
+        {
+          "zh": "Split Scimitar 構型在翼尖下方另有短小向下翼片。",
+          "en": "Split Scimitar versions add a smaller downward-pointing blade.",
+          "ja": "スプリット・シミター型には下向きの小翼片もあります。"
+        },
+        {
+          "zh": "不要把小翼當成單一判斷依據。",
+          "en": "Do not use the winglet as the sole identification cue.",
+          "ja": "翼端装置だけを識別根拠にしないでください。"
+        }
+      ],
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b738/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Winglet_of_Boeing_737-800.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "737-800 的外窗輪廓較有稜角：兩片正面風擋接近直立梯形，外側窗框以明顯折角包向機身側面。正面看時窗帶較窄、中央分隔線較直，側面則可見近似多邊形的側窗。",
+        "en": "The 737-800 glazing is angular: two upright trapezoidal front panes meet a window belt that turns sharply around the nose into polygonal side panes.",
+        "ja": "737-800の窓は角張っており、直立気味の台形前面窓から明確な折れ角で多角形の側面窓へつながります。"
+      },
+      "fact": {
+        "zh": "客機風擋是加熱、夾層且能承受座艙壓差的結構件；辨識時應看整組窗帶比例，不要只數單一片窗。",
+        "en": "Airliner windshields are heated laminated structural panes. Identify the proportion and outline of the complete window belt rather than counting one pane.",
+        "ja": "旅客機の風防は加熱式の積層構造材です。1枚だけでなく窓帯全体の比率と輪郭で判別します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面兩片主風擋較扁、中央接縫近乎垂直。",
+          "en": "The two main forward panes look relatively shallow with a near-vertical centre seam.",
+          "ja": "正面2枚の主風防は比較的浅く、中央継ぎ目はほぼ垂直です。"
+        },
+        {
+          "zh": "外側窗向機身側面急轉，窗框折角較銳利。",
+          "en": "Outer panes turn sharply onto the fuselage sides with pronounced corners.",
+          "ja": "外側窓は胴体側面へ急に回り込み、輪郭の角が明瞭です。"
+        },
+        {
+          "zh": "搭配較尖機鼻與扁平 CFM56-7B 短艙可提高判斷可靠度。",
+          "en": "Cross-check the angular glazing with the pointed nose and flattened CFM56-7B nacelles.",
+          "ja": "尖った機首と下面が平たいCFM56-7Bナセルも合わせて確認します。"
+        }
+      ],
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b738/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Front_view_of_boeing_737-800_of_Ryanair_at_Orio_al_Serio_International_Airport,_2006.jpg"
+        },
+        {
+          "src": "assets/reference/b738/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit_window_of_Qantas_Boeing_737_(VH-VYE)_taxiing_prior_to_takeoff_at_SYD.jpg"
+        }
+      ]
     }
   },
   "specifications": {

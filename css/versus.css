@@ -86,8 +86,12 @@ body{min-height:100vh}
 .vs-card-empty{align-items:center;text-align:center;color:var(--muted);gap:12px}
 .vs-empty-msg{font-size:13px}
 
-.vs-card-fig{margin:0;border-radius:8px;overflow:hidden;background:var(--bg-0)}
+.vs-card-gallery{display:flex;flex-direction:column;gap:10px}
+.vs-card-fig{margin:0;border-radius:8px;overflow:hidden;background:var(--bg-0);border:1px solid var(--stroke)}
 .vs-card-fig img{width:100%;height:auto;display:block}
+.vs-card-fig figcaption{padding:8px 10px;font-size:11px;line-height:1.5;color:var(--muted)}
+.vs-card-fig figcaption a{display:block;margin-top:3px;color:var(--cyan);text-decoration:none;font-family:var(--mono);font-size:10px}
+.vs-card-fig figcaption a:hover{text-decoration:underline}
 .vs-card-fig-empty{
   display:flex;align-items:center;justify-content:center;
   min-height:120px;border:1px dashed var(--stroke);
@@ -95,19 +99,24 @@ body{min-height:100vh}
 }
 
 .vs-card-summary{font-size:13.5px;line-height:1.7;color:var(--text)}
+.vs-card-clues{font-size:12.5px;line-height:1.65;color:var(--text)}
+.vs-card-clues b{display:block;margin-bottom:5px;color:var(--amber);font-family:var(--mono);font-size:10px;letter-spacing:.12em}
+.vs-card-clues ul{margin:0;padding-left:18px}
+.vs-card-clues li+li{margin-top:4px}
 .vs-card-fact{
   font-size:12.5px;line-height:1.6;color:var(--muted);
   background:var(--amber-soft);border-radius:8px;padding:8px 10px;
 }
 
-.vs-card-edit{
+.vs-card-edit,.vs-card-view{
   align-self:flex-start;
   font-family:var(--mono);font-size:11px;letter-spacing:.08em;
   color:var(--muted);text-decoration:none;
   border:1px solid var(--stroke);border-radius:6px;padding:5px 10px;
   transition:all .15s;
 }
-.vs-card-edit:hover{color:var(--amber);border-color:var(--amber)}
+.vs-card-view{color:var(--cyan)}
+.vs-card-edit:hover,.vs-card-view:hover{color:var(--amber);border-color:var(--amber)}
 
 @media (max-width: 720px){
   .vs-heads, .vs-row{grid-template-columns:1fr}

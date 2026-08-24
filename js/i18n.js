@@ -58,6 +58,9 @@ const I18N_STRINGS = {
     "versus.edit": "✎ 編輯",
     "versus.noparts": "此機型尚無部位資料",
     "versus.noimage": "尚無圖片，可在編輯器內上傳",
+    "versus.clues": "外型辨識重點",
+    "versus.viewpart": "在機型頁查看 ↗",
+    "media.source": "查看原始照片與授權 ↗",
     // 航空小知識
     "knowledge.eyebrow": "KNOWLEDGE / 航空小知識",
     "knowledge.title": "航空小知識",
@@ -456,6 +459,9 @@ const I18N_STRINGS = {
     "versus.edit": "✎ Edit",
     "versus.noparts": "No part data for this aircraft yet",
     "versus.noimage": "No image yet — add one in the editor",
+    "versus.clues": "IDENTIFICATION CUES",
+    "versus.viewpart": "View on aircraft page ↗",
+    "media.source": "Original photo & license ↗",
     // Aviation knowledge
     "knowledge.eyebrow": "KNOWLEDGE",
     "knowledge.title": "Aviation Knowledge",
@@ -852,6 +858,9 @@ const I18N_STRINGS = {
     "versus.edit": "✎ 編集",
     "versus.noparts": "この機種にはまだ部位データがありません",
     "versus.noimage": "画像未登録。エディタで追加できます",
+    "versus.clues": "外観識別ポイント",
+    "versus.viewpart": "機種ページで見る ↗",
+    "media.source": "元画像とライセンス ↗",
     // 航空豆知識
     "knowledge.eyebrow": "KNOWLEDGE / 航空豆知識",
     "knowledge.title": "航空豆知識",

@@ -5,7 +5,7 @@
    不另建資料結構——編輯照片/文字沿用 editor.html 既有機制。
    ═══════════════════════════════════════════════ */
 
-const PART_ORDER = ["fuselage", "cockpit", "wing", "engine", "vstab", "hstab", "gear"];
+const PART_ORDER = ["overview", "cockpit", "windshield", "fuselage", "engine", "wingtip", "wing", "vstab", "hstab", "gear"];
 const $ = id => document.getElementById(id);
 const F = v => I18N.field(v);
 
@@ -14,7 +14,7 @@ const dataCache = {};
 let idA = "b738", idB = "a320";
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=128")).json();
+  fleet = await (await fetch("data/fleet.json?v=140")).json();
 
   const params = new URLSearchParams(location.search);
   const pa = params.get("a"), pb = params.get("b");
@@ -35,7 +35,7 @@ let idA = "b738", idB = "a320";
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=128`)).json();
+  const d = await (await fetch(`data/${id}.json?v=142`)).json();
   dataCache[id] = d;
   return d;
 }
@@ -80,16 +80,22 @@ function partCardHtml(id, pid){
       <a class="vs-card-edit" href="editor.html?model=${id}">${I18N.t("versus.edit")}</a>
     </div>`;
   }
-  const img = part.images && part.images[0];
-  const imgHtml = img
-    ? `<figure class="vs-card-fig"><img src="${img.src}" alt="${F(img.caption) || F(part.name)}" loading="lazy"></figure>`
+  const images = part.images || [];
+  const imgHtml = images.length
+    ? `<div class="vs-card-gallery">${images.map(img => `<figure class="vs-card-fig">
+        <img src="${img.src}" alt="${F(img.caption) || F(part.name)}" loading="lazy">
+        ${(F(img.caption) || img.source) ? `<figcaption>${F(img.caption) || ""}${img.source ? `<a href="${img.source}" target="_blank" rel="noopener noreferrer">${I18N.t("media.source")}</a>` : ""}</figcaption>` : ""}
+      </figure>`).join("")}</div>`
     : `<div class="vs-card-fig vs-card-fig-empty">${I18N.t("versus.noimage")}</div>`;
   const summary = F(part.summary) || "";
   const fact = F(part.fact) || "";
+  const bullets = part.bullets || [];
   return `<div class="vs-card">
     ${imgHtml}
     <p class="vs-card-summary">${summary}</p>
+    ${bullets.length ? `<div class="vs-card-clues"><b>${I18N.t("versus.clues")}</b><ul>${bullets.map(x => `<li>${F(x)}</li>`).join("")}</ul></div>` : ""}
     ${fact ? `<p class="vs-card-fact">💡 ${fact}</p>` : ""}
+    <a class="vs-card-view" href="viewer.html?model=${id}&part=${pid}">${I18N.t("versus.viewpart")}</a>
     <a class="vs-card-edit" href="editor.html?model=${id}">${I18N.t("versus.edit")}</a>
   </div>`;
 }

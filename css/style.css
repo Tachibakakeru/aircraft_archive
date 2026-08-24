@@ -472,6 +472,7 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
   transition:all .15s;
 }
 .chip:hover{color:var(--text);border-color:var(--muted)}
+.chip-photo{border-style:dashed}
 .chip.active{color:var(--on-amber);background:var(--amber);border-color:var(--amber);font-weight:700}
 
 #callout-svg{position:fixed;inset:0;pointer-events:none;z-index:4}
@@ -555,6 +556,11 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
   font-size:12px;line-height:1.6;color:var(--muted);
   border-top:1px solid var(--stroke);
 }
+.gallery figcaption a{
+  display:block;margin-top:4px;color:var(--cyan);text-decoration:none;
+  font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+}
+.gallery figcaption a:hover{text-decoration:underline}
 .factbox{
   margin-top:24px;
   padding:14px 16px;

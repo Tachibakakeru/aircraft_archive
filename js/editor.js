@@ -12,6 +12,8 @@ let data = null;         // 目前機型的完整資料物件
 let currentPart = null;  // 目前編輯的部位 id
 
 const $ = id => document.getElementById(id);
+const editText = v => v && typeof v === "object" ? (v.zh || v.en || v.ja || "") : (v || "");
+const setZh = (old, value) => old && typeof old === "object" && !Array.isArray(old) ? {...old, zh:value} : value;
 
 // ── 初始化 ──
 (async () => {
@@ -90,8 +92,8 @@ function renderPartList(){
     if (!p) return;
     const btn = document.createElement("button");
     btn.dataset.part = pid;
-    const filled = (p.summary && p.summary.length > 0) || (p.bullets && p.bullets.length);
-    btn.innerHTML = `${p.name || pid}${filled ? '<span class="dot"></span>' : ''}<span class="en">${p.en || ""}</span>`;
+    const filled = !!editText(p.summary) || (p.bullets && p.bullets.length);
+    btn.innerHTML = `${editText(p.name) || pid}${filled ? '<span class="dot"></span>' : ''}<span class="en">${p.en || ""}</span>`;
     btn.addEventListener("click", () => selectPart(pid));
     if (pid === currentPart) btn.classList.add("active");
     wrap.appendChild(btn);
@@ -106,12 +108,12 @@ function selectPart(pid){
   $("ed-fields").style.display = "";
   $("ed-specs").style.display = "none";
 
-  $("f-name").value = p.name || "";
+  $("f-name").value = editText(p.name);
   $("f-en").value = p.en || "";
-  $("f-summary").value = p.summary || "";
-  $("f-bullets").value = (p.bullets || []).join("\n");
+  $("f-summary").value = editText(p.summary);
+  $("f-bullets").value = (p.bullets || []).map(editText).join("\n");
   $("f-specs").value = (p.specs || []).map(([k, v]) => `${k}：${v}`).join("\n");
-  $("f-fact").value = p.fact || "";
+  $("f-fact").value = editText(p.fact);
   renderImageList();
 
   document.querySelectorAll(".ed-parts button").forEach(b =>
@@ -200,12 +202,13 @@ function bindField(elId, apply){
     persist();
   });
 }
-bindField("f-name",    (p, v) => { p.name = v; updateListLabel(); });
+bindField("f-name",    (p, v) => { p.name = setZh(p.name, v); updateListLabel(); });
 bindField("f-en",      (p, v) => { p.en = v; });
-bindField("f-summary", (p, v) => { p.summary = v; });
-bindField("f-fact",    (p, v) => { p.fact = v; });
+bindField("f-summary", (p, v) => { p.summary = setZh(p.summary, v); });
+bindField("f-fact",    (p, v) => { p.fact = setZh(p.fact, v); });
 bindField("f-bullets", (p, v) => {
-  p.bullets = v.split("\n").map(s => s.trim()).filter(Boolean);
+  const old = p.bullets || [];
+  p.bullets = v.split("\n").map(s => s.trim()).filter(Boolean).map((line, i) => setZh(old[i], line));
 });
 bindField("f-specs", (p, v) => {
   p.specs = v.split("\n").map(line => {
@@ -217,7 +220,7 @@ bindField("f-specs", (p, v) => {
 
 function updateListLabel(){
   const btn = document.querySelector(`.ed-parts button[data-part="${currentPart}"]`);
-  if (btn) btn.childNodes[0].textContent = data.parts[currentPart].name || currentPart;
+  if (btn) btn.childNodes[0].textContent = editText(data.parts[currentPart].name) || currentPart;
 }
 
 // ── 圖片管理 ──
@@ -234,7 +237,8 @@ function renderImageList(){
       <div class="img-fields">
         <span class="src-label">${isData ? "內嵌圖片（本機上傳）" : "圖片網址"}</span>
         ${isData ? "" : `<input type="text" class="i-src" value="${escAttr(img.src)}" placeholder="https://...">`}
-        <input type="text" class="i-cap" value="${escAttr(img.caption || "")}" placeholder="圖說（選填）">
+        <input type="text" class="i-cap" value="${escAttr(editText(img.caption))}" placeholder="中文圖說（選填）">
+        <input type="url" class="i-source" value="${escAttr(img.source || "")}" placeholder="原始照片／授權頁網址（選填）">
       </div>
       <button class="del" title="刪除">✕</button>`;
     const srcInput = row.querySelector(".i-src");
@@ -242,8 +246,9 @@ function renderImageList(){
       imgs[i].src = srcInput.value; row.querySelector("img").src = srcInput.value; persist();
     });
     row.querySelector(".i-cap").addEventListener("input", e => {
-      imgs[i].caption = e.target.value; persist();
+      imgs[i].caption = setZh(imgs[i].caption, e.target.value); persist();
     });
+    row.querySelector(".i-source").addEventListener("input", e => { imgs[i].source = e.target.value; persist(); });
     row.querySelector(".del").addEventListener("click", () => {
       imgs.splice(i, 1); renderImageList(); persist();
     });
@@ -253,7 +258,7 @@ function renderImageList(){
 
 $("btn-add-url").addEventListener("click", () => {
   if (!currentPart) return;
-  data.parts[currentPart].images.push({ src: "", caption: "" });
+  data.parts[currentPart].images.push({ src: "", caption: "", source: "" });
   renderImageList(); persist();
 });
 
