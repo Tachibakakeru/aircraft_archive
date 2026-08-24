@@ -67,3 +67,37 @@ The project entry is named Boeing 777-300. Exterior reference photographs use th
 | `a359/vstab.jpg` | [Airbus A350-941 F-WWCF at ILA Berlin 2016](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_18.jpg), Julian Herzog | CC BY 4.0 |
 | `a359/hstab.jpg` | [Airbus A350-941 F-WWCF at ILA Berlin 2016](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_20.jpg), Julian Herzog | CC BY 4.0 |
 | `a359/gear.jpg` | [Airbus A350-941 main landing gear](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_main_landing_gear_ILA_Berlin_2016_06.jpg), Julian Herzog | CC BY 4.0 |
+
+## Boeing 787-9 (`b789`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b789/overview.jpg` | [Qantas Boeing 787 VH-ZNM at Perth](https://commons.wikimedia.org/wiki/File:Qantas_Boeing_787_VH-ZNM_Perth_2026_(01).jpg), Bahnfrend | CC BY-SA 4.0 |
+| `b789/cockpit.jpg` | [Boeing 787-8 N787BA cockpit](https://commons.wikimedia.org/wiki/File:Boeing_787-8_N787BA_cockpit.jpg), Alex Beltyukov; 787-family flight-deck reference | CC BY-SA 3.0 |
+| `b789/window-front.jpg` | [Front view of ANA Boeing 787-8 JA834A at Taipei Songshan](https://commons.wikimedia.org/wiki/File:Front_view_of_ANA_Boeing_787-8_JA834A_at_Taipei_Songshan_Airport_20150101.jpg), 玄史生; cropped to emphasize front-window geometry | CC BY-SA 3.0 |
+| `b789/window-side.jpg` | [Cockpit windows of a Boeing 787 (3)](https://commons.wikimedia.org/wiki/File:Cockpit_windows_of_a_Boeing_787_(3).jpg), Olivier Cleynen; cropped to emphasize side-window geometry | CC BY-SA 3.0 |
+| `b789/fuselage.jpg` | [Bamboo Airways Boeing 787-9 VN-A819](https://commons.wikimedia.org/wiki/File:VN-A819_Boeing_787-9_Bamboo_Airways_LHR_23.3.22.jpg), Colin Cooke Photo | CC BY-SA 2.0 |
+| `b789/engine.jpg` | [Boeing 787 engine chevrons](https://commons.wikimedia.org/wiki/File:Boeing_787_engine_chevrons.jpg), Mark Handel | CC BY 2.0 |
+| `b789/wingtip.jpg` | [Wingtip device of Boeing 787 (1)](https://commons.wikimedia.org/wiki/File:Wingtip_device_of_Boeing_787_(1).jpg), Olivier Cleynen | CC BY-SA 3.0 |
+| `b789/wing.jpg` | [Boeing 787 Dreamliner wing view](https://commons.wikimedia.org/wiki/File:Boeing_787_Dreamliner_wing_view.jpg), Nicolas Economou | CC BY-SA 4.0 |
+| `b789/vstab.jpg` | [Vertical tail of B787 (1)](https://commons.wikimedia.org/wiki/File:Vertical_tail_of_B787_(1).jpg), Olivier Cleynen | CC BY-SA 3.0 |
+| `b789/hstab.jpg` | [Horizontal stabilizer of B787 (1)](https://commons.wikimedia.org/wiki/File:Horizontal_stabilizer_of_B787_(1).jpg), Olivier Cleynen | CC BY-SA 3.0 |
+| `b789/gear.jpg` | [Air India Boeing 787 main landing gear](https://commons.wikimedia.org/wiki/File:Air_India_Boeing_787_Dreamliner_N1008S_PAS_2013_06_main_landing_gear.jpg), Julian Herzog | CC BY 4.0 |
+
+The cockpit, front-window and some component photographs show a 787-8 or generic 787 installation. The compared exterior proportions and fuselage photograph use the project model's 787-9 variant; family-reference use is stated in the descriptions where relevant.
+
+## Airbus A330-300 (`a333`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a333/overview.jpg` | [AirAsia X Airbus A330-300 9M-XXQ side view](https://commons.wikimedia.org/wiki/File:AirAsia_X_Airbus_A330_9M-XXQ_Perth_2024_(02).jpg), Bahnfrend | CC BY-SA 4.0 |
+| `a333/cockpit.jpg` | [Iberia Airbus A330-302 cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A330-302_Iberia_EC-LYF_cockpit_(10983484845).jpg), Curimedia | CC BY 2.0 |
+| `a333/window-front.jpg` | [Airbus A330 front view](https://commons.wikimedia.org/wiki/File:Airbus_A330_Front_View.jpg), AlexanderCraker; cropped to emphasize front-window geometry | CC BY-SA 4.0 |
+| `a333/window-side.jpg` | [China Eastern Airbus A330-343X nose](https://commons.wikimedia.org/wiki/File:Airbus_A330-343X,_China_Eastern_Airlines_JP7548435.jpg), Shimin; cropped to emphasize side-window geometry | GFDL 1.2 |
+| `a333/fuselage.jpg` | [Air Canada Airbus A330-300](https://commons.wikimedia.org/wiki/File:Airbus_A330-300_(Air_Canada)_333.jpg), Alexcaban | CC BY-SA 3.0 |
+| `a333/engine.jpg` | [Rolls-Royce Trent 700 on an A330-300](https://commons.wikimedia.org/wiki/File:Rolls-Royce_Trent_700_viewed_from_boarding_gangway.jpg), EmadIV | CC BY 3.0 |
+| `a333/wingtip.jpg` | [Wingtip device on a China Eastern A330-343](https://commons.wikimedia.org/wiki/File:Wingtip_device_on_a_China_Eastern_Airlines_Airbus_A330-343.jpg), Shimin Gu | GFDL 1.2 |
+| `a333/wing.jpg` | [Qatar Airways A330-300 wing view](https://commons.wikimedia.org/wiki/File:02-JUL-2022_-_QR184_VIE-DOH_(A330-300_-_A7-AEO)_(04).jpg), Simply Aviation | CC BY 4.0 |
+| `a333/vstab.jpg` | [Air Canada A330-300 tail](https://commons.wikimedia.org/wiki/File:Airbus_A330_tail_Leitwerk.jpg), Lasse Fuss | CC BY-SA 3.0 |
+| `a333/hstab.jpg` | [China Eastern A330-300 rear view](https://commons.wikimedia.org/wiki/File:China_Eastern_Airbus_A330-300_B-6095_lining_up_at_Taipei_Songshan_April_2026_3.jpg), 4300streetcar | CC BY 4.0 |
+| `a333/gear.jpg` | [Malaysia Airlines A330-300 landing gear](https://commons.wikimedia.org/wiki/File:Landing_gear_on_a_Malaysian_Airlines_Airbus_A330-300.jpg), Ken Chen | CC BY-SA 4.0 |

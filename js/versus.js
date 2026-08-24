@@ -35,7 +35,7 @@ let idA = "b738", idB = "a320";
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=143`)).json();
+  const d = await (await fetch(`data/${id}.json?v=144`)).json();
   dataCache[id] = d;
   return d;
 }

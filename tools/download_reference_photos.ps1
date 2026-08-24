@@ -1,6 +1,24 @@
 $ErrorActionPreference = "Stop"
 
 $root = Split-Path -Parent $PSScriptRoot
+
+function Get-CommonsImageInfo($fileTitles, $width, $includeMetadata = $false) {
+  $byTitle = @{}
+  $props = if ($includeMetadata) { "url%7Cextmetadata" } else { "url" }
+  $uniqueTitles = @($fileTitles | Sort-Object -Unique)
+  for ($i = 0; $i -lt $uniqueTitles.Count; $i += 40) {
+    $batch = @($uniqueTitles[$i..([Math]::Min($i + 39, $uniqueTitles.Count - 1))])
+    $titles = ($batch | ForEach-Object { "File:$_" }) -join "|"
+    $api = "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=$props&iiurlwidth=$width&titles=$([uri]::EscapeDataString($titles))"
+    $pages = (Invoke-RestMethod -Uri $api -UserAgent "SKY-ARCHIVE/1.0 (reference photo downloader)").query.pages.psobject.Properties.Value
+    foreach ($page in $pages) {
+      if (-not $page.imageinfo) { throw "Wikimedia Commons file not found: $($page.title)" }
+      $byTitle[$page.title.Substring(5)] = $page.imageinfo[0]
+    }
+  }
+  return $byTitle
+}
+
 $photos = [ordered]@{
   "b738/overview.jpg" = "Boeing 737-800 (TC-SNR) 01.jpg"
   "b738/cockpit.jpg" = "The Flight Deck of the Boeing 737-800. (2956276002).jpg"
@@ -38,16 +56,27 @@ $photos = [ordered]@{
   "a359/vstab.jpg" = "Airbus A350-941 F-WWCF MSN002 ILA Berlin 2016 18.jpg"
   "a359/hstab.jpg" = "Airbus A350-941 F-WWCF MSN002 ILA Berlin 2016 20.jpg"
   "a359/gear.jpg" = "Airbus A350-941 F-WWCF MSN002 main landing gear ILA Berlin 2016 06.jpg"
+  "b789/overview.jpg" = "Qantas Boeing 787 VH-ZNM Perth 2026 (01).jpg"
+  "b789/cockpit.jpg" = "Boeing 787-8 N787BA cockpit.jpg"
+  "b789/fuselage.jpg" = "VN-A819 Boeing 787-9 Bamboo Airways LHR 23.3.22.jpg"
+  "b789/engine.jpg" = "Boeing 787 engine chevrons.jpg"
+  "b789/wingtip.jpg" = "Wingtip device of Boeing 787 (1).jpg"
+  "b789/wing.jpg" = "Boeing 787 Dreamliner wing view.jpg"
+  "b789/vstab.jpg" = "Vertical tail of B787 (1).jpg"
+  "b789/hstab.jpg" = "Horizontal stabilizer of B787 (1).jpg"
+  "b789/gear.jpg" = "Air India Boeing 787 Dreamliner N1008S PAS 2013 06 main landing gear.jpg"
+  "a333/overview.jpg" = "AirAsia X Airbus A330 9M-XXQ Perth 2024 (02).jpg"
+  "a333/cockpit.jpg" = "Airbus A330-302 Iberia EC-LYF cockpit (10983484845).jpg"
+  "a333/fuselage.jpg" = "Airbus A330-300 (Air Canada) 333.jpg"
+  "a333/engine.jpg" = "Rolls-Royce Trent 700 viewed from boarding gangway.jpg"
+  "a333/wingtip.jpg" = "Wingtip device on a China Eastern Airlines Airbus A330-343.jpg"
+  "a333/wing.jpg" = "02-JUL-2022 - QR184 VIE-DOH (A330-300 - A7-AEO) (04).jpg"
+  "a333/vstab.jpg" = "Airbus A330 tail Leitwerk.jpg"
+  "a333/hstab.jpg" = "China Eastern Airbus A330-300 B-6095 lining up at Taipei Songshan April 2026 3.jpg"
+  "a333/gear.jpg" = "Landing gear on a Malaysian Airlines Airbus A330-300.jpg"
 }
 
-$titles = ($photos.Values | Sort-Object -Unique | ForEach-Object { "File:$_" }) -join "|"
-$api = "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata&iiurlwidth=960&titles=$([uri]::EscapeDataString($titles))"
-$pages = (Invoke-RestMethod -Uri $api -UserAgent "SKY-ARCHIVE/1.0 (reference photo downloader)").query.pages.psobject.Properties.Value
-$byTitle = @{}
-foreach ($page in $pages) {
-  if (-not $page.imageinfo) { throw "Wikimedia Commons file not found: $($page.title)" }
-  $byTitle[$page.title.Substring(5)] = $page.imageinfo[0]
-}
+$byTitle = Get-CommonsImageInfo $photos.Values 960 $true
 
 foreach ($entry in $photos.GetEnumerator()) {
   $dest = Join-Path $root ("assets/reference/" + $entry.Key)
@@ -78,13 +107,13 @@ $windowPhotos = @(
   @{ Dest="b773/window-side.jpg"; Title="Boeing 777 nose from starboard side (2719420855) (2).jpg"; Crop=@(.50,.05,.42) },
   @{ Dest="a359/window-front.jpg"; Title="Airbus A350-941 F-WWCF MSN002 ILA Berlin 2016 17.jpg"; Crop=@(.50,.17,.30) },
   @{ Dest="a359/window-side.jpg"; Title="Airbus A350 cockpit windows (14274972354).jpg"; Crop=@(.03,.12,.92) }
+  @{ Dest="b789/window-front.jpg"; Title="Front view of ANA Boeing 787-8 JA834A at Taipei Songshan Airport 20150101.jpg"; Crop=@(.39,.43,.22) }
+  @{ Dest="b789/window-side.jpg"; Title="Cockpit windows of a Boeing 787 (3).jpg"; Crop=@(.08,.15,.84) }
+  @{ Dest="a333/window-front.jpg"; Title="Airbus A330 Front View.jpg"; Crop=@(.28,.10,.44) }
+  @{ Dest="a333/window-side.jpg"; Title="Airbus A330-343X, China Eastern Airlines JP7548435.jpg"; Crop=@(.48,.04,.46) }
 )
 
-$windowTitles = ($windowPhotos | ForEach-Object { "File:$($_.Title)" } | Sort-Object -Unique) -join "|"
-$windowApi = "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url&iiurlwidth=1600&titles=$([uri]::EscapeDataString($windowTitles))"
-$windowPages = (Invoke-RestMethod -Uri $windowApi -UserAgent "SKY-ARCHIVE/1.0 (reference photo downloader)").query.pages.psobject.Properties.Value
-$windowByTitle = @{}
-foreach ($page in $windowPages) { $windowByTitle[$page.title.Substring(5)] = $page.imageinfo[0] }
+$windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600
 
 Add-Type -AssemblyName System.Drawing
 foreach ($photo in $windowPhotos) {

@@ -2,18 +2,30 @@
   "title": "Boeing 787-9",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 787-9 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "787-9 機身大量使用碳纖維複合材料，每側四對主艙門；客艙窗比傳統廣體機更高大，並使用電子變色玻璃而非機械遮光板。",
+        "en": "The composite 787-9 has four main doors per side and unusually large cabin windows with electrochromic dimming instead of mechanical shades.",
+        "ja": "複合材の787-9は片側4枚の主ドアを備え、従来機より大型の電子調光式客室窓を採用します。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "787 與 A330-300 都可能有四對主艙門，因此舷窗尺寸、機鼻、引擎 chevrons 與翼尖比單純數門更重要。",
+        "en": "Both 787 and A330-300 can have four main doors per side, so window size, nose, chevrons and wingtips matter more than door count alone.",
+        "ja": "787とA330-300はいずれも片側4ドアのため、窓寸法、機首、シェブロン、翼端を重視します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "大型客艙窗縱向較高，窗角圓滑。",
+          "en": "Cabin windows are noticeably tall with rounded corners.",
+          "ja": "客室窓は縦に大きく、角が丸い形です。"
+        },
+        {
+          "zh": "電子變色窗通常看不到傳統上下拉式遮光板。",
+          "en": "Electrochromic windows normally lack pull-down shades.",
+          "ja": "電子調光窓には通常の上下式シェードがありません。"
+        },
+        {
+          "zh": "四對艙門的間距可協助區分 787-8、-9、-10。",
+          "en": "Spacing between the four door pairs helps separate 787 variants.",
+          "ja": "4枚のドア間隔が787各型の区別に役立ちます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b789/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:VN-A819_Boeing_787-9_Bamboo_Airways_LHR_23.3.22.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 787-9 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "787 的複合材料主翼展弦比高、翼尖細長，飛行中可見顯著彈性上彎；後緣採先進襟翼與擾流板配置。",
+        "en": "The 787's composite high-aspect-ratio wing is slender and visibly flexes upward in flight, with advanced flaps and spoilers along the trailing edge.",
+        "ja": "787の複合材高アスペクト比翼は細長く、飛行中に大きく上へしなります。後縁には先進的なフラップとスポイラーがあります。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "大幅上彎是受控彈性設計，可降低陣風載荷；A330 機翼也會彎曲，但外翼比例與直立翼尖擋板更傳統。",
+        "en": "The large bend is controlled elasticity that manages gust loads. A330 wings also flex, but have a more conventional outer wing and upright fence.",
+        "ja": "大きなしなりは突風荷重を抑える意図的な設計です。A330も曲がりますが、外翼と直立フェンスはより従来型です。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "翼根厚、外翼細長，飛行中弧度明顯。",
+          "en": "A thick root transitions to a slender outer wing with obvious in-flight curvature.",
+          "ja": "厚い翼根から細い外翼へ続き、飛行中の曲線が明瞭です。"
+        },
+        {
+          "zh": "翼尖為 raked tip，沒有 A330ceo 的直立三角板。",
+          "en": "The raked tip lacks the A330ceo's upright triangular fence.",
+          "ja": "レイクド翼端にはA330ceoの直立三角板がありません。"
+        },
+        {
+          "zh": "客艙窗外常可看到翼面大幅上下彈性位移。",
+          "en": "Cabin views often reveal substantial elastic wing movement.",
+          "ja": "客室から翼の大きな弾性変位が見られます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b789/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_787_Dreamliner_wing_view.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 787-9 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "787-9 可使用 General Electric GEnx-1B 或 Rolls-Royce Trent 1000；兩者短艙後緣都有鋸齒狀 chevrons，用來混合噴流並降低噪音。",
+        "en": "The 787-9 can use GEnx-1B or Trent 1000 engines; both installations feature serrated nacelle chevrons that mix the jet flow and reduce noise.",
+        "ja": "787-9はGEnx-1BまたはTrent 1000を使用し、どちらも噴流混合と騒音低減のためナセル後縁にシェブロンを備えます。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "A330ceo 的 CF6、PW4000 或 Trent 700 短艙後緣平滑；看到整圈鋸齒是辨識 787 最可靠的近距特徵之一。",
+        "en": "A330ceo CF6, PW4000 and Trent 700 nacelles have smooth trailing edges; a full chevron ring is one of the strongest close-range 787 cues.",
+        "ja": "A330ceoのCF6、PW4000、Trent 700は後縁が滑らかで、全周シェブロンは787の強い近距離識別点です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "短艙後緣呈規則三角鋸齒。",
+          "en": "Regular triangular chevrons ring the nacelle trailing edge.",
+          "ja": "ナセル後縁を規則的な三角シェブロンが囲みます。"
+        },
+        {
+          "zh": "GEnx 與 Trent 1000 外觀不同，但都保留 787 chevrons。",
+          "en": "GEnx and Trent 1000 differ visually, but both retain 787 chevrons.",
+          "ja": "GEnxとTrent 1000は外観が異なりますが、双方にシェブロンがあります。"
+        },
+        {
+          "zh": "短艙尺寸大，進氣口接近完整圓形。",
+          "en": "The large inlet is close to circular.",
+          "ja": "大型の吸気口はほぼ円形です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b789/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_787_engine_chevrons.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "787 垂直尾翼以複合材料製成，前緣後掠、頂端向後收尖，根部整流罩平順連接機背。",
+        "en": "The composite 787 fin has a swept leading edge, aft-tapered tip and smooth dorsal fairing into the upper fuselage.",
+        "ja": "787の複合材垂直尾翼は後退前縁、後方へ細くなる上端、滑らかなドーサルフェアリングを持ちます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "垂尾外形不是區分 787 與 A330 的首要線索；優先看引擎 chevrons、翼尖與客艙窗。",
+        "en": "Fin shape is not the primary 787/A330 cue; prioritize nacelle chevrons, wingtips and cabin windows.",
+        "ja": "垂直尾翼は主要識別点ではなく、シェブロン、翼端、客室窓を優先します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣後掠明顯，頂端圓滑收尖。",
+          "en": "The leading edge is strongly swept and the tip tapers smoothly.",
+          "ja": "前縁後退が大きく、上端は滑らかに細くなります。"
+        },
+        {
+          "zh": "根部背鰭與後機身表面過渡平順。",
+          "en": "The dorsal root blends smoothly into the aft fuselage.",
+          "ja": "根元は後部胴体へ滑らかにつながります。"
+        },
+        {
+          "zh": "尾翼塗裝只適合辨識航空公司。",
+          "en": "Tail livery identifies the operator, not the type by itself.",
+          "ja": "尾翼塗装は運航会社の識別用で、機種単独判定には使えません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b789/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Vertical_tail_of_B787_(1).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "787 的水平尾翼低置且後掠，複合材料表面與細長後機身平順融合；外形簡潔、翼尖收束較尖。",
+        "en": "The low-mounted swept composite tailplane blends into the slender aft fuselage and tapers cleanly toward pointed tips.",
+        "ja": "787の低位置後退複合材水平尾翼は細い後部胴体へ滑らかにつながり、翼端へきれいに細くなります。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "水平尾翼單獨難以區分 787 與 A330；側後方觀察時應同時確認翼尖裝置與引擎後緣。",
+        "en": "Tailplane shape alone is weak; from aft-quarter views also check the wingtip device and nacelle trailing edge.",
+        "ja": "水平尾翼単独では弱いため、後斜めから翼端装置とナセル後縁も確認します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "尾翼後掠且翼尖收細。",
+          "en": "The swept surface tapers toward a narrow tip.",
+          "ja": "後退面が細い翼端へ収束します。"
+        },
+        {
+          "zh": "根部整流罩順著複合材料後機身延伸。",
+          "en": "The root fairing follows the composite aft fuselage smoothly.",
+          "ja": "付け根フェアリングが複合材後部胴体へ滑らかに続きます。"
+        },
+        {
+          "zh": "需以 chevrons 與 raked tip 交叉確認。",
+          "en": "Confirm with chevrons and the raked wingtip.",
+          "ja": "シェブロンとレイクド翼端で照合します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b789/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Horizontal_stabilizer_of_B787_(1).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 787-9 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "787-9 每組主起落架為兩軸四輪、前起落架雙輪；主腳轉向架落地時帶有傾角，收入翼身整流區。",
+        "en": "Each 787-9 main bogie has two axles and four tyres. The truck tilts for touchdown and retracts into the wing-body fairing.",
+        "ja": "787-9の各主脚は2軸4輪で、接地用の傾きを持ち、翼胴フェアリング内へ格納されます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "A330-300 同樣是四輪主腳，因此輪數不能區分兩者；必須改看機鼻、翼尖與引擎短艙後緣。",
+        "en": "The A330-300 also has four-wheel bogies, so wheel count does not separate them; use the nose, wingtips and nacelle trailing edges.",
+        "ja": "A330-300も4輪主脚のため輪数では区別できません。機首、翼端、ナセル後縁を確認します。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側兩軸四輪，前腳雙輪。",
+          "en": "Two axles and four tyres per main bogie, with twin nose wheels.",
+          "ja": "各主脚は2軸4輪、前脚は2輪です。"
+        },
+        {
+          "zh": "主腳轉向架具有明顯接地傾角。",
+          "en": "The main truck shows a pronounced touchdown tilt.",
+          "ja": "主脚ボギーに明確な接地傾斜があります。"
+        },
+        {
+          "zh": "輪數與 A330 相同，不能作單一判型依據。",
+          "en": "Wheel count matches the A330 and is not a standalone identifier.",
+          "ja": "輪数はA330と同じで、単独の識別点にはなりません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b789/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_India_Boeing_787_Dreamliner_N1008S_PAS_2013_06_main_landing_gear.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "787-9 是中大型複合材料廣體雙發客機，可由圓滑機鼻、大型駕駛艙窗、鋸齒狀引擎短艙後緣、明顯上彎的高展弦比主翼與水平後掠翼尖辨認。",
+        "en": "The 787-9 is a composite wide-body twin identified by its smooth nose, large cockpit glazing, serrated nacelle trailing edges, highly flexible wing and horizontal raked tips.",
+        "ja": "787-9は複合材ワイドボディ双発機で、滑らかな機首、大型操縦席窓、ナセル後縁のシェブロン、大きくしなる主翼、水平レイクド翼端が特徴です。"
+      },
+      "fact": {
+        "zh": "辨識 787 時，鋸齒短艙與無直立小翼的彎曲主翼比航空公司塗裝更可靠；787-8、-9、-10 仍需再用機身長度與門距區分。",
+        "en": "Chevrons and a flexed wing without upright winglets are stronger 787 cues than livery; separate the -8, -9 and -10 by length and door spacing.",
+        "ja": "787の識別には塗装よりシェブロンと直立小翼のない柔軟な主翼が有効で、-8／-9／-10は全長とドア間隔で区別します。"
+      },
+      "bullets": [
+        {
+          "zh": "四對主艙門，機身比 787-8 長、比 787-10 短。",
+          "en": "Four main doors per side; longer than the 787-8 and shorter than the 787-10.",
+          "ja": "片側4枚の主ドアで、787-8より長く787-10より短い胴体です。"
+        },
+        {
+          "zh": "引擎短艙後緣有明顯鋸齒狀 chevrons。",
+          "en": "Distinct chevrons surround the nacelle trailing edge.",
+          "ja": "エンジンナセル後縁に明確なシェブロンがあります。"
+        },
+        {
+          "zh": "主翼飛行中上彎明顯，翼尖向後延伸而不直立。",
+          "en": "The wing flexes strongly in flight and ends in a swept, non-upright tip.",
+          "ja": "飛行中の主翼しなりが大きく、翼端は直立せず後方へ伸びます。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b789/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Qantas_Boeing_787_VH-ZNM_Perth_2026_(01).jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "787 駕駛艙保留 Boeing 傳統駕駛盤，但採大型橫向液晶螢幕、雙 HUD 與高度整合的 EICAS／飛行管理顯示，視覺上比 A330ceo 的上一代面板更開闊。",
+        "en": "The 787 retains Boeing yokes but uses large landscape displays, dual HUDs and integrated EICAS/flight-management pages, giving a more open appearance than the earlier A330ceo panel.",
+        "ja": "787はBoeing式操縦輪を残しつつ、大型横長画面、デュアルHUD、統合EICAS／飛行管理表示を採用し、A330ceoより開放的に見えます。"
+      },
+      "fact": {
+        "zh": "最直接的 787／A330 座艙差異是駕駛盤對側桿；HUD 與螢幕世代可輔助，但航空公司選配會造成差異。",
+        "en": "The clearest 787/A330 cockpit cue is yoke versus sidestick; HUD and display fit are secondary because options vary.",
+        "ja": "最も明確な差は操縦輪とサイドスティックです。HUDや画面構成は運航会社の仕様差があります。"
+      },
+      "bullets": [
+        {
+          "zh": "正副駕駛前方都有駕駛盤與中央操縱柱。",
+          "en": "Both pilots have yokes and control columns.",
+          "ja": "両席の正面に操縦輪とコントロールコラムがあります。"
+        },
+        {
+          "zh": "大型橫向顯示器整合 PFD、導航與 EICAS。",
+          "en": "Large landscape displays integrate flight, navigation and EICAS information.",
+          "ja": "大型横長画面が飛行、航法、EICAS情報を統合します。"
+        },
+        {
+          "zh": "擋風玻璃前可見 HUD 組件，是常見 787 座艙線索。",
+          "en": "HUD units ahead of the windscreen are a common 787 flight-deck cue.",
+          "ja": "風防前のHUD装置は787でよく見られる手掛かりです。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b789/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_787-8_N787BA_cockpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "787 的駕駛艙窗面積大，兩片正面風擋寬而較直立，外側窗向後下方收尖；窗帶與圓滑機鼻融合，但沒有 A350 式整片黑色面罩。",
+        "en": "The 787 has large, upright forward panes and outer panes tapering aft and down. The glazing blends into the smooth nose without an A350-style full black mask.",
+        "ja": "787は大型で直立気味の前面窓と、後下方へ細くなる側面窓を持ちます。滑らかな機首に馴染みますがA350の全面黒マスクはありません。"
+      },
+      "fact": {
+        "zh": "787 與 A330 都有六片主要駕駛艙窗；不要只數窗片，應比較 787 更大的窗面、較圓的機鼻與外側窗收尖角度。",
+        "en": "Both 787 and A330 use six principal cockpit panes; compare the 787's larger glass area, rounder nose and outer-pane taper instead of counting panes.",
+        "ja": "787とA330はいずれも主要窓が6枚です。枚数ではなく787の大きな窓面、丸い機首、側窓の絞り方を見ます。"
+      },
+      "bullets": [
+        {
+          "zh": "正面主風擋寬大，中央接縫近乎垂直。",
+          "en": "Wide forward panes meet at a near-vertical centre seam.",
+          "ja": "幅広い前面窓がほぼ垂直の中央継ぎ目で接します。"
+        },
+        {
+          "zh": "外側窗後端尖細並向下收束。",
+          "en": "The aft side panes taper to a pointed, downward-swept end.",
+          "ja": "外側窓後端は尖り、下向きに絞られます。"
+        },
+        {
+          "zh": "搭配鋸齒短艙與 raked tip 可排除 A330。",
+          "en": "Cross-check chevron nacelles and raked tips to exclude an A330.",
+          "ja": "シェブロンナセルとレイクド翼端を合わせてA330を除外します。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b789/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Front_view_of_ANA_Boeing_787-8_JA834A_at_Taipei_Songshan_Airport_20150101.jpg"
+        },
+        {
+          "src": "assets/reference/b789/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit_windows_of_a_Boeing_787_(3).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "787 沒有直立翼尖小翼；高展弦比主翼在外翼連續上彎後，末端向後拉長形成水平為主的 raked tip。",
+        "en": "The 787 has no upright winglet. Its high-aspect-ratio wing flexes upward and finishes in an aft-stretched, primarily horizontal raked tip.",
+        "ja": "787には直立ウイングレットがなく、高アスペクト比翼が上へしなり、後方へ長い水平レイクド翼端になります。"
+      },
+      "fact": {
+        "zh": "A330ceo 的三角形直立翼尖擋板很醒目；即使遠距只看輪廓，『直立三角板』與『後掠尖翼』通常已能快速區分。",
+        "en": "The A330ceo's upright triangular fence is conspicuous; its silhouette alone often separates it from the 787's swept pointed tip.",
+        "ja": "A330ceoの直立三角フェンスは目立ち、787の後退した尖り翼端との輪郭差で遠方からも区別できます。"
+      },
+      "bullets": [
+        {
+          "zh": "翼尖沿翼面向後收尖，不形成直立板。",
+          "en": "The tip tapers aft in the wing plane without an upright blade.",
+          "ja": "翼面内で後方へ細くなり、直立板を作りません。"
+        },
+        {
+          "zh": "飛行中外翼上彎會讓翼尖看似抬高。",
+          "en": "In-flight wing flex makes the tip appear elevated.",
+          "ja": "飛行中のしなりで翼端が高く見えます。"
+        },
+        {
+          "zh": "與 A330 的短小三角翼尖擋板形成強烈對比。",
+          "en": "It contrasts strongly with the A330's small triangular wingtip fence.",
+          "ja": "A330の小さな三角翼端フェンスと強く対照します。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b789/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Wingtip_device_of_Boeing_787_(1).jpg"
+        }
+      ]
     }
   },
   "specifications": {
