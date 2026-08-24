@@ -33,3 +33,37 @@ These files are real-aircraft photographs downloaded from Wikimedia Commons at 9
 | `a320/vstab.jpg` | [Vertical stabilizer of A-320](https://commons.wikimedia.org/wiki/File:Vertical_stabilizer_of_A-320.jpg), Dtom | Public domain |
 | `a320/hstab.jpg` | [Airbus-Höhenruder](https://commons.wikimedia.org/wiki/File:Airbus-H%C3%B6henruder.jpg), AssetBurned | CC BY-SA 3.0 |
 | `a320/gear.jpg` | [A320neo Nose Landing Gear](https://commons.wikimedia.org/wiki/File:A320neo_Nose_Landing_Gear.jpg), Gabriel Resende Veiga | CC BY-SA 4.0 |
+
+## Boeing 777-300 / 777-300ER (`b773`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b773/overview.jpg` | [Emirates Boeing 777-300ER at Geneva](https://commons.wikimedia.org/wiki/File:Boeing_777-300ER,_Geneva_Airport,_Le_Grand-Saconnex_(BL7C0540).jpg), Matti Blume | CC BY-SA 4.0 |
+| `b773/cockpit.jpg` | [Boeing 777-200ER cockpit](https://commons.wikimedia.org/wiki/File:Boeing_777-200ER_cockpit.jpg), Bill Abbott; flight-deck layout used as a 777-family reference | CC BY-SA 2.0 |
+| `b773/window-front.jpg` | [Cockpit windows of an AA B773](https://commons.wikimedia.org/wiki/File:Cockpit_windows_of_an_AA_B773.jpg), Olivier Cleynen; cropped to emphasize the windows | CC BY-SA 4.0 |
+| `b773/window-side.jpg` | [Boeing 777 nose from starboard side](https://commons.wikimedia.org/wiki/File:Boeing_777_nose_from_starboard_side_(2719420855)_(2).jpg), Bill Abbott; cropped to emphasize the windows | CC BY-SA 2.0 |
+| `b773/fuselage.jpg` | [Cathay Pacific Boeing 777 nose in oneworld colours](https://commons.wikimedia.org/wiki/File:B-KPL_Boeing_777_Cathay_Pacific_In_OneWorld_Colours_Nose_(9320566483).jpg), Aeroprints.com | CC BY-SA 3.0 |
+| `b773/engine.jpg` | [Engine of Jet Airways Boeing 777-300ER](https://commons.wikimedia.org/wiki/File:Engine_of_Jet_Airways_Boeing_777-300ER.jpg), Cory Barnes | CC BY-SA 2.0 |
+| `b773/wingtip.jpg` | [Emirates 777-300ER wing view](https://commons.wikimedia.org/wiki/File:Emirates_77W_wing_view,_July_2015.jpg), Sunnya343 | CC BY-SA 4.0 |
+| `b773/wing.jpg` | [Emirates 777-300ER wing view](https://commons.wikimedia.org/wiki/File:Emirates_77W_wing_view,_July_2015.jpg), Sunnya343 | CC BY-SA 4.0 |
+| `b773/vstab.jpg` | [EVA Air Boeing 777-300ER tail](https://commons.wikimedia.org/wiki/File:View_of_EVA_Air_Boeing_777-300ER_tail.jpg), Bryan | CC BY 2.0 |
+| `b773/hstab.jpg` | [Air Canada Boeing 777-300 tail](https://commons.wikimedia.org/wiki/File:Boeing_777%27s_Tail_(2573279746).jpg), Can Pac Swire | CC BY-SA 2.0 |
+| `b773/gear.jpg` | [Emirates Boeing 777 landing gear](https://commons.wikimedia.org/wiki/File:B777_Landinggear_(51127441259).jpg), jounigripen | CC BY 2.0 |
+
+The project entry is named Boeing 777-300. Exterior reference photographs use the far more common 777-300ER where the illustrated feature is specific to the ER (GE90-115B and raked tip); the captions and identification notes say so explicitly.
+
+## Airbus A350-900 (`a359`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a359/overview.jpg` | [Airbus A350-941 F-WWCF at ILA Berlin 2016](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_17.jpg), Julian Herzog | CC BY 4.0 |
+| `a359/cockpit.jpg` | [Airbus A350 XWB F-WWYB cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A-350_XWB_F-WWYB_cockpit_view.jpg), Joao Carlos Medau | CC BY 2.0 |
+| `a359/window-front.jpg` | [Airbus A350-941 F-WWCF at ILA Berlin 2016](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_17.jpg), Julian Herzog; cropped to emphasize the front window geometry | CC BY 4.0 |
+| `a359/window-side.jpg` | [Airbus A350 cockpit windows](https://commons.wikimedia.org/wiki/File:Airbus_A350_cockpit_windows_(14274972354).jpg), Bernd Sieker; cropped to emphasize the side window geometry | CC BY-SA 2.0 |
+| `a359/fuselage.jpg` | [Airbus A350-900 at ILA Berlin 2018](https://commons.wikimedia.org/wiki/File:Airbus_A350-900_(40862885025).jpg), Lutz Blohm | CC BY-SA 2.0 |
+| `a359/engine.jpg` | [A350-941 landing gear and Rolls-Royce Trent XWB](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_23.jpg), Julian Herzog | CC BY 4.0 |
+| `a359/wingtip.jpg` | [Airbus A350 XWB F-WWYB winglet](https://commons.wikimedia.org/wiki/File:Airbus_A-350_XWB_F-WWYB_winglet.jpg), Joao Carlos Medau | CC BY 2.0 |
+| `a359/wing.jpg` | [Airbus A350-941 blended winglet at ILA Berlin 2016](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_blended_winglet_ILA_Berlin_2016_05.jpg), Julian Herzog | CC BY 4.0 |
+| `a359/vstab.jpg` | [Airbus A350-941 F-WWCF at ILA Berlin 2016](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_18.jpg), Julian Herzog | CC BY 4.0 |
+| `a359/hstab.jpg` | [Airbus A350-941 F-WWCF at ILA Berlin 2016](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_20.jpg), Julian Herzog | CC BY 4.0 |
+| `a359/gear.jpg` | [Airbus A350-941 main landing gear](https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_main_landing_gear_ILA_Berlin_2016_06.jpg), Julian Herzog | CC BY 4.0 |

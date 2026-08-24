@@ -2,19 +2,30 @@
   "title": "Airbus A350-900",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A350-900 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "A350 機身外寬約 5.96 m，大量使用碳纖維複合材料。A350-900 每側四對大型主艙門，窗線與黑色駕駛艙面罩之間過渡平順。",
+        "en": "The A350 fuselage is about 5.96 m wide and extensively composite. The -900 has four main doors per side with a smooth transition from cabin windows to the black cockpit mask.",
+        "ja": "A350の胴体幅は約5.96 mで複合材を多用します。-900は片側4枚の主ドアを備え、客室窓から黒い操縦席マスクへ滑らかにつながります。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "777-300ER 每側五對艙門且機身更長；在側面遠景中，數大型艙門通常比估算長度更可靠。",
+        "en": "The 777-300ER has five doors per side and is longer. Counting main doors is usually more reliable than estimating length.",
+        "ja": "777-300ERは片側5枚でより長いため、遠景では全長推定より大型ドア数が有効です。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "每側四對主艙門，機翼前兩對、後方兩對。",
+          "en": "Four main doors per side, two ahead of the wing and two aft.",
+          "ja": "片側4枚で、主翼前に2枚、後方に2枚あります。"
+        },
+        {
+          "zh": "機身直徑略小於 777，但客艙仍可每排九席。",
+          "en": "The body is slightly narrower than the 777 but still supports nine-abreast seating.",
+          "ja": "777よりやや細いものの、客室は9席横並びに対応します。"
+        },
+        {
+          "zh": "複合材料蒙皮使表面接縫與鋁合金機體觀感不同。",
+          "en": "Composite skins produce different panel-joint patterns from aluminium airframes.",
+          "ja": "複合材外板はアルミ機体と異なるパネル継ぎ目を見せます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a359/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350-900_(40862885025).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A350-900 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "A350 駕駛艙使用側桿與六具大型寬螢幕，飛行員正前方沒有駕駛盤；中央顯示器整合 ECAM、飛行管理與系統頁面。",
+        "en": "The A350 flight deck uses sidesticks and six large widescreen displays, leaving no yoke in front of either pilot. Central screens integrate ECAM, flight-management and system pages.",
+        "ja": "A350の操縦席はサイドスティックと6面の大型ワイド画面を使い、両席正面に操縦輪がありません。中央画面がECAMやシステム表示を統合します。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "A350 與 A380 共用相近的 Airbus 座艙哲學；相較 777，最直觀差異是側桿、桌板與更大的寬螢幕。",
+        "en": "The A350 follows the A380-era Airbus philosophy. Sidesticks, tray tables and larger widescreens distinguish it immediately from a 777.",
+        "ja": "A350はA380世代のAirbus思想を採用し、サイドスティック、テーブル、大型ワイド画面が777との明確な違いです。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "左右側桿取代駕駛盤，正面空間可設桌板。",
+          "en": "Sidesticks replace yokes, freeing space for tray tables.",
+          "ja": "操縦輪をサイドスティックに置き換え、正面にテーブル空間があります。"
+        },
+        {
+          "zh": "六具大型液晶螢幕比 777 的傳統六屏更寬。",
+          "en": "Six large LCDs are wider than the traditional 777 display set.",
+          "ja": "6面の大型LCDは従来型777の画面より横長です。"
+        },
+        {
+          "zh": "中央台與頂板仍保留大量實體旋鈕，並非全觸控。",
+          "en": "The pedestal and overhead retain physical controls; the cockpit is not all-touchscreen.",
+          "ja": "中央台とオーバーヘッドには物理操作部が残り、全面タッチ式ではありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a359/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A-350_XWB_F-WWYB_cockpit_view.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A350-900 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "A350 使用高展弦比複合材料機翼，外翼在飛行中會顯著上彎，翼尖連續過渡成 blended winglet；大型襟翼與擾流板沿後緣排列。",
+        "en": "The A350 has a high-aspect-ratio composite wing that flexes visibly in flight and blends continuously into its curved tip, with large flaps and spoilers along the trailing edge.",
+        "ja": "A350は高アスペクト比の複合材翼を備え、飛行中に大きくしなり、外翼は曲線翼端へ連続します。後縁には大型フラップとスポイラーがあります。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "複合材料讓機翼能以受控方式彎曲以降低陣風載荷；看起來柔軟並不代表結構薄弱。",
+        "en": "Composite construction permits controlled flex that helps manage gust loads; visible bending is intentional, not weakness.",
+        "ja": "複合材翼のしなりは突風荷重を管理する意図的な設計で、弱さを示すものではありません。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "翼根厚、外翼修長，飛行中上彎幅度明顯。",
+          "en": "A thick root transitions into a slender outer wing with visible in-flight flex.",
+          "ja": "厚い翼根から細い外翼へ続き、飛行中の上反りが目立ちます。"
+        },
+        {
+          "zh": "翼尖平順向上彎，不是 777 的水平 raked tip。",
+          "en": "The tip curves upward rather than remaining a horizontal raked extension like the 777's.",
+          "ja": "翼端は上へ曲がり、777の水平レイクド翼端とは異なります。"
+        },
+        {
+          "zh": "翼下只有兩具 Trent XWB，位置靠近翼根。",
+          "en": "Two Trent XWBs hang beneath the inner wing.",
+          "ja": "2基のTrent XWBが内翼下に配置されます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a359/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_blended_winglet_ILA_Berlin_2016_05.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A350-900 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A350-900 固定使用 Rolls-Royce Trent XWB-84。短艙圓潤、比例修長，風扇直徑約 3.0 m，雖然巨大但通常比 777-300ER 的 GE90-115B 顯得纖細。",
+        "en": "The A350-900 exclusively uses the Rolls-Royce Trent XWB-84. Its roughly 3.0 m fan sits in a smooth, relatively slender nacelle compared with the 777-300ER's GE90-115B.",
+        "ja": "A350-900はRolls-Royce Trent XWB-84専用です。約3.0 mのファンを滑らかで比較的細長いナセルに収め、777-300ERのGE90-115Bより細身に見えます。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "A350-1000 使用推力更大的 Trent XWB-97，但外觀仍屬同一家族；要區分 -900／-1000 應再看機身長度、艙門與主腳。",
+        "en": "The A350-1000 uses the higher-thrust XWB-97. Separate -900 and -1000 using length, doors and landing gear, not engine appearance alone.",
+        "ja": "A350-1000は高推力のXWB-97を使います。-900／-1000はエンジンだけでなく胴体長、ドア、主脚で区別します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "短艙外形圓滑且較修長，進氣口不像 GE90-115B 那麼粗壯。",
+          "en": "The smooth elongated nacelle looks less bulky than a GE90-115B installation.",
+          "ja": "滑らかで長いナセルはGE90-115Bほど太く見えません。"
+        },
+        {
+          "zh": "所有 A350-900 都使用 Trent XWB，沒有多家引擎選項。",
+          "en": "Every A350-900 uses a Trent XWB; there is no competing engine option.",
+          "ja": "A350-900はすべてTrent XWBで、他社エンジン選択肢はありません。"
+        },
+        {
+          "zh": "搭配黑色窗罩與上彎翼尖可快速確認 A350。",
+          "en": "Pair it with the black cockpit mask and upturned tips to confirm an A350.",
+          "ja": "黒い窓マスクと上向き翼端を合わせてA350を確認します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a359/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_23.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "A350 垂直尾翼以複合材料製成，前緣後掠、頂端向後收尖，根部與後機身的整流過渡較纖細平順。",
+        "en": "The composite A350 fin has a swept leading edge, aft-tapered tip and a relatively slender smooth fairing into the aft fuselage.",
+        "ja": "複合材のA350垂直尾翼は後退前縁と後方へ細くなる上端を持ち、後部胴体へ細く滑らかにつながります。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "垂尾塗裝主要辨識航空公司；區分 777 與 A350 時，黑色窗罩、艙門數與主腳更可靠。",
+        "en": "Tail paint identifies the airline. The cockpit mask, door count and main gear are stronger 777/A350 discriminators.",
+        "ja": "尾翼塗装は航空会社の手掛かりです。777／A350判別には窓マスク、ドア数、主脚がより有効です。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "尾翼根部整流罩較長而平滑。",
+          "en": "The fin-root fairing is long and smoothly blended.",
+          "ja": "尾翼根元のフェアリングが長く滑らかです。"
+        },
+        {
+          "zh": "頂端向後收尖，方向舵後緣接近直線。",
+          "en": "The tip tapers aft and the rudder trailing edge is nearly straight.",
+          "ja": "上端は後方へ細くなり、方向舵後縁はほぼ直線です。"
+        },
+        {
+          "zh": "後機身較 777 顯得細長、表面線條更圓順。",
+          "en": "The aft fuselage appears slimmer and smoother than the 777's.",
+          "ja": "後部胴体は777より細長く滑らかに見えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a359/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_18.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "A350 的水平尾翼低置於後機身兩側，複合材料安定面後掠且翼尖收細，根部整流罩與機身曲面連續。",
+        "en": "The A350's low-mounted composite tailplane is swept and tapered, with root fairings flowing continuously into the aft fuselage.",
+        "ja": "A350の低位置複合材水平尾翼は後退・先細形で、付け根フェアリングが後部胴体へ連続します。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "水平尾翼本身不是可靠的單一判型特徵；應配合上彎翼尖、黑色窗罩與四輪主腳。",
+        "en": "The tailplane is not a reliable standalone cue; combine it with curved tips, the black mask and four-wheel bogies.",
+        "ja": "水平尾翼単独は弱い識別点です。曲線翼端、黒マスク、4輪主脚を組み合わせます。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "外形修長，翼尖與後緣收束平順。",
+          "en": "The slender surface tapers smoothly at the tip and trailing edge.",
+          "ja": "細長い外形で、翼端と後縁が滑らかに絞られます。"
+        },
+        {
+          "zh": "根部整流罩比 777 的厚重過渡更纖細。",
+          "en": "The root fairing is visually slimmer than the heavier 777 transition.",
+          "ja": "付け根は777の重厚な移行部より細く見えます。"
+        },
+        {
+          "zh": "從後方辨識時先看主腳四輪而非只看尾翼。",
+          "en": "From the rear, check the four-wheel main gear before relying on tail shape.",
+          "ja": "後方からは尾翼より先に4輪主脚を確認します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a359/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_20.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus A350-900 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "A350-900 每組主起落架為兩軸四輪，前起落架雙輪；這與 777-300ER 的三軸六輪主腳形成非常清楚的差異。",
+        "en": "Each A350-900 main bogie has two axles and four tyres, versus the 777-300ER's three axles and six tyres.",
+        "ja": "A350-900の各主脚は2軸4輪で、777-300ERの3軸6輪と明確に異なります。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "A350-1000 改用六輪主腳；因此『四輪＝A350』只適用於 A350-900，辨識時要先確認子型與艙門比例。",
+        "en": "The A350-1000 uses six-wheel main gear. Four wheels identify an A350-900, not every A350 variant.",
+        "ja": "A350-1000は6輪主脚です。4輪はA350-900の識別点であり、全A350共通ではありません。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳兩軸四輪，轉向架明顯短於 777-300ER。",
+          "en": "Two axles and four tyres make a visibly shorter bogie than the 777-300ER's.",
+          "ja": "片側2軸4輪で、777-300ERより明らかに短いボギーです。"
+        },
+        {
+          "zh": "主腳艙門與支柱外形較整潔、緊湊。",
+          "en": "The gear doors and strut installation appear relatively compact.",
+          "ja": "脚扉と支柱配置は比較的コンパクトです。"
+        },
+        {
+          "zh": "四輪主腳、四對艙門與黑色窗罩三者可快速確認 A350-900。",
+          "en": "Four-wheel bogies, four door pairs and the black mask together confirm an A350-900 quickly.",
+          "ja": "4輪主脚、片側4ドア、黒マスクの組み合わせでA350-900を素早く確認できます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a359/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_main_landing_gear_ILA_Berlin_2016_06.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A350-900 是複合材料廣體雙發客機，最醒目的外觀是駕駛艙窗周圍的黑色面罩、平順圓潤的機鼻、向上彎曲的翼尖，以及每側四對主艙門。",
+        "en": "The A350-900 is a composite wide-body twin identified by its black cockpit-window mask, smooth rounded nose, upward-curving tips and four main doors per side.",
+        "ja": "A350-900は複合材ワイドボディ双発機で、黒い操縦席窓マスク、滑らかな丸い機首、上向きに曲がる翼端、片側4枚の主ドアが特徴です。"
+      },
+      "fact": {
+        "zh": "黑色『墨鏡』最容易看見，但仍應用四輪主腳、四對艙門與彎曲翼尖交叉確認，避免與 A330neo 等其他 Airbus 廣體機混淆。",
+        "en": "The black mask is obvious, but confirm it with four-wheel bogies, four door pairs and curved tips to avoid confusing other Airbus wide-bodies.",
+        "ja": "黒いマスクは目立ちますが、4輪主脚、片側4ドア、曲線翼端で他のAirbusワイドボディ機と区別します。"
+      },
+      "bullets": [
+        {
+          "zh": "黑色窗罩將六片駕駛艙窗連成連續面。",
+          "en": "A black surround visually joins the six cockpit panes.",
+          "ja": "黒いマスクが6枚の操縦席窓を連続した面に見せます。"
+        },
+        {
+          "zh": "每側四對主艙門，比 777-300ER 少一對。",
+          "en": "Four main doors per side, one fewer than the 777-300ER.",
+          "ja": "片側4枚の主ドアで、777-300ERより1枚少ないです。"
+        },
+        {
+          "zh": "翼尖柔和上彎，主腳每側為四輪。",
+          "en": "Tips curve smoothly upward and each main bogie has four wheels.",
+          "ja": "翼端は滑らかに上へ曲がり、各主脚は4輪です。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a359/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_17.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A350 的六片風擋被亮黑色外框連成像『墨鏡』的完整窗罩，外框向兩側拉長並順著圓鼻下緣延伸，是現代客機最鮮明的正面辨識特徵之一。",
+        "en": "The A350's six panes are visually joined by a glossy black sunglasses-like mask that stretches around the rounded nose, one of the clearest modern airliner cues.",
+        "ja": "A350の6枚の窓は光沢のある黒いサングラス状マスクで一体化され、丸い機首の両側へ伸びます。現代旅客機で最も明瞭な識別点の一つです。"
+      },
+      "fact": {
+        "zh": "黑色區域主要是外觀與防眩處理，不代表只有一整片玻璃；實際仍是可更換、加熱的多片結構風擋。",
+        "en": "The black surround is not one giant pane; the windshield remains multiple replaceable heated structural panels.",
+        "ja": "黒い部分は一枚の巨大ガラスではなく、交換可能な加熱式構造窓が複数並んでいます。"
+      },
+      "bullets": [
+        {
+          "zh": "黑色外框跨過窗片間隔，形成連續面罩。",
+          "en": "The black surround bridges the gaps into one continuous mask.",
+          "ja": "黒い外周が窓間をつなぎ、一体のマスクになります。"
+        },
+        {
+          "zh": "正面窗下緣向中央形成柔和下彎弧線。",
+          "en": "The lower edge forms a smooth downward curve toward the centre.",
+          "ja": "正面窓の下縁は中央へ向けて滑らかに下がります。"
+        },
+        {
+          "zh": "側窗後端尖細，黑框一路延伸到機身側面。",
+          "en": "The aft side pane tapers sharply and the mask wraps onto the fuselage sides.",
+          "ja": "後方側窓は尖り、黒い枠が胴体側面まで回り込みます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a359/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350-941_F-WWCF_MSN002_ILA_Berlin_2016_17.jpg"
+        },
+        {
+          "src": "assets/reference/a359/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A350_cockpit_windows_(14274972354).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "A350 的外翼與翼尖連續扭轉、向上彎曲，形成沒有清楚接縫的 blended winglet；輪廓像柔和的長刀向上挑起。",
+        "en": "The A350 outer wing twists and curves continuously upward into a blended winglet with no abrupt joint, resembling a long blade swept upward.",
+        "ja": "A350の外翼は連続的にねじれながら上へ曲がり、明確な継ぎ目のないブレンデッド・ウイングレットになります。"
+      },
+      "fact": {
+        "zh": "777-300ER 的 raked tip 主要水平向後延伸；A350 的翼尖則有明顯垂直高度，是遠距最有用的差異之一。",
+        "en": "The 777-300ER raked tip extends mainly aft and horizontally; the A350 tip gains obvious vertical height.",
+        "ja": "777-300ERは主に水平後方へ伸び、A350は明確に上方へ高さを持つ点が大きな違いです。"
+      },
+      "bullets": [
+        {
+          "zh": "翼尖由外翼平順上彎，沒有獨立直立小翼接縫。",
+          "en": "The tip rises smoothly from the outer wing without a separate winglet joint.",
+          "ja": "外翼から滑らかに上昇し、独立した小翼の継ぎ目がありません。"
+        },
+        {
+          "zh": "外緣向後收尖，視角不同時彎曲程度看起來會改變。",
+          "en": "The trailing outline tapers aft, and apparent curvature changes with viewing angle.",
+          "ja": "後方へ細くなり、見る角度で曲がり方が変わって見えます。"
+        },
+        {
+          "zh": "與黑色駕駛艙窗罩一起，是 A350 的代表性外型。",
+          "en": "Together with the black cockpit mask, it defines the A350 silhouette.",
+          "ja": "黒い操縦席マスクと並ぶA350の代表的外形です。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a359/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A-350_XWB_F-WWYB_winglet.jpg"
+        }
+      ]
     }
   },
   "specifications": {

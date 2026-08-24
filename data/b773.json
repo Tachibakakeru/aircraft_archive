@@ -2,18 +2,30 @@
   "title": "Boeing 777-300",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 777-300 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "777 機身外徑約 6.20 m，客艙通常每排九或十席；777-300 的超長機身每側配置五對主艙門，門間距是遠距辨識的重要線索。",
+        "en": "The 777's fuselage is about 6.20 m wide. The long -300 has five main doors per side, whose spacing is a useful distant cue.",
+        "ja": "777の胴体幅は約6.20 mで、長い-300は片側5枚の主ドアを備えます。ドア間隔は遠方識別に有効です。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "A350-900 每側通常四對主艙門；先數大型艙門，再看主腳輪數，比只比較機身長度可靠。",
+        "en": "The A350-900 normally has four main doors per side. Count doors and main-gear wheels before judging length alone.",
+        "ja": "A350-900は通常片側4枚です。胴体長だけでなくドア数と主脚輪数を確認します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "每側五對大型艙門是 777-300／300ER 的關鍵比例。",
+          "en": "Five large doors per side define the 777-300/300ER proportions.",
+          "ja": "片側5枚の大型ドアが777-300／300ERの重要な比率です。"
+        },
+        {
+          "zh": "客艙窗為獨立橢圓窗，不像 787 的大型電子變色窗。",
+          "en": "Cabin windows are conventional individual ovals, unlike the 787's large dimmable windows.",
+          "ja": "客室窓は通常の独立楕円窓で、787の大型電子調光窓とは異なります。"
+        },
+        {
+          "zh": "機鼻較圓但窗框有稜角，機尾收束較長。",
+          "en": "The nose is rounded but the glazing is angular, and the aft fuselage tapers over a long distance.",
+          "ja": "機首は丸い一方で窓枠は角張り、後部胴体は長く絞られます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b773/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-KPL_Boeing_777_Cathay_Pacific_In_OneWorld_Colours_Nose_(9320566483).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 777-300 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "777-300ER 使用大面積、高後掠翼，翼根厚、外翼逐漸變細並接到 raked tip；起飛與降落時可見大型多縫襟翼。",
+        "en": "The 777-300ER has a large swept wing with a thick root, tapered outer panel and raked tip, plus large multi-element flaps.",
+        "ja": "777-300ERは厚い翼根から細い外翼とレイクド翼端へ続く大型後退翼で、多重スロットフラップを備えます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "777 與 A350 的後掠角接近，不能只看翼面角度；翼尖方向與主腳輪數更可靠。",
+        "en": "The 777 and A350 have similar sweep, so tip geometry and main-gear wheel count are more reliable than sweep alone.",
+        "ja": "777とA350の後退角は近いため、翼端形状と主脚輪数の方が有効です。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "外翼長而逐漸變細，末端接水平後掠翼尖。",
+          "en": "The long tapered outer wing ends in a horizontal raked tip.",
+          "ja": "長く細くなる外翼が水平のレイクド翼端へ続きます。"
+        },
+        {
+          "zh": "翼根整流罩與六輪主腳輪艙體積很大。",
+          "en": "The root fairing and six-wheel main-gear bay are substantial.",
+          "ja": "翼根フェアリングと6輪主脚格納部が大きくなります。"
+        },
+        {
+          "zh": "客艙翼景照片可用沒有直立 winglet 的輪廓判讀。",
+          "en": "Cabin wing views are recognizable by the absence of an upright winglet.",
+          "ja": "客室翼景では直立ウイングレットがない輪郭が手掛かりです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b773/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Emirates_77W_wing_view,_July_2015.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 777-300 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "777-300ER 固定使用 GE90-115B，高旁通比風扇直徑約 3.25 m，短艙巨大而接近完整圓形，是與 A350-900 區分時最醒目的部位之一。",
+        "en": "The 777-300ER exclusively uses the GE90-115B. Its roughly 3.25 m fan and massive near-circular nacelle are among the strongest cues against an A350-900.",
+        "ja": "777-300ERはGE90-115B専用で、約3.25 mの巨大なファンとほぼ円形のナセルがA350-900との強い識別点です。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "基本型 777-300 曾使用 GE90、PW4000 或 Trent 800；看到 GE90-115B 可確認 300ER，但不能反推所有 777-300 都相同。",
+        "en": "Baseline 777-300s could use earlier GE90s, PW4000s or Trent 800s. A GE90-115B confirms a -300ER, not every -300.",
+        "ja": "基本型777-300には初期GE90、PW4000、Trent 800もあります。GE90-115Bは300ERの確認点です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "進氣口直徑巨大，風扇葉片彎曲且數量相對少。",
+          "en": "The inlet is enormous and the fan uses relatively few highly swept blades.",
+          "ja": "吸気口が巨大で、強く湾曲した比較的少数のファン翼を使います。"
+        },
+        {
+          "zh": "短艙外形比 A350 的 Trent XWB 更粗壯。",
+          "en": "The nacelle looks bulkier than the A350's Trent XWB installation.",
+          "ja": "ナセルはA350のTrent XWBより太く見えます。"
+        },
+        {
+          "zh": "引擎與六輪主腳一起看，能快速確認 777-300ER。",
+          "en": "Pair the engine with the six-wheel main bogie to confirm a 777-300ER.",
+          "ja": "エンジンと6輪主脚を組み合わせると300ERを素早く確認できます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b773/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Engine_of_Jet_Airways_Boeing_777-300ER.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "777 的垂直尾翼高大、後掠，根部以長背鰭連接後機身；方向舵面積大，以應付大型雙發機單發失效時的偏航力矩。",
+        "en": "The 777's tall swept fin blends into the aft fuselage through a long dorsal fillet and carries a large rudder for engine-out control.",
+        "ja": "777の高い後退垂直尾翼は長いドーサルフィンで後部胴体へつながり、大型方向舵を備えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "航空公司塗裝容易吸引注意，但判型仍應看垂尾比例、機身門數與主腳。",
+        "en": "Livery is conspicuous, but identify the type from fin proportions, door count and landing gear.",
+        "ja": "塗装は目立ちますが、尾翼比率、ドア数、主脚で機種を確認します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "垂尾前緣後掠明顯，根部背鰭長。",
+          "en": "The leading edge is strongly swept and the dorsal fillet is long.",
+          "ja": "前縁後退が大きく、根元のドーサルフィンが長いです。"
+        },
+        {
+          "zh": "尾翼頂端較平，後緣方向舵接近直線。",
+          "en": "The fin tip is relatively flat and the rudder trailing edge nearly straight.",
+          "ja": "尾翼上端は比較的平らで、方向舵後縁はほぼ直線です。"
+        },
+        {
+          "zh": "與 A350 相比，777 後機身與尾翼過渡更厚重。",
+          "en": "The 777's aft-fuselage/fin transition looks heavier than the A350's.",
+          "ja": "A350より後部胴体と尾翼のつながりが重厚に見えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b773/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:View_of_EVA_Air_Boeing_777-300ER_tail.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "777 的水平尾翼低置、尺寸大且後掠，與長後機身和高垂尾共同形成寬大的尾部輪廓。",
+        "en": "The 777 uses a large low-mounted swept tailplane, producing a broad tail silhouette with the long aft fuselage and tall fin.",
+        "ja": "777は大型の低位置後退水平尾翼を備え、長い後部胴体と高い垂直尾翼で幅広い尾部輪郭になります。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "水平尾翼外形單獨不易區分 777 與 A350；從後方應同時看機身寬度、翼尖與主腳。",
+        "en": "Tailplane shape alone is weak; from the rear also compare fuselage width, wingtips and main gear.",
+        "ja": "水平尾翼だけでは判別しにくいため、後方から胴体幅、翼端、主脚も確認します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "尾翼根部整流罩厚，水平尾翼外展距大。",
+          "en": "The root fairing is thick and the tailplane spans widely.",
+          "ja": "付け根フェアリングが厚く、水平尾翼の張り出しが大きいです。"
+        },
+        {
+          "zh": "後緣升降舵分段清楚。",
+          "en": "Segmented elevator surfaces are visible along the trailing edge.",
+          "ja": "後縁に分割された昇降舵が見えます。"
+        },
+        {
+          "zh": "以六輪主腳和五門機身作主要交叉確認。",
+          "en": "Use six-wheel bogies and the five-door fuselage as the primary cross-check.",
+          "ja": "6輪主脚と片側5ドアを主な照合点にします。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b773/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_777%27s_Tail_(2573279746).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 777-300 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "777-300／300ER 每組主起落架有三根輪軸、六個輪胎，主腳柱高且轉向架很長；前起落架為雙輪。",
+        "en": "Each 777-300/300ER main bogie has three axles and six tyres, creating a long truck beneath the high wide-body.",
+        "ja": "777-300／300ERの各主脚は3軸6輪で、長いボギーを形成します。前脚は2輪です。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "六輪主腳是區分 777-300ER 與四輪主腳 A350-900 最快速、可靠的地面特徵。",
+        "en": "Six-wheel main bogies are one of the fastest, most reliable ground-level cues against the four-wheel A350-900.",
+        "ja": "6輪主脚は、4輪のA350-900と見分ける最も速く信頼できる地上識別点です。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳三軸六輪，排列明顯比 A350-900 長。",
+          "en": "Three axles and six tyres per side form a much longer bogie than the A350-900's.",
+          "ja": "片側3軸6輪で、A350-900より明らかに長いボギーです。"
+        },
+        {
+          "zh": "主腳轉向架落地時會傾斜配合接地。",
+          "en": "The main truck tilts to sequence wheel contact during landing.",
+          "ja": "着陸時は主脚ボギーが傾き、車輪が順に接地します。"
+        },
+        {
+          "zh": "搭配五對艙門可排除較短的 777-200。",
+          "en": "Pair it with five doors per side to exclude the shorter 777-200.",
+          "ja": "片側5枚のドアと合わせて短い777-200を除外します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b773/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B777_Landinggear_(51127441259).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "777-300／300ER 是機身修長的大型雙發廣體客機。常見 777-300ER 可由每側五對大型艙門、六輪主起落架、巨大的 GE90-115B 與水平向外延伸的後掠翼尖辨認。",
+        "en": "The 777-300/300ER is a very long twin-engine wide-body. The common 777-300ER combines five main doors per side, six-wheel main bogies, huge GE90-115Bs and horizontally raked tips.",
+        "ja": "777-300／300ERは非常に長い双発ワイドボディ機です。一般的な300ERは片側5枚の大型ドア、6輪主脚、巨大なGE90-115B、水平に伸びるレイクド翼端で識別できます。"
+      },
+      "fact": {
+        "zh": "本頁外觀照片以數量最多的 777-300ER 為主；基本型 777-300 的引擎與翼尖可能不同，不能把 GE90-115B 當成所有 777-300 的共同特徵。",
+        "en": "Exterior references emphasize the much more common 777-300ER. The baseline 777-300 may use other engines and lacks some ER-specific cues.",
+        "ja": "外観写真は多数派の777-300ERを中心にしています。基本型777-300ではエンジンや翼端が異なる場合があります。"
+      },
+      "bullets": [
+        {
+          "zh": "每側五對主艙門，機身明顯比 A350-900 長。",
+          "en": "Five main doors per side and a visibly longer fuselage than the A350-900.",
+          "ja": "片側5枚の主ドアで、A350-900より明らかに長い胴体です。"
+        },
+        {
+          "zh": "777-300ER 的 GE90-115B 風扇直徑與機身寬度相比仍非常巨大。",
+          "en": "The 777-300ER's GE90-115B looks exceptionally large even beside its wide fuselage.",
+          "ja": "777-300ERのGE90-115Bは太い胴体と比べても非常に大きく見えます。"
+        },
+        {
+          "zh": "六輪主腳與近乎水平的後掠翼尖是強辨識點。",
+          "en": "Six-wheel main bogies and nearly horizontal raked tips are strong cues.",
+          "ja": "6輪主脚とほぼ水平のレイクド翼端が強い識別点です。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b773/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_777-300ER,_Geneva_Airport,_Le_Grand-Saconnex_(BL7C0540).jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "777 駕駛艙採傳統駕駛盤與中央操縱柱，六具大型顯示器橫向排列；中央 EICAS 顯示引擎與系統資訊，控制邏輯仍保留典型 Boeing 操作習慣。",
+        "en": "The 777 flight deck uses conventional yokes and control columns with six large displays. Central EICAS screens carry engine and system information in a recognizably Boeing layout.",
+        "ja": "777の操縦席は操縦輪とコントロールコラムを備え、6面の大型表示器を横一列に配置します。中央EICASがエンジンとシステム情報を表示します。"
+      },
+      "fact": {
+        "zh": "照片為 777-200ER，但主要飛行顯示器、EICAS、駕駛盤與中央基座配置可作 777 家族識別參考。",
+        "en": "The photograph is a 777-200ER, but the displays, EICAS, yokes and centre pedestal are valid 777-family identification references.",
+        "ja": "写真は777-200ERですが、表示器、EICAS、操縦輪、中央ペデスタルは777ファミリー共通の参考になります。"
+      },
+      "bullets": [
+        {
+          "zh": "兩名飛行員前方都有駕駛盤，不使用 Airbus 式側桿。",
+          "en": "Both pilots have yokes; there are no Airbus-style sidesticks.",
+          "ja": "両席に操縦輪があり、Airbus式サイドスティックではありません。"
+        },
+        {
+          "zh": "六面顯示器尺寸一致，中央兩面主要用於 EICAS。",
+          "en": "Six similarly sized displays span the panel, with the centre pair serving EICAS.",
+          "ja": "同寸法の6画面が並び、中央2面は主にEICASです。"
+        },
+        {
+          "zh": "油門座與中央基座較高，兩側沒有 A350 的開放式桌板空間。",
+          "en": "The tall throttle pedestal leaves no A350-style open tray-table area in front of the pilots.",
+          "ja": "高いスロットル台があり、A350のような正面テーブル空間はありません。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b773/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_777-200ER_cockpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "777 的駕駛艙窗沒有 A350 的黑色面罩。兩片正面主風擋寬大而接近梯形，外側窗以明顯折角向後收窄，窗框與白色機鼻蒙皮清楚分離。",
+        "en": "The 777 has no A350-style black mask. Large trapezoidal front panes transition through angular outer panes, with each frame clearly separated from the painted nose skin.",
+        "ja": "777にはA350の黒いマスクがありません。大きな台形前面窓から角張った外側窓へつながり、各窓枠が白い機首外板から明確に分かれます。"
+      },
+      "fact": {
+        "zh": "777 與 A350 都有多片結構風擋；辨識重點不是窗片數，而是 A350 的黑色連續面罩與 777 分離、角張的窗框。",
+        "en": "Both aircraft use multiple structural panes. The useful cue is the A350's continuous black mask versus the 777's separate angular frames, not pane count.",
+        "ja": "両機とも複数の構造窓を使います。枚数ではなく、A350の連続した黒マスクと777の独立した角張る枠を比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面主風擋較寬，中央接縫近乎垂直。",
+          "en": "Wide forward panes meet at a near-vertical centre seam.",
+          "ja": "幅広い前面窓がほぼ垂直の中央継ぎ目で接します。"
+        },
+        {
+          "zh": "外側窗上緣向後下斜，形成明顯多邊形輪廓。",
+          "en": "The outer upper edge slopes aft and down, forming a pronounced polygonal outline.",
+          "ja": "外側窓の上端が後方へ下がり、明確な多角形になります。"
+        },
+        {
+          "zh": "窗框未被整片黑色塗裝連成『墨鏡』。",
+          "en": "The frames are not joined by an all-black sunglasses-like surround.",
+          "ja": "窓枠は黒い面で一体化したサングラス形状ではありません。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b773/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit_windows_of_an_AA_B773.jpg"
+        },
+        {
+          "src": "assets/reference/b773/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_777_nose_from_starboard_side_(2719420855)_(2).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "777-300ER 沒有直立小翼，而是把翼尖本身向後、向外延伸成近乎水平的 raked tip。基本型 777-300 的翼尖較短，這是 ER 子型特徵。",
+        "en": "The 777-300ER has no upright winglet; the wing itself extends aft and outward into a nearly horizontal raked tip. The baseline -300 has a shorter tip.",
+        "ja": "777-300ERには直立ウイングレットがなく、翼自体が後方・外側へ伸びる水平に近いレイクド翼端です。基本型-300はより短い翼端です。"
+      },
+      "fact": {
+        "zh": "A350 的翼尖明顯向上彎成翼梢裝置；777-300ER 的翼尖主要停留在翼面平面內。",
+        "en": "The A350 tip curves visibly upward, while the 777-300ER tip remains largely in the wing plane.",
+        "ja": "A350は翼端が明確に上へ曲がりますが、777-300ERは主に翼面内へ伸びます。"
+      },
+      "bullets": [
+        {
+          "zh": "翼尖向後拉長，沒有高大的直立翼片。",
+          "en": "The tip stretches aft without a tall upright blade.",
+          "ja": "翼端は後方へ長く伸び、高い直立翼片がありません。"
+        },
+        {
+          "zh": "由客艙看像尖細的水平刀刃。",
+          "en": "From the cabin it appears as a long, slender horizontal blade.",
+          "ja": "客室からは細長い水平の刃のように見えます。"
+        },
+        {
+          "zh": "此特徵應與 GE90-115B、五門機身一起確認。",
+          "en": "Confirm it together with GE90-115Bs and the five-door fuselage.",
+          "ja": "GE90-115Bと片側5ドアも合わせて確認します。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b773/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Emirates_77W_wing_view,_July_2015.jpg"
+        }
+      ]
     }
   },
   "specifications": {

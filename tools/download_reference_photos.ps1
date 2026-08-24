@@ -20,13 +20,34 @@ $photos = [ordered]@{
   "a320/vstab.jpg" = "Vertical stabilizer of A-320.jpg"
   "a320/hstab.jpg" = "Airbus-Höhenruder.jpg"
   "a320/gear.jpg" = "A320neo Nose Landing Gear.jpg"
+  "b773/overview.jpg" = "Boeing 777-300ER, Geneva Airport, Le Grand-Saconnex (BL7C0540).jpg"
+  "b773/cockpit.jpg" = "Boeing 777-200ER cockpit.jpg"
+  "b773/fuselage.jpg" = "B-KPL Boeing 777 Cathay Pacific In OneWorld Colours Nose (9320566483).jpg"
+  "b773/engine.jpg" = "Engine of Jet Airways Boeing 777-300ER.jpg"
+  "b773/wingtip.jpg" = "Emirates 77W wing view, July 2015.jpg"
+  "b773/wing.jpg" = "Emirates 77W wing view, July 2015.jpg"
+  "b773/vstab.jpg" = "View of EVA Air Boeing 777-300ER tail.jpg"
+  "b773/hstab.jpg" = "Boeing 777's Tail (2573279746).jpg"
+  "b773/gear.jpg" = "B777 Landinggear (51127441259).jpg"
+  "a359/overview.jpg" = "Airbus A350-941 F-WWCF MSN002 ILA Berlin 2016 17.jpg"
+  "a359/cockpit.jpg" = "Airbus A-350 XWB F-WWYB cockpit view.jpg"
+  "a359/fuselage.jpg" = "Airbus A350-900 (40862885025).jpg"
+  "a359/engine.jpg" = "Airbus A350-941 F-WWCF MSN002 ILA Berlin 2016 23.jpg"
+  "a359/wingtip.jpg" = "Airbus A-350 XWB F-WWYB winglet.jpg"
+  "a359/wing.jpg" = "Airbus A350-941 F-WWCF MSN002 blended winglet ILA Berlin 2016 05.jpg"
+  "a359/vstab.jpg" = "Airbus A350-941 F-WWCF MSN002 ILA Berlin 2016 18.jpg"
+  "a359/hstab.jpg" = "Airbus A350-941 F-WWCF MSN002 ILA Berlin 2016 20.jpg"
+  "a359/gear.jpg" = "Airbus A350-941 F-WWCF MSN002 main landing gear ILA Berlin 2016 06.jpg"
 }
 
-$titles = ($photos.Values | ForEach-Object { "File:$_" }) -join "|"
+$titles = ($photos.Values | Sort-Object -Unique | ForEach-Object { "File:$_" }) -join "|"
 $api = "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata&iiurlwidth=960&titles=$([uri]::EscapeDataString($titles))"
 $pages = (Invoke-RestMethod -Uri $api -UserAgent "SKY-ARCHIVE/1.0 (reference photo downloader)").query.pages.psobject.Properties.Value
 $byTitle = @{}
-foreach ($page in $pages) { $byTitle[$page.title.Substring(5)] = $page.imageinfo[0] }
+foreach ($page in $pages) {
+  if (-not $page.imageinfo) { throw "Wikimedia Commons file not found: $($page.title)" }
+  $byTitle[$page.title.Substring(5)] = $page.imageinfo[0]
+}
 
 foreach ($entry in $photos.GetEnumerator()) {
   $dest = Join-Path $root ("assets/reference/" + $entry.Key)
@@ -52,10 +73,14 @@ $windowPhotos = @(
   @{ Dest="b738/window-front.jpg"; Title="Front view of boeing 737-800 of Ryanair at Orio al Serio International Airport, 2006.jpg"; Crop=@(.27,.23,.46) },
   @{ Dest="b738/window-side.jpg"; Title="Cockpit window of Qantas Boeing 737 (VH-VYE) taxiing prior to takeoff at SYD.jpg"; Crop=@(.26,.18,.68) },
   @{ Dest="a320/window-front.jpg"; Title="Finnair Airbus A320 OH-LXB Budapest 2006 (03).jpg"; Crop=@(.42,.38,.38) },
-  @{ Dest="a320/window-side.jpg"; Title='Airbus A320-200 Airbus Industries (AIB) "House colors" F-WWBA - MSN 001 (10276181983).jpg'; Crop=@(.02,.25,.42) }
+  @{ Dest="a320/window-side.jpg"; Title='Airbus A320-200 Airbus Industries (AIB) "House colors" F-WWBA - MSN 001 (10276181983).jpg'; Crop=@(.02,.25,.42) },
+  @{ Dest="b773/window-front.jpg"; Title="Cockpit windows of an AA B773.jpg"; Crop=@(.03,.12,.92) },
+  @{ Dest="b773/window-side.jpg"; Title="Boeing 777 nose from starboard side (2719420855) (2).jpg"; Crop=@(.50,.05,.42) },
+  @{ Dest="a359/window-front.jpg"; Title="Airbus A350-941 F-WWCF MSN002 ILA Berlin 2016 17.jpg"; Crop=@(.50,.17,.30) },
+  @{ Dest="a359/window-side.jpg"; Title="Airbus A350 cockpit windows (14274972354).jpg"; Crop=@(.03,.12,.92) }
 )
 
-$windowTitles = ($windowPhotos | ForEach-Object { "File:$($_.Title)" }) -join "|"
+$windowTitles = ($windowPhotos | ForEach-Object { "File:$($_.Title)" } | Sort-Object -Unique) -join "|"
 $windowApi = "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url&iiurlwidth=1600&titles=$([uri]::EscapeDataString($windowTitles))"
 $windowPages = (Invoke-RestMethod -Uri $windowApi -UserAgent "SKY-ARCHIVE/1.0 (reference photo downloader)").query.pages.psobject.Properties.Value
 $windowByTitle = @{}

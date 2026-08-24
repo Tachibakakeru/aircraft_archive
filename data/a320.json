@@ -457,9 +457,9 @@
         {
           "src": "assets/reference/a320/overview.jpg",
           "caption": {
-            "zh": "實機側面外型參考",
-            "en": "Real-aircraft side-profile reference",
-            "ja": "実機側面外観の参考"
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
           },
           "source": "https://commons.wikimedia.org/wiki/File:Jetstar_Airbus_A320_VH-XNJ_Perth_2023_(01).jpg"
         }
