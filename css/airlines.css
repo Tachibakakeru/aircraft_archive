@@ -43,6 +43,7 @@
 .al-tier-mainline{background:var(--amber-soft);color:var(--amber)}
 .al-tier-regional{background:rgba(111,211,239,.14);color:var(--cyan)}
 .al-tier-lcc{background:rgba(255,255,255,.08);color:var(--muted)}
+.al-tier-cargo{background:rgba(151,111,239,.16);color:#b99bff}
 #al-p-tier{margin-left:0;margin-top:8px}
 .al-alliance-dot{
   flex-shrink:0;width:9px;height:9px;border-radius:50%;display:inline-block;

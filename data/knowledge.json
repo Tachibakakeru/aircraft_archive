@@ -923,6 +923,27 @@
         "ja": "「ブラックボックス」という呼び名とは裏腹に、実際の外観は捜索しやすいよう鮮やかなオレンジ色に塗装されている。その筐体は極端な衝撃・高温での燃焼・深海の高圧に耐える認証試験に合格する必要があり、深刻な事故でもデータが完全な形で取り出せるよう設計されている。"
       },
       "images": []
+    },
+    {
+      "id": "high-bypass",
+      "category": "systems",
+      "hotspot": "high-bypass",
+      "name": {
+        "zh": "高旁通比渦扇發動機",
+        "en": "High-Bypass-Ratio Turbofan",
+        "ja": "高バイパス比ターボファン"
+      },
+      "summary": {
+        "zh": "旁通比 BPR = 旁通流質量流率 ṁb／核心流質量流率 ṁc。高旁通比發動機以大風扇讓大部分空氣繞過燃燒室，靠「大量空氣、小幅加速」產生推力；低旁通比與渦噴則以較少空氣、較高噴流速度取推力。忽略壓力推力與燃油質量的理想單流近似中，F ≈ ṁ(Vj − V0)：要同樣的 F，提高總質量流率 ṁ 便能降低速度增量 ΔV。",
+        "en": "Bypass ratio is BPR = bypass mass flow ṁb / core mass flow ṁc. A high-bypass engine uses a large fan to send most air around the combustor, making thrust by accelerating a large mass of air by a small amount; low-bypass engines and turbojets accelerate less air much more. In the ideal one-stream approximation, neglecting pressure thrust and fuel mass, F ≈ ṁ(Vj − V0): for the same F, raising total mass flow ṁ lowers the required velocity increase ΔV.",
+        "ja": "バイパス比は BPR = バイパス流量 ṁb／コア流量 ṁc。高バイパス機は大径ファンで燃焼器を迂回する空気を多くし、「大きな空気量を小さく加速」して推力を得る。低バイパス機やターボジェットは少ない空気を大きく加速する。圧力推力と燃料質量を無視した理想的一流近似では F ≈ ṁ(Vj − V0)。同じ F なら総流量 ṁ を増やすほど必要な速度増分 ΔV は小さくなる。"
+      },
+      "fact": {
+        "zh": "理想化した空気吸入推進の推進効率為 ηp ≈ 2V0／(Vj + V0)（V0 為飛行速度、Vj 為噴流平均速度）。當 Vj 越接近 V0，留在尾流中的無用動能越少，ηp 越高；這就是高旁通比客機在亞音速巡航較省油的物理原因。整體效率約為 ηoverall = ηthermal × ηpropulsive，仍受風扇／渦輪損失、短艙阻力與安裝影響。代價是更大的直徑、重量、阻力與離地間隙需求；高速度或追求高推重比的戰機，通常選低旁通比。大風扇、較低噴流速度也通常有利於降低噴流噪音。",
+        "en": "For an ideal air-breathing propulsor, propulsive efficiency is ηp ≈ 2V0 / (Vj + V0), where V0 is flight speed and Vj is mean jet speed. As Vj approaches V0, less useless kinetic energy remains in the wake and ηp rises—why high-bypass airliners use less fuel in subsonic cruise. Overall efficiency is roughly ηoverall = ηthermal × ηpropulsive, with fan/turbine losses, nacelle drag, and installation effects still mattering. The trade-offs are larger diameter, mass, drag, and ground-clearance needs; fast aircraft seeking high thrust-to-weight normally use low bypass ratios. A large fan and lower jet velocity also generally reduce jet noise.",
+        "ja": "理想化した空気吸入推進の推進効率は ηp ≈ 2V0／(Vj + V0)（V0 は飛行速度、Vj は平均噴流速度）。Vj が V0 に近いほど後流に残る無駄な運動エネルギーが減り、ηp は上がる。これが亜音速巡航で高バイパス旅客機が燃料を節約できる物理的理由である。全体効率はおおむね ηoverall = ηthermal × ηpropulsive だが、ファン／タービン損失、ナセル抗力、搭載損失も影響する。代償は直径・重量・抗力・地上高の要求であり、高速性や高推力重量比を重視する戦闘機は通常低バイパス比を選ぶ。大径ファンと低い噴流速度は、一般に噴流騒音の低減にも有利である。"
+      },
+      "images": []
     }
   ]
 }

@@ -3,6 +3,17 @@
 body{min-height:100vh}
 
 .kn-page-head{padding:40px 24px 0;max-width:1080px;margin:0 auto}
+.kn-search{position:relative;flex:1;min-width:min(100%,280px);max-width:360px}
+.kn-search .search-input{width:100%;max-width:none}
+.kn-search-suggest{
+  position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:30;
+  max-height:260px;overflow-y:auto;background:var(--panel);border:1px solid var(--stroke);
+  border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.28);
+}
+.kn-search-opt{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:10px 12px;cursor:pointer}
+.kn-search-opt:hover{background:var(--amber-soft)}
+.kn-search-opt-name{font-size:13px;color:var(--text)}
+.kn-search-opt-label{font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap}
 
 .kn-topbar{
   position:sticky;top:0;z-index:10;

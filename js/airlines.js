@@ -388,7 +388,7 @@ function catBlockAlCmp(catName, rows, ids){
 }
 
 const ALLIANCE_KEYS = ["star", "skyteam", "oneworld", "none"];
-const TIER_KEYS = ["mainline", "regional", "lcc"];
+const TIER_KEYS = ["mainline", "regional", "lcc", "cargo"];
 
 // 尾翼 logo 來源：Jxck-S/airline-logos（README 明載 Fair Use，供辨識用途，
 // 非商業性彙整）。少數查不到圖或圖片本身載入失敗時，退回用代號決定顏色的
@@ -420,7 +420,7 @@ function makeLogoEl(a, big){
 (async () => {
   const local = localStorage.getItem(EDIT_LS_KEY);
   try {
-    const res = await fetch("data/airlines.json?v=133");
+    const res = await fetch("data/airlines.json?v=139");
     if (!res.ok) throw new Error(res.status);
     FULL_DATA = await res.json();
     // 本機草稿只依 id 疊加在伺服器資料上，不整批取代——否則舊草稿
@@ -450,11 +450,11 @@ function makeLogoEl(a, big){
   }
   AIRLINES = FULL_DATA.airlines;
   try {
-    const geoRes = await fetch("data/airline_geo.json?v=133");
+    const geoRes = await fetch("data/airline_geo.json?v=139");
     if (geoRes.ok) AIRLINE_GEO = await geoRes.json();
   } catch { /* 航線地圖為附加功能，載入失敗不影響主要頁面 */ }
   try {
-    const codesRes = await fetch("data/airport_codes.json?v=133");
+    const codesRes = await fetch("data/airport_codes.json?v=139");
     if (codesRes.ok){ AIRPORT_CODES = await codesRes.json(); MULTI_AIRPORT_CITIES = null; }
   } catch { /* 代碼自動連結為附加功能，載入失敗不影響主要頁面 */ }
 
@@ -617,7 +617,7 @@ function applyAll(){
     if (alliance && a.alliance !== alliance) return false;
     if (tier && a.tier !== tier) return false;
     if (!q) return true;
-    const hay = [a.name, a.nameZh, a.nameJa, a.icao, a.iata, a.callsign, I18N.field(a.country), a.country.zh, a.country.en, ...countryAliases(a), ...(a.hubs || [])].filter(Boolean).join(" ").toLowerCase();
+    const hay = [a.name, a.nameZh, a.nameJa, a.icao, a.iata, a.callsign, I18N.field(a.country), a.country.zh, a.country.en, ...countryAliases(a), ...(a.hubs || []), ...(a.routes || []), ...Object.values(a.tagline || {})].filter(Boolean).join(" ").toLowerCase();
     return hay.includes(q);
   }).sort((a, b) => {
     if (favOnly && !q && !alliance && !tier){

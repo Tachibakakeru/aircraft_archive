@@ -40,6 +40,9 @@
   --scene-bg-0:#9fb0c8;
 }
 *{margin:0;padding:0;box-sizing:border-box}
+/* 所有可捲動區維持滑鼠／觸控／鍵盤捲動，但不顯示原生捲軸軸線。 */
+*{scrollbar-width:none;-ms-overflow-style:none}
+*::-webkit-scrollbar{display:none}
 /* hidden 屬性必須永遠有效：元件自己的 display 宣告（如 .al-p-photo 的
    display:block）優先序高於瀏覽器預設的 [hidden]{display:none}，會讓
    element.hidden = true 失效——圖片殘留上一筆資料的 src 就是這樣來的。 */
@@ -59,6 +62,7 @@ body{
 a.eyebrow.home-link{display:inline-block;text-decoration:none;cursor:pointer;transition:opacity .15s}
 a.eyebrow.home-link:hover{opacity:.72}
 button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.apt-cmp-opt.kb-active,.al-tag-opt.kb-active,.kn-search-opt.kb-active{background:var(--amber-soft)}
 
 /* ── 列表頁 ─────────────────────────────── */
 .fleet-wrap{max-width:1080px;margin:0 auto;padding:48px 24px 80px}

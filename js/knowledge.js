@@ -68,6 +68,7 @@ const SYSTEMS_TOPICS = [
   { id: "pitot-static",   label: "PITOT" },
   { id: "edto",            label: "EDTO" },
   { id: "fdr-cvr",         label: "FDR/CVR" },
+  { id: "high-bypass",     label: "BPR" },
 ];
 
 let TOPICS = [];
@@ -89,11 +90,20 @@ function saveLocalOverride(id, override){
 const CUSTOM_TOPICS_KEY = "hangar_knowledge_custom";
 function loadCustomTopics(){ try { return JSON.parse(localStorage.getItem(CUSTOM_TOPICS_KEY) || "[]"); } catch { return []; } }
 function saveCustomTopics(arr){ try { localStorage.setItem(CUSTOM_TOPICS_KEY, JSON.stringify(arr)); } catch { alert("暫存失敗：資料可能過大"); } }
+function mergeField(base, local){
+  return base && local && typeof base === "object" && typeof local === "object" ? { ...base, ...local } : (local ?? base);
+}
 function mergedTopic(id){
   const base = byId[id];
   if (!base) return null;
   const local = getLocalOverride(id);
-  return local ? { ...base, ...local, _local: true } : base;
+  return local ? {
+    ...base, ...local,
+    name: mergeField(base.name, local.name),
+    summary: mergeField(base.summary, local.summary),
+    fact: mergeField(base.fact, local.fact),
+    _local: true,
+  } : base;
 }
 // 保留其他語言：只替換目前語言那一格，其餘沿用原物件
 function nextFieldValue(baseVal, plainText){
@@ -376,6 +386,11 @@ const SYSTEMS_DECOR = {
     <rect x="${cx - 16}" y="${cy - 10}" width="32" height="22" rx="4" class="kn-squawk-box"/>
     <line x1="${cx}" y1="${cy - 10}" x2="${cx}" y2="${cy - 18}" class="kn-vspeed-arrow"/>
     <circle cx="${cx}" cy="${cy - 20}" r="2" class="kn-tc-ball"/>`,
+  "high-bypass": (cx, cy) => `
+    <circle cx="${cx}" cy="${cy}" r="29" class="kn-etops-ring"/>
+    <circle cx="${cx}" cy="${cy}" r="13" class="kn-squawk-box"/>
+    <circle cx="${cx}" cy="${cy}" r="4" class="kn-g-hub"/>
+    <path d="M ${cx - 25} ${cy} H ${cx + 25} M ${cx - 14} ${cy - 21} L ${cx + 14} ${cy + 21} M ${cx - 14} ${cy + 21} L ${cx + 14} ${cy - 21}" class="kn-jet-ribbon"/>`,
 };
 function buildHotspotItem(t, decorFn){
   const cx = 85, cy = 85, r = 42;
@@ -429,13 +444,13 @@ function scrollToTopic(key, id){
 // 點旁邊項目時，平滑捲動把它帶到置中。scrollIntoView 在有 scroll-snap-type
 // 的容器上，各瀏覽器行為不一致（常常直接被 snap 蓋過、動畫不完整），
 // 改成自己算目標位置＋暫時關閉 snap，動畫結束（或逾時保險）再恢復。
-function centerItem(key, item){
+function centerItem(key, item, done){
   const track = trackEl(key);
   const targetLeft = item.offsetLeft + item.offsetWidth / 2 - track.clientWidth / 2;
   track.style.scrollSnapType = "none";
   const from = track.scrollLeft;
   const dist = targetLeft - from;
-  if (!dist){ track.style.scrollSnapType = ""; return; }
+  if (!dist){ track.style.scrollSnapType = ""; done && done(); return; }
   const duration = 350;
   const t0 = performance.now();
   (function step(now){
@@ -443,7 +458,7 @@ function centerItem(key, item){
     const ease = 1 - Math.pow(1 - p, 3); // ease-out cubic
     track.scrollLeft = from + dist * ease;
     if (p < 1) requestAnimationFrame(step);
-    else track.style.scrollSnapType = "";
+    else { track.style.scrollSnapType = ""; done && done(); }
   })(t0);
 }
 
@@ -562,6 +577,44 @@ function closeDetail(){
   currentTopicId = null;
 }
 
+function escText(v){ return String(v || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c]); }
+function allText(v){ return v && typeof v === "object" ? Object.values(v).join(" ") : (v || ""); }
+function topicScene(id){ return Object.keys(SCENES).find(key => SCENES[key].topics.some(t => t.id === id)); }
+function topicLabel(id){
+  const key = topicScene(id), item = key && SCENES[key].topics.find(t => t.id === id);
+  return item ? item.label : "";
+}
+function selectKnowledgeTopic(id){
+  const key = topicScene(id), track = key && trackEl(key), index = key && SCENES[key].topics.findIndex(t => t.id === id);
+  if (!track || index < 0) return;
+  const item = track.children[SCENES[key].topics.length + index];
+  focusTopic(key, item, () => openDetail(id));
+}
+function focusTopic(key, item, done){
+  trackEl(key).closest(".kn-panel-section").scrollIntoView({ behavior:"smooth", block:"center" });
+  centerItem(key, item, () => setTimeout(done, 80));
+}
+function wireKnowledgeSearch(){
+  const input = $("kn-search"), suggest = $("kn-search-suggest");
+  function render(){
+    const q = input.value.trim().toLowerCase();
+    if (!q){ suggest.hidden = true; input.setAttribute("aria-expanded", "false"); return; }
+    const matches = TOPICS.map(t => mergedTopic(t.id)).filter(t => [topicLabel(t.id), allText(t.name), allText(t.summary), allText(t.fact)].join(" ").toLowerCase().includes(q)).slice(0, 10);
+    if (!matches.length){ suggest.hidden = true; input.setAttribute("aria-expanded", "false"); return; }
+    suggest.innerHTML = matches.map(t => `<div class="kn-search-opt" data-id="${escText(t.id)}"><span class="kn-search-opt-name">${escText(F(t.name))}</span><span class="kn-search-opt-label">${escText(topicLabel(t.id))}</span></div>`).join("");
+    suggest.hidden = false; input.setAttribute("aria-expanded", "true");
+  }
+  input.addEventListener("input", render);
+  suggest.addEventListener("mousedown", e => {
+    const opt = e.target.closest(".kn-search-opt");
+    if (!opt) return;
+    e.preventDefault(); suggest.hidden = true; input.setAttribute("aria-expanded", "false");
+    input.value = ""; selectKnowledgeTopic(opt.dataset.id);
+  });
+  input.addEventListener("blur", () => setTimeout(() => { suggest.hidden = true; input.setAttribute("aria-expanded", "false"); }, 150));
+  return render;
+}
+
 /* ── 編輯（本機草稿 / 發布）── */
 function openEditor(){
   const t = mergedTopic(currentTopicId);
@@ -674,7 +727,7 @@ function downscaleImg(file, maxW, quality){
 async function boot(){
   let data;
   try {
-    const res = await fetch("data/knowledge.json?v=128");
+    const res = await fetch("data/knowledge.json?v=134");
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {
@@ -696,6 +749,7 @@ async function boot(){
 
   I18N.apply();
   Object.keys(SCENES).forEach(renderTrack);
+  const renderKnowledgeSearch = wireKnowledgeSearch();
 
   // 點置中項目才開解說；點旁邊（未置中）的項目先把它捲到置中，
   // 呼應轉盤選取器「先選中再確認」的手感，也避免手滑點到旁邊卻誤開解說。
@@ -705,8 +759,7 @@ async function boot(){
       // 用主題 id（不是 DOM 節點）比對是否已置中：wireLoop 的無縫跳位可能讓
       // 「置中的那個節點」換成內容三倍複製中的另一份拷貝，但主題其實沒變。
       if (item.dataset.topic !== centeredTopicId(key)) {
-        centerItem(key, item);
-        setTimeout(() => openDetail(item.dataset.topic), 360);
+        focusTopic(key, item, () => openDetail(item.dataset.topic));
       } else {
         openDetail(item.dataset.topic);
       }
@@ -818,6 +871,7 @@ async function boot(){
       if (centered) scrollToTopic(key, centered);
     });
     if (currentTopicId && !$("kn-overlay").hidden) openDetail(currentTopicId);
+    renderKnowledgeSearch();
   });
 }
 boot();

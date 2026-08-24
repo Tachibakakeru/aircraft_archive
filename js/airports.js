@@ -38,7 +38,7 @@ async function loadHubIndex(){
   if (HUB_INDEX) return HUB_INDEX;
   HUB_INDEX = {};
   try {
-    const res = await fetch("data/airline_geo.json?v=133");
+    const res = await fetch("data/airline_geo.json?v=139");
     const geo = res.ok ? await res.json() : {};
     Object.entries(geo).forEach(([airlineId, g]) => {
       (g.hubs || []).forEach(h => {
@@ -52,7 +52,7 @@ async function loadAirlineNames(){
   if (AIRLINE_NAMES) return AIRLINE_NAMES;
   AIRLINE_NAMES = {};
   try {
-    const res = await fetch("data/airlines.json?v=133");
+    const res = await fetch("data/airlines.json?v=139");
     const data = res.ok ? await res.json() : { airlines: [] };
     data.airlines.forEach(a => { AIRLINE_NAMES[a.id] = a; });
   } catch { /* 同上 */ }
