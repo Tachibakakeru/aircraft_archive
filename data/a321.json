@@ -2,19 +2,30 @@
   "title": "Airbus A321",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A321 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "A321ceo 機身長約 44.51 m、外寬約 3.95 m；傳統配置每側常見四個全尺寸艙門，窗列與門距是辨認加長機身的重要線索。",
+        "en": "The A321ceo is about 44.51 m long and 3.95 m wide. Traditional layouts commonly have four full-size doors per side, whose spacing highlights the stretched fuselage.",
+        "ja": "A321ceoは全長約44.51 m、胴体幅約3.95 mで、従来配置では片側4枚の大型ドアが延長胴体を示します。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "A321neo 的 Airbus Cabin Flex 可取消部分中段大型門、改用翼上逃生口；因此門數與位置必須配合世代判讀。",
+        "en": "A321neo Airbus Cabin Flex can remove some mid-cabin full-size doors and add overwing exits, so door layout must be interpreted by generation.",
+        "ja": "A321neoのAirbus Cabin Flexでは一部中央大型ドアを廃止し翼上非常口を追加できるため、世代と合わせて判断します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "傳統 A321ceo 每側四個大型矩形艙門。",
+          "en": "A traditional A321ceo has four large rectangular doors per side.",
+          "ja": "従来型A321ceoは片側4枚の大型長方形ドアです。"
+        },
+        {
+          "zh": "機身比 757 寬，但總長略短。",
+          "en": "The fuselage is wider but slightly shorter than the 757's.",
+          "ja": "胴体は757より太い一方、全長は少し短めです。"
+        },
+        {
+          "zh": "ACF／LR／XLR 的出口配置不能套用 ceo 判法。",
+          "en": "ACF, LR and XLR exit layouts should not be judged by ceo rules.",
+          "ja": "ACF／LR／XLRの出口配置にceoの判別法をそのまま適用できません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a321/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A321-211,_N827Q_-_open_doors.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A321 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "A321 與 A320 家族共用 Airbus 駕駛艙哲學：左右側桿、正面折疊桌板、六具顯示器與中央上下排列的 ECAM。",
+        "en": "The A321 shares the A320-family Airbus flight deck: sidesticks, forward tray tables, six displays and vertically arranged central ECAM screens.",
+        "ja": "A321はA320ファミリー共通のAirbus操縦席で、サイドスティック、正面テーブル、6面表示器、上下配置の中央ECAMを備えます。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "與 757 相比，飛行員正前方沒有駕駛盤；A321ceo 的舊式 LCD／CRT 外觀也可能因航電升級而不同。",
+        "en": "Unlike the 757 there are no yokes ahead of the pilots. Display appearance on A321ceos may vary with avionics upgrades.",
+        "ja": "757と違い正面に操縦輪はありません。A321ceoの表示器外観は改修状況で異なる場合があります。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "側桿位於左右側壁。",
+          "en": "Sidesticks are mounted on the sidewalls.",
+          "ja": "サイドスティックは左右側壁にあります。"
+        },
+        {
+          "zh": "正面沒有操縱柱，可配置桌板。",
+          "en": "No control column blocks the forward tray-table area.",
+          "ja": "正面に操縦柱がなく、テーブルを配置できます。"
+        },
+        {
+          "zh": "中央兩具 ECAM 顯示器監控引擎與系統。",
+          "en": "Two central ECAM screens monitor engines and systems.",
+          "ja": "中央2面のECAMがエンジンとシステムを監視します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a321/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A321_cockpit_-_G-EUXG_British_Airways.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A321 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "A321ceo 與 A320 共用基本主翼，翼面積約 122.6 m²；相對加長機身看起來較小，外翼末端接翼尖擋板或 Sharklet。",
+        "en": "The A321ceo shares the basic A320 wing of about 122.6 m². Against the stretched fuselage it looks relatively small and ends in fences or Sharklets.",
+        "ja": "A321ceoはA320と基本主翼を共有し、面積は約122.6 m²です。延長胴体に対して小さく見え、翼端はフェンスまたはSharkletです。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "A321neo 與 A321XLR 有結構、增升與油箱相關改進，但外觀辨識仍應先確認翼尖、引擎與出口配置。",
+        "en": "A321neo and A321XLR incorporate structural, high-lift and fuel-system changes, but visual identification still starts with tips, engines and exits.",
+        "ja": "A321neo／XLRには構造・高揚力・燃料系改良がありますが、外観判別は翼端、エンジン、出口配置から始めます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "主翼面積與展幅小於 757。",
+          "en": "Wing area and span are smaller than the 757's.",
+          "ja": "主翼面積と翼幅は757より小さいです。"
+        },
+        {
+          "zh": "後緣配置單縫襟翼與多片擾流板。",
+          "en": "Single-slotted flaps and multiple spoilers line the trailing edge.",
+          "ja": "後縁に単隙間フラップと複数スポイラーがあります。"
+        },
+        {
+          "zh": "外翼相對短，讓加長機身比例更突出。",
+          "en": "The relatively short outer wing emphasizes the stretched fuselage.",
+          "ja": "比較的短い外翼が延長胴体を強調します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a321/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A321_wingtip_fence.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A321 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A321ceo 可搭載 CFM56-5B 或 IAE V2500；兩者都比 757 的 RB211／PW2000 小，短艙也更靠近地面。",
+        "en": "The A321ceo uses CFM56-5B or IAE V2500 engines, both smaller and closer to the ground than the 757's RB211 or PW2000 installations.",
+        "ja": "A321ceoはCFM56-5BまたはV2500を搭載し、757のRB211／PW2000より小さく地面に近い位置にあります。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "照片為搭載 V2500 的 A321；A321neo 改用更大的 LEAP-1A 或 PW1100G，外觀不可混同。",
+        "en": "The reference shows a V2500-powered A321. A321neos use larger LEAP-1A or PW1100G engines and should not be visually conflated.",
+        "ja": "参考写真はV2500搭載A321です。A321neoは大型LEAP-1AまたはPW1100Gを使うため混同しないでください。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "ceo 引擎短艙直徑小於 757。",
+          "en": "Ceo nacelles are smaller in diameter than the 757's.",
+          "ja": "ceoのナセル径は757より小さいです。"
+        },
+        {
+          "zh": "CFM56 與 V2500 的進氣口、排氣錐細節不同。",
+          "en": "CFM56 and V2500 inlet and exhaust details differ.",
+          "ja": "CFM56とV2500では吸気口・排気部の細部が異なります。"
+        },
+        {
+          "zh": "neo 大型引擎會讓離地間隙看起來更小。",
+          "en": "Larger neo engines make ground clearance look tighter.",
+          "ja": "neoの大型エンジンは地上間隔をさらに小さく見せます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a321/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A321-231,_Middle_East_Airlines_(MEA)_JP6762964.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "A321 垂直尾翼與 A320 家族相近，前緣後掠、頂端略平，根部以短背鰭連接後機身；相對 757 的尾翼較小。",
+        "en": "The A321 fin follows the A320-family form: swept leading edge, slightly squared tip and a short dorsal root fairing, smaller relative to the airframe than the 757 fin.",
+        "ja": "A321の垂直尾翼はA320ファミリー共通で、後退前縁、やや平らな上端、短い根元フィレットを持ち、757より相対的に小型です。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "A319、A320、A321 的垂尾非常相似，不能用尾翼單獨分辨；必須看機身長度與艙門／逃生口。",
+        "en": "A319, A320 and A321 fins are very similar. Distinguish them by fuselage length and door/exit layout, not the fin alone.",
+        "ja": "A319・A320・A321の垂直尾翼は非常に似るため、胴体長とドア／非常口で区別します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "垂尾高度與面積小於 757。",
+          "en": "The fin is lower and smaller than the 757's.",
+          "ja": "垂直尾翼は757より低く小型です。"
+        },
+        {
+          "zh": "根部背鰭較短，後機身較粗。",
+          "en": "The dorsal fillet is shorter and the aft fuselage fuller.",
+          "ja": "根元フィレットは短く、後部胴体は太めです。"
+        },
+        {
+          "zh": "尾部輔助動力單元排氣口位於尖端。",
+          "en": "The APU exhaust sits at the pointed tailcone.",
+          "ja": "APU排気口は尖ったテールコーン先端にあります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a321/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:TC-JRN_Airbus_A321_Turkish_Airlines_Tail_(8633650011).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "A321 的水平尾翼低置於尾錐兩側，面積與展幅比 757 小；正後方可見短而略後掠的平面與圓潤後機身。",
+        "en": "The A321's low-mounted tailplanes are smaller in area and span than the 757's. From directly aft they appear short and swept beside a fuller tailcone.",
+        "ja": "A321の低位置水平尾翼は757より面積・幅が小さく、真後ろから短い後退面と丸い後部胴体が見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "兩型都是傳統尾翼，不應只靠安裝位置；最有效的是比較水平尾翼尺度與主起落架輪組。",
+        "en": "Both use conventional tailplanes, so mounting position alone is weak. Compare tailplane scale and main-gear wheel arrangement.",
+        "ja": "両機とも通常配置のため取付位置だけでは弱く、水平尾翼の大きさと主脚輪組を比較します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "水平尾翼從尾錐較低位置向兩側伸出。",
+          "en": "The tailplanes project from a low position on the tailcone.",
+          "ja": "水平尾翼は尾錐の低い位置から左右へ伸びます。"
+        },
+        {
+          "zh": "展幅與面積明顯小於 757。",
+          "en": "Span and area are visibly smaller than the 757's.",
+          "ja": "翼幅と面積は757より明らかに小さいです。"
+        },
+        {
+          "zh": "正後方可同時確認雙輪主腳與圓形機身截面。",
+          "en": "An aft view also reveals twin-wheel main gear and the rounded fuselage section.",
+          "ja": "後方から2輪主脚と丸い胴体断面も確認できます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a321/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:TransAsia_Airways_Airbus_A321-231_B-22612_Departing_from_Taipei_Songshan_Airport_20151003f.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus A321 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "標準 A321 每側主起落架為單軸雙輪，前起落架也是雙輪；短腳柱讓機身與引擎靠近地面。",
+        "en": "A standard A321 has a single axle with two tyres on each main gear and twin nose wheels. Short struts keep the fuselage and engines close to the ground.",
+        "ja": "標準A321は各主脚1軸2輪、前脚2輪で、短い脚柱により胴体とエンジンが地面に近くなります。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "與 757 每側四輪主腳相比，A321 的雙輪主腳是近距離最可靠差異之一。",
+        "en": "Against the 757's four-wheel bogie per side, the A321's twin-wheel main gear is one of the strongest close-range identifiers.",
+        "ja": "757の各側4輪ボギーに対し、A321の2輪主脚は近距離で最も強い識別点の一つです。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳只有兩個輪胎。",
+          "en": "Each main leg carries only two tyres.",
+          "ja": "各主脚は2輪だけです。"
+        },
+        {
+          "zh": "主腳柱短，收進翼身整流罩。",
+          "en": "The short main leg retracts into the wing-body fairing.",
+          "ja": "短い主脚柱は翼胴フェアリングへ格納されます。"
+        },
+        {
+          "zh": "輪數、地上高度都明顯少於 757。",
+          "en": "Wheel count and ground clearance are both lower than the 757's.",
+          "ja": "輪数と地上高はいずれも757より小さいです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a321/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Port_side_main_landing_gear_of_Finnair_Airbus_A321_OH-LZA.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A321 是 A320 家族加長型單走道雙發客機；機身長而離地較低，機鼻圓鈍、駕駛艙窗帶呈典型 Airbus 折線，主翼相對機身較小。",
+        "en": "The A321 is the stretched A320-family narrow-body twin: long but low-sitting, with a rounded nose, classic angular Airbus glazing and a wing that looks relatively small against the fuselage.",
+        "ja": "A321はA320ファミリーの胴体延長型で、長く低い姿勢、丸い機首、典型的なAirbus窓帯、胴体に対して小さく見える主翼が特徴です。"
+      },
+      "fact": {
+        "zh": "與 757-200 相比，A321 機身較短寬、起落架較低、引擎較小；A321ceo 與 neo 的引擎與翼尖又會不同。",
+        "en": "Compared with a 757-200, the A321 is shorter and wider, sits lower and has smaller engines. Engine and wingtip appearance also differs between ceo and neo generations.",
+        "ja": "757-200より短く幅広く、姿勢が低く、エンジンも小型です。A321ceoとneoではエンジンと翼端も異なります。"
+      },
+      "bullets": [
+        {
+          "zh": "機身外寬約 3.95 m，比 757 寬。",
+          "en": "The roughly 3.95 m fuselage is wider than the 757's.",
+          "ja": "胴体外径は約3.95 mで757より太いです。"
+        },
+        {
+          "zh": "傳統 A321ceo 常見四對全尺寸艙門。",
+          "en": "Traditional A321ceos commonly show four pairs of full-size doors.",
+          "ja": "従来型A321ceoでは片側4枚の大型ドアが一般的です。"
+        },
+        {
+          "zh": "較短起落架讓機身與引擎靠近地面。",
+          "en": "Shorter landing gear keeps the body and engines closer to the ground.",
+          "ja": "短い脚により胴体とエンジンが地面に近くなります。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a321/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_Airbus_A321_OH-LZF_Oslo_Gardermoen_2024_(01).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A321 採 A320 家族六片式駕駛艙窗：正面兩片主風擋呈斜邊梯形，外側窗沿圓鈍機鼻向後收尖，整組窗帶比 757 更有折線感。",
+        "en": "The A321 uses the A320-family six-pane glazing: two trapezoidal forward panes and outer panes tapering aft around a rounded nose, producing a more kinked belt than the 757.",
+        "ja": "A321はA320ファミリーの六枚窓で、台形の前面2枚と丸い機首に沿って後方へ細くなる外側窓からなり、757より折れ線的です。"
+      },
+      "fact": {
+        "zh": "A319、A320、A321 的機鼻與窗型幾乎相同，不能靠駕駛艙窗區分家族子型；必須看機身長度與出口配置。",
+        "en": "A319, A320 and A321 noses and glazing are nearly identical. Use fuselage length and exit layout to distinguish family members.",
+        "ja": "A319・A320・A321の機首窓はほぼ同じため、胴体長と出口配置で子型を区別します。"
+      },
+      "bullets": [
+        {
+          "zh": "主風擋帶斜邊，中央接縫較短。",
+          "en": "Forward panes have slanted edges and a relatively short centre seam.",
+          "ja": "前面窓は斜辺を持ち、中央継ぎ目は比較的短めです。"
+        },
+        {
+          "zh": "外側窗向後上方收尖。",
+          "en": "Outer panes taper aft and upward.",
+          "ja": "外側窓は後上方へ細くなります。"
+        },
+        {
+          "zh": "圓鈍機鼻與低地上姿態可排除 757。",
+          "en": "The rounded nose and low stance help exclude a 757.",
+          "ja": "丸い機首と低い姿勢で757を除外できます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a321/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_A321_at_Airbus_Mobile.jpg"
+        },
+        {
+          "src": "assets/reference/a321/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_Airbus_A321_OH-LZF_Oslo_Gardermoen_2024_(02).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "早期 A321ceo 使用小型上下翼尖擋板，像短小的垂直箭頭；較晚 ceo 與 neo 可使用高大的 Sharklet。",
+        "en": "Early A321ceos use small upper-and-lower wingtip fences like short vertical arrows; later ceos and neos may use tall Sharklets.",
+        "ja": "初期A321ceoは小さな上下翼端フェンスを使い、後期ceoとneoは大型Sharkletを装備できます。"
+      },
+      "fact": {
+        "zh": "參考照片顯示傳統上下翼尖擋板；辨識時不要把 Sharklet 當成所有 A321 的共同特徵。",
+        "en": "The reference shows the traditional upper/lower fence. Do not treat a Sharklet as universal to every A321.",
+        "ja": "参考写真は従来の上下フェンスです。Sharkletを全A321共通の特徴としないでください。"
+      },
+      "bullets": [
+        {
+          "zh": "上方翼片較大、下方翼片較小。",
+          "en": "The upper blade is larger and the lower blade smaller.",
+          "ja": "上側ブレードが大きく、下側は小型です。"
+        },
+        {
+          "zh": "輪廓比 757 改裝融合式小翼短很多。",
+          "en": "It is far shorter than a retrofit 757 blended winglet.",
+          "ja": "757の後付けブレンデッド型よりはるかに短いです。"
+        },
+        {
+          "zh": "Sharklet 世代外觀高大，需再看機身與引擎。",
+          "en": "Sharklet-equipped aircraft require fuselage and engine cross-checks.",
+          "ja": "Sharklet装備機は胴体とエンジンも照合します。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a321/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Wingtip_device_of_Airbus_A-321-200.JPG"
+        }
+      ]
     }
   },
   "specifications": {

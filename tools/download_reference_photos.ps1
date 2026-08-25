@@ -92,6 +92,24 @@ $photos = [ordered]@{
   "a380/vstab.jpg" = "A380 Tail.jpg"
   "a380/hstab.jpg" = "A380-tail.JPG"
   "a380/gear.jpg" = "British Airways Airbus A380-841 F-WWSK PAS 2013 08 main landing gear.jpg"
+  "b752/overview.jpg" = "Icelandair Boeing 757 TF-ISR Milan Malpensa 2024 (01).jpg"
+  "b752/cockpit.jpg" = "Boeing 757-200 flight deck.jpg"
+  "b752/fuselage.jpg" = "American Airlines B757-200 forward fuselage view in hangar.jpg"
+  "b752/engine.jpg" = "British Airways B757 Heathrow Airport jet engine intake.jpg"
+  "b752/wingtip.jpg" = "Boeing 757 winglet (4269906229).jpg"
+  "b752/wing.jpg" = "Onboard the Boeing 757 (3390330324).jpg"
+  "b752/vstab.jpg" = "Boeing 757-200 - Icelandair (tail).jpg"
+  "b752/hstab.jpg" = "Icelandair tail at Oslo.jpg"
+  "b752/gear.jpg" = "Ba b757-200 g-bpei closeup arp.jpg"
+  "a321/overview.jpg" = "Finnair Airbus A321 OH-LZF Oslo Gardermoen 2024 (01).jpg"
+  "a321/cockpit.jpg" = "Airbus A321 cockpit - G-EUXG British Airways.jpg"
+  "a321/fuselage.jpg" = "Airbus A321-211, N827Q - open doors.jpg"
+  "a321/engine.jpg" = "Airbus A321-231, Middle East Airlines (MEA) JP6762964.jpg"
+  "a321/wingtip.jpg" = "Wingtip device of Airbus A-321-200.JPG"
+  "a321/wing.jpg" = "Airbus A321 wingtip fence.jpg"
+  "a321/vstab.jpg" = "TC-JRN Airbus A321 Turkish Airlines Tail (8633650011).jpg"
+  "a321/hstab.jpg" = "TransAsia Airways Airbus A321-231 B-22612 Departing from Taipei Songshan Airport 20151003f.jpg"
+  "a321/gear.jpg" = "Port side main landing gear of Finnair Airbus A321 OH-LZA.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -133,6 +151,10 @@ $windowPhotos = @(
   @{ Dest="b748/window-side.jpg"; Title="Boeing 747 cockpit window from outside.jpg"; Crop=@(.02,.08,.94) }
   @{ Dest="a380/window-front.jpg"; Title="A380-front.JPG"; Crop=@(.29,.03,.42) }
   @{ Dest="a380/window-side.jpg"; Title="Airbus A380 front side.jpg"; Crop=@(.02,.08,.50) }
+  @{ Dest="b752/window-front.jpg"; Title="Face to Face with Delta (N616DL) (8331933080).jpg"; Crop=@(.30,.15,.40) }
+  @{ Dest="b752/window-side.jpg"; Title="The front end of a 757 (2710024227).jpg"; Crop=@(.03,.08,.62) }
+  @{ Dest="a321/window-front.jpg"; Title="Delta A321 at Airbus Mobile.jpg"; Crop=@(.02,.10,.78) }
+  @{ Dest="a321/window-side.jpg"; Title="Finnair Airbus A321 OH-LZF Oslo Gardermoen 2024 (02).jpg"; Crop=@(.47,.07,.46) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600

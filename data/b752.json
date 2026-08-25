@@ -2,19 +2,30 @@
   "title": "Boeing 757-200",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 757-200 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "757-200 機身長約 47.32 m、外寬約 3.76 m，形成高長寬比外觀；客艙門與翼上逃生口配置會依航空公司與認證布局不同。",
+        "en": "The 757-200 is about 47.32 m long but only about 3.76 m wide, giving it a high fineness ratio. Door and overwing-exit layouts vary by operator and certification configuration.",
+        "ja": "757-200は全長約47.32 m、胴体幅約3.76 mで非常に細長く、ドアと翼上非常口の配置は運航会社・認証仕様で異なります。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "不要用門數單獨判型：757-200 有不同出口配置，改裝貨機也會封閉客艙窗並增加大型貨艙門。",
+        "en": "Do not identify it by door count alone: 757-200 exit layouts vary, while freighter conversions blank cabin windows and add a large cargo door.",
+        "ja": "ドア数だけで判別しないでください。757-200は出口配置が複数あり、貨物改造機は窓を塞ぎ大型貨物扉を追加します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "機身比 A321 更長且更窄。",
+          "en": "The body is longer and narrower than the A321's.",
+          "ja": "胴体はA321より長く細身です。"
+        },
+        {
+          "zh": "前段艙門與窗列位於較高的機身位置。",
+          "en": "Forward doors and cabin windows sit noticeably high above the ground.",
+          "ja": "前方ドアと客室窓は地上から高い位置にあります。"
+        },
+        {
+          "zh": "客運型、貨運改裝型的外部開口差異很大。",
+          "en": "Passenger and converted-freighter openings differ substantially.",
+          "ja": "旅客型と貨物改造型では外部開口が大きく異なります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b752/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:American_Airlines_B757-200_forward_fuselage_view_in_hangar.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Boeing 757-200 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "757 駕駛艙採傳統 Boeing 駕駛盤與中央操縱柱，早期機多為六具 CRT 顯示器；布局與 767 高度共通。",
+        "en": "The 757 flight deck uses Boeing yokes and control columns with six CRT-era displays on many aircraft, and shares a strongly common layout with the 767.",
+        "ja": "757の操縦席はBoeing式操縦輪とコントロールコラムを使い、多くは6面のCRT世代表示器を備え、767と高い共通性があります。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "757 與 767 具有共同型別資格；辨識 A321 時最直觀差異是正前方駕駛盤，而 Airbus 使用側桿與桌板。",
+        "en": "The 757 and 767 share a type rating. Against an A321, the clearest cue is the yoke directly ahead of each pilot versus Airbus sidesticks and tray tables.",
+        "ja": "757と767は共通型式資格を持ちます。A321との最明確な差は、正面の操縦輪に対しAirbusはサイドスティックとテーブルを使う点です。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "正副駕駛前方都有駕駛盤。",
+          "en": "A yoke is positioned in front of each pilot.",
+          "ja": "両席の正面に操縦輪があります。"
+        },
+        {
+          "zh": "中央顯示與實體控制布局屬 1980 年代 Boeing 世代。",
+          "en": "The central displays and physical-control layout reflect 1980s Boeing design.",
+          "ja": "中央表示器と物理操作部は1980年代Boeing世代の設計です。"
+        },
+        {
+          "zh": "推力桿位於中央操縱台，沒有 Airbus 式側桿。",
+          "en": "Thrust levers sit on the centre pedestal; there are no Airbus-style sidesticks.",
+          "ja": "推力レバーは中央ペデスタルにあり、Airbus式サイドスティックはありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b752/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_757-200_flight_deck.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 757-200 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "757 主翼面積約 185.25 m²，翼弦與展弦比都比 A321 更大；後緣有大型多段襟翼，支援高重量下的短場性能。",
+        "en": "The 757 wing covers about 185.25 m² and is larger in chord and span than the A321 wing, with substantial multi-element trailing-edge flaps for heavy-weight field performance.",
+        "ja": "757の主翼面積は約185.25 m²でA321より翼弦・翼幅とも大きく、大型多要素フラップで高重量時の離着陸性能を確保します。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "翼尖改裝會改變總翼展；判讀資料時要分清原始翼尖與後裝小翼版本。",
+        "en": "Retrofit winglets change total span, so specifications must distinguish original and modified configurations.",
+        "ja": "後付けウイングレットで全幅が変わるため、原型と改修仕様を区別して諸元を読みます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "翼根厚、外翼細長且後掠。",
+          "en": "The thick root transitions into a long swept outer wing.",
+          "ja": "厚い翼根から細長い後退外翼へ続きます。"
+        },
+        {
+          "zh": "大型雙縫襟翼與擾流板占據長後緣。",
+          "en": "Large double-slotted flaps and spoilers occupy much of the trailing edge.",
+          "ja": "大型二重隙間フラップとスポイラーが長い後縁を占めます。"
+        },
+        {
+          "zh": "整體翼面明顯大於 A321。",
+          "en": "The overall wing is visibly larger than the A321's.",
+          "ja": "主翼全体はA321より明らかに大きいです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b752/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Onboard_the_Boeing_757_(3390330324).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 757-200 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "757-200 可搭載 Rolls-Royce RB211-535 或 Pratt & Whitney PW2000；兩者都是大型高旁通渦扇，短艙尺寸相對窄機身非常醒目。",
+        "en": "The 757-200 uses either Rolls-Royce RB211-535 or Pratt & Whitney PW2000 turbofans, both notably large relative to the narrow fuselage.",
+        "ja": "757-200はRB211-535またはPW2000を搭載し、細い胴体に対して大きな高バイパス比ターボファンが目立ちます。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "照片為 RB211 進氣口；PW2000 的整流罩細節不同，所以應先辨認『大型圓形短艙＋高離地』，再判斷引擎子型。",
+        "en": "The reference shows an RB211 inlet. PW2000 details differ, so first identify the large round nacelle and high ground clearance, then determine engine type.",
+        "ja": "参考写真はRB211吸気口です。PW2000は細部が異なるため、まず大型円形ナセルと高い地上高を確認し、その後エンジン型を判別します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "短艙比 A321ceo 的 CFM56／V2500 更大。",
+          "en": "The nacelle is larger than an A321ceo CFM56 or V2500 installation.",
+          "ja": "ナセルはA321ceoのCFM56／V2500より大型です。"
+        },
+        {
+          "zh": "進氣口接近完整圓形，沒有 737NG 的扁平底部。",
+          "en": "The inlet is nearly circular, without the flattened 737NG lower lip.",
+          "ja": "吸気口はほぼ真円で、737NGのような平たい下面はありません。"
+        },
+        {
+          "zh": "RB211 與 PW2000 的風扇、整流罩接縫不可混為一談。",
+          "en": "RB211 and PW2000 fan and cowling details should not be conflated.",
+          "ja": "RB211とPW2000のファン・カウル細部を混同しないでください。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b752/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:British_Airways_B757_Heathrow_Airport_jet_engine_intake.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "757 垂直尾翼高大、前緣後掠，根部以長背鰭平順接入細長後機身；方向舵面積也大。",
+        "en": "The 757 has a tall swept fin with a long dorsal root fairing blending into the slender aft fuselage and a large rudder area.",
+        "ja": "757は高い後退垂直尾翼、細長い後部胴体へ続く長いドーサル根元、大面積の方向舵を備えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "垂尾塗裝只能辨識航空公司；區分 A321 時要再看尾翼相對機身的高度、機鼻與主起落架輪數。",
+        "en": "Tail paint identifies the operator, not the type. Against an A321, also check fin-to-fuselage scale, nose form and main-wheel count.",
+        "ja": "尾翼塗装は会社を示すだけです。A321との区別には尾翼比率、機首、主輪数も確認します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "垂尾相對窄機身顯得非常高。",
+          "en": "The fin looks exceptionally tall over the narrow fuselage.",
+          "ja": "細い胴体に対して垂直尾翼が非常に高く見えます。"
+        },
+        {
+          "zh": "前緣後掠、頂端較平直。",
+          "en": "Its leading edge is swept and the tip comparatively squared.",
+          "ja": "前縁は後退し、上端は比較的平らです。"
+        },
+        {
+          "zh": "根部背鰭沿機背向前延伸。",
+          "en": "A dorsal fillet extends forward along the upper fuselage.",
+          "ja": "根元フィレットが機背に沿って前方へ伸びます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b752/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_757-200_-_Icelandair_(tail).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "757 的低置水平尾翼面積大、後掠明顯，安裝在細長後機身兩側；相對 A321 看起來更寬、更有翼面感。",
+        "en": "The 757's low-mounted tailplanes are large and strongly swept on either side of the slender aft fuselage, appearing broader than those of an A321.",
+        "ja": "757の低位置水平尾翼は大面積で後退が強く、細い後部胴体の両側に付き、A321より幅広く見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "757 與 A321 都是傳統低置尾翼，單看一小段水平尾翼不夠；側後方需同時看垂尾、機身寬度與主翼。",
+        "en": "Both types use conventional low tailplanes, so a partial view is insufficient. From aft-quarter angles include the fin, fuselage width and main wing.",
+        "ja": "両機とも通常の低位置尾翼のため、一部だけでは不十分です。後斜めでは垂直尾翼、胴体幅、主翼も見ます。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "翼根整流罩較長，沿後機身延伸。",
+          "en": "A long root fairing runs along the aft fuselage.",
+          "ja": "長い翼根フェアリングが後部胴体に沿います。"
+        },
+        {
+          "zh": "外形後掠且逐漸收尖。",
+          "en": "The swept planform tapers toward the tips.",
+          "ja": "後退平面形が翼端へ細くなります。"
+        },
+        {
+          "zh": "面積與展幅視覺上大於 A321 尾翼。",
+          "en": "Its apparent area and span exceed the A321 tailplane's.",
+          "ja": "見かけの面積と幅はA321より大きいです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b752/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Icelandair_tail_at_Oslo.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 757-200 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "757-200 每側主起落架是兩軸四輪轉向架，前起落架雙輪；較長的主腳讓大型引擎與機身保持離地間隙。",
+        "en": "Each 757-200 main bogie has two axles and four tyres, plus twin nose wheels. Long struts provide clearance for the large engines and fuselage.",
+        "ja": "757-200の各主脚は2軸4輪、前脚は2輪で、長い脚柱が大型エンジンと胴体の地上間隔を確保します。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "這是與標準 A321 最直接差異之一：A321 每側主腳通常只有單軸雙輪。",
+        "en": "This is one of the clearest differences from a standard A321, whose main gear normally has a single axle and two tyres per side.",
+        "ja": "標準A321の各主脚は通常1軸2輪であり、最も明確な違いの一つです。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳四輪，呈前後兩軸。",
+          "en": "Four tyres on each main bogie are arranged on two axles.",
+          "ja": "各主脚は前後2軸の4輪です。"
+        },
+        {
+          "zh": "主腳與前腳都比 A321 更高。",
+          "en": "Both main and nose gear stand taller than the A321's.",
+          "ja": "主脚・前脚ともA321より高く立ちます。"
+        },
+        {
+          "zh": "照片可同時看到四輪主腳與大型水平尾翼。",
+          "en": "The reference view shows the four-wheel bogie and large tailplane together.",
+          "ja": "参考写真では4輪主脚と大型水平尾翼を同時に確認できます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b752/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Ba_b757-200_g-bpei_closeup_arp.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "757-200 是修長、離地較高的單走道雙發客機；機鼻尖長、駕駛艙窗較方正，主翼與尾翼相對機身都顯得寬大。",
+        "en": "The 757-200 is a long, high-sitting narrow-body twin with a pointed nose, fairly rectangular cockpit glazing and large wings and tail surfaces for its fuselage width.",
+        "ja": "757-200は細長く地上高の高い単通路双発機で、尖った機首、比較的四角い操縦席窓、胴体幅に対して大きな主翼と尾翼が特徴です。"
+      },
+      "fact": {
+        "zh": "757 與 A321 長度接近，但 757 的起落架更高、機鼻更尖、主翼與引擎更大；三項一起看比只看機身長度可靠。",
+        "en": "The 757 and A321 are similar in length, but the 757 stands taller and has a sharper nose, larger wing and larger engines. Use those cues together.",
+        "ja": "757とA321は全長が近いものの、757は脚が高く、機首が鋭く、主翼とエンジンが大きいため、複数の特徴を組み合わせます。"
+      },
+      "bullets": [
+        {
+          "zh": "機身外寬約 3.76 m，外觀細長。",
+          "en": "The roughly 3.76 m fuselage looks notably slender.",
+          "ja": "胴体外径は約3.76 mで細長く見えます。"
+        },
+        {
+          "zh": "機腹與引擎離地高度明顯高於 737 與 A321。",
+          "en": "The belly and engines sit visibly higher than those of a 737 or A321.",
+          "ja": "胴体下面とエンジンの地上高は737やA321より明らかに高めです。"
+        },
+        {
+          "zh": "原廠可無小翼，後期常見大型改裝翼梢小翼。",
+          "en": "Original aircraft may have plain tips; many later received large retrofit winglets.",
+          "ja": "原型は翼端装置なしの場合があり、後年に大型ウイングレットを改修装着した機体も多くあります。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b752/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISR_Milan_Malpensa_2024_(01).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "757 的正面主風擋較寬、接近矩形，中央接縫近乎垂直；外側窗大而方，配合尖長且略下垂的機鼻形成獨特表情。",
+        "en": "The 757 has broad, nearly rectangular forward panes with a near-vertical centre seam and large square side panes above a long pointed, slightly drooped nose.",
+        "ja": "757は幅広くほぼ長方形の前面窓、垂直に近い中央継ぎ目、大きな四角い側面窓を持ち、長く少し下がった機首と組み合わさります。"
+      },
+      "fact": {
+        "zh": "757 與 767 的窗型很接近；區分時再看機身寬度、起落架輪組與整體比例，不能只靠風擋。",
+        "en": "757 and 767 glazing is very similar. Use fuselage width, landing-gear bogies and overall proportions as additional checks.",
+        "ja": "757と767の窓形状は非常に似るため、胴体幅、脚ボギー、全体比率も確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "兩片主風擋寬而平，中央接縫直。",
+          "en": "The two main panes are broad and flat with a straight centre seam.",
+          "ja": "2枚の主風防は幅広く平らで、中央継ぎ目は直線的です。"
+        },
+        {
+          "zh": "側窗輪廓大而方正，窗框折角明顯。",
+          "en": "Large square side panes have pronounced frame corners.",
+          "ja": "大きく四角い側面窓には明確な角があります。"
+        },
+        {
+          "zh": "尖長機鼻與高起落架是必要的交叉確認。",
+          "en": "Cross-check with the long pointed nose and tall landing gear.",
+          "ja": "長く尖った機首と高い脚で照合します。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b752/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Face_to_Face_with_Delta_(N616DL)_(8331933080).jpg"
+        },
+        {
+          "src": "assets/reference/b752/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:The_front_end_of_a_757_(2710024227).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "757 原始翼尖是簡單後掠尖端；許多 757-200 後來加裝 Aviation Partners Boeing 融合式小翼，少數再改成 Split Scimitar。",
+        "en": "The original 757 has a plain swept tip. Many 757-200s later received Aviation Partners Boeing blended winglets, and a smaller number gained Split Scimitar upgrades.",
+        "ja": "757の原型翼端は単純な後退端ですが、多くの757-200がAPBブレンデッド・ウイングレットを後付けし、一部はSplit Scimitarへ改修されました。"
+      },
+      "fact": {
+        "zh": "有沒有小翼不能決定是否為 757；照片顯示的是改裝融合式小翼，不是所有 757 的原廠共同特徵。",
+        "en": "Winglet presence does not determine whether an aircraft is a 757. The photo shows a retrofit blended winglet, not a universal factory feature.",
+        "ja": "ウイングレットの有無だけでは757を判定できません。写真は後付けブレンデッド型で、全機共通の原型特徴ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "融合式小翼高大、根部曲線平順。",
+          "en": "The blended winglet is tall with a smooth curved root.",
+          "ja": "ブレンデッド型は高く、根元が滑らかに湾曲します。"
+        },
+        {
+          "zh": "未改裝機保留平直後掠翼尖。",
+          "en": "Unmodified aircraft retain a plain swept tip.",
+          "ja": "未改修機は単純な後退翼端です。"
+        },
+        {
+          "zh": "A321ceo 常見小型上下翼尖擋板，輪廓完全不同。",
+          "en": "A321ceos commonly use small upper/lower fences with a very different outline.",
+          "ja": "A321ceoで一般的な上下小型フェンスとは輪郭が大きく異なります。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b752/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_757_winglet_(4269906229).jpg"
+        }
+      ]
     }
   },
   "specifications": {

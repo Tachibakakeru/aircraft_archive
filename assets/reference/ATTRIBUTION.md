@@ -135,3 +135,39 @@ The side-window photograph is a Boeing 747-family reference because the 747-8 re
 | `a380/vstab.jpg` | [Airbus A380 tail](https://commons.wikimedia.org/wiki/File:A380_Tail.jpg), Tangopaso | CC BY-SA 3.0 |
 | `a380/hstab.jpg` | [Airbus A380 empennage](https://commons.wikimedia.org/wiki/File:A380-tail.JPG), Kolossos | CC BY-SA 3.0 |
 | `a380/gear.jpg` | [British Airways A380 main landing gear](https://commons.wikimedia.org/wiki/File:British_Airways_Airbus_A380-841_F-WWSK_PAS_2013_08_main_landing_gear.jpg), Julian Herzog | CC BY 4.0 |
+
+## Boeing 757-200 (`b752`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b752/overview.jpg` | [Icelandair Boeing 757 TF-ISR at Milan Malpensa](https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISR_Milan_Malpensa_2024_(01).jpg), Bahnfrend | CC BY-SA 4.0 |
+| `b752/cockpit.jpg` | [Boeing 757-200 flight deck](https://commons.wikimedia.org/wiki/File:Boeing_757-200_flight_deck.jpg), Bill Abbott | CC BY-SA 2.0 |
+| `b752/window-front.jpg` | [Delta Boeing 757 N616DL front view](https://commons.wikimedia.org/wiki/File:Face_to_Face_with_Delta_(N616DL)_(8331933080).jpg), Spotting973; cropped to emphasize front-window geometry | CC BY-SA 2.0 |
+| `b752/window-side.jpg` | [Boeing 757 nose and side windows](https://commons.wikimedia.org/wiki/File:The_front_end_of_a_757_(2710024227).jpg), Cory W. Watts; cropped to emphasize side-window geometry | CC BY-SA 2.0 |
+| `b752/fuselage.jpg` | [American Airlines 757-200 forward fuselage with doors open](https://commons.wikimedia.org/wiki/File:American_Airlines_B757-200_forward_fuselage_view_in_hangar.jpg), Bill Abbott / Altair78 | CC BY-SA 2.0 |
+| `b752/engine.jpg` | [British Airways 757 engine intake](https://commons.wikimedia.org/wiki/File:British_Airways_B757_Heathrow_Airport_jet_engine_intake.jpg), Panhard | CC BY 2.5 |
+| `b752/wingtip.jpg` | [Boeing 757 blended winglet](https://commons.wikimedia.org/wiki/File:Boeing_757_winglet_(4269906229).jpg), Moto Miwa | CC BY 2.0 |
+| `b752/wing.jpg` | [Boeing 757 wing view](https://commons.wikimedia.org/wiki/File:Onboard_the_Boeing_757_(3390330324).jpg), Cory W. Watts | CC BY-SA 2.0 |
+| `b752/vstab.jpg` | [Icelandair Boeing 757-200 tail](https://commons.wikimedia.org/wiki/File:Boeing_757-200_-_Icelandair_(tail).jpg), Eluveitie | CC BY-SA 3.0 |
+| `b752/hstab.jpg` | [Icelandair Boeing 757-200 tail at Oslo](https://commons.wikimedia.org/wiki/File:Icelandair_tail_at_Oslo.jpg), Simon Law | CC BY-SA 2.0 |
+| `b752/gear.jpg` | [British Airways Boeing 757-200 landing](https://commons.wikimedia.org/wiki/File:Ba_b757-200_g-bpei_closeup_arp.jpg), Adrian Pingstone | Public domain |
+
+The winglet photograph shows a retrofit blended winglet. The original 757 wing used a plain swept tip, and not every 757 received the retrofit.
+
+## Airbus A321 (`a321`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a321/overview.jpg` | [Finnair Airbus A321 OH-LZF at Oslo Gardermoen](https://commons.wikimedia.org/wiki/File:Finnair_Airbus_A321_OH-LZF_Oslo_Gardermoen_2024_(01).jpg), Bahnfrend | CC BY-SA 4.0 |
+| `a321/cockpit.jpg` | [British Airways Airbus A321 G-EUXG cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A321_cockpit_-_G-EUXG_British_Airways.jpg), Mertbiol | CC0 |
+| `a321/window-front.jpg` | [Delta A321 at Airbus Mobile](https://commons.wikimedia.org/wiki/File:Delta_A321_at_Airbus_Mobile.jpg), Blervis; cropped to emphasize forward-window geometry | CC BY-SA 4.0 |
+| `a321/window-side.jpg` | [Finnair Airbus A321 OH-LZF front-side view](https://commons.wikimedia.org/wiki/File:Finnair_Airbus_A321_OH-LZF_Oslo_Gardermoen_2024_(02).jpg), Bahnfrend; cropped to emphasize side-window geometry | CC BY-SA 4.0 |
+| `a321/fuselage.jpg` | [Airbus A321-211 N827Q with doors open](https://commons.wikimedia.org/wiki/File:Airbus_A321-211,_N827Q_-_open_doors.jpg), Cjp24 | CC BY-SA 4.0 |
+| `a321/engine.jpg` | [Middle East Airlines Airbus A321-231 underside](https://commons.wikimedia.org/wiki/File:Airbus_A321-231,_Middle_East_Airlines_(MEA)_JP6762964.jpg), Aktug Ates | GFDL 1.2 |
+| `a321/wingtip.jpg` | [A321-200 wingtip fence](https://commons.wikimedia.org/wiki/File:Wingtip_device_of_Airbus_A-321-200.JPG), Doomych | Public domain |
+| `a321/wing.jpg` | [Airbus A321 wing and wingtip fence](https://commons.wikimedia.org/wiki/File:Airbus_A321_wingtip_fence.jpg), 4300streetcar | CC BY 4.0 |
+| `a321/vstab.jpg` | [Turkish Airlines A321 tail](https://commons.wikimedia.org/wiki/File:TC-JRN_Airbus_A321_Turkish_Airlines_Tail_(8633650011).jpg), Aeroprints.com | CC BY-SA 3.0 |
+| `a321/hstab.jpg` | [TransAsia Airways A321 rear view](https://commons.wikimedia.org/wiki/File:TransAsia_Airways_Airbus_A321-231_B-22612_Departing_from_Taipei_Songshan_Airport_20151003f.jpg), 玄史生 | CC0 |
+| `a321/gear.jpg` | [Finnair Airbus A321 OH-LZA main landing gear](https://commons.wikimedia.org/wiki/File:Port_side_main_landing_gear_of_Finnair_Airbus_A321_OH-LZA.jpg), Markus Säynevirta | CC BY-SA 4.0 |
+
+The comparison focuses on the A321ceo-style data in the project. Door, engine and wingtip layouts can differ on A321neo, A321LR, A321XLR and Airbus Cabin Flex aircraft; those differences are stated in the identification text.

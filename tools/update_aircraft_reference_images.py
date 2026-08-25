@@ -134,6 +134,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:A380-tail.JPG",
         "gear": "https://commons.wikimedia.org/wiki/File:British_Airways_Airbus_A380-841_F-WWSK_PAS_2013_08_main_landing_gear.jpg",
     },
+    "b752": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISR_Milan_Malpensa_2024_(01).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_757-200_flight_deck.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Face_to_Face_with_Delta_(N616DL)_(8331933080).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:The_front_end_of_a_757_(2710024227).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:American_Airlines_B757-200_forward_fuselage_view_in_hangar.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:British_Airways_B757_Heathrow_Airport_jet_engine_intake.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Boeing_757_winglet_(4269906229).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Onboard_the_Boeing_757_(3390330324).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Boeing_757-200_-_Icelandair_(tail).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Icelandair_tail_at_Oslo.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Ba_b757-200_g-bpei_closeup_arp.jpg",
+    },
+    "a321": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Finnair_Airbus_A321_OH-LZF_Oslo_Gardermoen_2024_(01).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Airbus_A321_cockpit_-_G-EUXG_British_Airways.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Delta_A321_at_Airbus_Mobile.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Finnair_Airbus_A321_OH-LZF_Oslo_Gardermoen_2024_(02).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Airbus_A321-211,_N827Q_-_open_doors.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Airbus_A321-231,_Middle_East_Airlines_(MEA)_JP6762964.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Wingtip_device_of_Airbus_A-321-200.JPG",
+        "wing": "https://commons.wikimedia.org/wiki/File:Airbus_A321_wingtip_fence.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:TC-JRN_Airbus_A321_Turkish_Airlines_Tail_(8633650011).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:TransAsia_Airways_Airbus_A321-231_B-22612_Departing_from_Taipei_Songshan_Airport_20151003f.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Port_side_main_landing_gear_of_Finnair_Airbus_A321_OH-LZA.jpg",
+    },
 }
 
 
@@ -390,6 +416,110 @@ CONTENT = {
             ("A380 有兩組四輪翼下主腳與兩組六輪機身主腳，再加雙輪前腳，共 22 個輪胎；六輪機身腳是與 747-8 四輪機身腳的直接差異。", "The A380 has two four-wheel wing bogies, two six-wheel body bogies and twin nose wheels, totaling 22 tyres. Six-wheel body bogies directly distinguish it from the 747-8.", "A380は翼脚2組各4輪、胴体脚2組各6輪、前脚2輪で計22輪です。胴体脚6輪が747-8の4輪胴体脚との直接的な違いです。"),
             ("四組主腳共同分散巨大重量；機身主腳可轉向，讓這架超大型客機在滑行轉彎時降低輪胎側滑。", "Four main bogies distribute the immense weight, and steerable body bogies reduce tyre scrub during taxi turns.", "4組の主脚が巨大な重量を分散し、操向可能な胴体脚が地上旋回時のタイヤ横滑りを減らします。"),
             [("每側翼下主腳為四輪。", "Each wing bogie carries four tyres.", "各翼脚は4輪です。"), ("每側機身主腳為三軸六輪。", "Each body bogie has three axles and six tyres.", "各胴体脚は3軸6輪です。"), ("總輪數 22，多於 747-8 的 18。", "Total tyre count is 22, versus 18 on the 747-8.", "総輪数は22輪で、747-8の18輪より多いです。")],
+        ),
+    },
+    "b752": {
+        "overview": identify(
+            ("757-200 是修長、離地較高的單走道雙發客機；機鼻尖長、駕駛艙窗較方正，主翼與尾翼相對機身都顯得寬大。", "The 757-200 is a long, high-sitting narrow-body twin with a pointed nose, fairly rectangular cockpit glazing and large wings and tail surfaces for its fuselage width.", "757-200は細長く地上高の高い単通路双発機で、尖った機首、比較的四角い操縦席窓、胴体幅に対して大きな主翼と尾翼が特徴です。"),
+            ("757 與 A321 長度接近，但 757 的起落架更高、機鼻更尖、主翼與引擎更大；三項一起看比只看機身長度可靠。", "The 757 and A321 are similar in length, but the 757 stands taller and has a sharper nose, larger wing and larger engines. Use those cues together.", "757とA321は全長が近いものの、757は脚が高く、機首が鋭く、主翼とエンジンが大きいため、複数の特徴を組み合わせます。"),
+            [("機身外寬約 3.76 m，外觀細長。", "The roughly 3.76 m fuselage looks notably slender.", "胴体外径は約3.76 mで細長く見えます。"), ("機腹與引擎離地高度明顯高於 737 與 A321。", "The belly and engines sit visibly higher than those of a 737 or A321.", "胴体下面とエンジンの地上高は737やA321より明らかに高めです。"), ("原廠可無小翼，後期常見大型改裝翼梢小翼。", "Original aircraft may have plain tips; many later received large retrofit winglets.", "原型は翼端装置なしの場合があり、後年に大型ウイングレットを改修装着した機体も多くあります。")],
+        ),
+        "cockpit": identify(
+            ("757 駕駛艙採傳統 Boeing 駕駛盤與中央操縱柱，早期機多為六具 CRT 顯示器；布局與 767 高度共通。", "The 757 flight deck uses Boeing yokes and control columns with six CRT-era displays on many aircraft, and shares a strongly common layout with the 767.", "757の操縦席はBoeing式操縦輪とコントロールコラムを使い、多くは6面のCRT世代表示器を備え、767と高い共通性があります。"),
+            ("757 與 767 具有共同型別資格；辨識 A321 時最直觀差異是正前方駕駛盤，而 Airbus 使用側桿與桌板。", "The 757 and 767 share a type rating. Against an A321, the clearest cue is the yoke directly ahead of each pilot versus Airbus sidesticks and tray tables.", "757と767は共通型式資格を持ちます。A321との最明確な差は、正面の操縦輪に対しAirbusはサイドスティックとテーブルを使う点です。"),
+            [("正副駕駛前方都有駕駛盤。", "A yoke is positioned in front of each pilot.", "両席の正面に操縦輪があります。"), ("中央顯示與實體控制布局屬 1980 年代 Boeing 世代。", "The central displays and physical-control layout reflect 1980s Boeing design.", "中央表示器と物理操作部は1980年代Boeing世代の設計です。"), ("推力桿位於中央操縱台，沒有 Airbus 式側桿。", "Thrust levers sit on the centre pedestal; there are no Airbus-style sidesticks.", "推力レバーは中央ペデスタルにあり、Airbus式サイドスティックはありません。")],
+        ),
+        "windshield": identify(
+            ("757 的正面主風擋較寬、接近矩形，中央接縫近乎垂直；外側窗大而方，配合尖長且略下垂的機鼻形成獨特表情。", "The 757 has broad, nearly rectangular forward panes with a near-vertical centre seam and large square side panes above a long pointed, slightly drooped nose.", "757は幅広くほぼ長方形の前面窓、垂直に近い中央継ぎ目、大きな四角い側面窓を持ち、長く少し下がった機首と組み合わさります。"),
+            ("757 與 767 的窗型很接近；區分時再看機身寬度、起落架輪組與整體比例，不能只靠風擋。", "757 and 767 glazing is very similar. Use fuselage width, landing-gear bogies and overall proportions as additional checks.", "757と767の窓形状は非常に似るため、胴体幅、脚ボギー、全体比率も確認します。"),
+            [("兩片主風擋寬而平，中央接縫直。", "The two main panes are broad and flat with a straight centre seam.", "2枚の主風防は幅広く平らで、中央継ぎ目は直線的です。"), ("側窗輪廓大而方正，窗框折角明顯。", "Large square side panes have pronounced frame corners.", "大きく四角い側面窓には明確な角があります。"), ("尖長機鼻與高起落架是必要的交叉確認。", "Cross-check with the long pointed nose and tall landing gear.", "長く尖った機首と高い脚で照合します。")],
+        ),
+        "fuselage": identify(
+            ("757-200 機身長約 47.32 m、外寬約 3.76 m，形成高長寬比外觀；客艙門與翼上逃生口配置會依航空公司與認證布局不同。", "The 757-200 is about 47.32 m long but only about 3.76 m wide, giving it a high fineness ratio. Door and overwing-exit layouts vary by operator and certification configuration.", "757-200は全長約47.32 m、胴体幅約3.76 mで非常に細長く、ドアと翼上非常口の配置は運航会社・認証仕様で異なります。"),
+            ("不要用門數單獨判型：757-200 有不同出口配置，改裝貨機也會封閉客艙窗並增加大型貨艙門。", "Do not identify it by door count alone: 757-200 exit layouts vary, while freighter conversions blank cabin windows and add a large cargo door.", "ドア数だけで判別しないでください。757-200は出口配置が複数あり、貨物改造機は窓を塞ぎ大型貨物扉を追加します。"),
+            [("機身比 A321 更長且更窄。", "The body is longer and narrower than the A321's.", "胴体はA321より長く細身です。"), ("前段艙門與窗列位於較高的機身位置。", "Forward doors and cabin windows sit noticeably high above the ground.", "前方ドアと客室窓は地上から高い位置にあります。"), ("客運型、貨運改裝型的外部開口差異很大。", "Passenger and converted-freighter openings differ substantially.", "旅客型と貨物改造型では外部開口が大きく異なります。")],
+        ),
+        "engine": identify(
+            ("757-200 可搭載 Rolls-Royce RB211-535 或 Pratt & Whitney PW2000；兩者都是大型高旁通渦扇，短艙尺寸相對窄機身非常醒目。", "The 757-200 uses either Rolls-Royce RB211-535 or Pratt & Whitney PW2000 turbofans, both notably large relative to the narrow fuselage.", "757-200はRB211-535またはPW2000を搭載し、細い胴体に対して大きな高バイパス比ターボファンが目立ちます。"),
+            ("照片為 RB211 進氣口；PW2000 的整流罩細節不同，所以應先辨認『大型圓形短艙＋高離地』，再判斷引擎子型。", "The reference shows an RB211 inlet. PW2000 details differ, so first identify the large round nacelle and high ground clearance, then determine engine type.", "参考写真はRB211吸気口です。PW2000は細部が異なるため、まず大型円形ナセルと高い地上高を確認し、その後エンジン型を判別します。"),
+            [("短艙比 A321ceo 的 CFM56／V2500 更大。", "The nacelle is larger than an A321ceo CFM56 or V2500 installation.", "ナセルはA321ceoのCFM56／V2500より大型です。"), ("進氣口接近完整圓形，沒有 737NG 的扁平底部。", "The inlet is nearly circular, without the flattened 737NG lower lip.", "吸気口はほぼ真円で、737NGのような平たい下面はありません。"), ("RB211 與 PW2000 的風扇、整流罩接縫不可混為一談。", "RB211 and PW2000 fan and cowling details should not be conflated.", "RB211とPW2000のファン・カウル細部を混同しないでください。")],
+        ),
+        "wingtip": identify(
+            ("757 原始翼尖是簡單後掠尖端；許多 757-200 後來加裝 Aviation Partners Boeing 融合式小翼，少數再改成 Split Scimitar。", "The original 757 has a plain swept tip. Many 757-200s later received Aviation Partners Boeing blended winglets, and a smaller number gained Split Scimitar upgrades.", "757の原型翼端は単純な後退端ですが、多くの757-200がAPBブレンデッド・ウイングレットを後付けし、一部はSplit Scimitarへ改修されました。"),
+            ("有沒有小翼不能決定是否為 757；照片顯示的是改裝融合式小翼，不是所有 757 的原廠共同特徵。", "Winglet presence does not determine whether an aircraft is a 757. The photo shows a retrofit blended winglet, not a universal factory feature.", "ウイングレットの有無だけでは757を判定できません。写真は後付けブレンデッド型で、全機共通の原型特徴ではありません。"),
+            [("融合式小翼高大、根部曲線平順。", "The blended winglet is tall with a smooth curved root.", "ブレンデッド型は高く、根元が滑らかに湾曲します。"), ("未改裝機保留平直後掠翼尖。", "Unmodified aircraft retain a plain swept tip.", "未改修機は単純な後退翼端です。"), ("A321ceo 常見小型上下翼尖擋板，輪廓完全不同。", "A321ceos commonly use small upper/lower fences with a very different outline.", "A321ceoで一般的な上下小型フェンスとは輪郭が大きく異なります。")],
+        ),
+        "wing": identify(
+            ("757 主翼面積約 185.25 m²，翼弦與展弦比都比 A321 更大；後緣有大型多段襟翼，支援高重量下的短場性能。", "The 757 wing covers about 185.25 m² and is larger in chord and span than the A321 wing, with substantial multi-element trailing-edge flaps for heavy-weight field performance.", "757の主翼面積は約185.25 m²でA321より翼弦・翼幅とも大きく、大型多要素フラップで高重量時の離着陸性能を確保します。"),
+            ("翼尖改裝會改變總翼展；判讀資料時要分清原始翼尖與後裝小翼版本。", "Retrofit winglets change total span, so specifications must distinguish original and modified configurations.", "後付けウイングレットで全幅が変わるため、原型と改修仕様を区別して諸元を読みます。"),
+            [("翼根厚、外翼細長且後掠。", "The thick root transitions into a long swept outer wing.", "厚い翼根から細長い後退外翼へ続きます。"), ("大型雙縫襟翼與擾流板占據長後緣。", "Large double-slotted flaps and spoilers occupy much of the trailing edge.", "大型二重隙間フラップとスポイラーが長い後縁を占めます。"), ("整體翼面明顯大於 A321。", "The overall wing is visibly larger than the A321's.", "主翼全体はA321より明らかに大きいです。")],
+        ),
+        "vstab": identify(
+            ("757 垂直尾翼高大、前緣後掠，根部以長背鰭平順接入細長後機身；方向舵面積也大。", "The 757 has a tall swept fin with a long dorsal root fairing blending into the slender aft fuselage and a large rudder area.", "757は高い後退垂直尾翼、細長い後部胴体へ続く長いドーサル根元、大面積の方向舵を備えます。"),
+            ("垂尾塗裝只能辨識航空公司；區分 A321 時要再看尾翼相對機身的高度、機鼻與主起落架輪數。", "Tail paint identifies the operator, not the type. Against an A321, also check fin-to-fuselage scale, nose form and main-wheel count.", "尾翼塗装は会社を示すだけです。A321との区別には尾翼比率、機首、主輪数も確認します。"),
+            [("垂尾相對窄機身顯得非常高。", "The fin looks exceptionally tall over the narrow fuselage.", "細い胴体に対して垂直尾翼が非常に高く見えます。"), ("前緣後掠、頂端較平直。", "Its leading edge is swept and the tip comparatively squared.", "前縁は後退し、上端は比較的平らです。"), ("根部背鰭沿機背向前延伸。", "A dorsal fillet extends forward along the upper fuselage.", "根元フィレットが機背に沿って前方へ伸びます。")],
+        ),
+        "hstab": identify(
+            ("757 的低置水平尾翼面積大、後掠明顯，安裝在細長後機身兩側；相對 A321 看起來更寬、更有翼面感。", "The 757's low-mounted tailplanes are large and strongly swept on either side of the slender aft fuselage, appearing broader than those of an A321.", "757の低位置水平尾翼は大面積で後退が強く、細い後部胴体の両側に付き、A321より幅広く見えます。"),
+            ("757 與 A321 都是傳統低置尾翼，單看一小段水平尾翼不夠；側後方需同時看垂尾、機身寬度與主翼。", "Both types use conventional low tailplanes, so a partial view is insufficient. From aft-quarter angles include the fin, fuselage width and main wing.", "両機とも通常の低位置尾翼のため、一部だけでは不十分です。後斜めでは垂直尾翼、胴体幅、主翼も見ます。"),
+            [("翼根整流罩較長，沿後機身延伸。", "A long root fairing runs along the aft fuselage.", "長い翼根フェアリングが後部胴体に沿います。"), ("外形後掠且逐漸收尖。", "The swept planform tapers toward the tips.", "後退平面形が翼端へ細くなります。"), ("面積與展幅視覺上大於 A321 尾翼。", "Its apparent area and span exceed the A321 tailplane's.", "見かけの面積と幅はA321より大きいです。")],
+        ),
+        "gear": identify(
+            ("757-200 每側主起落架是兩軸四輪轉向架，前起落架雙輪；較長的主腳讓大型引擎與機身保持離地間隙。", "Each 757-200 main bogie has two axles and four tyres, plus twin nose wheels. Long struts provide clearance for the large engines and fuselage.", "757-200の各主脚は2軸4輪、前脚は2輪で、長い脚柱が大型エンジンと胴体の地上間隔を確保します。"),
+            ("這是與標準 A321 最直接差異之一：A321 每側主腳通常只有單軸雙輪。", "This is one of the clearest differences from a standard A321, whose main gear normally has a single axle and two tyres per side.", "標準A321の各主脚は通常1軸2輪であり、最も明確な違いの一つです。"),
+            [("每側主腳四輪，呈前後兩軸。", "Four tyres on each main bogie are arranged on two axles.", "各主脚は前後2軸の4輪です。"), ("主腳與前腳都比 A321 更高。", "Both main and nose gear stand taller than the A321's.", "主脚・前脚ともA321より高く立ちます。"), ("照片可同時看到四輪主腳與大型水平尾翼。", "The reference view shows the four-wheel bogie and large tailplane together.", "参考写真では4輪主脚と大型水平尾翼を同時に確認できます。")],
+        ),
+    },
+    "a321": {
+        "overview": identify(
+            ("A321 是 A320 家族加長型單走道雙發客機；機身長而離地較低，機鼻圓鈍、駕駛艙窗帶呈典型 Airbus 折線，主翼相對機身較小。", "The A321 is the stretched A320-family narrow-body twin: long but low-sitting, with a rounded nose, classic angular Airbus glazing and a wing that looks relatively small against the fuselage.", "A321はA320ファミリーの胴体延長型で、長く低い姿勢、丸い機首、典型的なAirbus窓帯、胴体に対して小さく見える主翼が特徴です。"),
+            ("與 757-200 相比，A321 機身較短寬、起落架較低、引擎較小；A321ceo 與 neo 的引擎與翼尖又會不同。", "Compared with a 757-200, the A321 is shorter and wider, sits lower and has smaller engines. Engine and wingtip appearance also differs between ceo and neo generations.", "757-200より短く幅広く、姿勢が低く、エンジンも小型です。A321ceoとneoではエンジンと翼端も異なります。"),
+            [("機身外寬約 3.95 m，比 757 寬。", "The roughly 3.95 m fuselage is wider than the 757's.", "胴体外径は約3.95 mで757より太いです。"), ("傳統 A321ceo 常見四對全尺寸艙門。", "Traditional A321ceos commonly show four pairs of full-size doors.", "従来型A321ceoでは片側4枚の大型ドアが一般的です。"), ("較短起落架讓機身與引擎靠近地面。", "Shorter landing gear keeps the body and engines closer to the ground.", "短い脚により胴体とエンジンが地面に近くなります。")],
+        ),
+        "cockpit": identify(
+            ("A321 與 A320 家族共用 Airbus 駕駛艙哲學：左右側桿、正面折疊桌板、六具顯示器與中央上下排列的 ECAM。", "The A321 shares the A320-family Airbus flight deck: sidesticks, forward tray tables, six displays and vertically arranged central ECAM screens.", "A321はA320ファミリー共通のAirbus操縦席で、サイドスティック、正面テーブル、6面表示器、上下配置の中央ECAMを備えます。"),
+            ("與 757 相比，飛行員正前方沒有駕駛盤；A321ceo 的舊式 LCD／CRT 外觀也可能因航電升級而不同。", "Unlike the 757 there are no yokes ahead of the pilots. Display appearance on A321ceos may vary with avionics upgrades.", "757と違い正面に操縦輪はありません。A321ceoの表示器外観は改修状況で異なる場合があります。"),
+            [("側桿位於左右側壁。", "Sidesticks are mounted on the sidewalls.", "サイドスティックは左右側壁にあります。"), ("正面沒有操縱柱，可配置桌板。", "No control column blocks the forward tray-table area.", "正面に操縦柱がなく、テーブルを配置できます。"), ("中央兩具 ECAM 顯示器監控引擎與系統。", "Two central ECAM screens monitor engines and systems.", "中央2面のECAMがエンジンとシステムを監視します。")],
+        ),
+        "windshield": identify(
+            ("A321 採 A320 家族六片式駕駛艙窗：正面兩片主風擋呈斜邊梯形，外側窗沿圓鈍機鼻向後收尖，整組窗帶比 757 更有折線感。", "The A321 uses the A320-family six-pane glazing: two trapezoidal forward panes and outer panes tapering aft around a rounded nose, producing a more kinked belt than the 757.", "A321はA320ファミリーの六枚窓で、台形の前面2枚と丸い機首に沿って後方へ細くなる外側窓からなり、757より折れ線的です。"),
+            ("A319、A320、A321 的機鼻與窗型幾乎相同，不能靠駕駛艙窗區分家族子型；必須看機身長度與出口配置。", "A319, A320 and A321 noses and glazing are nearly identical. Use fuselage length and exit layout to distinguish family members.", "A319・A320・A321の機首窓はほぼ同じため、胴体長と出口配置で子型を区別します。"),
+            [("主風擋帶斜邊，中央接縫較短。", "Forward panes have slanted edges and a relatively short centre seam.", "前面窓は斜辺を持ち、中央継ぎ目は比較的短めです。"), ("外側窗向後上方收尖。", "Outer panes taper aft and upward.", "外側窓は後上方へ細くなります。"), ("圓鈍機鼻與低地上姿態可排除 757。", "The rounded nose and low stance help exclude a 757.", "丸い機首と低い姿勢で757を除外できます。")],
+        ),
+        "fuselage": identify(
+            ("A321ceo 機身長約 44.51 m、外寬約 3.95 m；傳統配置每側常見四個全尺寸艙門，窗列與門距是辨認加長機身的重要線索。", "The A321ceo is about 44.51 m long and 3.95 m wide. Traditional layouts commonly have four full-size doors per side, whose spacing highlights the stretched fuselage.", "A321ceoは全長約44.51 m、胴体幅約3.95 mで、従来配置では片側4枚の大型ドアが延長胴体を示します。"),
+            ("A321neo 的 Airbus Cabin Flex 可取消部分中段大型門、改用翼上逃生口；因此門數與位置必須配合世代判讀。", "A321neo Airbus Cabin Flex can remove some mid-cabin full-size doors and add overwing exits, so door layout must be interpreted by generation.", "A321neoのAirbus Cabin Flexでは一部中央大型ドアを廃止し翼上非常口を追加できるため、世代と合わせて判断します。"),
+            [("傳統 A321ceo 每側四個大型矩形艙門。", "A traditional A321ceo has four large rectangular doors per side.", "従来型A321ceoは片側4枚の大型長方形ドアです。"), ("機身比 757 寬，但總長略短。", "The fuselage is wider but slightly shorter than the 757's.", "胴体は757より太い一方、全長は少し短めです。"), ("ACF／LR／XLR 的出口配置不能套用 ceo 判法。", "ACF, LR and XLR exit layouts should not be judged by ceo rules.", "ACF／LR／XLRの出口配置にceoの判別法をそのまま適用できません。")],
+        ),
+        "engine": identify(
+            ("A321ceo 可搭載 CFM56-5B 或 IAE V2500；兩者都比 757 的 RB211／PW2000 小，短艙也更靠近地面。", "The A321ceo uses CFM56-5B or IAE V2500 engines, both smaller and closer to the ground than the 757's RB211 or PW2000 installations.", "A321ceoはCFM56-5BまたはV2500を搭載し、757のRB211／PW2000より小さく地面に近い位置にあります。"),
+            ("照片為搭載 V2500 的 A321；A321neo 改用更大的 LEAP-1A 或 PW1100G，外觀不可混同。", "The reference shows a V2500-powered A321. A321neos use larger LEAP-1A or PW1100G engines and should not be visually conflated.", "参考写真はV2500搭載A321です。A321neoは大型LEAP-1AまたはPW1100Gを使うため混同しないでください。"),
+            [("ceo 引擎短艙直徑小於 757。", "Ceo nacelles are smaller in diameter than the 757's.", "ceoのナセル径は757より小さいです。"), ("CFM56 與 V2500 的進氣口、排氣錐細節不同。", "CFM56 and V2500 inlet and exhaust details differ.", "CFM56とV2500では吸気口・排気部の細部が異なります。"), ("neo 大型引擎會讓離地間隙看起來更小。", "Larger neo engines make ground clearance look tighter.", "neoの大型エンジンは地上間隔をさらに小さく見せます。")],
+        ),
+        "wingtip": identify(
+            ("早期 A321ceo 使用小型上下翼尖擋板，像短小的垂直箭頭；較晚 ceo 與 neo 可使用高大的 Sharklet。", "Early A321ceos use small upper-and-lower wingtip fences like short vertical arrows; later ceos and neos may use tall Sharklets.", "初期A321ceoは小さな上下翼端フェンスを使い、後期ceoとneoは大型Sharkletを装備できます。"),
+            ("參考照片顯示傳統上下翼尖擋板；辨識時不要把 Sharklet 當成所有 A321 的共同特徵。", "The reference shows the traditional upper/lower fence. Do not treat a Sharklet as universal to every A321.", "参考写真は従来の上下フェンスです。Sharkletを全A321共通の特徴としないでください。"),
+            [("上方翼片較大、下方翼片較小。", "The upper blade is larger and the lower blade smaller.", "上側ブレードが大きく、下側は小型です。"), ("輪廓比 757 改裝融合式小翼短很多。", "It is far shorter than a retrofit 757 blended winglet.", "757の後付けブレンデッド型よりはるかに短いです。"), ("Sharklet 世代外觀高大，需再看機身與引擎。", "Sharklet-equipped aircraft require fuselage and engine cross-checks.", "Sharklet装備機は胴体とエンジンも照合します。")],
+        ),
+        "wing": identify(
+            ("A321ceo 與 A320 共用基本主翼，翼面積約 122.6 m²；相對加長機身看起來較小，外翼末端接翼尖擋板或 Sharklet。", "The A321ceo shares the basic A320 wing of about 122.6 m². Against the stretched fuselage it looks relatively small and ends in fences or Sharklets.", "A321ceoはA320と基本主翼を共有し、面積は約122.6 m²です。延長胴体に対して小さく見え、翼端はフェンスまたはSharkletです。"),
+            ("A321neo 與 A321XLR 有結構、增升與油箱相關改進，但外觀辨識仍應先確認翼尖、引擎與出口配置。", "A321neo and A321XLR incorporate structural, high-lift and fuel-system changes, but visual identification still starts with tips, engines and exits.", "A321neo／XLRには構造・高揚力・燃料系改良がありますが、外観判別は翼端、エンジン、出口配置から始めます。"),
+            [("主翼面積與展幅小於 757。", "Wing area and span are smaller than the 757's.", "主翼面積と翼幅は757より小さいです。"), ("後緣配置單縫襟翼與多片擾流板。", "Single-slotted flaps and multiple spoilers line the trailing edge.", "後縁に単隙間フラップと複数スポイラーがあります。"), ("外翼相對短，讓加長機身比例更突出。", "The relatively short outer wing emphasizes the stretched fuselage.", "比較的短い外翼が延長胴体を強調します。")],
+        ),
+        "vstab": identify(
+            ("A321 垂直尾翼與 A320 家族相近，前緣後掠、頂端略平，根部以短背鰭連接後機身；相對 757 的尾翼較小。", "The A321 fin follows the A320-family form: swept leading edge, slightly squared tip and a short dorsal root fairing, smaller relative to the airframe than the 757 fin.", "A321の垂直尾翼はA320ファミリー共通で、後退前縁、やや平らな上端、短い根元フィレットを持ち、757より相対的に小型です。"),
+            ("A319、A320、A321 的垂尾非常相似，不能用尾翼單獨分辨；必須看機身長度與艙門／逃生口。", "A319, A320 and A321 fins are very similar. Distinguish them by fuselage length and door/exit layout, not the fin alone.", "A319・A320・A321の垂直尾翼は非常に似るため、胴体長とドア／非常口で区別します。"),
+            [("垂尾高度與面積小於 757。", "The fin is lower and smaller than the 757's.", "垂直尾翼は757より低く小型です。"), ("根部背鰭較短，後機身較粗。", "The dorsal fillet is shorter and the aft fuselage fuller.", "根元フィレットは短く、後部胴体は太めです。"), ("尾部輔助動力單元排氣口位於尖端。", "The APU exhaust sits at the pointed tailcone.", "APU排気口は尖ったテールコーン先端にあります。")],
+        ),
+        "hstab": identify(
+            ("A321 的水平尾翼低置於尾錐兩側，面積與展幅比 757 小；正後方可見短而略後掠的平面與圓潤後機身。", "The A321's low-mounted tailplanes are smaller in area and span than the 757's. From directly aft they appear short and swept beside a fuller tailcone.", "A321の低位置水平尾翼は757より面積・幅が小さく、真後ろから短い後退面と丸い後部胴体が見えます。"),
+            ("兩型都是傳統尾翼，不應只靠安裝位置；最有效的是比較水平尾翼尺度與主起落架輪組。", "Both use conventional tailplanes, so mounting position alone is weak. Compare tailplane scale and main-gear wheel arrangement.", "両機とも通常配置のため取付位置だけでは弱く、水平尾翼の大きさと主脚輪組を比較します。"),
+            [("水平尾翼從尾錐較低位置向兩側伸出。", "The tailplanes project from a low position on the tailcone.", "水平尾翼は尾錐の低い位置から左右へ伸びます。"), ("展幅與面積明顯小於 757。", "Span and area are visibly smaller than the 757's.", "翼幅と面積は757より明らかに小さいです。"), ("正後方可同時確認雙輪主腳與圓形機身截面。", "An aft view also reveals twin-wheel main gear and the rounded fuselage section.", "後方から2輪主脚と丸い胴体断面も確認できます。")],
+        ),
+        "gear": identify(
+            ("標準 A321 每側主起落架為單軸雙輪，前起落架也是雙輪；短腳柱讓機身與引擎靠近地面。", "A standard A321 has a single axle with two tyres on each main gear and twin nose wheels. Short struts keep the fuselage and engines close to the ground.", "標準A321は各主脚1軸2輪、前脚2輪で、短い脚柱により胴体とエンジンが地面に近くなります。"),
+            ("與 757 每側四輪主腳相比，A321 的雙輪主腳是近距離最可靠差異之一。", "Against the 757's four-wheel bogie per side, the A321's twin-wheel main gear is one of the strongest close-range identifiers.", "757の各側4輪ボギーに対し、A321の2輪主脚は近距離で最も強い識別点の一つです。"),
+            [("每側主腳只有兩個輪胎。", "Each main leg carries only two tyres.", "各主脚は2輪だけです。"), ("主腳柱短，收進翼身整流罩。", "The short main leg retracts into the wing-body fairing.", "短い主脚柱は翼胴フェアリングへ格納されます。"), ("輪數、地上高度都明顯少於 757。", "Wheel count and ground clearance are both lower than the 757's.", "輪数と地上高はいずれも757より小さいです。")],
         ),
     },
 }
