@@ -74,6 +74,24 @@ $photos = [ordered]@{
   "a333/vstab.jpg" = "Airbus A330 tail Leitwerk.jpg"
   "a333/hstab.jpg" = "China Eastern Airbus A330-300 B-6095 lining up at Taipei Songshan April 2026 3.jpg"
   "a333/gear.jpg" = "Landing gear on a Malaysian Airlines Airbus A330-300.jpg"
+  "b748/overview.jpg" = "Lufthansa Boeing 747-8i at San Francisco September 2023.jpg"
+  "b748/cockpit.jpg" = "Boeing 747-8I flight deck Beltyukov.jpg"
+  "b748/fuselage.jpg" = "Boeing 747-8 Baden-Württemberg.jpg"
+  "b748/engine.jpg" = "General Electric GEnx on 747-8I prototype.jpg"
+  "b748/wingtip.jpg" = "2015 10 01 LH Boeing 747 8 D ABYT@EDDF left wingtip.jpg"
+  "b748/wing.jpg" = "2015 10 01 LH Boeing 747 8 D ABYT@EDDF left wing.jpg"
+  "b748/vstab.jpg" = "Boeing 747-8 of Korean Air at Los Angeles International Airport.jpg"
+  "b748/hstab.jpg" = "Boeing 747-8F N5017Q inflight.jpg"
+  "b748/gear.jpg" = "Boeing 747-8I landing gear.jpg"
+  "a380/overview.jpg" = "Emirates Airbus A380 A6-EOG Perth 2024 (01).jpg"
+  "a380/cockpit.jpg" = "Airbus A380 cockpit.jpg"
+  "a380/fuselage.jpg" = "Airbus A380 front side.jpg"
+  "a380/engine.jpg" = "A380 Engines.jpg"
+  "a380/wingtip.jpg" = "British Airways Airbus A380-841 F-WWSK PAS 2013 10 Wingtip device.jpg"
+  "a380/wing.jpg" = "A380 Wing.jpg"
+  "a380/vstab.jpg" = "A380 Tail.jpg"
+  "a380/hstab.jpg" = "A380-tail.JPG"
+  "a380/gear.jpg" = "British Airways Airbus A380-841 F-WWSK PAS 2013 08 main landing gear.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -111,6 +129,10 @@ $windowPhotos = @(
   @{ Dest="b789/window-side.jpg"; Title="Cockpit windows of a Boeing 787 (3).jpg"; Crop=@(.08,.15,.84) }
   @{ Dest="a333/window-front.jpg"; Title="Airbus A330 Front View.jpg"; Crop=@(.28,.10,.44) }
   @{ Dest="a333/window-side.jpg"; Title="Airbus A330-343X, China Eastern Airlines JP7548435.jpg"; Crop=@(.48,.04,.46) }
+  @{ Dest="b748/window-front.jpg"; Title="Lufthansa Boeing 747-8 20180513 3722.jpg"; Crop=@(.36,.18,.30) }
+  @{ Dest="b748/window-side.jpg"; Title="Boeing 747 cockpit window from outside.jpg"; Crop=@(.02,.08,.94) }
+  @{ Dest="a380/window-front.jpg"; Title="A380-front.JPG"; Crop=@(.29,.03,.42) }
+  @{ Dest="a380/window-side.jpg"; Title="Airbus A380 front side.jpg"; Crop=@(.02,.08,.50) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600

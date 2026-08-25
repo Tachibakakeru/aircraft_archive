@@ -101,3 +101,37 @@ The cockpit, front-window and some component photographs show a 787-8 or generic
 | `a333/vstab.jpg` | [Air Canada A330-300 tail](https://commons.wikimedia.org/wiki/File:Airbus_A330_tail_Leitwerk.jpg), Lasse Fuss | CC BY-SA 3.0 |
 | `a333/hstab.jpg` | [China Eastern A330-300 rear view](https://commons.wikimedia.org/wiki/File:China_Eastern_Airbus_A330-300_B-6095_lining_up_at_Taipei_Songshan_April_2026_3.jpg), 4300streetcar | CC BY 4.0 |
 | `a333/gear.jpg` | [Malaysia Airlines A330-300 landing gear](https://commons.wikimedia.org/wiki/File:Landing_gear_on_a_Malaysian_Airlines_Airbus_A330-300.jpg), Ken Chen | CC BY-SA 4.0 |
+
+## Boeing 747-8 (`b748`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b748/overview.jpg` | [Lufthansa Boeing 747-8I at San Francisco](https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8i_at_San_Francisco_September_2023.jpg), 4300streetcar | CC BY 4.0 |
+| `b748/cockpit.jpg` | [Boeing 747-8I flight deck](https://commons.wikimedia.org/wiki/File:Boeing_747-8I_flight_deck_Beltyukov.jpg), Alex Beltyukov | CC BY-SA 3.0 |
+| `b748/window-front.jpg` | [Lufthansa Boeing 747-8 front view](https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_20180513_3722.jpg), Premkudva; cropped to emphasize front-window geometry | CC BY-SA 4.0 |
+| `b748/window-side.jpg` | [Boeing 747 cockpit windows from outside](https://commons.wikimedia.org/wiki/File:Boeing_747_cockpit_window_from_outside.jpg), Paul Hart; cropped as a 747-family side-window reference | CC BY 2.0 |
+| `b748/fuselage.jpg` | [Lufthansa Boeing 747-8 at Frankfurt](https://commons.wikimedia.org/wiki/File:Boeing_747-8_Baden-W%C3%BCrttemberg.jpg), AK-Bino | CC BY-SA 4.0 |
+| `b748/engine.jpg` | [GEnx-2B on the 747-8I prototype](https://commons.wikimedia.org/wiki/File:General_Electric_GEnx_on_747-8I_prototype.jpg), Olivier Cleynen | CC BY-SA 3.0 |
+| `b748/wingtip.jpg` | [747-8 left wingtip](https://commons.wikimedia.org/wiki/File:2015_10_01_LH_Boeing_747_8_D_ABYT@EDDF_left_wingtip.jpg), Peter Nath | CC BY-SA 4.0 |
+| `b748/wing.jpg` | [747-8 left wing](https://commons.wikimedia.org/wiki/File:2015_10_01_LH_Boeing_747_8_D_ABYT@EDDF_left_wing.jpg), Peter Nath | CC BY-SA 4.0 |
+| `b748/vstab.jpg` | [Korean Air Boeing 747-8 at Los Angeles](https://commons.wikimedia.org/wiki/File:Boeing_747-8_of_Korean_Air_at_Los_Angeles_International_Airport.jpg), Glenn Beltz | CC BY 4.0 |
+| `b748/hstab.jpg` | [Boeing 747-8F N5017Q in flight](https://commons.wikimedia.org/wiki/File:Boeing_747-8F_N5017Q_inflight.jpg), Pat Bell | CC BY-SA 2.0 |
+| `b748/gear.jpg` | [Boeing 747-8I landing gear](https://commons.wikimedia.org/wiki/File:Boeing_747-8I_landing_gear.jpg), Olivier Cleynen | CC BY-SA 3.0 |
+
+The side-window photograph is a Boeing 747-family reference because the 747-8 retains the characteristic high-set six-pane glazing. The overview, cockpit, front-window, fuselage, engine, wing, tail and landing-gear references show the 747-8 itself.
+
+## Airbus A380 (`a380`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a380/overview.jpg` | [Emirates Airbus A380 A6-EOG at Perth](https://commons.wikimedia.org/wiki/File:Emirates_Airbus_A380_A6-EOG_Perth_2024_(01).jpg), Bahnfrend | CC BY-SA 4.0 |
+| `a380/cockpit.jpg` | [Airbus A380 cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A380_cockpit.jpg), Naddsy | CC BY 2.0 |
+| `a380/window-front.jpg` | [Airbus A380 front view](https://commons.wikimedia.org/wiki/File:A380-front.JPG), Kolossos; cropped to emphasize front-window geometry | CC BY-SA 3.0 |
+| `a380/window-side.jpg` | [Airbus A380 front-side view](https://commons.wikimedia.org/wiki/File:Airbus_A380_front_side.jpg), Pottz; cropped to emphasize side-window geometry | Public domain |
+| `a380/fuselage.jpg` | [Airbus A380 front-side view](https://commons.wikimedia.org/wiki/File:Airbus_A380_front_side.jpg), Pottz | Public domain |
+| `a380/engine.jpg` | [Airbus A380 wing and engines](https://commons.wikimedia.org/wiki/File:A380_Engines.jpg), Tangopaso | CC BY-SA 3.0 |
+| `a380/wingtip.jpg` | [British Airways A380 wingtip device](https://commons.wikimedia.org/wiki/File:British_Airways_Airbus_A380-841_F-WWSK_PAS_2013_10_Wingtip_device.jpg), Julian Herzog | CC BY 4.0 |
+| `a380/wing.jpg` | [Airbus A380 wing](https://commons.wikimedia.org/wiki/File:A380_Wing.jpg), Tangopaso | CC BY-SA 3.0 |
+| `a380/vstab.jpg` | [Airbus A380 tail](https://commons.wikimedia.org/wiki/File:A380_Tail.jpg), Tangopaso | CC BY-SA 3.0 |
+| `a380/hstab.jpg` | [Airbus A380 empennage](https://commons.wikimedia.org/wiki/File:A380-tail.JPG), Kolossos | CC BY-SA 3.0 |
+| `a380/gear.jpg` | [British Airways A380 main landing gear](https://commons.wikimedia.org/wiki/File:British_Airways_Airbus_A380-841_F-WWSK_PAS_2013_08_main_landing_gear.jpg), Julian Herzog | CC BY 4.0 |

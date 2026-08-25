@@ -2,19 +2,30 @@
   "title": "Boeing 747-8",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 747-8 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "747-8I 的上層甲板僅覆蓋前機身，主甲板則貫穿全長；側面可見上下兩排舷窗只在前段重疊，之後恢復單排。",
+        "en": "On the 747-8I, the upper deck covers only the forward fuselage. Two window rows overlap near the front, then the aircraft continues with a single main-deck row.",
+        "ja": "747-8Iの上部デッキは前部だけを覆い、前方では上下2列の窓が重なりますが、その後は主デッキ1列になります。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "這個『局部雙層』輪廓是區分 A380 全長雙層機身最可靠的特徵；貨運型 747-8F 的上層甲板更短。",
+        "en": "This partial double-deck profile is the most reliable contrast with the full-length double-deck A380. The 747-8F hump is shorter still.",
+        "ja": "この部分的二階建て輪郭は全長二階建てA380との最も確実な違いです。747-8Fのこぶはさらに短いです。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "前機身有上下兩排舷窗，後機身只剩主甲板窗列。",
+          "en": "Two window rows appear forward, but only the main-deck row continues aft.",
+          "ja": "前部は上下2列、後部は主デッキ1列だけです。"
+        },
+        {
+          "zh": "客運型上層甲板隆起比 747-400 更長。",
+          "en": "The passenger upper-deck hump is longer than on the 747-400.",
+          "ja": "旅客型の上部デッキ隆起は747-400より長くなっています。"
+        },
+        {
+          "zh": "機身較 A380 窄，外觀更修長。",
+          "en": "The fuselage is narrower than the A380's and looks more slender.",
+          "ja": "胴体はA380より細く、より長細く見えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b748/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-8_Baden-W%C3%BCrttemberg.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Boeing 747-8 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "747-8 駕駛艙保留 Boeing 傳統駕駛盤與中央操縱柱，並以大型彩色顯示器呈現 PFD、導航與 EICAS 資訊；油門座控制四具引擎。",
+        "en": "The 747-8 flight deck retains Boeing yokes and control columns, with large colour displays for flight, navigation and EICAS information and a four-engine throttle quadrant.",
+        "ja": "747-8の操縦席はBoeing式操縦輪とコントロールコラムを残し、大型カラー画面に飛行・航法・EICAS情報を表示し、4発用スロットルを備えます。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "與 A380 最快的座艙差異是 747-8 有駕駛盤；A380 使用左右側桿，飛行員正前方沒有操縱輪。",
+        "en": "The quickest cockpit distinction is the yoke: the 747-8 has one, while the A380 uses sidesticks.",
+        "ja": "最も速い違いは操縦輪です。747-8には操縦輪があり、A380はサイドスティックを使います。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "兩席前方皆有大型駕駛盤。",
+          "en": "Large yokes sit directly ahead of both pilots.",
+          "ja": "両席の正面に大型操縦輪があります。"
+        },
+        {
+          "zh": "中央油門座有四支引擎推力桿。",
+          "en": "Four thrust levers occupy the centre pedestal.",
+          "ja": "中央ペデスタルに4本の推力レバーがあります。"
+        },
+        {
+          "zh": "座艙位置在隆起上層甲板前端，視線高度明顯較高。",
+          "en": "The cockpit sits at the front of the raised upper deck, giving a notably high eye position.",
+          "ja": "操縦席は隆起した上部デッキ前端にあり、視点が非常に高い位置です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b748/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-8I_flight_deck_Beltyukov.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 747-8 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "747-8 使用重新設計的大型後掠翼，翼展約 68.4 m；翼根厚、外翼長而逐漸收尖，飛行時會上彎並連到 raked tip。",
+        "en": "The 747-8 has a redesigned swept wing spanning about 68.4 m, with a thick root, long tapered outer panel, visible flight flex and raked tips.",
+        "ja": "747-8は翼幅約68.4 mの再設計後退翼を持ち、厚い翼根、長く細くなる外翼、飛行時のたわみ、レイクド翼端が特徴です。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "A380 翼展約 79.75 m、翼弦與翼面積都更巨大；即使兩者都是四發，A380 的機翼視覺尺度仍更寬厚。",
+        "en": "The A380 spans about 79.75 m with much greater chord and area, so its wing looks broader even though both aircraft have four engines.",
+        "ja": "A380は翼幅約79.75 mで翼弦・面積も大きく、同じ4発でも主翼がより幅広く見えます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "四具引擎平均掛在左右主翼下方。",
+          "en": "Four engines are distributed beneath the two wings.",
+          "ja": "4基のエンジンが左右主翼下に配置されます。"
+        },
+        {
+          "zh": "外翼末端沿翼面向後收尖。",
+          "en": "The outer wing tapers aft into the raked tip.",
+          "ja": "外翼は後方へ細くなりレイクド翼端へ続きます。"
+        },
+        {
+          "zh": "翼展小於 A380，但機身更長。",
+          "en": "Its span is smaller than the A380's even though the fuselage is longer.",
+          "ja": "翼幅はA380より小さい一方、胴体はより長いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b748/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:2015_10_01_LH_Boeing_747_8_D_ABYT@EDDF_left_wing.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 747-8 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "747-8 固定使用四具 General Electric GEnx-2B67 高旁通比渦扇；短艙尾緣與核心整流罩具有鋸齒狀 chevrons，是與舊型 747 及 A380 的強辨識差異。",
+        "en": "The 747-8 exclusively uses four GEnx-2B67 high-bypass turbofans. Chevron nacelle and core-fairing edges distinguish it from older 747s and the A380.",
+        "ja": "747-8は4基のGEnx-2B67高バイパス比ターボファンのみを使用し、ナセルとコアカウル後縁のシェブロンが旧型747やA380との強い違いです。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "鋸齒可讓冷熱氣流較平順混合以降低噴流噪音；它不是單純裝飾，也不是 A380 引擎的標準外型。",
+        "en": "The chevrons promote smoother hot/cold stream mixing to reduce jet noise; they are functional and not standard on A380 engines.",
+        "ja": "シェブロンは冷熱流を滑らかに混合してジェット騒音を減らす機能部品で、A380エンジンの標準形状ではありません。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "四具引擎全部為 GEnx-2B 系列。",
+          "en": "All four engines are from the GEnx-2B family.",
+          "ja": "4基すべてGEnx-2B系列です。"
+        },
+        {
+          "zh": "短艙後緣可見一圈明顯三角鋸齒。",
+          "en": "A clear ring of triangular chevrons marks the nacelle trailing edge.",
+          "ja": "ナセル後縁に三角形のシェブロンが並びます。"
+        },
+        {
+          "zh": "A380 可用 Trent 900 或 GP7200，短艙後緣較平滑。",
+          "en": "The A380 uses Trent 900 or GP7200 engines with smoother nacelle edges.",
+          "ja": "A380はTrent 900またはGP7200を使い、ナセル後縁はより滑らかです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b748/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:General_Electric_GEnx_on_747-8I_prototype.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "747-8 的垂直尾翼高而後掠，從較窄的後機身上方升起；與 A380 寬厚、面積巨大的垂尾相比，外形更修長。",
+        "en": "The 747-8 has a tall swept fin rising from a relatively narrow aft fuselage. It looks slimmer than the A380's very broad, high-area fin.",
+        "ja": "747-8の垂直尾翼は細い後部胴体から立ち上がる高い後退形で、A380の幅広く大面積な尾翼より細長く見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "垂尾塗裝主要辨識航空公司；判別機型仍需搭配駝峰、翼尖與引擎。",
+        "en": "Tail paint identifies the airline; type identification still depends on the hump, tips and engines.",
+        "ja": "尾翼塗装は航空会社の手掛かりであり、機種はこぶ、翼端、エンジンも合わせて判断します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣後掠，頂端向後收尖。",
+          "en": "The leading edge is swept and the tip tapers aft.",
+          "ja": "前縁は後退し、上端は後方へ細くなります。"
+        },
+        {
+          "zh": "根部與狹長後機身平順連接。",
+          "en": "The root blends into the slender aft fuselage.",
+          "ja": "根元は細長い後部胴体へ滑らかにつながります。"
+        },
+        {
+          "zh": "比例不像 A380 垂尾那樣寬厚巨大。",
+          "en": "Its proportions are not as broad and massive as the A380 fin.",
+          "ja": "A380の尾翼ほど幅広く巨大ではありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b748/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-8_of_Korean_Air_at_Los_Angeles_International_Airport.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "747-8 的水平尾翼低置於機尾、後掠且向外收尖；從斜後方或空中照片可見它與狹長後機身形成較輕巧的尾部輪廓。",
+        "en": "The 747-8 uses low-mounted swept tailplanes that taper outward, producing a comparatively slender tail silhouette around the narrow aft fuselage.",
+        "ja": "747-8の水平尾翼は低位置・後退・外方へ細くなる形で、細い後部胴体と比較的軽快な尾部輪郭を作ります。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "水平尾翼本身不是最強辨識點；應以 747 駝峰與 GEnx 鋸齒短艙先定型，再用尾翼比例確認。",
+        "en": "The tailplane alone is weak evidence. Identify the hump and GEnx chevrons first, then use tail proportions as confirmation.",
+        "ja": "水平尾翼単独の識別力は低く、まずこぶとGEnxシェブロンで判別し、尾翼比率で確認します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "安裝位置低於垂尾根部。",
+          "en": "The tailplanes mount low beneath the fin root.",
+          "ja": "水平尾翼は垂直尾翼根元より低く付きます。"
+        },
+        {
+          "zh": "平面形後掠並向翼尖明顯收窄。",
+          "en": "The swept planform narrows strongly toward the tips.",
+          "ja": "後退平面形は翼端へ大きく細くなります。"
+        },
+        {
+          "zh": "A380 的水平尾翼面積與根部厚度視覺上更大。",
+          "en": "The A380 tailplanes look larger in area and root thickness.",
+          "ja": "A380の水平尾翼は面積と翼根厚がより大きく見えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b748/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-8F_N5017Q_inflight.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 747-8 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "747-8 有四組四輪主起落架轉向架：左右翼下各一組、機身下各一組，加上雙輪前腳，全機共 18 個輪胎。",
+        "en": "The 747-8 has four four-wheel main bogies—one wing and one body bogie per side—plus twin nose wheels, for 18 tyres total.",
+        "ja": "747-8は左右それぞれ翼脚1組と胴体脚1組の計4組・各4輪主脚に前脚2輪を加え、合計18輪です。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "A380 有 22 個輪胎：兩組四輪翼腳加兩組六輪機身腳。只要看清機身腳每組是四輪還是六輪，就能快速區分。",
+        "en": "The A380 has 22 tyres: two four-wheel wing bogies and two six-wheel body bogies. Counting body-bogie wheels separates them quickly.",
+        "ja": "A380は翼脚2組各4輪、胴体脚2組各6輪で計22輪です。胴体脚が4輪か6輪かを見れば素早く区別できます。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "四組主腳各有四輪。",
+          "en": "All four main bogies carry four tyres each.",
+          "ja": "4組の主脚はすべて各4輪です。"
+        },
+        {
+          "zh": "機身中央兩組主腳可轉向以減少轉彎輪胎側滑。",
+          "en": "The body bogies steer to reduce tyre scrub in turns.",
+          "ja": "胴体脚は旋回時のタイヤ横滑りを減らすため操向します。"
+        },
+        {
+          "zh": "總輪數 18，少於 A380 的 22。",
+          "en": "Total tyre count is 18, versus 22 on the A380.",
+          "ja": "総輪数は18輪で、A380の22輪より少ないです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b748/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-8I_landing_gear.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "747-8 的最強外型線索是機鼻後方隆起的短上層甲板、四具引擎與細長機身。客運型 747-8I 長約 76.3 m，機翼末端向後延伸而不直立。",
+        "en": "The 747-8 is defined by its short upper-deck hump behind the nose, four engines and long slender fuselage. The 747-8I is about 76.3 m long and uses aft-extending tips rather than upright winglets.",
+        "ja": "747-8は機首後方の短い上部デッキの隆起、4発エンジン、細長い胴体が特徴です。747-8Iは全長約76.3 mで、翼端は直立せず後方へ伸びます。"
+      },
+      "fact": {
+        "zh": "遠距辨識時先找『駝峰』；A380 雖也是四發巨型客機，但其上層甲板延伸至整個機身，輪廓完全不同。",
+        "en": "At distance, find the hump first. The A380 is also a giant quadjet, but its upper deck runs the full fuselage length.",
+        "ja": "遠方ではまず「こぶ」を探します。A380も巨大4発機ですが、上部デッキは胴体全長に続きます。"
+      },
+      "bullets": [
+        {
+          "zh": "上層甲板只集中在前機身，形成經典 747 隆起。",
+          "en": "The upper deck is concentrated over the forward fuselage, forming the classic 747 hump.",
+          "ja": "上部デッキは前部胴体に集中し、747特有の隆起を作ります。"
+        },
+        {
+          "zh": "四具 GEnx-2B 引擎的短艙後緣有鋸齒。",
+          "en": "All four GEnx-2B nacelles have chevron trailing edges.",
+          "ja": "4基のGEnx-2Bナセル後縁にシェブロンがあります。"
+        },
+        {
+          "zh": "翼尖沿翼面向後拉長，不是 A380 的上下翼尖擋板。",
+          "en": "The tips stretch aft in the wing plane, unlike the A380's upper/lower fences.",
+          "ja": "翼端は翼面内で後方へ伸び、A380の上下フェンスとは異なります。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b748/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8i_at_San_Francisco_September_2023.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "747 的駕駛艙窗高置於上層甲板，正面兩片主風擋寬大，外側另有狹長窗片沿隆起機鼻向後包覆；整組窗帶與下方主甲板距離很大。",
+        "en": "The 747 cockpit glazing sits high on the upper deck. Two broad front panes are flanked by narrow side panes wrapping around the raised nose, far above the main deck.",
+        "ja": "747の操縦席窓は上部デッキの高い位置にあり、幅広い前面2枚と細長い側面窓が隆起した機首を囲み、主デッキから大きく離れています。"
+      },
+      "fact": {
+        "zh": "側窗照片為 747 家族實機；747-8 延續相同的高置六片式窗帶，判讀時應同時確認前機身駝峰。",
+        "en": "The side-window photograph is a 747-family reference. The 747-8 retains the same high-set six-pane arrangement; confirm it with the hump.",
+        "ja": "側面写真は747ファミリーの参考です。747-8も同じ高位置の6枚窓を継承するため、こぶと合わせて確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面主風擋下緣形成明顯向下折角。",
+          "en": "The lower edges of the main panes form pronounced downward angles.",
+          "ja": "主風防下端には明瞭な下向きの折れ角があります。"
+        },
+        {
+          "zh": "外側窗片窄而近垂直，與 A380 較平順的窗帶不同。",
+          "en": "Narrow, near-vertical outer panes differ from the smoother A380 belt.",
+          "ja": "細く直立気味の外側窓はA380の滑らかな窓帯と異なります。"
+        },
+        {
+          "zh": "窗戶位於主甲板舷窗列上方很高的位置。",
+          "en": "The cockpit windows sit conspicuously above the main-deck cabin-window row.",
+          "ja": "操縦席窓は主デッキ客室窓列より著しく高い位置です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b748/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_20180513_3722.jpg"
+        },
+        {
+          "src": "assets/reference/b748/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747_cockpit_window_from_outside.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "747-8 採用加長、向後收尖的 raked wingtip，翼尖幾乎維持在主翼平面內，沒有 747-400 常見的直立小翼。",
+        "en": "The 747-8 uses an extended, aft-tapering raked wingtip that stays largely in the wing plane, with no 747-400-style upright winglet.",
+        "ja": "747-8は後方へ細長く伸びるレイクド翼端を採用し、翼面内にほぼ収まり、747-400型の直立ウイングレットはありません。"
+      },
+      "fact": {
+        "zh": "看到 747 駝峰卻沒有直立小翼、而是長而水平的翼尖，通常就是 747-8；A380 則有上下方向的翼尖擋板。",
+        "en": "A 747 hump combined with long horizontal tips rather than upright winglets strongly indicates a 747-8; the A380 uses upper/lower fences.",
+        "ja": "747のこぶと、直立小翼ではなく長い水平翼端の組合せは747-8の強い手掛かりです。A380は上下フェンスです。"
+      },
+      "bullets": [
+        {
+          "zh": "翼尖沿後掠方向平順拉長。",
+          "en": "The tip extends smoothly aft with the sweep.",
+          "ja": "翼端は後退方向へ滑らかに伸びます。"
+        },
+        {
+          "zh": "沒有明顯向上的垂直小翼。",
+          "en": "There is no prominent upright winglet.",
+          "ja": "目立つ直立ウイングレットはありません。"
+        },
+        {
+          "zh": "與 GEnx 鋸齒短艙一起使用可快速排除 747-400。",
+          "en": "Pair it with GEnx chevrons to exclude the 747-400 quickly.",
+          "ja": "GEnxシェブロンと組み合わせれば747-400を素早く除外できます。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b748/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:2015_10_01_LH_Boeing_747_8_D_ABYT@EDDF_left_wingtip.jpg"
+        }
+      ]
     }
   },
   "specifications": {
