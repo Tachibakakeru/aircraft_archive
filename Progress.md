@@ -158,4 +158,4 @@
 - Commons 的 Qantas 747-400 引擎來源檔名誤稱 Trent；實際安裝為 Rolls-Royce RB211-524，站內內容與授權表已使用正確名稱並留下來源檔名更正說明。
 - 圖片作者、授權、裁切與 747-400D／早期 A340 中置主腳差異已補入 `assets/reference/ATTRIBUTION.md`；下載與資料更新器擴充至 14 架 × 10 類、154 張照片。
 - 資料 fetch 與比較／檢視頁資源升為 v=148，Service Worker cache 升為 `hangar-v11`。已通過 JSON、JavaScript 語法、Python 完整性檢查、圖片尺寸、`git diff --check` 與乾淨瀏覽器實載驗證：比較頁 10 列、22 張照片、22 個 Commons 來源、22 個單機部位連結且無破圖；747 外窗頁與 A340 起落架頁也正常。
-- 本機預覽：`http://localhost:8000/versus.html?a=b744&b=a346&local=148`。使用者已確認並同意發布；本批準備提交並推送至 `origin/main`，本次作業在此結束，下次由下一組機型接續。`data/korean_airlines_debug.json` 維持未追蹤且未修改。
+- 本機預覽：`http://localhost:8000/versus.html?a=b744&b=a346&local=148`。使用者已確認；第七批已以 commit `5404d14`（`新增 747-400 與 A340-600 實機部位辨識比較`）推送至 `origin/main`。本次作業在此結束，下次由下一組機型接續；`data/korean_airlines_debug.json` 維持未追蹤且未修改。
