@@ -186,6 +186,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:Cyprus_airways_a330-200_5b-dbs_arp.jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:VH-SSA_%27Outback%27_Airbus_A330-223_Strategic_Airlines_(7107083943).jpg",
     },
+    "b744": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Air_New_Zealand_747-400_sideview.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_747-400_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Boeing_747_Jumbo_front_cockpit_windows.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFI_nose_section_(10205055606).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFI_nose_section_(10205055606).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Rolls_Royce_Trent_jet_engine,_Qantas_747-400_(5381505855).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Winglet_and_nav_light_arp.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Elal_747-400_wing.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFT_tail_(6972557066).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Ba_b747-400_g-bnle_arp.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Boeing_747_main_landing_gear.jpg",
+    },
+    "a346": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Etihad_Airways_Airbus_A340-600_SYD_Gilbert-1.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:A340-642_flight_deck.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:A340-600_(13024845015).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:G-VSHY_Airbus_A340-642_(cn_383)_Virgin_Atlantic_Airways._(6100631197).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:G-VSHY_Airbus_A340-642_(cn_383)_Virgin_Atlantic_Airways._(6100631197).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Iberia_A340-600_Rolls-Royce_Trent_500_engines.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Airbus_A340-600_Wing.JPG",
+        "wing": "https://commons.wikimedia.org/wiki/File:A340-600_clean-wing_bottom_plan-view.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Airbus_A340-600_Tail_assembly_(8459395384).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:G-VBUG_Airbus_A346_Virgin_Atlantic_Tail_(13891670573).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Thai_airways_a340-600_hs-tna_takeoff_arp.jpg",
+    },
 }
 
 
@@ -653,6 +679,114 @@ CONTENT = {
         ),
     },
 }
+
+
+CONTENT.update({
+    "b744": {
+        "overview": identify(
+            ("747-400 以機首上方延伸的上層甲板『駝峰』、四具引擎與大型垂直翼尖小翼最容易辨認；全長約 70.67 m、翼展約 64.44 m。", "The 747-400 is most readily identified by its extended upper-deck hump, four engines and tall vertical winglets. It is about 70.67 m long with a 64.44 m span.", "747-400は延長された上部デッキのこぶ、4発エンジン、大型垂直ウイングレットが最も明確で、全長約70.67 m、翼幅約64.44 mです。"),
+            ("對比 A340-600，747-400 機身較短粗、駕駛艙位置更高且有雙層前機身；A340-600 則是沒有駝峰的超長單層機身。", "Against the A340-600, the 747-400 is shorter and bulkier, with a high cockpit and double-deck forward fuselage; the A340-600 has an exceptionally long single-deck profile.", "A340-600に比べ747-400は短く太く、操縦席が高い二階建て前部胴体を持ちます。A340-600はこぶのない超長い単層胴体です。"),
+            [("上層甲板窗列從機首後方延伸至主翼前。", "The upper-deck window row extends aft toward the wing.", "上部デッキ窓列が機首後方から主翼手前まで続きます。"), ("四具引擎吊掛於大後掠翼下。", "Four engines hang below a strongly swept wing.", "強い後退主翼下に4基のエンジンがあります。"), ("多數遠程型有直立翼尖小翼；747-400D 例外。", "Most long-range versions have upright winglets; the 747-400D is an exception.", "長距離型の多くは直立ウイングレットを持ち、747-400Dは例外です。")],
+        ),
+        "cockpit": identify(
+            ("747-400 是首款採兩人制玻璃駕駛艙的 747，保留 Boeing 駕駛盤與中央操縱柱，典型配置有六具大型 CRT、EICAS 與四發推力桿。", "The 747-400 introduced a two-crew glass flight deck to the 747 family, retaining Boeing yokes and control columns with six large CRTs, EICAS and four thrust levers.", "747-400は747初の2名乗務グラスコックピットで、Boeing式操縦輪、6面大型CRT、EICAS、4本のスラストレバーを備えます。"),
+            ("與 A340-600 的側桿與桌板相比，駕駛盤和四支推力桿是最直觀差異；螢幕改裝狀態則可能不同。", "Yokes and four thrust levers are the clearest contrast with the A340-600's sidesticks and tray tables; display retrofits may vary.", "A340-600のサイドスティックとテーブルに対し、操縦輪と4本のスラストレバーが最も明確です。画面は改修で異なる場合があります。"),
+            [("正副駕駛前方均有大型駕駛盤。", "A large yoke sits ahead of each pilot.", "両操縦席正面に大型操縦輪があります。"), ("中央 EICAS 監控四具引擎與系統。", "Central EICAS screens monitor four engines and aircraft systems.", "中央EICASが4発エンジンと機体システムを監視します。"), ("高置座艙源自上層甲板機首位置。", "The flight deck sits high in the forward upper deck.", "操縦席は前方上部デッキの高い位置にあります。")],
+        ),
+        "windshield": identify(
+            ("747-400 的六片駕駛艙窗位於機鼻上方高處，正面窗較直立、外側窗沿上層甲板向後折轉；下方仍可看到圓鈍主甲板機鼻。", "The 747-400's six cockpit panes sit high above the nose. Upright front panes turn aft along the upper deck while the rounded main-deck nose remains below.", "747-400の6枚窓は機首上方の高い位置にあり、直立気味の前面窓から上部デッキ側面へ折れ、下には丸い主デッキ機首が見えます。"),
+            ("高置窗帶加上窗下方的大面積機鼻，是任何 A340 都沒有的特徵；即使只看到前半機身也很可靠。", "The high window belt and large expanse of nose below it are absent from every A340 and remain reliable even in a cropped forward view.", "高い窓帯とその下の大きな機首面はA340にはなく、前部だけでも信頼できる識別点です。"),
+            [("窗帶位於上層甲板，離主甲板艙門很高。", "The glazing is on the upper deck, high above main-deck doors.", "窓帯は上部デッキにあり、主デッキ扉より高い位置です。"), ("正面風擋較方正，中央接縫近垂直。", "Forward panes are fairly square with a near-vertical centre seam.", "前面窓は比較的四角く中央継ぎ目はほぼ垂直です。"), ("側窗後方緊接上層甲板舷窗。", "Upper-deck cabin windows continue immediately aft of the side panes.", "側窓後方に上部デッキ客室窓が続きます。")],
+        ),
+        "fuselage": identify(
+            ("747-400 機身外寬約 6.5 m，前段為局部雙層：主甲板上方的加長上層甲板形成明顯駝峰，典型主甲板經濟艙為 3-4-3。", "The 747-400 fuselage is about 6.5 m wide and partially double-decked. Its stretched upper deck forms the hump above a main deck typically arranged 3-4-3 in economy.", "747-400の胴体幅は約6.5 mで前部が部分二階建てです。延長上部デッキがこぶを作り、主デッキのエコノミーは通常3-4-3です。"),
+            ("747-400 客機上層甲板比早期 747 明顯更長；貨機通常保留短駝峰，不能把所有 747-400 外型視為完全相同。", "Passenger 747-400s have a much longer upper deck than early 747s; freighters generally retain the short hump, so not every 747-400 has the same side profile.", "旅客型747-400の上部デッキは初期747より長く、貨物型は通常短いこぶのため、全機が同じ側面形ではありません。"),
+            [("上下兩排窗只出現在前機身。", "Two window rows appear only on the forward fuselage.", "前部胴体だけに上下2列の窓があります。"), ("主甲板直徑與艙門尺度大於 A340。", "Main-deck diameter and doors are larger than the A340's.", "主デッキ胴体径と扉はA340より大きいです。"), ("前段駝峰向主翼前方平滑下降。", "The forward hump blends down ahead of the wing.", "前部のこぶは主翼手前で滑らかに低くなります。")],
+        ),
+        "engine": identify(
+            ("747-400 可選 GE CF6-80C2、Pratt & Whitney PW4000 或 Rolls-Royce RB211-524；四具短艙分置於主翼下，後緣皆為傳統平滑輪廓。", "The 747-400 could use GE CF6-80C2, Pratt & Whitney PW4000 or Rolls-Royce RB211-524 engines. Four conventional smooth-edged nacelles sit beneath the wing.", "747-400はCF6-80C2、PW4000、RB211-524を選択でき、4基の従来型滑らかなナセルが主翼下にあります。"),
+            ("參考照片標題雖寫 Trent，實際機型分類與短艙是 Qantas 747-400 的 Rolls-Royce RB211；辨識時應看短艙形狀而非檔名。", "Although the source title says Trent, the Qantas 747-400 installation is a Rolls-Royce RB211; identify the nacelle from the aircraft and shape rather than the filename.", "出典名はTrentですが、Qantas 747-400の搭載機はRolls-Royce RB211です。ファイル名ではなく機体とナセル形状で判断します。"),
+            [("四具引擎是與雙發 747 後繼機的根本差異。", "Four engines fundamentally separate it from later twinjets.", "4発であることが後継双発機との根本的な差です。"), ("不同引擎的進氣口、整流罩與排氣段不同。", "Inlet, cowling and exhaust details vary by engine option.", "エンジン選択で吸気口、カウリング、排気部が異なります。"), ("沒有 747-8 GEnx 的鋸齒狀短艙後緣。", "It lacks the serrated GEnx nacelle edges of the 747-8.", "747-8のGEnxにある鋸歯状ナセル後縁はありません。")],
+        ),
+        "wingtip": identify(
+            ("長程 747-400 的翼尖先向外延伸，再接一片高而近乎垂直的梯形小翼；這是區分 747-400 與早期 747、747-8 的重要線索。", "Long-range 747-400 wings have a tip extension capped by a tall near-vertical trapezoidal winglet, a key distinction from early 747s and the raked-tip 747-8.", "長距離747-400は翼端延長部に高いほぼ垂直の台形ウイングレットを持ち、初期747やレイクド翼端の747-8と区別できます。"),
+            ("日本國內線 747-400D 為了高頻起降取消翼尖小翼；看到沒有小翼的 747 仍需核對上層甲板與子型。", "The high-cycle domestic 747-400D omitted winglets; a winglet-free 747 therefore still requires upper-deck and variant checks.", "高頻度国内線用747-400Dはウイングレットを省略したため、未装備747でも上部デッキと型式確認が必要です。"),
+            [("小翼高大、直立，頂端略向後收。", "The winglet is tall, upright and tapers slightly aft.", "ウイングレットは高く直立し上端が後方へ細くなります。"), ("翼尖仍有明顯水平延伸段。", "A visible horizontal tip extension precedes the winglet.", "ウイングレット手前に水平翼端延長があります。"), ("747-8 則使用水平延伸的斜削翼尖。", "The 747-8 instead uses a horizontally extended raked tip.", "747-8は水平に延びるレイクド翼端です。")],
+        ),
+        "wing": identify(
+            ("747-400 主翼翼展約 64.44 m，後掠角大、翼根厚，四具引擎與複雜的前後緣增升裝置沿翼面配置。", "The 747-400 wing spans about 64.44 m, with strong sweep, a thick root, four engines and extensive leading- and trailing-edge high-lift devices.", "747-400の主翼幅は約64.44 mで、強い後退角、厚い翼根、4発エンジン、大規模な前後縁高揚力装置を持ちます。"),
+            ("翼展與 A340-600 接近，不能單看寬度；747 的翼根接在更粗機身上，外翼末端通常有高大直立小翼。", "Span is close to the A340-600's, so width alone is insufficient. The 747 wing joins a much broader fuselage and usually ends in a tall upright winglet.", "翼幅はA340-600に近いため幅だけでは不十分で、より太い胴体への翼根と高い直立ウイングレットを確認します。"),
+            [("每側主翼下各有兩具引擎。", "Two engines hang beneath each wing.", "各主翼下に2基ずつエンジンがあります。"), ("外翼後掠並接翼尖延伸與小翼。", "The swept outer panel ends in a tip extension and winglet.", "後退外翼は翼端延長とウイングレットへ続きます。"), ("大面積襟翼與擾流板支援重型機低速飛行。", "Large flaps and spoilers support the heavy aircraft at low speed.", "大型フラップとスポイラーが重量機の低速飛行を支えます。")],
+        ),
+        "vstab": identify(
+            ("747-400 垂直尾翼高大、前緣大幅後掠，根部建立在寬厚後機身上；相對駝峰機鼻，尾部輪廓仍是傳統單垂尾。", "The 747-400 has a large strongly swept fin rooted in a broad aft fuselage; despite the forward hump, the rear remains a conventional single-fin empennage.", "747-400の垂直尾翼は大型で前縁後退が強く、太い後部胴体に接続します。前部のこぶとは対照的に通常の単垂尾です。"),
+            ("塗裝常讓垂尾看起來更顯眼，但真正可比較的是粗尾錐、較寬根部與 747 特有前機身。", "Livery makes the fin prominent, but the useful cues are the broad root, thick tailcone and unmistakable 747 forward fuselage.", "塗装よりも幅広い根元、太い尾部、747特有の前部胴体を比較します。"),
+            [("前緣後掠明顯，頂端近方形。", "The leading edge is strongly swept and the tip nearly square.", "前縁後退が強く上端はほぼ角形です。"), ("根部與寬大的後機身平滑融合。", "The root blends into the broad aft fuselage.", "根元は幅広い後部胴体へ滑らかにつながります。"), ("尾錐末端可見 APU 排氣口。", "The tailcone ends at the APU exhaust.", "テールコーン先端にAPU排気口があります。")],
+        ),
+        "hstab": identify(
+            ("747-400 的低置水平尾翼後掠且面積大，從粗壯尾錐兩側向外收尖；下方全機照片可同時看見尾翼、四發與多組主起落架。", "The 747-400's large low-mounted tailplanes sweep and taper from a broad tailcone. An underside view also reveals four engines and multiple main-gear bogies.", "747-400の大型低位置水平尾翼は太い尾部から後退し細くなり、下面写真では4発と複数主脚も同時に確認できます。"),
+            ("A340-600 也是傳統低置水平尾翼，因此安裝位置本身無法判型；應比較尾錐粗細與前機身。", "The A340-600 also has a conventional low tailplane, so mounting position alone is not diagnostic; compare tailcone thickness and forward fuselage.", "A340-600も通常の低位置尾翼のため、取付位置だけでなく尾部の太さと前部胴体を比較します。"),
+            [("尾翼展幅大，翼根非常厚。", "The tailplane is broad with a very thick root.", "水平尾翼は大きく翼根が非常に厚いです。"), ("後緣由多段升降舵構成。", "The trailing edge contains segmented elevators.", "後縁は分割された昇降舵で構成されます。"), ("與 747 粗機身形成厚重尾部比例。", "It forms a massive empennage with the wide 747 fuselage.", "太い747胴体と大型尾部を形成します。")],
+        ),
+        "gear": identify(
+            ("747-400 共 18 輪：前起落架雙輪，四組主起落架各四輪；兩組位於翼下、兩組位於機身下方。", "The 747-400 has 18 wheels: twin nose wheels and four four-wheel main bogies, two wing-mounted and two body-mounted.", "747-400は計18輪で、前脚2輪、主脚4組各4輪（翼下2組・胴体下2組）です。"),
+            ("A340-600 只有三組四輪主腳、共 14 輪；近距離數主轉向架組數，是兩者最可靠差異之一。", "The A340-600 has only three four-wheel main bogies and 14 wheels total. Counting main bogie groups is one of the strongest close-range differences.", "A340-600は4輪主脚3組、計14輪です。主脚ボギー数は近距離で最も確実な差の一つです。"),
+            [("左右翼下各一組四輪主腳。", "One four-wheel bogie sits beneath each wing.", "左右主翼下に各1組4輪主脚があります。"), ("機身中央另有左右兩組四輪主腳。", "Two additional four-wheel bogies sit beneath the fuselage.", "胴体下にさらに左右2組の4輪主脚があります。"), ("全部放下時可見四組主轉向架並列。", "All four main bogies are visible when the gear is extended.", "脚下げ時に4組の主ボギーが並びます。")],
+        ),
+    },
+    "a346": {
+        "overview": identify(
+            ("A340-600 是極修長的單層四發廣體客機，全長約 75.36 m、翼展約 63.45 m；沒有 747 駝峰，四具 Trent 500 與中置主起落架是核心特徵。", "The A340-600 is an exceptionally long single-deck four-engine widebody, about 75.36 m long with a 63.45 m span. It lacks the 747 hump and is defined by four Trent 500s and a centre main gear.", "A340-600は全長約75.36 m、翼幅約63.45 mの非常に長い単層4発ワイドボディで、747のこぶがなく、4基のTrent 500と中央主脚が特徴です。"),
+            ("它比 747-400 更長但機身更窄，側面像一支非常長的鉛筆；辨識時把『無駝峰長機身＋四發＋中央主腳』一起確認。", "It is longer but narrower than the 747-400, giving a pencil-like side profile. Confirm the hump-free long body, four engines and centre gear together.", "747-400より長く細いため鉛筆のように見え、こぶのない長胴体、4発、中央主脚を組み合わせて確認します。"),
+            [("全機只有一排客艙窗，沒有上層甲板。", "A single cabin-window row runs the full fuselage with no upper deck.", "上部デッキはなく客室窓列は1列です。"), ("四具 Trent 500 均勻分布於主翼下。", "Four Trent 500s are spaced beneath the wing.", "4基のTrent 500が主翼下に配置されます。"), ("超長機身前後伸出主翼很遠。", "The extremely long fuselage extends far ahead of and behind the wing.", "超長胴体が主翼の前後へ大きく伸びます。")],
+        ),
+        "cockpit": identify(
+            ("A340-600 駕駛艙延續 Airbus 側桿與桌板設計，採六具顯示器、中央 ECAM 與四發推力桿；飛行員正前方沒有駕駛盤。", "The A340-600 flight deck follows Airbus sidestick and tray-table design with six displays, central ECAM and four thrust levers; no yokes sit ahead of the pilots.", "A340-600の操縦席はAirbus式サイドスティックとテーブル、6面表示器、中央ECAM、4本のスラストレバーを持ち、正面に操縦輪はありません。"),
+            ("A330 與 A340 家族座艙高度共通化，內部單靠面板很難判子型；四支推力桿與引擎頁面才顯示四發身分。", "A330 and A340 cockpits are highly common, so the panel alone rarely identifies the variant; four thrust levers and four-engine system pages reveal the A340.", "A330とA340の操縦席は共通性が高く、4本のスラストレバーと4発用表示でA340と確認します。"),
+            [("側桿位於左右側壁。", "Sidesticks are mounted on the sidewalls.", "サイドスティックは左右側壁にあります。"), ("正前方桌板取代 Boeing 駕駛盤。", "Tray tables replace Boeing-style yokes ahead of the pilots.", "正面はBoeing式操縦輪ではなくテーブルです。"), ("中央台有四支引擎推力桿。", "Four engine thrust levers occupy the centre pedestal.", "中央台に4本のエンジンスラストレバーがあります。")],
+        ),
+        "windshield": identify(
+            ("A340-600 使用經典 Airbus 六片窗帶，正面風擋呈斜邊梯形，外側窗沿圓鈍機鼻平滑包向側面；位置接近單層機身中心線。", "The A340-600 uses classic Airbus six-pane glazing: slanted trapezoidal front windscreens flow around a rounded nose into the side panes at normal single-deck height.", "A340-600はAirbus伝統の6枚窓で、斜辺台形の前面窓が丸い機首に沿って側面へ滑らかにつながり、単層胴体の通常高さにあります。"),
+            ("與 747-400 最大差異不是窗片數，而是窗帶高度：A340 下方只有一般圓鼻，747 窗下還有巨大的主甲板機鼻。", "Pane count is less important than height: below the A340 glazing is a normal rounded nose, while the 747 has a vast main-deck nose beneath its high cockpit.", "747-400との差は枚数より高さで、A340窓下は通常の丸い機首、747は高い操縦席下に大きな主デッキ機首があります。"),
+            [("中央接縫短，主風擋向外上方傾斜。", "The centre seam is short and the main panes slope outward and upward.", "中央継ぎ目は短く主窓は外上方へ傾きます。"), ("外側窗帶沿圓鼻平順包覆。", "Outer panes wrap smoothly around the rounded nose.", "外側窓帯が丸い機首を滑らかに包みます。"), ("窗後直接接單排客艙舷窗。", "A single cabin-window row continues aft.", "後方には1列の客室窓が続きます。")],
+        ),
+        "fuselage": identify(
+            ("A340-600 機身外寬約 5.64 m，典型經濟艙為 2-4-2；全長 75.36 m 曾使它成為世界最長客機，側面呈極細長的單層輪廓。", "The A340-600 fuselage is about 5.64 m wide, typically 2-4-2 in economy, and its 75.36 m length once made it the world's longest airliner, producing an extremely slender single-deck profile.", "A340-600の胴体幅は約5.64 m、エコノミーは通常2-4-2で、全長75.36 mによりかつて世界最長の旅客機となった非常に細長い単層形です。"),
+            ("與較短 A340-500 共用基本翼與尾部語彙；辨識 -600 應看主翼前後特別長的機身和更多艙門間距。", "It shares basic wing and tail styling with the shorter A340-500; identify the -600 by the exceptionally long fuselage ahead of and behind the wing and wider door spacing.", "短いA340-500と主翼・尾部形状を共有するため、主翼前後の極端な胴体長とドア間隔で-600を判別します。"),
+            [("全長比 747-400 約長 4.7 m。", "It is roughly 4.7 m longer than the 747-400.", "747-400より約4.7 m長いです。"), ("只有單排窗，沒有雙層駝峰。", "There is one window row and no double-deck hump.", "窓列は1列で二階建てのこぶはありません。"), ("翼身整流罩位於超長機身中段。", "The wing-body fairing sits near the middle of the very long body.", "翼胴フェアリングは超長胴体の中央付近です。")],
+        ),
+        "engine": identify(
+            ("A340-600／-500 只使用 Rolls-Royce Trent 500 系列，四具引擎短艙較圓、後緣平滑；不像早期 A340-200／-300 的小型 CFM56。", "The A340-500/-600 exclusively uses Rolls-Royce Trent 500 engines. Its four rounded smooth-edged nacelles are much larger than the CFM56s on early A340-200/-300s.", "A340-500／-600はRolls-Royce Trent 500専用で、4基の丸い滑らかなナセルは初期A340-200／-300のCFM56より大型です。"),
+            ("與 747-400 不同，A340-600 沒有三種引擎選項；看到四具尺寸一致的 Trent 500 配超長 Airbus 機身，即可快速縮小範圍。", "Unlike the 747-400, the A340-600 has no alternative engine families. Four identical Trent 500s beneath the long Airbus fuselage strongly narrow identification.", "747-400と異なり代替エンジンはなく、超長Airbus胴体下の4基Trent 500が強い識別点です。"),
+            [("四具引擎均為 Trent 500 家族。", "All four engines belong to the Trent 500 family.", "4基すべてTrent 500系です。"), ("短艙圓潤，後緣沒有鋸齒。", "Nacelles are rounded with smooth trailing edges.", "ナセルは丸く後縁に鋸歯はありません。"), ("尺寸明顯大於 A340-300 的 CFM56。", "They are visibly larger than A340-300 CFM56 nacelles.", "A340-300のCFM56より明らかに大型です。")],
+        ),
+        "wingtip": identify(
+            ("A340-600 主翼末端有小型直立三角翼梢，輪廓由翼端向上收尖；它比 747-400 的高大梯形小翼更短、更像翼尖延伸的一部分。", "The A340-600 ends in a small upright triangular tip device that tapers upward. It is much shorter than the 747-400's tall trapezoidal winglet and looks integrated with the tip.", "A340-600は上方へ細くなる小型直立三角翼端を持ち、747-400の高い台形ウイングレットより短く翼端と一体的です。"),
+            ("A340-500／-600 翼尖與 A330ceo／A340 家族有相近 Airbus 語彙；必須再用四發與超長機身確認。", "The A340-500/-600 tip shares Airbus family styling with A330ceos and other A340s; confirm four engines and the very long fuselage.", "A330ceoや他A340と似たAirbus翼端形状のため、4発と超長胴体を追加確認します。"),
+            [("翼梢短小並近乎垂直。", "The tip device is short and nearly vertical.", "翼端装置は短くほぼ垂直です。"), ("頂端向後收尖，不是高大梯形板。", "It tapers aft rather than forming a tall trapezoidal blade.", "上端は後方へ細く、高い台形板ではありません。"), ("與 747-400 小翼高度差異明顯。", "Its height is clearly less than the 747-400 winglet's.", "747-400ウイングレットより明らかに低いです。")],
+        ),
+        "wing": identify(
+            ("A340-600 主翼翼展約 63.45 m，與 747-400 接近；翼下四具 Trent 500、外翼小型直立翼梢及細長機身比例形成獨特平面輪廓。", "The A340-600 spans about 63.45 m, close to the 747-400. Four Trent 500s, small upright tips and a very slender fuselage define its planform.", "A340-600の翼幅は約63.45 mで747-400に近く、4基Trent 500、小型直立翼端、細長い胴体が独特の平面形を作ります。"),
+            ("下方看時，翼展相近但 A340 機身遠比 747 窄長；主翼後方還能看到四輪中置主腳艙區域。", "From below, similar span contrasts with a much narrower and longer fuselage than the 747; the four-wheel centre-gear bay is also visible aft of the wing centre.", "下面では翼幅が近い一方、A340胴体は747より細長く、主翼中央後方に4輪中央脚格納部も見えます。"),
+            [("每側兩具引擎間距均勻。", "Two engines are evenly spaced beneath each wing.", "各主翼下の2基エンジンは均等に配置されます。"), ("翼根厚並與大型翼身整流罩連接。", "A thick root joins a substantial wing-body fairing.", "厚い翼根が大型翼胴フェアリングへつながります。"), ("外翼末端為短小直立三角翼梢。", "The outer wing ends in a short upright triangular tip.", "外翼端は短い直立三角翼端です。")],
+        ),
+        "vstab": identify(
+            ("A340-600 的垂直尾翼高大後掠，根部以寬背鰭接入較細後機身；配合極長機身，垂尾看起來比 747-400 更纖細。", "The A340-600 has a tall swept fin with a broad dorsal root blending into a relatively narrow aft fuselage. Against the very long body it looks slimmer than the 747-400 fin.", "A340-600の垂直尾翼は高く後退し、広い背びれ根元が比較的細い後部胴体へつながり、747-400より細身に見えます。"),
+            ("A340-500 與 -600 尾翼相近，不能單靠垂尾判子型；需看機身長度與中置主腳。", "A340-500 and -600 fins are similar, so variant identification requires fuselage length and centre-gear configuration.", "A340-500と-600の垂尾は似るため、胴体長と中央主脚で子型を確認します。"),
+            [("前緣後掠，頂端略方。", "The leading edge is swept and the tip slightly squared.", "前縁は後退し上端はやや角形です。"), ("根部背鰭沿後機身向前延伸。", "The dorsal fillet extends forward along the aft fuselage.", "根元背びれが後部胴体に沿って前方へ伸びます。"), ("尾錐細於 747，末端為 APU 排氣口。", "The tailcone is slimmer than the 747's and ends at the APU exhaust.", "尾部は747より細く先端にAPU排気口があります。")],
+        ),
+        "hstab": identify(
+            ("A340-600 的低置水平尾翼從細長尾錐兩側伸出，後掠並向外收尖；相對超長機身看起來比 747 的水平尾翼輕巧。", "The A340-600's low-mounted tailplanes sweep and taper from a slender tailcone. Against the exceptionally long fuselage they appear lighter than the 747's tailplanes.", "A340-600の低位置水平尾翼は細い尾部から後退し細くなり、超長胴体に対して747より軽快に見えます。"),
+            ("兩者都是傳統尾翼布局，水平尾翼只能作輔助；前機身有無駝峰與主腳組數更可靠。", "Both use conventional tail layouts, so the tailplane is secondary; the forward hump and number of main bogies are more reliable.", "両機とも通常尾翼のため補助的で、前部こぶの有無と主脚ボギー数の方が確実です。"),
+            [("尾翼後掠且翼尖收細。", "The tailplane is swept and tapers at the tip.", "水平尾翼は後退し翼端で細くなります。"), ("翼根接在較窄的後機身。", "The root joins a relatively narrow aft fuselage.", "翼根は比較的細い後部胴体に接続します。"), ("尾部整體比例比 747 修長。", "The overall empennage proportion is more slender than the 747's.", "尾部全体は747より細長い比率です。")],
+        ),
+        "gear": identify(
+            ("A340-600 共 14 輪：前腳雙輪，左右翼下主腳各四輪，機身中線另有一組四輪主腳；中置四輪是 -500／-600 的重要特徵。", "The A340-600 has 14 wheels: twin nose wheels, four-wheel wing gears on each side and one four-wheel centreline body gear. The four-wheel centre gear is a key -500/-600 cue.", "A340-600は計14輪で、前脚2輪、左右翼下主脚各4輪、胴体中央主脚4輪です。4輪中央脚は-500／-600の重要特徴です。"),
+            ("早期 A340-200／-300 的中置主腳為雙輪；747-400 則有兩組機身主腳、四組主轉向架，因此不能只看到中央輪就判 747。", "Earlier A340-200/-300s use a twin-wheel centre gear, while the 747-400 has two body gears and four main bogies. A centre gear alone does not imply a 747.", "初期A340-200／-300の中央脚は2輪、747-400は胴体脚2組・主ボギー4組です。中央輪だけで747とは判断できません。"),
+            [("左右翼下各一組四輪主腳。", "One four-wheel main bogie sits beneath each wing.", "左右主翼下に各1組4輪主脚があります。"), ("機身中線只有一組四輪主腳。", "Only one four-wheel bogie sits on the fuselage centreline.", "胴体中心線には4輪主脚が1組だけです。"), ("三組主轉向架對比 747 的四組。", "Three main bogies contrast with the 747's four.", "主ボギー3組で747の4組と異なります。")],
+        ),
+    },
+})
 
 
 CAPTIONS = {

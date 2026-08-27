@@ -207,3 +207,39 @@ The wingtip photograph shows a retrofit blended winglet. The original 767-300 wi
 | `a332/gear.jpg` | [Strategic Airlines Airbus A330-223 VH-SSA landing gear](https://commons.wikimedia.org/wiki/File:VH-SSA_%27Outback%27_Airbus_A330-223_Strategic_Airlines_(7107083943).jpg), Robert Frola | GFDL |
 
 The A330-200 vertical fin is enlarged relative to the A330-300 to provide adequate directional stability on the shorter fuselage. Engine details vary because operators could select CF6-80E1, PW4000 or Trent 700 powerplants.
+
+## Boeing 747-400 (`b744`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b744/overview.jpg` | [Air New Zealand 747-400 side view](https://commons.wikimedia.org/wiki/File:Air_New_Zealand_747-400_sideview.jpg), Adrian Pingstone | Public domain |
+| `b744/cockpit.jpg` | [Boeing 747-400 cockpit](https://commons.wikimedia.org/wiki/File:Boeing_747-400_cockpit.jpg), Darryl Wilkins | CC BY-SA 2.0 |
+| `b744/window-front.jpg` | [ANA Boeing 747-400 front cockpit windows](https://commons.wikimedia.org/wiki/File:Boeing_747_Jumbo_front_cockpit_windows.jpg), Ermell; cropped to emphasize front-window geometry | CC BY-SA 4.0 |
+| `b744/window-side.jpg` | [KLM Boeing 747-400 PH-BFI nose](https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFI_nose_section_(10205055606).jpg), lkarasawa; cropped to emphasize side-window geometry | CC BY 2.0 |
+| `b744/fuselage.jpg` | [KLM Boeing 747-400 PH-BFI nose and upper deck](https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFI_nose_section_(10205055606).jpg), lkarasawa | CC BY 2.0 |
+| `b744/engine.jpg` | [Qantas 747-400 Rolls-Royce RB211 nacelle](https://commons.wikimedia.org/wiki/File:Rolls_Royce_Trent_jet_engine,_Qantas_747-400_(5381505855).jpg), Moto “Club4AG” Miwa | CC BY 2.0 |
+| `b744/wingtip.jpg` | [South African Airways 747-400 winglet and navigation light](https://commons.wikimedia.org/wiki/File:Winglet_and_nav_light_arp.jpg), Adrian Pingstone | Public domain |
+| `b744/wing.jpg` | [El Al 747-400 wing](https://commons.wikimedia.org/wiki/File:Elal_747-400_wing.jpg), Neta Helled | Attribution |
+| `b744/vstab.jpg` | [KLM Boeing 747-400 PH-BFT tail](https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFT_tail_(6972557066).jpg), Edwin Leong | CC BY-SA 2.0 |
+| `b744/hstab.jpg` | [British Airways Boeing 747-400 planform](https://commons.wikimedia.org/wiki/File:Ba_b747-400_g-bnle_arp.jpg), Adrian Pingstone | Public domain |
+| `b744/gear.jpg` | [Singapore Airlines Boeing 747 main landing gear](https://commons.wikimedia.org/wiki/File:Boeing_747_main_landing_gear.jpg), Arpingstone | Public domain |
+
+The engine source page's filename calls the photographed Qantas 747-400 installation a “Trent”; the aircraft actually uses Rolls-Royce RB211-524 engines, so the local caption and identification text use the correct engine family. The upright winglet applies to long-range 747-400 variants; domestic 747-400D aircraft were delivered without it.
+
+## Airbus A340-600 (`a346`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a346/overview.jpg` | [Etihad Airways Airbus A340-600 at Sydney](https://commons.wikimedia.org/wiki/File:Etihad_Airways_Airbus_A340-600_SYD_Gilbert-1.jpg), Jeff Gilbert | GFDL 1.2 |
+| `a346/cockpit.jpg` | [Airbus A340-642 flight deck](https://commons.wikimedia.org/wiki/File:A340-642_flight_deck.jpg), Timo Breidenstein | GFDL 1.2 |
+| `a346/window-front.jpg` | [Airbus A340-600 front view](https://commons.wikimedia.org/wiki/File:A340-600_(13024845015).jpg), Bernal Saborio; cropped to emphasize front-window geometry | CC BY-SA 2.0 |
+| `a346/window-side.jpg` | [Virgin Atlantic Airbus A340-642 G-VSHY](https://commons.wikimedia.org/wiki/File:G-VSHY_Airbus_A340-642_(cn_383)_Virgin_Atlantic_Airways._(6100631197).jpg), Andrew Thomas; cropped to emphasize side-window geometry | CC BY-SA 2.0 |
+| `a346/fuselage.jpg` | [Virgin Atlantic Airbus A340-642 G-VSHY](https://commons.wikimedia.org/wiki/File:G-VSHY_Airbus_A340-642_(cn_383)_Virgin_Atlantic_Airways._(6100631197).jpg), Andrew Thomas | CC BY-SA 2.0 |
+| `a346/engine.jpg` | [Iberia A340-600 Rolls-Royce Trent 500 engines](https://commons.wikimedia.org/wiki/File:Iberia_A340-600_Rolls-Royce_Trent_500_engines.jpg), Bernal Saborio G. | CC BY 2.0 |
+| `a346/wingtip.jpg` | [Airbus A340-600 wing](https://commons.wikimedia.org/wiki/File:Airbus_A340-600_Wing.JPG), User:my name | CC BY-SA 3.0 |
+| `a346/wing.jpg` | [A340-600 clean-wing bottom plan view](https://commons.wikimedia.org/wiki/File:A340-600_clean-wing_bottom_plan-view.jpg), Olivier Cleynen | CC BY-SA 3.0 |
+| `a346/vstab.jpg` | [Airbus A340-600 tail assembly](https://commons.wikimedia.org/wiki/File:Airbus_A340-600_Tail_assembly_(8459395384).jpg), Kiko Alario Salom | CC BY 2.0 |
+| `a346/hstab.jpg` | [Virgin Atlantic A340-600 G-VBUG tail](https://commons.wikimedia.org/wiki/File:G-VBUG_Airbus_A346_Virgin_Atlantic_Tail_(13891670573).jpg), Aeroprints.com | CC BY-SA 3.0 |
+| `a346/gear.jpg` | [Thai Airways A340-600 HS-TNA taking off](https://commons.wikimedia.org/wiki/File:Thai_airways_a340-600_hs-tna_takeoff_arp.jpg), Adrian Pingstone | Public domain |
+
+The A340-600 has one four-wheel centreline main bogie in addition to its two four-wheel wing bogies. Earlier A340-200/-300 variants instead use a two-wheel centre gear, so the landing-gear note is specific to the compared A340-600.

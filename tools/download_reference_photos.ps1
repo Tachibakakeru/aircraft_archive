@@ -128,6 +128,24 @@ $photos = [ordered]@{
   "a332/vstab.jpg" = "KLM Airbus A330-200 PH-AOC tail (6924834528).jpg"
   "a332/hstab.jpg" = "Cyprus airways a330-200 5b-dbs arp.jpg"
   "a332/gear.jpg" = "VH-SSA 'Outback' Airbus A330-223 Strategic Airlines (7107083943).jpg"
+  "b744/overview.jpg" = "Air New Zealand 747-400 sideview.jpg"
+  "b744/cockpit.jpg" = "Boeing 747-400 cockpit.jpg"
+  "b744/fuselage.jpg" = "KLM Boeing 747-400 PH-BFI nose section (10205055606).jpg"
+  "b744/engine.jpg" = "Rolls Royce Trent jet engine, Qantas 747-400 (5381505855).jpg"
+  "b744/wingtip.jpg" = "Winglet and nav light arp.jpg"
+  "b744/wing.jpg" = "Elal 747-400 wing.jpg"
+  "b744/vstab.jpg" = "KLM Boeing 747-400 PH-BFT tail (6972557066).jpg"
+  "b744/hstab.jpg" = "Ba b747-400 g-bnle arp.jpg"
+  "b744/gear.jpg" = "Boeing 747 main landing gear.jpg"
+  "a346/overview.jpg" = "Etihad Airways Airbus A340-600 SYD Gilbert-1.jpg"
+  "a346/cockpit.jpg" = "A340-642 flight deck.jpg"
+  "a346/fuselage.jpg" = "G-VSHY Airbus A340-642 (cn 383) Virgin Atlantic Airways. (6100631197).jpg"
+  "a346/engine.jpg" = "Iberia A340-600 Rolls-Royce Trent 500 engines.jpg"
+  "a346/wingtip.jpg" = "Airbus A340-600 Wing.JPG"
+  "a346/wing.jpg" = "A340-600 clean-wing bottom plan-view.jpg"
+  "a346/vstab.jpg" = "Airbus A340-600 Tail assembly (8459395384).jpg"
+  "a346/hstab.jpg" = "G-VBUG Airbus A346 Virgin Atlantic Tail (13891670573).jpg"
+  "a346/gear.jpg" = "Thai airways a340-600 hs-tna takeoff arp.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -177,6 +195,10 @@ $windowPhotos = @(
   @{ Dest="b763/window-side.jpg"; Title="Hawaiian Airlines (N592HA) Boeing 767-300ER at Sydney Airport.jpg"; Crop=@(.01,.29,.32) }
   @{ Dest="a332/window-front.jpg"; Title="Face to face (F-OONE) (14771492742).jpg"; Crop=@(.28,.12,.44) }
   @{ Dest="a332/window-side.jpg"; Title="KLM Airbus A330-200 PH-AOI nose section (3186787311).jpg"; Crop=@(.58,.17,.40) }
+  @{ Dest="b744/window-front.jpg"; Title="Boeing 747 Jumbo front cockpit windows.jpg"; Crop=@(.00,.20,1.00) }
+  @{ Dest="b744/window-side.jpg"; Title="KLM Boeing 747-400 PH-BFI nose section (10205055606).jpg"; Crop=@(.54,.08,.44) }
+  @{ Dest="a346/window-front.jpg"; Title="A340-600 (13024845015).jpg"; Crop=@(.34,.34,.32) }
+  @{ Dest="a346/window-side.jpg"; Title="G-VSHY Airbus A340-642 (cn 383) Virgin Atlantic Airways. (6100631197).jpg"; Crop=@(.02,.05,.42) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600

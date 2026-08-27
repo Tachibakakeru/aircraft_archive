@@ -2,19 +2,30 @@
   "title": "Airbus A340-600",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A340-600 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "A340-600 機身外寬約 5.64 m，典型經濟艙為 2-4-2；全長 75.36 m 曾使它成為世界最長客機，側面呈極細長的單層輪廓。",
+        "en": "The A340-600 fuselage is about 5.64 m wide, typically 2-4-2 in economy, and its 75.36 m length once made it the world's longest airliner, producing an extremely slender single-deck profile.",
+        "ja": "A340-600の胴体幅は約5.64 m、エコノミーは通常2-4-2で、全長75.36 mによりかつて世界最長の旅客機となった非常に細長い単層形です。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "與較短 A340-500 共用基本翼與尾部語彙；辨識 -600 應看主翼前後特別長的機身和更多艙門間距。",
+        "en": "It shares basic wing and tail styling with the shorter A340-500; identify the -600 by the exceptionally long fuselage ahead of and behind the wing and wider door spacing.",
+        "ja": "短いA340-500と主翼・尾部形状を共有するため、主翼前後の極端な胴体長とドア間隔で-600を判別します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "全長比 747-400 約長 4.7 m。",
+          "en": "It is roughly 4.7 m longer than the 747-400.",
+          "ja": "747-400より約4.7 m長いです。"
+        },
+        {
+          "zh": "只有單排窗，沒有雙層駝峰。",
+          "en": "There is one window row and no double-deck hump.",
+          "ja": "窓列は1列で二階建てのこぶはありません。"
+        },
+        {
+          "zh": "翼身整流罩位於超長機身中段。",
+          "en": "The wing-body fairing sits near the middle of the very long body.",
+          "ja": "翼胴フェアリングは超長胴体の中央付近です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a346/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:G-VSHY_Airbus_A340-642_(cn_383)_Virgin_Atlantic_Airways._(6100631197).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A340-600 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "A340-600 駕駛艙延續 Airbus 側桿與桌板設計，採六具顯示器、中央 ECAM 與四發推力桿；飛行員正前方沒有駕駛盤。",
+        "en": "The A340-600 flight deck follows Airbus sidestick and tray-table design with six displays, central ECAM and four thrust levers; no yokes sit ahead of the pilots.",
+        "ja": "A340-600の操縦席はAirbus式サイドスティックとテーブル、6面表示器、中央ECAM、4本のスラストレバーを持ち、正面に操縦輪はありません。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "A330 與 A340 家族座艙高度共通化，內部單靠面板很難判子型；四支推力桿與引擎頁面才顯示四發身分。",
+        "en": "A330 and A340 cockpits are highly common, so the panel alone rarely identifies the variant; four thrust levers and four-engine system pages reveal the A340.",
+        "ja": "A330とA340の操縦席は共通性が高く、4本のスラストレバーと4発用表示でA340と確認します。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "側桿位於左右側壁。",
+          "en": "Sidesticks are mounted on the sidewalls.",
+          "ja": "サイドスティックは左右側壁にあります。"
+        },
+        {
+          "zh": "正前方桌板取代 Boeing 駕駛盤。",
+          "en": "Tray tables replace Boeing-style yokes ahead of the pilots.",
+          "ja": "正面はBoeing式操縦輪ではなくテーブルです。"
+        },
+        {
+          "zh": "中央台有四支引擎推力桿。",
+          "en": "Four engine thrust levers occupy the centre pedestal.",
+          "ja": "中央台に4本のエンジンスラストレバーがあります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a346/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:A340-642_flight_deck.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A340-600 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "A340-600 主翼翼展約 63.45 m，與 747-400 接近；翼下四具 Trent 500、外翼小型直立翼梢及細長機身比例形成獨特平面輪廓。",
+        "en": "The A340-600 spans about 63.45 m, close to the 747-400. Four Trent 500s, small upright tips and a very slender fuselage define its planform.",
+        "ja": "A340-600の翼幅は約63.45 mで747-400に近く、4基Trent 500、小型直立翼端、細長い胴体が独特の平面形を作ります。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "下方看時，翼展相近但 A340 機身遠比 747 窄長；主翼後方還能看到四輪中置主腳艙區域。",
+        "en": "From below, similar span contrasts with a much narrower and longer fuselage than the 747; the four-wheel centre-gear bay is also visible aft of the wing centre.",
+        "ja": "下面では翼幅が近い一方、A340胴体は747より細長く、主翼中央後方に4輪中央脚格納部も見えます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "每側兩具引擎間距均勻。",
+          "en": "Two engines are evenly spaced beneath each wing.",
+          "ja": "各主翼下の2基エンジンは均等に配置されます。"
+        },
+        {
+          "zh": "翼根厚並與大型翼身整流罩連接。",
+          "en": "A thick root joins a substantial wing-body fairing.",
+          "ja": "厚い翼根が大型翼胴フェアリングへつながります。"
+        },
+        {
+          "zh": "外翼末端為短小直立三角翼梢。",
+          "en": "The outer wing ends in a short upright triangular tip.",
+          "ja": "外翼端は短い直立三角翼端です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a346/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:A340-600_clean-wing_bottom_plan-view.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A340-600 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A340-600／-500 只使用 Rolls-Royce Trent 500 系列，四具引擎短艙較圓、後緣平滑；不像早期 A340-200／-300 的小型 CFM56。",
+        "en": "The A340-500/-600 exclusively uses Rolls-Royce Trent 500 engines. Its four rounded smooth-edged nacelles are much larger than the CFM56s on early A340-200/-300s.",
+        "ja": "A340-500／-600はRolls-Royce Trent 500専用で、4基の丸い滑らかなナセルは初期A340-200／-300のCFM56より大型です。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "與 747-400 不同，A340-600 沒有三種引擎選項；看到四具尺寸一致的 Trent 500 配超長 Airbus 機身，即可快速縮小範圍。",
+        "en": "Unlike the 747-400, the A340-600 has no alternative engine families. Four identical Trent 500s beneath the long Airbus fuselage strongly narrow identification.",
+        "ja": "747-400と異なり代替エンジンはなく、超長Airbus胴体下の4基Trent 500が強い識別点です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "四具引擎均為 Trent 500 家族。",
+          "en": "All four engines belong to the Trent 500 family.",
+          "ja": "4基すべてTrent 500系です。"
+        },
+        {
+          "zh": "短艙圓潤，後緣沒有鋸齒。",
+          "en": "Nacelles are rounded with smooth trailing edges.",
+          "ja": "ナセルは丸く後縁に鋸歯はありません。"
+        },
+        {
+          "zh": "尺寸明顯大於 A340-300 的 CFM56。",
+          "en": "They are visibly larger than A340-300 CFM56 nacelles.",
+          "ja": "A340-300のCFM56より明らかに大型です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a346/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Iberia_A340-600_Rolls-Royce_Trent_500_engines.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "A340-600 的垂直尾翼高大後掠，根部以寬背鰭接入較細後機身；配合極長機身，垂尾看起來比 747-400 更纖細。",
+        "en": "The A340-600 has a tall swept fin with a broad dorsal root blending into a relatively narrow aft fuselage. Against the very long body it looks slimmer than the 747-400 fin.",
+        "ja": "A340-600の垂直尾翼は高く後退し、広い背びれ根元が比較的細い後部胴体へつながり、747-400より細身に見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "A340-500 與 -600 尾翼相近，不能單靠垂尾判子型；需看機身長度與中置主腳。",
+        "en": "A340-500 and -600 fins are similar, so variant identification requires fuselage length and centre-gear configuration.",
+        "ja": "A340-500と-600の垂尾は似るため、胴体長と中央主脚で子型を確認します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣後掠，頂端略方。",
+          "en": "The leading edge is swept and the tip slightly squared.",
+          "ja": "前縁は後退し上端はやや角形です。"
+        },
+        {
+          "zh": "根部背鰭沿後機身向前延伸。",
+          "en": "The dorsal fillet extends forward along the aft fuselage.",
+          "ja": "根元背びれが後部胴体に沿って前方へ伸びます。"
+        },
+        {
+          "zh": "尾錐細於 747，末端為 APU 排氣口。",
+          "en": "The tailcone is slimmer than the 747's and ends at the APU exhaust.",
+          "ja": "尾部は747より細く先端にAPU排気口があります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a346/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A340-600_Tail_assembly_(8459395384).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "A340-600 的低置水平尾翼從細長尾錐兩側伸出，後掠並向外收尖；相對超長機身看起來比 747 的水平尾翼輕巧。",
+        "en": "The A340-600's low-mounted tailplanes sweep and taper from a slender tailcone. Against the exceptionally long fuselage they appear lighter than the 747's tailplanes.",
+        "ja": "A340-600の低位置水平尾翼は細い尾部から後退し細くなり、超長胴体に対して747より軽快に見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "兩者都是傳統尾翼布局，水平尾翼只能作輔助；前機身有無駝峰與主腳組數更可靠。",
+        "en": "Both use conventional tail layouts, so the tailplane is secondary; the forward hump and number of main bogies are more reliable.",
+        "ja": "両機とも通常尾翼のため補助的で、前部こぶの有無と主脚ボギー数の方が確実です。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "尾翼後掠且翼尖收細。",
+          "en": "The tailplane is swept and tapers at the tip.",
+          "ja": "水平尾翼は後退し翼端で細くなります。"
+        },
+        {
+          "zh": "翼根接在較窄的後機身。",
+          "en": "The root joins a relatively narrow aft fuselage.",
+          "ja": "翼根は比較的細い後部胴体に接続します。"
+        },
+        {
+          "zh": "尾部整體比例比 747 修長。",
+          "en": "The overall empennage proportion is more slender than the 747's.",
+          "ja": "尾部全体は747より細長い比率です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a346/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:G-VBUG_Airbus_A346_Virgin_Atlantic_Tail_(13891670573).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus A340-600 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "A340-600 共 14 輪：前腳雙輪，左右翼下主腳各四輪，機身中線另有一組四輪主腳；中置四輪是 -500／-600 的重要特徵。",
+        "en": "The A340-600 has 14 wheels: twin nose wheels, four-wheel wing gears on each side and one four-wheel centreline body gear. The four-wheel centre gear is a key -500/-600 cue.",
+        "ja": "A340-600は計14輪で、前脚2輪、左右翼下主脚各4輪、胴体中央主脚4輪です。4輪中央脚は-500／-600の重要特徴です。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "早期 A340-200／-300 的中置主腳為雙輪；747-400 則有兩組機身主腳、四組主轉向架，因此不能只看到中央輪就判 747。",
+        "en": "Earlier A340-200/-300s use a twin-wheel centre gear, while the 747-400 has two body gears and four main bogies. A centre gear alone does not imply a 747.",
+        "ja": "初期A340-200／-300の中央脚は2輪、747-400は胴体脚2組・主ボギー4組です。中央輪だけで747とは判断できません。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "左右翼下各一組四輪主腳。",
+          "en": "One four-wheel main bogie sits beneath each wing.",
+          "ja": "左右主翼下に各1組4輪主脚があります。"
+        },
+        {
+          "zh": "機身中線只有一組四輪主腳。",
+          "en": "Only one four-wheel bogie sits on the fuselage centreline.",
+          "ja": "胴体中心線には4輪主脚が1組だけです。"
+        },
+        {
+          "zh": "三組主轉向架對比 747 的四組。",
+          "en": "Three main bogies contrast with the 747's four.",
+          "ja": "主ボギー3組で747の4組と異なります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a346/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Thai_airways_a340-600_hs-tna_takeoff_arp.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A340-600 是極修長的單層四發廣體客機，全長約 75.36 m、翼展約 63.45 m；沒有 747 駝峰，四具 Trent 500 與中置主起落架是核心特徵。",
+        "en": "The A340-600 is an exceptionally long single-deck four-engine widebody, about 75.36 m long with a 63.45 m span. It lacks the 747 hump and is defined by four Trent 500s and a centre main gear.",
+        "ja": "A340-600は全長約75.36 m、翼幅約63.45 mの非常に長い単層4発ワイドボディで、747のこぶがなく、4基のTrent 500と中央主脚が特徴です。"
+      },
+      "fact": {
+        "zh": "它比 747-400 更長但機身更窄，側面像一支非常長的鉛筆；辨識時把『無駝峰長機身＋四發＋中央主腳』一起確認。",
+        "en": "It is longer but narrower than the 747-400, giving a pencil-like side profile. Confirm the hump-free long body, four engines and centre gear together.",
+        "ja": "747-400より長く細いため鉛筆のように見え、こぶのない長胴体、4発、中央主脚を組み合わせて確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "全機只有一排客艙窗，沒有上層甲板。",
+          "en": "A single cabin-window row runs the full fuselage with no upper deck.",
+          "ja": "上部デッキはなく客室窓列は1列です。"
+        },
+        {
+          "zh": "四具 Trent 500 均勻分布於主翼下。",
+          "en": "Four Trent 500s are spaced beneath the wing.",
+          "ja": "4基のTrent 500が主翼下に配置されます。"
+        },
+        {
+          "zh": "超長機身前後伸出主翼很遠。",
+          "en": "The extremely long fuselage extends far ahead of and behind the wing.",
+          "ja": "超長胴体が主翼の前後へ大きく伸びます。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a346/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Etihad_Airways_Airbus_A340-600_SYD_Gilbert-1.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A340-600 使用經典 Airbus 六片窗帶，正面風擋呈斜邊梯形，外側窗沿圓鈍機鼻平滑包向側面；位置接近單層機身中心線。",
+        "en": "The A340-600 uses classic Airbus six-pane glazing: slanted trapezoidal front windscreens flow around a rounded nose into the side panes at normal single-deck height.",
+        "ja": "A340-600はAirbus伝統の6枚窓で、斜辺台形の前面窓が丸い機首に沿って側面へ滑らかにつながり、単層胴体の通常高さにあります。"
+      },
+      "fact": {
+        "zh": "與 747-400 最大差異不是窗片數，而是窗帶高度：A340 下方只有一般圓鼻，747 窗下還有巨大的主甲板機鼻。",
+        "en": "Pane count is less important than height: below the A340 glazing is a normal rounded nose, while the 747 has a vast main-deck nose beneath its high cockpit.",
+        "ja": "747-400との差は枚数より高さで、A340窓下は通常の丸い機首、747は高い操縦席下に大きな主デッキ機首があります。"
+      },
+      "bullets": [
+        {
+          "zh": "中央接縫短，主風擋向外上方傾斜。",
+          "en": "The centre seam is short and the main panes slope outward and upward.",
+          "ja": "中央継ぎ目は短く主窓は外上方へ傾きます。"
+        },
+        {
+          "zh": "外側窗帶沿圓鼻平順包覆。",
+          "en": "Outer panes wrap smoothly around the rounded nose.",
+          "ja": "外側窓帯が丸い機首を滑らかに包みます。"
+        },
+        {
+          "zh": "窗後直接接單排客艙舷窗。",
+          "en": "A single cabin-window row continues aft.",
+          "ja": "後方には1列の客室窓が続きます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a346/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:A340-600_(13024845015).jpg"
+        },
+        {
+          "src": "assets/reference/a346/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:G-VSHY_Airbus_A340-642_(cn_383)_Virgin_Atlantic_Airways._(6100631197).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "A340-600 主翼末端有小型直立三角翼梢，輪廓由翼端向上收尖；它比 747-400 的高大梯形小翼更短、更像翼尖延伸的一部分。",
+        "en": "The A340-600 ends in a small upright triangular tip device that tapers upward. It is much shorter than the 747-400's tall trapezoidal winglet and looks integrated with the tip.",
+        "ja": "A340-600は上方へ細くなる小型直立三角翼端を持ち、747-400の高い台形ウイングレットより短く翼端と一体的です。"
+      },
+      "fact": {
+        "zh": "A340-500／-600 翼尖與 A330ceo／A340 家族有相近 Airbus 語彙；必須再用四發與超長機身確認。",
+        "en": "The A340-500/-600 tip shares Airbus family styling with A330ceos and other A340s; confirm four engines and the very long fuselage.",
+        "ja": "A330ceoや他A340と似たAirbus翼端形状のため、4発と超長胴体を追加確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "翼梢短小並近乎垂直。",
+          "en": "The tip device is short and nearly vertical.",
+          "ja": "翼端装置は短くほぼ垂直です。"
+        },
+        {
+          "zh": "頂端向後收尖，不是高大梯形板。",
+          "en": "It tapers aft rather than forming a tall trapezoidal blade.",
+          "ja": "上端は後方へ細く、高い台形板ではありません。"
+        },
+        {
+          "zh": "與 747-400 小翼高度差異明顯。",
+          "en": "Its height is clearly less than the 747-400 winglet's.",
+          "ja": "747-400ウイングレットより明らかに低いです。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a346/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A340-600_Wing.JPG"
+        }
+      ]
     }
   },
   "specifications": {

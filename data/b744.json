@@ -2,18 +2,30 @@
   "title": "Boeing 747-400",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
-    "hstab"
+    "hstab",
+    "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 747-400 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "747-400 機身外寬約 6.5 m，前段為局部雙層：主甲板上方的加長上層甲板形成明顯駝峰，典型主甲板經濟艙為 3-4-3。",
+        "en": "The 747-400 fuselage is about 6.5 m wide and partially double-decked. Its stretched upper deck forms the hump above a main deck typically arranged 3-4-3 in economy.",
+        "ja": "747-400の胴体幅は約6.5 mで前部が部分二階建てです。延長上部デッキがこぶを作り、主デッキのエコノミーは通常3-4-3です。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "747-400 客機上層甲板比早期 747 明顯更長；貨機通常保留短駝峰，不能把所有 747-400 外型視為完全相同。",
+        "en": "Passenger 747-400s have a much longer upper deck than early 747s; freighters generally retain the short hump, so not every 747-400 has the same side profile.",
+        "ja": "旅客型747-400の上部デッキは初期747より長く、貨物型は通常短いこぶのため、全機が同じ側面形ではありません。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "上下兩排窗只出現在前機身。",
+          "en": "Two window rows appear only on the forward fuselage.",
+          "ja": "前部胴体だけに上下2列の窓があります。"
+        },
+        {
+          "zh": "主甲板直徑與艙門尺度大於 A340。",
+          "en": "Main-deck diameter and doors are larger than the A340's.",
+          "ja": "主デッキ胴体径と扉はA340より大きいです。"
+        },
+        {
+          "zh": "前段駝峰向主翼前方平滑下降。",
+          "en": "The forward hump blends down ahead of the wing.",
+          "ja": "前部のこぶは主翼手前で滑らかに低くなります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b744/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFI_nose_section_(10205055606).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Boeing 747-400 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "747-400 是首款採兩人制玻璃駕駛艙的 747，保留 Boeing 駕駛盤與中央操縱柱，典型配置有六具大型 CRT、EICAS 與四發推力桿。",
+        "en": "The 747-400 introduced a two-crew glass flight deck to the 747 family, retaining Boeing yokes and control columns with six large CRTs, EICAS and four thrust levers.",
+        "ja": "747-400は747初の2名乗務グラスコックピットで、Boeing式操縦輪、6面大型CRT、EICAS、4本のスラストレバーを備えます。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "與 A340-600 的側桿與桌板相比，駕駛盤和四支推力桿是最直觀差異；螢幕改裝狀態則可能不同。",
+        "en": "Yokes and four thrust levers are the clearest contrast with the A340-600's sidesticks and tray tables; display retrofits may vary.",
+        "ja": "A340-600のサイドスティックとテーブルに対し、操縦輪と4本のスラストレバーが最も明確です。画面は改修で異なる場合があります。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "正副駕駛前方均有大型駕駛盤。",
+          "en": "A large yoke sits ahead of each pilot.",
+          "ja": "両操縦席正面に大型操縦輪があります。"
+        },
+        {
+          "zh": "中央 EICAS 監控四具引擎與系統。",
+          "en": "Central EICAS screens monitor four engines and aircraft systems.",
+          "ja": "中央EICASが4発エンジンと機体システムを監視します。"
+        },
+        {
+          "zh": "高置座艙源自上層甲板機首位置。",
+          "en": "The flight deck sits high in the forward upper deck.",
+          "ja": "操縦席は前方上部デッキの高い位置にあります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b744/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-400_cockpit.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 747-400 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "747-400 主翼翼展約 64.44 m，後掠角大、翼根厚，四具引擎與複雜的前後緣增升裝置沿翼面配置。",
+        "en": "The 747-400 wing spans about 64.44 m, with strong sweep, a thick root, four engines and extensive leading- and trailing-edge high-lift devices.",
+        "ja": "747-400の主翼幅は約64.44 mで、強い後退角、厚い翼根、4発エンジン、大規模な前後縁高揚力装置を持ちます。"
+      },
       "specs": [
         [
           "功能",
@@ -63,66 +144,388 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "翼展與 A340-600 接近，不能單看寬度；747 的翼根接在更粗機身上，外翼末端通常有高大直立小翼。",
+        "en": "Span is close to the A340-600's, so width alone is insufficient. The 747 wing joins a much broader fuselage and usually ends in a tall upright winglet.",
+        "ja": "翼幅はA340-600に近いため幅だけでは不十分で、より太い胴体への翼根と高い直立ウイングレットを確認します。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "每側主翼下各有兩具引擎。",
+          "en": "Two engines hang beneath each wing.",
+          "ja": "各主翼下に2基ずつエンジンがあります。"
+        },
+        {
+          "zh": "外翼後掠並接翼尖延伸與小翼。",
+          "en": "The swept outer panel ends in a tip extension and winglet.",
+          "ja": "後退外翼は翼端延長とウイングレットへ続きます。"
+        },
+        {
+          "zh": "大面積襟翼與擾流板支援重型機低速飛行。",
+          "en": "Large flaps and spoilers support the heavy aircraft at low speed.",
+          "ja": "大型フラップとスポイラーが重量機の低速飛行を支えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b744/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Elal_747-400_wing.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 747-400 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "747-400 可選 GE CF6-80C2、Pratt & Whitney PW4000 或 Rolls-Royce RB211-524；四具短艙分置於主翼下，後緣皆為傳統平滑輪廓。",
+        "en": "The 747-400 could use GE CF6-80C2, Pratt & Whitney PW4000 or Rolls-Royce RB211-524 engines. Four conventional smooth-edged nacelles sit beneath the wing.",
+        "ja": "747-400はCF6-80C2、PW4000、RB211-524を選択でき、4基の従来型滑らかなナセルが主翼下にあります。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "參考照片標題雖寫 Trent，實際機型分類與短艙是 Qantas 747-400 的 Rolls-Royce RB211；辨識時應看短艙形狀而非檔名。",
+        "en": "Although the source title says Trent, the Qantas 747-400 installation is a Rolls-Royce RB211; identify the nacelle from the aircraft and shape rather than the filename.",
+        "ja": "出典名はTrentですが、Qantas 747-400の搭載機はRolls-Royce RB211です。ファイル名ではなく機体とナセル形状で判断します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "四具引擎是與雙發 747 後繼機的根本差異。",
+          "en": "Four engines fundamentally separate it from later twinjets.",
+          "ja": "4発であることが後継双発機との根本的な差です。"
+        },
+        {
+          "zh": "不同引擎的進氣口、整流罩與排氣段不同。",
+          "en": "Inlet, cowling and exhaust details vary by engine option.",
+          "ja": "エンジン選択で吸気口、カウリング、排気部が異なります。"
+        },
+        {
+          "zh": "沒有 747-8 GEnx 的鋸齒狀短艙後緣。",
+          "en": "It lacks the serrated GEnx nacelle edges of the 747-8.",
+          "ja": "747-8のGEnxにある鋸歯状ナセル後縁はありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b744/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Rolls_Royce_Trent_jet_engine,_Qantas_747-400_(5381505855).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "747-400 垂直尾翼高大、前緣大幅後掠，根部建立在寬厚後機身上；相對駝峰機鼻，尾部輪廓仍是傳統單垂尾。",
+        "en": "The 747-400 has a large strongly swept fin rooted in a broad aft fuselage; despite the forward hump, the rear remains a conventional single-fin empennage.",
+        "ja": "747-400の垂直尾翼は大型で前縁後退が強く、太い後部胴体に接続します。前部のこぶとは対照的に通常の単垂尾です。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "塗裝常讓垂尾看起來更顯眼，但真正可比較的是粗尾錐、較寬根部與 747 特有前機身。",
+        "en": "Livery makes the fin prominent, but the useful cues are the broad root, thick tailcone and unmistakable 747 forward fuselage.",
+        "ja": "塗装よりも幅広い根元、太い尾部、747特有の前部胴体を比較します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣後掠明顯，頂端近方形。",
+          "en": "The leading edge is strongly swept and the tip nearly square.",
+          "ja": "前縁後退が強く上端はほぼ角形です。"
+        },
+        {
+          "zh": "根部與寬大的後機身平滑融合。",
+          "en": "The root blends into the broad aft fuselage.",
+          "ja": "根元は幅広い後部胴体へ滑らかにつながります。"
+        },
+        {
+          "zh": "尾錐末端可見 APU 排氣口。",
+          "en": "The tailcone ends at the APU exhaust.",
+          "ja": "テールコーン先端にAPU排気口があります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b744/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFT_tail_(6972557066).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "747-400 的低置水平尾翼後掠且面積大，從粗壯尾錐兩側向外收尖；下方全機照片可同時看見尾翼、四發與多組主起落架。",
+        "en": "The 747-400's large low-mounted tailplanes sweep and taper from a broad tailcone. An underside view also reveals four engines and multiple main-gear bogies.",
+        "ja": "747-400の大型低位置水平尾翼は太い尾部から後退し細くなり、下面写真では4発と複数主脚も同時に確認できます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "A340-600 也是傳統低置水平尾翼，因此安裝位置本身無法判型；應比較尾錐粗細與前機身。",
+        "en": "The A340-600 also has a conventional low tailplane, so mounting position alone is not diagnostic; compare tailcone thickness and forward fuselage.",
+        "ja": "A340-600も通常の低位置尾翼のため、取付位置だけでなく尾部の太さと前部胴体を比較します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "尾翼展幅大，翼根非常厚。",
+          "en": "The tailplane is broad with a very thick root.",
+          "ja": "水平尾翼は大きく翼根が非常に厚いです。"
+        },
+        {
+          "zh": "後緣由多段升降舵構成。",
+          "en": "The trailing edge contains segmented elevators.",
+          "ja": "後縁は分割された昇降舵で構成されます。"
+        },
+        {
+          "zh": "與 747 粗機身形成厚重尾部比例。",
+          "en": "It forms a massive empennage with the wide 747 fuselage.",
+          "ja": "太い747胴体と大型尾部を形成します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b744/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Ba_b747-400_g-bnle_arp.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "747-400 以機首上方延伸的上層甲板『駝峰』、四具引擎與大型垂直翼尖小翼最容易辨認；全長約 70.67 m、翼展約 64.44 m。",
+        "en": "The 747-400 is most readily identified by its extended upper-deck hump, four engines and tall vertical winglets. It is about 70.67 m long with a 64.44 m span.",
+        "ja": "747-400は延長された上部デッキのこぶ、4発エンジン、大型垂直ウイングレットが最も明確で、全長約70.67 m、翼幅約64.44 mです。"
+      },
+      "fact": {
+        "zh": "對比 A340-600，747-400 機身較短粗、駕駛艙位置更高且有雙層前機身；A340-600 則是沒有駝峰的超長單層機身。",
+        "en": "Against the A340-600, the 747-400 is shorter and bulkier, with a high cockpit and double-deck forward fuselage; the A340-600 has an exceptionally long single-deck profile.",
+        "ja": "A340-600に比べ747-400は短く太く、操縦席が高い二階建て前部胴体を持ちます。A340-600はこぶのない超長い単層胴体です。"
+      },
+      "bullets": [
+        {
+          "zh": "上層甲板窗列從機首後方延伸至主翼前。",
+          "en": "The upper-deck window row extends aft toward the wing.",
+          "ja": "上部デッキ窓列が機首後方から主翼手前まで続きます。"
+        },
+        {
+          "zh": "四具引擎吊掛於大後掠翼下。",
+          "en": "Four engines hang below a strongly swept wing.",
+          "ja": "強い後退主翼下に4基のエンジンがあります。"
+        },
+        {
+          "zh": "多數遠程型有直立翼尖小翼；747-400D 例外。",
+          "en": "Most long-range versions have upright winglets; the 747-400D is an exception.",
+          "ja": "長距離型の多くは直立ウイングレットを持ち、747-400Dは例外です。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b744/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_New_Zealand_747-400_sideview.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "747-400 的六片駕駛艙窗位於機鼻上方高處，正面窗較直立、外側窗沿上層甲板向後折轉；下方仍可看到圓鈍主甲板機鼻。",
+        "en": "The 747-400's six cockpit panes sit high above the nose. Upright front panes turn aft along the upper deck while the rounded main-deck nose remains below.",
+        "ja": "747-400の6枚窓は機首上方の高い位置にあり、直立気味の前面窓から上部デッキ側面へ折れ、下には丸い主デッキ機首が見えます。"
+      },
+      "fact": {
+        "zh": "高置窗帶加上窗下方的大面積機鼻，是任何 A340 都沒有的特徵；即使只看到前半機身也很可靠。",
+        "en": "The high window belt and large expanse of nose below it are absent from every A340 and remain reliable even in a cropped forward view.",
+        "ja": "高い窓帯とその下の大きな機首面はA340にはなく、前部だけでも信頼できる識別点です。"
+      },
+      "bullets": [
+        {
+          "zh": "窗帶位於上層甲板，離主甲板艙門很高。",
+          "en": "The glazing is on the upper deck, high above main-deck doors.",
+          "ja": "窓帯は上部デッキにあり、主デッキ扉より高い位置です。"
+        },
+        {
+          "zh": "正面風擋較方正，中央接縫近垂直。",
+          "en": "Forward panes are fairly square with a near-vertical centre seam.",
+          "ja": "前面窓は比較的四角く中央継ぎ目はほぼ垂直です。"
+        },
+        {
+          "zh": "側窗後方緊接上層甲板舷窗。",
+          "en": "Upper-deck cabin windows continue immediately aft of the side panes.",
+          "ja": "側窓後方に上部デッキ客室窓が続きます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b744/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747_Jumbo_front_cockpit_windows.jpg"
+        },
+        {
+          "src": "assets/reference/b744/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_Boeing_747-400_PH-BFI_nose_section_(10205055606).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "長程 747-400 的翼尖先向外延伸，再接一片高而近乎垂直的梯形小翼；這是區分 747-400 與早期 747、747-8 的重要線索。",
+        "en": "Long-range 747-400 wings have a tip extension capped by a tall near-vertical trapezoidal winglet, a key distinction from early 747s and the raked-tip 747-8.",
+        "ja": "長距離747-400は翼端延長部に高いほぼ垂直の台形ウイングレットを持ち、初期747やレイクド翼端の747-8と区別できます。"
+      },
+      "fact": {
+        "zh": "日本國內線 747-400D 為了高頻起降取消翼尖小翼；看到沒有小翼的 747 仍需核對上層甲板與子型。",
+        "en": "The high-cycle domestic 747-400D omitted winglets; a winglet-free 747 therefore still requires upper-deck and variant checks.",
+        "ja": "高頻度国内線用747-400Dはウイングレットを省略したため、未装備747でも上部デッキと型式確認が必要です。"
+      },
+      "bullets": [
+        {
+          "zh": "小翼高大、直立，頂端略向後收。",
+          "en": "The winglet is tall, upright and tapers slightly aft.",
+          "ja": "ウイングレットは高く直立し上端が後方へ細くなります。"
+        },
+        {
+          "zh": "翼尖仍有明顯水平延伸段。",
+          "en": "A visible horizontal tip extension precedes the winglet.",
+          "ja": "ウイングレット手前に水平翼端延長があります。"
+        },
+        {
+          "zh": "747-8 則使用水平延伸的斜削翼尖。",
+          "en": "The 747-8 instead uses a horizontally extended raked tip.",
+          "ja": "747-8は水平に延びるレイクド翼端です。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b744/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Winglet_and_nav_light_arp.jpg"
+        }
+      ]
+    },
+    "gear": {
+      "summary": {
+        "zh": "747-400 共 18 輪：前起落架雙輪，四組主起落架各四輪；兩組位於翼下、兩組位於機身下方。",
+        "en": "The 747-400 has 18 wheels: twin nose wheels and four four-wheel main bogies, two wing-mounted and two body-mounted.",
+        "ja": "747-400は計18輪で、前脚2輪、主脚4組各4輪（翼下2組・胴体下2組）です。"
+      },
+      "fact": {
+        "zh": "A340-600 只有三組四輪主腳、共 14 輪；近距離數主轉向架組數，是兩者最可靠差異之一。",
+        "en": "The A340-600 has only three four-wheel main bogies and 14 wheels total. Counting main bogie groups is one of the strongest close-range differences.",
+        "ja": "A340-600は4輪主脚3組、計14輪です。主脚ボギー数は近距離で最も確実な差の一つです。"
+      },
+      "bullets": [
+        {
+          "zh": "左右翼下各一組四輪主腳。",
+          "en": "One four-wheel bogie sits beneath each wing.",
+          "ja": "左右主翼下に各1組4輪主脚があります。"
+        },
+        {
+          "zh": "機身中央另有左右兩組四輪主腳。",
+          "en": "Two additional four-wheel bogies sit beneath the fuselage.",
+          "ja": "胴体下にさらに左右2組の4輪主脚があります。"
+        },
+        {
+          "zh": "全部放下時可見四組主轉向架並列。",
+          "en": "All four main bogies are visible when the gear is extended.",
+          "ja": "脚下げ時に4組の主ボギーが並びます。"
+        }
+      ],
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b744/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747_main_landing_gear.jpg"
+        }
+      ]
     }
   },
   "specifications": {
