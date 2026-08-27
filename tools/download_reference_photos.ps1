@@ -110,6 +110,24 @@ $photos = [ordered]@{
   "a321/vstab.jpg" = "TC-JRN Airbus A321 Turkish Airlines Tail (8633650011).jpg"
   "a321/hstab.jpg" = "TransAsia Airways Airbus A321-231 B-22612 Departing from Taipei Songshan Airport 20151003f.jpg"
   "a321/gear.jpg" = "Port side main landing gear of Finnair Airbus A321 OH-LZA.jpg"
+  "b763/overview.jpg" = "Hawaiian Airlines (N592HA) Boeing 767-300ER at Sydney Airport.jpg"
+  "b763/cockpit.jpg" = "AeroMexico Boeing 767-300ER cockpit.jpg"
+  "b763/fuselage.jpg" = "Boeing 767-300ER United Airlines N656UA.jpg"
+  "b763/engine.jpg" = "Air Canada Boeing 767-300ER with CF6-80 engines.jpg"
+  "b763/wingtip.jpg" = "ALL NIPPON BOEING 767-300 WINGLETS AT NARITA AIRPORT TOKYO JAPAN JUNE 2012 (7456802526).jpg"
+  "b763/wing.jpg" = "Boeing 767-323ER spoilers on descent to POS, AAL 1167, 11-29-12.jpg"
+  "b763/vstab.jpg" = "ET-ALO at ADD.jpg"
+  "b763/hstab.jpg" = "Ba b767-300 g-bnwa planform arp.jpg"
+  "b763/gear.jpg" = "American Airlines B767-300ER main landing gear.jpg"
+  "a332/overview.jpg" = "Airbus A330-200 Hainan AL (CHH) F-WWYJ - MSN 1168 - Will be B-6520 (5413679264).jpg"
+  "a332/cockpit.jpg" = "13-08-06-Cockpit-d-alpa-a330-200.jpg"
+  "a332/fuselage.jpg" = "KLM Airbus A330-200 PH-AOI nose section (3186787311).jpg"
+  "a332/engine.jpg" = "Pratt & Whitney PW4000 turbofan with open cowling.jpg"
+  "a332/wingtip.jpg" = "翼尖小翼02.JPG"
+  "a332/wing.jpg" = "Window and wing inflight.jpg"
+  "a332/vstab.jpg" = "KLM Airbus A330-200 PH-AOC tail (6924834528).jpg"
+  "a332/hstab.jpg" = "Cyprus airways a330-200 5b-dbs arp.jpg"
+  "a332/gear.jpg" = "VH-SSA 'Outback' Airbus A330-223 Strategic Airlines (7107083943).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -155,6 +173,10 @@ $windowPhotos = @(
   @{ Dest="b752/window-side.jpg"; Title="The front end of a 757 (2710024227).jpg"; Crop=@(.03,.08,.62) }
   @{ Dest="a321/window-front.jpg"; Title="Delta A321 at Airbus Mobile.jpg"; Crop=@(.02,.10,.78) }
   @{ Dest="a321/window-side.jpg"; Title="Finnair Airbus A321 OH-LZF Oslo Gardermoen 2024 (02).jpg"; Crop=@(.47,.07,.46) }
+  @{ Dest="b763/window-front.jpg"; Title="Boeing 767-300ER (Japan Airlines) 02.jpg"; Crop=@(.35,.42,.30) }
+  @{ Dest="b763/window-side.jpg"; Title="Hawaiian Airlines (N592HA) Boeing 767-300ER at Sydney Airport.jpg"; Crop=@(.01,.29,.32) }
+  @{ Dest="a332/window-front.jpg"; Title="Face to face (F-OONE) (14771492742).jpg"; Crop=@(.28,.12,.44) }
+  @{ Dest="a332/window-side.jpg"; Title="KLM Airbus A330-200 PH-AOI nose section (3186787311).jpg"; Crop=@(.58,.17,.40) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600

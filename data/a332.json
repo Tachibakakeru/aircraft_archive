@@ -2,19 +2,30 @@
   "title": "Airbus A330-200",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A330-200 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "A330-200 機身外寬約 5.64 m，經濟艙典型為 2-4-2；短於 A330-300，但仍比 767-300 更粗、更長，翼身整流罩也更大。",
+        "en": "The A330-200 fuselage is about 5.64 m wide and typically seats 2-4-2 in economy. It is shorter than the A330-300 but wider and longer than the 767-300, with a larger wing-body fairing.",
+        "ja": "A330-200の胴体幅は約5.64 m、エコノミーは通常2-4-2です。A330-300より短い一方、767-300より太く長く、翼胴フェアリングも大型です。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "A330-200 常見每側四個大型主艙門，但門與窗配置仍會依客艙方案變化；應以機身比例與尾翼交叉判讀。",
+        "en": "Four large main doors per side are common, but cabin configuration can alter door and window details; cross-check body proportions and tail.",
+        "ja": "片側4枚の大型ドアが一般的ですが、客室仕様で細部が変わるため胴体比率と尾翼も確認します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "寬機身讓窗列與艙門看起來較矮。",
+          "en": "The wide body makes windows and doors look proportionally shorter.",
+          "ja": "太い胴体により窓とドアは相対的に低く見えます。"
+        },
+        {
+          "zh": "翼身整流罩寬大且向後延伸。",
+          "en": "The broad wing-body fairing extends well aft.",
+          "ja": "大型翼胴フェアリングが後方へ長く伸びます。"
+        },
+        {
+          "zh": "較短機身搭配大翼，比例不同於 A330-300。",
+          "en": "The short fuselage and large wing differ in proportion from the A330-300.",
+          "ja": "短い胴体と大きな主翼の比率はA330-300と異なります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a332/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOI_nose_section_(3186787311).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A330-200 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "A330-200 駕駛艙採 Airbus 側桿、正面桌板、六具顯示器與中央上下排列 ECAM；正副駕駛前方沒有駕駛盤與操縱柱。",
+        "en": "The A330-200 flight deck uses Airbus sidesticks, forward tray tables, six displays and vertically stacked central ECAM screens, with no yokes or control columns ahead of the pilots.",
+        "ja": "A330-200の操縦席はAirbus式サイドスティック、正面テーブル、6面表示器、上下配置ECAMを備え、正面に操縦輪や柱はありません。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "與 767 相比，側桿對駕駛盤是最直觀差異；螢幕可能因改裝而更新，但基本操縱哲學不變。",
+        "en": "Against the 767, sidesticks versus yokes are the clearest cue. Screens may be upgraded, but the control philosophy remains.",
+        "ja": "767との最明確な差はサイドスティック対操縦輪です。画面は改修されても操縦思想は変わりません。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "側桿位於左右側壁。",
+          "en": "Sidesticks are mounted on the sidewalls.",
+          "ja": "サイドスティックは左右側壁にあります。"
+        },
+        {
+          "zh": "飛行員正前方可使用折疊桌板。",
+          "en": "Tray tables occupy the unobstructed space ahead of the pilots.",
+          "ja": "操縦席正面の空間に折り畳みテーブルがあります。"
+        },
+        {
+          "zh": "中央 ECAM 顯示引擎與系統狀態。",
+          "en": "Central ECAM screens show engine and system status.",
+          "ja": "中央ECAMがエンジンとシステム状態を表示します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a332/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:13-08-06-Cockpit-d-alpa-a330-200.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A330-200 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "A330ceo 主翼展約 60.3 m，展弦比高、翼根厚且翼身整流罩寬大；相較 767-300 的 47.57 m 原始翼展，遠距離就能看出更大的翼面。",
+        "en": "The A330ceo spans about 60.3 m, with a high-aspect-ratio wing, thick root and broad fairing. Its wing is visibly larger than the original 47.57 m-span 767-300 wing.",
+        "ja": "A330ceoの翼幅は約60.3 mで、高アスペクト比、厚い翼根、大型フェアリングを持ち、原型翼幅47.57 mの767-300より明らかに大型です。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "A330-200 與 -300 共用基本主翼；判子型仍要看機身長度與 -200 較大的垂直尾翼。",
+        "en": "The A330-200 and -300 share the basic wing; identify the variant using fuselage length and the -200's larger fin.",
+        "ja": "A330-200と-300は基本主翼を共有するため、胴体長と-200の大型垂尾で子型を判断します。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "主翼長而後掠，外翼末端接直立三角翼梢。",
+          "en": "The long swept wing ends in an upright triangular tip device.",
+          "ja": "長い後退主翼の端に直立三角翼端があります。"
+        },
+        {
+          "zh": "翼根厚、翼身整流罩寬大。",
+          "en": "The root is thick and the wing-body fairing broad.",
+          "ja": "翼根が厚く翼胴フェアリングも大型です。"
+        },
+        {
+          "zh": "多片擾流板與大型襟翼佔據後緣。",
+          "en": "Multiple spoilers and large flaps occupy the wing and trailing edge.",
+          "ja": "複数スポイラーと大型フラップが翼後縁を占めます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a332/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Window_and_wing_inflight.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A330-200 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A330-200 可搭載 GE CF6-80E1、Pratt & Whitney PW4000 或 Rolls-Royce Trent 700；三種短艙外觀不同，但整體尺寸通常大於 767 的對應引擎。",
+        "en": "The A330-200 can use GE CF6-80E1, Pratt & Whitney PW4000 or Rolls-Royce Trent 700 engines. Their nacelles differ, but are generally larger than corresponding 767 installations.",
+        "ja": "A330-200はCF6-80E1、PW4000、Trent 700を選択でき、形状は異なりますが767用より一般に大型です。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "參考照片是 A330-223 的 PW4000 開罩狀態；引擎品牌與 767 有重疊，不能單靠風扇或商標判型。",
+        "en": "The reference shows an open-cowling PW4000 on an A330-223. Engine brands overlap with the 767, so fan or branding alone is insufficient.",
+        "ja": "参考写真はA330-223のPW4000開放状態です。767とメーカーが重なるため、ファンやロゴだけでは判別できません。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "短艙直徑相對 767 更大。",
+          "en": "Nacelle diameter is larger relative to the 767's.",
+          "ja": "ナセル径は767より大きいです。"
+        },
+        {
+          "zh": "三種引擎的進氣口、整流罩與排氣段不同。",
+          "en": "The three options differ in inlet, cowling and exhaust details.",
+          "ja": "3種類で吸気口、カウリング、排気部が異なります。"
+        },
+        {
+          "zh": "短艙後緣平滑，沒有 787 式鋸齒。",
+          "en": "Nacelle trailing edges are smooth without 787-style chevrons.",
+          "ja": "ナセル後縁は滑らかで787式シェブロンはありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a332/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Pratt_%26_Whitney_PW4000_turbofan_with_open_cowling.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "A330-200 因機身較短、尾力臂較小，使用比 A330-300 更大的垂直尾翼；高大後掠尾翼與厚實根部是辨認 -200 的重要家族內線索。",
+        "en": "Because its shorter fuselage gives less tail moment arm, the A330-200 uses a larger vertical fin than the A330-300. The tall swept fin and substantial root are useful within-family cues.",
+        "ja": "A330-200は短い胴体で尾部モーメントアームが小さいため、A330-300より大型の垂直尾翼を使い、高い後退尾翼と厚い根元が子型識別に役立ちます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "對比 767，A330 尾部建立在更粗的機身與更寬的背鰭過渡上；尾翼塗裝仍不能取代形狀判讀。",
+        "en": "Against the 767, the A330 tail rises from a fuller fuselage and broader dorsal transition; livery still cannot replace shape cues.",
+        "ja": "767に比べ太い胴体と広い背びれ移行部から尾翼が立ち上がります。塗装だけでは判別できません。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "-200 垂尾比例高大，面積大於 -300。",
+          "en": "The -200 fin is proportionally tall and larger than the -300's.",
+          "ja": "-200の垂尾は相対的に高く、-300より大きいです。"
+        },
+        {
+          "zh": "根部過渡寬厚，連接較粗後機身。",
+          "en": "A broad thick root blends into the fuller aft fuselage.",
+          "ja": "幅広く厚い根元が太い後部胴体へつながります。"
+        },
+        {
+          "zh": "尾錐末端為 APU 排氣口。",
+          "en": "The tailcone ends at the APU exhaust.",
+          "ja": "尾部先端にAPU排気口があります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a332/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOC_tail_(6924834528).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "A330-200 的低置水平尾翼面積與展幅都大於 767，後掠翼面從厚翼根向外收尖；全機下方照片可直接比較尾翼與寬機身比例。",
+        "en": "The A330-200's low-mounted tailplane is larger in area and span than the 767's, tapering from a thick swept root. An underside view shows its scale against the wide fuselage.",
+        "ja": "A330-200の低位置水平尾翼は767より面積・幅が大きく、厚い後退翼根から細くなります。下面写真で太い胴体との比率を確認できます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "水平尾翼本身不是主要判據；兩型布局相同，應配合翼尖、機身寬度與垂尾比例。",
+        "en": "Tailplane shape alone is secondary because both types share the layout; combine it with wingtips, fuselage width and fin proportion.",
+        "ja": "両型とも同配置のため水平尾翼単独は補助的で、翼端、胴体幅、垂尾比率と組み合わせます。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "水平尾翼從粗壯尾錐兩側伸出。",
+          "en": "The tailplanes project from either side of a broad tailcone.",
+          "ja": "太い尾部の両側から水平尾翼が伸びます。"
+        },
+        {
+          "zh": "翼根厚、外段後掠並收尖。",
+          "en": "The root is thick and the swept outer panel tapers.",
+          "ja": "翼根が厚く、外側は後退して細くなります。"
+        },
+        {
+          "zh": "與大垂尾組成較厚重的尾部輪廓。",
+          "en": "Together with the large fin it forms a fuller empennage.",
+          "ja": "大型垂尾とともに厚みある尾部輪郭を作ります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a332/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cyprus_airways_a330-200_5b-dbs_arp.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus A330-200 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "A330-200 每側主起落架為兩軸四輪轉向架，前起落架雙輪；主腳向內收進寬大的翼身整流罩。",
+        "en": "Each A330-200 main gear has a two-axle four-wheel bogie and the nose gear has two wheels; the main units retract inward into the broad wing-body fairing.",
+        "ja": "A330-200の各主脚は2軸4輪、前脚は2輪で、主脚は内側へ大型翼胴フェアリング内に格納されます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "輪數與 767-300 完全相同；應比較 A330 較寬輪距、粗機身、較大型主翼與不同的支柱／艙門形狀。",
+        "en": "Wheel counts exactly match the 767-300. Use the A330's wider track, fuller body, larger wing and different strut/door geometry.",
+        "ja": "輪数は767-300と同じため、A330の広い脚間隔、太い胴体、大型主翼、脚柱・扉形状を比較します。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳四輪，前腳雙輪。",
+          "en": "Four tyres sit on each main bogie with twin nose wheels.",
+          "ja": "各主脚4輪、前脚2輪です。"
+        },
+        {
+          "zh": "主腳輪距與支柱尺度大於 767。",
+          "en": "Main-gear track and strut scale are greater than the 767's.",
+          "ja": "主脚間隔と脚柱寸法は767より大きいです。"
+        },
+        {
+          "zh": "輪艙位於寬大的翼身整流罩內。",
+          "en": "The gear bays sit within the broad wing-body fairing.",
+          "ja": "脚格納庫は大型翼胴フェアリング内にあります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a332/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:VH-SSA_%27Outback%27_Airbus_A330-223_Strategic_Airlines_(7107083943).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A330-200 是短機身長程廣體雙發客機，圓鈍 Airbus 機鼻、寬機身、大展弦比主翼與短小直立三角翼梢，是對比 767-300 的主要外觀線索。",
+        "en": "The A330-200 is a short-fuselage long-range wide-body twin, identified against the 767-300 by its rounded Airbus nose, wider body, large high-aspect-ratio wing and small upright triangular tip devices.",
+        "ja": "A330-200は短胴長距離ワイドボディ双発機で、丸いAirbus機首、太い胴体、大型高アスペクト比主翼、小型直立三角翼端が767-300との主要差です。"
+      },
+      "fact": {
+        "zh": "A330-200 比 767-300 更長也更寬，但機身相對主翼看起來較短粗；A330-300 又比 -200 長，不能只靠家族特徵判子型。",
+        "en": "The A330-200 is longer and wider than the 767-300 yet looks shorter and fuller relative to its wing. The A330-300 is longer again, so family cues alone do not identify the variant.",
+        "ja": "A330-200は767-300より長く太い一方、主翼に対して短く太く見えます。A330-300はさらに長いため、家族特徴だけで子型は判別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "全長約 58.82 m，機身外寬約 5.64 m。",
+          "en": "Length is about 58.82 m and fuselage width about 5.64 m.",
+          "ja": "全長約58.82 m、胴体外幅約5.64 mです。"
+        },
+        {
+          "zh": "圓鈍機鼻與寬大機身比 767 更厚實。",
+          "en": "The rounded nose and wide body look fuller than the 767.",
+          "ja": "丸い機首と太い胴体は767より量感があります。"
+        },
+        {
+          "zh": "A330ceo 翼尖有短小直立三角翼梢。",
+          "en": "A330ceos carry small upright triangular tip devices.",
+          "ja": "A330ceo翼端には小型直立三角翼端があります。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a332/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A330-200_Hainan_AL_(CHH)_F-WWYJ_-_MSN_1168_-_Will_be_B-6520_(5413679264).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A330 使用經典 Airbus 六片式窗帶：正面兩片風擋呈斜邊梯形，外側窗沿圓鈍機鼻向後包覆，正面輪廓比 767 更寬。",
+        "en": "The A330 uses the classic six-pane Airbus belt: two trapezoidal front windscreens and outer panes wrapping around a rounded nose, producing a wider frontal outline than the 767.",
+        "ja": "A330は古典的なAirbus六枚窓で、台形の前面2枚と丸い機首へ回り込む外側窓により、767より正面輪郭が広く見えます。"
+      },
+      "fact": {
+        "zh": "A330-200 與 -300 的窗型幾乎相同，需用機身長度與垂尾比例判子型；窗片數也不能單獨排除 767。",
+        "en": "A330-200 and -300 glazing is nearly identical; use fuselage length and fin proportions for the variant. Pane count alone also does not exclude a 767.",
+        "ja": "A330-200と-300の窓形状はほぼ同じで、胴体長と垂尾比率で子型を判断します。窓枚数だけでは767も除外できません。"
+      },
+      "bullets": [
+        {
+          "zh": "圓鼻使窗帶向兩側平滑展開。",
+          "en": "The rounded nose lets the window belt spread smoothly sideways.",
+          "ja": "丸い機首に沿って窓帯が両側へ滑らかに広がります。"
+        },
+        {
+          "zh": "主風擋斜邊明顯，中央接縫較短。",
+          "en": "The front panes have obvious slanted edges and a shorter centre seam.",
+          "ja": "前面窓の斜辺が明瞭で中央継ぎ目は短めです。"
+        },
+        {
+          "zh": "整組玻璃相對機身看起來更寬低。",
+          "en": "The glazing appears wider and lower relative to the fuselage.",
+          "ja": "窓全体は胴体に対して幅広く低く見えます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a332/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Face_to_face_(F-OONE)_(14771492742).jpg"
+        },
+        {
+          "src": "assets/reference/a332/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOI_nose_section_(3186787311).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "A330ceo 翼尖有短小直立三角翼梢，前緣後掠、頂端收尖；與 767 原始平直翼尖或高大後裝小翼都很不同。",
+        "en": "The A330ceo has a short upright triangular tip device with a swept leading edge and tapered top, unlike either the 767's plain tip or tall retrofit winglet.",
+        "ja": "A330ceoは前縁が後退し上端が細くなる短い直立三角翼端を持ち、767の通常翼端や大型後付け小翼と明確に異なります。"
+      },
+      "fact": {
+        "zh": "A330neo 改用 A350 風格大型彎曲翼尖，不能套用 ceo 判法；本條目針對 A330-200ceo。",
+        "en": "A330neos use larger A350-inspired curved tips, so this ceo cue does not apply; this entry covers the A330-200ceo.",
+        "ja": "A330neoはA350風大型曲線翼端を使うため、このceo判別法は適用できません。本項はA330-200ceoです。"
+      },
+      "bullets": [
+        {
+          "zh": "三角翼梢自翼端向上伸出並逐漸收尖。",
+          "en": "The triangular device rises from the tip and tapers upward.",
+          "ja": "三角翼端は翼端から上へ伸びて細くなります。"
+        },
+        {
+          "zh": "輪廓遠小於 767 融合式小翼。",
+          "en": "The profile is far smaller than a 767 blended winglet.",
+          "ja": "767ブレンデッド・ウイングレットよりはるかに小型です。"
+        },
+        {
+          "zh": "所有 A330ceo 家族都可見相近翼尖語彙。",
+          "en": "A similar tip vocabulary appears across the A330ceo family.",
+          "ja": "A330ceoファミリーで同様の翼端形状が見られます。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a332/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:%E7%BF%BC%E5%B0%96%E5%B0%8F%E7%BF%BC02.JPG"
+        }
+      ]
     }
   },
   "specifications": {

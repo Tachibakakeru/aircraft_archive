@@ -2,18 +2,30 @@
   "title": "Boeing 767-300",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 767-300 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "767-300 機身外寬約 5.03 m，典型經濟艙為 2-3-2；側面看起來比 A330-200 窄長。客艙門與翼上出口配置會依航空公司及認證方案不同。",
+        "en": "The 767-300 fuselage is about 5.03 m wide and typically seats 2-3-2 in economy, giving a narrower, longer look than the A330-200. Door and overwing-exit layouts vary by operator and certification configuration.",
+        "ja": "767-300の胴体幅は約5.03 m、エコノミーは通常2-3-2で、A330-200より細長く見えます。ドアと翼上非常口配置は仕様で異なります。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "門數不是可靠的單一判據；辨識時同時比較機身直徑、前後門間距、機鼻與翼尖。",
+        "en": "Door count is not a reliable single cue; compare fuselage diameter, door spacing, nose and wingtips together.",
+        "ja": "ドア数だけでは不十分で、胴体径、ドア間隔、機首、翼端を合わせて判断します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "機身直徑明顯小於 A330。",
+          "en": "The fuselage diameter is visibly smaller than the A330's.",
+          "ja": "胴体径はA330より明らかに小さいです。"
+        },
+        {
+          "zh": "舷窗列沿修長機身延伸，翼身整流罩較緊湊。",
+          "en": "The window row runs along a slender body with a compact wing-body fairing.",
+          "ja": "細長い胴体に窓列が続き、翼胴フェアリングは小型です。"
+        },
+        {
+          "zh": "客貨型與不同出口方案會改變艙門外觀。",
+          "en": "Passenger, freighter and exit configurations alter door appearance.",
+          "ja": "旅客型・貨物型・出口仕様によりドア外観が変わります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b763/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_767-300ER_United_Airlines_N656UA.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 767-300 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "767-300 原始翼展約 47.57 m，主翼後掠且面積小於 A330；翼根與翼身整流罩較緊湊，後裝小翼機翼展會增加。",
+        "en": "The original 767-300 spans about 47.57 m. Its swept wing is smaller than the A330's, with a more compact root and fairing; retrofit winglets increase span.",
+        "ja": "767-300の原型翼幅は約47.57 mで、A330より小さく、翼根とフェアリングも小型です。後付け小翼で翼幅は増えます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "由上方或下方看，767 的機翼相對窄機身仍很寬，但絕對展幅及翼面積都小於 A330-200。",
+        "en": "In plan view the wing is broad against the narrow fuselage, yet absolute span and area remain smaller than the A330-200's.",
+        "ja": "平面では細い胴体に対して広く見えますが、絶対的な翼幅と面積はA330-200より小さいです。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "主翼後掠，翼尖原始為簡單收尖。",
+          "en": "The swept wing originally ends in a simple tapered tip.",
+          "ja": "後退主翼は原型では単純に細く終わります。"
+        },
+        {
+          "zh": "翼上有多片擾流板與雙縫襟翼。",
+          "en": "Multiple spoilers and double-slotted flaps occupy the upper and trailing wing.",
+          "ja": "翼上に複数スポイラー、後縁に二重隙間フラップがあります。"
+        },
+        {
+          "zh": "翼身整流罩比 A330 更短小。",
+          "en": "The wing-body fairing is shorter and smaller than the A330's.",
+          "ja": "翼胴フェアリングはA330より短く小型です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b763/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_767-323ER_spoilers_on_descent_to_POS,_AAL_1167,_11-29-12.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 767-300 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "767-300／-300ER 可搭載 GE CF6-80C2、Pratt & Whitney PW4000 或 Rolls-Royce RB211-524；短艙直徑與推力級通常小於 A330-200 的同世代引擎。",
+        "en": "The 767-300/-300ER can use GE CF6-80C2, Pratt & Whitney PW4000 or Rolls-Royce RB211-524 engines. Their nacelles and thrust class are generally smaller than contemporary A330-200 installations.",
+        "ja": "767-300／-300ERはCF6-80C2、PW4000、RB211-524を装備でき、ナセル径と推力級は同世代A330-200より一般に小さめです。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "兩型都可能掛 CF6 或 PW4000，所以不能只看製造商；應比較短艙相對機身的尺寸、翼尖與機鼻。",
+        "en": "Both types may carry CF6 or PW4000 engines, so manufacturer alone is insufficient; compare nacelle-to-body scale, wingtips and nose.",
+        "ja": "両型ともCF6やPW4000を搭載し得るため、メーカーだけでなく胴体に対するナセル寸法、翼端、機首を比較します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "CF6-80C2 短艙相對窄小，後緣平滑。",
+          "en": "The CF6-80C2 nacelle is relatively compact with a smooth trailing edge.",
+          "ja": "CF6-80C2ナセルは比較的小型で後縁は滑らかです。"
+        },
+        {
+          "zh": "RB211 安裝可由不同的進氣口與排氣段辨認。",
+          "en": "RB211 installations have different inlet and exhaust details.",
+          "ja": "RB211装備は吸気口と排気部の形状が異なります。"
+        },
+        {
+          "zh": "所有傳統選項都沒有 787 式鋸齒短艙。",
+          "en": "None of the traditional options has 787-style chevrons.",
+          "ja": "いずれも787式シェブロンはありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b763/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_Boeing_767-300ER_with_CF6-80_engines.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "767 垂直尾翼前緣大幅後掠、頂端略方，根部背鰭不長；尾錐細長，整體尾部比 A330-200 更纖細。",
+        "en": "The 767 fin has a strongly swept leading edge, a slightly squared tip and a modest dorsal fillet. Its long narrow tailcone makes the empennage look slimmer than the A330-200's.",
+        "ja": "767の垂直尾翼は強い後退前縁、やや角形の上端、小さめの背びれを持ち、細長い尾部でA330-200より軽快に見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "尾翼塗裝無法判定機型；應用尾錐粗細、翼尖與機身直徑交叉確認。",
+        "en": "Tail livery does not identify the type; cross-check tailcone width, wingtips and fuselage diameter.",
+        "ja": "尾翼塗装では判型できず、尾部の太さ、翼端、胴体径を照合します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "尾翼前緣後掠明顯，根部過渡較短。",
+          "en": "The leading edge is strongly swept with a short root transition.",
+          "ja": "前縁後退が強く、根元の移行部は短めです。"
+        },
+        {
+          "zh": "細尾錐末端可見 APU 排氣口。",
+          "en": "The slender tailcone ends at the APU exhaust.",
+          "ja": "細い尾部先端にAPU排気口があります。"
+        },
+        {
+          "zh": "相對窄機身，垂尾顯得高而薄。",
+          "en": "Against the narrow fuselage the fin looks tall and thin.",
+          "ja": "細い胴体に対して垂直尾翼は高く薄く見えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b763/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ET-ALO_at_ADD.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "767 的低置水平尾翼後掠且向外收尖；由下方平面照片可同時比較其展幅、升降舵分段與細長尾錐。",
+        "en": "The 767's low-mounted tailplane is swept and tapered. An underside planform view reveals its span, segmented elevators and slender tailcone together.",
+        "ja": "767の低位置水平尾翼は後退して翼端へ細くなり、下面写真で翼幅、分割昇降舵、細い尾部を同時に確認できます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "水平尾翼外形只能作輔助；兩型都是傳統低置布局，應優先看翼尖與機身直徑。",
+        "en": "Tailplane shape is secondary because both aircraft use conventional low-mounted layouts; prioritize wingtips and fuselage diameter.",
+        "ja": "両型とも通常の低位置配置のため水平尾翼は補助情報で、翼端と胴体径を優先します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "後掠平面由厚翼根向外快速收尖。",
+          "en": "The swept planform tapers quickly from a thick root.",
+          "ja": "厚い翼根から外側へ急速に細くなります。"
+        },
+        {
+          "zh": "升降舵沿後緣分段配置。",
+          "en": "Segmented elevators line the trailing edge.",
+          "ja": "後縁に分割昇降舵があります。"
+        },
+        {
+          "zh": "下方全機照片能同時觀察主翼與尾翼比例。",
+          "en": "The underside view shows wing and tail proportions together.",
+          "ja": "下面全景で主翼と尾翼の比率を同時に確認できます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b763/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Ba_b767-300_g-bnwa_planform_arp.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 767-300 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "767-300 每側主起落架為兩軸四輪轉向架，前起落架雙輪；這與 A330-200 相同，因此輪胎數不能區分兩型。",
+        "en": "Each 767-300 main gear has a two-axle four-wheel bogie and the nose gear has two wheels. The A330-200 uses the same counts, so wheel number does not separate them.",
+        "ja": "767-300の各主脚は2軸4輪、前脚は2輪で、A330-200も同じため輪数では区別できません。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "近距離應比較較窄的輪距、支柱與艙門形狀，並回看機身寬度；不要把『四輪主腳』誤認成 777。",
+        "en": "At close range compare narrower track, strut and door geometry, then check fuselage width; four-wheel bogies do not imply a 777.",
+        "ja": "近距離では狭い輪距、脚柱、扉形状と胴体幅を確認し、4輪主脚だけで777と判断しないでください。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳四輪，前腳雙輪。",
+          "en": "Four tyres sit on each main bogie with twin nose wheels.",
+          "ja": "各主脚4輪、前脚2輪です。"
+        },
+        {
+          "zh": "主腳收進翼根附近的輪艙。",
+          "en": "The main gear retracts into bays near the wing root.",
+          "ja": "主脚は翼根付近の格納庫へ収まります。"
+        },
+        {
+          "zh": "機身與輪距都比 A330 窄。",
+          "en": "Both fuselage and gear track are narrower than the A330's.",
+          "ja": "胴体と脚間隔はいずれもA330より狭いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b763/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:American_Airlines_B767-300ER_main_landing_gear.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "767-300 是窄體感明顯的雙走道雙發客機：機身修長、機鼻較尖、主翼與引擎尺度都小於 A330-200；原始翼尖平直，部分 -300ER 後來加裝高大融合式小翼。",
+        "en": "The 767-300 is a visibly slender twin-aisle twinjet with a pointed nose and smaller wing and engines than the A330-200. Original tips are plain, while some -300ERs received tall blended winglets.",
+        "ja": "767-300は細身の双通路双発機で、尖った機首とA330-200より小さい主翼・エンジンが特徴です。原型は通常翼端ですが、一部-300ERは大型ブレンデッド・ウイングレットを装備します。"
+      },
+      "fact": {
+        "zh": "最可靠的遠距離組合是『窄長機身＋較尖機鼻＋較小主翼』；若有高大小翼仍要確認機身寬度，不能直接判成 737 或 757。",
+        "en": "The strongest long-range combination is a narrow long body, pointed nose and relatively small wing. A tall winglet alone does not distinguish it from a 737 or 757.",
+        "ja": "遠距離では細長い胴体、尖った機首、比較的小さい主翼の組合せが有効です。大型ウイングレットだけで737や757と判断できません。"
+      },
+      "bullets": [
+        {
+          "zh": "全長約 54.94 m，機身外寬約 5.03 m。",
+          "en": "Length is about 54.94 m and fuselage width about 5.03 m.",
+          "ja": "全長約54.94 m、胴体外幅約5.03 mです。"
+        },
+        {
+          "zh": "機鼻與尾錐都比 A330-200 更細長。",
+          "en": "Both nose and tailcone are slimmer than the A330-200's.",
+          "ja": "機首と尾部はいずれもA330-200より細長いです。"
+        },
+        {
+          "zh": "翼尖可能是原始平直型或後裝融合式小翼。",
+          "en": "Tips may be original plain tips or retrofit blended winglets.",
+          "ja": "翼端は原型または後付けブレンデッド型があります。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b763/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hawaiian_Airlines_(N592HA)_Boeing_767-300ER_at_Sydney_Airport.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "767 駕駛艙採 Boeing 駕駛盤與中央操縱柱，典型布局有六具 CRT／液晶顯示器、中央 EICAS 與傳統模式控制面板；後期改裝機的螢幕可能更現代。",
+        "en": "The 767 flight deck uses Boeing yokes and control columns, typically with six CRT/LCD displays, central EICAS and a conventional mode-control panel; retrofit aircraft may have newer screens.",
+        "ja": "767の操縦席はBoeing式操縦輪とコントロールコラム、通常6面のCRT／LCD、中央EICAS、従来型モード制御盤を備え、改修機は新型画面の場合があります。"
+      },
+      "fact": {
+        "zh": "對比 A330 最直接的是駕駛員正前方的駕駛盤；顯示器新舊不能單獨判型，因 767 與 A330 都有航電升級。",
+        "en": "The clearest contrast with the A330 is the yoke ahead of each pilot. Display generation alone is unreliable because both types have avionics upgrades.",
+        "ja": "A330との最明確な差は各操縦席正面の操縦輪です。両型とも改修例があるため画面世代だけでは判別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "正副駕駛前方均有駕駛盤與操縱柱。",
+          "en": "A yoke and control column sit ahead of each pilot.",
+          "ja": "両席正面に操縦輪とコントロールコラムがあります。"
+        },
+        {
+          "zh": "中央 EICAS 顯示引擎與警告資訊。",
+          "en": "Central EICAS displays show engine and alert information.",
+          "ja": "中央EICASがエンジンと警報情報を表示します。"
+        },
+        {
+          "zh": "中央推力台與大量實體旋鈕呈現 1980 年代 Boeing 風格。",
+          "en": "The throttle pedestal and physical controls reflect 1980s Boeing design.",
+          "ja": "スロットル台と多数の物理操作部は1980年代Boeing設計です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b763/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AeroMexico_Boeing_767-300ER_cockpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "767 使用六片式駕駛艙窗，正面兩片風擋較直立，外側窗帶形成明顯折角；配合較尖且略下垂的機鼻，正面輪廓比 A330 更窄。",
+        "en": "The 767 uses six cockpit panes with upright front windscreens and an angular outer belt. Combined with its pointed, slightly drooped nose, the frontal outline is narrower than the A330's.",
+        "ja": "767は6枚窓で、直立気味の前面窓と角張った外側窓帯を持ちます。尖ってやや下がる機首と組み合わさり、A330より正面輪郭が狭く見えます。"
+      },
+      "fact": {
+        "zh": "757 與 767 的窗型與機鼻語彙相近；需要再用機身寬度、主翼與引擎尺度區分，不能只數窗片。",
+        "en": "The 757 and 767 share similar window and nose styling; use fuselage width, wing and engine scale rather than pane count alone.",
+        "ja": "757と767は窓・機首形状が近いため、窓枚数だけでなく胴体幅、主翼、エンジン寸法で区別します。"
+      },
+      "bullets": [
+        {
+          "zh": "中央接縫長，正面風擋輪廓偏方正。",
+          "en": "The centre seam is long and the forward panes look relatively square.",
+          "ja": "中央継ぎ目が長く、前面窓は比較的四角く見えます。"
+        },
+        {
+          "zh": "側窗向後收尖，但窗帶整體較窄。",
+          "en": "Side panes taper aft within a relatively narrow window belt.",
+          "ja": "側窓は後方へ細くなり、窓帯全体は比較的狭いです。"
+        },
+        {
+          "zh": "尖細機鼻是與 A330 圓鈍機鼻的重要差異。",
+          "en": "The slender pointed nose is a key contrast with the rounded A330 nose.",
+          "ja": "細く尖った機首が丸いA330との重要な差です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b763/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_767-300ER_(Japan_Airlines)_02.jpg"
+        },
+        {
+          "src": "assets/reference/b763/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hawaiian_Airlines_(N592HA)_Boeing_767-300ER_at_Sydney_Airport.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "767 原始主翼只有簡單後掠翼尖；部分 767-300ER 後裝 Aviation Partners Boeing 高大融合式小翼。兩種外觀都存在，不能把小翼視為全系列標配。",
+        "en": "The original 767 has a simple swept tip, while some 767-300ERs received tall Aviation Partners Boeing blended winglets. Both configurations remain valid.",
+        "ja": "767原型は単純な後退翼端で、一部767-300ERはAPB大型ブレンデッド・ウイングレットを後付けしました。両形態が存在します。"
+      },
+      "fact": {
+        "zh": "有小翼時，其高度與平滑彎曲輪廓遠大於 A330ceo 的短小直立三角翼梢。",
+        "en": "When fitted, the tall smoothly curved winglet is much larger than the short upright triangular A330ceo tip device.",
+        "ja": "装備時は高く滑らかな曲面で、A330ceoの短い直立三角翼端よりはるかに大きいです。"
+      },
+      "bullets": [
+        {
+          "zh": "原始翼尖沒有直立擋板。",
+          "en": "Original tips have no upright fence.",
+          "ja": "原型翼端に直立フェンスはありません。"
+        },
+        {
+          "zh": "後裝小翼高大並向上平滑彎曲。",
+          "en": "Retrofit winglets are tall and curve smoothly upward.",
+          "ja": "後付け型は高く滑らかに上方へ曲がります。"
+        },
+        {
+          "zh": "判型前先確認是否為改裝機。",
+          "en": "Establish whether the aircraft is retrofitted before identifying it.",
+          "ja": "改修機かどうかを確認してから判別します。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b763/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ALL_NIPPON_BOEING_767-300_WINGLETS_AT_NARITA_AIRPORT_TOKYO_JAPAN_JUNE_2012_(7456802526).jpg"
+        }
+      ]
     }
   },
   "specifications": {

@@ -171,3 +171,39 @@ The winglet photograph shows a retrofit blended winglet. The original 757 wing u
 | `a321/gear.jpg` | [Finnair Airbus A321 OH-LZA main landing gear](https://commons.wikimedia.org/wiki/File:Port_side_main_landing_gear_of_Finnair_Airbus_A321_OH-LZA.jpg), Markus Säynevirta | CC BY-SA 4.0 |
 
 The comparison focuses on the A321ceo-style data in the project. Door, engine and wingtip layouts can differ on A321neo, A321LR, A321XLR and Airbus Cabin Flex aircraft; those differences are stated in the identification text.
+
+## Boeing 767-300 (`b763`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b763/overview.jpg` | [Hawaiian Airlines Boeing 767-300ER N592HA](https://commons.wikimedia.org/wiki/File:Hawaiian_Airlines_(N592HA)_Boeing_767-300ER_at_Sydney_Airport.jpg), YSSYguy | CC BY-SA 3.0 |
+| `b763/cockpit.jpg` | [AeroMexico Boeing 767-300ER cockpit](https://commons.wikimedia.org/wiki/File:AeroMexico_Boeing_767-300ER_cockpit.jpg), Luisrmb 772 | CC BY 3.0 |
+| `b763/window-front.jpg` | [Japan Airlines Boeing 767-300ER front view](https://commons.wikimedia.org/wiki/File:Boeing_767-300ER_(Japan_Airlines)_02.jpg), 221.20; cropped to emphasize front-window geometry | Public domain |
+| `b763/window-side.jpg` | [Hawaiian Airlines Boeing 767-300ER N592HA](https://commons.wikimedia.org/wiki/File:Hawaiian_Airlines_(N592HA)_Boeing_767-300ER_at_Sydney_Airport.jpg), YSSYguy; cropped to emphasize side-window geometry | CC BY-SA 3.0 |
+| `b763/fuselage.jpg` | [United Airlines Boeing 767-300ER N656UA](https://commons.wikimedia.org/wiki/File:Boeing_767-300ER_United_Airlines_N656UA.jpg), Björn Strey | CC BY-SA 2.0 |
+| `b763/engine.jpg` | [Air Canada Boeing 767-300ER with CF6-80 engines](https://commons.wikimedia.org/wiki/File:Air_Canada_Boeing_767-300ER_with_CF6-80_engines.jpg), Kristoferb | CC BY-SA 3.0 |
+| `b763/wingtip.jpg` | [ANA Boeing 767-300 retrofit winglets](https://commons.wikimedia.org/wiki/File:ALL_NIPPON_BOEING_767-300_WINGLETS_AT_NARITA_AIRPORT_TOKYO_JAPAN_JUNE_2012_(7456802526).jpg), calflier001 | CC BY-SA 2.0 |
+| `b763/wing.jpg` | [American Airlines 767-323ER wing and spoilers](https://commons.wikimedia.org/wiki/File:Boeing_767-323ER_spoilers_on_descent_to_POS,_AAL_1167,_11-29-12.jpg), Ilikerio | CC BY-SA 3.0 |
+| `b763/vstab.jpg` | [Ethiopian Airlines Boeing 767 ET-ALO tail](https://commons.wikimedia.org/wiki/File:ET-ALO_at_ADD.jpg), Rosemania | CC BY-SA 4.0 |
+| `b763/hstab.jpg` | [British Airways Boeing 767-300 planform](https://commons.wikimedia.org/wiki/File:Ba_b767-300_g-bnwa_planform_arp.jpg), Adrian Pingstone | Public domain |
+| `b763/gear.jpg` | [American Airlines Boeing 767-300ER main landing gear](https://commons.wikimedia.org/wiki/File:American_Airlines_B767-300ER_main_landing_gear.jpg), Bill Abbott | CC BY-SA 2.0 |
+
+The wingtip photograph shows a retrofit blended winglet. The original 767-300 wing used a plain swept tip, and many aircraft retain that configuration.
+
+## Airbus A330-200 (`a332`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a332/overview.jpg` | [Hainan Airlines Airbus A330-200 B-6520](https://commons.wikimedia.org/wiki/File:Airbus_A330-200_Hainan_AL_(CHH)_F-WWYJ_-_MSN_1168_-_Will_be_B-6520_(5413679264).jpg), Laurent ERRERA | CC BY-SA 2.0 |
+| `a332/cockpit.jpg` | [Airbus A330-200 cockpit](https://commons.wikimedia.org/wiki/File:13-08-06-Cockpit-d-alpa-a330-200.jpg), Ralf Roletschek | CC BY 3.0 |
+| `a332/window-front.jpg` | [Airbus A330 F-OONE front view](https://commons.wikimedia.org/wiki/File:Face_to_face_(F-OONE)_(14771492742).jpg), Spotting973; cropped to emphasize front-window geometry | CC BY-SA 2.0 |
+| `a332/window-side.jpg` | [KLM Airbus A330-200 PH-AOI nose](https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOI_nose_section_(3186787311).jpg), Pieter van Marion; cropped to emphasize side-window geometry | CC BY-SA 2.0 |
+| `a332/fuselage.jpg` | [KLM Airbus A330-200 PH-AOI nose and forward fuselage](https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOI_nose_section_(3186787311).jpg), Pieter van Marion | CC BY-SA 2.0 |
+| `a332/engine.jpg` | [Pratt & Whitney PW4000 with open cowling](https://commons.wikimedia.org/wiki/File:Pratt_%26_Whitney_PW4000_turbofan_with_open_cowling.jpg), Gab01 | Public domain |
+| `a332/wingtip.jpg` | [Airbus A330ceo upright triangular wingtip device](https://commons.wikimedia.org/wiki/File:%E7%BF%BC%E5%B0%96%E5%B0%8F%E7%BF%BC02.JPG), JuneAugust | CC BY-SA 4.0 |
+| `a332/wing.jpg` | [Airbus A330 window and wing in flight](https://commons.wikimedia.org/wiki/File:Window_and_wing_inflight.jpg), vlad.krasavtsev12 | CC BY-SA 2.0 |
+| `a332/vstab.jpg` | [KLM Airbus A330-200 PH-AOC tail](https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOC_tail_(6924834528).jpg), Eric Salard | CC BY-SA 2.0 |
+| `a332/hstab.jpg` | [Cyprus Airways Airbus A330-200 planform](https://commons.wikimedia.org/wiki/File:Cyprus_airways_a330-200_5b-dbs_arp.jpg), Adrian Pingstone | Public domain |
+| `a332/gear.jpg` | [Strategic Airlines Airbus A330-223 VH-SSA landing gear](https://commons.wikimedia.org/wiki/File:VH-SSA_%27Outback%27_Airbus_A330-223_Strategic_Airlines_(7107083943).jpg), Robert Frola | GFDL |
+
+The A330-200 vertical fin is enlarged relative to the A330-300 to provide adequate directional stability on the shorter fuselage. Engine details vary because operators could select CF6-80E1, PW4000 or Trent 700 powerplants.

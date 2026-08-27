@@ -160,6 +160,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:TransAsia_Airways_Airbus_A321-231_B-22612_Departing_from_Taipei_Songshan_Airport_20151003f.jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:Port_side_main_landing_gear_of_Finnair_Airbus_A321_OH-LZA.jpg",
     },
+    "b763": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Hawaiian_Airlines_(N592HA)_Boeing_767-300ER_at_Sydney_Airport.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:AeroMexico_Boeing_767-300ER_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Boeing_767-300ER_(Japan_Airlines)_02.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Hawaiian_Airlines_(N592HA)_Boeing_767-300ER_at_Sydney_Airport.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Boeing_767-300ER_United_Airlines_N656UA.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Air_Canada_Boeing_767-300ER_with_CF6-80_engines.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:ALL_NIPPON_BOEING_767-300_WINGLETS_AT_NARITA_AIRPORT_TOKYO_JAPAN_JUNE_2012_(7456802526).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Boeing_767-323ER_spoilers_on_descent_to_POS,_AAL_1167,_11-29-12.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:ET-ALO_at_ADD.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Ba_b767-300_g-bnwa_planform_arp.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:American_Airlines_B767-300ER_main_landing_gear.jpg",
+    },
+    "a332": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Airbus_A330-200_Hainan_AL_(CHH)_F-WWYJ_-_MSN_1168_-_Will_be_B-6520_(5413679264).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:13-08-06-Cockpit-d-alpa-a330-200.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Face_to_face_(F-OONE)_(14771492742).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOI_nose_section_(3186787311).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOI_nose_section_(3186787311).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Pratt_%26_Whitney_PW4000_turbofan_with_open_cowling.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:%E7%BF%BC%E5%B0%96%E5%B0%8F%E7%BF%BC02.JPG",
+        "wing": "https://commons.wikimedia.org/wiki/File:Window_and_wing_inflight.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:KLM_Airbus_A330-200_PH-AOC_tail_(6924834528).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Cyprus_airways_a330-200_5b-dbs_arp.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:VH-SSA_%27Outback%27_Airbus_A330-223_Strategic_Airlines_(7107083943).jpg",
+    },
 }
 
 
@@ -520,6 +546,110 @@ CONTENT = {
             ("標準 A321 每側主起落架為單軸雙輪，前起落架也是雙輪；短腳柱讓機身與引擎靠近地面。", "A standard A321 has a single axle with two tyres on each main gear and twin nose wheels. Short struts keep the fuselage and engines close to the ground.", "標準A321は各主脚1軸2輪、前脚2輪で、短い脚柱により胴体とエンジンが地面に近くなります。"),
             ("與 757 每側四輪主腳相比，A321 的雙輪主腳是近距離最可靠差異之一。", "Against the 757's four-wheel bogie per side, the A321's twin-wheel main gear is one of the strongest close-range identifiers.", "757の各側4輪ボギーに対し、A321の2輪主脚は近距離で最も強い識別点の一つです。"),
             [("每側主腳只有兩個輪胎。", "Each main leg carries only two tyres.", "各主脚は2輪だけです。"), ("主腳柱短，收進翼身整流罩。", "The short main leg retracts into the wing-body fairing.", "短い主脚柱は翼胴フェアリングへ格納されます。"), ("輪數、地上高度都明顯少於 757。", "Wheel count and ground clearance are both lower than the 757's.", "輪数と地上高はいずれも757より小さいです。")],
+        ),
+    },
+    "b763": {
+        "overview": identify(
+            ("767-300 是窄體感明顯的雙走道雙發客機：機身修長、機鼻較尖、主翼與引擎尺度都小於 A330-200；原始翼尖平直，部分 -300ER 後來加裝高大融合式小翼。", "The 767-300 is a visibly slender twin-aisle twinjet with a pointed nose and smaller wing and engines than the A330-200. Original tips are plain, while some -300ERs received tall blended winglets.", "767-300は細身の双通路双発機で、尖った機首とA330-200より小さい主翼・エンジンが特徴です。原型は通常翼端ですが、一部-300ERは大型ブレンデッド・ウイングレットを装備します。"),
+            ("最可靠的遠距離組合是『窄長機身＋較尖機鼻＋較小主翼』；若有高大小翼仍要確認機身寬度，不能直接判成 737 或 757。", "The strongest long-range combination is a narrow long body, pointed nose and relatively small wing. A tall winglet alone does not distinguish it from a 737 or 757.", "遠距離では細長い胴体、尖った機首、比較的小さい主翼の組合せが有効です。大型ウイングレットだけで737や757と判断できません。"),
+            [("全長約 54.94 m，機身外寬約 5.03 m。", "Length is about 54.94 m and fuselage width about 5.03 m.", "全長約54.94 m、胴体外幅約5.03 mです。"), ("機鼻與尾錐都比 A330-200 更細長。", "Both nose and tailcone are slimmer than the A330-200's.", "機首と尾部はいずれもA330-200より細長いです。"), ("翼尖可能是原始平直型或後裝融合式小翼。", "Tips may be original plain tips or retrofit blended winglets.", "翼端は原型または後付けブレンデッド型があります。")],
+        ),
+        "cockpit": identify(
+            ("767 駕駛艙採 Boeing 駕駛盤與中央操縱柱，典型布局有六具 CRT／液晶顯示器、中央 EICAS 與傳統模式控制面板；後期改裝機的螢幕可能更現代。", "The 767 flight deck uses Boeing yokes and control columns, typically with six CRT/LCD displays, central EICAS and a conventional mode-control panel; retrofit aircraft may have newer screens.", "767の操縦席はBoeing式操縦輪とコントロールコラム、通常6面のCRT／LCD、中央EICAS、従来型モード制御盤を備え、改修機は新型画面の場合があります。"),
+            ("對比 A330 最直接的是駕駛員正前方的駕駛盤；顯示器新舊不能單獨判型，因 767 與 A330 都有航電升級。", "The clearest contrast with the A330 is the yoke ahead of each pilot. Display generation alone is unreliable because both types have avionics upgrades.", "A330との最明確な差は各操縦席正面の操縦輪です。両型とも改修例があるため画面世代だけでは判別できません。"),
+            [("正副駕駛前方均有駕駛盤與操縱柱。", "A yoke and control column sit ahead of each pilot.", "両席正面に操縦輪とコントロールコラムがあります。"), ("中央 EICAS 顯示引擎與警告資訊。", "Central EICAS displays show engine and alert information.", "中央EICASがエンジンと警報情報を表示します。"), ("中央推力台與大量實體旋鈕呈現 1980 年代 Boeing 風格。", "The throttle pedestal and physical controls reflect 1980s Boeing design.", "スロットル台と多数の物理操作部は1980年代Boeing設計です。")],
+        ),
+        "windshield": identify(
+            ("767 使用六片式駕駛艙窗，正面兩片風擋較直立，外側窗帶形成明顯折角；配合較尖且略下垂的機鼻，正面輪廓比 A330 更窄。", "The 767 uses six cockpit panes with upright front windscreens and an angular outer belt. Combined with its pointed, slightly drooped nose, the frontal outline is narrower than the A330's.", "767は6枚窓で、直立気味の前面窓と角張った外側窓帯を持ちます。尖ってやや下がる機首と組み合わさり、A330より正面輪郭が狭く見えます。"),
+            ("757 與 767 的窗型與機鼻語彙相近；需要再用機身寬度、主翼與引擎尺度區分，不能只數窗片。", "The 757 and 767 share similar window and nose styling; use fuselage width, wing and engine scale rather than pane count alone.", "757と767は窓・機首形状が近いため、窓枚数だけでなく胴体幅、主翼、エンジン寸法で区別します。"),
+            [("中央接縫長，正面風擋輪廓偏方正。", "The centre seam is long and the forward panes look relatively square.", "中央継ぎ目が長く、前面窓は比較的四角く見えます。"), ("側窗向後收尖，但窗帶整體較窄。", "Side panes taper aft within a relatively narrow window belt.", "側窓は後方へ細くなり、窓帯全体は比較的狭いです。"), ("尖細機鼻是與 A330 圓鈍機鼻的重要差異。", "The slender pointed nose is a key contrast with the rounded A330 nose.", "細く尖った機首が丸いA330との重要な差です。")],
+        ),
+        "fuselage": identify(
+            ("767-300 機身外寬約 5.03 m，典型經濟艙為 2-3-2；側面看起來比 A330-200 窄長。客艙門與翼上出口配置會依航空公司及認證方案不同。", "The 767-300 fuselage is about 5.03 m wide and typically seats 2-3-2 in economy, giving a narrower, longer look than the A330-200. Door and overwing-exit layouts vary by operator and certification configuration.", "767-300の胴体幅は約5.03 m、エコノミーは通常2-3-2で、A330-200より細長く見えます。ドアと翼上非常口配置は仕様で異なります。"),
+            ("門數不是可靠的單一判據；辨識時同時比較機身直徑、前後門間距、機鼻與翼尖。", "Door count is not a reliable single cue; compare fuselage diameter, door spacing, nose and wingtips together.", "ドア数だけでは不十分で、胴体径、ドア間隔、機首、翼端を合わせて判断します。"),
+            [("機身直徑明顯小於 A330。", "The fuselage diameter is visibly smaller than the A330's.", "胴体径はA330より明らかに小さいです。"), ("舷窗列沿修長機身延伸，翼身整流罩較緊湊。", "The window row runs along a slender body with a compact wing-body fairing.", "細長い胴体に窓列が続き、翼胴フェアリングは小型です。"), ("客貨型與不同出口方案會改變艙門外觀。", "Passenger, freighter and exit configurations alter door appearance.", "旅客型・貨物型・出口仕様によりドア外観が変わります。")],
+        ),
+        "engine": identify(
+            ("767-300／-300ER 可搭載 GE CF6-80C2、Pratt & Whitney PW4000 或 Rolls-Royce RB211-524；短艙直徑與推力級通常小於 A330-200 的同世代引擎。", "The 767-300/-300ER can use GE CF6-80C2, Pratt & Whitney PW4000 or Rolls-Royce RB211-524 engines. Their nacelles and thrust class are generally smaller than contemporary A330-200 installations.", "767-300／-300ERはCF6-80C2、PW4000、RB211-524を装備でき、ナセル径と推力級は同世代A330-200より一般に小さめです。"),
+            ("兩型都可能掛 CF6 或 PW4000，所以不能只看製造商；應比較短艙相對機身的尺寸、翼尖與機鼻。", "Both types may carry CF6 or PW4000 engines, so manufacturer alone is insufficient; compare nacelle-to-body scale, wingtips and nose.", "両型ともCF6やPW4000を搭載し得るため、メーカーだけでなく胴体に対するナセル寸法、翼端、機首を比較します。"),
+            [("CF6-80C2 短艙相對窄小，後緣平滑。", "The CF6-80C2 nacelle is relatively compact with a smooth trailing edge.", "CF6-80C2ナセルは比較的小型で後縁は滑らかです。"), ("RB211 安裝可由不同的進氣口與排氣段辨認。", "RB211 installations have different inlet and exhaust details.", "RB211装備は吸気口と排気部の形状が異なります。"), ("所有傳統選項都沒有 787 式鋸齒短艙。", "None of the traditional options has 787-style chevrons.", "いずれも787式シェブロンはありません。")],
+        ),
+        "wingtip": identify(
+            ("767 原始主翼只有簡單後掠翼尖；部分 767-300ER 後裝 Aviation Partners Boeing 高大融合式小翼。兩種外觀都存在，不能把小翼視為全系列標配。", "The original 767 has a simple swept tip, while some 767-300ERs received tall Aviation Partners Boeing blended winglets. Both configurations remain valid.", "767原型は単純な後退翼端で、一部767-300ERはAPB大型ブレンデッド・ウイングレットを後付けしました。両形態が存在します。"),
+            ("有小翼時，其高度與平滑彎曲輪廓遠大於 A330ceo 的短小直立三角翼梢。", "When fitted, the tall smoothly curved winglet is much larger than the short upright triangular A330ceo tip device.", "装備時は高く滑らかな曲面で、A330ceoの短い直立三角翼端よりはるかに大きいです。"),
+            [("原始翼尖沒有直立擋板。", "Original tips have no upright fence.", "原型翼端に直立フェンスはありません。"), ("後裝小翼高大並向上平滑彎曲。", "Retrofit winglets are tall and curve smoothly upward.", "後付け型は高く滑らかに上方へ曲がります。"), ("判型前先確認是否為改裝機。", "Establish whether the aircraft is retrofitted before identifying it.", "改修機かどうかを確認してから判別します。")],
+        ),
+        "wing": identify(
+            ("767-300 原始翼展約 47.57 m，主翼後掠且面積小於 A330；翼根與翼身整流罩較緊湊，後裝小翼機翼展會增加。", "The original 767-300 spans about 47.57 m. Its swept wing is smaller than the A330's, with a more compact root and fairing; retrofit winglets increase span.", "767-300の原型翼幅は約47.57 mで、A330より小さく、翼根とフェアリングも小型です。後付け小翼で翼幅は増えます。"),
+            ("由上方或下方看，767 的機翼相對窄機身仍很寬，但絕對展幅及翼面積都小於 A330-200。", "In plan view the wing is broad against the narrow fuselage, yet absolute span and area remain smaller than the A330-200's.", "平面では細い胴体に対して広く見えますが、絶対的な翼幅と面積はA330-200より小さいです。"),
+            [("主翼後掠，翼尖原始為簡單收尖。", "The swept wing originally ends in a simple tapered tip.", "後退主翼は原型では単純に細く終わります。"), ("翼上有多片擾流板與雙縫襟翼。", "Multiple spoilers and double-slotted flaps occupy the upper and trailing wing.", "翼上に複数スポイラー、後縁に二重隙間フラップがあります。"), ("翼身整流罩比 A330 更短小。", "The wing-body fairing is shorter and smaller than the A330's.", "翼胴フェアリングはA330より短く小型です。")],
+        ),
+        "vstab": identify(
+            ("767 垂直尾翼前緣大幅後掠、頂端略方，根部背鰭不長；尾錐細長，整體尾部比 A330-200 更纖細。", "The 767 fin has a strongly swept leading edge, a slightly squared tip and a modest dorsal fillet. Its long narrow tailcone makes the empennage look slimmer than the A330-200's.", "767の垂直尾翼は強い後退前縁、やや角形の上端、小さめの背びれを持ち、細長い尾部でA330-200より軽快に見えます。"),
+            ("尾翼塗裝無法判定機型；應用尾錐粗細、翼尖與機身直徑交叉確認。", "Tail livery does not identify the type; cross-check tailcone width, wingtips and fuselage diameter.", "尾翼塗装では判型できず、尾部の太さ、翼端、胴体径を照合します。"),
+            [("尾翼前緣後掠明顯，根部過渡較短。", "The leading edge is strongly swept with a short root transition.", "前縁後退が強く、根元の移行部は短めです。"), ("細尾錐末端可見 APU 排氣口。", "The slender tailcone ends at the APU exhaust.", "細い尾部先端にAPU排気口があります。"), ("相對窄機身，垂尾顯得高而薄。", "Against the narrow fuselage the fin looks tall and thin.", "細い胴体に対して垂直尾翼は高く薄く見えます。")],
+        ),
+        "hstab": identify(
+            ("767 的低置水平尾翼後掠且向外收尖；由下方平面照片可同時比較其展幅、升降舵分段與細長尾錐。", "The 767's low-mounted tailplane is swept and tapered. An underside planform view reveals its span, segmented elevators and slender tailcone together.", "767の低位置水平尾翼は後退して翼端へ細くなり、下面写真で翼幅、分割昇降舵、細い尾部を同時に確認できます。"),
+            ("水平尾翼外形只能作輔助；兩型都是傳統低置布局，應優先看翼尖與機身直徑。", "Tailplane shape is secondary because both aircraft use conventional low-mounted layouts; prioritize wingtips and fuselage diameter.", "両型とも通常の低位置配置のため水平尾翼は補助情報で、翼端と胴体径を優先します。"),
+            [("後掠平面由厚翼根向外快速收尖。", "The swept planform tapers quickly from a thick root.", "厚い翼根から外側へ急速に細くなります。"), ("升降舵沿後緣分段配置。", "Segmented elevators line the trailing edge.", "後縁に分割昇降舵があります。"), ("下方全機照片能同時觀察主翼與尾翼比例。", "The underside view shows wing and tail proportions together.", "下面全景で主翼と尾翼の比率を同時に確認できます。")],
+        ),
+        "gear": identify(
+            ("767-300 每側主起落架為兩軸四輪轉向架，前起落架雙輪；這與 A330-200 相同，因此輪胎數不能區分兩型。", "Each 767-300 main gear has a two-axle four-wheel bogie and the nose gear has two wheels. The A330-200 uses the same counts, so wheel number does not separate them.", "767-300の各主脚は2軸4輪、前脚は2輪で、A330-200も同じため輪数では区別できません。"),
+            ("近距離應比較較窄的輪距、支柱與艙門形狀，並回看機身寬度；不要把『四輪主腳』誤認成 777。", "At close range compare narrower track, strut and door geometry, then check fuselage width; four-wheel bogies do not imply a 777.", "近距離では狭い輪距、脚柱、扉形状と胴体幅を確認し、4輪主脚だけで777と判断しないでください。"),
+            [("每側主腳四輪，前腳雙輪。", "Four tyres sit on each main bogie with twin nose wheels.", "各主脚4輪、前脚2輪です。"), ("主腳收進翼根附近的輪艙。", "The main gear retracts into bays near the wing root.", "主脚は翼根付近の格納庫へ収まります。"), ("機身與輪距都比 A330 窄。", "Both fuselage and gear track are narrower than the A330's.", "胴体と脚間隔はいずれもA330より狭いです。")],
+        ),
+    },
+    "a332": {
+        "overview": identify(
+            ("A330-200 是短機身長程廣體雙發客機，圓鈍 Airbus 機鼻、寬機身、大展弦比主翼與短小直立三角翼梢，是對比 767-300 的主要外觀線索。", "The A330-200 is a short-fuselage long-range wide-body twin, identified against the 767-300 by its rounded Airbus nose, wider body, large high-aspect-ratio wing and small upright triangular tip devices.", "A330-200は短胴長距離ワイドボディ双発機で、丸いAirbus機首、太い胴体、大型高アスペクト比主翼、小型直立三角翼端が767-300との主要差です。"),
+            ("A330-200 比 767-300 更長也更寬，但機身相對主翼看起來較短粗；A330-300 又比 -200 長，不能只靠家族特徵判子型。", "The A330-200 is longer and wider than the 767-300 yet looks shorter and fuller relative to its wing. The A330-300 is longer again, so family cues alone do not identify the variant.", "A330-200は767-300より長く太い一方、主翼に対して短く太く見えます。A330-300はさらに長いため、家族特徴だけで子型は判別できません。"),
+            [("全長約 58.82 m，機身外寬約 5.64 m。", "Length is about 58.82 m and fuselage width about 5.64 m.", "全長約58.82 m、胴体外幅約5.64 mです。"), ("圓鈍機鼻與寬大機身比 767 更厚實。", "The rounded nose and wide body look fuller than the 767.", "丸い機首と太い胴体は767より量感があります。"), ("A330ceo 翼尖有短小直立三角翼梢。", "A330ceos carry small upright triangular tip devices.", "A330ceo翼端には小型直立三角翼端があります。")],
+        ),
+        "cockpit": identify(
+            ("A330-200 駕駛艙採 Airbus 側桿、正面桌板、六具顯示器與中央上下排列 ECAM；正副駕駛前方沒有駕駛盤與操縱柱。", "The A330-200 flight deck uses Airbus sidesticks, forward tray tables, six displays and vertically stacked central ECAM screens, with no yokes or control columns ahead of the pilots.", "A330-200の操縦席はAirbus式サイドスティック、正面テーブル、6面表示器、上下配置ECAMを備え、正面に操縦輪や柱はありません。"),
+            ("與 767 相比，側桿對駕駛盤是最直觀差異；螢幕可能因改裝而更新，但基本操縱哲學不變。", "Against the 767, sidesticks versus yokes are the clearest cue. Screens may be upgraded, but the control philosophy remains.", "767との最明確な差はサイドスティック対操縦輪です。画面は改修されても操縦思想は変わりません。"),
+            [("側桿位於左右側壁。", "Sidesticks are mounted on the sidewalls.", "サイドスティックは左右側壁にあります。"), ("飛行員正前方可使用折疊桌板。", "Tray tables occupy the unobstructed space ahead of the pilots.", "操縦席正面の空間に折り畳みテーブルがあります。"), ("中央 ECAM 顯示引擎與系統狀態。", "Central ECAM screens show engine and system status.", "中央ECAMがエンジンとシステム状態を表示します。")],
+        ),
+        "windshield": identify(
+            ("A330 使用經典 Airbus 六片式窗帶：正面兩片風擋呈斜邊梯形，外側窗沿圓鈍機鼻向後包覆，正面輪廓比 767 更寬。", "The A330 uses the classic six-pane Airbus belt: two trapezoidal front windscreens and outer panes wrapping around a rounded nose, producing a wider frontal outline than the 767.", "A330は古典的なAirbus六枚窓で、台形の前面2枚と丸い機首へ回り込む外側窓により、767より正面輪郭が広く見えます。"),
+            ("A330-200 與 -300 的窗型幾乎相同，需用機身長度與垂尾比例判子型；窗片數也不能單獨排除 767。", "A330-200 and -300 glazing is nearly identical; use fuselage length and fin proportions for the variant. Pane count alone also does not exclude a 767.", "A330-200と-300の窓形状はほぼ同じで、胴体長と垂尾比率で子型を判断します。窓枚数だけでは767も除外できません。"),
+            [("圓鼻使窗帶向兩側平滑展開。", "The rounded nose lets the window belt spread smoothly sideways.", "丸い機首に沿って窓帯が両側へ滑らかに広がります。"), ("主風擋斜邊明顯，中央接縫較短。", "The front panes have obvious slanted edges and a shorter centre seam.", "前面窓の斜辺が明瞭で中央継ぎ目は短めです。"), ("整組玻璃相對機身看起來更寬低。", "The glazing appears wider and lower relative to the fuselage.", "窓全体は胴体に対して幅広く低く見えます。")],
+        ),
+        "fuselage": identify(
+            ("A330-200 機身外寬約 5.64 m，經濟艙典型為 2-4-2；短於 A330-300，但仍比 767-300 更粗、更長，翼身整流罩也更大。", "The A330-200 fuselage is about 5.64 m wide and typically seats 2-4-2 in economy. It is shorter than the A330-300 but wider and longer than the 767-300, with a larger wing-body fairing.", "A330-200の胴体幅は約5.64 m、エコノミーは通常2-4-2です。A330-300より短い一方、767-300より太く長く、翼胴フェアリングも大型です。"),
+            ("A330-200 常見每側四個大型主艙門，但門與窗配置仍會依客艙方案變化；應以機身比例與尾翼交叉判讀。", "Four large main doors per side are common, but cabin configuration can alter door and window details; cross-check body proportions and tail.", "片側4枚の大型ドアが一般的ですが、客室仕様で細部が変わるため胴体比率と尾翼も確認します。"),
+            [("寬機身讓窗列與艙門看起來較矮。", "The wide body makes windows and doors look proportionally shorter.", "太い胴体により窓とドアは相対的に低く見えます。"), ("翼身整流罩寬大且向後延伸。", "The broad wing-body fairing extends well aft.", "大型翼胴フェアリングが後方へ長く伸びます。"), ("較短機身搭配大翼，比例不同於 A330-300。", "The short fuselage and large wing differ in proportion from the A330-300.", "短い胴体と大きな主翼の比率はA330-300と異なります。")],
+        ),
+        "engine": identify(
+            ("A330-200 可搭載 GE CF6-80E1、Pratt & Whitney PW4000 或 Rolls-Royce Trent 700；三種短艙外觀不同，但整體尺寸通常大於 767 的對應引擎。", "The A330-200 can use GE CF6-80E1, Pratt & Whitney PW4000 or Rolls-Royce Trent 700 engines. Their nacelles differ, but are generally larger than corresponding 767 installations.", "A330-200はCF6-80E1、PW4000、Trent 700を選択でき、形状は異なりますが767用より一般に大型です。"),
+            ("參考照片是 A330-223 的 PW4000 開罩狀態；引擎品牌與 767 有重疊，不能單靠風扇或商標判型。", "The reference shows an open-cowling PW4000 on an A330-223. Engine brands overlap with the 767, so fan or branding alone is insufficient.", "参考写真はA330-223のPW4000開放状態です。767とメーカーが重なるため、ファンやロゴだけでは判別できません。"),
+            [("短艙直徑相對 767 更大。", "Nacelle diameter is larger relative to the 767's.", "ナセル径は767より大きいです。"), ("三種引擎的進氣口、整流罩與排氣段不同。", "The three options differ in inlet, cowling and exhaust details.", "3種類で吸気口、カウリング、排気部が異なります。"), ("短艙後緣平滑，沒有 787 式鋸齒。", "Nacelle trailing edges are smooth without 787-style chevrons.", "ナセル後縁は滑らかで787式シェブロンはありません。")],
+        ),
+        "wingtip": identify(
+            ("A330ceo 翼尖有短小直立三角翼梢，前緣後掠、頂端收尖；與 767 原始平直翼尖或高大後裝小翼都很不同。", "The A330ceo has a short upright triangular tip device with a swept leading edge and tapered top, unlike either the 767's plain tip or tall retrofit winglet.", "A330ceoは前縁が後退し上端が細くなる短い直立三角翼端を持ち、767の通常翼端や大型後付け小翼と明確に異なります。"),
+            ("A330neo 改用 A350 風格大型彎曲翼尖，不能套用 ceo 判法；本條目針對 A330-200ceo。", "A330neos use larger A350-inspired curved tips, so this ceo cue does not apply; this entry covers the A330-200ceo.", "A330neoはA350風大型曲線翼端を使うため、このceo判別法は適用できません。本項はA330-200ceoです。"),
+            [("三角翼梢自翼端向上伸出並逐漸收尖。", "The triangular device rises from the tip and tapers upward.", "三角翼端は翼端から上へ伸びて細くなります。"), ("輪廓遠小於 767 融合式小翼。", "The profile is far smaller than a 767 blended winglet.", "767ブレンデッド・ウイングレットよりはるかに小型です。"), ("所有 A330ceo 家族都可見相近翼尖語彙。", "A similar tip vocabulary appears across the A330ceo family.", "A330ceoファミリーで同様の翼端形状が見られます。")],
+        ),
+        "wing": identify(
+            ("A330ceo 主翼展約 60.3 m，展弦比高、翼根厚且翼身整流罩寬大；相較 767-300 的 47.57 m 原始翼展，遠距離就能看出更大的翼面。", "The A330ceo spans about 60.3 m, with a high-aspect-ratio wing, thick root and broad fairing. Its wing is visibly larger than the original 47.57 m-span 767-300 wing.", "A330ceoの翼幅は約60.3 mで、高アスペクト比、厚い翼根、大型フェアリングを持ち、原型翼幅47.57 mの767-300より明らかに大型です。"),
+            ("A330-200 與 -300 共用基本主翼；判子型仍要看機身長度與 -200 較大的垂直尾翼。", "The A330-200 and -300 share the basic wing; identify the variant using fuselage length and the -200's larger fin.", "A330-200と-300は基本主翼を共有するため、胴体長と-200の大型垂尾で子型を判断します。"),
+            [("主翼長而後掠，外翼末端接直立三角翼梢。", "The long swept wing ends in an upright triangular tip device.", "長い後退主翼の端に直立三角翼端があります。"), ("翼根厚、翼身整流罩寬大。", "The root is thick and the wing-body fairing broad.", "翼根が厚く翼胴フェアリングも大型です。"), ("多片擾流板與大型襟翼佔據後緣。", "Multiple spoilers and large flaps occupy the wing and trailing edge.", "複数スポイラーと大型フラップが翼後縁を占めます。")],
+        ),
+        "vstab": identify(
+            ("A330-200 因機身較短、尾力臂較小，使用比 A330-300 更大的垂直尾翼；高大後掠尾翼與厚實根部是辨認 -200 的重要家族內線索。", "Because its shorter fuselage gives less tail moment arm, the A330-200 uses a larger vertical fin than the A330-300. The tall swept fin and substantial root are useful within-family cues.", "A330-200は短い胴体で尾部モーメントアームが小さいため、A330-300より大型の垂直尾翼を使い、高い後退尾翼と厚い根元が子型識別に役立ちます。"),
+            ("對比 767，A330 尾部建立在更粗的機身與更寬的背鰭過渡上；尾翼塗裝仍不能取代形狀判讀。", "Against the 767, the A330 tail rises from a fuller fuselage and broader dorsal transition; livery still cannot replace shape cues.", "767に比べ太い胴体と広い背びれ移行部から尾翼が立ち上がります。塗装だけでは判別できません。"),
+            [("-200 垂尾比例高大，面積大於 -300。", "The -200 fin is proportionally tall and larger than the -300's.", "-200の垂尾は相対的に高く、-300より大きいです。"), ("根部過渡寬厚，連接較粗後機身。", "A broad thick root blends into the fuller aft fuselage.", "幅広く厚い根元が太い後部胴体へつながります。"), ("尾錐末端為 APU 排氣口。", "The tailcone ends at the APU exhaust.", "尾部先端にAPU排気口があります。")],
+        ),
+        "hstab": identify(
+            ("A330-200 的低置水平尾翼面積與展幅都大於 767，後掠翼面從厚翼根向外收尖；全機下方照片可直接比較尾翼與寬機身比例。", "The A330-200's low-mounted tailplane is larger in area and span than the 767's, tapering from a thick swept root. An underside view shows its scale against the wide fuselage.", "A330-200の低位置水平尾翼は767より面積・幅が大きく、厚い後退翼根から細くなります。下面写真で太い胴体との比率を確認できます。"),
+            ("水平尾翼本身不是主要判據；兩型布局相同，應配合翼尖、機身寬度與垂尾比例。", "Tailplane shape alone is secondary because both types share the layout; combine it with wingtips, fuselage width and fin proportion.", "両型とも同配置のため水平尾翼単独は補助的で、翼端、胴体幅、垂尾比率と組み合わせます。"),
+            [("水平尾翼從粗壯尾錐兩側伸出。", "The tailplanes project from either side of a broad tailcone.", "太い尾部の両側から水平尾翼が伸びます。"), ("翼根厚、外段後掠並收尖。", "The root is thick and the swept outer panel tapers.", "翼根が厚く、外側は後退して細くなります。"), ("與大垂尾組成較厚重的尾部輪廓。", "Together with the large fin it forms a fuller empennage.", "大型垂尾とともに厚みある尾部輪郭を作ります。")],
+        ),
+        "gear": identify(
+            ("A330-200 每側主起落架為兩軸四輪轉向架，前起落架雙輪；主腳向內收進寬大的翼身整流罩。", "Each A330-200 main gear has a two-axle four-wheel bogie and the nose gear has two wheels; the main units retract inward into the broad wing-body fairing.", "A330-200の各主脚は2軸4輪、前脚は2輪で、主脚は内側へ大型翼胴フェアリング内に格納されます。"),
+            ("輪數與 767-300 完全相同；應比較 A330 較寬輪距、粗機身、較大型主翼與不同的支柱／艙門形狀。", "Wheel counts exactly match the 767-300. Use the A330's wider track, fuller body, larger wing and different strut/door geometry.", "輪数は767-300と同じため、A330の広い脚間隔、太い胴体、大型主翼、脚柱・扉形状を比較します。"),
+            [("每側主腳四輪，前腳雙輪。", "Four tyres sit on each main bogie with twin nose wheels.", "各主脚4輪、前脚2輪です。"), ("主腳輪距與支柱尺度大於 767。", "Main-gear track and strut scale are greater than the 767's.", "主脚間隔と脚柱寸法は767より大きいです。"), ("輪艙位於寬大的翼身整流罩內。", "The gear bays sit within the broad wing-body fairing.", "脚格納庫は大型翼胴フェアリング内にあります。")],
         ),
     },
 }
