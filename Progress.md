@@ -181,4 +181,4 @@
 - 艙門／逃生窗部分採短機身子型配置：兩型典型皆為前後主艙門加每側一個翼上逃生窗，因此出口數只能輔助確認；另記錄 737 選裝融合式／Split Scimitar 小翼，以及 A319 翼尖擋板／Sharklet 的世代差異。
 - 圖片作者、Commons 來源、授權、裁切與 ceo／neo 適用範圍已補入 `assets/reference/ATTRIBUTION.md`；下載與資料工具擴充至 18 架 × 10 類、198 張照片。
 - 資料 fetch 與比較／檢視頁資源升為 v=150，Service Worker cache 升為 `hangar-v13`。已通過 JSON、JavaScript、Python 完整性、圖片數量／尺寸與 `git diff --check`；本地瀏覽器驗證比較頁 10 列、22 張照片、22 個 Commons 來源、22 個單機連結且無破圖，三語切換正常，737 外窗與 A319 引擎單機頁也正常。
-- 本機預覽：`http://localhost:8000/versus.html?a=b737&b=a319&local=150`。使用者已確認並要求發布；本批準備提交並推送至 `origin/main`，本輪在發布後結束，下次接續下一組機型。
+- 本機預覽：`http://localhost:8000/versus.html?a=b737&b=a319&local=150`。使用者已確認；本批已以 commit `8242ebd`（`新增 737-700 與 A319 實機部位辨識比較`）推送至 `origin/main`。本輪在此結束，下次接續下一組機型。
