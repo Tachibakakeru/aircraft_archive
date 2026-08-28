@@ -351,3 +351,39 @@ The flight-deck photograph is a 737-700 because the 737 Next Generation variants
 | `a318/gear.jpg` | [Airbus A318 landing-gear close-up](https://commons.wikimedia.org/wiki/File:Airbus_A318_Landing_Gear_(8604009277).jpg), Joao Carlos Medau | CC BY 2.0 |
 
 The A318-122 photographs show the Pratt & Whitney PW6000 installation. Other A318s use CFM56-5B variants, so engine appearance varies. Production A318s use the classic upper/lower wingtip fences; the unusually tall vertical fin is a key short-fuselage identification cue.
+
+## Boeing 777-200 (`b772`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b772/overview.jpg` | [United Boeing 777-200 N77019](https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b772/cockpit.jpg` | [Boeing 777-200ER cockpit](https://commons.wikimedia.org/wiki/File:Boeing_777-200ER_cockpit.jpg), Bill Abbott | CC BY-SA 2.0 |
+| `b772/window-front.jpg` | [Japan Airlines Boeing 777-200 JA704J](https://commons.wikimedia.org/wiki/File:Boeing_777-200_(Japan_Airlines)_JA704J_(3220615977).jpg), Aleksandr Markin; cropped | CC BY-SA 2.0 |
+| `b772/window-side.jpg` | [United Boeing 777-200 N77019](https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b772/fuselage.jpg` | [United Boeing 777-200 N77019](https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b772/engine.jpg` | [United Boeing 777-200 N77019](https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b772/wingtip.jpg` | [United Boeing 777-200 N772UA](https://commons.wikimedia.org/wiki/File:United_Airlines_-_N772UA_-_Boeing_777-200_-_San_Francisco_International_Airport-0406.jpg), Raimond Spekking; cropped | CC BY-SA 4.0 |
+| `b772/wing.jpg` | [United Boeing 777-200 N772UA](https://commons.wikimedia.org/wiki/File:United_Airlines_-_N772UA_-_Boeing_777-200_-_San_Francisco_International_Airport-0406.jpg), Raimond Spekking; cropped | CC BY-SA 4.0 |
+| `b772/vstab.jpg` | [United Boeing 777-200 N77019](https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b772/hstab.jpg` | [United Boeing 777-200 N77019](https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b772/gear.jpg` | [Boeing 777-200 six-wheel main gear](https://commons.wikimedia.org/wiki/File:Boeing_777-200_center,_aft,_fuselage,_wing_root_fairing,_main_gear_and_doors,_etc._(2719420955)_(3).jpg), Bill Abbott; cropped | CC BY-SA 2.0 |
+
+The photographed United aircraft show PW4000-series nacelles. Other 777-200/200ER aircraft may use Trent 800 or early GE90 engines; the text therefore treats engine-option detail separately from the common twin-engine and six-wheel-bogie cues.
+
+## Airbus A340-300 (`a343`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a343/overview.jpg` | [South African Airways A340-313 ZS-SXE](https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `a343/cockpit.jpg` | [Airbus A340-300 cockpit](https://commons.wikimedia.org/wiki/File:A340-300_cockpit_(8459431964).jpg), Kiko Alario Salom | CC BY 2.0 |
+| `a343/window-front.jpg` | [South African Airways A340-313 ZS-SXE](https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_02.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `a343/window-side.jpg` | [Virgin Atlantic A340-313X](https://commons.wikimedia.org/wiki/File:Airbus_A340-313X,_Virgin_Atlantic_Airways_JP359341.jpg), Dale Coleman; cropped | GFDL 1.2 |
+| `a343/fuselage.jpg` | [South African Airways A340-313 ZS-SXE](https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `a343/engine.jpg` | [South African Airways A340-313 ZS-SXE](https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `a343/wingtip.jpg` | [A340-300 BLADE test wing](https://commons.wikimedia.org/wiki/File:BLADE,_ILA_2018,_Sch%C3%B6nefeld_(1X7A5551).jpg), Matti Blume; cropped | CC BY-SA 4.0 |
+| `a343/wing.jpg` | [A340-300 BLADE test wing](https://commons.wikimedia.org/wiki/File:BLADE,_ILA_2018,_Sch%C3%B6nefeld_(1X7A5551).jpg), Matti Blume; cropped | CC BY-SA 4.0 |
+| `a343/vstab.jpg` | [South African Airways A340-313 ZS-SXE](https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `a343/hstab.jpg` | [South African Airways A340-313 ZS-SXE](https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `a343/gear.jpg` | [South African Airways A340-313 ZS-SXE landing](https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_02.jpg), Julian Herzog; cropped | CC BY 4.0 |
+
+The wing and wingtip photographs show Airbus's A340-300 BLADE test aircraft. They are used for the underlying A340-300 wing geometry; experimental laminar-flow test-panel details are not presented as standard production features.

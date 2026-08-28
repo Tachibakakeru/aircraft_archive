@@ -178,6 +178,8 @@ $photos = [ordered]@{
   "b736/cockpit.jpg" = "Cockpit-737-700-by-RalfR.jpg"
   "a318/cockpit.jpg" = "Airbus A318 Cockpit (8605111142).jpg"
   "a318/gear.jpg" = "Airbus A318 Landing Gear (8604009277).jpg"
+  "b772/cockpit.jpg" = "Boeing 777-200ER cockpit.jpg"
+  "a343/cockpit.jpg" = "A340-300 cockpit (8459431964).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -265,6 +267,26 @@ $windowPhotos = @(
   @{ Dest="a318/hstab.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.74,.43,.24) }
   @{ Dest="a318/wingtip.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.47,.23,.31) }
   @{ Dest="a318/wing.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.35,.25,.43) }
+  @{ Dest="b772/overview.jpg"; Title="United Boeing 777-200 N77019 MD1.jpg"; Crop=@(.08,.27,.84) }
+  @{ Dest="b772/window-front.jpg"; Title="Boeing 777-200 (Japan Airlines) JA704J (3220615977).jpg"; Crop=@(.34,.24,.32) }
+  @{ Dest="b772/window-side.jpg"; Title="United Boeing 777-200 N77019 MD1.jpg"; Crop=@(.70,.37,.24) }
+  @{ Dest="b772/fuselage.jpg"; Title="United Boeing 777-200 N77019 MD1.jpg"; Crop=@(.12,.34,.78) }
+  @{ Dest="b772/engine.jpg"; Title="United Boeing 777-200 N77019 MD1.jpg"; Crop=@(.48,.47,.27) }
+  @{ Dest="b772/wingtip.jpg"; Title="United Airlines - N772UA - Boeing 777-200 - San Francisco International Airport-0406.jpg"; Crop=@(.56,.54,.22) }
+  @{ Dest="b772/wing.jpg"; Title="United Airlines - N772UA - Boeing 777-200 - San Francisco International Airport-0406.jpg"; Crop=@(.32,.27,.52) }
+  @{ Dest="b772/vstab.jpg"; Title="United Boeing 777-200 N77019 MD1.jpg"; Crop=@(.06,.25,.24) }
+  @{ Dest="b772/hstab.jpg"; Title="United Boeing 777-200 N77019 MD1.jpg"; Crop=@(.10,.37,.30) }
+  @{ Dest="b772/gear.jpg"; Title="Boeing 777-200 center, aft, fuselage, wing root fairing, main gear and doors, etc. (2719420955) (3).jpg"; Crop=@(.02,.44,.50) }
+  @{ Dest="a343/overview.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 06.jpg"; Crop=@(.05,.30,.90) }
+  @{ Dest="a343/window-front.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 02.jpg"; Crop=@(.20,.38,.22) }
+  @{ Dest="a343/window-side.jpg"; Title="Airbus A340-313X, Virgin Atlantic Airways JP359341.jpg"; Crop=@(.00,.18,.48) }
+  @{ Dest="a343/fuselage.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 06.jpg"; Crop=@(.08,.34,.82) }
+  @{ Dest="a343/engine.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 06.jpg"; Crop=@(.36,.46,.38) }
+  @{ Dest="a343/wingtip.jpg"; Title="BLADE, ILA 2018, Schönefeld (1X7A5551).jpg"; Crop=@(.31,.15,.48) }
+  @{ Dest="a343/wing.jpg"; Title="BLADE, ILA 2018, Schönefeld (1X7A5551).jpg"; Crop=@(.05,.15,.80) }
+  @{ Dest="a343/vstab.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 06.jpg"; Crop=@(.05,.25,.25) }
+  @{ Dest="a343/hstab.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 06.jpg"; Crop=@(.08,.38,.30) }
+  @{ Dest="a343/gear.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 02.jpg"; Crop=@(.35,.51,.35) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600

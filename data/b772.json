@@ -2,18 +2,30 @@
   "title": "Boeing 777-200",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 777-200 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "777 機身外寬約 6.20 m，777-200 典型每側四扇主艙門；圓形寬機身、橢圓舷窗與長尾錐構成 Boeing 廣體輪廓。",
+        "en": "The 777 body is about 6.20 m wide and a typical 777-200 has four main doors per side, with oval windows and a long aft taper.",
+        "ja": "777の胴体幅は約6.20 mで、777-200は通常片側4枚の主ドア、楕円窓、長い後部絞りを持ちます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "A340-300 機身約 5.64 m 寬；兩者都常見每側四門，因此門數必須配合引擎與主腳判讀。",
+        "en": "The A340-300 body is about 5.64 m wide. Both commonly show four doors per side, so combine door count with engines and gear.",
+        "ja": "A340-300の胴体幅は約5.64 mです。両機とも片側4ドアが多く、エンジンと脚も併用します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "典型每側四扇主艙門。",
+          "en": "Typically four main doors per side.",
+          "ja": "通常は片側4枚の主ドアです。"
+        },
+        {
+          "zh": "機身比 A340-300 更寬。",
+          "en": "The body is wider than the A340-300's.",
+          "ja": "胴体はA340-300より太いです。"
+        },
+        {
+          "zh": "客艙窗為獨立橢圓形。",
+          "en": "Cabin windows are individual ovals.",
+          "ja": "客室窓は独立した楕円形です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b772/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 777-200 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "777-200 的後掠主翼翼展約 60.9 m，翼下各掛一具大型引擎；厚翼根、長外翼與大型多段襟翼很醒目。",
+        "en": "The 777-200's swept wing spans about 60.9 m and carries one large engine per side, with a thick root, long outer panels and large multi-element flaps.",
+        "ja": "777-200の後退翼は翼幅約60.9 mで片側1基の大型エンジン、厚い翼根、長い外翼、大型多重フラップを持ちます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "A340-300 翼展約 60.3 m，尺寸幾乎相同；翼下是兩具還是四具引擎才是決定性差異。",
+        "en": "The A340-300 span is about 60.3 m, almost identical. Two versus four underwing engines is decisive.",
+        "ja": "A340-300の翼幅約60.3 mとほぼ同じで、翼下2基か4基かが決定的です。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "每側翼下只有一具引擎。",
+          "en": "One engine hangs beneath each wing.",
+          "ja": "各主翼下は1基です。"
+        },
+        {
+          "zh": "翼根厚且外翼長。",
+          "en": "The root is thick and the outer wing long.",
+          "ja": "翼根は厚く外翼が長いです。"
+        },
+        {
+          "zh": "後緣配置大型多段襟翼。",
+          "en": "Large multi-element flaps line the trailing edge.",
+          "ja": "後縁に大型多重フラップがあります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b772/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Airlines_-_N772UA_-_Boeing_777-200_-_San_Francisco_International_Airport-0406.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 777-200 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "777-200／200ER 可配 PW4000、Rolls-Royce Trent 800 或早期 GE90；無論型號，兩具短艙都明顯大於 A340-300 的四具 CFM56-5C。",
+        "en": "The 777-200/200ER could use PW4000s, Trent 800s or early GE90s. In every case its two nacelles are much larger than the A340-300's four CFM56-5Cs.",
+        "ja": "777-200／200ERはPW4000、Trent 800、初期GE90を選択でき、いずれもA340-300のCFM56-5C 4基より大きなナセルです。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "照片中的 United 777-200 使用 PW4000 系列；不能把它當成所有 777-200 的唯一引擎外形。",
+        "en": "The photographed United 777-200 uses PW4000-series engines; that nacelle is not universal to every 777-200.",
+        "ja": "写真のUnited 777-200はPW4000系列で、全777-200共通の外形ではありません。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "總數固定為兩具。",
+          "en": "There are always two engines.",
+          "ja": "エンジンは常に2基です。"
+        },
+        {
+          "zh": "短艙直徑遠大於 A340-300。",
+          "en": "Nacelles are far larger than the A340-300's.",
+          "ja": "ナセル径はA340-300より大幅に大きいです。"
+        },
+        {
+          "zh": "三種引擎選項會改變細部外形。",
+          "en": "Three engine options change the detail shape.",
+          "ja": "3種の選択で細部形状が変わります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b772/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "777 的垂直尾翼高大後掠，以長背鰭接入粗壯後機身，方向舵面積也很大。",
+        "en": "The 777's tall swept fin blends into its broad aft body through a long dorsal fillet and carries a large rudder.",
+        "ja": "777の高い後退垂尾は長い背びれで太い後部胴体へつながり、大型方向舵を備えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "A340-300 尾部通常顯得較細；垂尾只能作輔助，仍應先看引擎與中置主腳。",
+        "en": "The A340-300 tail usually looks slimmer. The fin is secondary; engines and centre gear remain stronger cues.",
+        "ja": "A340-300の尾部はより細く見えます。垂尾は補助で、エンジンと中央脚を優先します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣後掠且根部背鰭長。",
+          "en": "Strong sweep and a long dorsal fillet.",
+          "ja": "前縁後退が大きく背びれが長いです。"
+        },
+        {
+          "zh": "頂端較平，方向舵後緣近直線。",
+          "en": "The tip is fairly flat and rudder edge straight.",
+          "ja": "上端は比較的平らで方向舵後縁は直線的です。"
+        },
+        {
+          "zh": "粗壯尾身是輔助比例線索。",
+          "en": "The broad tail body is a supporting cue.",
+          "ja": "太い尾部胴体が補助線索です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b772/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "777 使用大型低置後掠水平尾翼，厚實翼根與寬機身相接，形成寬大的尾部輪廓。",
+        "en": "The 777 uses large low-mounted swept tailplanes with thick roots joining the wide aft body.",
+        "ja": "777は大型の低位置後退水平尾翼を持ち、厚い翼根が太い後部胴体へ接続します。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "A340-300 也是傳統低置尾翼，單看水平尾翼很難定型；應配合翼下引擎數與翼尖。",
+        "en": "The A340-300 also has conventional low tailplanes, so use engine count and wingtips rather than this feature alone.",
+        "ja": "A340-300も通常の低位置尾翼で、単独ではなくエンジン数と翼端を併用します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "水平尾翼尺寸大且後掠。",
+          "en": "Large, swept tailplanes.",
+          "ja": "大型で後退した水平尾翼です。"
+        },
+        {
+          "zh": "翼根整流罩厚實。",
+          "en": "The root fairing is substantial.",
+          "ja": "翼根フェアリングが厚いです。"
+        },
+        {
+          "zh": "此部位只適合交叉確認。",
+          "en": "Use this only as a cross-check.",
+          "ja": "この部位は照合用です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b772/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 777-200 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "777-200 前腳雙輪，左右主腳各有三根輪軸、六個輪胎，總輪數 14；主腳轉向架修長，機腹沒有中置主腳。",
+        "en": "The 777-200 has twin nose wheels and two three-axle, six-tyre main bogies: 14 wheels total, with no centre main gear.",
+        "ja": "777-200は前脚2輪、左右主脚各3軸6輪の計14輪で、中央主脚はありません。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "A340-300 總輪數 12：左右主腳各四輪，另有一組中線雙輪；從地面或機腹看最容易區分。",
+        "en": "The A340-300 totals 12 wheels: four on each wing gear plus a centreline twin. This is decisive from ground or belly views.",
+        "ja": "A340-300は左右主脚各4輪と中央2輪の計12輪で、地上・腹面から決定的に区別できます。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳三軸六輪。",
+          "en": "Three axles and six tyres per main bogie.",
+          "ja": "各主脚は3軸6輪です。"
+        },
+        {
+          "zh": "全機共 14 輪。",
+          "en": "Fourteen wheels in total.",
+          "ja": "全機計14輪です。"
+        },
+        {
+          "zh": "沒有機身中線主腳。",
+          "en": "No centreline body gear.",
+          "ja": "胴体中央脚がありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b772/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_777-200_center,_aft,_fuselage,_wing_root_fairing,_main_gear_and_doors,_etc._(2719420955)_(3).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "777-200／200ER 是第一代 777 長程雙發廣體客機，全長約 63.7 m、翼展 60.9 m；兩具大直徑引擎、寬大圓機身與六輪主腳是主要輪廓。",
+        "en": "The 777-200/200ER is the original long-range 777 twin, about 63.7 m long with a 60.9 m span. Two large engines, a broad round body and six-wheel main bogies define it.",
+        "ja": "777-200／200ERは全長約63.7 m、翼幅60.9 mの初代777長距離双発機です。大型エンジン2基、太い胴体、6輪主脚が特徴です。"
+      },
+      "fact": {
+        "zh": "A340-300 幾乎同長、同翼展；最快的區分方式是先數引擎，再看 777 沒有中置主腳。",
+        "en": "The A340-300 is almost identical in length and span. Count engines first, then note that the 777 has no centre main gear.",
+        "ja": "A340-300とは全長・翼幅がほぼ同じです。まずエンジン数、次に777には中央主脚がない点を見ます。"
+      },
+      "bullets": [
+        {
+          "zh": "翼下只有兩具大型引擎。",
+          "en": "Only two large underwing engines.",
+          "ja": "主翼下は大型エンジン2基です。"
+        },
+        {
+          "zh": "左右主腳各為三軸六輪。",
+          "en": "Each main bogie has three axles and six tyres.",
+          "ja": "左右主脚は各3軸6輪です。"
+        },
+        {
+          "zh": "機腹沒有 A340-300 的中置主腳。",
+          "en": "No A340-300-style centre gear.",
+          "ja": "A340-300型の中央主脚がありません。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b772/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "777 駕駛艙以傳統駕駛盤、六具大型顯示器與中央 EICAS 為核心，油門與控制台集中在兩席之間。",
+        "en": "The 777 flight deck centres on conventional yokes, six large displays and central EICAS screens, with throttles and controls on the centre pedestal.",
+        "ja": "777操縦席は操縦輪、6面大型表示器、中央EICASを中心に、スロットル類を中央ペデスタルへ配置します。"
+      },
+      "fact": {
+        "zh": "A340-300 採 Airbus 側桿、正面桌板與 ECAM；駕駛盤是否存在是座艙內最直接的廠牌線索。",
+        "en": "The A340-300 uses Airbus sidesticks, forward tray tables and ECAM. The presence or absence of yokes is the quickest cockpit cue.",
+        "ja": "A340-300はサイドスティック、正面テーブル、ECAMを採用し、操縦輪の有無が最速の識別点です。"
+      },
+      "bullets": [
+        {
+          "zh": "正副駕駛前方都有駕駛盤。",
+          "en": "A yoke sits before each pilot.",
+          "ja": "両席正面に操縦輪があります。"
+        },
+        {
+          "zh": "中央兩面主要顯示 EICAS。",
+          "en": "The centre pair primarily serves EICAS.",
+          "ja": "中央2面は主にEICASです。"
+        },
+        {
+          "zh": "中央基座高，沒有 Airbus 式桌板。",
+          "en": "The tall pedestal leaves no Airbus-style tray table.",
+          "ja": "高い中央台がありAirbus式テーブルはありません。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b772/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_777-200ER_cockpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "777 的兩片正面風擋寬大，外側窗以明顯折角向後收窄，窗框輪廓較粗且多邊形感強。",
+        "en": "The 777 has broad forward panes and clearly angular outer panes that taper aft, producing a heavy polygonal frame.",
+        "ja": "777は幅広い前面窓と、後方へ絞られる角張った外側窓を持ち、太い多角形枠に見えます。"
+      },
+      "fact": {
+        "zh": "A340-300 的 Airbus 窗帶較扁平、轉折較柔和；正面與側面照片應一起比較，不能只數窗片。",
+        "en": "The A340-300's Airbus glazing looks flatter with softer transitions. Compare front and side views rather than pane count alone.",
+        "ja": "A340-300の窓帯はより平たく滑らかです。枚数だけでなく正面・側面を併用します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面窗寬大且中央接縫近垂直。",
+          "en": "Wide front panes meet at a near-vertical seam.",
+          "ja": "幅広い前面窓がほぼ垂直に接します。"
+        },
+        {
+          "zh": "外側窗上緣向後下斜。",
+          "en": "Outer-pane upper edges slope aft and down.",
+          "ja": "外側窓上端は後方へ下がります。"
+        },
+        {
+          "zh": "窗框沒有連續黑色面罩。",
+          "en": "Frames remain separate without a black mask.",
+          "ja": "連続した黒マスクはありません。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b772/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_777-200_(Japan_Airlines)_JA704J_(3220615977).jpg"
+        },
+        {
+          "src": "assets/reference/b772/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "一般 777-200／200ER 使用簡潔、近乎水平的傳統翼尖，沒有直立 winglet；後來的 777-200LR 才採明顯延長的 raked tip。",
+        "en": "Standard 777-200/200ER aircraft use plain near-horizontal tips without upright winglets; the later 777-200LR introduced prominent raked tips.",
+        "ja": "通常の777-200／200ERは直立小翼のない水平に近い通常翼端で、後の777-200LRが長いレイクド翼端を採用します。"
+      },
+      "fact": {
+        "zh": "A340-300 翼尖可見向上、向下伸出的短翼尖擋板；這比兩者近似的翼展更容易辨認。",
+        "en": "The A340-300 carries short upper/lower wingtip fences, a better cue than their nearly identical spans.",
+        "ja": "A340-300には上下へ伸びる短い翼端フェンスがあり、ほぼ同じ翼幅より有効な手掛かりです。"
+      },
+      "bullets": [
+        {
+          "zh": "沒有高大的直立小翼。",
+          "en": "No tall upright winglet.",
+          "ja": "高い直立小翼はありません。"
+        },
+        {
+          "zh": "標準型翼尖主要留在翼面平面。",
+          "en": "The standard tip stays largely in the wing plane.",
+          "ja": "通常翼端は主に翼面内です。"
+        },
+        {
+          "zh": "不要與 777-200LR 的延長翼尖混淆。",
+          "en": "Do not confuse it with the -200LR raked tip.",
+          "ja": "-200LRの延長翼端と混同しません。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b772/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Airlines_-_N772UA_-_Boeing_777-200_-_San_Francisco_International_Airport-0406.jpg"
+        }
+      ]
     }
   },
   "specifications": {

@@ -290,6 +290,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:Airbus_A318_Landing_Gear_(8604009277).jpg",
     },
+    "b772": {
+        "overview": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_777-200ER_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Boeing_777-200_(Japan_Airlines)_JA704J_(3220615977).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:United_Airlines_-_N772UA_-_Boeing_777-200_-_San_Francisco_International_Airport-0406.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:United_Airlines_-_N772UA_-_Boeing_777-200_-_San_Francisco_International_Airport-0406.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:United_Boeing_777-200_N77019_MD1.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Boeing_777-200_center,_aft,_fuselage,_wing_root_fairing,_main_gear_and_doors,_etc._(2719420955)_(3).jpg",
+    },
+    "a343": {
+        "overview": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:A340-300_cockpit_(8459431964).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_02.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Airbus_A340-313X,_Virgin_Atlantic_Airways_JP359341.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:BLADE,_ILA_2018,_Sch%C3%B6nefeld_(1X7A5551).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:BLADE,_ILA_2018,_Sch%C3%B6nefeld_(1X7A5551).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_02.jpg",
+    },
 }
 
 
@@ -978,6 +1004,112 @@ CONTENT["a318"].update({
         [("前腳與每側主腳均為雙輪。", "Nose and each main unit use twin wheels.", "前脚と左右主脚は各2輪です。"), ("收起主輪由艙門遮蔽。", "Doors cover the retracted main wheels.", "格納主輪は扉で覆われます。"), ("腳柱與離地高度高於 737-600。", "Struts and ground clearance exceed the 737-600's.", "脚柱と地上高は737-600より大きいです。")],
     ),
 })
+
+CONTENT["b772"] = {
+    "overview": identify(
+        ("777-200／200ER 是第一代 777 長程雙發廣體客機，全長約 63.7 m、翼展 60.9 m；兩具大直徑引擎、寬大圓機身與六輪主腳是主要輪廓。", "The 777-200/200ER is the original long-range 777 twin, about 63.7 m long with a 60.9 m span. Two large engines, a broad round body and six-wheel main bogies define it.", "777-200／200ERは全長約63.7 m、翼幅60.9 mの初代777長距離双発機です。大型エンジン2基、太い胴体、6輪主脚が特徴です。"),
+        ("A340-300 幾乎同長、同翼展；最快的區分方式是先數引擎，再看 777 沒有中置主腳。", "The A340-300 is almost identical in length and span. Count engines first, then note that the 777 has no centre main gear.", "A340-300とは全長・翼幅がほぼ同じです。まずエンジン数、次に777には中央主脚がない点を見ます。"),
+        [("翼下只有兩具大型引擎。", "Only two large underwing engines.", "主翼下は大型エンジン2基です。"), ("左右主腳各為三軸六輪。", "Each main bogie has three axles and six tyres.", "左右主脚は各3軸6輪です。"), ("機腹沒有 A340-300 的中置主腳。", "No A340-300-style centre gear.", "A340-300型の中央主脚がありません。")],
+    ),
+    "cockpit": identify(
+        ("777 駕駛艙以傳統駕駛盤、六具大型顯示器與中央 EICAS 為核心，油門與控制台集中在兩席之間。", "The 777 flight deck centres on conventional yokes, six large displays and central EICAS screens, with throttles and controls on the centre pedestal.", "777操縦席は操縦輪、6面大型表示器、中央EICASを中心に、スロットル類を中央ペデスタルへ配置します。"),
+        ("A340-300 採 Airbus 側桿、正面桌板與 ECAM；駕駛盤是否存在是座艙內最直接的廠牌線索。", "The A340-300 uses Airbus sidesticks, forward tray tables and ECAM. The presence or absence of yokes is the quickest cockpit cue.", "A340-300はサイドスティック、正面テーブル、ECAMを採用し、操縦輪の有無が最速の識別点です。"),
+        [("正副駕駛前方都有駕駛盤。", "A yoke sits before each pilot.", "両席正面に操縦輪があります。"), ("中央兩面主要顯示 EICAS。", "The centre pair primarily serves EICAS.", "中央2面は主にEICASです。"), ("中央基座高，沒有 Airbus 式桌板。", "The tall pedestal leaves no Airbus-style tray table.", "高い中央台がありAirbus式テーブルはありません。")],
+    ),
+    "windshield": identify(
+        ("777 的兩片正面風擋寬大，外側窗以明顯折角向後收窄，窗框輪廓較粗且多邊形感強。", "The 777 has broad forward panes and clearly angular outer panes that taper aft, producing a heavy polygonal frame.", "777は幅広い前面窓と、後方へ絞られる角張った外側窓を持ち、太い多角形枠に見えます。"),
+        ("A340-300 的 Airbus 窗帶較扁平、轉折較柔和；正面與側面照片應一起比較，不能只數窗片。", "The A340-300's Airbus glazing looks flatter with softer transitions. Compare front and side views rather than pane count alone.", "A340-300の窓帯はより平たく滑らかです。枚数だけでなく正面・側面を併用します。"),
+        [("正面窗寬大且中央接縫近垂直。", "Wide front panes meet at a near-vertical seam.", "幅広い前面窓がほぼ垂直に接します。"), ("外側窗上緣向後下斜。", "Outer-pane upper edges slope aft and down.", "外側窓上端は後方へ下がります。"), ("窗框沒有連續黑色面罩。", "Frames remain separate without a black mask.", "連続した黒マスクはありません。")],
+    ),
+    "fuselage": identify(
+        ("777 機身外寬約 6.20 m，777-200 典型每側四扇主艙門；圓形寬機身、橢圓舷窗與長尾錐構成 Boeing 廣體輪廓。", "The 777 body is about 6.20 m wide and a typical 777-200 has four main doors per side, with oval windows and a long aft taper.", "777の胴体幅は約6.20 mで、777-200は通常片側4枚の主ドア、楕円窓、長い後部絞りを持ちます。"),
+        ("A340-300 機身約 5.64 m 寬；兩者都常見每側四門，因此門數必須配合引擎與主腳判讀。", "The A340-300 body is about 5.64 m wide. Both commonly show four doors per side, so combine door count with engines and gear.", "A340-300の胴体幅は約5.64 mです。両機とも片側4ドアが多く、エンジンと脚も併用します。"),
+        [("典型每側四扇主艙門。", "Typically four main doors per side.", "通常は片側4枚の主ドアです。"), ("機身比 A340-300 更寬。", "The body is wider than the A340-300's.", "胴体はA340-300より太いです。"), ("客艙窗為獨立橢圓形。", "Cabin windows are individual ovals.", "客室窓は独立した楕円形です。")],
+    ),
+    "engine": identify(
+        ("777-200／200ER 可配 PW4000、Rolls-Royce Trent 800 或早期 GE90；無論型號，兩具短艙都明顯大於 A340-300 的四具 CFM56-5C。", "The 777-200/200ER could use PW4000s, Trent 800s or early GE90s. In every case its two nacelles are much larger than the A340-300's four CFM56-5Cs.", "777-200／200ERはPW4000、Trent 800、初期GE90を選択でき、いずれもA340-300のCFM56-5C 4基より大きなナセルです。"),
+        ("照片中的 United 777-200 使用 PW4000 系列；不能把它當成所有 777-200 的唯一引擎外形。", "The photographed United 777-200 uses PW4000-series engines; that nacelle is not universal to every 777-200.", "写真のUnited 777-200はPW4000系列で、全777-200共通の外形ではありません。"),
+        [("總數固定為兩具。", "There are always two engines.", "エンジンは常に2基です。"), ("短艙直徑遠大於 A340-300。", "Nacelles are far larger than the A340-300's.", "ナセル径はA340-300より大幅に大きいです。"), ("三種引擎選項會改變細部外形。", "Three engine options change the detail shape.", "3種の選択で細部形状が変わります。")],
+    ),
+    "wingtip": identify(
+        ("一般 777-200／200ER 使用簡潔、近乎水平的傳統翼尖，沒有直立 winglet；後來的 777-200LR 才採明顯延長的 raked tip。", "Standard 777-200/200ER aircraft use plain near-horizontal tips without upright winglets; the later 777-200LR introduced prominent raked tips.", "通常の777-200／200ERは直立小翼のない水平に近い通常翼端で、後の777-200LRが長いレイクド翼端を採用します。"),
+        ("A340-300 翼尖可見向上、向下伸出的短翼尖擋板；這比兩者近似的翼展更容易辨認。", "The A340-300 carries short upper/lower wingtip fences, a better cue than their nearly identical spans.", "A340-300には上下へ伸びる短い翼端フェンスがあり、ほぼ同じ翼幅より有効な手掛かりです。"),
+        [("沒有高大的直立小翼。", "No tall upright winglet.", "高い直立小翼はありません。"), ("標準型翼尖主要留在翼面平面。", "The standard tip stays largely in the wing plane.", "通常翼端は主に翼面内です。"), ("不要與 777-200LR 的延長翼尖混淆。", "Do not confuse it with the -200LR raked tip.", "-200LRの延長翼端と混同しません。")],
+    ),
+    "wing": identify(
+        ("777-200 的後掠主翼翼展約 60.9 m，翼下各掛一具大型引擎；厚翼根、長外翼與大型多段襟翼很醒目。", "The 777-200's swept wing spans about 60.9 m and carries one large engine per side, with a thick root, long outer panels and large multi-element flaps.", "777-200の後退翼は翼幅約60.9 mで片側1基の大型エンジン、厚い翼根、長い外翼、大型多重フラップを持ちます。"),
+        ("A340-300 翼展約 60.3 m，尺寸幾乎相同；翼下是兩具還是四具引擎才是決定性差異。", "The A340-300 span is about 60.3 m, almost identical. Two versus four underwing engines is decisive.", "A340-300の翼幅約60.3 mとほぼ同じで、翼下2基か4基かが決定的です。"),
+        [("每側翼下只有一具引擎。", "One engine hangs beneath each wing.", "各主翼下は1基です。"), ("翼根厚且外翼長。", "The root is thick and the outer wing long.", "翼根は厚く外翼が長いです。"), ("後緣配置大型多段襟翼。", "Large multi-element flaps line the trailing edge.", "後縁に大型多重フラップがあります。")],
+    ),
+    "vstab": identify(
+        ("777 的垂直尾翼高大後掠，以長背鰭接入粗壯後機身，方向舵面積也很大。", "The 777's tall swept fin blends into its broad aft body through a long dorsal fillet and carries a large rudder.", "777の高い後退垂尾は長い背びれで太い後部胴体へつながり、大型方向舵を備えます。"),
+        ("A340-300 尾部通常顯得較細；垂尾只能作輔助，仍應先看引擎與中置主腳。", "The A340-300 tail usually looks slimmer. The fin is secondary; engines and centre gear remain stronger cues.", "A340-300の尾部はより細く見えます。垂尾は補助で、エンジンと中央脚を優先します。"),
+        [("前緣後掠且根部背鰭長。", "Strong sweep and a long dorsal fillet.", "前縁後退が大きく背びれが長いです。"), ("頂端較平，方向舵後緣近直線。", "The tip is fairly flat and rudder edge straight.", "上端は比較的平らで方向舵後縁は直線的です。"), ("粗壯尾身是輔助比例線索。", "The broad tail body is a supporting cue.", "太い尾部胴体が補助線索です。")],
+    ),
+    "hstab": identify(
+        ("777 使用大型低置後掠水平尾翼，厚實翼根與寬機身相接，形成寬大的尾部輪廓。", "The 777 uses large low-mounted swept tailplanes with thick roots joining the wide aft body.", "777は大型の低位置後退水平尾翼を持ち、厚い翼根が太い後部胴体へ接続します。"),
+        ("A340-300 也是傳統低置尾翼，單看水平尾翼很難定型；應配合翼下引擎數與翼尖。", "The A340-300 also has conventional low tailplanes, so use engine count and wingtips rather than this feature alone.", "A340-300も通常の低位置尾翼で、単独ではなくエンジン数と翼端を併用します。"),
+        [("水平尾翼尺寸大且後掠。", "Large, swept tailplanes.", "大型で後退した水平尾翼です。"), ("翼根整流罩厚實。", "The root fairing is substantial.", "翼根フェアリングが厚いです。"), ("此部位只適合交叉確認。", "Use this only as a cross-check.", "この部位は照合用です。")],
+    ),
+    "gear": identify(
+        ("777-200 前腳雙輪，左右主腳各有三根輪軸、六個輪胎，總輪數 14；主腳轉向架修長，機腹沒有中置主腳。", "The 777-200 has twin nose wheels and two three-axle, six-tyre main bogies: 14 wheels total, with no centre main gear.", "777-200は前脚2輪、左右主脚各3軸6輪の計14輪で、中央主脚はありません。"),
+        ("A340-300 總輪數 12：左右主腳各四輪，另有一組中線雙輪；從地面或機腹看最容易區分。", "The A340-300 totals 12 wheels: four on each wing gear plus a centreline twin. This is decisive from ground or belly views.", "A340-300は左右主脚各4輪と中央2輪の計12輪で、地上・腹面から決定的に区別できます。"),
+        [("每側主腳三軸六輪。", "Three axles and six tyres per main bogie.", "各主脚は3軸6輪です。"), ("全機共 14 輪。", "Fourteen wheels in total.", "全機計14輪です。"), ("沒有機身中線主腳。", "No centreline body gear.", "胴体中央脚がありません。")],
+    ),
+}
+
+CONTENT["a343"] = {
+    "overview": identify(
+        ("A340-300 是四發長程廣體客機，全長約 63.69 m、翼展約 60.3 m；四具細長 CFM56-5C、小型翼尖擋板與中置主腳是關鍵。", "The A340-300 is a four-engine long-range wide-body, about 63.69 m long with a 60.3 m span. Four slim CFM56-5Cs, small tip fences and centre gear are key cues.", "A340-300は全長約63.69 m、翼幅約60.3 mの4発長距離機で、細いCFM56-5C 4基、小型翼端フェンス、中央脚が特徴です。"),
+        ("它與 777-200 幾乎同長同寬展，但四發與機腹中線雙輪讓兩者一眼可分。", "It nearly matches the 777-200 in length and span, but four engines and a centreline twin-wheel gear separate them immediately.", "777-200と全長・翼幅がほぼ同じですが、4発と中央2輪脚で即座に区別できます。"),
+        [("翼下共有四具引擎。", "Four engines beneath the wings.", "主翼下に4基あります。"), ("翼尖有短小上下擋板。", "Small upper/lower tip fences.", "翼端に小型上下フェンスがあります。"), ("機腹中線另有雙輪主腳。", "A twin-wheel centre gear sits under the fuselage.", "胴体中央に2輪主脚があります。")],
+    ),
+    "cockpit": identify(
+        ("A340-300 與 A330 共用 Airbus 側桿玻璃座艙，飛行員正前方沒有駕駛盤，中央 ECAM 顯示引擎與系統資訊。", "The A340-300 shares the Airbus sidestick glass cockpit with the A330: no yokes ahead of the pilots and central ECAM system displays.", "A340-300はA330と共通のサイドスティック式グラスコックピットで、正面に操縦輪がなく中央ECAMがあります。"),
+        ("四發狀態會反映在引擎顯示與油門桿配置；與 777 相比，側桿和桌板仍是最直觀差異。", "Four-engine indications and throttle controls reflect the powerplant count; sidesticks and tray tables remain the clearest contrast with the 777.", "4発表示とスロットル構成があり、777との差はサイドスティックとテーブルが最明確です。"),
+        [("側桿位於兩名駕駛外側。", "Sidesticks sit outboard of both pilots.", "サイドスティックは両席外側です。"), ("正前方有桌板而非駕駛盤。", "Tray tables replace forward yokes.", "正面は操縦輪でなくテーブルです。"), ("中央 ECAM 顯示四發系統。", "Central ECAM covers the four-engine systems.", "中央ECAMが4発システムを表示します。")],
+    ),
+    "windshield": identify(
+        ("A340-300 採 A330／A340 共通六片式窗帶，正面窗較扁平，外側窗沿圓鼻平順向後收窄。", "The A340-300 uses the common A330/A340 six-pane glazing: flatter forward panes and outer panes tapering smoothly around the rounded nose.", "A340-300はA330／A340共通の6枚窓で、前面窓は平たく外側窓が丸い機首に沿って滑らかに細くなります。"),
+        ("777 的窗框更粗、更角張；兩型都沒有 A350 式黑色面罩，因此應比較窗框幾何而非顏色。", "The 777's frames are heavier and more angular. Neither has an A350-style black mask, so compare geometry rather than colour.", "777の枠は太く角張ります。両機ともA350型黒マスクがないため色でなく形状を比較します。"),
+        [("正面窗帶較扁平。", "The forward glazing looks flatter.", "正面窓帯はより平たく見えます。"), ("外側窗轉折較柔和。", "Outer-pane transitions are smoother.", "外側窓の変化が滑らかです。"), ("窗框與 A330 家族共通。", "The frame is shared with the A330 family.", "窓枠はA330系と共通です。")],
+    ),
+    "fuselage": identify(
+        ("A340-300 使用 A330／A340 共通約 5.64 m 寬機身，典型每側四扇主艙門，圓鼻與長直窗列形成修長輪廓。", "The A340-300 uses the roughly 5.64 m-wide A330/A340 fuselage, typically with four main doors per side, a rounded nose and long straight window belt.", "A340-300は幅約5.64 mのA330／A340共通胴体で、通常片側4枚の主ドア、丸い機首、長い窓列を持ちます。"),
+        ("777-200 也常見每側四門，但機身約寬 56 cm；門數相同時，應回到引擎數與主腳。", "The 777-200 also commonly has four doors per side but is about 56 cm wider; engines and gear are more useful than door count.", "777-200も片側4ドアが多い一方で約56 cm太く、ドア数よりエンジンと脚が有効です。"),
+        [("典型每側四扇主艙門。", "Typically four main doors per side.", "通常片側4枚の主ドアです。"), ("機身截面與 A330 共通。", "The fuselage section is shared with the A330.", "胴体断面はA330と共通です。"), ("比 777 機身更窄。", "The body is narrower than the 777's.", "胴体は777より細いです。")],
+    ),
+    "engine": identify(
+        ("A340-300 固定使用四具 CFM56-5C，高旁通比短艙直徑相對機身顯得小，兩具分布在每側主翼下。", "The A340-300 exclusively uses four CFM56-5Cs. Their high-bypass nacelles look relatively small beside the wide body, with two under each wing.", "A340-300はCFM56-5C 4基専用で、広い胴体に対してナセルが小さく、各主翼下に2基配置されます。"),
+        ("777-200 的兩具 PW4000、Trent 800 或 GE90 都明顯更大；引擎數與直徑是最穩定的外觀差異。", "The 777-200's two PW4000, Trent 800 or GE90 engines are visibly larger. Count and diameter are the most stable cues.", "777-200のPW4000、Trent 800、GE90はいずれも大きく、数と直径が最安定した差です。"),
+        [("每側主翼下兩具，共四具。", "Two per wing, four total.", "各主翼下2基、計4基です。"), ("只使用 CFM56-5C 系列。", "Only CFM56-5C engines are used.", "CFM56-5Cのみを使用します。"), ("短艙比 777 小而細長。", "Nacelles are smaller and slimmer than the 777's.", "ナセルは777より小さく細長いです。")],
+    ),
+    "wingtip": identify(
+        ("A340-300 經典翼尖有短小的上下翼尖擋板，向上部分略高、向下部分較短，沒有大型融合式 winglet。", "The classic A340-300 tip has small upper and lower fences, with a taller upper blade and shorter lower blade rather than a large blended winglet.", "A340-300の典型翼端は上側がやや高い小型上下フェンスで、大型ブレンデッドウイングレットではありません。"),
+        ("標準 777-200 翼尖近乎水平且沒有上下擋板；從客艙翼景即可快速區分。", "A standard 777-200 has a near-horizontal plain tip without upper/lower fences, making cabin wing views useful.", "標準777-200は上下フェンスのない水平に近い翼端で、客室翼景から区別できます。"),
+        [("上、下各有短小擋板。", "Small fences project above and below.", "上下に小型フェンスがあります。"), ("尺寸遠小於現代 Sharklet。", "Much smaller than a modern Sharklet.", "現代Sharkletより大幅に小型です。"), ("是 A330／早期 A340 家族線索。", "A cue shared with early A330/A340 aircraft.", "初期A330／A340共通の手掛かりです。")],
+    ),
+    "wing": identify(
+        ("A340-300 後掠主翼翼展約 60.3 m，每側掛兩具 CFM56；外翼接小型翼尖擋板，後緣有大型襟翼與擾流板。", "The A340-300's swept wing spans about 60.3 m, carries two CFM56s per side and ends in small tip fences, with large flaps and spoilers aft.", "A340-300の後退翼は翼幅約60.3 mで各側CFM56 2基、小型翼端フェンス、大型フラップとスポイラーを備えます。"),
+        ("777-200 翼展約 60.9 m，幾乎相同；主翼判讀應看每側一具還是兩具引擎，而非估算翼展。", "The 777-200 span is about 60.9 m, nearly identical. Count one versus two engines per wing instead of estimating span.", "777-200の翼幅約60.9 mとほぼ同じで、翼幅より片側1基か2基かを見ます。"),
+        [("每側翼下掛兩具引擎。", "Two engines hang beneath each wing.", "各主翼下に2基あります。"), ("外翼末端接小型擋板。", "Small fences finish the outer wing.", "外翼端に小型フェンスがあります。"), ("翼展與 777-200 幾乎相同。", "Span nearly matches the 777-200.", "翼幅は777-200とほぼ同じです。")],
+    ),
+    "vstab": identify(
+        ("A340-300 的垂直尾翼高大後掠，根部以 Airbus 式平順背鰭接入較細的後機身，外形與 A330 高度共通。", "The A340-300's tall swept fin blends through a smooth Airbus-style dorsal root into a slimmer aft body and is highly common with the A330.", "A340-300の高い後退垂尾はAirbusらしい滑らかな根元で細い後部胴体へ接続し、A330と高い共通性があります。"),
+        ("僅靠尾翼很難把 A340 與 A330 分開；四具引擎和中置主腳才是 A340-300 的主要確認點。", "The fin alone cannot reliably separate an A340 from an A330; four engines and centre gear confirm the A340-300.", "尾翼だけではA330と区別できず、4発と中央脚がA340-300の主確認点です。"),
+        [("垂尾高大且前緣後掠。", "Tall fin with a swept leading edge.", "高く前縁後退した垂尾です。"), ("根部過渡平順。", "The root transition is smooth.", "根元のつながりが滑らかです。"), ("外形與 A330 相近。", "The outline closely resembles the A330's.", "外形はA330に近いです。")],
+    ),
+    "hstab": identify(
+        ("A340-300 採低置後掠水平尾翼，從細長尾錐向外收尖，與 A330 共用相近的傳統尾部布局。", "The A340-300 uses low-mounted swept tailplanes tapering from a slender tailcone in a conventional layout shared closely with the A330.", "A340-300は細い尾部から伸びる低位置後退水平尾翼で、A330と近い通常尾部配置です。"),
+        ("777-200 也是低置尾翼，水平尾翼本身不是強線索；應搭配較窄機身、四發與中置主腳。", "The 777-200 also uses low tailplanes, so combine this with the narrower body, four engines and centre gear.", "777-200も低位置尾翼のため、細い胴体、4発、中央脚を併用します。"),
+        [("低置、後掠且向外收尖。", "Low-mounted, swept and tapered.", "低位置・後退・先細形です。"), ("尾錐比例較細長。", "The tailcone looks relatively slender.", "尾部は比較的細長いです。"), ("單獨不能區分 A330。", "It cannot alone separate an A330.", "単独ではA330と区別できません。")],
+    ),
+    "gear": identify(
+        ("A340-300 前腳雙輪、左右翼下主腳各四輪，機身中線另有一組雙輪主腳，總輪數 12。", "The A340-300 has twin nose wheels, four-wheel wing gears on each side and a twin-wheel centreline gear: 12 wheels total.", "A340-300は前脚2輪、左右翼下主脚各4輪、中央主脚2輪の計12輪です。"),
+        ("中置雙輪可把 -300 與雙發 A330 分開，也與 A340-500／-600 的四輪中置主腳不同；777 則沒有中央主腳。", "The twin centre gear separates it from the twin-engine A330 and differs from the four-wheel centre gear on A340-500/-600; the 777 has none.", "中央2輪は双発A330と区別し、A340-500／-600の中央4輪とも異なり、777には中央脚がありません。"),
+        [("左右翼下主腳各四輪。", "Four wheels on each wing main gear.", "左右翼下主脚は各4輪です。"), ("機身中線主腳為雙輪。", "The centreline body gear has two wheels.", "胴体中央脚は2輪です。"), ("全機總輪數為 12。", "Twelve wheels in total.", "全機計12輪です。")],
+    ),
+}
 
 CONTENT.update({
     "b717": {

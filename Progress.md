@@ -196,3 +196,16 @@
 - `tools/download_reference_photos.ps1` 與 `tools/update_aircraft_reference_images.py` 已擴充至 20 架 × 10 類、220 張照片；`assets/reference/ATTRIBUTION.md` 已加入作者、授權、裁切與構型差異說明。
 - 比較／檢視資料升為 v=151，Service Worker cache 升為 `hangar-v14`。已通過 JSON、Python、JavaScript、圖片尺寸／破圖、三語欄位與 `git diff --check`；本地瀏覽器驗證比較頁 10 列、22 張照片、22 個 Commons 來源、無空白摘要，繁中／英文／日文切換正常，單機頁可直接定位 737-600 引擎及 A318 垂尾並載入實機照片。
 - 本機預覽：`http://localhost:8000/versus.html?a=b736&b=a318&local=151`。使用者已確認並同意發布；本批準備提交並推送至 `origin/main`，之後接續下一組機型。
+
+### Boeing 777-200 / Airbus A340-300 實機部位辨識比較（2026-08-29，進行中）
+
+- 上一批 Boeing 737-600／Airbus A318 已以 commit `3fda2ef`（`新增 737-600 與 A318 實機部位辨識比較`）推送至 `origin/main`。
+- 下一批選定 Boeing 777-200（`b772`）與 Airbus A340-300（`a343`）：兩者皆為 1990 年代長程廣體客機，但分別採雙發與四發，適合比較駕駛艙／外窗、機身與艙門、引擎數量、翼尖、主翼、尾翼及主起落架構型。
+- 本批沿用既有 10 類、實機照片、三語辨識內容與 Commons 授權管線；完成後先開本地預覽，未經使用者確認不 push。`data/korean_airlines_debug.json` 維持未追蹤且不納入作業。
+- 已完成兩型各 10 類三語辨識內容與各 11 張 Wikimedia Commons 真實照片，正／側駕駛艙外窗分開呈現，共 22 張；目視檢查後重裁 A340-300 正面窗與 777-200 翼尖，圖片作者、授權、裁切與構型適用範圍已加入 `assets/reference/ATTRIBUTION.md`。
+- 比較重點包含兩型幾乎相同的機長／翼展、777-200 雙發大短艙與每側六輪主腳（全機 14 輪、無中置主腳），對照 A340-300 四具 CFM56-5C、上下翼尖擋板、每側四輪主腳加中置雙輪（全機 12 輪）。
+- 資料與檢視資源升為 v=152，Service Worker cache 升為 `hangar-v15`；更新工具自我檢查通過 22 架 × 10 類／242 張照片，JSON、Python、JavaScript 與 `git diff --check` 均通過。
+- 本地瀏覽器已驗證比較頁 10 列、22 張部位照片、22 個 Commons 來源、無空白摘要；逐段載入後無破圖，繁中／英文／日文切換正常，777-200 起落架與 A340-300 引擎的單機部位深連結均正確。
+- 本機預覽：`http://localhost:8000/versus.html?a=b772&b=a343&local=152`。本批尚未 commit、尚未 push，等待使用者確認。
+- 使用者已確認本批並同意發布；準備提交並推送至 `origin/main`，本輪在此結束，下次接續下一組機型。
+- 實機部位辨識比較目前完成 22／52 架，尚餘 30 架；3D 模型檔目前有 47／52 架，缺少 Dreamlifter、C909、C919、C929、C939 共 5 架。後續 3D 工作以重新搜尋可合法再利用的開源模型為優先，找不到時才依官方尺寸與多視角參考建立新模型；未經授權不使用來源模型或紋理。

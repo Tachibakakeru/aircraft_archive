@@ -2,19 +2,30 @@
   "title": "Airbus A340-300",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A340-300 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "A340-300 使用 A330／A340 共通約 5.64 m 寬機身，典型每側四扇主艙門，圓鼻與長直窗列形成修長輪廓。",
+        "en": "The A340-300 uses the roughly 5.64 m-wide A330/A340 fuselage, typically with four main doors per side, a rounded nose and long straight window belt.",
+        "ja": "A340-300は幅約5.64 mのA330／A340共通胴体で、通常片側4枚の主ドア、丸い機首、長い窓列を持ちます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "777-200 也常見每側四門，但機身約寬 56 cm；門數相同時，應回到引擎數與主腳。",
+        "en": "The 777-200 also commonly has four doors per side but is about 56 cm wider; engines and gear are more useful than door count.",
+        "ja": "777-200も片側4ドアが多い一方で約56 cm太く、ドア数よりエンジンと脚が有効です。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "典型每側四扇主艙門。",
+          "en": "Typically four main doors per side.",
+          "ja": "通常片側4枚の主ドアです。"
+        },
+        {
+          "zh": "機身截面與 A330 共通。",
+          "en": "The fuselage section is shared with the A330.",
+          "ja": "胴体断面はA330と共通です。"
+        },
+        {
+          "zh": "比 777 機身更窄。",
+          "en": "The body is narrower than the 777's.",
+          "ja": "胴体は777より細いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a343/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A340-300 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "A340-300 與 A330 共用 Airbus 側桿玻璃座艙，飛行員正前方沒有駕駛盤，中央 ECAM 顯示引擎與系統資訊。",
+        "en": "The A340-300 shares the Airbus sidestick glass cockpit with the A330: no yokes ahead of the pilots and central ECAM system displays.",
+        "ja": "A340-300はA330と共通のサイドスティック式グラスコックピットで、正面に操縦輪がなく中央ECAMがあります。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "四發狀態會反映在引擎顯示與油門桿配置；與 777 相比，側桿和桌板仍是最直觀差異。",
+        "en": "Four-engine indications and throttle controls reflect the powerplant count; sidesticks and tray tables remain the clearest contrast with the 777.",
+        "ja": "4発表示とスロットル構成があり、777との差はサイドスティックとテーブルが最明確です。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "側桿位於兩名駕駛外側。",
+          "en": "Sidesticks sit outboard of both pilots.",
+          "ja": "サイドスティックは両席外側です。"
+        },
+        {
+          "zh": "正前方有桌板而非駕駛盤。",
+          "en": "Tray tables replace forward yokes.",
+          "ja": "正面は操縦輪でなくテーブルです。"
+        },
+        {
+          "zh": "中央 ECAM 顯示四發系統。",
+          "en": "Central ECAM covers the four-engine systems.",
+          "ja": "中央ECAMが4発システムを表示します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a343/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:A340-300_cockpit_(8459431964).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A340-300 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "A340-300 後掠主翼翼展約 60.3 m，每側掛兩具 CFM56；外翼接小型翼尖擋板，後緣有大型襟翼與擾流板。",
+        "en": "The A340-300's swept wing spans about 60.3 m, carries two CFM56s per side and ends in small tip fences, with large flaps and spoilers aft.",
+        "ja": "A340-300の後退翼は翼幅約60.3 mで各側CFM56 2基、小型翼端フェンス、大型フラップとスポイラーを備えます。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "777-200 翼展約 60.9 m，幾乎相同；主翼判讀應看每側一具還是兩具引擎，而非估算翼展。",
+        "en": "The 777-200 span is about 60.9 m, nearly identical. Count one versus two engines per wing instead of estimating span.",
+        "ja": "777-200の翼幅約60.9 mとほぼ同じで、翼幅より片側1基か2基かを見ます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "每側翼下掛兩具引擎。",
+          "en": "Two engines hang beneath each wing.",
+          "ja": "各主翼下に2基あります。"
+        },
+        {
+          "zh": "外翼末端接小型擋板。",
+          "en": "Small fences finish the outer wing.",
+          "ja": "外翼端に小型フェンスがあります。"
+        },
+        {
+          "zh": "翼展與 777-200 幾乎相同。",
+          "en": "Span nearly matches the 777-200.",
+          "ja": "翼幅は777-200とほぼ同じです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a343/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BLADE,_ILA_2018,_Sch%C3%B6nefeld_(1X7A5551).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A340-300 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A340-300 固定使用四具 CFM56-5C，高旁通比短艙直徑相對機身顯得小，兩具分布在每側主翼下。",
+        "en": "The A340-300 exclusively uses four CFM56-5Cs. Their high-bypass nacelles look relatively small beside the wide body, with two under each wing.",
+        "ja": "A340-300はCFM56-5C 4基専用で、広い胴体に対してナセルが小さく、各主翼下に2基配置されます。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "777-200 的兩具 PW4000、Trent 800 或 GE90 都明顯更大；引擎數與直徑是最穩定的外觀差異。",
+        "en": "The 777-200's two PW4000, Trent 800 or GE90 engines are visibly larger. Count and diameter are the most stable cues.",
+        "ja": "777-200のPW4000、Trent 800、GE90はいずれも大きく、数と直径が最安定した差です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "每側主翼下兩具，共四具。",
+          "en": "Two per wing, four total.",
+          "ja": "各主翼下2基、計4基です。"
+        },
+        {
+          "zh": "只使用 CFM56-5C 系列。",
+          "en": "Only CFM56-5C engines are used.",
+          "ja": "CFM56-5Cのみを使用します。"
+        },
+        {
+          "zh": "短艙比 777 小而細長。",
+          "en": "Nacelles are smaller and slimmer than the 777's.",
+          "ja": "ナセルは777より小さく細長いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a343/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "A340-300 的垂直尾翼高大後掠，根部以 Airbus 式平順背鰭接入較細的後機身，外形與 A330 高度共通。",
+        "en": "The A340-300's tall swept fin blends through a smooth Airbus-style dorsal root into a slimmer aft body and is highly common with the A330.",
+        "ja": "A340-300の高い後退垂尾はAirbusらしい滑らかな根元で細い後部胴体へ接続し、A330と高い共通性があります。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "僅靠尾翼很難把 A340 與 A330 分開；四具引擎和中置主腳才是 A340-300 的主要確認點。",
+        "en": "The fin alone cannot reliably separate an A340 from an A330; four engines and centre gear confirm the A340-300.",
+        "ja": "尾翼だけではA330と区別できず、4発と中央脚がA340-300の主確認点です。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "垂尾高大且前緣後掠。",
+          "en": "Tall fin with a swept leading edge.",
+          "ja": "高く前縁後退した垂尾です。"
+        },
+        {
+          "zh": "根部過渡平順。",
+          "en": "The root transition is smooth.",
+          "ja": "根元のつながりが滑らかです。"
+        },
+        {
+          "zh": "外形與 A330 相近。",
+          "en": "The outline closely resembles the A330's.",
+          "ja": "外形はA330に近いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a343/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "A340-300 採低置後掠水平尾翼，從細長尾錐向外收尖，與 A330 共用相近的傳統尾部布局。",
+        "en": "The A340-300 uses low-mounted swept tailplanes tapering from a slender tailcone in a conventional layout shared closely with the A330.",
+        "ja": "A340-300は細い尾部から伸びる低位置後退水平尾翼で、A330と近い通常尾部配置です。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "777-200 也是低置尾翼，水平尾翼本身不是強線索；應搭配較窄機身、四發與中置主腳。",
+        "en": "The 777-200 also uses low tailplanes, so combine this with the narrower body, four engines and centre gear.",
+        "ja": "777-200も低位置尾翼のため、細い胴体、4発、中央脚を併用します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "低置、後掠且向外收尖。",
+          "en": "Low-mounted, swept and tapered.",
+          "ja": "低位置・後退・先細形です。"
+        },
+        {
+          "zh": "尾錐比例較細長。",
+          "en": "The tailcone looks relatively slender.",
+          "ja": "尾部は比較的細長いです。"
+        },
+        {
+          "zh": "單獨不能區分 A330。",
+          "en": "It cannot alone separate an A330.",
+          "ja": "単独ではA330と区別できません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a343/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus A340-300 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "A340-300 前腳雙輪、左右翼下主腳各四輪，機身中線另有一組雙輪主腳，總輪數 12。",
+        "en": "The A340-300 has twin nose wheels, four-wheel wing gears on each side and a twin-wheel centreline gear: 12 wheels total.",
+        "ja": "A340-300は前脚2輪、左右翼下主脚各4輪、中央主脚2輪の計12輪です。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "中置雙輪可把 -300 與雙發 A330 分開，也與 A340-500／-600 的四輪中置主腳不同；777 則沒有中央主腳。",
+        "en": "The twin centre gear separates it from the twin-engine A330 and differs from the four-wheel centre gear on A340-500/-600; the 777 has none.",
+        "ja": "中央2輪は双発A330と区別し、A340-500／-600の中央4輪とも異なり、777には中央脚がありません。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "左右翼下主腳各四輪。",
+          "en": "Four wheels on each wing main gear.",
+          "ja": "左右翼下主脚は各4輪です。"
+        },
+        {
+          "zh": "機身中線主腳為雙輪。",
+          "en": "The centreline body gear has two wheels.",
+          "ja": "胴体中央脚は2輪です。"
+        },
+        {
+          "zh": "全機總輪數為 12。",
+          "en": "Twelve wheels in total.",
+          "ja": "全機計12輪です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a343/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_02.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A340-300 是四發長程廣體客機，全長約 63.69 m、翼展約 60.3 m；四具細長 CFM56-5C、小型翼尖擋板與中置主腳是關鍵。",
+        "en": "The A340-300 is a four-engine long-range wide-body, about 63.69 m long with a 60.3 m span. Four slim CFM56-5Cs, small tip fences and centre gear are key cues.",
+        "ja": "A340-300は全長約63.69 m、翼幅約60.3 mの4発長距離機で、細いCFM56-5C 4基、小型翼端フェンス、中央脚が特徴です。"
+      },
+      "fact": {
+        "zh": "它與 777-200 幾乎同長同寬展，但四發與機腹中線雙輪讓兩者一眼可分。",
+        "en": "It nearly matches the 777-200 in length and span, but four engines and a centreline twin-wheel gear separate them immediately.",
+        "ja": "777-200と全長・翼幅がほぼ同じですが、4発と中央2輪脚で即座に区別できます。"
+      },
+      "bullets": [
+        {
+          "zh": "翼下共有四具引擎。",
+          "en": "Four engines beneath the wings.",
+          "ja": "主翼下に4基あります。"
+        },
+        {
+          "zh": "翼尖有短小上下擋板。",
+          "en": "Small upper/lower tip fences.",
+          "ja": "翼端に小型上下フェンスがあります。"
+        },
+        {
+          "zh": "機腹中線另有雙輪主腳。",
+          "en": "A twin-wheel centre gear sits under the fuselage.",
+          "ja": "胴体中央に2輪主脚があります。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a343/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A340-300 採 A330／A340 共通六片式窗帶，正面窗較扁平，外側窗沿圓鼻平順向後收窄。",
+        "en": "The A340-300 uses the common A330/A340 six-pane glazing: flatter forward panes and outer panes tapering smoothly around the rounded nose.",
+        "ja": "A340-300はA330／A340共通の6枚窓で、前面窓は平たく外側窓が丸い機首に沿って滑らかに細くなります。"
+      },
+      "fact": {
+        "zh": "777 的窗框更粗、更角張；兩型都沒有 A350 式黑色面罩，因此應比較窗框幾何而非顏色。",
+        "en": "The 777's frames are heavier and more angular. Neither has an A350-style black mask, so compare geometry rather than colour.",
+        "ja": "777の枠は太く角張ります。両機ともA350型黒マスクがないため色でなく形状を比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面窗帶較扁平。",
+          "en": "The forward glazing looks flatter.",
+          "ja": "正面窓帯はより平たく見えます。"
+        },
+        {
+          "zh": "外側窗轉折較柔和。",
+          "en": "Outer-pane transitions are smoother.",
+          "ja": "外側窓の変化が滑らかです。"
+        },
+        {
+          "zh": "窗框與 A330 家族共通。",
+          "en": "The frame is shared with the A330 family.",
+          "ja": "窓枠はA330系と共通です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a343/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_02.jpg"
+        },
+        {
+          "src": "assets/reference/a343/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A340-313X,_Virgin_Atlantic_Airways_JP359341.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "A340-300 經典翼尖有短小的上下翼尖擋板，向上部分略高、向下部分較短，沒有大型融合式 winglet。",
+        "en": "The classic A340-300 tip has small upper and lower fences, with a taller upper blade and shorter lower blade rather than a large blended winglet.",
+        "ja": "A340-300の典型翼端は上側がやや高い小型上下フェンスで、大型ブレンデッドウイングレットではありません。"
+      },
+      "fact": {
+        "zh": "標準 777-200 翼尖近乎水平且沒有上下擋板；從客艙翼景即可快速區分。",
+        "en": "A standard 777-200 has a near-horizontal plain tip without upper/lower fences, making cabin wing views useful.",
+        "ja": "標準777-200は上下フェンスのない水平に近い翼端で、客室翼景から区別できます。"
+      },
+      "bullets": [
+        {
+          "zh": "上、下各有短小擋板。",
+          "en": "Small fences project above and below.",
+          "ja": "上下に小型フェンスがあります。"
+        },
+        {
+          "zh": "尺寸遠小於現代 Sharklet。",
+          "en": "Much smaller than a modern Sharklet.",
+          "ja": "現代Sharkletより大幅に小型です。"
+        },
+        {
+          "zh": "是 A330／早期 A340 家族線索。",
+          "en": "A cue shared with early A330/A340 aircraft.",
+          "ja": "初期A330／A340共通の手掛かりです。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a343/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BLADE,_ILA_2018,_Sch%C3%B6nefeld_(1X7A5551).jpg"
+        }
+      ]
     }
   },
   "specifications": {
