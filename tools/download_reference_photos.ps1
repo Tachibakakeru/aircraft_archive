@@ -146,6 +146,24 @@ $photos = [ordered]@{
   "a346/vstab.jpg" = "Airbus A340-600 Tail assembly (8459395384).jpg"
   "a346/hstab.jpg" = "G-VBUG Airbus A346 Virgin Atlantic Tail (13891670573).jpg"
   "a346/gear.jpg" = "Thai airways a340-600 hs-tna takeoff arp.jpg"
+  "b717/overview.jpg" = "Boeing 717, N483HA, Hawaiian Airlines.jpg"
+  "b717/cockpit.jpg" = "N938AT Boeing 717 flight deck.jpg"
+  "b717/fuselage.jpg" = "N937AT Boeing 717 Air Tran Nose (7438725424).jpg"
+  "b717/engine.jpg" = "Boeing 717 MD95, Hawaiian, left port tail and engine, at gate (4389633539) (3).jpg"
+  "b717/wingtip.jpg" = "11-APR-2022 - HA284 LIH-HNL (B717-200 - N488HA) (02).jpg"
+  "b717/wing.jpg" = "Boeing 717 (1).jpg"
+  "b717/vstab.jpg" = "EC-MGT 717 Volotea tailfin VGO.jpg"
+  "b717/hstab.jpg" = "Air Tran Boeing 717 aka MD-95 - note tail surrface anhedral - frame 1049 (4906658072) (2).jpg"
+  "b717/gear.jpg" = "QantasLink B717-231 (VH-NXO) departing Perth Airport.jpg"
+  "cs100/overview.jpg" = "ITA Airways A220-100 EI-HLE 2024-06-15 Munich Airport p02.jpg"
+  "cs100/cockpit.jpg" = "Bombardier CS100 (23463394635).jpg"
+  "cs100/fuselage.jpg" = "Swiss, HB-JBC, Bombardier CS100 (31383514146).jpg"
+  "cs100/engine.jpg" = "Bombardier CS100 at Brussels Airport (25272589779).jpg"
+  "cs100/wingtip.jpg" = "Cabin window view of Swissair aircraft wings (24482756908).jpg"
+  "cs100/wing.jpg" = "ITA Airways, I-ADVA, Airbus A220-100 (54007495525) at Milan Linate.jpg"
+  "cs100/vstab.jpg" = "Swiss, HB-JBI, Airbus A220-100 (49580114558).jpg"
+  "cs100/hstab.jpg" = "Swiss International Airlines HB-JBH BOMBARDIER CS100 A220-100 (Ank Kumar, Infosys Limited) 05.jpg"
+  "cs100/gear.jpg" = "Bombardier CS100 (23437223616).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -199,6 +217,10 @@ $windowPhotos = @(
   @{ Dest="b744/window-side.jpg"; Title="KLM Boeing 747-400 PH-BFI nose section (10205055606).jpg"; Crop=@(.54,.08,.44) }
   @{ Dest="a346/window-front.jpg"; Title="A340-600 (13024845015).jpg"; Crop=@(.34,.34,.32) }
   @{ Dest="a346/window-side.jpg"; Title="G-VSHY Airbus A340-642 (cn 383) Virgin Atlantic Airways. (6100631197).jpg"; Crop=@(.02,.05,.42) }
+  @{ Dest="b717/window-front.jpg"; Title="Boeing 717 MD95, Hawaiian, Honolulu, nose-on (4389641139) (3).jpg"; Crop=@(.05,.31,.90) }
+  @{ Dest="b717/window-side.jpg"; Title="N937AT Boeing 717 Air Tran Nose (7438725424).jpg"; Crop=@(.55,.22,.42) }
+  @{ Dest="cs100/window-front.jpg"; Title="Bombardier CS100 (23463413085).jpg"; Crop=@(.25,.24,.50) }
+  @{ Dest="cs100/window-side.jpg"; Title="Swiss, HB-JBC, Bombardier CS100 (31383514146).jpg"; Crop=@(.00,.30,.38) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600

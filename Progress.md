@@ -159,3 +159,14 @@
 - 圖片作者、授權、裁切與 747-400D／早期 A340 中置主腳差異已補入 `assets/reference/ATTRIBUTION.md`；下載與資料更新器擴充至 14 架 × 10 類、154 張照片。
 - 資料 fetch 與比較／檢視頁資源升為 v=148，Service Worker cache 升為 `hangar-v11`。已通過 JSON、JavaScript 語法、Python 完整性檢查、圖片尺寸、`git diff --check` 與乾淨瀏覽器實載驗證：比較頁 10 列、22 張照片、22 個 Commons 來源、22 個單機部位連結且無破圖；747 外窗頁與 A340 起落架頁也正常。
 - 本機預覽：`http://localhost:8000/versus.html?a=b744&b=a346&local=148`。使用者已確認；第七批已以 commit `5404d14`（`新增 747-400 與 A340-600 實機部位辨識比較`）推送至 `origin/main`。本次作業在此結束，下次由下一組機型接續；`data/korean_airlines_debug.json` 維持未追蹤且未修改。
+
+### Boeing 717 / Airbus A220-100 實機部位辨識比較（2026-08-28，本機待確認）
+
+- 第八批選定 Boeing 717-200（`b717`）與 Airbus A220-100／原 Bombardier CS100（`cs100`），沿用既有 10 類比較與單機部位照片架構。
+- 兩架各加入 11 張 Wikimedia Commons 真實照片，外窗包含正面／側面，共 22 張；所有 CS100 舊名稱照片均確認為 A220-100 同一子型，717 圖片則排除同樣使用 Boeing 717 廠內編號的軍用 KC-135 系列。
+- 三語辨識內容聚焦於 717 的後機身 BR715、T 型尾翼、平直翼尖與 37.8 m 機長／28.4 m 翼展比例，對比 A220-100 的翼下 PW1500G、低置水平尾翼、融合式上彎翼尖與 35.0 m 機長／35.1 m 翼展比例。
+- 明確說明 A220 源自 Bombardier 全新 C Series 設計，並非縮小版 A320；其五具大型橫向螢幕與側桿也不同於 717 的駕駛盤與六具顯示器。
+- 兩型前腳與左右主腳均為雙輪配置，因此內容明確提醒不能只靠輪數辨識，應優先看引擎位置、水平尾翼高度與翼尖外形。
+- 圖片作者、授權、裁切與 CS100／A220-100 名稱關係已補入 `assets/reference/ATTRIBUTION.md`；下載與資料工具擴充至 16 架 × 10 類、176 張照片。
+- 資料 fetch 與比較／檢視頁資源升為 v=149，Service Worker cache 升為 `hangar-v12`。已通過 JSON、JavaScript 語法、Python 完整性檢查、圖片尺寸與 `git diff --check`；乾淨瀏覽器實載比較頁為 10 列、22 張照片、22 個來源、22 個單機連結且無破圖，717 水平尾翼頁與 A220 引擎頁也正常。
+- 本機預覽：`http://localhost:8000/versus.html?a=b717&b=cs100&local=149`。使用者已確認並同意發布；本批準備提交並推送至 `origin/main`，之後接續下一組機型。`data/korean_airlines_debug.json` 維持未追蹤且未修改。

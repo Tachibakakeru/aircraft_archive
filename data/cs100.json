@@ -2,19 +2,30 @@
   "title": "Airbus A220-100",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A220-100 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "A220-100 機身最大直徑約 3.5 m、客艙寬約 3.28 m，典型為 2-3 座位；大型橢圓客艙窗、較寬機身與長尖機鼻帶來不同於 717 的比例。",
+        "en": "The A220-100 fuselage is about 3.5 m in maximum diameter with a 3.28 m cabin and typical 2-3 seating. Large oval windows, a broader body and long pointed nose distinguish it from the 717.",
+        "ja": "A220-100の最大胴体径は約3.5 m、客室幅約3.28 mで通常2-3配列です。大型楕円窓、太い胴体、長く尖った機首が717と異なります。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "A220-100 比 A220-300 短 3.7 m；辨識 -100 時可看主翼前後較短的窗列與較緊湊艙門間距。",
+        "en": "The A220-100 is 3.7 m shorter than the A220-300. Its shorter window rows ahead of and behind the wing and tighter door spacing identify the variant.",
+        "ja": "A220-100はA220-300より3.7 m短く、主翼前後の短い窓列と詰まった扉間隔で判別できます。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "橢圓客艙窗比 717 窗片更大。",
+          "en": "Oval cabin windows are larger than the 717's.",
+          "ja": "楕円客室窓は717より大型です。"
+        },
+        {
+          "zh": "長機鼻從駕駛艙窗向前平順收尖。",
+          "en": "A long nose tapers smoothly ahead of the cockpit glazing.",
+          "ja": "長い機首が操縦席窓から前方へ滑らかに細くなります。"
+        },
+        {
+          "zh": "後機身沒有尾置引擎遮擋窗列。",
+          "en": "No rear-mounted engines interrupt the aft fuselage.",
+          "ja": "尾部エンジンがなく後部胴体が遮られません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs100/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBC,_Bombardier_CS100_(31383514146).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A220-100 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "A220 駕駛艙採側桿、五具大型 Collins Pro Line Fusion 橫向顯示器與中央雙推力桿；正副駕駛前方沒有駕駛盤。",
+        "en": "The A220 flight deck uses sidesticks, five large landscape Collins Pro Line Fusion displays and twin thrust levers, with no yokes ahead of the pilots.",
+        "ja": "A220の操縦席はサイドスティック、5面大型横長Collins Pro Line Fusion表示器、2本の推力レバーを採用し、操縦輪はありません。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "雖然使用側桿，A220 的座艙並非 A320 家族同款：螢幕數量、尺寸、中央台與控制面板布局都不同。",
+        "en": "Despite its sidesticks, the A220 does not share the A320-family flight deck; screen count, proportions, pedestal and control panels all differ.",
+        "ja": "サイドスティックを使いますがA320系と同じ操縦席ではなく、画面数・比率・中央台・操作盤が異なります。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "五具大型橫向螢幕形成連續玻璃面板。",
+          "en": "Five wide displays form a continuous glass panel.",
+          "ja": "5面の大型横長画面が連続したグラスパネルを作ります。"
+        },
+        {
+          "zh": "側桿位於兩名駕駛外側。",
+          "en": "Sidesticks sit outboard of both pilots.",
+          "ja": "サイドスティックは両操縦席外側にあります。"
+        },
+        {
+          "zh": "中央台有兩支推力桿與系統控制器。",
+          "en": "Twin thrust levers and system controllers occupy the pedestal.",
+          "ja": "中央台に2本の推力レバーとシステム操作部があります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs100/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23463394635).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A220-100 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "A220-100 主翼翼展約 35.1 m，展弦比高且具明顯上反角；大型 PW1500G、襟翼整流罩與融合式翼尖共同形成寬大的平面輪廓。",
+        "en": "The A220-100 wing spans about 35.1 m with high aspect ratio and visible dihedral. Large PW1500Gs, flap-track fairings and blended tips create a broad planform.",
+        "ja": "A220-100の主翼幅は約35.1 mで高アスペクト比と明確な上反角を持ち、大型PW1500G、フラップトラックフェアリング、融合翼端が広い平面形を作ります。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "翼展略大於機長是 A220-100 的重要比例；717 則是狹翼、機長遠大於翼展。",
+        "en": "A span slightly greater than length is an important A220-100 proportion; the 717 has a narrow wing and is much longer than its span.",
+        "ja": "翼幅が全長をわずかに上回るのがA220-100の重要比率で、717は狭い翼で全長が翼幅を大きく上回ります。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "主翼下方各吊掛一具大型引擎。",
+          "en": "One large engine hangs beneath each wing.",
+          "ja": "各主翼下に大型エンジン1基があります。"
+        },
+        {
+          "zh": "外翼細長並平順接入上彎小翼。",
+          "en": "The slender outer wing flows into an upturned winglet.",
+          "ja": "細長い外翼が上向きウイングレットへ滑らかにつながります。"
+        },
+        {
+          "zh": "翼面具多片擾流板與大型單縫襟翼。",
+          "en": "Multiple spoilers and large single-slotted flaps occupy the wing.",
+          "ja": "複数スポイラーと大型単隙間フラップがあります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs100/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ITA_Airways,_I-ADVA,_Airbus_A220-100_(54007495525)_at_Milan_Linate.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A220-100 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A220 家族只使用 Pratt & Whitney PW1500G 齒輪傳動渦扇，短艙直徑大、風扇葉片寬，兩具引擎由吊架安裝於主翼下。",
+        "en": "The A220 family exclusively uses Pratt & Whitney PW1500G geared turbofans. Their large-diameter nacelles and broad fan blades hang beneath the wings on pylons.",
+        "ja": "A220ファミリーはPratt & Whitney PW1500Gギヤードターボファン専用で、大径ナセルと幅広ファンを主翼下パイロンに搭載します。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "BR715 與 PW1500G 都是高旁通比引擎，但位置完全不同：717 在尾部，A220 在翼下；這比辨認風扇葉片更可靠。",
+        "en": "Both BR715 and PW1500G are high-bypass engines, but placement is entirely different: aft fuselage on the 717 and underwing on the A220, a more reliable cue than blade details.",
+        "ja": "BR715とPW1500Gはいずれも高バイパスですが、717は尾部、A220は翼下で、ファン形状より確実な識別点です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "大型風扇進氣口位於主翼前緣下方。",
+          "en": "Large fan inlets sit below and ahead of the wing leading edge.",
+          "ja": "大型ファン吸気口は主翼前縁下方にあります。"
+        },
+        {
+          "zh": "每側一具引擎，由短吊架連接主翼。",
+          "en": "One engine per side hangs from a short pylon.",
+          "ja": "左右各1基が短いパイロンで主翼に接続します。"
+        },
+        {
+          "zh": "後機身保持乾淨，沒有引擎短艙。",
+          "en": "The aft fuselage remains clean without nacelles.",
+          "ja": "後部胴体にはナセルがありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs100/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_at_Brussels_Airport_(25272589779).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "A220 垂直尾翼高大後掠，根部以長背鰭平順接入後機身；頂端沒有水平尾翼，輪廓清楚獨立。",
+        "en": "The A220 has a tall swept fin with a long dorsal root blending into the aft fuselage. Its tip is unobstructed because the tailplane is mounted low.",
+        "ja": "A220の垂直尾翼は高く後退し、長い背びれ根元が後部胴体へ滑らかにつながります。水平尾翼が低位置のため頂部は独立しています。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "717 的垂尾頂部被水平尾翼橫穿，且根部兩側有引擎；A220 的乾淨單垂尾從任何後方角度都更傳統。",
+        "en": "The 717 fin is crossed by its tailplane and flanked by engines at the root. The A220's clean standalone fin looks conventional from every rear angle.",
+        "ja": "717は垂尾頂部を水平尾翼が横切り根元両側にエンジンがありますが、A220は後方から通常の独立垂尾に見えます。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "垂尾頂端略方，沒有 T 尾橫翼。",
+          "en": "The slightly squared fin tip carries no T-tail surface.",
+          "ja": "やや角形の垂尾頂部にT字尾翼はありません。"
+        },
+        {
+          "zh": "前緣背鰭向前延伸，與機身平順融合。",
+          "en": "A forward dorsal fillet blends smoothly into the fuselage.",
+          "ja": "前縁背びれが前方へ伸び胴体へ滑らかにつながります。"
+        },
+        {
+          "zh": "低置水平尾翼從尾錐兩側伸出。",
+          "en": "Low-mounted tailplanes extend from the tailcone sides.",
+          "ja": "低位置水平尾翼が尾部両側から伸びます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs100/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBI,_Airbus_A220-100_(49580114558).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "A220 水平尾翼低置於後機身兩側，後掠並向外收尖；尾錐上方只剩獨立垂尾，構成傳統尾翼布局。",
+        "en": "The A220's swept tapered tailplanes mount low on either side of the aft fuselage, leaving a standalone fin above in a conventional empennage.",
+        "ja": "A220の後退・先細水平尾翼は後部胴体両側の低位置にあり、その上に独立垂尾が立つ通常尾翼配置です。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "與 717 高置 T 尾相比，高度差異非常大；即使照片只拍到尾部，也不需要依靠塗裝或航空公司判斷。",
+        "en": "The height difference from the 717's T-tail is enormous. Even a tail-only photograph can be identified without relying on livery or operator.",
+        "ja": "717の高いT字尾翼とは高さが大きく異なり、尾部だけの写真でも塗装や航空会社に頼らず判別できます。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "水平尾翼根部位於機身尾錐中段。",
+          "en": "The tailplane root sits midway up the tailcone.",
+          "ja": "水平尾翼根元はテールコーン中段にあります。"
+        },
+        {
+          "zh": "左右翼面後掠並逐漸收尖。",
+          "en": "Both surfaces sweep aft and taper outward.",
+          "ja": "左右翼面は後退し外側へ細くなります。"
+        },
+        {
+          "zh": "位置低於垂尾高度一半。",
+          "en": "It sits well below half the fin height.",
+          "ja": "垂尾高さの半分より十分低い位置です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs100/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Swiss_International_Airlines_HB-JBH_BOMBARDIER_CS100_A220-100_(Ank_Kumar,_Infosys_Limited)_05.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus A220-100 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "A220-100 前起落架為雙輪，左右主腳各為單軸雙輪；主腳由機腹向外可見厚實支柱、拖曳連桿與分段艙門。",
+        "en": "The A220-100 has twin nose wheels and a single-axle twin-wheel main unit on each side. Its main gear exposes a substantial strut, trailing links and segmented bay doors.",
+        "ja": "A220-100は前脚2輪、左右主脚各単軸2輪で、主脚には太い脚柱、トレーリングリンク、分割脚扉が見えます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "總輪數與 717 相同，兩者都不能靠『六輪』判型；A220 的主腳附近可同時看見翼下引擎與更寬的主翼。",
+        "en": "Total wheel count matches the 717, so 'six wheels' identifies neither. Around the A220 gear, underwing engines and a broader wing remain visible.",
+        "ja": "総輪数は717と同じで「6輪」だけでは判別できません。A220主脚付近では翼下エンジンと広い主翼も確認できます。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "左右主腳各一軸兩輪。",
+          "en": "Each main gear has one axle and two tyres.",
+          "ja": "左右主脚は各1軸2輪です。"
+        },
+        {
+          "zh": "支柱與輪艙門外形不同於 717。",
+          "en": "Strut and bay-door geometry differ from the 717's.",
+          "ja": "脚柱と脚扉形状は717と異なります。"
+        },
+        {
+          "zh": "判型時優先看翼下 PW1500G。",
+          "en": "Prioritise the underwing PW1500Gs when identifying it.",
+          "ja": "識別では翼下PW1500Gを優先確認します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs100/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23437223616).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "Airbus A220-100（原 Bombardier CS100）是 100–135 座級新世代單走道客機，全長約 35.0 m、翼展約 35.1 m；翼下雙發、上彎翼尖與低置水平尾翼構成現代化輪廓。",
+        "en": "The Airbus A220-100, originally the Bombardier CS100, is a new-generation 100-135-seat single-aisle jet about 35.0 m long with a 35.1 m span, combining underwing twins, upturned tips and a low tailplane.",
+        "ja": "Airbus A220-100（旧Bombardier CS100）は100～135席級の新世代単通路機で、全長約35.0 m、翼幅約35.1 m、翼下双発、上向き翼端、低位置水平尾翼を備えます。"
+      },
+      "fact": {
+        "zh": "A220 於 2018 年納入 Airbus 產品線，但構型源自 Bombardier 全新設計；它不是縮小版 A320。與 717 相比，布局差異遠大於尺寸差異。",
+        "en": "The A220 joined the Airbus portfolio in 2018 but remains a clean-sheet Bombardier-origin design rather than a shrunken A320. Against the 717, configuration differs far more than overall size.",
+        "ja": "A220は2018年にAirbus製品群へ入りましたが、Bombardier起源の新規設計でA320の縮小版ではありません。717とは寸法以上に構成が異なります。"
+      },
+      "bullets": [
+        {
+          "zh": "兩具大型引擎吊掛於主翼下方。",
+          "en": "Two large engines hang beneath the wing.",
+          "ja": "2基の大型エンジンが主翼下にあります。"
+        },
+        {
+          "zh": "翼尖明顯向上彎曲。",
+          "en": "The wingtips curve conspicuously upward.",
+          "ja": "翼端が明確に上方へ曲がります。"
+        },
+        {
+          "zh": "水平尾翼低置，沒有 717 的 T 尾。",
+          "en": "The tailplane is low-mounted with no 717-style T-tail.",
+          "ja": "水平尾翼は低位置で717式T字尾翼ではありません。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/cs100/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ITA_Airways_A220-100_EI-HLE_2024-06-15_Munich_Airport_p02.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A220 的駕駛艙窗具有寬大的正面風擋、厚黑窗框與圓角外側窗；整組窗帶沿長而尖的機鼻平順向側面收束。",
+        "en": "The A220 has broad front windscreens, dark substantial frames and rounded outer panes. The complete belt tapers smoothly around a long pointed nose.",
+        "ja": "A220の窓は広い前面風防、太い暗色枠、丸角の外側窓を持ち、長く尖った機首に沿って滑らかに側面へ絞られます。"
+      },
+      "fact": {
+        "zh": "717 的窗框更細碎、折角更銳利，機鼻也更短圓；正面看 A220 主風擋像一組寬大的深色面罩。",
+        "en": "The 717 glazing is more segmented and angular over a shorter rounder nose. Head-on, the A220 front panes read as one broad dark mask.",
+        "ja": "717はより細分化され角張り、機首も短く丸いです。正面のA220窓は広い暗色マスクのように見えます。"
+      },
+      "bullets": [
+        {
+          "zh": "兩片主風擋寬且上緣略帶弧度。",
+          "en": "The two main panes are broad with subtly curved upper edges.",
+          "ja": "2枚の主風防は幅広く上縁に緩い曲線があります。"
+        },
+        {
+          "zh": "外側窗較圓，窗框連續包向側面。",
+          "en": "Rounded outer panes and frames flow continuously around the side.",
+          "ja": "丸い外側窓と枠が側面へ連続します。"
+        },
+        {
+          "zh": "窗下機鼻較長並向前下方收尖。",
+          "en": "The nose below stretches forward and tapers downward.",
+          "ja": "窓下の機首は長く前下方へ細くなります。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/cs100/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23463413085).jpg"
+        },
+        {
+          "src": "assets/reference/cs100/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBC,_Bombardier_CS100_(31383514146).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "A220 翼尖由外翼平順向上彎成融合式小翼，外形細長、後掠並略向外傾；從客艙窗看十分明顯。",
+        "en": "The A220 outer wing blends smoothly upward into a slender swept winglet that leans slightly outward and is conspicuous from the cabin.",
+        "ja": "A220の外翼は滑らかに上方へ曲がる細長い後退ウイングレットとなり、やや外傾して客室窓から明瞭に見えます。"
+      },
+      "fact": {
+        "zh": "717 只有低矮平直翼尖；當機身或尾翼被遮住時，有無上彎小翼仍可快速分辨。",
+        "en": "The 717 has only a low plain tip. When fuselage or tail is hidden, the presence or absence of the upturned winglet still separates them.",
+        "ja": "717は低い通常翼端のみで、胴体や尾翼が隠れても上向きウイングレットの有無で判別できます。"
+      },
+      "bullets": [
+        {
+          "zh": "小翼與外翼之間沒有銳利直角。",
+          "en": "There is no sharp right-angle break between wing and winglet.",
+          "ja": "主翼とウイングレット間に鋭い直角はありません。"
+        },
+        {
+          "zh": "翼尖高於主翼上表面並向後收尖。",
+          "en": "The tip rises above the wing and tapers aft.",
+          "ja": "翼端は主翼上面より高く後方へ細くなります。"
+        },
+        {
+          "zh": "航空公司塗裝常延伸到小翼表面。",
+          "en": "Airline colours often continue onto the winglet.",
+          "ja": "航空会社塗装がウイングレットまで続くことがあります。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/cs100/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cabin_window_view_of_Swissair_aircraft_wings_(24482756908).jpg"
+        }
+      ]
     }
   },
   "specifications": {

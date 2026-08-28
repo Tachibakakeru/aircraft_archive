@@ -212,6 +212,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:G-VBUG_Airbus_A346_Virgin_Atlantic_Tail_(13891670573).jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:Thai_airways_a340-600_hs-tna_takeoff_arp.jpg",
     },
+    "b717": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Boeing_717,_N483HA,_Hawaiian_Airlines.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:N938AT_Boeing_717_flight_deck.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Boeing_717_MD95,_Hawaiian,_Honolulu,_nose-on_(4389641139)_(3).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:N937AT_Boeing_717_Air_Tran_Nose_(7438725424).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:N937AT_Boeing_717_Air_Tran_Nose_(7438725424).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Boeing_717_MD95,_Hawaiian,_left_port_tail_and_engine,_at_gate_(4389633539)_(3).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:11-APR-2022_-_HA284_LIH-HNL_(B717-200_-_N488HA)_(02).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Boeing_717_(1).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:EC-MGT_717_Volotea_tailfin_VGO.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Air_Tran_Boeing_717_aka_MD-95_-_note_tail_surrface_anhedral_-_frame_1049_(4906658072)_(2).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:QantasLink_B717-231_(VH-NXO)_departing_Perth_Airport.jpg",
+    },
+    "cs100": {
+        "overview": "https://commons.wikimedia.org/wiki/File:ITA_Airways_A220-100_EI-HLE_2024-06-15_Munich_Airport_p02.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23463394635).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23463413085).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBC,_Bombardier_CS100_(31383514146).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBC,_Bombardier_CS100_(31383514146).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_at_Brussels_Airport_(25272589779).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Cabin_window_view_of_Swissair_aircraft_wings_(24482756908).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:ITA_Airways,_I-ADVA,_Airbus_A220-100_(54007495525)_at_Milan_Linate.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBI,_Airbus_A220-100_(49580114558).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Swiss_International_Airlines_HB-JBH_BOMBARDIER_CS100_A220-100_(Ank_Kumar,_Infosys_Limited)_05.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23437223616).jpg",
+    },
 }
 
 
@@ -784,6 +810,113 @@ CONTENT.update({
             ("A340-600 共 14 輪：前腳雙輪，左右翼下主腳各四輪，機身中線另有一組四輪主腳；中置四輪是 -500／-600 的重要特徵。", "The A340-600 has 14 wheels: twin nose wheels, four-wheel wing gears on each side and one four-wheel centreline body gear. The four-wheel centre gear is a key -500/-600 cue.", "A340-600は計14輪で、前脚2輪、左右翼下主脚各4輪、胴体中央主脚4輪です。4輪中央脚は-500／-600の重要特徴です。"),
             ("早期 A340-200／-300 的中置主腳為雙輪；747-400 則有兩組機身主腳、四組主轉向架，因此不能只看到中央輪就判 747。", "Earlier A340-200/-300s use a twin-wheel centre gear, while the 747-400 has two body gears and four main bogies. A centre gear alone does not imply a 747.", "初期A340-200／-300の中央脚は2輪、747-400は胴体脚2組・主ボギー4組です。中央輪だけで747とは判断できません。"),
             [("左右翼下各一組四輪主腳。", "One four-wheel main bogie sits beneath each wing.", "左右主翼下に各1組4輪主脚があります。"), ("機身中線只有一組四輪主腳。", "Only one four-wheel bogie sits on the fuselage centreline.", "胴体中心線には4輪主脚が1組だけです。"), ("三組主轉向架對比 747 的四組。", "Three main bogies contrast with the 747's four.", "主ボギー3組で747の4組と異なります。")],
+        ),
+    },
+})
+
+CONTENT.update({
+    "b717": {
+        "overview": identify(
+            ("Boeing 717-200 是約百座級短程單走道客機，全長約 37.8 m、翼展約 28.4 m；兩具引擎置於後機身，水平尾翼架在垂直尾翼頂端，形成醒目的 T 型尾翼。", "The Boeing 717-200 is a roughly 100-seat short-haul single-aisle jet, about 37.8 m long with a 28.4 m span. Its two engines sit on the aft fuselage and its tailplane crowns the fin in a distinct T-tail.", "Boeing 717-200は約100席の短距離単通路機で、全長約37.8 m、翼幅約28.4 mです。2基のエンジンを後部胴体に置き、水平尾翼を垂尾頂部に載せたT字尾翼が特徴です。"),
+            ("717 源自 McDonnell Douglas MD-95／DC-9 家族，並非與 737 共用構型；對比 A220-100 時，先看引擎位置與尾翼即可快速分辨。", "The 717 originated as the McDonnell Douglas MD-95 in the DC-9 lineage rather than sharing the 737 layout. Against an A220-100, engine position and tail arrangement identify it immediately.", "717はMcDonnell Douglas MD-95／DC-9系譜で、737と同じ構成ではありません。A220-100との比較ではエンジン位置と尾翼で素早く判別できます。"),
+            [("尾置雙發使主翼下方完全沒有引擎短艙。", "Rear-mounted engines leave the wing undersides free of nacelles.", "尾部エンジンのため主翼下にナセルがありません。"), ("T 型尾翼高而明顯，水平尾翼位於垂尾頂端。", "The high T-tail places the tailplane at the top of the fin.", "高いT字尾翼で水平尾翼は垂尾頂部にあります。"), ("機身比 A220-100 更長，但翼展明顯更窄。", "It is longer than the A220-100 but has a substantially narrower span.", "A220-100より長い一方、翼幅は大幅に狭いです。")],
+        ),
+        "cockpit": identify(
+            ("717 駕駛艙保留傳統駕駛盤與中央操縱柱，採六具電子顯示器與中央引擎／系統顯示；座艙布局是 MD-90 技術的進一步現代化。", "The 717 flight deck retains conventional yokes and control columns, with six electronic displays and central engine/system indications, evolving the MD-90 cockpit concept.", "717の操縦席は従来型操縦輪とコラムを残し、6面電子表示器と中央エンジン／システム表示を備え、MD-90の設計を発展させています。"),
+            ("A220 也不是典型 A320 座艙：它有側桿但採五具大型橫向螢幕。對比時看 717 的駕駛盤與較多直立顯示器最直接。", "The A220 is not an A320-style cockpit either: it uses sidesticks and five wide displays. The 717's yokes and more numerous portrait-oriented screens are the clearest contrast.", "A220もA320型そのものではなく、サイドスティックと5面大型横長画面を使います。717の操縦輪と多数の縦長画面が明確な差です。"),
+            [("正副駕駛前方各有一具駕駛盤。", "A yoke sits directly ahead of each pilot.", "両操縦席正面に操縦輪があります。"), ("中央台只有兩支引擎推力桿。", "Two engine thrust levers occupy the centre pedestal.", "中央台には2本の推力レバーがあります。"), ("面板保留大量實體旋鈕與按鍵。", "The panel retains numerous physical knobs and switches.", "パネルには多数の物理ノブとスイッチがあります。")],
+        ),
+        "windshield": identify(
+            ("717 的駕駛艙窗延續 DC-9 家族的稜角輪廓：正面主風擋較方正，外側窗由狹長梯形向後折入機身側面，窗帶位於圓鈍機鼻上方。", "The 717 retains the angular DC-9-family glazing: fairly square main windscreens lead into narrow trapezoidal side panes above a rounded nose.", "717はDC-9系の角張った窓形状を継承し、比較的四角い主風防から細長い台形側窓へ続き、丸い機首上部に配置されます。"),
+            ("A220 的主風擋更寬、外側窗更圓滑且整組窗帶帶有現代弧線；兩型都應看窗框比例與機鼻，而不是只數窗片。", "The A220 has broader front panes and more rounded outer glazing with a modern continuous contour. Compare proportions and nose shape rather than merely counting panes.", "A220は前面窓が広く外側窓も丸みがあり、現代的な連続輪郭です。枚数だけでなく窓枠比率と機首形状を見ます。"),
+            [("中央兩片主風擋接近直立方形。", "The two centre windscreens are close to upright rectangles.", "中央2枚の主風防は直立した四角形に近いです。"), ("側窗框折角清楚，帶有 DC-9 家族特徵。", "Distinct corners in the side glazing reflect the DC-9 lineage.", "側窓の折れ角にDC-9系の特徴があります。"), ("圓鈍機鼻比 A220 更短、更接近半球形。", "The rounded nose is shorter and more hemispherical than the A220's.", "丸い機首はA220より短く半球状に見えます。")],
+        ),
+        "fuselage": identify(
+            ("717 使用約 3.34 m 寬的 DC-9 家族機身，客艙典型為 2-3 座位；前後主要艙門分布簡單，機身後段被兩具引擎與進氣口占據。", "The 717 uses the roughly 3.34 m-wide DC-9-family fuselage with typical 2-3 seating. Its simple door layout gives way aft to two engine installations and their inlets.", "717は幅約3.34 mのDC-9系胴体で、客室は通常2-3配列です。単純なドア配置の後方は2基エンジンと吸気口が占めます。"),
+            ("它雖比 A220-100 長約 2.8 m，翼展卻短約 6.7 m；側面辨識時可利用長筒狀機身、尾置引擎與高 T 尾的組合。", "Although about 2.8 m longer than the A220-100, its span is roughly 6.7 m shorter. The long tube, rear engines and tall T-tail work together as a side-view signature.", "A220-100より約2.8 m長い一方、翼幅は約6.7 m短く、長い筒状胴体、尾部エンジン、高いT字尾翼が側面の特徴です。"),
+            [("客艙窗細小且排列密集。", "Small cabin windows form a closely spaced row.", "小型客室窓が密に並びます。"), ("前艙門後方直到主翼前有長直機身段。", "A long straight fuselage section runs from the forward door toward the wing.", "前扉から主翼前まで長い直線的胴体が続きます。"), ("後機身兩側直接承載引擎短艙。", "The aft fuselage directly carries both engine nacelles.", "後部胴体両側がエンジンナセルを直接支えます。")],
+        ),
+        "engine": identify(
+            ("717 只使用兩具 Rolls-Royce BR715 高旁通比渦扇，安裝在後機身兩側；短艙進氣口位置高，與主翼完全分離。", "The 717 exclusively uses two Rolls-Royce BR715 high-bypass turbofans mounted on the aft fuselage. Their inlets sit high and are completely separate from the wing.", "717はRolls-Royce BR715高バイパスターボファン2基のみを後部胴体両側に搭載し、吸気口は高く主翼と完全に離れています。"),
+            ("A220-100 的 PW1500G 尺寸更大且吊掛翼下；即使看不到尾翼，只看引擎位置也幾乎不會混淆。", "The A220-100's larger PW1500Gs hang beneath the wing. Engine location alone nearly eliminates confusion even when the tail is hidden.", "A220-100の大型PW1500Gは主翼下にあり、尾翼が見えなくてもエンジン位置だけでほぼ区別できます。"),
+            [("每側一具 BR715 緊貼後機身。", "One BR715 hugs each side of the aft fuselage.", "後部胴体両側にBR715が1基ずつ密着します。"), ("短艙尾端位於 T 尾下方。", "Nacelle exhausts sit beneath the T-tail.", "ナセル排気部はT字尾翼の下にあります。"), ("主翼下沒有任何引擎吊架。", "There are no engine pylons beneath the wing.", "主翼下にエンジンパイロンはありません。")],
+        ),
+        "wingtip": identify(
+            ("717 原始主翼採簡單後掠翼尖，沒有高大翼尖小翼；從客艙向外看，翼尖低矮而平直，只留下導航燈與小型整流外形。", "The 717's original wing ends in a simple swept tip without a tall winglet. From the cabin the tip stays low and plain, carrying only navigation lights and small fairings.", "717の主翼端は高いウイングレットのない単純な後退翼端で、客室からは低く平らに見え、航法灯と小型整流部だけがあります。"),
+            ("A220 的翼尖則向上彎成明顯的融合式小翼；這是遠距離區分兩者的第二強線索，僅次於引擎與尾翼布局。", "The A220 tip rises into a distinct blended winglet. After engine and tail layout, this is the next strongest long-range cue.", "A220は翼端が上方へ曲がる明確なブレンデッド・ウイングレットを持ち、エンジンと尾翼に次ぐ遠距離識別点です。"),
+            [("翼尖不向上形成大型板狀結構。", "The tip does not rise into a large blade-like device.", "翼端は大型板状に立ち上がりません。"), ("翼展短，翼尖離機身相對近。", "The short span keeps the tip relatively close to the fuselage.", "翼幅が短く翼端は胴体に比較的近いです。"), ("簡單翼尖應與尾置引擎一起確認。", "Confirm the plain tip together with rear-mounted engines.", "単純翼端は尾部エンジンと合わせて確認します。")],
+        ),
+        "wing": identify(
+            ("717 主翼翼展約 28.4 m，面積緊湊、後掠角中等，主翼本身不承載引擎；全機下方可清楚看到乾淨翼面與尾置雙發。", "The 717 wing spans about 28.4 m, with a compact area and moderate sweep. It carries no engines, leaving a clean planform that contrasts with the aft-mounted pair.", "717の主翼幅は約28.4 mで、コンパクトな面積と中程度の後退角を持ち、エンジンを搭載しないため翼面がすっきりしています。"),
+            ("A220-100 的 35.1 m 翼展甚至略大於自身 35.0 m 機長；717 則是機長明顯大於翼展，平面比例差異很大。", "The A220-100's 35.1 m span slightly exceeds its 35.0 m length, while the 717 is clearly longer than its span, creating very different planform proportions.", "A220-100は翼幅35.1 mが全長35.0 mをわずかに上回りますが、717は全長が翼幅より明らかに長く、平面比率が大きく異なります。"),
+            [("主翼下方沒有引擎或大型吊架。", "No engines or large pylons hang beneath the wing.", "主翼下にエンジンや大型パイロンがありません。"), ("翼根與窄機身交界簡潔。", "The root joins the narrow fuselage with a compact fairing.", "翼根は細い胴体へコンパクトに接続します。"), ("後緣由襟翼、副翼與擾流板構成。", "Flaps, ailerons and spoilers occupy the trailing region.", "後縁にはフラップ、補助翼、スポイラーがあります。")],
+        ),
+        "vstab": identify(
+            ("717 垂直尾翼高而後掠，頂端直接承載整片水平尾翼；引擎進氣口就在垂尾根部前方兩側，形成典型 DC-9 家族尾部。", "The 717's tall swept fin directly carries the complete horizontal tail. Engine inlets flank the fuselage just ahead of its root, creating the classic DC-9-family empennage.", "717の高い後退垂尾は頂部に水平尾翼全体を載せ、根元前方両側にエンジン吸気口がある典型的DC-9系尾部です。"),
+            ("A220 的水平尾翼低置於後機身，垂尾頂端沒有橫向翼面；從後方只需看水平尾翼高度即可快速分辨。", "The A220's tailplane is mounted low on the aft fuselage, leaving the fin tip clear. Tailplane height separates the two immediately from behind.", "A220の水平尾翼は後部胴体低位置にあり垂尾頂部は空いています。後方から水平尾翼の高さだけで素早く区別できます。"),
+            [("垂尾頂端與水平尾翼交叉成 T 字。", "The fin and tailplane intersect as a T.", "垂尾頂部と水平尾翼がT字に交差します。"), ("根部前方緊鄰兩具引擎短艙。", "Two engine nacelles sit immediately ahead of the fin root.", "垂尾根元前方に2基のナセルがあります。"), ("尾錐細長並延伸至引擎後方。", "A slender tailcone extends aft of the engines.", "細長いテールコーンがエンジン後方へ伸びます。")],
+        ),
+        "hstab": identify(
+            ("717 水平尾翼安裝在垂直尾翼頂端，翼面後掠且略帶下反角；高置可避開尾置引擎的排氣流，也是最醒目的外觀特徵之一。", "The 717's swept tailplane sits atop the fin and shows slight anhedral. Its high position keeps it clear of rear-engine exhaust and is one of the aircraft's strongest visual cues.", "717の後退水平尾翼は垂尾頂部にあり、わずかな下反角を持ちます。尾部エンジン排気を避ける高位置は最も明確な特徴の一つです。"),
+            ("A220 的水平尾翼位於機身尾端兩側，與傳統客機相同；若只看到尾部剪影，T 尾與低尾的差異已足以判斷。", "The A220 tailplane sits conventionally on either side of the aft fuselage. In a silhouette, T-tail versus low tail is sufficient to distinguish them.", "A220の水平尾翼は通常どおり後部胴体両側にあり、シルエットではT字尾翼と低位置尾翼の差だけで識別できます。"),
+            [("整片尾翼位於垂尾最高處。", "The entire tailplane occupies the top of the fin.", "水平尾翼全体が垂尾最上部にあります。"), ("左右翼面向外後掠並略向下。", "Both panels sweep aft and angle slightly downward.", "左右翼面は後退しわずかに下向きです。"), ("位置遠高於客艙窗與引擎中心線。", "It sits far above the cabin windows and engine centreline.", "客室窓やエンジン中心線よりはるかに高い位置です。")],
+        ),
+        "gear": identify(
+            ("717 前起落架為雙輪，左右主起落架也各為單軸雙輪；收起後主輪收入翼根／機身下方的輪艙。", "The 717 has twin nose wheels and a single-axle twin-wheel main unit on each side, retracting into bays around the wing root and lower fuselage.", "717は前脚2輪、左右主脚も各単軸2輪で、主輪は翼根／胴体下部の脚庫へ格納されます。"),
+            ("A220-100 的輪數配置同樣是前二、左右主腳各二，因此輪數不能判型；應改看 A220 的翼下引擎、較寬翼展與不同艙門／支柱。", "The A220-100 has the same two-wheel nose and two-wheel-per-side main arrangement, so wheel count is not diagnostic. Use underwing engines, broader span and different doors/struts.", "A220-100も前脚2輪・左右主脚各2輪で輪数は判別不能です。翼下エンジン、広い翼幅、異なる扉・脚柱を確認します。"),
+            [("每側主腳只有一軸兩輪。", "Each main unit has one axle and two tyres.", "各主脚は1軸2輪です。"), ("主腳位於機身中段、主翼根附近。", "The main gear sits near the wing root at mid-fuselage.", "主脚は胴体中央の翼根付近にあります。"), ("判型需同時確認高 T 尾與尾置引擎。", "Confirm the high T-tail and rear engines at the same time.", "高いT字尾翼と尾部エンジンも同時に確認します。")],
+        ),
+    },
+    "cs100": {
+        "overview": identify(
+            ("Airbus A220-100（原 Bombardier CS100）是 100–135 座級新世代單走道客機，全長約 35.0 m、翼展約 35.1 m；翼下雙發、上彎翼尖與低置水平尾翼構成現代化輪廓。", "The Airbus A220-100, originally the Bombardier CS100, is a new-generation 100-135-seat single-aisle jet about 35.0 m long with a 35.1 m span, combining underwing twins, upturned tips and a low tailplane.", "Airbus A220-100（旧Bombardier CS100）は100～135席級の新世代単通路機で、全長約35.0 m、翼幅約35.1 m、翼下双発、上向き翼端、低位置水平尾翼を備えます。"),
+            ("A220 於 2018 年納入 Airbus 產品線，但構型源自 Bombardier 全新設計；它不是縮小版 A320。與 717 相比，布局差異遠大於尺寸差異。", "The A220 joined the Airbus portfolio in 2018 but remains a clean-sheet Bombardier-origin design rather than a shrunken A320. Against the 717, configuration differs far more than overall size.", "A220は2018年にAirbus製品群へ入りましたが、Bombardier起源の新規設計でA320の縮小版ではありません。717とは寸法以上に構成が異なります。"),
+            [("兩具大型引擎吊掛於主翼下方。", "Two large engines hang beneath the wing.", "2基の大型エンジンが主翼下にあります。"), ("翼尖明顯向上彎曲。", "The wingtips curve conspicuously upward.", "翼端が明確に上方へ曲がります。"), ("水平尾翼低置，沒有 717 的 T 尾。", "The tailplane is low-mounted with no 717-style T-tail.", "水平尾翼は低位置で717式T字尾翼ではありません。")],
+        ),
+        "cockpit": identify(
+            ("A220 駕駛艙採側桿、五具大型 Collins Pro Line Fusion 橫向顯示器與中央雙推力桿；正副駕駛前方沒有駕駛盤。", "The A220 flight deck uses sidesticks, five large landscape Collins Pro Line Fusion displays and twin thrust levers, with no yokes ahead of the pilots.", "A220の操縦席はサイドスティック、5面大型横長Collins Pro Line Fusion表示器、2本の推力レバーを採用し、操縦輪はありません。"),
+            ("雖然使用側桿，A220 的座艙並非 A320 家族同款：螢幕數量、尺寸、中央台與控制面板布局都不同。", "Despite its sidesticks, the A220 does not share the A320-family flight deck; screen count, proportions, pedestal and control panels all differ.", "サイドスティックを使いますがA320系と同じ操縦席ではなく、画面数・比率・中央台・操作盤が異なります。"),
+            [("五具大型橫向螢幕形成連續玻璃面板。", "Five wide displays form a continuous glass panel.", "5面の大型横長画面が連続したグラスパネルを作ります。"), ("側桿位於兩名駕駛外側。", "Sidesticks sit outboard of both pilots.", "サイドスティックは両操縦席外側にあります。"), ("中央台有兩支推力桿與系統控制器。", "Twin thrust levers and system controllers occupy the pedestal.", "中央台に2本の推力レバーとシステム操作部があります。")],
+        ),
+        "windshield": identify(
+            ("A220 的駕駛艙窗具有寬大的正面風擋、厚黑窗框與圓角外側窗；整組窗帶沿長而尖的機鼻平順向側面收束。", "The A220 has broad front windscreens, dark substantial frames and rounded outer panes. The complete belt tapers smoothly around a long pointed nose.", "A220の窓は広い前面風防、太い暗色枠、丸角の外側窓を持ち、長く尖った機首に沿って滑らかに側面へ絞られます。"),
+            ("717 的窗框更細碎、折角更銳利，機鼻也更短圓；正面看 A220 主風擋像一組寬大的深色面罩。", "The 717 glazing is more segmented and angular over a shorter rounder nose. Head-on, the A220 front panes read as one broad dark mask.", "717はより細分化され角張り、機首も短く丸いです。正面のA220窓は広い暗色マスクのように見えます。"),
+            [("兩片主風擋寬且上緣略帶弧度。", "The two main panes are broad with subtly curved upper edges.", "2枚の主風防は幅広く上縁に緩い曲線があります。"), ("外側窗較圓，窗框連續包向側面。", "Rounded outer panes and frames flow continuously around the side.", "丸い外側窓と枠が側面へ連続します。"), ("窗下機鼻較長並向前下方收尖。", "The nose below stretches forward and tapers downward.", "窓下の機首は長く前下方へ細くなります。")],
+        ),
+        "fuselage": identify(
+            ("A220-100 機身最大直徑約 3.5 m、客艙寬約 3.28 m，典型為 2-3 座位；大型橢圓客艙窗、較寬機身與長尖機鼻帶來不同於 717 的比例。", "The A220-100 fuselage is about 3.5 m in maximum diameter with a 3.28 m cabin and typical 2-3 seating. Large oval windows, a broader body and long pointed nose distinguish it from the 717.", "A220-100の最大胴体径は約3.5 m、客室幅約3.28 mで通常2-3配列です。大型楕円窓、太い胴体、長く尖った機首が717と異なります。"),
+            ("A220-100 比 A220-300 短 3.7 m；辨識 -100 時可看主翼前後較短的窗列與較緊湊艙門間距。", "The A220-100 is 3.7 m shorter than the A220-300. Its shorter window rows ahead of and behind the wing and tighter door spacing identify the variant.", "A220-100はA220-300より3.7 m短く、主翼前後の短い窓列と詰まった扉間隔で判別できます。"),
+            [("橢圓客艙窗比 717 窗片更大。", "Oval cabin windows are larger than the 717's.", "楕円客室窓は717より大型です。"), ("長機鼻從駕駛艙窗向前平順收尖。", "A long nose tapers smoothly ahead of the cockpit glazing.", "長い機首が操縦席窓から前方へ滑らかに細くなります。"), ("後機身沒有尾置引擎遮擋窗列。", "No rear-mounted engines interrupt the aft fuselage.", "尾部エンジンがなく後部胴体が遮られません。")],
+        ),
+        "engine": identify(
+            ("A220 家族只使用 Pratt & Whitney PW1500G 齒輪傳動渦扇，短艙直徑大、風扇葉片寬，兩具引擎由吊架安裝於主翼下。", "The A220 family exclusively uses Pratt & Whitney PW1500G geared turbofans. Their large-diameter nacelles and broad fan blades hang beneath the wings on pylons.", "A220ファミリーはPratt & Whitney PW1500Gギヤードターボファン専用で、大径ナセルと幅広ファンを主翼下パイロンに搭載します。"),
+            ("BR715 與 PW1500G 都是高旁通比引擎，但位置完全不同：717 在尾部，A220 在翼下；這比辨認風扇葉片更可靠。", "Both BR715 and PW1500G are high-bypass engines, but placement is entirely different: aft fuselage on the 717 and underwing on the A220, a more reliable cue than blade details.", "BR715とPW1500Gはいずれも高バイパスですが、717は尾部、A220は翼下で、ファン形状より確実な識別点です。"),
+            [("大型風扇進氣口位於主翼前緣下方。", "Large fan inlets sit below and ahead of the wing leading edge.", "大型ファン吸気口は主翼前縁下方にあります。"), ("每側一具引擎，由短吊架連接主翼。", "One engine per side hangs from a short pylon.", "左右各1基が短いパイロンで主翼に接続します。"), ("後機身保持乾淨，沒有引擎短艙。", "The aft fuselage remains clean without nacelles.", "後部胴体にはナセルがありません。")],
+        ),
+        "wingtip": identify(
+            ("A220 翼尖由外翼平順向上彎成融合式小翼，外形細長、後掠並略向外傾；從客艙窗看十分明顯。", "The A220 outer wing blends smoothly upward into a slender swept winglet that leans slightly outward and is conspicuous from the cabin.", "A220の外翼は滑らかに上方へ曲がる細長い後退ウイングレットとなり、やや外傾して客室窓から明瞭に見えます。"),
+            ("717 只有低矮平直翼尖；當機身或尾翼被遮住時，有無上彎小翼仍可快速分辨。", "The 717 has only a low plain tip. When fuselage or tail is hidden, the presence or absence of the upturned winglet still separates them.", "717は低い通常翼端のみで、胴体や尾翼が隠れても上向きウイングレットの有無で判別できます。"),
+            [("小翼與外翼之間沒有銳利直角。", "There is no sharp right-angle break between wing and winglet.", "主翼とウイングレット間に鋭い直角はありません。"), ("翼尖高於主翼上表面並向後收尖。", "The tip rises above the wing and tapers aft.", "翼端は主翼上面より高く後方へ細くなります。"), ("航空公司塗裝常延伸到小翼表面。", "Airline colours often continue onto the winglet.", "航空会社塗装がウイングレットまで続くことがあります。")],
+        ),
+        "wing": identify(
+            ("A220-100 主翼翼展約 35.1 m，展弦比高且具明顯上反角；大型 PW1500G、襟翼整流罩與融合式翼尖共同形成寬大的平面輪廓。", "The A220-100 wing spans about 35.1 m with high aspect ratio and visible dihedral. Large PW1500Gs, flap-track fairings and blended tips create a broad planform.", "A220-100の主翼幅は約35.1 mで高アスペクト比と明確な上反角を持ち、大型PW1500G、フラップトラックフェアリング、融合翼端が広い平面形を作ります。"),
+            ("翼展略大於機長是 A220-100 的重要比例；717 則是狹翼、機長遠大於翼展。", "A span slightly greater than length is an important A220-100 proportion; the 717 has a narrow wing and is much longer than its span.", "翼幅が全長をわずかに上回るのがA220-100の重要比率で、717は狭い翼で全長が翼幅を大きく上回ります。"),
+            [("主翼下方各吊掛一具大型引擎。", "One large engine hangs beneath each wing.", "各主翼下に大型エンジン1基があります。"), ("外翼細長並平順接入上彎小翼。", "The slender outer wing flows into an upturned winglet.", "細長い外翼が上向きウイングレットへ滑らかにつながります。"), ("翼面具多片擾流板與大型單縫襟翼。", "Multiple spoilers and large single-slotted flaps occupy the wing.", "複数スポイラーと大型単隙間フラップがあります。")],
+        ),
+        "vstab": identify(
+            ("A220 垂直尾翼高大後掠，根部以長背鰭平順接入後機身；頂端沒有水平尾翼，輪廓清楚獨立。", "The A220 has a tall swept fin with a long dorsal root blending into the aft fuselage. Its tip is unobstructed because the tailplane is mounted low.", "A220の垂直尾翼は高く後退し、長い背びれ根元が後部胴体へ滑らかにつながります。水平尾翼が低位置のため頂部は独立しています。"),
+            ("717 的垂尾頂部被水平尾翼橫穿，且根部兩側有引擎；A220 的乾淨單垂尾從任何後方角度都更傳統。", "The 717 fin is crossed by its tailplane and flanked by engines at the root. The A220's clean standalone fin looks conventional from every rear angle.", "717は垂尾頂部を水平尾翼が横切り根元両側にエンジンがありますが、A220は後方から通常の独立垂尾に見えます。"),
+            [("垂尾頂端略方，沒有 T 尾橫翼。", "The slightly squared fin tip carries no T-tail surface.", "やや角形の垂尾頂部にT字尾翼はありません。"), ("前緣背鰭向前延伸，與機身平順融合。", "A forward dorsal fillet blends smoothly into the fuselage.", "前縁背びれが前方へ伸び胴体へ滑らかにつながります。"), ("低置水平尾翼從尾錐兩側伸出。", "Low-mounted tailplanes extend from the tailcone sides.", "低位置水平尾翼が尾部両側から伸びます。")],
+        ),
+        "hstab": identify(
+            ("A220 水平尾翼低置於後機身兩側，後掠並向外收尖；尾錐上方只剩獨立垂尾，構成傳統尾翼布局。", "The A220's swept tapered tailplanes mount low on either side of the aft fuselage, leaving a standalone fin above in a conventional empennage.", "A220の後退・先細水平尾翼は後部胴体両側の低位置にあり、その上に独立垂尾が立つ通常尾翼配置です。"),
+            ("與 717 高置 T 尾相比，高度差異非常大；即使照片只拍到尾部，也不需要依靠塗裝或航空公司判斷。", "The height difference from the 717's T-tail is enormous. Even a tail-only photograph can be identified without relying on livery or operator.", "717の高いT字尾翼とは高さが大きく異なり、尾部だけの写真でも塗装や航空会社に頼らず判別できます。"),
+            [("水平尾翼根部位於機身尾錐中段。", "The tailplane root sits midway up the tailcone.", "水平尾翼根元はテールコーン中段にあります。"), ("左右翼面後掠並逐漸收尖。", "Both surfaces sweep aft and taper outward.", "左右翼面は後退し外側へ細くなります。"), ("位置低於垂尾高度一半。", "It sits well below half the fin height.", "垂尾高さの半分より十分低い位置です。")],
+        ),
+        "gear": identify(
+            ("A220-100 前起落架為雙輪，左右主腳各為單軸雙輪；主腳由機腹向外可見厚實支柱、拖曳連桿與分段艙門。", "The A220-100 has twin nose wheels and a single-axle twin-wheel main unit on each side. Its main gear exposes a substantial strut, trailing links and segmented bay doors.", "A220-100は前脚2輪、左右主脚各単軸2輪で、主脚には太い脚柱、トレーリングリンク、分割脚扉が見えます。"),
+            ("總輪數與 717 相同，兩者都不能靠『六輪』判型；A220 的主腳附近可同時看見翼下引擎與更寬的主翼。", "Total wheel count matches the 717, so 'six wheels' identifies neither. Around the A220 gear, underwing engines and a broader wing remain visible.", "総輪数は717と同じで「6輪」だけでは判別できません。A220主脚付近では翼下エンジンと広い主翼も確認できます。"),
+            [("左右主腳各一軸兩輪。", "Each main gear has one axle and two tyres.", "左右主脚は各1軸2輪です。"), ("支柱與輪艙門外形不同於 717。", "Strut and bay-door geometry differ from the 717's.", "脚柱と脚扉形状は717と異なります。"), ("判型時優先看翼下 PW1500G。", "Prioritise the underwing PW1500Gs when identifying it.", "識別では翼下PW1500Gを優先確認します。")],
         ),
     },
 })

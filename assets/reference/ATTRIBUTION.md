@@ -243,3 +243,39 @@ The engine source page's filename calls the photographed Qantas 747-400 installa
 | `a346/gear.jpg` | [Thai Airways A340-600 HS-TNA taking off](https://commons.wikimedia.org/wiki/File:Thai_airways_a340-600_hs-tna_takeoff_arp.jpg), Adrian Pingstone | Public domain |
 
 The A340-600 has one four-wheel centreline main bogie in addition to its two four-wheel wing bogies. Earlier A340-200/-300 variants instead use a two-wheel centre gear, so the landing-gear note is specific to the compared A340-600.
+
+## Boeing 717-200 (`b717`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b717/overview.jpg` | [Hawaiian Airlines Boeing 717 N483HA](https://commons.wikimedia.org/wiki/File:Boeing_717,_N483HA,_Hawaiian_Airlines.jpg), Bill Abbott | CC BY-SA 2.0 |
+| `b717/cockpit.jpg` | [Boeing 717 N938AT flight deck](https://commons.wikimedia.org/wiki/File:N938AT_Boeing_717_flight_deck.jpg), J. Griffin | CC BY-SA 3.0 |
+| `b717/window-front.jpg` | [Hawaiian Boeing 717 nose-on](https://commons.wikimedia.org/wiki/File:Boeing_717_MD95,_Hawaiian,_Honolulu,_nose-on_(4389641139)_(3).jpg), Bill Abbott; cropped to emphasize front-window geometry | CC BY-SA 2.0 |
+| `b717/window-side.jpg` | [AirTran Boeing 717 N937AT nose](https://commons.wikimedia.org/wiki/File:N937AT_Boeing_717_Air_Tran_Nose_(7438725424).jpg), Aeroprints.com; cropped to emphasize side-window geometry | CC BY-SA 3.0 |
+| `b717/fuselage.jpg` | [AirTran Boeing 717 N937AT nose and forward fuselage](https://commons.wikimedia.org/wiki/File:N937AT_Boeing_717_Air_Tran_Nose_(7438725424).jpg), Aeroprints.com | CC BY-SA 3.0 |
+| `b717/engine.jpg` | [Hawaiian Boeing 717 rear-mounted BR715](https://commons.wikimedia.org/wiki/File:Boeing_717_MD95,_Hawaiian,_left_port_tail_and_engine,_at_gate_(4389633539)_(3).jpg), Bill Abbott | CC BY-SA 2.0 |
+| `b717/wingtip.jpg` | [Hawaiian Boeing 717 wing and plain tip](https://commons.wikimedia.org/wiki/File:11-APR-2022_-_HA284_LIH-HNL_(B717-200_-_N488HA)_(02).jpg), Simply Aviation | CC BY 4.0 |
+| `b717/wing.jpg` | [Boeing 717 underside planform](https://commons.wikimedia.org/wiki/File:Boeing_717_(1).jpg), Sardaka | CC BY-SA 3.0 |
+| `b717/vstab.jpg` | [Volotea Boeing 717 tailfin](https://commons.wikimedia.org/wiki/File:EC-MGT_717_Volotea_tailfin_VGO.jpg), Bene Riobó | CC BY-SA 4.0 |
+| `b717/hstab.jpg` | [AirTran Boeing 717 T-tail and tailplane anhedral](https://commons.wikimedia.org/wiki/File:Air_Tran_Boeing_717_aka_MD-95_-_note_tail_surrface_anhedral_-_frame_1049_(4906658072)_(2).jpg), Bill Abbott | CC BY-SA 2.0 |
+| `b717/gear.jpg` | [QantasLink Boeing 717 VH-NXO departing Perth](https://commons.wikimedia.org/wiki/File:QantasLink_B717-231_(VH-NXO)_departing_Perth_Airport.jpg), planegeezer | CC BY 2.0 |
+
+The Boeing 717 began as the McDonnell Douglas MD-95 and retains the DC-9-family rear-engine and T-tail configuration. The source photographs show the civil Boeing 717-200, not the unrelated military aircraft that also used Boeing model number 717.
+
+## Airbus A220-100 (`cs100`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `cs100/overview.jpg` | [ITA Airways Airbus A220-100 EI-HLE](https://commons.wikimedia.org/wiki/File:ITA_Airways_A220-100_EI-HLE_2024-06-15_Munich_Airport_p02.jpg), Anna Zvereva | CC BY-SA 2.0 |
+| `cs100/cockpit.jpg` | [Bombardier CS100 flight deck](https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23463394635).jpg), Kārlis Dambrāns | CC BY 2.0 |
+| `cs100/window-front.jpg` | [Bombardier CS100 front view](https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23463413085).jpg), Kārlis Dambrāns; cropped to emphasize front-window geometry | CC BY 2.0 |
+| `cs100/window-side.jpg` | [SWISS Bombardier CS100 HB-JBC](https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBC,_Bombardier_CS100_(31383514146).jpg), Anna Zvereva; cropped to emphasize side-window geometry | CC BY-SA 2.0 |
+| `cs100/fuselage.jpg` | [SWISS Bombardier CS100 HB-JBC](https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBC,_Bombardier_CS100_(31383514146).jpg), Anna Zvereva | CC BY-SA 2.0 |
+| `cs100/engine.jpg` | [Bombardier CS100 PW1500G fan at Brussels](https://commons.wikimedia.org/wiki/File:Bombardier_CS100_at_Brussels_Airport_(25272589779).jpg), Brussels Airport | CC BY-SA 2.0 |
+| `cs100/wingtip.jpg` | [SWISS A220 wing and blended winglet](https://commons.wikimedia.org/wiki/File:Cabin_window_view_of_Swissair_aircraft_wings_(24482756908).jpg), Thomas Woodtli | CC BY-SA 2.0 |
+| `cs100/wing.jpg` | [ITA Airways A220-100 I-ADVA in flight](https://commons.wikimedia.org/wiki/File:ITA_Airways,_I-ADVA,_Airbus_A220-100_(54007495525)_at_Milan_Linate.jpg), Anna Zvereva | CC BY-SA 2.0 |
+| `cs100/vstab.jpg` | [SWISS Airbus A220-100 HB-JBI](https://commons.wikimedia.org/wiki/File:Swiss,_HB-JBI,_Airbus_A220-100_(49580114558).jpg), Anna Zvereva | CC BY-SA 2.0 |
+| `cs100/hstab.jpg` | [SWISS A220-100 HB-JBH rear tail view](https://commons.wikimedia.org/wiki/File:Swiss_International_Airlines_HB-JBH_BOMBARDIER_CS100_A220-100_(Ank_Kumar,_Infosys_Limited)_05.jpg), Ank Kumar | CC BY-SA 4.0 |
+| `cs100/gear.jpg` | [Bombardier CS100 main landing gear](https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23437223616).jpg), Kārlis Dambrāns | CC BY 2.0 |
+
+The CS100 was renamed Airbus A220-100 after the programme joined Airbus. Sources using the original Bombardier CS100 name depict the same variant represented by project ID `cs100`, not the longer A220-300/CS300.
