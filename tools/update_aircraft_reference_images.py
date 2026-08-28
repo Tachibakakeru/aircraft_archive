@@ -264,6 +264,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:Adria_Airways_Airbus_A319_(S5-AAR)_@CDG,_2015-06-25.jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:QantasLink_Airbus_A319_VH-8NP_Perth_2025_(02).jpg",
     },
+    "b736": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Cockpit-737-700-by-RalfR.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg",
+    },
+    "a318": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Airbus_A318-111_(F-GUGJ)_01.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Airbus_A318_Cockpit_(8605111142).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Airbus_A318_aterrizando_pista_20L_en_SDU_(8781193831).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Airbus_A318-111_(F-GUGJ)_01.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Airbus_A318_Landing_Gear_(8604009277).jpg",
+    },
 }
 
 
@@ -838,6 +864,119 @@ CONTENT.update({
             [("左右翼下各一組四輪主腳。", "One four-wheel main bogie sits beneath each wing.", "左右主翼下に各1組4輪主脚があります。"), ("機身中線只有一組四輪主腳。", "Only one four-wheel bogie sits on the fuselage centreline.", "胴体中心線には4輪主脚が1組だけです。"), ("三組主轉向架對比 747 的四組。", "Three main bogies contrast with the 747's four.", "主ボギー3組で747の4組と異なります。")],
         ),
     },
+})
+
+
+def clone_variant(source: str, replacements: tuple[tuple[str, str], ...]) -> dict:
+    def replace(value):
+        if isinstance(value, str):
+            for old, new in replacements:
+                value = value.replace(old, new)
+            return value
+        if isinstance(value, list):
+            return [replace(item) for item in value]
+        if isinstance(value, dict):
+            return {key: replace(item) for key, item in value.items()}
+        return value
+    return replace(CONTENT[source])
+
+
+CONTENT["b736"] = clone_variant("b738", (("737-800", "737-600"), ("A320", "A318")))
+CONTENT["b736"].update({
+    "overview": identify(
+        ("737-600 是 737 Next Generation 家族最短的量產型，全長 31.24 m；短粗比例、低矮機身、扁平 CFM56-7B 短艙與收起後外露的主輪是主要輪廓。", "The 737-600 is the shortest production 737 Next Generation, 31.24 m long. Its stubby proportions, low stance, flattened CFM56-7B nacelles and exposed retracted main wheels define it.", "737-600は全長31.24 mで737 Next Generation最短の量産型です。短い胴体、低い姿勢、下面が平たいCFM56-7Bナセル、格納後も露出する主輪が特徴です。"),
+        ("它只比 A318 短約 20 cm，肉眼不能靠全長分辨；機鼻、引擎底部、翼尖與主輪收納方式更可靠。", "It is only about 20 cm shorter than the A318, so length alone is unreliable; nose, nacelle underside, wingtips and gear stowage work better.", "A318より約20 cm短いだけなので全長だけでは判別できません。機首、ナセル下面、翼端、脚格納方式を見ます。"),
+        [("737NG 家族中機身最短。", "Shortest fuselage in the 737NG family.", "737NGファミリー最短胴です。"), ("低矮姿態與扁平短艙很醒目。", "Low stance and flat nacelles stand out.", "低い姿勢と平たいナセルが目立ちます。"), ("主輪收起後仍可看見胎面。", "Main tyre faces remain visible when retracted.", "格納後も主輪面が見えます。")],
+    ),
+    "cockpit": identify(
+        ("737-600 使用 737NG 共通的傳統駕駛盤玻璃座艙：正副駕駛前方各有駕駛盤，中央有油門、黑白配平輪與大量實體開關。", "The 737-600 uses the common 737NG yoke-equipped glass cockpit, with a yoke before each pilot, central throttles, black-and-white trim wheels and many physical controls.", "737-600は737NG共通の操縦輪式グラスコックピットで、各席の操縦輪、中央スロットル、白黒トリムホイール、多数の物理スイッチがあります。"),
+        ("本頁座艙照片取自共通布局的 737-700；駕駛艙本身無法可靠區分 -600 與其他 NG 子型，但可立即與側桿式 A318 分開。", "The photo shows the common layout in a 737-700. The cockpit cannot reliably distinguish a -600 from other NG variants, but it immediately separates the sidestick A318.", "写真は共通配置の737-700です。操縦席だけで-600と他NGを区別できませんが、サイドスティック式A318とはすぐ区別できます。"),
+        [("正副駕駛前方都有傳統駕駛盤。", "A conventional yoke sits before each pilot.", "両席正面に通常の操縦輪があります。"), ("中央保留大型配平輪。", "Large trim wheels remain on the centre pedestal.", "中央ペデスタルに大型トリムホイールがあります。"), ("大量實體旋鈕包圍玻璃顯示器。", "Many physical controls surround the glass displays.", "グラス表示器を多数の物理操作器が囲みます。")],
+    ),
+    "fuselage": identify(
+        ("737-600 保留 737 的窄機身與每排六座截面，典型每側有前後主艙門及一個翼上逃生出口；翼前、翼後都只有很短的窗列。", "The 737-600 retains the narrow six-abreast 737 body, typically with forward/aft main doors and one overwing exit per side; window runs ahead of and behind the wing are very short.", "737-600は737共通の横6席狭胴で、通常は各側に前後ドアと翼上出口1か所を持ち、翼前後の窓列が非常に短いです。"),
+        ("出口數與 A318 相近，因此真正的子型線索是極短窗列及 737 較窄、較低的機身截面。", "Exit count is similar to the A318; the stronger subtype cues are the very short window runs and the 737's narrower, lower body.", "出口数はA318と似ています。非常に短い窓列と、737の細く低い胴体がより強い手掛かりです。"),
+        [("每側前後各一扇主艙門。", "One main door sits at each end per side.", "各側前後に主ドア1枚ずつです。"), ("典型每側一個翼上出口。", "Typically one overwing exit per side.", "通常は各側翼上出口1か所です。"), ("翼前與翼後窗列都很短。", "Window runs before and after the wing are short.", "翼前後の窓列が短いです。")],
+    ),
+    "engine": identify(
+        ("737-600 固定使用 CFM56-7B 高旁通比渦輪扇；因 737 機身離地低，附件移至側面，使進氣口下緣呈扁平的非圓形輪廓。", "The 737-600 exclusively uses CFM56-7B turbofans. Low ground clearance moves accessories to the sides, producing the characteristic flattened inlet underside.", "737-600はCFM56-7Bのみを使用し、低い地上高に合わせて補機を側面へ移したため吸気口下面が平たい形です。"),
+        ("A318 的 CFM56-5B 或 PW6000 短艙底部更圓、位置更高；近距離只看引擎就能有效區分兩型。", "The A318's CFM56-5B or PW6000 nacelles are rounder underneath and sit higher, making engine shape a strong close-range discriminator.", "A318のCFM56-5B／PW6000ナセルは下面がより丸く高い位置にあり、近距離では強い識別点です。"),
+        [("只使用 CFM56-7B 系列。", "Only CFM56-7B engines are used.", "CFM56-7Bのみを使用します。"), ("進氣口底部明顯扁平。", "The inlet underside is visibly flattened.", "吸気口下面が明確に平たいです。"), ("引擎離地間隙小於 A318。", "Engine ground clearance is lower than the A318's.", "エンジン地上間隔はA318より小さいです。")],
+    ),
+    "wingtip": identify(
+        ("737-600 基本型採傳統平直翼尖；Boeing 文件另列有 737-600W 翼尖小翼構型，但實際機隊多數仍以無翼尖小翼外觀最具代表性。", "The basic 737-600 has plain tips. Boeing documentation also lists a 737-600W winglet configuration, but the plain-tip appearance is more representative of the fleet.", "737-600基本型は通常翼端です。Boeing資料には737-600Wウイングレット型もありますが、実機では通常翼端が代表的です。"),
+        ("看到無小翼的 737NG 且機身異常短，是 737-600 的強線索；不能只用無小翼排除其他早期 NG。", "A very short plain-tip 737NG strongly suggests a -600, but plain tips alone do not exclude early examples of other NG variants.", "小翼なしで極端に短い737NGは-600の強い手掛かりですが、通常翼端だけでは他の初期NGを除外できません。"),
+        [("代表性外觀是平直翼尖。", "Plain tips are the representative appearance.", "通常翼端が代表的です。"), ("少數／文件構型可見翼尖小翼。", "Winglet-equipped/documented configurations exist.", "ウイングレット構成も存在します。"), ("必須搭配極短機身判讀。", "Confirm with the very short fuselage.", "極端に短い胴体と合わせて判定します。")],
+    ),
+    "wing": identify(
+        ("737-600 使用 737NG 基本後掠主翼，基本翼展約 34.32 m；主翼相對 31.24 m 的極短機身顯得寬大，後緣配置襟翼、擾流板與副翼。", "The 737-600 uses the basic swept 737NG wing with an approximately 34.32 m span. It looks broad against the 31.24 m fuselage and carries flaps, spoilers and ailerons along the trailing edge.", "737-600は基本翼幅約34.32 mの737NG後退翼を使い、31.24 mの短胴に対して大きく見え、後縁にフラップ、スポイラー、補助翼があります。"),
+        ("A318 翼展約 34.10 m，幾乎相同；737-600 應靠平直翼尖、低掛扁平短艙及短窄機身判讀，而不是靠翼展。", "The A318 span is about 34.10 m, nearly identical. Identify the 737-600 through plain tips, low flattened nacelles and its short narrow body rather than span.", "A318の翼幅約34.10 mとほぼ同じため、通常翼端、低い平たいナセル、短く細い胴体で判定します。"),
+        [("基本翼展約 34.32 m。", "Basic span is about 34.32 m.", "基本翼幅は約34.32 mです。"), ("相對短機身顯得主翼很寬。", "The wing looks broad against the short body.", "短胴に対して主翼が広く見えます。"), ("低掛扁平短艙是客艙視角線索。", "Low flat nacelles are a cabin-view cue.", "低い平型ナセルが客室視点の手掛かりです。")],
+    ),
+    "vstab": identify(
+        ("737-600 垂直尾翼具有 737NG 典型的前伸背鰭、後掠前緣與較直的方向舵後緣；放在最短 NG 機身上顯得比例很高。", "The 737-600 fin has the typical 737NG forward dorsal fillet, swept leading edge and relatively straight rudder trailing edge; it looks tall on the shortest NG body.", "737-600垂尾は737NG典型の前方へ伸びる背びれ、後退前縁、比較的直線的な方向舵後縁を持ち、最短NG胴体上で高く見えます。"),
+        ("A318 的垂尾為短胴穩定性而進一步加高，輪廓與根部過渡也更像 Airbus；尾翼高度應搭配機鼻與引擎一起判斷。", "The A318 fin is further enlarged for short-body stability and has a different Airbus root blend. Use fin height together with nose and nacelle cues.", "A318垂尾は短胴安定性のためさらに高く、Airbusらしい根元形状です。垂尾高は機首・ナセルと合わせて見ます。"),
+        [("前緣下方有長背鰭。", "A long dorsal fillet extends forward.", "前縁下に長い背びれがあります。"), ("方向舵後緣接近直線。", "The rudder trailing edge is nearly straight.", "方向舵後縁はほぼ直線です。"), ("短機身使垂尾比例偏高。", "The short body makes the fin look tall.", "短胴で垂尾が高く見えます。")],
+    ),
+    "hstab": identify(
+        ("737-600 水平尾翼低置於尾錐兩側，後掠並向外收尖；外形與其他 737NG 共通，單看此部位無法確認 -600。", "The 737-600 has low-mounted swept tapered tailplanes shared with other 737NG variants, so this part alone cannot confirm a -600.", "737-600水平尾翼は尾部両側の低位置にある後退・先細形で他737NGと共通し、単独では-600を確認できません。"),
+        ("737-600 與 A318 都採傳統低置水平尾翼；配合 737 外露主輪與 A318 高垂尾，判斷才可靠。", "Both use conventional low tailplanes; combine this view with the 737's exposed mains and the A318's tall fin.", "両機とも通常の低位置水平尾翼なので、737の露出主輪とA318の高い垂尾を併用します。"),
+        [("水平尾翼低置且後掠。", "Tailplanes are low-mounted and swept.", "水平尾翼は低位置・後退形です。"), ("輪廓與其他 737NG 共通。", "The outline is common across the 737NG family.", "輪郭は737NGファミリー共通です。"), ("需搭配起落架與垂尾判讀。", "Use it with landing-gear and fin cues.", "脚と垂尾の特徴も合わせて見ます。")],
+    ),
+    "gear": identify(
+        ("737-600 前腳雙輪，左右主腳各單軸雙輪；主腳向內收起後沒有完整外側艙門，輪胎胎面仍直接暴露在機腹。", "The 737-600 has twin nose wheels and a two-wheel main unit per side. The mains retract inward without full outer doors, leaving tyre faces exposed beneath the belly.", "737-600は前脚2輪、左右主脚各2輪で、完全な外扉なしに内側へ格納され、タイヤ面が機腹に露出します。"),
+        ("A318 的總輪數同樣為六輪，但主輪收起後由艙門遮蔽；因此輪數無用，外露胎面才是最可靠差異。", "The A318 also totals six wheels, but doors cover its retracted mains. Wheel count is useless; exposed tyre faces are the reliable difference.", "A318も合計6輪ですが格納主輪は扉で覆われます。輪数ではなく露出タイヤ面が確実な差です。"),
+        [("前腳與每側主腳均為雙輪。", "Nose and each main unit use twin wheels.", "前脚と左右主脚は各2輪です。"), ("收起後主輪胎面外露。", "Main tyre faces remain exposed when retracted.", "格納後も主輪面が露出します。"), ("機身離地姿態低於 A318。", "The fuselage sits lower than the A318's.", "胴体地上高はA318より低いです。")],
+    ),
+})
+
+CONTENT["a318"] = clone_variant("a320", (("A320", "A318"), ("737-800", "737-600")))
+CONTENT["a318"].update({
+    "overview": identify(
+        ("A318 是 A320 家族最短的量產型，全長約 31.44 m、翼展 34.10 m；短粗機身、圓鼻、圓形短艙、上下翼尖擋板與特別加高的垂尾構成輪廓。", "The A318 is the shortest production A320-family member, about 31.44 m long with a 34.10 m span. Its stubby body, round nose and nacelles, upper/lower tip fences and unusually tall fin define it.", "A318は全長約31.44 m、翼幅34.10 mでA320ファミリー最短の量産型です。短い胴体、丸い機首とナセル、上下翼端フェンス、特に高い垂尾が特徴です。"),
+        ("它與 737-600 幾乎等長；A318 的機身更寬、離地更高、主輪收起後有艙門遮蔽，垂尾也因短胴穩定需求而明顯加高。", "It is almost the same length as the 737-600. The A318 is wider and higher, covers its retracted mains with doors, and has a visibly enlarged fin for short-body directional stability.", "737-600とほぼ同じ長さですが、A318は太く高く、格納主輪が扉で覆われ、短胴の方向安定性のため垂尾が明確に大型化されています。"),
+        [("A320 家族最短量產型。", "Shortest production A320-family member.", "A320ファミリー最短量産型です。"), ("上下翼尖擋板是標準外觀。", "Upper/lower tip fences are standard.", "上下翼端フェンスが標準です。"), ("垂尾比例比 A319／A320 更高。", "The fin is proportionally taller than on A319/A320.", "垂尾はA319／A320より相対的に高いです。")],
+    ),
+    "cockpit": identify(
+        ("A318 與 A319、A320、A321 共用側桿式玻璃座艙：飛行員正前方沒有駕駛盤，中央上下排列兩具 ECAM 顯示器。", "The A318 shares the A319/A320/A321 sidestick glass cockpit: no yokes ahead of the pilots and two central stacked ECAM displays.", "A318はA319／A320／A321共通のサイドスティック式グラスコックピットで、正面に操縦輪がなく中央に上下2面ECAMがあります。"),
+        ("家族座艙高度共通，內部照片通常無法辨識 A318 子型；但側桿與桌板可立即排除有駕駛盤的 737-600。", "Family cockpit commonality makes the A318 subtype hard to identify inside, but sidesticks and tray tables immediately exclude the yoke-equipped 737-600.", "共通性が高く機内だけでA318を特定しにくい一方、サイドスティックとテーブルで操縦輪付き737-600を除外できます。"),
+        [("側桿位於兩名駕駛外側。", "Sidesticks sit outboard of both pilots.", "サイドスティックは両席外側です。"), ("正前方設有可收折桌板。", "Folding tray tables sit ahead of the pilots.", "正面に折り畳みテーブルがあります。"), ("中央 ECAM 上下排列。", "Central ECAM displays are stacked.", "中央ECAMは上下配置です。")],
+    ),
+    "fuselage": identify(
+        ("A318 保留 A320 家族約 3.95 m 寬的每排六座機身，但縮短至約 31.44 m；典型每側有前後主艙門及一個翼上逃生出口。", "The A318 retains the A320 family's roughly 3.95 m-wide six-abreast body but shortens it to about 31.44 m; typically each side has forward/aft main doors and one overwing exit.", "A318はA320ファミリー共通の幅約3.95 m・横6席胴体を約31.44 mまで短縮し、通常各側に前後ドアと翼上出口1か所を持ちます。"),
+        ("它的翼前、翼後窗列都比 A319 更短；與等長 737-600 相比，機身截面更寬、離地姿態更高。", "Its window runs ahead of and behind the wing are shorter than the A319's. Against the similarly long 737-600, its body is wider and sits higher.", "翼前後の窓列はA319より短く、ほぼ同長の737-600より胴体が太く高い位置にあります。"),
+        [("每側前後各一扇主艙門。", "One main door sits at each end per side.", "各側前後に主ドア1枚ずつです。"), ("典型每側一個翼上出口。", "Typically one overwing exit per side.", "通常は各側翼上出口1か所です。"), ("寬機身截面配極短窗列。", "A wide body section is paired with short window runs.", "太い胴体断面と短い窓列の組合せです。")],
+    ),
+    "engine": identify(
+        ("A318 可裝 CFM56-5B8／5B9 系列或 Pratt & Whitney PW6000（PW6122A）；兩者底部都比 737-600 的 CFM56-7B 更圓，離地間隙也較大。", "The A318 uses CFM56-5B8/-5B9 variants or the Pratt & Whitney PW6000 (PW6122A). Both are rounder underneath and sit higher than the 737-600's CFM56-7B.", "A318はCFM56-5B8／5B9系またはPratt & Whitney PW6000（PW6122A）を使用し、737-600のCFM56-7Bより下面が丸く地上間隔も大きいです。"),
+        ("PW6000 短艙外形與 CFM56-5B 不同，因此判斷 A318 時應先確認圓形進氣口，再用極短機身與高垂尾確認子型。", "PW6000 and CFM56-5B nacelles differ, so first identify the round inlet, then use the very short body and tall fin to confirm an A318.", "PW6000とCFM56-5Bでナセル形状が異なるため、まず丸い吸気口を見て、極短胴と高い垂尾でA318を確認します。"),
+        [("可見 CFM56-5B 或 PW6000。", "CFM56-5B or PW6000 engines may appear.", "CFM56-5BまたはPW6000を装備します。"), ("進氣口底部接近圓形。", "The inlet underside is nearly circular.", "吸気口下面は円形に近いです。"), ("離地間隙大於 737-600。", "Ground clearance exceeds the 737-600's.", "地上間隔は737-600より大きいです。")],
+    ),
+    "wingtip": identify(
+        ("量產 A318 使用經典 A320 家族上下翼尖擋板：翼尖同時有向上與向下的小片，而不是高大的 Sharklet。", "Production A318s use classic A320-family upper-and-lower tip fences rather than tall Sharklets.", "量産A318は高いSharkletではなく、A320ファミリー従来型の上下翼端フェンスを使います。"),
+        ("上下雙向擋板配上極短機身與高垂尾，是從遠處辨識 A318 的實用組合。", "Upper/lower fences combined with a very short body and tall fin form a practical distant A318 cue.", "上下フェンス、極短胴、高い垂尾の組合せが遠距離でのA318識別に有効です。"),
+        [("翼尖上、下各伸出一片。", "One fence projects above and below the tip.", "翼端の上と下へ各1枚伸びます。"), ("量產機沒有常見 Sharklet 構型。", "Production aircraft lack the common Sharklet configuration.", "量産機に一般的なSharklet構成はありません。"), ("配合高垂尾確認 A318。", "Combine it with the tall fin to confirm A318.", "高い垂尾と合わせてA318を確認します。")],
+    ),
+    "wing": identify(
+        ("A318 沿用 A320 家族基本主翼，翼展 34.10 m；相對極短機身，主翼顯得格外寬大，後緣仍有多段襟翼與擾流板。", "The A318 retains the basic A320-family wing with a 34.10 m span. Against its very short body the wing looks unusually broad, with multi-section flaps and spoilers on the trailing edge.", "A318は翼幅34.10 mのA320ファミリー共通主翼を使い、極短胴に対して翼が大きく見え、後縁に多段フラップとスポイラーがあります。"),
+        ("737-600 基本翼展約 34.32 m，尺寸幾乎相同；應看 A318 上下翼尖擋板與圓形短艙，而非只看翼展。", "The basic 737-600 span is about 34.32 m, nearly identical; use the A318's upper/lower fences and round nacelles rather than span alone.", "737-600基本型の翼幅約34.32 mとほぼ同じなので、翼幅ではなくA318の上下フェンスと丸いナセルを見ます。"),
+        [("主翼與 A320 家族高度共通。", "The wing is highly common with the A320 family.", "主翼はA320ファミリーと高い共通性があります。"), ("相對短機身顯得翼幅很大。", "The span looks large against the short body.", "短胴に対して翼幅が大きく見えます。"), ("上下翼尖擋板是近距離線索。", "Upper/lower tip fences are a close-range cue.", "上下翼端フェンスが近距離の手掛かりです。")],
+    ),
+    "vstab": identify(
+        ("A318 因機身最短、方向力臂較小，採用比 A319／A320 更高的垂直尾翼；高大後掠尾翼在短機身上形成非常醒目的比例。", "Because its shortest fuselage provides less yaw moment arm, the A318 uses a taller vertical fin than the A319/A320; the tall swept fin is conspicuous on the short body.", "A318は最短胴でヨー方向の腕が短いためA319／A320より高い垂尾を採用し、短い胴体上で非常に目立ちます。"),
+        ("這是區分 A318 與 A319 最重要的外部線索之一；737-600 雖也短，但垂尾根部與機鼻、短艙外形不同。", "This is one of the strongest external cues separating an A318 from an A319. The 737-600 is also short, but its fin root, nose and nacelles differ.", "A319との識別で最重要の外部特徴の一つです。737-600も短胴ですが、垂尾根元、機首、ナセル形状が異なります。"),
+        [("垂尾高於其他早期 A320 家族成員。", "The fin is taller than on other early A320-family members.", "他の初期A320ファミリーより垂尾が高いです。"), ("短機身讓尾翼比例非常突出。", "The short body makes the fin proportion striking.", "短胴で垂尾比率が際立ちます。"), ("根部寬而平順接入後機身。", "Its broad root blends smoothly into the aft body.", "幅広い根元が後部胴体へ滑らかにつながります。")],
+    ),
+    "hstab": identify(
+        ("A318 水平尾翼低置於尾錐兩側，後掠並向外收窄，基本輪廓與 A320 家族共通；在短機身上看起來比例較寬。", "The A318 has low-mounted swept tapered tailplanes sharing the basic A320-family form; they look relatively broad on the short fuselage.", "A318水平尾翼は尾部両側の低位置にある後退・先細形でA320ファミリー共通ですが、短胴上では相対的に広く見えます。"),
+        ("737-600 也有相似低置尾翼，單看此部位不足以辨識；A318 的高垂尾、圓形短艙與有艙門主輪更可靠。", "The 737-600 has a similar low tailplane, so this part alone is insufficient. The A318's tall fin, round nacelles and covered mains are stronger cues.", "737-600も似た低位置尾翼のため単独判定はできず、A318の高い垂尾、丸いナセル、覆われる主輪が有効です。"),
+        [("水平尾翼低置且後掠。", "Tailplanes are low-mounted and swept.", "水平尾翼は低位置・後退形です。"), ("與 A320 家族基本輪廓共通。", "The basic outline is shared with the A320 family.", "基本輪郭はA320ファミリー共通です。"), ("應搭配高垂尾與引擎判讀。", "Use it with the tall fin and engine cues.", "高い垂尾とエンジン特徴を併用します。")],
+    ),
+    "gear": identify(
+        ("A318 前腳雙輪，左右主腳各單軸雙輪；主腳向內收入翼身整流區，艙門會遮蔽輪胎，地面姿態也比 737-600 高。", "The A318 has twin nose wheels and a two-wheel main unit per side. The mains retract inward behind doors, and the aircraft sits higher than the 737-600.", "A318は前脚2輪、左右主脚各2輪で、内側へ格納され扉に覆われ、737-600より高い姿勢です。"),
+        ("兩型總輪數都是六輪；不要數輪子，應看 A318 較長的腳柱與完整主輪艙門，對比 737 的外露胎面。", "Both total six wheels. Do not count wheels; compare the A318's taller struts and full main doors with the 737's exposed tyre faces.", "両機とも合計6輪です。輪数ではなくA318の長い脚柱・完全な主脚扉と、737の露出タイヤ面を比較します。"),
+        [("前腳與每側主腳均為雙輪。", "Nose and each main unit use twin wheels.", "前脚と左右主脚は各2輪です。"), ("收起主輪由艙門遮蔽。", "Doors cover the retracted main wheels.", "格納主輪は扉で覆われます。"), ("腳柱與離地高度高於 737-600。", "Struts and ground clearance exceed the 737-600's.", "脚柱と地上高は737-600より大きいです。")],
+    ),
 })
 
 CONTENT.update({

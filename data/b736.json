@@ -2,18 +2,30 @@
   "title": "Boeing 737-600",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 737-600 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "737-600 保留 737 的窄機身與每排六座截面，典型每側有前後主艙門及一個翼上逃生出口；翼前、翼後都只有很短的窗列。",
+        "en": "The 737-600 retains the narrow six-abreast 737 body, typically with forward/aft main doors and one overwing exit per side; window runs ahead of and behind the wing are very short.",
+        "ja": "737-600は737共通の横6席狭胴で、通常は各側に前後ドアと翼上出口1か所を持ち、翼前後の窓列が非常に短いです。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "出口數與 A318 相近，因此真正的子型線索是極短窗列及 737 較窄、較低的機身截面。",
+        "en": "Exit count is similar to the A318; the stronger subtype cues are the very short window runs and the 737's narrower, lower body.",
+        "ja": "出口数はA318と似ています。非常に短い窓列と、737の細く低い胴体がより強い手掛かりです。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "每側前後各一扇主艙門。",
+          "en": "One main door sits at each end per side.",
+          "ja": "各側前後に主ドア1枚ずつです。"
+        },
+        {
+          "zh": "典型每側一個翼上出口。",
+          "en": "Typically one overwing exit per side.",
+          "ja": "通常は各側翼上出口1か所です。"
+        },
+        {
+          "zh": "翼前與翼後窗列都很短。",
+          "en": "Window runs before and after the wing are short.",
+          "ja": "翼前後の窓列が短いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b736/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 737-600 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "737-600 使用 737NG 基本後掠主翼，基本翼展約 34.32 m；主翼相對 31.24 m 的極短機身顯得寬大，後緣配置襟翼、擾流板與副翼。",
+        "en": "The 737-600 uses the basic swept 737NG wing with an approximately 34.32 m span. It looks broad against the 31.24 m fuselage and carries flaps, spoilers and ailerons along the trailing edge.",
+        "ja": "737-600は基本翼幅約34.32 mの737NG後退翼を使い、31.24 mの短胴に対して大きく見え、後縁にフラップ、スポイラー、補助翼があります。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,441 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "A318 翼展約 34.10 m，幾乎相同；737-600 應靠平直翼尖、低掛扁平短艙及短窄機身判讀，而不是靠翼展。",
+        "en": "The A318 span is about 34.10 m, nearly identical. Identify the 737-600 through plain tips, low flattened nacelles and its short narrow body rather than span.",
+        "ja": "A318の翼幅約34.10 mとほぼ同じため、通常翼端、低い平たいナセル、短く細い胴体で判定します。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "基本翼展約 34.32 m。",
+          "en": "Basic span is about 34.32 m.",
+          "ja": "基本翼幅は約34.32 mです。"
+        },
+        {
+          "zh": "相對短機身顯得主翼很寬。",
+          "en": "The wing looks broad against the short body.",
+          "ja": "短胴に対して主翼が広く見えます。"
+        },
+        {
+          "zh": "低掛扁平短艙是客艙視角線索。",
+          "en": "Low flat nacelles are a cabin-view cue.",
+          "ja": "低い平型ナセルが客室視点の手掛かりです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b736/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 737-600 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "737-600 固定使用 CFM56-7B 高旁通比渦輪扇；因 737 機身離地低，附件移至側面，使進氣口下緣呈扁平的非圓形輪廓。",
+        "en": "The 737-600 exclusively uses CFM56-7B turbofans. Low ground clearance moves accessories to the sides, producing the characteristic flattened inlet underside.",
+        "ja": "737-600はCFM56-7Bのみを使用し、低い地上高に合わせて補機を側面へ移したため吸気口下面が平たい形です。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "A318 的 CFM56-5B 或 PW6000 短艙底部更圓、位置更高；近距離只看引擎就能有效區分兩型。",
+        "en": "The A318's CFM56-5B or PW6000 nacelles are rounder underneath and sit higher, making engine shape a strong close-range discriminator.",
+        "ja": "A318のCFM56-5B／PW6000ナセルは下面がより丸く高い位置にあり、近距離では強い識別点です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "只使用 CFM56-7B 系列。",
+          "en": "Only CFM56-7B engines are used.",
+          "ja": "CFM56-7Bのみを使用します。"
+        },
+        {
+          "zh": "進氣口底部明顯扁平。",
+          "en": "The inlet underside is visibly flattened.",
+          "ja": "吸気口下面が明確に平たいです。"
+        },
+        {
+          "zh": "引擎離地間隙小於 A318。",
+          "en": "Engine ground clearance is lower than the A318's.",
+          "ja": "エンジン地上間隔はA318より小さいです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b736/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "737-600 垂直尾翼具有 737NG 典型的前伸背鰭、後掠前緣與較直的方向舵後緣；放在最短 NG 機身上顯得比例很高。",
+        "en": "The 737-600 fin has the typical 737NG forward dorsal fillet, swept leading edge and relatively straight rudder trailing edge; it looks tall on the shortest NG body.",
+        "ja": "737-600垂尾は737NG典型の前方へ伸びる背びれ、後退前縁、比較的直線的な方向舵後縁を持ち、最短NG胴体上で高く見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "A318 的垂尾為短胴穩定性而進一步加高，輪廓與根部過渡也更像 Airbus；尾翼高度應搭配機鼻與引擎一起判斷。",
+        "en": "The A318 fin is further enlarged for short-body stability and has a different Airbus root blend. Use fin height together with nose and nacelle cues.",
+        "ja": "A318垂尾は短胴安定性のためさらに高く、Airbusらしい根元形状です。垂尾高は機首・ナセルと合わせて見ます。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣下方有長背鰭。",
+          "en": "A long dorsal fillet extends forward.",
+          "ja": "前縁下に長い背びれがあります。"
+        },
+        {
+          "zh": "方向舵後緣接近直線。",
+          "en": "The rudder trailing edge is nearly straight.",
+          "ja": "方向舵後縁はほぼ直線です。"
+        },
+        {
+          "zh": "短機身使垂尾比例偏高。",
+          "en": "The short body makes the fin look tall.",
+          "ja": "短胴で垂尾が高く見えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b736/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "737-600 水平尾翼低置於尾錐兩側，後掠並向外收尖；外形與其他 737NG 共通，單看此部位無法確認 -600。",
+        "en": "The 737-600 has low-mounted swept tapered tailplanes shared with other 737NG variants, so this part alone cannot confirm a -600.",
+        "ja": "737-600水平尾翼は尾部両側の低位置にある後退・先細形で他737NGと共通し、単独では-600を確認できません。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "737-600 與 A318 都採傳統低置水平尾翼；配合 737 外露主輪與 A318 高垂尾，判斷才可靠。",
+        "en": "Both use conventional low tailplanes; combine this view with the 737's exposed mains and the A318's tall fin.",
+        "ja": "両機とも通常の低位置水平尾翼なので、737の露出主輪とA318の高い垂尾を併用します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "水平尾翼低置且後掠。",
+          "en": "Tailplanes are low-mounted and swept.",
+          "ja": "水平尾翼は低位置・後退形です。"
+        },
+        {
+          "zh": "輪廓與其他 737NG 共通。",
+          "en": "The outline is common across the 737NG family.",
+          "ja": "輪郭は737NGファミリー共通です。"
+        },
+        {
+          "zh": "需搭配起落架與垂尾判讀。",
+          "en": "Use it with landing-gear and fin cues.",
+          "ja": "脚と垂尾の特徴も合わせて見ます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b736/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 737-600 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "737-600 前腳雙輪，左右主腳各單軸雙輪；主腳向內收起後沒有完整外側艙門，輪胎胎面仍直接暴露在機腹。",
+        "en": "The 737-600 has twin nose wheels and a two-wheel main unit per side. The mains retract inward without full outer doors, leaving tyre faces exposed beneath the belly.",
+        "ja": "737-600は前脚2輪、左右主脚各2輪で、完全な外扉なしに内側へ格納され、タイヤ面が機腹に露出します。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "A318 的總輪數同樣為六輪，但主輪收起後由艙門遮蔽；因此輪數無用，外露胎面才是最可靠差異。",
+        "en": "The A318 also totals six wheels, but doors cover its retracted mains. Wheel count is useless; exposed tyre faces are the reliable difference.",
+        "ja": "A318も合計6輪ですが格納主輪は扉で覆われます。輪数ではなく露出タイヤ面が確実な差です。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "前腳與每側主腳均為雙輪。",
+          "en": "Nose and each main unit use twin wheels.",
+          "ja": "前脚と左右主脚は各2輪です。"
+        },
+        {
+          "zh": "收起後主輪胎面外露。",
+          "en": "Main tyre faces remain exposed when retracted.",
+          "ja": "格納後も主輪面が露出します。"
+        },
+        {
+          "zh": "機身離地姿態低於 A318。",
+          "en": "The fuselage sits lower than the A318's.",
+          "ja": "胴体地上高はA318より低いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b736/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "737-600 是 737 Next Generation 家族最短的量產型，全長 31.24 m；短粗比例、低矮機身、扁平 CFM56-7B 短艙與收起後外露的主輪是主要輪廓。",
+        "en": "The 737-600 is the shortest production 737 Next Generation, 31.24 m long. Its stubby proportions, low stance, flattened CFM56-7B nacelles and exposed retracted main wheels define it.",
+        "ja": "737-600は全長31.24 mで737 Next Generation最短の量産型です。短い胴体、低い姿勢、下面が平たいCFM56-7Bナセル、格納後も露出する主輪が特徴です。"
+      },
+      "fact": {
+        "zh": "它只比 A318 短約 20 cm，肉眼不能靠全長分辨；機鼻、引擎底部、翼尖與主輪收納方式更可靠。",
+        "en": "It is only about 20 cm shorter than the A318, so length alone is unreliable; nose, nacelle underside, wingtips and gear stowage work better.",
+        "ja": "A318より約20 cm短いだけなので全長だけでは判別できません。機首、ナセル下面、翼端、脚格納方式を見ます。"
+      },
+      "bullets": [
+        {
+          "zh": "737NG 家族中機身最短。",
+          "en": "Shortest fuselage in the 737NG family.",
+          "ja": "737NGファミリー最短胴です。"
+        },
+        {
+          "zh": "低矮姿態與扁平短艙很醒目。",
+          "en": "Low stance and flat nacelles stand out.",
+          "ja": "低い姿勢と平たいナセルが目立ちます。"
+        },
+        {
+          "zh": "主輪收起後仍可看見胎面。",
+          "en": "Main tyre faces remain visible when retracted.",
+          "ja": "格納後も主輪面が見えます。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b736/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "bullets": [
+        {
+          "zh": "正副駕駛前方都有傳統駕駛盤。",
+          "en": "A conventional yoke sits before each pilot.",
+          "ja": "両席正面に通常の操縦輪があります。"
+        },
+        {
+          "zh": "中央保留大型配平輪。",
+          "en": "Large trim wheels remain on the centre pedestal.",
+          "ja": "中央ペデスタルに大型トリムホイールがあります。"
+        },
+        {
+          "zh": "大量實體旋鈕包圍玻璃顯示器。",
+          "en": "Many physical controls surround the glass displays.",
+          "ja": "グラス表示器を多数の物理操作器が囲みます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b736/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit-737-700-by-RalfR.jpg"
+        }
+      ],
+      "summary": {
+        "zh": "737-600 使用 737NG 共通的傳統駕駛盤玻璃座艙：正副駕駛前方各有駕駛盤，中央有油門、黑白配平輪與大量實體開關。",
+        "en": "The 737-600 uses the common 737NG yoke-equipped glass cockpit, with a yoke before each pilot, central throttles, black-and-white trim wheels and many physical controls.",
+        "ja": "737-600は737NG共通の操縦輪式グラスコックピットで、各席の操縦輪、中央スロットル、白黒トリムホイール、多数の物理スイッチがあります。"
+      },
+      "fact": {
+        "zh": "本頁座艙照片取自共通布局的 737-700；駕駛艙本身無法可靠區分 -600 與其他 NG 子型，但可立即與側桿式 A318 分開。",
+        "en": "The photo shows the common layout in a 737-700. The cockpit cannot reliably distinguish a -600 from other NG variants, but it immediately separates the sidestick A318.",
+        "ja": "写真は共通配置の737-700です。操縦席だけで-600と他NGを区別できませんが、サイドスティック式A318とはすぐ区別できます。"
+      }
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "737-600 的外窗輪廓較有稜角：兩片正面風擋接近直立梯形，外側窗框以明顯折角包向機身側面。正面看時窗帶較窄、中央分隔線較直，側面則可見近似多邊形的側窗。",
+        "en": "The 737-600 glazing is angular: two upright trapezoidal front panes meet a window belt that turns sharply around the nose into polygonal side panes.",
+        "ja": "737-600の窓は角張っており、直立気味の台形前面窓から明確な折れ角で多角形の側面窓へつながります。"
+      },
+      "fact": {
+        "zh": "客機風擋是加熱、夾層且能承受座艙壓差的結構件；辨識時應看整組窗帶比例，不要只數單一片窗。",
+        "en": "Airliner windshields are heated laminated structural panes. Identify the proportion and outline of the complete window belt rather than counting one pane.",
+        "ja": "旅客機の風防は加熱式の積層構造材です。1枚だけでなく窓帯全体の比率と輪郭で判別します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面兩片主風擋較扁、中央接縫近乎垂直。",
+          "en": "The two main forward panes look relatively shallow with a near-vertical centre seam.",
+          "ja": "正面2枚の主風防は比較的浅く、中央継ぎ目はほぼ垂直です。"
+        },
+        {
+          "zh": "外側窗向機身側面急轉，窗框折角較銳利。",
+          "en": "Outer panes turn sharply onto the fuselage sides with pronounced corners.",
+          "ja": "外側窓は胴体側面へ急に回り込み、輪郭の角が明瞭です。"
+        },
+        {
+          "zh": "搭配較尖機鼻與扁平 CFM56-7B 短艙可提高判斷可靠度。",
+          "en": "Cross-check the angular glazing with the pointed nose and flattened CFM56-7B nacelles.",
+          "ja": "尖った機首と下面が平たいCFM56-7Bナセルも合わせて確認します。"
+        }
+      ],
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b736/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg"
+        },
+        {
+          "src": "assets/reference/b736/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "737-600 基本型採傳統平直翼尖；Boeing 文件另列有 737-600W 翼尖小翼構型，但實際機隊多數仍以無翼尖小翼外觀最具代表性。",
+        "en": "The basic 737-600 has plain tips. Boeing documentation also lists a 737-600W winglet configuration, but the plain-tip appearance is more representative of the fleet.",
+        "ja": "737-600基本型は通常翼端です。Boeing資料には737-600Wウイングレット型もありますが、実機では通常翼端が代表的です。"
+      },
+      "fact": {
+        "zh": "看到無小翼的 737NG 且機身異常短，是 737-600 的強線索；不能只用無小翼排除其他早期 NG。",
+        "en": "A very short plain-tip 737NG strongly suggests a -600, but plain tips alone do not exclude early examples of other NG variants.",
+        "ja": "小翼なしで極端に短い737NGは-600の強い手掛かりですが、通常翼端だけでは他の初期NGを除外できません。"
+      },
+      "bullets": [
+        {
+          "zh": "代表性外觀是平直翼尖。",
+          "en": "Plain tips are the representative appearance.",
+          "ja": "通常翼端が代表的です。"
+        },
+        {
+          "zh": "少數／文件構型可見翼尖小翼。",
+          "en": "Winglet-equipped/documented configurations exist.",
+          "ja": "ウイングレット構成も存在します。"
+        },
+        {
+          "zh": "必須搭配極短機身判讀。",
+          "en": "Confirm with the very short fuselage.",
+          "ja": "極端に短い胴体と合わせて判定します。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b736/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg"
+        }
+      ]
     }
   },
   "specifications": {

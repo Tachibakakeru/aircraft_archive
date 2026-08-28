@@ -315,3 +315,39 @@ The compared aircraft is the short-bodied 737-700/737NG. Winglet fit varies by d
 | `a319/gear.jpg` | [QantasLink Airbus A319 VH-8NP landing gear](https://commons.wikimedia.org/wiki/File:QantasLink_Airbus_A319_VH-8NP_Perth_2025_(02).jpg), Bahnfrend; cropped | CC BY-SA 4.0 |
 
 The comparison focuses on the A319ceo exterior shown in the photographs. A319neo engines and later Sharklet-equipped aircraft differ, while early A319ceo aircraft commonly use upper/lower wingtip fences.
+
+## Boeing 737-600 (`b736`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b736/overview.jpg` | [WestJet Boeing 737-600](https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg), Shawn; cropped | CC BY-SA 2.0 |
+| `b736/cockpit.jpg` | [Boeing 737-700 cockpit](https://commons.wikimedia.org/wiki/File:Cockpit-737-700-by-RalfR.jpg), Ralf Roletschek | GFDL 1.2 |
+| `b736/window-front.jpg` | [SAS Boeing 737-600 front view](https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg), Trougnouf / Benoit Brummer; cropped | CC BY 4.0 |
+| `b736/window-side.jpg` | [WestJet Boeing 737-600 cockpit windows](https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg), Shawn; cropped | CC BY-SA 2.0 |
+| `b736/fuselage.jpg` | [WestJet Boeing 737-600 fuselage](https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg), Shawn; cropped | CC BY-SA 2.0 |
+| `b736/engine.jpg` | [WestJet Boeing 737-600 CFM56-7B](https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg), Shawn; cropped | CC BY-SA 2.0 |
+| `b736/wingtip.jpg` | [SAS Boeing 737-600 plain wingtip](https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg), Trougnouf / Benoit Brummer; cropped | CC BY 4.0 |
+| `b736/wing.jpg` | [SAS Boeing 737-600 wing](https://commons.wikimedia.org/wiki/File:SAS_Boeing_737-600_parked_at_Kiruna_Airport_(DSCF0852).jpg), Trougnouf / Benoit Brummer; cropped | CC BY 4.0 |
+| `b736/vstab.jpg` | [WestJet Boeing 737-600 vertical tail](https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg), Shawn; cropped | CC BY-SA 2.0 |
+| `b736/hstab.jpg` | [WestJet Boeing 737-600 horizontal tail](https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg), Shawn; cropped | CC BY-SA 2.0 |
+| `b736/gear.jpg` | [WestJet Boeing 737-600 landing gear](https://commons.wikimedia.org/wiki/File:Boeing_737-600_(6778274137).jpg), Shawn; cropped | CC BY-SA 2.0 |
+
+The flight-deck photograph is a 737-700 because the 737 Next Generation variants share the relevant cockpit layout; it is labelled as a family-layout reference rather than an exact 737-600 airframe. The external photographs are actual 737-600 aircraft. Plain tips are representative, while Boeing also documents a 737-600W winglet configuration.
+
+## Airbus A318 (`a318`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a318/overview.jpg` | [Air France Airbus A318-111 F-GUGJ](https://commons.wikimedia.org/wiki/File:Airbus_A318-111_(F-GUGJ)_01.jpg), Huhu Uet; cropped | CC BY 3.0 |
+| `a318/cockpit.jpg` | [Airbus A318 cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A318_Cockpit_(8605111142).jpg), Joao Carlos Medau | CC BY 2.0 |
+| `a318/window-front.jpg` | [Avianca Brasil Airbus A318 front view](https://commons.wikimedia.org/wiki/File:Airbus_A318_aterrizando_pista_20L_en_SDU_(8781193831).jpg), Pablo Andrés Ortega Chávez; cropped | GFDL 1.2 |
+| `a318/window-side.jpg` | [Air France Airbus A318-111 cockpit windows](https://commons.wikimedia.org/wiki/File:Airbus_A318-111_(F-GUGJ)_01.jpg), Huhu Uet; cropped | CC BY 3.0 |
+| `a318/fuselage.jpg` | [Avianca Brasil Airbus A318-122 fuselage](https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg), Joao Carlos Medau; cropped | CC BY 2.0 |
+| `a318/engine.jpg` | [Avianca Brasil Airbus A318-122 PW6000 nacelle](https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg), Joao Carlos Medau; cropped | CC BY 2.0 |
+| `a318/wingtip.jpg` | [Avianca Brasil Airbus A318 wingtip fence](https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg), Joao Carlos Medau; cropped | CC BY 2.0 |
+| `a318/wing.jpg` | [Avianca Brasil Airbus A318 wing](https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg), Joao Carlos Medau; cropped | CC BY 2.0 |
+| `a318/vstab.jpg` | [Avianca Brasil Airbus A318 tall vertical tail](https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg), Joao Carlos Medau; cropped | CC BY 2.0 |
+| `a318/hstab.jpg` | [Avianca Brasil Airbus A318 horizontal tail](https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg), Joao Carlos Medau; cropped | CC BY 2.0 |
+| `a318/gear.jpg` | [Airbus A318 landing-gear close-up](https://commons.wikimedia.org/wiki/File:Airbus_A318_Landing_Gear_(8604009277).jpg), Joao Carlos Medau | CC BY 2.0 |
+
+The A318-122 photographs show the Pratt & Whitney PW6000 installation. Other A318s use CFM56-5B variants, so engine appearance varies. Production A318s use the classic upper/lower wingtip fences; the unusually tall vertical fin is a key short-fuselage identification cue.

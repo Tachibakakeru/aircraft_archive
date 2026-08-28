@@ -2,19 +2,30 @@
   "title": "Airbus A318",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A318 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "A318 保留 A320 家族約 3.95 m 寬的每排六座機身，但縮短至約 31.44 m；典型每側有前後主艙門及一個翼上逃生出口。",
+        "en": "The A318 retains the A320 family's roughly 3.95 m-wide six-abreast body but shortens it to about 31.44 m; typically each side has forward/aft main doors and one overwing exit.",
+        "ja": "A318はA320ファミリー共通の幅約3.95 m・横6席胴体を約31.44 mまで短縮し、通常各側に前後ドアと翼上出口1か所を持ちます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "它的翼前、翼後窗列都比 A319 更短；與等長 737-600 相比，機身截面更寬、離地姿態更高。",
+        "en": "Its window runs ahead of and behind the wing are shorter than the A319's. Against the similarly long 737-600, its body is wider and sits higher.",
+        "ja": "翼前後の窓列はA319より短く、ほぼ同長の737-600より胴体が太く高い位置にあります。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "每側前後各一扇主艙門。",
+          "en": "One main door sits at each end per side.",
+          "ja": "各側前後に主ドア1枚ずつです。"
+        },
+        {
+          "zh": "典型每側一個翼上出口。",
+          "en": "Typically one overwing exit per side.",
+          "ja": "通常は各側翼上出口1か所です。"
+        },
+        {
+          "zh": "寬機身截面配極短窗列。",
+          "en": "A wide body section is paired with short window runs.",
+          "ja": "太い胴体断面と短い窓列の組合せです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a318/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A318 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "A318 與 A319、A320、A321 共用側桿式玻璃座艙：飛行員正前方沒有駕駛盤，中央上下排列兩具 ECAM 顯示器。",
+        "en": "The A318 shares the A319/A320/A321 sidestick glass cockpit: no yokes ahead of the pilots and two central stacked ECAM displays.",
+        "ja": "A318はA319／A320／A321共通のサイドスティック式グラスコックピットで、正面に操縦輪がなく中央に上下2面ECAMがあります。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "家族座艙高度共通，內部照片通常無法辨識 A318 子型；但側桿與桌板可立即排除有駕駛盤的 737-600。",
+        "en": "Family cockpit commonality makes the A318 subtype hard to identify inside, but sidesticks and tray tables immediately exclude the yoke-equipped 737-600.",
+        "ja": "共通性が高く機内だけでA318を特定しにくい一方、サイドスティックとテーブルで操縦輪付き737-600を除外できます。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "側桿位於兩名駕駛外側。",
+          "en": "Sidesticks sit outboard of both pilots.",
+          "ja": "サイドスティックは両席外側です。"
+        },
+        {
+          "zh": "正前方設有可收折桌板。",
+          "en": "Folding tray tables sit ahead of the pilots.",
+          "ja": "正面に折り畳みテーブルがあります。"
+        },
+        {
+          "zh": "中央 ECAM 上下排列。",
+          "en": "Central ECAM displays are stacked.",
+          "ja": "中央ECAMは上下配置です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a318/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318_Cockpit_(8605111142).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A318 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "A318 沿用 A320 家族基本主翼，翼展 34.10 m；相對極短機身，主翼顯得格外寬大，後緣仍有多段襟翼與擾流板。",
+        "en": "The A318 retains the basic A320-family wing with a 34.10 m span. Against its very short body the wing looks unusually broad, with multi-section flaps and spoilers on the trailing edge.",
+        "ja": "A318は翼幅34.10 mのA320ファミリー共通主翼を使い、極短胴に対して翼が大きく見え、後縁に多段フラップとスポイラーがあります。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,395 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "737-600 基本翼展約 34.32 m，尺寸幾乎相同；應看 A318 上下翼尖擋板與圓形短艙，而非只看翼展。",
+        "en": "The basic 737-600 span is about 34.32 m, nearly identical; use the A318's upper/lower fences and round nacelles rather than span alone.",
+        "ja": "737-600基本型の翼幅約34.32 mとほぼ同じなので、翼幅ではなくA318の上下フェンスと丸いナセルを見ます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "主翼與 A320 家族高度共通。",
+          "en": "The wing is highly common with the A320 family.",
+          "ja": "主翼はA320ファミリーと高い共通性があります。"
+        },
+        {
+          "zh": "相對短機身顯得翼幅很大。",
+          "en": "The span looks large against the short body.",
+          "ja": "短胴に対して翼幅が大きく見えます。"
+        },
+        {
+          "zh": "上下翼尖擋板是近距離線索。",
+          "en": "Upper/lower tip fences are a close-range cue.",
+          "ja": "上下翼端フェンスが近距離の手掛かりです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a318/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A318 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A318 可裝 CFM56-5B8／5B9 系列或 Pratt & Whitney PW6000（PW6122A）；兩者底部都比 737-600 的 CFM56-7B 更圓，離地間隙也較大。",
+        "en": "The A318 uses CFM56-5B8/-5B9 variants or the Pratt & Whitney PW6000 (PW6122A). Both are rounder underneath and sit higher than the 737-600's CFM56-7B.",
+        "ja": "A318はCFM56-5B8／5B9系またはPratt & Whitney PW6000（PW6122A）を使用し、737-600のCFM56-7Bより下面が丸く地上間隔も大きいです。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "PW6000 短艙外形與 CFM56-5B 不同，因此判斷 A318 時應先確認圓形進氣口，再用極短機身與高垂尾確認子型。",
+        "en": "PW6000 and CFM56-5B nacelles differ, so first identify the round inlet, then use the very short body and tall fin to confirm an A318.",
+        "ja": "PW6000とCFM56-5Bでナセル形状が異なるため、まず丸い吸気口を見て、極短胴と高い垂尾でA318を確認します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "可見 CFM56-5B 或 PW6000。",
+          "en": "CFM56-5B or PW6000 engines may appear.",
+          "ja": "CFM56-5BまたはPW6000を装備します。"
+        },
+        {
+          "zh": "進氣口底部接近圓形。",
+          "en": "The inlet underside is nearly circular.",
+          "ja": "吸気口下面は円形に近いです。"
+        },
+        {
+          "zh": "離地間隙大於 737-600。",
+          "en": "Ground clearance exceeds the 737-600's.",
+          "ja": "地上間隔は737-600より大きいです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a318/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "A318 因機身最短、方向力臂較小，採用比 A319／A320 更高的垂直尾翼；高大後掠尾翼在短機身上形成非常醒目的比例。",
+        "en": "Because its shortest fuselage provides less yaw moment arm, the A318 uses a taller vertical fin than the A319/A320; the tall swept fin is conspicuous on the short body.",
+        "ja": "A318は最短胴でヨー方向の腕が短いためA319／A320より高い垂尾を採用し、短い胴体上で非常に目立ちます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "這是區分 A318 與 A319 最重要的外部線索之一；737-600 雖也短，但垂尾根部與機鼻、短艙外形不同。",
+        "en": "This is one of the strongest external cues separating an A318 from an A319. The 737-600 is also short, but its fin root, nose and nacelles differ.",
+        "ja": "A319との識別で最重要の外部特徴の一つです。737-600も短胴ですが、垂尾根元、機首、ナセル形状が異なります。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "垂尾高於其他早期 A320 家族成員。",
+          "en": "The fin is taller than on other early A320-family members.",
+          "ja": "他の初期A320ファミリーより垂尾が高いです。"
+        },
+        {
+          "zh": "短機身讓尾翼比例非常突出。",
+          "en": "The short body makes the fin proportion striking.",
+          "ja": "短胴で垂尾比率が際立ちます。"
+        },
+        {
+          "zh": "根部寬而平順接入後機身。",
+          "en": "Its broad root blends smoothly into the aft body.",
+          "ja": "幅広い根元が後部胴体へ滑らかにつながります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a318/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "A318 水平尾翼低置於尾錐兩側，後掠並向外收窄，基本輪廓與 A320 家族共通；在短機身上看起來比例較寬。",
+        "en": "The A318 has low-mounted swept tapered tailplanes sharing the basic A320-family form; they look relatively broad on the short fuselage.",
+        "ja": "A318水平尾翼は尾部両側の低位置にある後退・先細形でA320ファミリー共通ですが、短胴上では相対的に広く見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "737-600 也有相似低置尾翼，單看此部位不足以辨識；A318 的高垂尾、圓形短艙與有艙門主輪更可靠。",
+        "en": "The 737-600 has a similar low tailplane, so this part alone is insufficient. The A318's tall fin, round nacelles and covered mains are stronger cues.",
+        "ja": "737-600も似た低位置尾翼のため単独判定はできず、A318の高い垂尾、丸いナセル、覆われる主輪が有効です。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "水平尾翼低置且後掠。",
+          "en": "Tailplanes are low-mounted and swept.",
+          "ja": "水平尾翼は低位置・後退形です。"
+        },
+        {
+          "zh": "與 A320 家族基本輪廓共通。",
+          "en": "The basic outline is shared with the A320 family.",
+          "ja": "基本輪郭はA320ファミリー共通です。"
+        },
+        {
+          "zh": "應搭配高垂尾與引擎判讀。",
+          "en": "Use it with the tall fin and engine cues.",
+          "ja": "高い垂尾とエンジン特徴を併用します。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a318/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus A318 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "A318 前腳雙輪，左右主腳各單軸雙輪；主腳向內收入翼身整流區，艙門會遮蔽輪胎，地面姿態也比 737-600 高。",
+        "en": "The A318 has twin nose wheels and a two-wheel main unit per side. The mains retract inward behind doors, and the aircraft sits higher than the 737-600.",
+        "ja": "A318は前脚2輪、左右主脚各2輪で、内側へ格納され扉に覆われ、737-600より高い姿勢です。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "兩型總輪數都是六輪；不要數輪子，應看 A318 較長的腳柱與完整主輪艙門，對比 737 的外露胎面。",
+        "en": "Both total six wheels. Do not count wheels; compare the A318's taller struts and full main doors with the 737's exposed tyre faces.",
+        "ja": "両機とも合計6輪です。輪数ではなくA318の長い脚柱・完全な主脚扉と、737の露出タイヤ面を比較します。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "前腳與每側主腳均為雙輪。",
+          "en": "Nose and each main unit use twin wheels.",
+          "ja": "前脚と左右主脚は各2輪です。"
+        },
+        {
+          "zh": "收起主輪由艙門遮蔽。",
+          "en": "Doors cover the retracted main wheels.",
+          "ja": "格納主輪は扉で覆われます。"
+        },
+        {
+          "zh": "腳柱與離地高度高於 737-600。",
+          "en": "Struts and ground clearance exceed the 737-600's.",
+          "ja": "脚柱と地上高は737-600より大きいです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a318/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318_Landing_Gear_(8604009277).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A318 是 A320 家族最短的量產型，全長約 31.44 m、翼展 34.10 m；短粗機身、圓鼻、圓形短艙、上下翼尖擋板與特別加高的垂尾構成輪廓。",
+        "en": "The A318 is the shortest production A320-family member, about 31.44 m long with a 34.10 m span. Its stubby body, round nose and nacelles, upper/lower tip fences and unusually tall fin define it.",
+        "ja": "A318は全長約31.44 m、翼幅34.10 mでA320ファミリー最短の量産型です。短い胴体、丸い機首とナセル、上下翼端フェンス、特に高い垂尾が特徴です。"
+      },
+      "fact": {
+        "zh": "它與 737-600 幾乎等長；A318 的機身更寬、離地更高、主輪收起後有艙門遮蔽，垂尾也因短胴穩定需求而明顯加高。",
+        "en": "It is almost the same length as the 737-600. The A318 is wider and higher, covers its retracted mains with doors, and has a visibly enlarged fin for short-body directional stability.",
+        "ja": "737-600とほぼ同じ長さですが、A318は太く高く、格納主輪が扉で覆われ、短胴の方向安定性のため垂尾が明確に大型化されています。"
+      },
+      "bullets": [
+        {
+          "zh": "A320 家族最短量產型。",
+          "en": "Shortest production A320-family member.",
+          "ja": "A320ファミリー最短量産型です。"
+        },
+        {
+          "zh": "上下翼尖擋板是標準外觀。",
+          "en": "Upper/lower tip fences are standard.",
+          "ja": "上下翼端フェンスが標準です。"
+        },
+        {
+          "zh": "垂尾比例比 A319／A320 更高。",
+          "en": "The fin is proportionally taller than on A319/A320.",
+          "ja": "垂尾はA319／A320より相対的に高いです。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a318/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318-111_(F-GUGJ)_01.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "A318 的外窗沿著較圓鈍的機鼻形成較寬、較連續的弧形窗帶。正面主風擋較高大，外側窗向後收尖但上下邊線轉折較平順，從斜側面看整組窗框更像連續包覆機鼻。",
+        "en": "The A318's taller front panes form a broad, continuous window belt around its rounder nose. The outer panes taper aft with smoother upper and lower contours.",
+        "ja": "A318は丸い機首を囲む幅広く連続的な窓帯が特徴です。正面窓は高く、外側窓は上下の輪郭を滑らかに保ちながら後方へ細くなります。"
+      },
+      "fact": {
+        "zh": "737 與 A318 都不是只靠『窗戶片數』就能分辨；最有用的是正面窗高寬比、外側窗收尖方向，以及窗帶與機鼻曲面的銜接方式。",
+        "en": "Pane count alone does not separate a 737 from an A318. Compare front-pane proportions, outer-pane taper and how the belt follows the nose curvature.",
+        "ja": "737とA318は窓の枚数だけでは区別できません。正面窓の縦横比、外側窓の絞り方、機首曲面とのつながりを比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面主風擋較高，整組窗帶在圓鼻上顯得更寬。",
+          "en": "Main forward panes appear taller and the complete belt looks broader on the rounded nose.",
+          "ja": "正面主風防は高く、丸い機首上で窓帯全体が幅広く見えます。"
+        },
+        {
+          "zh": "外側窗向後收尖，窗框上下輪廓比 737 平順。",
+          "en": "Outer panes taper aft with smoother top and bottom contours than on the 737.",
+          "ja": "外側窓は後方へ細くなり、上下輪郭は737より滑らかです。"
+        },
+        {
+          "zh": "搭配圓形短艙、較高離地姿態與翼尖構型交叉確認。",
+          "en": "Cross-check with circular nacelles, taller ground stance and the wingtip device.",
+          "ja": "円形ナセル、高い地上姿勢、翼端装置も合わせて確認します。"
+        }
+      ],
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a318/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318_aterrizando_pista_20L_en_SDU_(8781193831).jpg"
+        },
+        {
+          "src": "assets/reference/a318/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318-111_(F-GUGJ)_01.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "量產 A318 使用經典 A320 家族上下翼尖擋板：翼尖同時有向上與向下的小片，而不是高大的 Sharklet。",
+        "en": "Production A318s use classic A320-family upper-and-lower tip fences rather than tall Sharklets.",
+        "ja": "量産A318は高いSharkletではなく、A320ファミリー従来型の上下翼端フェンスを使います。"
+      },
+      "fact": {
+        "zh": "上下雙向擋板配上極短機身與高垂尾，是從遠處辨識 A318 的實用組合。",
+        "en": "Upper/lower fences combined with a very short body and tall fin form a practical distant A318 cue.",
+        "ja": "上下フェンス、極短胴、高い垂尾の組合せが遠距離でのA318識別に有効です。"
+      },
+      "bullets": [
+        {
+          "zh": "翼尖上、下各伸出一片。",
+          "en": "One fence projects above and below the tip.",
+          "ja": "翼端の上と下へ各1枚伸びます。"
+        },
+        {
+          "zh": "量產機沒有常見 Sharklet 構型。",
+          "en": "Production aircraft lack the common Sharklet configuration.",
+          "ja": "量産機に一般的なSharklet構成はありません。"
+        },
+        {
+          "zh": "配合高垂尾確認 A318。",
+          "en": "Combine it with the tall fin to confirm A318.",
+          "ja": "高い垂尾と合わせてA318を確認します。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a318/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A318-122_(8360157259).jpg"
+        }
+      ]
     }
   },
   "specifications": {

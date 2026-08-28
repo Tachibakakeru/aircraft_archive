@@ -182,3 +182,17 @@
 - 圖片作者、Commons 來源、授權、裁切與 ceo／neo 適用範圍已補入 `assets/reference/ATTRIBUTION.md`；下載與資料工具擴充至 18 架 × 10 類、198 張照片。
 - 資料 fetch 與比較／檢視頁資源升為 v=150，Service Worker cache 升為 `hangar-v13`。已通過 JSON、JavaScript、Python 完整性、圖片數量／尺寸與 `git diff --check`；本地瀏覽器驗證比較頁 10 列、22 張照片、22 個 Commons 來源、22 個單機連結且無破圖，三語切換正常，737 外窗與 A319 引擎單機頁也正常。
 - 本機預覽：`http://localhost:8000/versus.html?a=b737&b=a319&local=150`。使用者已確認；本批已以 commit `8242ebd`（`新增 737-700 與 A319 實機部位辨識比較`）推送至 `origin/main`。本輪在此結束，下次接續下一組機型。
+
+### Boeing 737-600 / Airbus A318 實機部位辨識比較（2026-08-29，進行中）
+
+- 下一批選定 Boeing 737-600（`b736`）與 Airbus A318（`a318`）：兩者都是各自窄體家族最短的量產型，將沿用既有 10 類、實機照片、三語辨識內容與 Commons 授權架構。
+- 本批重點為極短機身比例、艙門／逃生出口、駕駛艙外窗、引擎短艙、翼尖、尾翼與收輪方式；完成後先開本地預覽，未經使用者確認不 push。
+- `data/korean_airlines_debug.json` 維持未追蹤且不納入本批作業。
+
+### Boeing 737-600 / Airbus A318 實機部位辨識比較（2026-08-29，本地完成、待確認）
+
+- `data/b736.json`、`data/a318.json` 已補齊整體、駕駛艙、正／側外窗、機身、引擎、翼尖、主翼、垂直／水平尾翼與起落架共 10 類三語辨識內容，每一類均有 summary、fact、至少 3 個重點與實機照片。
+- 新增 `assets/reference/b736/`、`assets/reference/a318/` 共 22 張 Wikimedia Commons 實機圖片。737-600 外部照片均為同型；共通座艙使用 737-700 實照並明確標註家族共通。A318 同型照片涵蓋 PW6000、上下翼尖擋板、加高垂尾與起落架。
+- `tools/download_reference_photos.ps1` 與 `tools/update_aircraft_reference_images.py` 已擴充至 20 架 × 10 類、220 張照片；`assets/reference/ATTRIBUTION.md` 已加入作者、授權、裁切與構型差異說明。
+- 比較／檢視資料升為 v=151，Service Worker cache 升為 `hangar-v14`。已通過 JSON、Python、JavaScript、圖片尺寸／破圖、三語欄位與 `git diff --check`；本地瀏覽器驗證比較頁 10 列、22 張照片、22 個 Commons 來源、無空白摘要，繁中／英文／日文切換正常，單機頁可直接定位 737-600 引擎及 A318 垂尾並載入實機照片。
+- 本機預覽：`http://localhost:8000/versus.html?a=b736&b=a318&local=151`。使用者已確認並同意發布；本批準備提交並推送至 `origin/main`，之後接續下一組機型。

@@ -174,6 +174,10 @@ $photos = [ordered]@{
   "a319/cockpit.jpg" = "Airbus-319-cockpit.jpg"
   "a319/wingtip.jpg" = "Airbus A319 wintip.jpg"
   "a319/wing.jpg" = "A319 Port Wing (40736437962).jpg"
+  "b736/overview.jpg" = "Boeing 737-600 (6778274137).jpg"
+  "b736/cockpit.jpg" = "Cockpit-737-700-by-RalfR.jpg"
+  "a318/cockpit.jpg" = "Airbus A318 Cockpit (8605111142).jpg"
+  "a318/gear.jpg" = "Airbus A318 Landing Gear (8604009277).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -243,6 +247,24 @@ $windowPhotos = @(
   @{ Dest="a319/vstab.jpg"; Title="Germanwings Airbus A319-112 D-AKNP STR 2016 01.jpg"; Crop=@(.65,.18,.32) }
   @{ Dest="a319/hstab.jpg"; Title="Adria Airways Airbus A319 (S5-AAR) @CDG, 2015-06-25.jpg"; Crop=@(.63,.22,.34) }
   @{ Dest="a319/gear.jpg"; Title="QantasLink Airbus A319 VH-8NP Perth 2025 (02).jpg"; Crop=@(.30,.52,.45) }
+  @{ Dest="b736/window-front.jpg"; Title="SAS Boeing 737-600 parked at Kiruna Airport (DSCF0852).jpg"; Crop=@(.38,.35,.24) }
+  @{ Dest="b736/window-side.jpg"; Title="Boeing 737-600 (6778274137).jpg"; Crop=@(.03,.42,.27) }
+  @{ Dest="b736/fuselage.jpg"; Title="Boeing 737-600 (6778274137).jpg"; Crop=@(.09,.39,.73) }
+  @{ Dest="b736/engine.jpg"; Title="Boeing 737-600 (6778274137).jpg"; Crop=@(.33,.53,.27) }
+  @{ Dest="b736/wingtip.jpg"; Title="SAS Boeing 737-600 parked at Kiruna Airport (DSCF0852).jpg"; Crop=@(.10,.36,.28) }
+  @{ Dest="b736/wing.jpg"; Title="SAS Boeing 737-600 parked at Kiruna Airport (DSCF0852).jpg"; Crop=@(.13,.33,.38) }
+  @{ Dest="b736/vstab.jpg"; Title="Boeing 737-600 (6778274137).jpg"; Crop=@(.58,.18,.27) }
+  @{ Dest="b736/hstab.jpg"; Title="Boeing 737-600 (6778274137).jpg"; Crop=@(.64,.35,.31) }
+  @{ Dest="b736/gear.jpg"; Title="Boeing 737-600 (6778274137).jpg"; Crop=@(.33,.57,.34) }
+  @{ Dest="a318/overview.jpg"; Title="Airbus A318-111 (F-GUGJ) 01.jpg"; Crop=@(.17,.33,.68) }
+  @{ Dest="a318/window-front.jpg"; Title="Airbus A318 aterrizando pista 20L en SDU (8781193831).jpg"; Crop=@(.40,.39,.20) }
+  @{ Dest="a318/window-side.jpg"; Title="Airbus A318-111 (F-GUGJ) 01.jpg"; Crop=@(.65,.45,.20) }
+  @{ Dest="a318/fuselage.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.05,.29,.84) }
+  @{ Dest="a318/engine.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.23,.45,.31) }
+  @{ Dest="a318/vstab.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.68,.20,.28) }
+  @{ Dest="a318/hstab.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.74,.43,.24) }
+  @{ Dest="a318/wingtip.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.47,.23,.31) }
+  @{ Dest="a318/wing.jpg"; Title="Airbus A318-122 (8360157259).jpg"; Crop=@(.35,.25,.43) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600
