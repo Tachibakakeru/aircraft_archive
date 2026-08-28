@@ -238,6 +238,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:Swiss_International_Airlines_HB-JBH_BOMBARDIER_CS100_A220-100_(Ank_Kumar,_Infosys_Limited)_05.jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23437223616).jpg",
     },
+    "b737": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Southwest_Boeing_737-700_N947WN_BWI_MD1.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Cockpit-737-700-by-RalfR.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:B-5265_Boeing_737-79P_China_Eastern_Airlines_Lining_Up_for_Take_Off_-_Head_On_(8613160786).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:KLM_Boeing_737-700_PH-BGF_cockpit_closeup_(3517238451).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Southwest_Boeing_737-700_N947WN_BWI_MD1.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Virgin_Blue_Boeing_737-700_SYD_Spijkers.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Boeing_737-700_Southwest_winglet,_and_headquarters,_Love_Field_(2717214038)_(3).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Southwest_Starboard_Wing_(33198022825).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Boeing_737-700_PH-BGP_of_KLM_Tail_(12291134464).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Boeing_737-700,_Southwest,_winglets,_from_below_(6190651480).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:VH-VBY_%27Virginia_Blue%27_Boeing_737-7FE_Virgin_Blue_(9046044503).jpg",
+    },
+    "a319": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Ba_a319-100_g-euog_arp.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Airbus-319-cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:G-EZGM_easyJet_Airbus_A319-111_-_cn_4778_head-on_taxiing.JPG",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Ba_a319-100_g-euog_arp.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Hamburg_Airport_easyJet_Airbus_A319-111_G-EZAO_(DSC08652).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Hamburg_Airport_easyJet_Airbus_A319-111_G-EZAO_(DSC08652).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Airbus_A319_wintip.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:A319_Port_Wing_(40736437962).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Germanwings_Airbus_A319-112_D-AKNP_STR_2016_01.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Adria_Airways_Airbus_A319_(S5-AAR)_@CDG,_2015-06-25.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:QantasLink_Airbus_A319_VH-8NP_Perth_2025_(02).jpg",
+    },
 }
 
 
@@ -917,6 +943,114 @@ CONTENT.update({
             ("A220-100 前起落架為雙輪，左右主腳各為單軸雙輪；主腳由機腹向外可見厚實支柱、拖曳連桿與分段艙門。", "The A220-100 has twin nose wheels and a single-axle twin-wheel main unit on each side. Its main gear exposes a substantial strut, trailing links and segmented bay doors.", "A220-100は前脚2輪、左右主脚各単軸2輪で、主脚には太い脚柱、トレーリングリンク、分割脚扉が見えます。"),
             ("總輪數與 717 相同，兩者都不能靠『六輪』判型；A220 的主腳附近可同時看見翼下引擎與更寬的主翼。", "Total wheel count matches the 717, so 'six wheels' identifies neither. Around the A220 gear, underwing engines and a broader wing remain visible.", "総輪数は717と同じで「6輪」だけでは判別できません。A220主脚付近では翼下エンジンと広い主翼も確認できます。"),
             [("左右主腳各一軸兩輪。", "Each main gear has one axle and two tyres.", "左右主脚は各1軸2輪です。"), ("支柱與輪艙門外形不同於 717。", "Strut and bay-door geometry differ from the 717's.", "脚柱と脚扉形状は717と異なります。"), ("判型時優先看翼下 PW1500G。", "Prioritise the underwing PW1500Gs when identifying it.", "識別では翼下PW1500Gを優先確認します。")],
+        ),
+    },
+})
+
+
+CONTENT.update({
+    "b737": {
+        "overview": identify(
+            ("737-700 是短機身 737NG，全長約 33.63 m；低矮窄機身、較尖機鼻、底部扁平的 CFM56-7B 與收起後外露的主輪，是比機身長短更可靠的外型線索。", "The 737-700 is the short-bodied 737NG, about 33.63 m long. Its low narrow body, pointed nose, flat-bottomed CFM56-7Bs and exposed retracted main wheels are stronger cues than length alone.", "737-700は全長約33.63 mの短胴737NGです。低く細い胴体、尖り気味の機首、下面が平たいCFM56-7B、格納後も露出する主輪が、全長より確実な特徴です。"),
+            ("A319 全長約 33.84 m，只比 737-700 長約 0.21 m；兩者幾乎等長，遠距辨識應改看引擎短艙、機鼻與離地高度。", "At roughly 33.84 m, the A319 is only about 0.21 m longer. The pair is effectively equal in length, so use nacelles, nose and ground stance.", "A319は約33.84 mで差は約0.21 mしかありません。全長ではなくナセル、機首、地上姿勢で判別します。"),
+            [("機身低、窄，機鼻較有折角。", "Low narrow fuselage with a more angular nose.", "低く細い胴体と角張った機首です。"), ("CFM56-7B 進氣口底部明顯扁平。", "CFM56-7B inlets have a flattened lower lip.", "CFM56-7B吸気口下面が平たい形です。"), ("主輪收起後胎面仍從機腹外露。", "Main-wheel faces remain exposed after retraction.", "格納後も主輪面が機腹に露出します。")],
+        ),
+        "cockpit": identify(
+            ("737NG 駕駛艙保留傳統駕駛盤、中央操縱柱、六具主要顯示器與大量實體控制器；中央台兩側的大型黑白配平輪很醒目。", "The 737NG flight deck retains yokes, control columns, six main displays and many physical controls; large black-and-white trim wheels flank the centre pedestal.", "737NG操縦席は操縦輪、コラム、6面主要表示器、多数の物理操作部を持ち、中央台両側の白黒トリムホイールが目立ちます。"),
+            ("A319 使用側桿並在飛行員正前方保留桌板；是否有駕駛盤是兩者最直接的座艙差異。", "The A319 uses sidesticks and leaves tray tables ahead of the pilots. Yokes versus no yokes is the clearest cockpit distinction.", "A319はサイドスティックと正面テーブルを使います。操縦輪の有無が最も直接的な差です。"),
+            [("正副駕駛前方各有駕駛盤。", "A yoke sits ahead of each pilot.", "両操縦席正面に操縦輪があります。"), ("典型 737NG 有六具主要顯示器。", "A typical 737NG has six main displays.", "標準737NGは6面主要表示器です。"), ("中央台可見大型手動配平輪。", "Large manual trim wheels sit beside the pedestal.", "中央台脇に大型手動トリムホイールがあります。")],
+        ),
+        "windshield": identify(
+            ("737-700 的正面風擋較扁、中央接縫近直立，外側窗以銳利折角轉向側面；配合較尖機鼻形成典型 Boeing 737 窗帶。", "The 737-700 has shallow front panes with a near-vertical centre seam and sharply angled outer panes wrapping around a pointed nose.", "737-700は浅い前面窓、ほぼ垂直の中央継ぎ目、鋭く側面へ折れる外側窓を持ち、尖った機首と737特有の窓帯を作ります。"),
+            ("不要只數窗片；正面窗高寬比、外側窗折角及窗帶與機鼻的銜接方式，比片數更有辨識力。", "Do not count panes alone. Front-pane proportions, outer-pane corners and the way the belt meets the nose are more useful.", "窓枚数だけでなく、前面窓比率、外側窓の角、機首とのつながりを見ます。"),
+            [("兩片主風擋較寬扁。", "The two main panes look broad and shallow.", "2枚の主風防は幅広く浅く見えます。"), ("外側窗框折角明顯。", "Outer frames have pronounced angular breaks.", "外側窓枠の折れ角が明瞭です。"), ("窗下機鼻較尖而低。", "The nose below is relatively pointed and low.", "窓下の機首は低く尖り気味です。")],
+        ),
+        "fuselage": identify(
+            ("737-700 機身外寬約 3.76 m，典型每側有前後主艙門與一個機翼上方逃生窗；短窗列和單一翼上出口可與較長的 737-800 區分。", "The 737-700 fuselage is about 3.76 m wide and typically has forward/aft main doors plus one overwing exit per side. Its short window rows and single overwing exit distinguish it from a 737-800.", "737-700の胴体幅は約3.76 mで、通常は各側に前後ドアと翼上非常口1か所があります。短い窓列と単一翼上出口が737-800との違いです。"),
+            ("A319 也通常只有一個翼上逃生窗，因此出口數不能單獨分辨；737 較窄、較低且機鼻窗框更有折角。", "The A319 also normally has one overwing exit per side, so exit count alone is insufficient; the 737 is narrower, lower and more angular at the nose.", "A319も通常翼上出口1か所のため数だけでは不十分です。737は細く低く、機首窓がより角張ります。"),
+            [("每側前後各一扇主艙門。", "One main door sits at each end on either side.", "各側前後に主ドア1枚ずつです。"), ("典型配置每側一個翼上逃生窗。", "A typical layout has one overwing exit per side.", "標準配置は各側翼上出口1か所です。"), ("機身比 A319 約窄 19 cm。", "The fuselage is about 19 cm narrower than the A319's.", "胴体はA319より約19 cm細いです。")],
+        ),
+        "engine": identify(
+            ("737-700 固定使用兩具 CFM56-7B。因 737 離地低，附件移到兩側，使進氣口與短艙底部呈明顯扁平的非圓形輪廓。", "The 737-700 exclusively uses two CFM56-7Bs. Low clearance forced accessories to the sides, giving the inlet and nacelle a visibly flattened underside.", "737-700はCFM56-7Bを2基使用します。低い地上高に合わせ補機を側面配置し、吸気口・ナセル下面が明確に平たくなっています。"),
+            ("A319ceo 的 CFM56-5B 或 V2500 短艙底部更接近圓形；即使兩者都寫 CFM56，-7B 與 -5B 的安裝外形仍不同。", "A319ceo CFM56-5B or V2500 nacelles are rounder underneath. Both may say CFM56, but -7B and -5B installations look different.", "A319ceoのCFM56-5B／V2500は下面がより円形です。同じCFM56でも-7Bと-5Bの装着外形は異なります。"),
+            [("進氣口下緣壓扁。", "The inlet lower lip is flattened.", "吸気口下縁が平たい形です。"), ("短艙緊貼低置主翼下方。", "The nacelle sits tightly beneath the low wing.", "ナセルは低い主翼直下に密着します。"), ("此子型只使用 CFM56-7B。", "This variant uses only the CFM56-7B.", "この型はCFM56-7B専用です。")],
+        ),
+        "wingtip": identify(
+            ("737-700 可完全沒有小翼，也可裝高大的融合式小翼或 Split Scimitar；構型取決於出廠與後續改裝狀態。", "A 737-700 may have plain tips, tall blended winglets or Split Scimitar devices depending on production and retrofit status.", "737-700は通常翼端、背の高いブレンデッド型、スプリット・シミター型があり、製造・改修状態で変わります。"),
+            ("A319 也有翼尖擋板與 Sharklet 兩種主要外觀，所以高小翼本身不是 Boeing／Airbus 的充分證據。", "The A319 likewise appears with tip fences or Sharklets, so a tall winglet alone is not proof of Boeing or Airbus.", "A319にも翼端フェンスとシャークレットがあり、高い小翼だけではBoeing／Airbusを確定できません。"),
+            [("融合式小翼由翼面平順向上彎。", "A blended winglet curves smoothly upward.", "ブレンデッド型は翼面から滑らかに上方へ曲がります。"), ("Split Scimitar 另有向下小翼片。", "Split Scimitar adds a lower blade.", "スプリット・シミター型は下向き翼片も持ちます。"), ("需搭配扁平短艙與外露主輪判型。", "Confirm with flat nacelles and exposed main wheels.", "平たいナセルと露出主輪で照合します。")],
+        ),
+        "wing": identify(
+            ("737NG 主翼後掠約 25°，翼根離地低，襟翼滑軌整流罩突出；客艙視角可同時看到扁平 CFM56-7B 與選裝小翼。", "The 737NG wing is swept about 25 degrees, sits low and carries prominent flap-track fairings; cabin views also reveal flat CFM56-7Bs and optional winglets.", "737NG主翼は約25度後退し低位置で、フラップトラックフェアリングが目立ちます。客室から平たいCFM56-7Bと小翼も見えます。"),
+            ("737-700 與 A319 翼展在裝小翼時都約 35.8 m；翼展幾乎相同，不能當作現場判型依據。", "With winglets, both span about 35.8 m. Their nearly identical span is not a practical identification cue.", "小翼装備時は両機とも翼幅約35.8 mで、翼幅は現場識別に使えません。"),
+            [("低置主翼與機腹距離較小。", "The low wing sits close to the belly.", "低置主翼は機腹に近い位置です。"), ("後緣有多段襟翼與擾流板。", "Multi-section flaps and spoilers line the trailing edge.", "後縁に多段フラップとスポイラーがあります。"), ("扁平引擎短艙是客艙視角的強線索。", "Flat nacelles are a strong cabin-view cue.", "平たいナセルが客室視点の強い手掛かりです。")],
+        ),
+        "vstab": identify(
+            ("737-700 垂直尾翼前緣下方有長背鰭，方向舵後緣較直，頂端向後收尖；尾翼比例在短機身上顯得較高。", "The 737-700 fin has a long dorsal fillet, a relatively straight rudder trailing edge and an aft-tapered tip; it appears tall on the short fuselage.", "737-700垂直尾翼は長い背びれ、比較的直線的な方向舵後縁、後方へ細る上端を持ち、短胴では高く見えます。"),
+            ("A319 的垂尾根部與後機身過渡較寬；尾翼塗裝只能辨識營運者，不能代替結構比較。", "The A319 fin root blends more broadly into the aft body. Livery identifies the operator, not the structure.", "A319の垂尾根元は後部胴体へより幅広くつながります。塗装は会社識別用で機体構造判定には使えません。"),
+            [("前緣背鰭向前延伸。", "A dorsal fillet extends forward.", "前縁背びれが前方へ伸びます。"), ("方向舵後緣近直線。", "The rudder trailing edge is nearly straight.", "方向舵後縁はほぼ直線です。"), ("短機身讓垂尾視覺比例偏高。", "The short body makes the fin look proportionally tall.", "短胴のため垂尾が相対的に高く見えます。")],
+        ),
+        "hstab": identify(
+            ("737-700 水平尾翼低置於尾錐兩側，後掠並向外收尖；由下方可同時看到尾翼與 737 特有的外露主輪。", "The 737-700 has low-mounted swept tapered tailplanes. An underside view can show the tail together with the 737's exposed main wheels.", "737-700水平尾翼は尾部両側の低位置にあり後退・先細です。下面から尾翼と737特有の露出主輪を同時に確認できます。"),
+            ("737-700 與 A319 都是傳統低置水平尾翼，單看此部位很難定型，應視為輔助線索。", "Both use conventional low tailplanes, so this part alone is weak and should remain a supporting cue.", "両機とも通常の低位置水平尾翼で、この部位単独では弱い補助手掛かりです。"),
+            [("尾翼低置且後掠。", "The tailplane is low-mounted and swept.", "水平尾翼は低位置・後退形です。"), ("翼根與尾錐平順接合。", "The root blends smoothly into the tailcone.", "翼根が尾部へ滑らかにつながります。"), ("應搭配引擎與收輪方式判讀。", "Use it with nacelle and gear-retraction cues.", "ナセルと脚格納方式も合わせて見ます。")],
+        ),
+        "gear": identify(
+            ("737-700 前腳雙輪，左右主腳各單軸雙輪；主腳收起時沒有完整外側艙門，輪胎胎面仍可從機腹看見。", "The 737-700 has twin nose wheels and a two-wheel main unit per side. With no full outer doors, tyre faces remain visible when retracted.", "737-700は前脚2輪、左右主脚各単軸2輪で、完全な外扉がなく格納後もタイヤ面が見えます。"),
+            ("A319 的輪數完全相同，但主輪收入有艙門遮蔽；輪數不能分辨，收輪外觀才可以。", "The A319 has the same wheel count, but doors cover its retracted mains. Wheel count does not distinguish them; retraction appearance does.", "A319も輪数は同じですが格納主輪は扉で覆われます。輪数ではなく格納外観を見ます。"),
+            [("前腳與每側主腳皆為雙輪。", "Nose and each main unit use twin wheels.", "前脚と左右主脚は各2輪です。"), ("收起主輪胎面從機腹外露。", "Retracted main tyre faces remain exposed.", "格納主輪面が機腹に露出します。"), ("機身離地高度低於 A319。", "The fuselage sits lower than the A319's.", "胴体地上高はA319より低いです。")],
+        ),
+    },
+    "a319": {
+        "overview": identify(
+            ("A319 是短機身 A320 家族成員，全長約 33.84 m；較寬且離地較高的機身、圓鈍機鼻、近圓形引擎短艙與有艙門遮蔽的主輪構成主要外型。", "The A319 is the short-bodied A320-family member, about 33.84 m long. Its wider higher body, rounded nose, rounder nacelles and covered retracted mains define the profile.", "A319は全長約33.84 mの短胴A320ファミリー機です。太く高い胴体、丸い機首、円形に近いナセル、扉で覆われる格納主輪が特徴です。"),
+            ("它與 737-700 幾乎等長、裝 Sharklet 時翼展也幾乎相同；辨識不能依賴尺寸，必須回到機鼻、引擎與起落架。", "It is nearly identical to the 737-700 in length and, with Sharklets, span. Size is therefore weak; use nose, engines and landing gear.", "737-700と全長がほぼ同じで、Sharklet装備時の翼幅も同等です。寸法でなく機首、エンジン、脚を見ます。"),
+            [("機身寬且離地較高。", "The fuselage is wider and sits higher.", "胴体が太く地上高も高めです。"), ("機鼻圓鈍，窗帶輪廓較平順。", "The nose is rounder with a smoother window belt.", "機首は丸く窓帯も滑らかです。"), ("短艙底部接近圓形，主輪格納後被遮蔽。", "Nacelles are round underneath and retracted mains are covered.", "ナセル下面は円形に近く格納主輪は覆われます。")],
+        ),
+        "cockpit": identify(
+            ("A319 與 A320 家族共用側桿式玻璃座艙：飛行員前方沒有駕駛盤，而是桌板；中央兩具 ECAM 顯示引擎與系統狀態。", "The A319 shares the A320-family sidestick glass cockpit: no yokes ahead of the pilots, tray tables instead, and two central ECAM system displays.", "A319はA320ファミリー共通のサイドスティック式グラスコックピットで、正面に操縦輪がなくテーブルと中央2面ECAMがあります。"),
+            ("A318、A319、A320、A321 的座艙高度共通，僅靠內裝通常無法判斷機身子型；但可立即排除有駕駛盤的 737。", "A318/A319/A320/A321 cockpits are highly common, so the exact subtype is hard to tell inside; the absence of yokes immediately separates a 737.", "A318／A319／A320／A321の操縦席は共通性が高く子型判別は困難ですが、操縦輪がないため737とはすぐ区別できます。"),
+            [("側桿位於兩名駕駛外側。", "Sidesticks sit outboard of both pilots.", "サイドスティックは両席外側です。"), ("飛行員正前方設有桌板。", "Tray tables occupy the space ahead of the pilots.", "両席正面にテーブルがあります。"), ("中央 ECAM 上下排列。", "Central ECAM displays are stacked vertically.", "中央ECAMは上下配置です。")],
+        ),
+        "windshield": identify(
+            ("A319 的主風擋較高，外側窗沿圓鈍機鼻向後收尖，整組窗帶的上下線條比 737 平順；正面看有典型 Airbus 六片式面貌。", "The A319 has taller front panes and outer panes tapering smoothly around a rounded nose, forming the classic six-pane Airbus face.", "A319は高い前面窓と、丸い機首に沿って滑らかに後方へ細る外側窓を持つ典型的Airbus六枚窓です。"),
+            ("737-700 的主窗較扁、外側折角更銳利；正面與側面照片一起看，比單一角度可靠。", "The 737-700's main panes are shallower and outer corners sharper. Compare front and side views together.", "737-700は主窓が浅く外側角が鋭いです。正面・側面写真を併用します。"),
+            [("正面主風擋較高。", "The main front panes appear taller.", "正面主風防が高く見えます。"), ("外側窗向後平順收尖。", "Outer panes taper smoothly aft.", "外側窓が後方へ滑らかに細くなります。"), ("圓鼻讓整組窗帶顯得較寬。", "The rounded nose makes the belt look broader.", "丸い機首で窓帯が幅広く見えます。")],
+        ),
+        "fuselage": identify(
+            ("A319 機身外寬約 3.95 m，典型每側有前後主艙門及一個機翼上方逃生窗；比 A320 短的翼前、翼後窗列是辨識子型的重點。", "The A319 fuselage is about 3.95 m wide and typically has forward/aft main doors plus one overwing exit per side. Short window runs ahead of and behind the wing separate it from an A320.", "A319の胴体幅は約3.95 mで、通常各側に前後ドアと翼上出口1か所があります。翼前後の短い窓列がA320との識別点です。"),
+            ("737-700 也有相近的門／出口數，因此應再看 A319 較寬機身、圓鼻與圓形短艙。", "The 737-700 has a similar door/exit count, so confirm the A319's wider body, round nose and round nacelles.", "737-700も似た扉数なので、A319の太い胴体、丸い機首、円形ナセルで確認します。"),
+            [("每側前後各一扇主艙門。", "One main door sits at each end per side.", "各側前後に主ドア1枚ずつです。"), ("典型配置每側一個翼上逃生窗。", "A typical layout has one overwing exit per side.", "標準配置は各側翼上出口1か所です。"), ("機身比 737-700 約寬 19 cm。", "The body is about 19 cm wider than the 737-700's.", "胴体は737-700より約19 cm太いです。")],
+        ),
+        "engine": identify(
+            ("A319ceo 可選 CFM56-5B 或 IAE V2500，兩者進氣口底部都比 737 的 CFM56-7B 更接近圓形，且因機身姿態較高而有較大離地間隙。", "The A319ceo uses CFM56-5B or IAE V2500 engines. Both are rounder underneath than the 737's CFM56-7B and have more ground clearance.", "A319ceoはCFM56-5BまたはV2500を使用し、737のCFM56-7Bより下面が円形で地上間隔も大きいです。"),
+            ("A319neo 改用 LEAP-1A 或 PW1100G，風扇更大；本頁實機照片與辨識重點以常見 A319ceo 為主。", "The A319neo uses larger LEAP-1A or PW1100G engines. This reference and its cues focus on the common A319ceo.", "A319neoは大型LEAP-1A／PW1100Gを使用します。本写真と識別点は一般的なA319ceo中心です。"),
+            [("短艙下緣接近圓形。", "The nacelle lower lip is close to circular.", "ナセル下縁は円形に近いです。"), ("離地間隙大於 737-700。", "Ground clearance exceeds the 737-700's.", "地上間隔は737-700より大きいです。"), ("ceo 有 CFM56-5B 與 V2500 兩種外觀。", "The ceo appears with CFM56-5B or V2500 nacelles.", "ceoにはCFM56-5BとV2500の2種があります。")],
+        ),
+        "wingtip": identify(
+            ("早期 A319 常見上下各伸出一片的小型翼尖擋板；較晚期或改裝機可見高大的 Sharklet，外觀會隨年代改變。", "Early A319s commonly use small upper-and-lower tip fences, while later or retrofitted aircraft may carry tall Sharklets.", "初期A319は上下の小型翼端フェンス、後期・改修機は背の高いSharkletを装備します。"),
+            ("上下翼尖擋板是很強的 A320 家族線索；若看到 Sharklet，則需用圓形短艙、圓鼻與主輪艙門排除 737。", "Upper/lower fences are a strong A320-family cue. With Sharklets, use round nacelles, round nose and covered mains to exclude a 737.", "上下フェンスは強いA320系の特徴です。Sharklet装備では円形ナセル、丸い機首、覆われる主輪で737を除外します。"),
+            [("經典擋板同時向上、向下伸出。", "Classic fences project both above and below the tip.", "従来フェンスは翼端上下へ伸びます。"), ("Sharklet 高大且向外後掠。", "A Sharklet is tall and swept outward.", "Sharkletは高く外後方へ伸びます。"), ("構型會隨出廠與改裝狀態改變。", "Configuration varies by production and retrofit status.", "構成は製造・改修状態で変わります。")],
+        ),
+        "wing": identify(
+            ("A319 與 A320 共用基本低翼，後掠約 25°；翼根位置較 737 高，外翼末端可接翼尖擋板或 Sharklet。", "The A319 shares the basic A320 low wing, swept about 25 degrees. Its wing sits higher than the 737's and ends in fences or Sharklets.", "A319はA320共通の約25度後退低翼で、737より高い位置にあり、翼端フェンスまたはSharkletを備えます。"),
+            ("兩型翼展十分接近；從客艙看，A319 的圓形短艙與翼尖擋板通常比翼面形狀更有辨識力。", "The spans are very close. From the cabin, round nacelles and tip devices are more useful than planform.", "両機の翼幅は近く、客室からは翼形より円形ナセルと翼端装置が有効です。"),
+            [("翼根離地較高。", "The wing root sits higher above the ground.", "翼根地上高が高めです。"), ("後緣有大型襟翼與擾流板。", "Large flaps and spoilers line the trailing edge.", "後縁に大型フラップとスポイラーがあります。"), ("翼尖裝置是客艙視角的重要線索。", "The tip device is a useful cabin-view cue.", "翼端装置が客室視点の重要な手掛かりです。")],
+        ),
+        "vstab": identify(
+            ("A319 垂直尾翼高大後掠，根部以寬背鰭平順接入後機身；在短機身上也呈現偏高的視覺比例。", "The A319 has a tall swept fin with a broad dorsal root blending into the aft fuselage; it also looks proportionally tall on the short body.", "A319垂直尾翼は高く後退し、幅広い背びれ根元が後部胴体へつながり、短胴上で高く見えます。"),
+            ("尾翼輪廓與 737 有差異但不如引擎、機鼻與起落架明顯；應作輔助而非單一判據。", "Fin shape differs from the 737 but less clearly than engines, nose and gear, so it is supporting rather than decisive.", "737との差はありますがエンジン・機首・脚ほど明確でなく、補助判定に使います。"),
+            [("前緣後掠、頂端較方。", "The leading edge is swept and the tip relatively squared.", "前縁は後退し上端は比較的角形です。"), ("根部整流區寬而平順。", "The root fairing is broad and smooth.", "根元フェアリングは幅広く滑らかです。"), ("短機身讓尾翼顯得較高。", "The short body makes the fin appear tall.", "短胴で尾翼が高く見えます。")],
+        ),
+        "hstab": identify(
+            ("A319 水平尾翼低置、後掠並向翼尖收窄，根部與尾錐整流罩平順融合；與 A320 家族共用基本輪廓。", "The A319 has low-mounted swept tapered tailplanes smoothly faired into the tailcone, sharing the basic A320-family form.", "A319水平尾翼は低位置で後退・先細、尾部へ滑らかに接続するA320ファミリー共通形状です。"),
+            ("737-700 也使用相似的低置尾翼，因此應同時查看垂尾根部、引擎短艙與主輪收納方式。", "The 737-700 has a similar low tailplane, so also inspect fin root, nacelles and main-gear stowage.", "737-700も似た低位置尾翼なので、垂尾根元、ナセル、主輪格納も確認します。"),
+            [("水平尾翼低置於尾錐兩側。", "Tailplanes mount low on either side of the tailcone.", "水平尾翼は尾部両側の低位置です。"), ("後掠並向外逐漸收窄。", "They sweep aft and taper outward.", "後退し外側へ細くなります。"), ("單看此部位不足以定型。", "This part alone is insufficient for identification.", "この部位だけでは機種を確定できません。")],
+        ),
+        "gear": identify(
+            ("A319 前腳雙輪、左右主腳各單軸雙輪；主腳向內收入翼身整流區，艙門會遮蔽輪胎，不像 737 收輪後仍露出胎面。", "The A319 has twin nose wheels and a two-wheel main unit per side. The mains retract inward behind doors, unlike the 737's exposed tyre faces.", "A319は前脚2輪、左右主脚各単軸2輪で、内側へ格納され扉に覆われ、737のようにタイヤ面が露出しません。"),
+            ("兩者總輪數都為六輪，輪數完全無法區分；最可靠的是 A319 較長腳柱、較高離地姿態與完整艙門。", "Both total six wheels, so wheel count is useless. The A319's taller struts, higher stance and full doors are stronger cues.", "両機とも合計6輪で輪数は使えません。A319の長い脚柱、高い姿勢、完全な脚扉を見ます。"),
+            [("前腳與每側主腳皆為雙輪。", "Nose and each main unit use twin wheels.", "前脚と左右主脚は各2輪です。"), ("收起主輪由艙門遮蔽。", "Doors cover the retracted main wheels.", "格納主輪は扉で覆われます。"), ("離地高度高於 737-700。", "Ground clearance is greater than the 737-700's.", "地上高は737-700より高いです。")],
         ),
     },
 })

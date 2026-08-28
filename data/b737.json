@@ -2,18 +2,30 @@
   "title": "Boeing 737-700",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 737-700 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "737-700 機身外寬約 3.76 m，典型每側有前後主艙門與一個機翼上方逃生窗；短窗列和單一翼上出口可與較長的 737-800 區分。",
+        "en": "The 737-700 fuselage is about 3.76 m wide and typically has forward/aft main doors plus one overwing exit per side. Its short window rows and single overwing exit distinguish it from a 737-800.",
+        "ja": "737-700の胴体幅は約3.76 mで、通常は各側に前後ドアと翼上非常口1か所があります。短い窓列と単一翼上出口が737-800との違いです。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "A319 也通常只有一個翼上逃生窗，因此出口數不能單獨分辨；737 較窄、較低且機鼻窗框更有折角。",
+        "en": "The A319 also normally has one overwing exit per side, so exit count alone is insufficient; the 737 is narrower, lower and more angular at the nose.",
+        "ja": "A319も通常翼上出口1か所のため数だけでは不十分です。737は細く低く、機首窓がより角張ります。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "每側前後各一扇主艙門。",
+          "en": "One main door sits at each end on either side.",
+          "ja": "各側前後に主ドア1枚ずつです。"
+        },
+        {
+          "zh": "典型配置每側一個翼上逃生窗。",
+          "en": "A typical layout has one overwing exit per side.",
+          "ja": "標準配置は各側翼上出口1か所です。"
+        },
+        {
+          "zh": "機身比 A319 約窄 19 cm。",
+          "en": "The fuselage is about 19 cm narrower than the A319's.",
+          "ja": "胴体はA319より約19 cm細いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b737/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Southwest_Boeing_737-700_N947WN_BWI_MD1.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 737-700 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "737NG 主翼後掠約 25°，翼根離地低，襟翼滑軌整流罩突出；客艙視角可同時看到扁平 CFM56-7B 與選裝小翼。",
+        "en": "The 737NG wing is swept about 25 degrees, sits low and carries prominent flap-track fairings; cabin views also reveal flat CFM56-7Bs and optional winglets.",
+        "ja": "737NG主翼は約25度後退し低位置で、フラップトラックフェアリングが目立ちます。客室から平たいCFM56-7Bと小翼も見えます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "737-700 與 A319 翼展在裝小翼時都約 35.8 m；翼展幾乎相同，不能當作現場判型依據。",
+        "en": "With winglets, both span about 35.8 m. Their nearly identical span is not a practical identification cue.",
+        "ja": "小翼装備時は両機とも翼幅約35.8 mで、翼幅は現場識別に使えません。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "低置主翼與機腹距離較小。",
+          "en": "The low wing sits close to the belly.",
+          "ja": "低置主翼は機腹に近い位置です。"
+        },
+        {
+          "zh": "後緣有多段襟翼與擾流板。",
+          "en": "Multi-section flaps and spoilers line the trailing edge.",
+          "ja": "後縁に多段フラップとスポイラーがあります。"
+        },
+        {
+          "zh": "扁平引擎短艙是客艙視角的強線索。",
+          "en": "Flat nacelles are a strong cabin-view cue.",
+          "ja": "平たいナセルが客室視点の強い手掛かりです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b737/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Southwest_Starboard_Wing_(33198022825).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 737-700 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "737-700 固定使用兩具 CFM56-7B。因 737 離地低，附件移到兩側，使進氣口與短艙底部呈明顯扁平的非圓形輪廓。",
+        "en": "The 737-700 exclusively uses two CFM56-7Bs. Low clearance forced accessories to the sides, giving the inlet and nacelle a visibly flattened underside.",
+        "ja": "737-700はCFM56-7Bを2基使用します。低い地上高に合わせ補機を側面配置し、吸気口・ナセル下面が明確に平たくなっています。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "A319ceo 的 CFM56-5B 或 V2500 短艙底部更接近圓形；即使兩者都寫 CFM56，-7B 與 -5B 的安裝外形仍不同。",
+        "en": "A319ceo CFM56-5B or V2500 nacelles are rounder underneath. Both may say CFM56, but -7B and -5B installations look different.",
+        "ja": "A319ceoのCFM56-5B／V2500は下面がより円形です。同じCFM56でも-7Bと-5Bの装着外形は異なります。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "進氣口下緣壓扁。",
+          "en": "The inlet lower lip is flattened.",
+          "ja": "吸気口下縁が平たい形です。"
+        },
+        {
+          "zh": "短艙緊貼低置主翼下方。",
+          "en": "The nacelle sits tightly beneath the low wing.",
+          "ja": "ナセルは低い主翼直下に密着します。"
+        },
+        {
+          "zh": "此子型只使用 CFM56-7B。",
+          "en": "This variant uses only the CFM56-7B.",
+          "ja": "この型はCFM56-7B専用です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b737/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Virgin_Blue_Boeing_737-700_SYD_Spijkers.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "737-700 垂直尾翼前緣下方有長背鰭，方向舵後緣較直，頂端向後收尖；尾翼比例在短機身上顯得較高。",
+        "en": "The 737-700 fin has a long dorsal fillet, a relatively straight rudder trailing edge and an aft-tapered tip; it appears tall on the short fuselage.",
+        "ja": "737-700垂直尾翼は長い背びれ、比較的直線的な方向舵後縁、後方へ細る上端を持ち、短胴では高く見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "A319 的垂尾根部與後機身過渡較寬；尾翼塗裝只能辨識營運者，不能代替結構比較。",
+        "en": "The A319 fin root blends more broadly into the aft body. Livery identifies the operator, not the structure.",
+        "ja": "A319の垂尾根元は後部胴体へより幅広くつながります。塗装は会社識別用で機体構造判定には使えません。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣背鰭向前延伸。",
+          "en": "A dorsal fillet extends forward.",
+          "ja": "前縁背びれが前方へ伸びます。"
+        },
+        {
+          "zh": "方向舵後緣近直線。",
+          "en": "The rudder trailing edge is nearly straight.",
+          "ja": "方向舵後縁はほぼ直線です。"
+        },
+        {
+          "zh": "短機身讓垂尾視覺比例偏高。",
+          "en": "The short body makes the fin look proportionally tall.",
+          "ja": "短胴のため垂尾が相対的に高く見えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b737/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-700_PH-BGP_of_KLM_Tail_(12291134464).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "737-700 水平尾翼低置於尾錐兩側，後掠並向外收尖；由下方可同時看到尾翼與 737 特有的外露主輪。",
+        "en": "The 737-700 has low-mounted swept tapered tailplanes. An underside view can show the tail together with the 737's exposed main wheels.",
+        "ja": "737-700水平尾翼は尾部両側の低位置にあり後退・先細です。下面から尾翼と737特有の露出主輪を同時に確認できます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "737-700 與 A319 都是傳統低置水平尾翼，單看此部位很難定型，應視為輔助線索。",
+        "en": "Both use conventional low tailplanes, so this part alone is weak and should remain a supporting cue.",
+        "ja": "両機とも通常の低位置水平尾翼で、この部位単独では弱い補助手掛かりです。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "尾翼低置且後掠。",
+          "en": "The tailplane is low-mounted and swept.",
+          "ja": "水平尾翼は低位置・後退形です。"
+        },
+        {
+          "zh": "翼根與尾錐平順接合。",
+          "en": "The root blends smoothly into the tailcone.",
+          "ja": "翼根が尾部へ滑らかにつながります。"
+        },
+        {
+          "zh": "應搭配引擎與收輪方式判讀。",
+          "en": "Use it with nacelle and gear-retraction cues.",
+          "ja": "ナセルと脚格納方式も合わせて見ます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b737/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-700,_Southwest,_winglets,_from_below_(6190651480).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 737-700 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "737-700 前腳雙輪，左右主腳各單軸雙輪；主腳收起時沒有完整外側艙門，輪胎胎面仍可從機腹看見。",
+        "en": "The 737-700 has twin nose wheels and a two-wheel main unit per side. With no full outer doors, tyre faces remain visible when retracted.",
+        "ja": "737-700は前脚2輪、左右主脚各単軸2輪で、完全な外扉がなく格納後もタイヤ面が見えます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "A319 的輪數完全相同，但主輪收入有艙門遮蔽；輪數不能分辨，收輪外觀才可以。",
+        "en": "The A319 has the same wheel count, but doors cover its retracted mains. Wheel count does not distinguish them; retraction appearance does.",
+        "ja": "A319も輪数は同じですが格納主輪は扉で覆われます。輪数ではなく格納外観を見ます。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "前腳與每側主腳皆為雙輪。",
+          "en": "Nose and each main unit use twin wheels.",
+          "ja": "前脚と左右主脚は各2輪です。"
+        },
+        {
+          "zh": "收起主輪胎面從機腹外露。",
+          "en": "Retracted main tyre faces remain exposed.",
+          "ja": "格納主輪面が機腹に露出します。"
+        },
+        {
+          "zh": "機身離地高度低於 A319。",
+          "en": "The fuselage sits lower than the A319's.",
+          "ja": "胴体地上高はA319より低いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b737/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:VH-VBY_%27Virginia_Blue%27_Boeing_737-7FE_Virgin_Blue_(9046044503).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "737-700 是短機身 737NG，全長約 33.63 m；低矮窄機身、較尖機鼻、底部扁平的 CFM56-7B 與收起後外露的主輪，是比機身長短更可靠的外型線索。",
+        "en": "The 737-700 is the short-bodied 737NG, about 33.63 m long. Its low narrow body, pointed nose, flat-bottomed CFM56-7Bs and exposed retracted main wheels are stronger cues than length alone.",
+        "ja": "737-700は全長約33.63 mの短胴737NGです。低く細い胴体、尖り気味の機首、下面が平たいCFM56-7B、格納後も露出する主輪が、全長より確実な特徴です。"
+      },
+      "fact": {
+        "zh": "A319 全長約 33.84 m，只比 737-700 長約 0.21 m；兩者幾乎等長，遠距辨識應改看引擎短艙、機鼻與離地高度。",
+        "en": "At roughly 33.84 m, the A319 is only about 0.21 m longer. The pair is effectively equal in length, so use nacelles, nose and ground stance.",
+        "ja": "A319は約33.84 mで差は約0.21 mしかありません。全長ではなくナセル、機首、地上姿勢で判別します。"
+      },
+      "bullets": [
+        {
+          "zh": "機身低、窄，機鼻較有折角。",
+          "en": "Low narrow fuselage with a more angular nose.",
+          "ja": "低く細い胴体と角張った機首です。"
+        },
+        {
+          "zh": "CFM56-7B 進氣口底部明顯扁平。",
+          "en": "CFM56-7B inlets have a flattened lower lip.",
+          "ja": "CFM56-7B吸気口下面が平たい形です。"
+        },
+        {
+          "zh": "主輪收起後胎面仍從機腹外露。",
+          "en": "Main-wheel faces remain exposed after retraction.",
+          "ja": "格納後も主輪面が機腹に露出します。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b737/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Southwest_Boeing_737-700_N947WN_BWI_MD1.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "737NG 駕駛艙保留傳統駕駛盤、中央操縱柱、六具主要顯示器與大量實體控制器；中央台兩側的大型黑白配平輪很醒目。",
+        "en": "The 737NG flight deck retains yokes, control columns, six main displays and many physical controls; large black-and-white trim wheels flank the centre pedestal.",
+        "ja": "737NG操縦席は操縦輪、コラム、6面主要表示器、多数の物理操作部を持ち、中央台両側の白黒トリムホイールが目立ちます。"
+      },
+      "fact": {
+        "zh": "A319 使用側桿並在飛行員正前方保留桌板；是否有駕駛盤是兩者最直接的座艙差異。",
+        "en": "The A319 uses sidesticks and leaves tray tables ahead of the pilots. Yokes versus no yokes is the clearest cockpit distinction.",
+        "ja": "A319はサイドスティックと正面テーブルを使います。操縦輪の有無が最も直接的な差です。"
+      },
+      "bullets": [
+        {
+          "zh": "正副駕駛前方各有駕駛盤。",
+          "en": "A yoke sits ahead of each pilot.",
+          "ja": "両操縦席正面に操縦輪があります。"
+        },
+        {
+          "zh": "典型 737NG 有六具主要顯示器。",
+          "en": "A typical 737NG has six main displays.",
+          "ja": "標準737NGは6面主要表示器です。"
+        },
+        {
+          "zh": "中央台可見大型手動配平輪。",
+          "en": "Large manual trim wheels sit beside the pedestal.",
+          "ja": "中央台脇に大型手動トリムホイールがあります。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b737/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit-737-700-by-RalfR.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "737-700 的正面風擋較扁、中央接縫近直立，外側窗以銳利折角轉向側面；配合較尖機鼻形成典型 Boeing 737 窗帶。",
+        "en": "The 737-700 has shallow front panes with a near-vertical centre seam and sharply angled outer panes wrapping around a pointed nose.",
+        "ja": "737-700は浅い前面窓、ほぼ垂直の中央継ぎ目、鋭く側面へ折れる外側窓を持ち、尖った機首と737特有の窓帯を作ります。"
+      },
+      "fact": {
+        "zh": "不要只數窗片；正面窗高寬比、外側窗折角及窗帶與機鼻的銜接方式，比片數更有辨識力。",
+        "en": "Do not count panes alone. Front-pane proportions, outer-pane corners and the way the belt meets the nose are more useful.",
+        "ja": "窓枚数だけでなく、前面窓比率、外側窓の角、機首とのつながりを見ます。"
+      },
+      "bullets": [
+        {
+          "zh": "兩片主風擋較寬扁。",
+          "en": "The two main panes look broad and shallow.",
+          "ja": "2枚の主風防は幅広く浅く見えます。"
+        },
+        {
+          "zh": "外側窗框折角明顯。",
+          "en": "Outer frames have pronounced angular breaks.",
+          "ja": "外側窓枠の折れ角が明瞭です。"
+        },
+        {
+          "zh": "窗下機鼻較尖而低。",
+          "en": "The nose below is relatively pointed and low.",
+          "ja": "窓下の機首は低く尖り気味です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b737/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-5265_Boeing_737-79P_China_Eastern_Airlines_Lining_Up_for_Take_Off_-_Head_On_(8613160786).jpg"
+        },
+        {
+          "src": "assets/reference/b737/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_Boeing_737-700_PH-BGF_cockpit_closeup_(3517238451).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "737-700 可完全沒有小翼，也可裝高大的融合式小翼或 Split Scimitar；構型取決於出廠與後續改裝狀態。",
+        "en": "A 737-700 may have plain tips, tall blended winglets or Split Scimitar devices depending on production and retrofit status.",
+        "ja": "737-700は通常翼端、背の高いブレンデッド型、スプリット・シミター型があり、製造・改修状態で変わります。"
+      },
+      "fact": {
+        "zh": "A319 也有翼尖擋板與 Sharklet 兩種主要外觀，所以高小翼本身不是 Boeing／Airbus 的充分證據。",
+        "en": "The A319 likewise appears with tip fences or Sharklets, so a tall winglet alone is not proof of Boeing or Airbus.",
+        "ja": "A319にも翼端フェンスとシャークレットがあり、高い小翼だけではBoeing／Airbusを確定できません。"
+      },
+      "bullets": [
+        {
+          "zh": "融合式小翼由翼面平順向上彎。",
+          "en": "A blended winglet curves smoothly upward.",
+          "ja": "ブレンデッド型は翼面から滑らかに上方へ曲がります。"
+        },
+        {
+          "zh": "Split Scimitar 另有向下小翼片。",
+          "en": "Split Scimitar adds a lower blade.",
+          "ja": "スプリット・シミター型は下向き翼片も持ちます。"
+        },
+        {
+          "zh": "需搭配扁平短艙與外露主輪判型。",
+          "en": "Confirm with flat nacelles and exposed main wheels.",
+          "ja": "平たいナセルと露出主輪で照合します。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b737/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_737-700_Southwest_winglet,_and_headquarters,_Love_Field_(2717214038)_(3).jpg"
+        }
+      ]
     }
   },
   "specifications": {

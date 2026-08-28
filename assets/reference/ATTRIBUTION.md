@@ -279,3 +279,39 @@ The Boeing 717 began as the McDonnell Douglas MD-95 and retains the DC-9-family 
 | `cs100/gear.jpg` | [Bombardier CS100 main landing gear](https://commons.wikimedia.org/wiki/File:Bombardier_CS100_(23437223616).jpg), Kārlis Dambrāns | CC BY 2.0 |
 
 The CS100 was renamed Airbus A220-100 after the programme joined Airbus. Sources using the original Bombardier CS100 name depict the same variant represented by project ID `cs100`, not the longer A220-300/CS300.
+
+## Boeing 737-700 (`b737`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b737/overview.jpg` | [Southwest Boeing 737-700 N947WN](https://commons.wikimedia.org/wiki/File:Southwest_Boeing_737-700_N947WN_BWI_MD1.jpg), Acroterion | CC BY-SA 4.0 |
+| `b737/cockpit.jpg` | [Boeing 737-700 cockpit](https://commons.wikimedia.org/wiki/File:Cockpit-737-700-by-RalfR.jpg), Ralf Roletschek | GFDL 1.2 |
+| `b737/window-front.jpg` | [China Eastern Boeing 737-700 head-on](https://commons.wikimedia.org/wiki/File:B-5265_Boeing_737-79P_China_Eastern_Airlines_Lining_Up_for_Take_Off_-_Head_On_(8613160786).jpg), Faisal Akram; cropped to emphasize front-window geometry | CC BY-SA 2.0 |
+| `b737/window-side.jpg` | [KLM Boeing 737-700 PH-BGF cockpit windows](https://commons.wikimedia.org/wiki/File:KLM_Boeing_737-700_PH-BGF_cockpit_closeup_(3517238451).jpg), Pieter van Marion; cropped to emphasize side-window geometry | CC BY-SA 2.0 |
+| `b737/fuselage.jpg` | [Southwest Boeing 737-700 N947WN fuselage](https://commons.wikimedia.org/wiki/File:Southwest_Boeing_737-700_N947WN_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b737/engine.jpg` | [Virgin Blue Boeing 737-700 CFM56-7B](https://commons.wikimedia.org/wiki/File:Virgin_Blue_Boeing_737-700_SYD_Spijkers.jpg), Paul Spijkers; cropped | GFDL |
+| `b737/wingtip.jpg` | [Southwest Boeing 737-700 blended winglet](https://commons.wikimedia.org/wiki/File:Boeing_737-700_Southwest_winglet,_and_headquarters,_Love_Field_(2717214038)_(3).jpg), Bill Abbott | CC BY-SA 2.0 |
+| `b737/wing.jpg` | [Southwest Boeing 737-700 starboard wing](https://commons.wikimedia.org/wiki/File:Southwest_Starboard_Wing_(33198022825).jpg), formulanone | CC BY-SA 2.0 |
+| `b737/vstab.jpg` | [KLM Boeing 737-700 PH-BGP tail](https://commons.wikimedia.org/wiki/File:Boeing_737-700_PH-BGP_of_KLM_Tail_(12291134464).jpg), Aeroprints.com | CC BY-SA 3.0 |
+| `b737/hstab.jpg` | [Southwest Boeing 737-700 underside and tailplane](https://commons.wikimedia.org/wiki/File:Boeing_737-700,_Southwest,_winglets,_from_below_(6190651480).jpg), Bill Abbott | CC BY-SA 2.0 |
+| `b737/gear.jpg` | [Virgin Blue Boeing 737-700 main landing gear](https://commons.wikimedia.org/wiki/File:VH-VBY_%27Virginia_Blue%27_Boeing_737-7FE_Virgin_Blue_(9046044503).jpg), Robert Frola; cropped | GFDL |
+
+The compared aircraft is the short-bodied 737-700/737NG. Winglet fit varies by delivery and retrofit; a blended-winglet photograph does not imply that every 737-700 carries the same device.
+
+## Airbus A319 (`a319`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a319/overview.jpg` | [British Airways Airbus A319-100 G-EUOG](https://commons.wikimedia.org/wiki/File:Ba_a319-100_g-euog_arp.jpg), Adrian Pingstone | Public domain |
+| `a319/cockpit.jpg` | [easyJet Airbus A319 cockpit](https://commons.wikimedia.org/wiki/File:Airbus-319-cockpit.jpg), Ralf Roletschek | CC BY-SA 2.5 |
+| `a319/window-front.jpg` | [easyJet Airbus A319-111 G-EZGM head-on](https://commons.wikimedia.org/wiki/File:G-EZGM_easyJet_Airbus_A319-111_-_cn_4778_head-on_taxiing.JPG), Alf van Beem; cropped to emphasize front-window geometry | CC0 |
+| `a319/window-side.jpg` | [British Airways Airbus A319-100 G-EUOG nose](https://commons.wikimedia.org/wiki/File:Ba_a319-100_g-euog_arp.jpg), Adrian Pingstone; cropped to emphasize side-window geometry | Public domain |
+| `a319/fuselage.jpg` | [easyJet Airbus A319-111 G-EZAO fuselage](https://commons.wikimedia.org/wiki/File:Hamburg_Airport_easyJet_Airbus_A319-111_G-EZAO_(DSC08652).jpg), MarcelX42; cropped | CC BY-SA 4.0 |
+| `a319/engine.jpg` | [easyJet Airbus A319-111 CFM56-5B](https://commons.wikimedia.org/wiki/File:Hamburg_Airport_easyJet_Airbus_A319-111_G-EZAO_(DSC08652).jpg), MarcelX42; cropped | CC BY-SA 4.0 |
+| `a319/wingtip.jpg` | [Airbus A319 wingtip fence](https://commons.wikimedia.org/wiki/File:Airbus_A319_wintip.jpg), Lasse Fuss | CC BY-SA 3.0 |
+| `a319/wing.jpg` | [Airbus A319 port wing](https://commons.wikimedia.org/wiki/File:A319_Port_Wing_(40736437962).jpg), formulanone | CC BY-SA 2.0 |
+| `a319/vstab.jpg` | [Germanwings Airbus A319-112 tail](https://commons.wikimedia.org/wiki/File:Germanwings_Airbus_A319-112_D-AKNP_STR_2016_01.jpg), Julian Herzog | CC BY 4.0 |
+| `a319/hstab.jpg` | [Adria Airways Airbus A319 S5-AAR tailplane](https://commons.wikimedia.org/wiki/File:Adria_Airways_Airbus_A319_(S5-AAR)_@CDG,_2015-06-25.jpg), Eric Salard; cropped | CC BY-SA 2.0 |
+| `a319/gear.jpg` | [QantasLink Airbus A319 VH-8NP landing gear](https://commons.wikimedia.org/wiki/File:QantasLink_Airbus_A319_VH-8NP_Perth_2025_(02).jpg), Bahnfrend; cropped | CC BY-SA 4.0 |
+
+The comparison focuses on the A319ceo exterior shown in the photographs. A319neo engines and later Sharklet-equipped aircraft differ, while early A319ceo aircraft commonly use upper/lower wingtip fences.

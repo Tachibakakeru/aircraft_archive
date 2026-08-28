@@ -164,6 +164,16 @@ $photos = [ordered]@{
   "cs100/vstab.jpg" = "Swiss, HB-JBI, Airbus A220-100 (49580114558).jpg"
   "cs100/hstab.jpg" = "Swiss International Airlines HB-JBH BOMBARDIER CS100 A220-100 (Ank Kumar, Infosys Limited) 05.jpg"
   "cs100/gear.jpg" = "Bombardier CS100 (23437223616).jpg"
+  "b737/overview.jpg" = "Southwest Boeing 737-700 N947WN BWI MD1.jpg"
+  "b737/cockpit.jpg" = "Cockpit-737-700-by-RalfR.jpg"
+  "b737/wingtip.jpg" = "Boeing 737-700 Southwest winglet, and headquarters, Love Field (2717214038) (3).jpg"
+  "b737/wing.jpg" = "Southwest Starboard Wing (33198022825).jpg"
+  "b737/vstab.jpg" = "Boeing 737-700 PH-BGP of KLM Tail (12291134464).jpg"
+  "b737/hstab.jpg" = "Boeing 737-700, Southwest, winglets, from below (6190651480).jpg"
+  "a319/overview.jpg" = "Ba a319-100 g-euog arp.jpg"
+  "a319/cockpit.jpg" = "Airbus-319-cockpit.jpg"
+  "a319/wingtip.jpg" = "Airbus A319 wintip.jpg"
+  "a319/wing.jpg" = "A319 Port Wing (40736437962).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -221,6 +231,18 @@ $windowPhotos = @(
   @{ Dest="b717/window-side.jpg"; Title="N937AT Boeing 717 Air Tran Nose (7438725424).jpg"; Crop=@(.55,.22,.42) }
   @{ Dest="cs100/window-front.jpg"; Title="Bombardier CS100 (23463413085).jpg"; Crop=@(.25,.24,.50) }
   @{ Dest="cs100/window-side.jpg"; Title="Swiss, HB-JBC, Bombardier CS100 (31383514146).jpg"; Crop=@(.00,.30,.38) }
+  @{ Dest="b737/window-front.jpg"; Title="B-5265 Boeing 737-79P China Eastern Airlines Lining Up for Take Off - Head On (8613160786).jpg"; Crop=@(.34,.37,.32) }
+  @{ Dest="b737/window-side.jpg"; Title="KLM Boeing 737-700 PH-BGF cockpit closeup (3517238451).jpg"; Crop=@(.48,.12,.48) }
+  @{ Dest="b737/fuselage.jpg"; Title="Southwest Boeing 737-700 N947WN BWI MD1.jpg"; Crop=@(.18,.28,.65) }
+  @{ Dest="b737/engine.jpg"; Title="Virgin Blue Boeing 737-700 SYD Spijkers.jpg"; Crop=@(.25,.38,.40) }
+  @{ Dest="b737/gear.jpg"; Title="VH-VBY 'Virginia Blue' Boeing 737-7FE Virgin Blue (9046044503).jpg"; Crop=@(.28,.56,.43) }
+  @{ Dest="a319/window-front.jpg"; Title="G-EZGM easyJet Airbus A319-111 - cn 4778 head-on taxiing.JPG"; Crop=@(.36,.48,.28) }
+  @{ Dest="a319/window-side.jpg"; Title="Ba a319-100 g-euog arp.jpg"; Crop=@(.02,.30,.35) }
+  @{ Dest="a319/fuselage.jpg"; Title="Hamburg Airport easyJet Airbus A319-111 G-EZAO (DSC08652).jpg"; Crop=@(.08,.27,.84) }
+  @{ Dest="a319/engine.jpg"; Title="Hamburg Airport easyJet Airbus A319-111 G-EZAO (DSC08652).jpg"; Crop=@(.27,.42,.35) }
+  @{ Dest="a319/vstab.jpg"; Title="Germanwings Airbus A319-112 D-AKNP STR 2016 01.jpg"; Crop=@(.65,.18,.32) }
+  @{ Dest="a319/hstab.jpg"; Title="Adria Airways Airbus A319 (S5-AAR) @CDG, 2015-06-25.jpg"; Crop=@(.63,.22,.34) }
+  @{ Dest="a319/gear.jpg"; Title="QantasLink Airbus A319 VH-8NP Perth 2025 (02).jpg"; Crop=@(.30,.52,.45) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600
@@ -228,7 +250,7 @@ $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 160
 Add-Type -AssemblyName System.Drawing
 foreach ($photo in $windowPhotos) {
   $dest = Join-Path $root ("assets/reference/" + $photo.Dest)
-  if (Test-Path $dest) { continue }
+  if ((Test-Path $dest) -and -not $photo.Force) { continue }
   $info = $windowByTitle[$photo.Title]
   if (-not $info) { throw "Wikimedia Commons file not found: $($photo.Title)" }
   $raw = [System.IO.Path]::GetTempFileName()

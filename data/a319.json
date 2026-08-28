@@ -2,19 +2,30 @@
   "title": "Airbus A319",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A319 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "A319 機身外寬約 3.95 m，典型每側有前後主艙門及一個機翼上方逃生窗；比 A320 短的翼前、翼後窗列是辨識子型的重點。",
+        "en": "The A319 fuselage is about 3.95 m wide and typically has forward/aft main doors plus one overwing exit per side. Short window runs ahead of and behind the wing separate it from an A320.",
+        "ja": "A319の胴体幅は約3.95 mで、通常各側に前後ドアと翼上出口1か所があります。翼前後の短い窓列がA320との識別点です。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "737-700 也有相近的門／出口數，因此應再看 A319 較寬機身、圓鼻與圓形短艙。",
+        "en": "The 737-700 has a similar door/exit count, so confirm the A319's wider body, round nose and round nacelles.",
+        "ja": "737-700も似た扉数なので、A319の太い胴体、丸い機首、円形ナセルで確認します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "每側前後各一扇主艙門。",
+          "en": "One main door sits at each end per side.",
+          "ja": "各側前後に主ドア1枚ずつです。"
+        },
+        {
+          "zh": "典型配置每側一個翼上逃生窗。",
+          "en": "A typical layout has one overwing exit per side.",
+          "ja": "標準配置は各側翼上出口1か所です。"
+        },
+        {
+          "zh": "機身比 737-700 約寬 19 cm。",
+          "en": "The body is about 19 cm wider than the 737-700's.",
+          "ja": "胴体は737-700より約19 cm太いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg_Airport_easyJet_Airbus_A319-111_G-EZAO_(DSC08652).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A319 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "A319 與 A320 家族共用側桿式玻璃座艙：飛行員前方沒有駕駛盤，而是桌板；中央兩具 ECAM 顯示引擎與系統狀態。",
+        "en": "The A319 shares the A320-family sidestick glass cockpit: no yokes ahead of the pilots, tray tables instead, and two central ECAM system displays.",
+        "ja": "A319はA320ファミリー共通のサイドスティック式グラスコックピットで、正面に操縦輪がなくテーブルと中央2面ECAMがあります。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "A318、A319、A320、A321 的座艙高度共通，僅靠內裝通常無法判斷機身子型；但可立即排除有駕駛盤的 737。",
+        "en": "A318/A319/A320/A321 cockpits are highly common, so the exact subtype is hard to tell inside; the absence of yokes immediately separates a 737.",
+        "ja": "A318／A319／A320／A321の操縦席は共通性が高く子型判別は困難ですが、操縦輪がないため737とはすぐ区別できます。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "側桿位於兩名駕駛外側。",
+          "en": "Sidesticks sit outboard of both pilots.",
+          "ja": "サイドスティックは両席外側です。"
+        },
+        {
+          "zh": "飛行員正前方設有桌板。",
+          "en": "Tray tables occupy the space ahead of the pilots.",
+          "ja": "両席正面にテーブルがあります。"
+        },
+        {
+          "zh": "中央 ECAM 上下排列。",
+          "en": "Central ECAM displays are stacked vertically.",
+          "ja": "中央ECAMは上下配置です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus-319-cockpit.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A319 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "A319 與 A320 共用基本低翼，後掠約 25°；翼根位置較 737 高，外翼末端可接翼尖擋板或 Sharklet。",
+        "en": "The A319 shares the basic A320 low wing, swept about 25 degrees. Its wing sits higher than the 737's and ends in fences or Sharklets.",
+        "ja": "A319はA320共通の約25度後退低翼で、737より高い位置にあり、翼端フェンスまたはSharkletを備えます。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "兩型翼展十分接近；從客艙看，A319 的圓形短艙與翼尖擋板通常比翼面形狀更有辨識力。",
+        "en": "The spans are very close. From the cabin, round nacelles and tip devices are more useful than planform.",
+        "ja": "両機の翼幅は近く、客室からは翼形より円形ナセルと翼端装置が有効です。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "翼根離地較高。",
+          "en": "The wing root sits higher above the ground.",
+          "ja": "翼根地上高が高めです。"
+        },
+        {
+          "zh": "後緣有大型襟翼與擾流板。",
+          "en": "Large flaps and spoilers line the trailing edge.",
+          "ja": "後縁に大型フラップとスポイラーがあります。"
+        },
+        {
+          "zh": "翼尖裝置是客艙視角的重要線索。",
+          "en": "The tip device is a useful cabin-view cue.",
+          "ja": "翼端装置が客室視点の重要な手掛かりです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:A319_Port_Wing_(40736437962).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A319 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A319ceo 可選 CFM56-5B 或 IAE V2500，兩者進氣口底部都比 737 的 CFM56-7B 更接近圓形，且因機身姿態較高而有較大離地間隙。",
+        "en": "The A319ceo uses CFM56-5B or IAE V2500 engines. Both are rounder underneath than the 737's CFM56-7B and have more ground clearance.",
+        "ja": "A319ceoはCFM56-5BまたはV2500を使用し、737のCFM56-7Bより下面が円形で地上間隔も大きいです。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "A319neo 改用 LEAP-1A 或 PW1100G，風扇更大；本頁實機照片與辨識重點以常見 A319ceo 為主。",
+        "en": "The A319neo uses larger LEAP-1A or PW1100G engines. This reference and its cues focus on the common A319ceo.",
+        "ja": "A319neoは大型LEAP-1A／PW1100Gを使用します。本写真と識別点は一般的なA319ceo中心です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "短艙下緣接近圓形。",
+          "en": "The nacelle lower lip is close to circular.",
+          "ja": "ナセル下縁は円形に近いです。"
+        },
+        {
+          "zh": "離地間隙大於 737-700。",
+          "en": "Ground clearance exceeds the 737-700's.",
+          "ja": "地上間隔は737-700より大きいです。"
+        },
+        {
+          "zh": "ceo 有 CFM56-5B 與 V2500 兩種外觀。",
+          "en": "The ceo appears with CFM56-5B or V2500 nacelles.",
+          "ja": "ceoにはCFM56-5BとV2500の2種があります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg_Airport_easyJet_Airbus_A319-111_G-EZAO_(DSC08652).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "A319 垂直尾翼高大後掠，根部以寬背鰭平順接入後機身；在短機身上也呈現偏高的視覺比例。",
+        "en": "The A319 has a tall swept fin with a broad dorsal root blending into the aft fuselage; it also looks proportionally tall on the short body.",
+        "ja": "A319垂直尾翼は高く後退し、幅広い背びれ根元が後部胴体へつながり、短胴上で高く見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "尾翼輪廓與 737 有差異但不如引擎、機鼻與起落架明顯；應作輔助而非單一判據。",
+        "en": "Fin shape differs from the 737 but less clearly than engines, nose and gear, so it is supporting rather than decisive.",
+        "ja": "737との差はありますがエンジン・機首・脚ほど明確でなく、補助判定に使います。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣後掠、頂端較方。",
+          "en": "The leading edge is swept and the tip relatively squared.",
+          "ja": "前縁は後退し上端は比較的角形です。"
+        },
+        {
+          "zh": "根部整流區寬而平順。",
+          "en": "The root fairing is broad and smooth.",
+          "ja": "根元フェアリングは幅広く滑らかです。"
+        },
+        {
+          "zh": "短機身讓尾翼顯得較高。",
+          "en": "The short body makes the fin appear tall.",
+          "ja": "短胴で尾翼が高く見えます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Germanwings_Airbus_A319-112_D-AKNP_STR_2016_01.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "A319 水平尾翼低置、後掠並向翼尖收窄，根部與尾錐整流罩平順融合；與 A320 家族共用基本輪廓。",
+        "en": "The A319 has low-mounted swept tapered tailplanes smoothly faired into the tailcone, sharing the basic A320-family form.",
+        "ja": "A319水平尾翼は低位置で後退・先細、尾部へ滑らかに接続するA320ファミリー共通形状です。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "737-700 也使用相似的低置尾翼，因此應同時查看垂尾根部、引擎短艙與主輪收納方式。",
+        "en": "The 737-700 has a similar low tailplane, so also inspect fin root, nacelles and main-gear stowage.",
+        "ja": "737-700も似た低位置尾翼なので、垂尾根元、ナセル、主輪格納も確認します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "水平尾翼低置於尾錐兩側。",
+          "en": "Tailplanes mount low on either side of the tailcone.",
+          "ja": "水平尾翼は尾部両側の低位置です。"
+        },
+        {
+          "zh": "後掠並向外逐漸收窄。",
+          "en": "They sweep aft and taper outward.",
+          "ja": "後退し外側へ細くなります。"
+        },
+        {
+          "zh": "單看此部位不足以定型。",
+          "en": "This part alone is insufficient for identification.",
+          "ja": "この部位だけでは機種を確定できません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Adria_Airways_Airbus_A319_(S5-AAR)_@CDG,_2015-06-25.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus A319 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "A319 前腳雙輪、左右主腳各單軸雙輪；主腳向內收入翼身整流區，艙門會遮蔽輪胎，不像 737 收輪後仍露出胎面。",
+        "en": "The A319 has twin nose wheels and a two-wheel main unit per side. The mains retract inward behind doors, unlike the 737's exposed tyre faces.",
+        "ja": "A319は前脚2輪、左右主脚各単軸2輪で、内側へ格納され扉に覆われ、737のようにタイヤ面が露出しません。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "兩者總輪數都為六輪，輪數完全無法區分；最可靠的是 A319 較長腳柱、較高離地姿態與完整艙門。",
+        "en": "Both total six wheels, so wheel count is useless. The A319's taller struts, higher stance and full doors are stronger cues.",
+        "ja": "両機とも合計6輪で輪数は使えません。A319の長い脚柱、高い姿勢、完全な脚扉を見ます。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "前腳與每側主腳皆為雙輪。",
+          "en": "Nose and each main unit use twin wheels.",
+          "ja": "前脚と左右主脚は各2輪です。"
+        },
+        {
+          "zh": "收起主輪由艙門遮蔽。",
+          "en": "Doors cover the retracted main wheels.",
+          "ja": "格納主輪は扉で覆われます。"
+        },
+        {
+          "zh": "離地高度高於 737-700。",
+          "en": "Ground clearance is greater than the 737-700's.",
+          "ja": "地上高は737-700より高いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:QantasLink_Airbus_A319_VH-8NP_Perth_2025_(02).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A319 是短機身 A320 家族成員，全長約 33.84 m；較寬且離地較高的機身、圓鈍機鼻、近圓形引擎短艙與有艙門遮蔽的主輪構成主要外型。",
+        "en": "The A319 is the short-bodied A320-family member, about 33.84 m long. Its wider higher body, rounded nose, rounder nacelles and covered retracted mains define the profile.",
+        "ja": "A319は全長約33.84 mの短胴A320ファミリー機です。太く高い胴体、丸い機首、円形に近いナセル、扉で覆われる格納主輪が特徴です。"
+      },
+      "fact": {
+        "zh": "它與 737-700 幾乎等長、裝 Sharklet 時翼展也幾乎相同；辨識不能依賴尺寸，必須回到機鼻、引擎與起落架。",
+        "en": "It is nearly identical to the 737-700 in length and, with Sharklets, span. Size is therefore weak; use nose, engines and landing gear.",
+        "ja": "737-700と全長がほぼ同じで、Sharklet装備時の翼幅も同等です。寸法でなく機首、エンジン、脚を見ます。"
+      },
+      "bullets": [
+        {
+          "zh": "機身寬且離地較高。",
+          "en": "The fuselage is wider and sits higher.",
+          "ja": "胴体が太く地上高も高めです。"
+        },
+        {
+          "zh": "機鼻圓鈍，窗帶輪廓較平順。",
+          "en": "The nose is rounder with a smoother window belt.",
+          "ja": "機首は丸く窓帯も滑らかです。"
+        },
+        {
+          "zh": "短艙底部接近圓形，主輪格納後被遮蔽。",
+          "en": "Nacelles are round underneath and retracted mains are covered.",
+          "ja": "ナセル下面は円形に近く格納主輪は覆われます。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a319/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Ba_a319-100_g-euog_arp.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A319 的主風擋較高，外側窗沿圓鈍機鼻向後收尖，整組窗帶的上下線條比 737 平順；正面看有典型 Airbus 六片式面貌。",
+        "en": "The A319 has taller front panes and outer panes tapering smoothly around a rounded nose, forming the classic six-pane Airbus face.",
+        "ja": "A319は高い前面窓と、丸い機首に沿って滑らかに後方へ細る外側窓を持つ典型的Airbus六枚窓です。"
+      },
+      "fact": {
+        "zh": "737-700 的主窗較扁、外側折角更銳利；正面與側面照片一起看，比單一角度可靠。",
+        "en": "The 737-700's main panes are shallower and outer corners sharper. Compare front and side views together.",
+        "ja": "737-700は主窓が浅く外側角が鋭いです。正面・側面写真を併用します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面主風擋較高。",
+          "en": "The main front panes appear taller.",
+          "ja": "正面主風防が高く見えます。"
+        },
+        {
+          "zh": "外側窗向後平順收尖。",
+          "en": "Outer panes taper smoothly aft.",
+          "ja": "外側窓が後方へ滑らかに細くなります。"
+        },
+        {
+          "zh": "圓鼻讓整組窗帶顯得較寬。",
+          "en": "The rounded nose makes the belt look broader.",
+          "ja": "丸い機首で窓帯が幅広く見えます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a319/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:G-EZGM_easyJet_Airbus_A319-111_-_cn_4778_head-on_taxiing.JPG"
+        },
+        {
+          "src": "assets/reference/a319/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Ba_a319-100_g-euog_arp.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "早期 A319 常見上下各伸出一片的小型翼尖擋板；較晚期或改裝機可見高大的 Sharklet，外觀會隨年代改變。",
+        "en": "Early A319s commonly use small upper-and-lower tip fences, while later or retrofitted aircraft may carry tall Sharklets.",
+        "ja": "初期A319は上下の小型翼端フェンス、後期・改修機は背の高いSharkletを装備します。"
+      },
+      "fact": {
+        "zh": "上下翼尖擋板是很強的 A320 家族線索；若看到 Sharklet，則需用圓形短艙、圓鼻與主輪艙門排除 737。",
+        "en": "Upper/lower fences are a strong A320-family cue. With Sharklets, use round nacelles, round nose and covered mains to exclude a 737.",
+        "ja": "上下フェンスは強いA320系の特徴です。Sharklet装備では円形ナセル、丸い機首、覆われる主輪で737を除外します。"
+      },
+      "bullets": [
+        {
+          "zh": "經典擋板同時向上、向下伸出。",
+          "en": "Classic fences project both above and below the tip.",
+          "ja": "従来フェンスは翼端上下へ伸びます。"
+        },
+        {
+          "zh": "Sharklet 高大且向外後掠。",
+          "en": "A Sharklet is tall and swept outward.",
+          "ja": "Sharkletは高く外後方へ伸びます。"
+        },
+        {
+          "zh": "構型會隨出廠與改裝狀態改變。",
+          "en": "Configuration varies by production and retrofit status.",
+          "ja": "構成は製造・改修状態で変わります。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/a319/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A319_wintip.jpg"
+        }
+      ]
     }
   },
   "specifications": {

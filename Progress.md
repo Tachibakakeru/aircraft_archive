@@ -170,3 +170,15 @@
 - 圖片作者、授權、裁切與 CS100／A220-100 名稱關係已補入 `assets/reference/ATTRIBUTION.md`；下載與資料工具擴充至 16 架 × 10 類、176 張照片。
 - 資料 fetch 與比較／檢視頁資源升為 v=149，Service Worker cache 升為 `hangar-v12`。已通過 JSON、JavaScript 語法、Python 完整性檢查、圖片尺寸與 `git diff --check`；乾淨瀏覽器實載比較頁為 10 列、22 張照片、22 個來源、22 個單機連結且無破圖，717 水平尾翼頁與 A220 引擎頁也正常。
 - 本機預覽：`http://localhost:8000/versus.html?a=b717&b=cs100&local=149`。使用者已確認並同意發布；本批準備提交並推送至 `origin/main`，之後接續下一組機型。`data/korean_airlines_debug.json` 維持未追蹤且未修改。
+
+### Boeing 737-700 / Airbus A319 實機部位辨識比較（2026-08-28，進行中）
+
+- 第八批 B717／A220-100 已以 commit `3f37c9c`（`新增 717 與 A220-100 實機部位辨識比較`）推送至 `origin/main`。
+- 下一批選定 Boeing 737-700（`b737`）與 Airbus A319（`a319`）：兩者同屬短機身單走道雙發客機，將沿用既有 10 類、實機照片、三語辨識內容與 Commons 授權流程，補強短機身比例、駕駛艙外窗、出口配置、引擎、翼尖與起落架的現場判型差異。
+- 本批只在本機製作與驗證，未取得使用者確認前不推送；`data/korean_airlines_debug.json` 維持未追蹤且不納入作業。
+- 已完成兩型各 10 類三語辨識內容與各 11 張 Wikimedia Commons 真實照片，駕駛艙外窗保留正面／側面角度，共 22 張；第一輪目視後修正 A319 引擎誤圖、兩型外窗裁切及機身／尾翼／起落架構圖。
+- 內容特別說明兩型全長只差約 0.21 m、裝小翼時翼展都接近 35.8 m、總輪數也相同，不能靠尺寸或輪數判型；應優先比較 737-700 扁平 CFM56-7B、外露收輪與較低姿態，對照 A319 圓形 CFM56-5B／V2500、完整輪艙門與較高姿態。
+- 艙門／逃生窗部分採短機身子型配置：兩型典型皆為前後主艙門加每側一個翼上逃生窗，因此出口數只能輔助確認；另記錄 737 選裝融合式／Split Scimitar 小翼，以及 A319 翼尖擋板／Sharklet 的世代差異。
+- 圖片作者、Commons 來源、授權、裁切與 ceo／neo 適用範圍已補入 `assets/reference/ATTRIBUTION.md`；下載與資料工具擴充至 18 架 × 10 類、198 張照片。
+- 資料 fetch 與比較／檢視頁資源升為 v=150，Service Worker cache 升為 `hangar-v13`。已通過 JSON、JavaScript、Python 完整性、圖片數量／尺寸與 `git diff --check`；本地瀏覽器驗證比較頁 10 列、22 張照片、22 個 Commons 來源、22 個單機連結且無破圖，三語切換正常，737 外窗與 A319 引擎單機頁也正常。
+- 本機預覽：`http://localhost:8000/versus.html?a=b737&b=a319&local=150`。使用者已確認並要求發布；本批準備提交並推送至 `origin/main`，本輪在發布後結束，下次接續下一組機型。
