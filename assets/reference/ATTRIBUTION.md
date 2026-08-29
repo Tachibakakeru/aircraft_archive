@@ -387,3 +387,39 @@ The photographed United aircraft show PW4000-series nacelles. Other 777-200/200E
 | `a343/gear.jpg` | [South African Airways A340-313 ZS-SXE landing](https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_02.jpg), Julian Herzog; cropped | CC BY 4.0 |
 
 The wing and wingtip photographs show Airbus's A340-300 BLADE test aircraft. They are used for the underlying A340-300 wing geometry; experimental laminar-flow test-panel details are not presented as standard production features.
+
+## Airbus A300-600ST Beluga (`beluga`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `beluga/overview.jpg` | [Airbus Beluga F-GSTA](https://commons.wikimedia.org/wiki/File:Airbus_Beluga_Airbus_A300B4-608ST_F-GSTA_(28858044414).jpg), Brian Bukowski; cropped | CC BY-SA 2.0 |
+| `beluga/cockpit.jpg` | [Airbus A300 flight deck](https://commons.wikimedia.org/wiki/File:Airbus_A300_panel.jpg), Bengt Eriksson | CC BY-SA 4.0 |
+| `beluga/window-front.jpg` | [Beluga F-GSTB front view](https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTB_44675.jpg), Björn Strey; cropped | CC BY-SA 2.0 |
+| `beluga/window-side.jpg` | [Beluga F-GSTA cockpit windows](https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTA.jpg), OlliFoolish; cropped | CC BY-SA 3.0 |
+| `beluga/fuselage.jpg` | [Beluga forward cargo door open](https://commons.wikimedia.org/wiki/File:Airbus_Beluga_A300-600ST_open.jpeg), Chillmann; cropped | Public domain |
+| `beluga/engine.jpg` | [Beluga F-GSTA CF6 engines](https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTA.jpg), OlliFoolish; cropped | CC BY-SA 3.0 |
+| `beluga/wingtip.jpg` | [Beluga rear wingtip view](https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg), OlliFoolish; cropped | CC BY-SA 3.0 |
+| `beluga/wing.jpg` | [Beluga rear wing view](https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg), OlliFoolish; cropped | CC BY-SA 3.0 |
+| `beluga/vstab.jpg` | [Beluga vertical tail](https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg), OlliFoolish; cropped | CC BY-SA 3.0 |
+| `beluga/hstab.jpg` | [Beluga tailplane and auxiliary finlets](https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg), OlliFoolish; cropped | CC BY-SA 3.0 |
+| `beluga/gear.jpg` | [Beluga F-GSTB landing gear](https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTB_44675.jpg), Björn Strey; cropped | CC BY-SA 2.0 |
+
+The cockpit image is an A300-family layout reference because the BelugaST retains the A300-600-generation flight deck. All external photographs show actual BelugaST aircraft.
+
+## Boeing 747-400 Dreamlifter (`dreamlifter`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `dreamlifter/overview.jpg` | [Dreamlifter landing at Paine Field](https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg), Ktin; cropped | CC BY-SA 4.0 |
+| `dreamlifter/cockpit.jpg` | [Boeing 747-400 flight deck](https://commons.wikimedia.org/wiki/File:Boeing_747-400_cockpit.jpg), Darryl Wilkins | CC BY-SA 2.0 |
+| `dreamlifter/window-front.jpg` | [Dreamlifter upper-deck cockpit windows](https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg), Ktin; cropped | CC BY-SA 4.0 |
+| `dreamlifter/window-side.jpg` | [Dreamlifter side cockpit windows](https://commons.wikimedia.org/wiki/File:Boeing_747-400LCF_Dreamlifter.jpg), Scott Wright / Altair78; cropped | CC BY 2.0 |
+| `dreamlifter/fuselage.jpg` | [Dreamlifter swing-tail cargo access open](https://commons.wikimedia.org/wiki/File:747_400LCF_DREAM_LIFTER.jpg), A10ml; cropped | CC BY-SA 3.0 |
+| `dreamlifter/engine.jpg` | [Dreamlifter PW4062 engines](https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg), Ktin; cropped | CC BY-SA 4.0 |
+| `dreamlifter/wingtip.jpg` | [Dreamlifter plain outboard wing](https://commons.wikimedia.org/wiki/File:Boeing_747-400LCF_Dreamlifter.jpg), Scott Wright / Altair78; cropped | CC BY 2.0 |
+| `dreamlifter/wing.jpg` | [Dreamlifter 747-400-derived wing](https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg), Ktin; cropped | CC BY-SA 4.0 |
+| `dreamlifter/vstab.jpg` | [Dreamlifter vertical tail](https://commons.wikimedia.org/wiki/File:Boeing_747-409(LCF)_Dreamlifter,_N249BA_-_PAE_(21348697683).jpg), Eric Salard; cropped | CC BY-SA 2.0 |
+| `dreamlifter/hstab.jpg` | [Dreamlifter rear tailplane view](https://commons.wikimedia.org/wiki/File:Boeing_747-409(LCF)_Dreamlifter,_N249BA_-_PAE_(21348697683).jpg), Eric Salard; cropped | CC BY-SA 2.0 |
+| `dreamlifter/gear.jpg` | [Dreamlifter landing gear extended](https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg), Ktin; cropped | CC BY-SA 4.0 |
+
+The cockpit image is a 747-400-family layout reference. The external photographs show actual Dreamlifters, including the swing-tail cargo access and the conversion's winglet-free tips.

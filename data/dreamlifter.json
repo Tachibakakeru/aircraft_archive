@@ -41,7 +41,7 @@
     "重量": [
       [
         "最大起飛重量（MTOW）",
-        "約 397,000 kg（875,000 lb）"
+        "364,235 kg（803,000 lb）"
       ],
       [
         "最大酬載",
@@ -65,7 +65,7 @@
     "發動機": [
       [
         "型號",
-        "General Electric CF6-80C2 ×4"
+        "Pratt & Whitney PW4062／PW4062A ×4"
       ],
       [
         "型式",
@@ -76,5 +76,488 @@
         "約 267 kN（60,000 lbf）"
       ]
     ]
-  }
+  },
+  "parts": {
+    "overview": {
+      "summary": {
+        "zh": "747-400 Dreamlifter 是由 747-400 客機改裝的 LCF：保留四發、上層駕駛艙與 747 主翼，但上半機身膨大成巨型貨艙，尾部可整段向側面旋開。",
+        "en": "The 747-400 Dreamlifter is a converted 747-400 LCF retaining four engines, the upper-deck cockpit and 747 wing beneath a huge cargo body whose tail swings sideways.",
+        "ja": "747-400 Dreamlifterは747-400旅客機改造LCFで、4発・上層操縦席・747主翼を残し、巨大貨物胴体と横開き尾部を備えます。"
+      },
+      "fact": {
+        "zh": "四架 Dreamlifter 專門運送 787 大型組件；貨艙約 1,840 m³，容量約為 747-400F 的三倍。",
+        "en": "Four Dreamlifters move major 787 assemblies; the roughly 1,840 m³ hold offers about three times the volume of a 747-400F.",
+        "ja": "4機のDreamlifterが787大型部品を輸送し、約1,840 m³の貨物室は747-400Fの約3倍です。"
+      },
+      "bullets": [
+        {
+          "zh": "機長 71.68 m、翼展 64.44 m。",
+          "en": "Length 71.68 m; span 64.44 m.",
+          "ja": "全長71.68 m、全幅64.44 mです。"
+        },
+        {
+          "zh": "ICAO 機型代碼為 BLCF。",
+          "en": "Its ICAO type designator is BLCF.",
+          "ja": "ICAO機種コードはBLCFです。"
+        },
+        {
+          "zh": "四架皆由既有 747-400 改裝。",
+          "en": "All four aircraft were converted from existing 747-400s.",
+          "ja": "全4機が既存747-400から改造されました。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "Dreamlifter 保留 747-400 駕駛艙：雙駕駛盤、六具主要 CRT／顯示器與寬大的中央控制台；照片為 747-400 家族代表配置。",
+        "en": "The Dreamlifter retains the 747-400 flight deck with dual yokes, six principal CRT/display units and a broad centre pedestal; the photo shows the shared 747-400-family layout.",
+        "ja": "Dreamlifterは双操縦輪、主要6面表示器、幅広い中央ペデスタルを持つ747-400操縦席を継承します。写真は同型ファミリー配置です。"
+      },
+      "fact": {
+        "zh": "它不像 Beluga 把駕駛艙移到貨艙下方；駕駛艙仍在 747 上層甲板前端，因此正面窗帶位置很高。",
+        "en": "Unlike the Beluga, its cockpit was not lowered beneath the hold; it remains at the front of the 747 upper deck, placing the windows high above the nose.",
+        "ja": "Belugaと違って操縦席は貨物室下へ移されず、747上層前部に残るため窓位置が高いです。"
+      },
+      "bullets": [
+        {
+          "zh": "正副駕駛各有大型駕駛盤。",
+          "en": "Each pilot has a large control yoke.",
+          "ja": "両席に大型操縦輪があります。"
+        },
+        {
+          "zh": "747-400 以六具主要電子顯示器為核心。",
+          "en": "Six primary electronic displays define the 747-400 panel.",
+          "ja": "747-400計器盤は主要6面電子表示器が中心です。"
+        },
+        {
+          "zh": "駕駛艙照片應視為 747-400 家族布局參考。",
+          "en": "Treat the cockpit photograph as a 747-400-family layout reference.",
+          "ja": "操縦席写真は747-400ファミリー配置の参考です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-400_cockpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "Dreamlifter 的駕駛艙窗位於 747 上層甲板最前端，窗帶高高壓在機鼻上方；側面可同時看到上層窗與下層機鼻貨艙外殼。",
+        "en": "The Dreamlifter's cockpit glazing sits at the front of the 747 upper deck, high above the nose; side views show the elevated window band over the lower nose shell.",
+        "ja": "操縦席窓は747上層前端で機首より高く、側面では高い窓帯と下部機首外殻を同時に確認できます。"
+      },
+      "fact": {
+        "zh": "Beluga 的窗帶位於貨艙隆起下方低處；Dreamlifter 則位於機鼻上方高處。兩者的窗帶高度關係正好相反。",
+        "en": "The Beluga's windows sit low beneath its cargo bulge; the Dreamlifter's sit high above the nose—the opposite vertical relationship.",
+        "ja": "Belugaは貨物膨らみ下の低位置、Dreamlifterは機首上の高位置で、窓帯の上下関係が逆です。"
+      },
+      "bullets": [
+        {
+          "zh": "正面風擋位於短上層甲板前端。",
+          "en": "Forward panes cap the short upper deck.",
+          "ja": "正面風防は短い上層甲板前端です。"
+        },
+        {
+          "zh": "側窗高於主甲板艙門與下層窗列。",
+          "en": "Side panes sit above the main-deck door and lower window row.",
+          "ja": "側窓は主甲板扉と下層窓列より高いです。"
+        },
+        {
+          "zh": "搭配四具引擎即可排除 Beluga。",
+          "en": "Four engines immediately rule out the Beluga.",
+          "ja": "4発と組み合わせればBelugaではありません。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg"
+        },
+        {
+          "src": "assets/reference/dreamlifter/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-400LCF_Dreamlifter.jpg"
+        }
+      ]
+    },
+    "fuselage": {
+      "summary": {
+        "zh": "Dreamlifter 貨艙容積約 1,840 m³，內部截面約 6.3 × 6.9 m、可用長度約 30 m；整個後機身由鉸鏈向左側旋開裝卸。",
+        "en": "The Dreamlifter offers about 1,840 m³ with an approximately 6.3 × 6.9 m cross-section and 30 m usable length; the aft fuselage hinges open sideways for loading.",
+        "ja": "貨物室は約1,840 m³、断面約6.3 × 6.9 m、長さ約30 mで、後部胴体全体が横へ開きます。"
+      },
+      "fact": {
+        "zh": "它運送 787 機翼與機身段等大體積、相對不重的組件，因此追求的是容積而非傳統貨機的最大重量。",
+        "en": "It carries bulky, relatively light 787 wings and fuselage sections, prioritising volume rather than conventional freighter payload mass.",
+        "ja": "787の翼や胴体区画など大型で比較的軽い部品を運び、通常貨物機の重量より容積を重視します。"
+      },
+      "bullets": [
+        {
+          "zh": "尾部側開門是最重要結構特徵。",
+          "en": "The swing-tail door is the defining structure.",
+          "ja": "横開き尾部が最大の構造特徴です。"
+        },
+        {
+          "zh": "上半機身從駕駛艙後方一路巨大隆起。",
+          "en": "The upper fuselage swells dramatically behind the cockpit.",
+          "ja": "操縦席後方から上部胴体が大きく膨らみます。"
+        },
+        {
+          "zh": "下層貨艙仍可裝載一般貨物。",
+          "en": "The lower hold can still carry conventional cargo.",
+          "ja": "下部貨物室には通常貨物も積載できます。"
+        }
+      ],
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:747_400LCF_DREAM_LIFTER.jpg"
+        }
+      ]
+    },
+    "engine": {
+      "summary": {
+        "zh": "四架 Dreamlifter 均使用四具 Pratt & Whitney PW4062／PW4062A 高旁通比渦扇，兩具一組掛在每側 747-400 主翼下。",
+        "en": "All four Dreamlifters use four Pratt & Whitney PW4062/PW4062A high-bypass turbofans, two beneath each 747-400 wing.",
+        "ja": "4機のDreamlifterはいずれもPratt & Whitney PW4062／PW4062Aを4基、各翼下に2基ずつ装備します。"
+      },
+      "fact": {
+        "zh": "資料不能沿用採 GE 或 Rolls-Royce 引擎的其他 747-400；Dreamlifter 實際四架皆為 Pratt & Whitney 動力。",
+        "en": "Do not inherit engine data from GE- or Rolls-Royce-powered 747-400s; every Dreamlifter is Pratt & Whitney-powered.",
+        "ja": "GEやRolls-Royce搭載747-400の情報を流用せず、Dreamlifter全機はPratt & Whitney仕様です。"
+      },
+      "bullets": [
+        {
+          "zh": "四具引擎、每側兩具。",
+          "en": "Four engines, two per wing.",
+          "ja": "4発で各翼2基です。"
+        },
+        {
+          "zh": "型號為 PW4062／PW4062A。",
+          "en": "The type is PW4062/PW4062A.",
+          "ja": "型式はPW4062／PW4062Aです。"
+        },
+        {
+          "zh": "圓形短艙保留 747-400 比例。",
+          "en": "Round nacelles retain 747-400 proportions.",
+          "ja": "円形ナセルは747-400の比率です。"
+        }
+      ],
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "Dreamlifter 改裝時拆除了一般 747-400 高聳的翼尖小翼，主翼以平直、略帶端部整形的翼尖收尾。",
+        "en": "The Dreamlifter conversion removed the standard 747-400's tall winglets, leaving clean, nearly flat tips with simple fairing.",
+        "ja": "Dreamlifter改造では通常747-400の高いウイングレットを撤去し、簡潔でほぼ平らな翼端になりました。"
+      },
+      "fact": {
+        "zh": "『747-400 外型卻沒有垂直翼尖小翼』是辨識 Dreamlifter 的重要輔助特徵；但部分 747-400D 也無小翼，仍須看巨型貨艙。",
+        "en": "A 747-400-like aircraft without vertical winglets supports Dreamlifter identification, though some 747-400Ds also lack them; confirm the giant cargo body.",
+        "ja": "747-400形で垂直ウイングレットがない点は手掛かりですが、747-400Dも未装備なので巨大貨物胴体を確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "沒有一般 747-400 的高式翼尖小翼。",
+          "en": "No standard 747-400 tall winglet.",
+          "ja": "通常747-400の高いウイングレットはありません。"
+        },
+        {
+          "zh": "翼尖輪廓接近平直。",
+          "en": "The tip remains nearly flat.",
+          "ja": "翼端はほぼ平らです。"
+        },
+        {
+          "zh": "應搭配膨大機身與四發判讀。",
+          "en": "Confirm with the swollen body and four engines.",
+          "ja": "巨大胴体と4発も合わせて確認します。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-400LCF_Dreamlifter.jpg"
+        }
+      ]
+    },
+    "wing": {
+      "summary": {
+        "zh": "Dreamlifter 保留 747-400 的 64.44 m 後掠主翼與四發配置；巨大貨艙讓機翼看起來較低且較薄。",
+        "en": "The Dreamlifter retains the 747-400's 64.44 m swept four-engine wing, which appears low and thin beneath the enormous cargo body.",
+        "ja": "Dreamlifterは747-400の翼幅64.44 m後退4発翼を保ち、巨大貨物胴体の下で低く薄く見えます。"
+      },
+      "fact": {
+        "zh": "Beluga 只有兩具引擎且翼展 44.84 m；從正後方或下方看主翼與引擎配置即可快速區分。",
+        "en": "The Beluga has only two engines and a 44.84 m span; rear or underside views separate the pair quickly.",
+        "ja": "Belugaは双発・翼幅44.84 mで、後方や下面から主翼とエンジン配置を見ればすぐ区別できます。"
+      },
+      "bullets": [
+        {
+          "zh": "每側翼下有兩具引擎。",
+          "en": "Two engines hang beneath each wing.",
+          "ja": "各翼下に2基のエンジンがあります。"
+        },
+        {
+          "zh": "後掠角與 747-400 基本相同。",
+          "en": "Sweep is essentially that of the 747-400.",
+          "ja": "後退角は基本的に747-400と同じです。"
+        },
+        {
+          "zh": "大型襟翼支援重型低速起降。",
+          "en": "Large flaps support heavy low-speed operations.",
+          "ja": "大型フラップが重量機の低速運用を支えます。"
+        }
+      ],
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg"
+        }
+      ]
+    },
+    "vstab": {
+      "summary": {
+        "zh": "Dreamlifter 保留大型 747 垂直尾翼，尾翼本體並未像貨艙般膨大；相對巨型後機身，垂尾視覺上顯得窄而高。",
+        "en": "The Dreamlifter retains the large 747 vertical fin; because the cargo body is greatly enlarged, the fin appears relatively narrow and tall.",
+        "ja": "Dreamlifterは747の大型垂直尾翼を残し、巨大化した貨物胴体に対して細く高く見えます。"
+      },
+      "fact": {
+        "zh": "從正後方可同時看到中央垂尾、四具引擎與圓鼓的貨艙截面，這組輪廓與 Beluga 的尾端輔助小翼完全不同。",
+        "en": "From aft, the single centre fin, four engines and bulbous cargo cross-section contrast sharply with the Beluga's auxiliary tail finlets.",
+        "ja": "後方からの中央垂尾1枚、4発、丸い貨物断面は、Belugaの補助尾翼端フィンと明確に異なります。"
+      },
+      "bullets": [
+        {
+          "zh": "單一中央垂直尾翼。",
+          "en": "A single central vertical fin.",
+          "ja": "中央垂直尾翼は1枚です。"
+        },
+        {
+          "zh": "沒有 Beluga 的水平尾翼端部小翼。",
+          "en": "No Beluga-style tailplane finlets.",
+          "ja": "Beluga型の水平尾翼端フィンはありません。"
+        },
+        {
+          "zh": "尾根前方緊接巨大貨艙尾段。",
+          "en": "The fin root meets the enlarged aft cargo shell.",
+          "ja": "垂尾根元は巨大な後部貨物外殻へ接続します。"
+        }
+      ],
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-409(LCF)_Dreamlifter,_N249BA_-_PAE_(21348697683).jpg"
+        }
+      ]
+    },
+    "hstab": {
+      "summary": {
+        "zh": "Dreamlifter 水平尾翼保留 747 低置後掠布局，與後機身共同位於可旋開的尾段；裝卸時整個尾段向側面移開。",
+        "en": "The Dreamlifter retains the 747's low swept tailplanes, attached to the aft section that swings sideways during loading.",
+        "ja": "水平尾翼は747の低位置後退配置を保ち、積載時に横へ旋回する後部区画に付いています。"
+      },
+      "fact": {
+        "zh": "尾門的鉸鏈、鎖定與重新對準精度是 Dreamlifter 結構核心；關閉後仍需恢復完整飛行載荷路徑。",
+        "en": "Hinging, locking and precise realignment of the tail are structural essentials because the closed section must restore the full flight-load path.",
+        "ja": "尾部のヒンジ、ロック、精密再結合は、閉鎖後に飛行荷重経路を戻すため重要です。"
+      },
+      "bullets": [
+        {
+          "zh": "水平尾翼低置於機尾兩側。",
+          "en": "Tailplanes mount low on both sides.",
+          "ja": "水平尾翼は機尾両側の低位置です。"
+        },
+        {
+          "zh": "沒有端部輔助垂直翼。",
+          "en": "There are no auxiliary vertical tip fins.",
+          "ja": "端部補助垂直フィンはありません。"
+        },
+        {
+          "zh": "尾段可隨貨艙門整體旋開。",
+          "en": "The entire tail section swings with the cargo door.",
+          "ja": "尾部区画全体が貨物扉とともに旋回します。"
+        }
+      ],
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_747-409(LCF)_Dreamlifter,_N249BA_-_PAE_(21348697683).jpg"
+        }
+      ]
+    },
+    "gear": {
+      "summary": {
+        "zh": "Dreamlifter 沿用 747-400 的 18 輪起落架：前腳雙輪，翼下與機身下共有四組四輪主轉向架，用來分散巨大重量。",
+        "en": "The Dreamlifter retains the 747-400's 18-wheel gear: twin nose wheels plus four four-wheel main bogies beneath the wings and fuselage.",
+        "ja": "Dreamlifterは747-400の18輪脚を継承し、前脚2輪と翼下・胴体下の4組4輪主脚で重量を分散します。"
+      },
+      "fact": {
+        "zh": "最大起飛重量約 364,235 kg；四組主腳與 18 輪配置遠多於 Beluga 的兩組主腳、10 輪。",
+        "en": "Maximum takeoff weight is about 364,235 kg; four main bogies and 18 wheels greatly exceed the Beluga's two bogies and ten wheels.",
+        "ja": "最大離陸重量は約364,235 kgで、4組主脚・18輪はBelugaの2組・10輪より大幅に多いです。"
+      },
+      "bullets": [
+        {
+          "zh": "前腳為雙輪。",
+          "en": "The nose gear has twin wheels.",
+          "ja": "前脚は2輪です。"
+        },
+        {
+          "zh": "兩組翼腳加兩組機身腳。",
+          "en": "Two wing bogies are supplemented by two body bogies.",
+          "ja": "翼脚2組に胴体脚2組を加えます。"
+        },
+        {
+          "zh": "總輪數為 18 輪。",
+          "en": "Total wheel count is eighteen.",
+          "ja": "総輪数は18輪です。"
+        }
+      ],
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dreamlifter/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg"
+        }
+      ]
+    }
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ]
 }

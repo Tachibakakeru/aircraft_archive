@@ -4,17 +4,9 @@ $root = Split-Path -Parent $PSScriptRoot
 
 function Get-CommonsImageInfo($fileTitles, $width, $includeMetadata = $false) {
   $byTitle = @{}
-  $props = if ($includeMetadata) { "url%7Cextmetadata" } else { "url" }
-  $uniqueTitles = @($fileTitles | Sort-Object -Unique)
-  for ($i = 0; $i -lt $uniqueTitles.Count; $i += 40) {
-    $batch = @($uniqueTitles[$i..([Math]::Min($i + 39, $uniqueTitles.Count - 1))])
-    $titles = ($batch | ForEach-Object { "File:$_" }) -join "|"
-    $api = "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=$props&iiurlwidth=$width&titles=$([uri]::EscapeDataString($titles))"
-    $pages = (Invoke-RestMethod -Uri $api -UserAgent "SKY-ARCHIVE/1.0 (reference photo downloader)").query.pages.psobject.Properties.Value
-    foreach ($page in $pages) {
-      if (-not $page.imageinfo) { throw "Wikimedia Commons file not found: $($page.title)" }
-      $byTitle[$page.title.Substring(5)] = $page.imageinfo[0]
-    }
+  foreach ($title in @($fileTitles | Sort-Object -Unique)) {
+    $escaped = [uri]::EscapeDataString($title)
+    $byTitle[$title] = @{ thumburl = "https://commons.wikimedia.org/wiki/Special:Redirect/file/${escaped}?width=$width" }
   }
   return $byTitle
 }
@@ -180,6 +172,8 @@ $photos = [ordered]@{
   "a318/gear.jpg" = "Airbus A318 Landing Gear (8604009277).jpg"
   "b772/cockpit.jpg" = "Boeing 777-200ER cockpit.jpg"
   "a343/cockpit.jpg" = "A340-300 cockpit (8459431964).jpg"
+  "beluga/cockpit.jpg" = "Airbus A300 panel.jpg"
+  "dreamlifter/cockpit.jpg" = "Boeing 747-400 cockpit.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -287,6 +281,26 @@ $windowPhotos = @(
   @{ Dest="a343/vstab.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 06.jpg"; Crop=@(.05,.25,.25) }
   @{ Dest="a343/hstab.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 06.jpg"; Crop=@(.08,.38,.30) }
   @{ Dest="a343/gear.jpg"; Title="South African Airways Airbus A340-313 ZS-SXE MUC 2015 02.jpg"; Crop=@(.35,.51,.35) }
+  @{ Dest="beluga/overview.jpg"; Title="Airbus Beluga Airbus A300B4-608ST F-GSTA (28858044414).jpg"; Crop=@(.04,.27,.92) }
+  @{ Dest="beluga/window-front.jpg"; Title="Airbus A300-600ST Beluga F-GSTB 44675.jpg"; Crop=@(.35,.61,.30); Force=$true }
+  @{ Dest="beluga/window-side.jpg"; Title="Airbus A300-600ST Beluga F-GSTA.jpg"; Crop=@(.18,.43,.20); Force=$true }
+  @{ Dest="beluga/fuselage.jpg"; Title="Airbus Beluga A300-600ST open.jpeg"; Crop=@(.02,.18,.96) }
+  @{ Dest="beluga/engine.jpg"; Title="Airbus A300-600ST Beluga F-GSTA.jpg"; Crop=@(.31,.49,.34) }
+  @{ Dest="beluga/wingtip.jpg"; Title="Airbus A300-600ST Beluga 1 (1).jpg"; Crop=@(.00,.29,.38) }
+  @{ Dest="beluga/wing.jpg"; Title="Airbus A300-600ST Beluga 1 (1).jpg"; Crop=@(.05,.29,.66) }
+  @{ Dest="beluga/vstab.jpg"; Title="Airbus A300-600ST Beluga 1 (1).jpg"; Crop=@(.58,.13,.38) }
+  @{ Dest="beluga/hstab.jpg"; Title="Airbus A300-600ST Beluga 1 (1).jpg"; Crop=@(.51,.31,.46) }
+  @{ Dest="beluga/gear.jpg"; Title="Airbus A300-600ST Beluga F-GSTB 44675.jpg"; Crop=@(.27,.51,.46) }
+  @{ Dest="dreamlifter/overview.jpg"; Title="Boeing Dreamlifter Landing.jpg"; Crop=@(.08,.35,.84) }
+  @{ Dest="dreamlifter/window-front.jpg"; Title="Boeing Dreamlifter Landing.jpg"; Crop=@(.70,.52,.22); Force=$true }
+  @{ Dest="dreamlifter/window-side.jpg"; Title="Boeing 747-400LCF Dreamlifter.jpg"; Crop=@(.67,.29,.27) }
+  @{ Dest="dreamlifter/fuselage.jpg"; Title="747 400LCF DREAM LIFTER.jpg"; Crop=@(.10,.17,.80); Force=$true }
+  @{ Dest="dreamlifter/engine.jpg"; Title="Boeing Dreamlifter Landing.jpg"; Crop=@(.39,.49,.34) }
+  @{ Dest="dreamlifter/wingtip.jpg"; Title="Boeing 747-400LCF Dreamlifter.jpg"; Crop=@(.00,.48,.35); Force=$true }
+  @{ Dest="dreamlifter/wing.jpg"; Title="Boeing Dreamlifter Landing.jpg"; Crop=@(.16,.36,.55) }
+  @{ Dest="dreamlifter/vstab.jpg"; Title="Boeing 747-409(LCF) Dreamlifter, N249BA - PAE (21348697683).jpg"; Crop=@(.40,.02,.20); Force=$true }
+  @{ Dest="dreamlifter/hstab.jpg"; Title="Boeing 747-409(LCF) Dreamlifter, N249BA - PAE (21348697683).jpg"; Crop=@(.20,.35,.60); Force=$true }
+  @{ Dest="dreamlifter/gear.jpg"; Title="Boeing Dreamlifter Landing.jpg"; Crop=@(.39,.56,.40) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600

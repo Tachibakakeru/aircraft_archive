@@ -215,3 +215,14 @@
 - 因比較功能已涵蓋 Boeing、Airbus 以外的製造商，將原「波音 vs 空巴」統一改為繁中「機型對比」、英文「Aircraft Comparison」、日文「機種比較」。
 - 比較頁標題改為「機型與部位設計對比」，並同步更新機隊導覽按鈕、頁面標題、三語 i18n 與程式／樣式註解；`fleet.html`、`versus.html` 的 i18n 資源版本升為 v=153。尚未 commit、尚未 push。
 - 使用者已確認並要求發布；本次重新命名準備提交並推送至 `origin/main`。
+
+### Airbus Beluga / Boeing Dreamlifter 實機部位辨識比較（2026-08-29，本地完成、待確認）
+
+- 下一批選定 Airbus Beluga（`beluga`）與 Boeing 747-400 Dreamlifter（`dreamlifter`）：兩者皆為運送大型航空器零組件的特殊貨機，適合比較基礎機型、駕駛艙／外窗、超大型貨艙、裝卸艙門、引擎、翼尖、主翼、尾翼與起落架。
+- 沿用現有 10 類、Wikimedia Commons 真實照片、三語辨識與授權紀錄管線；完成後先開本地預覽，未經使用者確認不 push。`data/korean_airlines_debug.json` 維持未追蹤且不納入作業。
+- 已完成兩型各 10 類三語辨識內容與各 11 張 Commons 真實照片，涵蓋 A300／747-400 家族駕駛艙、正／側外窗、Beluga 前開鼻門、Dreamlifter 側開尾段、雙發／四發、無大型翼尖小翼、尾翼與 10／18 輪起落架差異；作者、授權、裁切及家族照片適用範圍已記錄。
+- 修正 Dreamlifter 舊資料：引擎由錯誤的 GE CF6-80C2 更正為四具 Pratt & Whitney PW4062／PW4062A，最大起飛重量更正為 364,235 kg；照片下載器改用 Commons 官方檔案轉址，避免批次 metadata API 限流。
+- 比較／檢視資料升為 v=154，Service Worker cache 升為 `hangar-v16`；更新工具自我檢查通過 24 架 × 10 類／264 張照片，JSON、Python、JavaScript 與 `git diff --check` 均通過。
+- 本地瀏覽器驗證比較頁 10 列、22 張照片、22 個 Commons 來源、20 個單機部位連結且無破圖；繁中、英文、日文切換正常，Beluga 水平尾翼與 Dreamlifter 機身深連結均載入正確照片與內容。
+- 本機預覽：`http://localhost:8000/versus.html?a=beluga&b=dreamlifter&local=154`。本批尚未 commit、尚未 push，等待使用者確認。
+- 使用者已確認本批並同意發布；準備提交並推送至 `origin/main`，之後接續下一組機型。

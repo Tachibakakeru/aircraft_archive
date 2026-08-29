@@ -5,7 +5,7 @@
    ?v=N 等查詢字串照樣被當成獨立 URL 快取，部署後自動更新。
    衛星圖磚另外走獨立的 cache-first 快取（見下方 TILE_CACHE），
    跟主要快取分開，容量壓力互不影響。 */
-const CACHE = "hangar-v15";
+const CACHE = "hangar-v16";
 const TILE_CACHE = "hangar-tiles-v1";
 const TILE_HOSTS = ["server.arcgisonline.com"];
 const TILE_LIMIT = 800;   // 圖磚快取上限筆數，超過時淘汰最舊的（Cache.keys() 近似插入序）

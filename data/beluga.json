@@ -2,18 +2,30 @@
   "title": "Airbus Beluga",
   "sub": "貨機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus Beluga 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "Beluga 的上部貨艙最大約 7.1 m 寬、6.7 m 高，可容納長達約 30 m 的超大型貨物；前方整片貨艙門向上掀開。",
+        "en": "The Beluga's upper hold reaches about 7.1 m wide and 6.7 m high for outsized loads up to roughly 30 m long; the entire forward cargo shell hinges upward.",
+        "ja": "上部貨物室は最大約7.1 m幅、6.7 m高で約30 mの大型貨物を収容し、前部外殻全体が上へ開きます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "Beluga 從機首裝載；Dreamlifter 則把後機身整段向側面旋開。看到開門位置即可快速區分兩者。",
+        "en": "The Beluga loads through the nose, whereas the Dreamlifter swings its aft fuselage sideways; the door location quickly separates them.",
+        "ja": "Belugaは機首から積載し、Dreamlifterは後部胴体を横へ旋回させます。扉位置で素早く区別できます。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "貨艙容積約 1,400 m³。",
+          "en": "Cargo volume is about 1,400 m³.",
+          "ja": "貨物容積は約1,400 m³です。"
+        },
+        {
+          "zh": "載重約 47,000 kg。",
+          "en": "Payload is about 47,000 kg.",
+          "ja": "搭載量は約47,000 kgです。"
+        },
+        {
+          "zh": "下半機身仍保留 A300-600 基本結構。",
+          "en": "The lower fuselage retains the basic A300-600 structure.",
+          "ja": "下部胴体はA300-600の基本構造を保ちます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/beluga/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_Beluga_A300-600ST_open.jpeg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus Beluga 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "BelugaST 主翼源自 A300-600，翼展 44.84 m，後掠主翼下各掛一具 CF6；機身巨大後，主翼視覺上顯得相對短小。",
+        "en": "The BelugaST uses the A300-600-derived 44.84 m swept wing with one CF6 beneath each side; the huge fuselage makes the wing look relatively compact.",
+        "ja": "BelugaSTはA300-600由来の翼幅44.84 m後退翼を使い、巨大な胴体のため翼が相対的に小さく見えます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "Dreamlifter 的 747 翼展達 64.44 m 且有四具引擎；比較翼展與引擎數量可立即判別。",
+        "en": "The Dreamlifter spans 64.44 m and carries four engines, so span and engine count separate the pair immediately.",
+        "ja": "Dreamlifterは翼幅64.44 m・4発で、翼幅とエンジン数からすぐ区別できます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "後掠低翼配置。",
+          "en": "Swept low-wing arrangement.",
+          "ja": "後退した低翼配置です。"
+        },
+        {
+          "zh": "翼展 44.84 m。",
+          "en": "Wingspan is 44.84 m.",
+          "ja": "翼幅は44.84 mです。"
+        },
+        {
+          "zh": "高升力裝置沿後緣展開。",
+          "en": "High-lift devices occupy much of the trailing edge.",
+          "ja": "後縁の広い範囲に高揚力装置があります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/beluga/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus Beluga 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "BelugaST 使用兩具 GE CF6-80C2A8 高旁通比渦扇，分別吊掛在左右主翼下；圓形短艙與雙發布局來自 A300-600。",
+        "en": "The BelugaST uses two GE CF6-80C2A8 high-bypass turbofans, one beneath each A300-600-derived wing.",
+        "ja": "BelugaSTはA300-600由来の主翼下にGE CF6-80C2A8高バイパス比ターボファンを各1基装備します。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "Dreamlifter 有四具 PW4062A；遠距離辨識時，雙發 Beluga 與四發 Dreamlifter 幾乎不會混淆。",
+        "en": "The Dreamlifter has four PW4062A engines, making the twin-versus-four-engine distinction decisive at range.",
+        "ja": "DreamlifterはPW4062Aを4基装備するため、双発と4発の違いが遠距離でも決定的です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "左右主翼各一具引擎。",
+          "en": "One engine is mounted under each wing.",
+          "ja": "左右主翼下に各1基です。"
+        },
+        {
+          "zh": "短艙為傳統圓形進氣口。",
+          "en": "The nacelle has a conventional round inlet.",
+          "ja": "ナセル吸気口は通常の円形です。"
+        },
+        {
+          "zh": "推力級約 26 噸。",
+          "en": "Each engine is in roughly the 26-tonne-thrust class.",
+          "ja": "各エンジンは約26トン推力級です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/beluga/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTA.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "Beluga 的垂尾經放大與強化，根部前方有醒目的三角形背鰭，用來補償巨大上機身帶來的方向穩定影響。",
+        "en": "The Beluga has an enlarged reinforced fin with a conspicuous triangular dorsal extension to restore directional stability behind the huge upper fuselage.",
+        "ja": "Belugaの垂直尾翼は大型化・強化され、巨大な上部胴体による方向安定低下を補う三角形背びれがあります。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "高大的垂尾、寬背鰭與水平尾翼端小翼共同構成 Beluga 特有的尾部輪廓。",
+        "en": "The tall fin, broad dorsal extension and tailplane finlets together create the Beluga's distinctive tail silhouette.",
+        "ja": "高い垂尾、幅広い背びれ、水平尾翼端フィンがBeluga独特の尾部輪郭を作ります。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "垂尾根部背鰭向前延伸。",
+          "en": "A dorsal extension runs forward from the fin root.",
+          "ja": "垂尾根元の背びれが前方へ伸びます。"
+        },
+        {
+          "zh": "尾翼相對機身高度很高。",
+          "en": "The fin is tall relative to the fuselage.",
+          "ja": "胴体に対して垂尾が高いです。"
+        },
+        {
+          "zh": "方向舵後緣近乎筆直。",
+          "en": "The rudder trailing edge is nearly straight.",
+          "ja": "方向舵後縁はほぼ直線です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/beluga/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "Beluga 的水平尾翼經強化，左右端部各加裝一片直立輔助垂尾；從正後方看形成非常特殊的三垂直面配置。",
+        "en": "The Beluga's reinforced tailplane carries an auxiliary vertical finlet at each tip, creating a distinctive three-vertical-surface rear view.",
+        "ja": "強化された水平尾翼の両端に補助垂直フィンが付き、後方から3枚の垂直面に見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "端部小翼是為改善巨大機身遮蔽氣流時的方向穩定性，不是減少主翼誘導阻力的翼尖小翼。",
+        "en": "These finlets improve directional stability in flow disturbed by the huge fuselage; they are not drag-reducing main-wing devices.",
+        "ja": "端部フィンは巨大胴体後流での方向安定を補い、主翼の抗力低減用装置ではありません。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "左右水平尾翼端各一片直立小翼。",
+          "en": "One vertical finlet stands at each tailplane tip.",
+          "ja": "左右水平尾翼端に各1枚の垂直フィンがあります。"
+        },
+        {
+          "zh": "水平尾翼低置於垂尾根部。",
+          "en": "The tailplane mounts low at the fin root.",
+          "ja": "水平尾翼は垂尾根元の低位置です。"
+        },
+        {
+          "zh": "這是 Beluga 最強的後方識別點。",
+          "en": "This is the strongest rear identification cue.",
+          "ja": "Belugaを後方から識別する最強の特徴です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/beluga/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Airbus Beluga 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "Beluga 沿用 A300-600 起落架：前腳雙輪，左右主腳各四輪，合計 10 輪；主腳位於翼根下方。",
+        "en": "The Beluga retains A300-600 landing gear: twin nose wheels and four wheels on each main bogie, ten wheels in total.",
+        "ja": "BelugaはA300-600の脚を継承し、前脚2輪、左右主脚各4輪の合計10輪です。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "Dreamlifter 沿用 747 的 18 輪配置並有四組主起落架；主腳組數是地面辨識兩者的直接方法。",
+        "en": "The Dreamlifter retains the 747's 18-wheel arrangement with four main bogies; bogie count is a direct ground-identification cue.",
+        "ja": "Dreamlifterは4組主脚を持つ747の18輪配置で、主脚組数が地上識別に有効です。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "前腳為單支柱雙輪。",
+          "en": "The nose unit has twin wheels on one strut.",
+          "ja": "前脚は単支柱2輪です。"
+        },
+        {
+          "zh": "每側主腳為四輪轉向架。",
+          "en": "Each main bogie carries four wheels.",
+          "ja": "左右主脚は各4輪ボギーです。"
+        },
+        {
+          "zh": "總輪數為 10 輪。",
+          "en": "Total wheel count is ten.",
+          "ja": "総輪数は10輪です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/beluga/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTB_44675.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A300-600ST Beluga 以 A300-600 為基礎，把上半機身擴成鯨魚般的超大貨艙；低置駕駛艙、雙發與前開式貨艙門是最醒目的組合。",
+        "en": "The A300-600ST Beluga combines an A300-600 lower airframe with a whale-like upper cargo hold; its low cockpit, twin engines and upward-opening nose door form the key silhouette.",
+        "ja": "A300-600ST BelugaはA300-600の下部機体に巨大な上部貨物室を組み合わせ、低い操縦席、双発、上開き機首貨物扉が特徴です。"
+      },
+      "fact": {
+        "zh": "BelugaST 可載約 47 噸，貨艙容積約 1,400 m³，主要任務是運送機翼與機身段等超大型空中巴士零組件。",
+        "en": "The BelugaST carries about 47 tonnes in roughly 1,400 m³, principally moving oversized Airbus wings and fuselage sections.",
+        "ja": "BelugaSTは約47トン、約1,400 m³の貨物室を持ち、主にエアバスの翼や胴体区画を輸送します。"
+      },
+      "bullets": [
+        {
+          "zh": "機長 56.15 m、翼展 44.84 m。",
+          "en": "Length 56.15 m; span 44.84 m.",
+          "ja": "全長56.15 m、全幅44.84 mです。"
+        },
+        {
+          "zh": "駕駛艙位於貨艙地板下方。",
+          "en": "The cockpit sits below the cargo floor.",
+          "ja": "操縦席は貨物床より下にあります。"
+        },
+        {
+          "zh": "前端貨艙門向上開啟，不必拆離駕駛艙。",
+          "en": "The forward cargo door opens upward without disconnecting the cockpit.",
+          "ja": "前部貨物扉は操縦席を切り離さず上方へ開きます。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/beluga/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_Beluga_Airbus_A300B4-608ST_F-GSTA_(28858044414).jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "BelugaST 沿用 A300-600 世代駕駛艙：傳統駕駛盤、早期 EFIS 顯示器與大量實體開關；照片為同家族 A300 的代表配置。",
+        "en": "The BelugaST retains the A300-600-generation flight deck with conventional yokes, early EFIS displays and numerous physical controls; the photo shows the shared A300-family layout.",
+        "ja": "BelugaSTは操縦輪、初期EFIS、多数の物理操作部を持つA300-600世代の操縦席を継承します。写真は同系A300の代表配置です。"
+      },
+      "fact": {
+        "zh": "座艙被下移到主貨艙地板以下，裝卸時貨艙鼻門可在駕駛艙上方開啟，這是它與一般鼻門貨機最大的操作差異。",
+        "en": "Placing the cockpit below the main-deck floor lets the cargo nose open above it during loading, unlike conventional nose-door freighters.",
+        "ja": "操縦席を主貨物床より下に置くため、一般的な機首扉貨物機と違い、その上で機首扉を開けられます。"
+      },
+      "bullets": [
+        {
+          "zh": "正副駕駛均使用傳統駕駛盤。",
+          "en": "Both pilots use conventional yokes.",
+          "ja": "両操縦席に従来型操縦輪があります。"
+        },
+        {
+          "zh": "儀表風格屬 A300-600 的類比／早期玻璃化過渡世代。",
+          "en": "Instrumentation reflects the A300-600 analogue-to-early-glass transition.",
+          "ja": "A300-600のアナログから初期グラス化への移行期の計器です。"
+        },
+        {
+          "zh": "駕駛艙照片應視為 A300 家族布局參考。",
+          "en": "Treat the cockpit photograph as an A300-family layout reference.",
+          "ja": "操縦席写真はA300ファミリー配置の参考です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/beluga/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300_panel.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "Beluga 的六片式 A300 駕駛艙窗位於巨大貨艙隆起下方，正面看像一條很低的窄窗帶；側面窗則緊貼機鼻下半部。",
+        "en": "The Beluga's six-pane A300 glazing forms a narrow low-set band beneath the huge cargo bulge, with the side panes tucked into the lower nose.",
+        "ja": "BelugaのA300系6枚窓は巨大な貨物室膨らみの下に低く細い窓帯を作り、側面窓も機首下部にあります。"
+      },
+      "fact": {
+        "zh": "不要只看窗片輪廓：『窗帶極低、上方是無窗的大型圓頂貨艙』才是 Beluga 最可靠的正面識別點。",
+        "en": "Do not rely on pane shape alone: the extremely low window band beneath a windowless domed cargo body is the strongest frontal cue.",
+        "ja": "窓形だけでなく、窓のない巨大なドーム状貨物室の下に窓帯が極端に低い点が最重要です。"
+      },
+      "bullets": [
+        {
+          "zh": "兩片主風擋位於機鼻中線兩側。",
+          "en": "Two main windshields flank the nose centreline.",
+          "ja": "2枚の主風防が機首中心線を挟みます。"
+        },
+        {
+          "zh": "外側斜窗向後連到側窗。",
+          "en": "Angled outer panes lead into the side windows.",
+          "ja": "斜めの外側窓が側面窓へ続きます。"
+        },
+        {
+          "zh": "貨艙隆起遠高於窗帶。",
+          "en": "The cargo bulge towers above the glazing.",
+          "ja": "貨物室の膨らみは窓帯よりはるかに高いです。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/beluga/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTB_44675.jpg"
+        },
+        {
+          "src": "assets/reference/beluga/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTA.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "BelugaST 保留 A300-600 的簡潔翼尖，沒有大型垂直小翼；從後方可見翼尖只以小幅上翹／端部整形收尾。",
+        "en": "The BelugaST retains the A300-600's plain tip without a large vertical winglet, ending in only a modest tip fairing.",
+        "ja": "BelugaSTは大型垂直ウイングレットのないA300-600の簡潔な翼端を保ちます。"
+      },
+      "fact": {
+        "zh": "照片中靠近尾部的小型直立片是水平尾翼端部輔助垂直翼，不是主翼翼尖小翼。",
+        "en": "The small upright surfaces near the tail are auxiliary tailplane finlets, not main-wing winglets.",
+        "ja": "尾部近くの小さな直立面は水平尾翼端の補助フィンで、主翼ウイングレットではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "主翼端沒有高聳翼尖小翼。",
+          "en": "No tall winglet rises from the main-wing tip.",
+          "ja": "主翼端に高いウイングレットはありません。"
+        },
+        {
+          "zh": "翼尖輪廓薄而平順。",
+          "en": "The tip profile is thin and clean.",
+          "ja": "翼端形状は薄く簡潔です。"
+        },
+        {
+          "zh": "應與尾翼端部小翼分開辨認。",
+          "en": "Do not confuse it with the tailplane finlets.",
+          "ja": "水平尾翼端フィンと混同しないでください。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/beluga/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg"
+        }
+      ]
     }
   },
   "specifications": {

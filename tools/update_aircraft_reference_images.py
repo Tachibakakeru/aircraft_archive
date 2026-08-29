@@ -316,6 +316,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_06.jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:South_African_Airways_Airbus_A340-313_ZS-SXE_MUC_2015_02.jpg",
     },
+    "beluga": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Airbus_Beluga_Airbus_A300B4-608ST_F-GSTA_(28858044414).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Airbus_A300_panel.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTB_44675.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTA.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Airbus_Beluga_A300-600ST_open.jpeg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTA.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_1_(1).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Airbus_A300-600ST_Beluga_F-GSTB_44675.jpg",
+    },
+    "dreamlifter": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_747-400_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Boeing_747-400LCF_Dreamlifter.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:747_400LCF_DREAM_LIFTER.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Boeing_747-400LCF_Dreamlifter.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Boeing_747-409(LCF)_Dreamlifter,_N249BA_-_PAE_(21348697683).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Boeing_747-409(LCF)_Dreamlifter,_N249BA_-_PAE_(21348697683).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg",
+    },
 }
 
 
@@ -783,6 +809,113 @@ CONTENT = {
         ),
     },
 }
+
+CONTENT.update({
+    "beluga": {
+        "overview": identify(
+            ("A300-600ST Beluga 以 A300-600 為基礎，把上半機身擴成鯨魚般的超大貨艙；低置駕駛艙、雙發與前開式貨艙門是最醒目的組合。", "The A300-600ST Beluga combines an A300-600 lower airframe with a whale-like upper cargo hold; its low cockpit, twin engines and upward-opening nose door form the key silhouette.", "A300-600ST BelugaはA300-600の下部機体に巨大な上部貨物室を組み合わせ、低い操縦席、双発、上開き機首貨物扉が特徴です。"),
+            ("BelugaST 可載約 47 噸，貨艙容積約 1,400 m³，主要任務是運送機翼與機身段等超大型空中巴士零組件。", "The BelugaST carries about 47 tonnes in roughly 1,400 m³, principally moving oversized Airbus wings and fuselage sections.", "BelugaSTは約47トン、約1,400 m³の貨物室を持ち、主にエアバスの翼や胴体区画を輸送します。"),
+            [("機長 56.15 m、翼展 44.84 m。", "Length 56.15 m; span 44.84 m.", "全長56.15 m、全幅44.84 mです。"), ("駕駛艙位於貨艙地板下方。", "The cockpit sits below the cargo floor.", "操縦席は貨物床より下にあります。"), ("前端貨艙門向上開啟，不必拆離駕駛艙。", "The forward cargo door opens upward without disconnecting the cockpit.", "前部貨物扉は操縦席を切り離さず上方へ開きます。")],
+        ),
+        "cockpit": identify(
+            ("BelugaST 沿用 A300-600 世代駕駛艙：傳統駕駛盤、早期 EFIS 顯示器與大量實體開關；照片為同家族 A300 的代表配置。", "The BelugaST retains the A300-600-generation flight deck with conventional yokes, early EFIS displays and numerous physical controls; the photo shows the shared A300-family layout.", "BelugaSTは操縦輪、初期EFIS、多数の物理操作部を持つA300-600世代の操縦席を継承します。写真は同系A300の代表配置です。"),
+            ("座艙被下移到主貨艙地板以下，裝卸時貨艙鼻門可在駕駛艙上方開啟，這是它與一般鼻門貨機最大的操作差異。", "Placing the cockpit below the main-deck floor lets the cargo nose open above it during loading, unlike conventional nose-door freighters.", "操縦席を主貨物床より下に置くため、一般的な機首扉貨物機と違い、その上で機首扉を開けられます。"),
+            [("正副駕駛均使用傳統駕駛盤。", "Both pilots use conventional yokes.", "両操縦席に従来型操縦輪があります。"), ("儀表風格屬 A300-600 的類比／早期玻璃化過渡世代。", "Instrumentation reflects the A300-600 analogue-to-early-glass transition.", "A300-600のアナログから初期グラス化への移行期の計器です。"), ("駕駛艙照片應視為 A300 家族布局參考。", "Treat the cockpit photograph as an A300-family layout reference.", "操縦席写真はA300ファミリー配置の参考です。")],
+        ),
+        "windshield": identify(
+            ("Beluga 的六片式 A300 駕駛艙窗位於巨大貨艙隆起下方，正面看像一條很低的窄窗帶；側面窗則緊貼機鼻下半部。", "The Beluga's six-pane A300 glazing forms a narrow low-set band beneath the huge cargo bulge, with the side panes tucked into the lower nose.", "BelugaのA300系6枚窓は巨大な貨物室膨らみの下に低く細い窓帯を作り、側面窓も機首下部にあります。"),
+            ("不要只看窗片輪廓：『窗帶極低、上方是無窗的大型圓頂貨艙』才是 Beluga 最可靠的正面識別點。", "Do not rely on pane shape alone: the extremely low window band beneath a windowless domed cargo body is the strongest frontal cue.", "窓形だけでなく、窓のない巨大なドーム状貨物室の下に窓帯が極端に低い点が最重要です。"),
+            [("兩片主風擋位於機鼻中線兩側。", "Two main windshields flank the nose centreline.", "2枚の主風防が機首中心線を挟みます。"), ("外側斜窗向後連到側窗。", "Angled outer panes lead into the side windows.", "斜めの外側窓が側面窓へ続きます。"), ("貨艙隆起遠高於窗帶。", "The cargo bulge towers above the glazing.", "貨物室の膨らみは窓帯よりはるかに高いです。")],
+        ),
+        "fuselage": identify(
+            ("Beluga 的上部貨艙最大約 7.1 m 寬、6.7 m 高，可容納長達約 30 m 的超大型貨物；前方整片貨艙門向上掀開。", "The Beluga's upper hold reaches about 7.1 m wide and 6.7 m high for outsized loads up to roughly 30 m long; the entire forward cargo shell hinges upward.", "上部貨物室は最大約7.1 m幅、6.7 m高で約30 mの大型貨物を収容し、前部外殻全体が上へ開きます。"),
+            ("Beluga 從機首裝載；Dreamlifter 則把後機身整段向側面旋開。看到開門位置即可快速區分兩者。", "The Beluga loads through the nose, whereas the Dreamlifter swings its aft fuselage sideways; the door location quickly separates them.", "Belugaは機首から積載し、Dreamlifterは後部胴体を横へ旋回させます。扉位置で素早く区別できます。"),
+            [("貨艙容積約 1,400 m³。", "Cargo volume is about 1,400 m³.", "貨物容積は約1,400 m³です。"), ("載重約 47,000 kg。", "Payload is about 47,000 kg.", "搭載量は約47,000 kgです。"), ("下半機身仍保留 A300-600 基本結構。", "The lower fuselage retains the basic A300-600 structure.", "下部胴体はA300-600の基本構造を保ちます。")],
+        ),
+        "engine": identify(
+            ("BelugaST 使用兩具 GE CF6-80C2A8 高旁通比渦扇，分別吊掛在左右主翼下；圓形短艙與雙發布局來自 A300-600。", "The BelugaST uses two GE CF6-80C2A8 high-bypass turbofans, one beneath each A300-600-derived wing.", "BelugaSTはA300-600由来の主翼下にGE CF6-80C2A8高バイパス比ターボファンを各1基装備します。"),
+            ("Dreamlifter 有四具 PW4062A；遠距離辨識時，雙發 Beluga 與四發 Dreamlifter 幾乎不會混淆。", "The Dreamlifter has four PW4062A engines, making the twin-versus-four-engine distinction decisive at range.", "DreamlifterはPW4062Aを4基装備するため、双発と4発の違いが遠距離でも決定的です。"),
+            [("左右主翼各一具引擎。", "One engine is mounted under each wing.", "左右主翼下に各1基です。"), ("短艙為傳統圓形進氣口。", "The nacelle has a conventional round inlet.", "ナセル吸気口は通常の円形です。"), ("推力級約 26 噸。", "Each engine is in roughly the 26-tonne-thrust class.", "各エンジンは約26トン推力級です。")],
+        ),
+        "wingtip": identify(
+            ("BelugaST 保留 A300-600 的簡潔翼尖，沒有大型垂直小翼；從後方可見翼尖只以小幅上翹／端部整形收尾。", "The BelugaST retains the A300-600's plain tip without a large vertical winglet, ending in only a modest tip fairing.", "BelugaSTは大型垂直ウイングレットのないA300-600の簡潔な翼端を保ちます。"),
+            ("照片中靠近尾部的小型直立片是水平尾翼端部輔助垂直翼，不是主翼翼尖小翼。", "The small upright surfaces near the tail are auxiliary tailplane finlets, not main-wing winglets.", "尾部近くの小さな直立面は水平尾翼端の補助フィンで、主翼ウイングレットではありません。"),
+            [("主翼端沒有高聳翼尖小翼。", "No tall winglet rises from the main-wing tip.", "主翼端に高いウイングレットはありません。"), ("翼尖輪廓薄而平順。", "The tip profile is thin and clean.", "翼端形状は薄く簡潔です。"), ("應與尾翼端部小翼分開辨認。", "Do not confuse it with the tailplane finlets.", "水平尾翼端フィンと混同しないでください。")],
+        ),
+        "wing": identify(
+            ("BelugaST 主翼源自 A300-600，翼展 44.84 m，後掠主翼下各掛一具 CF6；機身巨大後，主翼視覺上顯得相對短小。", "The BelugaST uses the A300-600-derived 44.84 m swept wing with one CF6 beneath each side; the huge fuselage makes the wing look relatively compact.", "BelugaSTはA300-600由来の翼幅44.84 m後退翼を使い、巨大な胴体のため翼が相対的に小さく見えます。"),
+            ("Dreamlifter 的 747 翼展達 64.44 m 且有四具引擎；比較翼展與引擎數量可立即判別。", "The Dreamlifter spans 64.44 m and carries four engines, so span and engine count separate the pair immediately.", "Dreamlifterは翼幅64.44 m・4発で、翼幅とエンジン数からすぐ区別できます。"),
+            [("後掠低翼配置。", "Swept low-wing arrangement.", "後退した低翼配置です。"), ("翼展 44.84 m。", "Wingspan is 44.84 m.", "翼幅は44.84 mです。"), ("高升力裝置沿後緣展開。", "High-lift devices occupy much of the trailing edge.", "後縁の広い範囲に高揚力装置があります。")],
+        ),
+        "vstab": identify(
+            ("Beluga 的垂尾經放大與強化，根部前方有醒目的三角形背鰭，用來補償巨大上機身帶來的方向穩定影響。", "The Beluga has an enlarged reinforced fin with a conspicuous triangular dorsal extension to restore directional stability behind the huge upper fuselage.", "Belugaの垂直尾翼は大型化・強化され、巨大な上部胴体による方向安定低下を補う三角形背びれがあります。"),
+            ("高大的垂尾、寬背鰭與水平尾翼端小翼共同構成 Beluga 特有的尾部輪廓。", "The tall fin, broad dorsal extension and tailplane finlets together create the Beluga's distinctive tail silhouette.", "高い垂尾、幅広い背びれ、水平尾翼端フィンがBeluga独特の尾部輪郭を作ります。"),
+            [("垂尾根部背鰭向前延伸。", "A dorsal extension runs forward from the fin root.", "垂尾根元の背びれが前方へ伸びます。"), ("尾翼相對機身高度很高。", "The fin is tall relative to the fuselage.", "胴体に対して垂尾が高いです。"), ("方向舵後緣近乎筆直。", "The rudder trailing edge is nearly straight.", "方向舵後縁はほぼ直線です。")],
+        ),
+        "hstab": identify(
+            ("Beluga 的水平尾翼經強化，左右端部各加裝一片直立輔助垂尾；從正後方看形成非常特殊的三垂直面配置。", "The Beluga's reinforced tailplane carries an auxiliary vertical finlet at each tip, creating a distinctive three-vertical-surface rear view.", "強化された水平尾翼の両端に補助垂直フィンが付き、後方から3枚の垂直面に見えます。"),
+            ("端部小翼是為改善巨大機身遮蔽氣流時的方向穩定性，不是減少主翼誘導阻力的翼尖小翼。", "These finlets improve directional stability in flow disturbed by the huge fuselage; they are not drag-reducing main-wing devices.", "端部フィンは巨大胴体後流での方向安定を補い、主翼の抗力低減用装置ではありません。"),
+            [("左右水平尾翼端各一片直立小翼。", "One vertical finlet stands at each tailplane tip.", "左右水平尾翼端に各1枚の垂直フィンがあります。"), ("水平尾翼低置於垂尾根部。", "The tailplane mounts low at the fin root.", "水平尾翼は垂尾根元の低位置です。"), ("這是 Beluga 最強的後方識別點。", "This is the strongest rear identification cue.", "Belugaを後方から識別する最強の特徴です。")],
+        ),
+        "gear": identify(
+            ("Beluga 沿用 A300-600 起落架：前腳雙輪，左右主腳各四輪，合計 10 輪；主腳位於翼根下方。", "The Beluga retains A300-600 landing gear: twin nose wheels and four wheels on each main bogie, ten wheels in total.", "BelugaはA300-600の脚を継承し、前脚2輪、左右主脚各4輪の合計10輪です。"),
+            ("Dreamlifter 沿用 747 的 18 輪配置並有四組主起落架；主腳組數是地面辨識兩者的直接方法。", "The Dreamlifter retains the 747's 18-wheel arrangement with four main bogies; bogie count is a direct ground-identification cue.", "Dreamlifterは4組主脚を持つ747の18輪配置で、主脚組数が地上識別に有効です。"),
+            [("前腳為單支柱雙輪。", "The nose unit has twin wheels on one strut.", "前脚は単支柱2輪です。"), ("每側主腳為四輪轉向架。", "Each main bogie carries four wheels.", "左右主脚は各4輪ボギーです。"), ("總輪數為 10 輪。", "Total wheel count is ten.", "総輪数は10輪です。")],
+        ),
+    },
+    "dreamlifter": {
+        "overview": identify(
+            ("747-400 Dreamlifter 是由 747-400 客機改裝的 LCF：保留四發、上層駕駛艙與 747 主翼，但上半機身膨大成巨型貨艙，尾部可整段向側面旋開。", "The 747-400 Dreamlifter is a converted 747-400 LCF retaining four engines, the upper-deck cockpit and 747 wing beneath a huge cargo body whose tail swings sideways.", "747-400 Dreamlifterは747-400旅客機改造LCFで、4発・上層操縦席・747主翼を残し、巨大貨物胴体と横開き尾部を備えます。"),
+            ("四架 Dreamlifter 專門運送 787 大型組件；貨艙約 1,840 m³，容量約為 747-400F 的三倍。", "Four Dreamlifters move major 787 assemblies; the roughly 1,840 m³ hold offers about three times the volume of a 747-400F.", "4機のDreamlifterが787大型部品を輸送し、約1,840 m³の貨物室は747-400Fの約3倍です。"),
+            [("機長 71.68 m、翼展 64.44 m。", "Length 71.68 m; span 64.44 m.", "全長71.68 m、全幅64.44 mです。"), ("ICAO 機型代碼為 BLCF。", "Its ICAO type designator is BLCF.", "ICAO機種コードはBLCFです。"), ("四架皆由既有 747-400 改裝。", "All four aircraft were converted from existing 747-400s.", "全4機が既存747-400から改造されました。")],
+        ),
+        "cockpit": identify(
+            ("Dreamlifter 保留 747-400 駕駛艙：雙駕駛盤、六具主要 CRT／顯示器與寬大的中央控制台；照片為 747-400 家族代表配置。", "The Dreamlifter retains the 747-400 flight deck with dual yokes, six principal CRT/display units and a broad centre pedestal; the photo shows the shared 747-400-family layout.", "Dreamlifterは双操縦輪、主要6面表示器、幅広い中央ペデスタルを持つ747-400操縦席を継承します。写真は同型ファミリー配置です。"),
+            ("它不像 Beluga 把駕駛艙移到貨艙下方；駕駛艙仍在 747 上層甲板前端，因此正面窗帶位置很高。", "Unlike the Beluga, its cockpit was not lowered beneath the hold; it remains at the front of the 747 upper deck, placing the windows high above the nose.", "Belugaと違って操縦席は貨物室下へ移されず、747上層前部に残るため窓位置が高いです。"),
+            [("正副駕駛各有大型駕駛盤。", "Each pilot has a large control yoke.", "両席に大型操縦輪があります。"), ("747-400 以六具主要電子顯示器為核心。", "Six primary electronic displays define the 747-400 panel.", "747-400計器盤は主要6面電子表示器が中心です。"), ("駕駛艙照片應視為 747-400 家族布局參考。", "Treat the cockpit photograph as a 747-400-family layout reference.", "操縦席写真は747-400ファミリー配置の参考です。")],
+        ),
+        "windshield": identify(
+            ("Dreamlifter 的駕駛艙窗位於 747 上層甲板最前端，窗帶高高壓在機鼻上方；側面可同時看到上層窗與下層機鼻貨艙外殼。", "The Dreamlifter's cockpit glazing sits at the front of the 747 upper deck, high above the nose; side views show the elevated window band over the lower nose shell.", "操縦席窓は747上層前端で機首より高く、側面では高い窓帯と下部機首外殻を同時に確認できます。"),
+            ("Beluga 的窗帶位於貨艙隆起下方低處；Dreamlifter 則位於機鼻上方高處。兩者的窗帶高度關係正好相反。", "The Beluga's windows sit low beneath its cargo bulge; the Dreamlifter's sit high above the nose—the opposite vertical relationship.", "Belugaは貨物膨らみ下の低位置、Dreamlifterは機首上の高位置で、窓帯の上下関係が逆です。"),
+            [("正面風擋位於短上層甲板前端。", "Forward panes cap the short upper deck.", "正面風防は短い上層甲板前端です。"), ("側窗高於主甲板艙門與下層窗列。", "Side panes sit above the main-deck door and lower window row.", "側窓は主甲板扉と下層窓列より高いです。"), ("搭配四具引擎即可排除 Beluga。", "Four engines immediately rule out the Beluga.", "4発と組み合わせればBelugaではありません。")],
+        ),
+        "fuselage": identify(
+            ("Dreamlifter 貨艙容積約 1,840 m³，內部截面約 6.3 × 6.9 m、可用長度約 30 m；整個後機身由鉸鏈向左側旋開裝卸。", "The Dreamlifter offers about 1,840 m³ with an approximately 6.3 × 6.9 m cross-section and 30 m usable length; the aft fuselage hinges open sideways for loading.", "貨物室は約1,840 m³、断面約6.3 × 6.9 m、長さ約30 mで、後部胴体全体が横へ開きます。"),
+            ("它運送 787 機翼與機身段等大體積、相對不重的組件，因此追求的是容積而非傳統貨機的最大重量。", "It carries bulky, relatively light 787 wings and fuselage sections, prioritising volume rather than conventional freighter payload mass.", "787の翼や胴体区画など大型で比較的軽い部品を運び、通常貨物機の重量より容積を重視します。"),
+            [("尾部側開門是最重要結構特徵。", "The swing-tail door is the defining structure.", "横開き尾部が最大の構造特徴です。"), ("上半機身從駕駛艙後方一路巨大隆起。", "The upper fuselage swells dramatically behind the cockpit.", "操縦席後方から上部胴体が大きく膨らみます。"), ("下層貨艙仍可裝載一般貨物。", "The lower hold can still carry conventional cargo.", "下部貨物室には通常貨物も積載できます。")],
+        ),
+        "engine": identify(
+            ("四架 Dreamlifter 均使用四具 Pratt & Whitney PW4062／PW4062A 高旁通比渦扇，兩具一組掛在每側 747-400 主翼下。", "All four Dreamlifters use four Pratt & Whitney PW4062/PW4062A high-bypass turbofans, two beneath each 747-400 wing.", "4機のDreamlifterはいずれもPratt & Whitney PW4062／PW4062Aを4基、各翼下に2基ずつ装備します。"),
+            ("資料不能沿用採 GE 或 Rolls-Royce 引擎的其他 747-400；Dreamlifter 實際四架皆為 Pratt & Whitney 動力。", "Do not inherit engine data from GE- or Rolls-Royce-powered 747-400s; every Dreamlifter is Pratt & Whitney-powered.", "GEやRolls-Royce搭載747-400の情報を流用せず、Dreamlifter全機はPratt & Whitney仕様です。"),
+            [("四具引擎、每側兩具。", "Four engines, two per wing.", "4発で各翼2基です。"), ("型號為 PW4062／PW4062A。", "The type is PW4062/PW4062A.", "型式はPW4062／PW4062Aです。"), ("圓形短艙保留 747-400 比例。", "Round nacelles retain 747-400 proportions.", "円形ナセルは747-400の比率です。")],
+        ),
+        "wingtip": identify(
+            ("Dreamlifter 改裝時拆除了一般 747-400 高聳的翼尖小翼，主翼以平直、略帶端部整形的翼尖收尾。", "The Dreamlifter conversion removed the standard 747-400's tall winglets, leaving clean, nearly flat tips with simple fairing.", "Dreamlifter改造では通常747-400の高いウイングレットを撤去し、簡潔でほぼ平らな翼端になりました。"),
+            ("『747-400 外型卻沒有垂直翼尖小翼』是辨識 Dreamlifter 的重要輔助特徵；但部分 747-400D 也無小翼，仍須看巨型貨艙。", "A 747-400-like aircraft without vertical winglets supports Dreamlifter identification, though some 747-400Ds also lack them; confirm the giant cargo body.", "747-400形で垂直ウイングレットがない点は手掛かりですが、747-400Dも未装備なので巨大貨物胴体を確認します。"),
+            [("沒有一般 747-400 的高式翼尖小翼。", "No standard 747-400 tall winglet.", "通常747-400の高いウイングレットはありません。"), ("翼尖輪廓接近平直。", "The tip remains nearly flat.", "翼端はほぼ平らです。"), ("應搭配膨大機身與四發判讀。", "Confirm with the swollen body and four engines.", "巨大胴体と4発も合わせて確認します。")],
+        ),
+        "wing": identify(
+            ("Dreamlifter 保留 747-400 的 64.44 m 後掠主翼與四發配置；巨大貨艙讓機翼看起來較低且較薄。", "The Dreamlifter retains the 747-400's 64.44 m swept four-engine wing, which appears low and thin beneath the enormous cargo body.", "Dreamlifterは747-400の翼幅64.44 m後退4発翼を保ち、巨大貨物胴体の下で低く薄く見えます。"),
+            ("Beluga 只有兩具引擎且翼展 44.84 m；從正後方或下方看主翼與引擎配置即可快速區分。", "The Beluga has only two engines and a 44.84 m span; rear or underside views separate the pair quickly.", "Belugaは双発・翼幅44.84 mで、後方や下面から主翼とエンジン配置を見ればすぐ区別できます。"),
+            [("每側翼下有兩具引擎。", "Two engines hang beneath each wing.", "各翼下に2基のエンジンがあります。"), ("後掠角與 747-400 基本相同。", "Sweep is essentially that of the 747-400.", "後退角は基本的に747-400と同じです。"), ("大型襟翼支援重型低速起降。", "Large flaps support heavy low-speed operations.", "大型フラップが重量機の低速運用を支えます。")],
+        ),
+        "vstab": identify(
+            ("Dreamlifter 保留大型 747 垂直尾翼，尾翼本體並未像貨艙般膨大；相對巨型後機身，垂尾視覺上顯得窄而高。", "The Dreamlifter retains the large 747 vertical fin; because the cargo body is greatly enlarged, the fin appears relatively narrow and tall.", "Dreamlifterは747の大型垂直尾翼を残し、巨大化した貨物胴体に対して細く高く見えます。"),
+            ("從正後方可同時看到中央垂尾、四具引擎與圓鼓的貨艙截面，這組輪廓與 Beluga 的尾端輔助小翼完全不同。", "From aft, the single centre fin, four engines and bulbous cargo cross-section contrast sharply with the Beluga's auxiliary tail finlets.", "後方からの中央垂尾1枚、4発、丸い貨物断面は、Belugaの補助尾翼端フィンと明確に異なります。"),
+            [("單一中央垂直尾翼。", "A single central vertical fin.", "中央垂直尾翼は1枚です。"), ("沒有 Beluga 的水平尾翼端部小翼。", "No Beluga-style tailplane finlets.", "Beluga型の水平尾翼端フィンはありません。"), ("尾根前方緊接巨大貨艙尾段。", "The fin root meets the enlarged aft cargo shell.", "垂尾根元は巨大な後部貨物外殻へ接続します。")],
+        ),
+        "hstab": identify(
+            ("Dreamlifter 水平尾翼保留 747 低置後掠布局，與後機身共同位於可旋開的尾段；裝卸時整個尾段向側面移開。", "The Dreamlifter retains the 747's low swept tailplanes, attached to the aft section that swings sideways during loading.", "水平尾翼は747の低位置後退配置を保ち、積載時に横へ旋回する後部区画に付いています。"),
+            ("尾門的鉸鏈、鎖定與重新對準精度是 Dreamlifter 結構核心；關閉後仍需恢復完整飛行載荷路徑。", "Hinging, locking and precise realignment of the tail are structural essentials because the closed section must restore the full flight-load path.", "尾部のヒンジ、ロック、精密再結合は、閉鎖後に飛行荷重経路を戻すため重要です。"),
+            [("水平尾翼低置於機尾兩側。", "Tailplanes mount low on both sides.", "水平尾翼は機尾両側の低位置です。"), ("沒有端部輔助垂直翼。", "There are no auxiliary vertical tip fins.", "端部補助垂直フィンはありません。"), ("尾段可隨貨艙門整體旋開。", "The entire tail section swings with the cargo door.", "尾部区画全体が貨物扉とともに旋回します。")],
+        ),
+        "gear": identify(
+            ("Dreamlifter 沿用 747-400 的 18 輪起落架：前腳雙輪，翼下與機身下共有四組四輪主轉向架，用來分散巨大重量。", "The Dreamlifter retains the 747-400's 18-wheel gear: twin nose wheels plus four four-wheel main bogies beneath the wings and fuselage.", "Dreamlifterは747-400の18輪脚を継承し、前脚2輪と翼下・胴体下の4組4輪主脚で重量を分散します。"),
+            ("最大起飛重量約 364,235 kg；四組主腳與 18 輪配置遠多於 Beluga 的兩組主腳、10 輪。", "Maximum takeoff weight is about 364,235 kg; four main bogies and 18 wheels greatly exceed the Beluga's two bogies and ten wheels.", "最大離陸重量は約364,235 kgで、4組主脚・18輪はBelugaの2組・10輪より大幅に多いです。"),
+            [("前腳為雙輪。", "The nose gear has twin wheels.", "前脚は2輪です。"), ("兩組翼腳加兩組機身腳。", "Two wing bogies are supplemented by two body bogies.", "翼脚2組に胴体脚2組を加えます。"), ("總輪數為 18 輪。", "Total wheel count is eighteen.", "総輪数は18輪です。")],
+        ),
+    },
+})
 
 
 CONTENT.update({
