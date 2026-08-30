@@ -73,7 +73,7 @@ document.addEventListener("langchange", () => I18N.apply());
     fetch("data/fleet.json?v=138").then(r => r.json()),
         fetch("data/airlines.json?v=139").then(r => r.json()),
     fetch("data/airport_count.json?v=138").then(r => r.json()),
-    fetch("data/knowledge.json?v=138").then(r => r.json()),
+    fetch("data/knowledge.json?v=161").then(r => r.json()),
   ]);
   document.getElementById("stat-aircraft").textContent = `${fmt(fleet.aircraft.length)} AIRCRAFT`;
   document.getElementById("stat-airports").textContent = `${fmt(airports.count)} AIRPORTS`;

@@ -68,6 +68,7 @@ const SYSTEMS_TOPICS = [
   { id: "pitot-static",   label: "PITOT" },
   { id: "edto",            label: "EDTO" },
   { id: "fdr-cvr",         label: "FDR/CVR" },
+  { id: "krueger-flap",    label: "KRUEGER" },
   { id: "high-bypass",     label: "BPR" },
 ];
 
@@ -386,6 +387,10 @@ const SYSTEMS_DECOR = {
     <rect x="${cx - 16}" y="${cy - 10}" width="32" height="22" rx="4" class="kn-squawk-box"/>
     <line x1="${cx}" y1="${cy - 10}" x2="${cx}" y2="${cy - 18}" class="kn-vspeed-arrow"/>
     <circle cx="${cx}" cy="${cy - 20}" r="2" class="kn-tc-ball"/>`,
+  "krueger-flap": (cx, cy) => `
+    <path d="M ${cx - 30} ${cy - 7} Q ${cx} ${cy - 25} ${cx + 30} ${cy - 7}" class="kn-stall-wing"/>
+    <path d="M ${cx - 29} ${cy - 2} Q ${cx} ${cy + 14} ${cx + 29} ${cy - 2}" class="kn-wake-wing"/>
+    <path d="M ${cx - 22} ${cy + 24} L ${cx - 14} ${cy + 13} M ${cx} ${cy + 27} L ${cx} ${cy + 14} M ${cx + 22} ${cy + 24} L ${cx + 14} ${cy + 13}" class="kn-jet-arrow"/>`,
   "high-bypass": (cx, cy) => `
     <circle cx="${cx}" cy="${cy}" r="29" class="kn-etops-ring"/>
     <circle cx="${cx}" cy="${cy}" r="13" class="kn-squawk-box"/>
@@ -727,7 +732,7 @@ function downscaleImg(file, maxW, quality){
 async function boot(){
   let data;
   try {
-    const res = await fetch("data/knowledge.json?v=134");
+    const res = await fetch("data/knowledge.json?v=161");
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {

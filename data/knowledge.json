@@ -925,6 +925,32 @@
       "images": []
     },
     {
+      "id": "krueger-flap",
+      "category": "systems",
+      "hotspot": "krueger-flap",
+      "name": {
+        "zh": "克魯格襟翼（Krueger flap）",
+        "en": "Krueger Flap",
+        "ja": "クルーガー・フラップ"
+      },
+      "summary": {
+        "zh": "安裝在機翼前緣下側、向前下方翻出的高升力裝置。放下時會形成新的前緣弧面，讓機翼在起飛與降落的低速狀態仍能維持較高升力。",
+        "en": "A high-lift device mounted on the underside of the wing's leading edge. It folds forward and downward to create a new leading-edge contour, helping the wing produce more lift at the low speeds used for takeoff and landing.",
+        "ja": "主翼前縁の下面に取り付けられ、前方・下方へ展開する高揚力装置。展開すると新しい前縁形状を作り、離着陸時の低速でも翼が大きな揚力を発生できる。"
+      },
+      "fact": {
+        "zh": "Krueger flap 與前緣縫翼的目的相同，都是延後失速、提高最大升力係數，但結構方式不同：Krueger flap 是從前緣下方翻出一片面板，常見於部分波音客機的內側翼段；slat 則通常沿導軌向前滑出並留下縫隙。放下襟翼時，升力增加也會伴隨阻力增加，因此只在需要低速起降性能時使用。",
+        "en": "A Krueger flap serves the same broad purpose as a leading-edge slat—delaying stall and increasing maximum lift coefficient—but deploys as a panel hinged from the lower leading edge. It is seen on the inboard wing sections of some Boeing airliners. Unlike a slat that slides forward on tracks and creates a slot, it rotates into position. The added lift also adds drag, so it is used when low-speed takeoff and landing performance is needed.",
+        "ja": "クルーガー・フラップは前縁スラットと同じく失速を遅らせ最大揚力係数を高めるが、前縁下面からパネルを回転展開する点が異なる。一部のボーイング旅客機では内翼部に見られる。レール上を前方へ滑り隙間を作るスラットとは展開方式が違う。揚力増加と同時に抗力も増すため、低速の離着陸性能が必要なときに使われる。"
+      },
+      "bullets": [
+        {"zh":"前緣下方鉸接翻出。","en":"Hinged from the lower leading edge.","ja":"前縁下面からヒンジ展開。"},
+        {"zh":"提高低速時的最大升力。","en":"Raises maximum lift at low speed.","ja":"低速時の最大揚力を高める。"},
+        {"zh":"目的似前緣縫翼，但展開結構不同。","en":"Similar purpose to a slat, different deployment geometry.","ja":"スラットと目的は似るが展開構造が異なる。"}
+      ],
+      "images": []
+    },
+    {
       "id": "high-bypass",
       "category": "systems",
       "hotspot": "high-bypass",
