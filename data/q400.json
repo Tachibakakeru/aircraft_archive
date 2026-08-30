@@ -2,18 +2,30 @@
   "title": "Bombardier Dash 8 Q400",
   "sub": "渦輪螺旋槳 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Bombardier Dash 8 Q400 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "Q400 的機翼前後均有較長客艙窗列，前艙門位於窗帶起點附近，後艙門接近尾段。引擎短艙沿高翼向後延伸，側視會遮住部分客艙窗。",
+        "en": "Long cabin-window runs lie both ahead of and behind the Q400 wing. The forward door is near the start of the window line and the aft door near the tail. Long high-mounted nacelles hide some windows in side views.",
+        "ja": "Q400は主翼前後に長い客室窓列を持ち、前扉は窓列の始まり、後扉は尾部寄りです。高位置の長いナセルが側面視で一部の窓を隠します。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "與 ATR 42 比較時看整段比例與門的位置，不要依航空公司塗裝的圓點或彩繪數窗；塗裝不是固定結構。",
+        "en": "Use body proportions and door positions, not painted dots or decorative windows. Airline artwork is not an airframe feature.",
+        "ja": "ATR 42とは胴体比率と扉位置を比較し、塗装の丸模様を窓と数えないようにします。塗装は構造上の特徴ではありません。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "翼前與翼後窗列皆長。",
+          "en": "Long window runs ahead of and behind the wing.",
+          "ja": "翼前後とも長い窓列。"
+        },
+        {
+          "zh": "前後艙門分隔明顯。",
+          "en": "Widely separated front and rear doors.",
+          "ja": "離れた前後ドア。"
+        },
+        {
+          "zh": "長短艙遮住部分窗列。",
+          "en": "Long nacelles obscure some windows.",
+          "ja": "長いナセルが窓列を一部遮る。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/q400/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Bombardier Dash 8 Q400 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "Q400 採高置、細長且後掠不明顯的主翼；引擎短艙穿過機翼附近並延伸至後方，翼後緣可見襟翼與整流罩。照片從下方展示翼面與機身的連接。",
+        "en": "The Q400 has a slender high-mounted wing with little apparent sweep. Nacelles extend aft past the wing area, and flaps and fairings line the trailing edge. The underside photo shows the wing/body junction.",
+        "ja": "Q400は後退の小さい細長い高翼を持ち、ナセルは翼付近から後方へ伸びます。後縁にフラップ・整流部があり、下方写真で胴体との接続を確認できます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "高翼本身無法區分 Q400 與 ATR；主翼、短艙與主腳三者的位置關係更有用。",
+        "en": "A high wing alone cannot distinguish Q400 from ATR. The wing–nacelle–main-gear relationship is more useful.",
+        "ja": "高翼だけではQ400とATRを区別できず、主翼・ナセル・主脚の位置関係が有効です。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "高置細長主翼。",
+          "en": "Slender high wing.",
+          "ja": "細長い高翼。"
+        },
+        {
+          "zh": "長短艙伸至翼後。",
+          "en": "Long nacelles extend aft.",
+          "ja": "翼後へ伸びる長いナセル。"
+        },
+        {
+          "zh": "後緣襟翼可見。",
+          "en": "Visible trailing-edge flaps.",
+          "ja": "後縁フラップが見える。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/q400/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Bombardier Dash 8 Q400 的渦輪螺旋槳引擎。以渦輪帶動螺旋槳產生推力，在中低速與短程航線上油耗效率極佳。",
+      "summary": {
+        "zh": "Q400 使用兩具 Pratt & Whitney Canada PW150A，搭配 Dowty R408 六葉螺旋槳。長短艙下方整合主起落架艙，照片可看出槳轂、進氣口、短艙與主腳的位置關係。",
+        "en": "Two Pratt & Whitney Canada PW150A engines drive six-bladed Dowty R408 propellers. Long nacelles incorporate the main-gear bays below; the photo shows hub, intake, nacelle and gear placement.",
+        "ja": "Q400はPW150Aを2基搭載しDowty R408の6枚羽根プロペラを駆動。長いナセル下部に主脚室を備え、写真でハブ・吸気口・ナセル・主脚の関係が分かります。"
+      },
       "specs": [
         [
           "型式",
           "渦輪螺旋槳引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "ATR 42-500／600 也使用六葉槳，因此要比較短艙長度與主起落架位置；旋轉中照片的殘影不能可靠用來數葉片。",
+        "en": "The ATR 42-500/600 also has six blades. Compare nacelle length and gear location; motion blur is unreliable for counting blades.",
+        "ja": "ATR 42-500／600も6枚羽根です。ナセル長と主脚位置を比べ、回転中の残像で羽根数を断定しないでください。"
+      },
       "bullets": [
-        "渦輪帶動螺旋槳",
-        "中低速高效率"
+        {
+          "zh": "PW150A 雙發。",
+          "en": "Two PW150A engines.",
+          "ja": "PW150Aを2基。"
+        },
+        {
+          "zh": "Dowty R408 六葉槳。",
+          "en": "Six-bladed Dowty R408 propellers.",
+          "ja": "Dowty R408の6枚羽根。"
+        },
+        {
+          "zh": "主腳位於長短艙下方。",
+          "en": "Main gear below the long nacelles.",
+          "ja": "長いナセル下に主脚。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/q400/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Flybe_De_Havilland_Canada_Dash_8-400_G-JEDW_LHR_27-02-2020.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "Q400 垂直尾翼前緣後掠，尾翼頂部承載水平尾翼；側視可見方向舵分界及尾翼根部與後機身的銜接。",
+        "en": "The Q400's swept-leading-edge fin carries the tailplane at its top. Side views reveal the rudder hinge line and the fin-to-rear-body junction.",
+        "ja": "Q400は前縁が後退した垂直尾翼の頂部に水平尾翼を搭載し、側面から方向舵の境界と後胴への接続が見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "ATR 42 也是 T 尾，不能把 T 尾當成 Q400 專屬特徵；需配合長機身與短艙主腳。",
+        "en": "The ATR 42 also has a T-tail. Combine this feature with the long body and nacelle-mounted main legs.",
+        "ja": "ATR 42もT尾翼です。長い胴体とナセル搭載主脚を合わせて確認します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "前緣後掠。",
+          "en": "Swept leading edge.",
+          "ja": "後退した前縁。"
+        },
+        {
+          "zh": "頂端支承水平尾翼。",
+          "en": "Tailplane supported at the top.",
+          "ja": "頂部に水平尾翼。"
+        },
+        {
+          "zh": "方向舵在後緣。",
+          "en": "Rudder at the trailing edge.",
+          "ja": "後縁に方向舵。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/q400/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "Q400 的水平尾翼位於垂尾頂部，左右翼面與中央整流部構成 T 字上橫桿；後緣的升降舵分界可由斜側面照片觀察。",
+        "en": "The Q400 tailplane sits atop the fin. Its left/right surfaces and centre fairing form the T's crossbar; oblique photos show the elevator boundaries at the trailing edge.",
+        "ja": "Q400の水平尾翼は垂直尾翼頂部にあり、左右翼面と中央整流部がT字の横棒を構成。斜め写真で後縁の昇降舵境界を確認できます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "Q400 與 ATR 42 的水平尾翼都不是低置；辨識時應連同尾根、機身及引擎布局比較。",
+        "en": "Neither the Q400 nor ATR 42 has low-mounted tailplanes. Compare the tail root, fuselage and engine arrangement together.",
+        "ja": "Q400もATR 42も低位置水平尾翼ではなく、尾根・胴体・エンジン配置を合わせて比較します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "位於垂尾頂部。",
+          "en": "Mounted atop the fin.",
+          "ja": "垂直尾翼頂部に搭載。"
+        },
+        {
+          "zh": "中央有整流部。",
+          "en": "Central fairing.",
+          "ja": "中央に整流部。"
+        },
+        {
+          "zh": "後緣為升降舵。",
+          "en": "Elevators on the trailing edge.",
+          "ja": "後縁に昇降舵。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/q400/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Bombardier Dash 8 Q400 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "Q400 的左右主腳從引擎短艙下方伸出，支柱很長，收起時進入短艙；前腳與每支主腳均為雙輪，共六輪。實照清楚展示主腳遠離機身中心線的位置。",
+        "en": "Q400 main legs descend from the engine nacelles on long struts and retract into them. Twin wheels on the nose and each main leg total six. The photo shows the mains well outboard of the fuselage centreline.",
+        "ja": "Q400の長い主脚はエンジンナセル下から伸び、収納時もナセル内へ入ります。前脚・左右主脚各2輪で計6輪。写真では胴体中心から離れた主脚位置が明瞭です。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "這是與 ATR 42 最清楚的差異之一：ATR 主腳在機腹兩側，不在引擎短艙內。兩者輪數相同。",
+        "en": "This is a strong ATR 42 discriminator: ATR mains are beside the belly, not in nacelles. Both aircraft have the same wheel count.",
+        "ja": "ATR 42との大きな違いです。ATRの主脚はナセルではなく胴体下部両側にあり、輪数は両機で同じです。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "主腳伸自引擎短艙。",
+          "en": "Mains descend from nacelles.",
+          "ja": "ナセルから伸びる主脚。"
+        },
+        {
+          "zh": "長支柱、較寬橫向間距。",
+          "en": "Long struts and wider lateral spacing.",
+          "ja": "長い支柱と広い左右間隔。"
+        },
+        {
+          "zh": "前腳與主腳均雙輪。",
+          "en": "Twin wheels on nose and mains.",
+          "ja": "前脚・主脚とも2輪。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/q400/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Flybe_De_Havilland_Canada_Dash_8-400_G-JEDW_LHR_27-02-2020.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "Q400／Dash 8-400 是高翼雙發渦槳客機，全長約 32.84 m；細長機身、長引擎短艙及 T 型尾翼是整體特徵。照片為 400 系列，並非較短的 Dash 8-100／200／300。",
+        "en": "The Q400 / Dash 8-400 is a high-wing twin turboprop about 32.84 m long. A slender body, long nacelles and T-tail define it. This photograph shows the 400 series, not the shorter Dash 8-100/200/300.",
+        "ja": "Q400／Dash 8-400は全長約32.84 mの高翼双発ターボプロップ。細長い胴体、長いナセル、T尾翼が特徴で、写真は短胴の100／200／300ではなく400系列です。"
+      },
+      "fact": {
+        "zh": "ATR 42 也有高翼與 T 尾，但機身短約 10 m；觀察主起落架是否伸自引擎短艙，比只看尾翼更可靠。",
+        "en": "The ATR 42 also has a high wing and T-tail but is about 10 m shorter. Main legs descending from nacelles are more useful than tail shape alone.",
+        "ja": "ATR 42も高翼・T尾翼ですが約10 m短く、尾翼だけでなく主脚がナセルから伸びるかを見ると有効です。"
+      },
+      "bullets": [
+        {
+          "zh": "細長機身。",
+          "en": "Long, slender fuselage.",
+          "ja": "細長い胴体。"
+        },
+        {
+          "zh": "高翼與長短艙。",
+          "en": "High wing and long nacelles.",
+          "ja": "高翼と長いナセル。"
+        },
+        {
+          "zh": "T 型尾翼。",
+          "en": "T-tail.",
+          "ja": "T字尾翼。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/q400/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "Q400 的五具主要電子顯示器橫向排列，中央為引擎資訊，兩側為飛行／導航顯示；兩席都有駕駛盤，中央操縱台可見功率與螺旋槳控制桿。附圖為 Q400 NextGen 實照。",
+        "en": "Five main electronic displays span the Q400 panel, with engine information centrally and flight/navigation displays either side. Both seats have yokes; power and propeller controls occupy the pedestal. The photo shows a Q400 NextGen.",
+        "ja": "Q400は主要電子画面5面を横に配置し、中央にエンジン、左右に飛行・航法情報を表示。両席に操縦輪、中央台に出力・プロペラ操作レバーがあり、写真はQ400 NextGenです。"
+      },
+      "fact": {
+        "zh": "ATR 42-600 同樣有五具大型螢幕，不能以螢幕數目單獨判型；須看面板、中央台及窗框的布局。",
+        "en": "The ATR 42-600 also has five large screens: display count alone is not conclusive. Compare panel, pedestal and window-frame layout.",
+        "ja": "ATR 42-600も大型画面5面なので数だけでは判定できません。計器盤・中央台・窓枠の配置を比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "五具主要顯示器。",
+          "en": "Five main displays.",
+          "ja": "主要画面5面。"
+        },
+        {
+          "zh": "兩側駕駛盤。",
+          "en": "Yokes at both seats.",
+          "ja": "両席に操縦輪。"
+        },
+        {
+          "zh": "中央台有渦槳控制桿。",
+          "en": "Turboprop controls on the pedestal.",
+          "ja": "中央台にターボプロップ操作レバー。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/q400/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Q400_NextGen_aircraft_cockpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "Q400 正面兩片主要風擋以中央窗柱分開，側窗向後延伸成較長的梯形；窗帶下方是向前下方收尖的機鼻。正面與側面實照可分別觀察窗柱與窗框斜角。",
+        "en": "The Q400 has two principal front panes separated by a centre post and elongated trapezoidal side glazing. Below them the nose tapers forward and down. Front and side photos reveal the posts and frame angles.",
+        "ja": "Q400の主前窓2枚は中央柱で分かれ、側窓は後方へ長い台形を描きます。窓の下は前下方へ絞る機首で、正面・側面写真で柱と枠の角度を確認できます。"
+      },
+      "fact": {
+        "zh": "ATR 42 的側窗分片方式和較短鼻部可作對照；拍攝角度會改變窗形的視覺比例，勿只憑一片窗判型。",
+        "en": "Compare the ATR 42's side-pane divisions and shorter nose. Perspective changes apparent window proportions, so one pane is not enough.",
+        "ja": "ATR 42の側窓の分割と短めの機首を比較します。撮影角度で比率が変わるため一枚の窓だけでは断定しません。"
+      },
+      "bullets": [
+        {
+          "zh": "正面中央窗柱。",
+          "en": "Central windshield post.",
+          "ja": "前窓中央の柱。"
+        },
+        {
+          "zh": "較長梯形側窗。",
+          "en": "Elongated trapezoidal side panes.",
+          "ja": "長い台形側窓。"
+        },
+        {
+          "zh": "鼻部向前下收尖。",
+          "en": "Nose tapers forward and down.",
+          "ja": "前下方へ絞る機首。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/q400/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:S2-AGU_head_on_US-Bangla_Airlines_Q400_(24846202901).jpg"
+        },
+        {
+          "src": "assets/reference/q400/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:9A-CQE_Croatia_Airlines_Bombardier_Dash_8_Q400_Zagorje_at_Zagreb_Airport_-_nose.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "Q400 標準主翼末端為低矮翼尖，並沒有噴射客機常見的高大上翹小翼；實照可見翼尖燈及主翼末端的平緩收束。",
+        "en": "The standard Q400 wing ends in a low-profile tip, not a tall upturned jet-style winglet. The photo shows the tip light and gently closing wing outline.",
+        "ja": "標準Q400の翼端は低い形状で、ジェット機に多い背の高い上向きウィングレットはありません。翼端灯と緩やかに閉じる輪郭が見えます。"
+      },
+      "fact": {
+        "zh": "本分類沿用「翼尖小翼」名稱，但沒有大型小翼也是辨識資訊；ATR 42 同樣沒有高大的上翹小翼。",
+        "en": "The section retains the wingtip-device label, but absence is useful information too. The ATR 42 likewise lacks tall upturned winglets.",
+        "ja": "分類名は翼端装置ですが、大型小翼がないことも識別情報です。ATR 42にも高い上向き小翼はありません。"
+      },
+      "bullets": [
+        {
+          "zh": "無高大上翹小翼。",
+          "en": "No tall upturned winglet.",
+          "ja": "高い上向き小翼なし。"
+        },
+        {
+          "zh": "翼尖輪廓低矮。",
+          "en": "Low-profile tip outline.",
+          "ja": "低い翼端輪郭。"
+        },
+        {
+          "zh": "翼端燈可見。",
+          "en": "Visible tip light.",
+          "ja": "翼端灯を確認。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/q400/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg"
+        }
+      ]
     }
   },
   "specifications": {

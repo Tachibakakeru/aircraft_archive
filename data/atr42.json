@@ -2,19 +2,30 @@
   "title": "ATR 42",
   "sub": "渦輪螺旋槳 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "ATR 42 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "ATR 42-500 的短客艙窗列上方是高翼，機腹兩側有明顯起落架整流罩。照片可見左前大型貨艙門開啟、左後乘客門以內建梯登機，兩種艙門用途不同。",
+        "en": "The ATR 42-500 has a short window run below its high wing and prominent belly-side gear fairings. The photo shows the large forward-left cargo door open and rear-left passenger boarding via built-in stairs—doors with different roles.",
+        "ja": "ATR 42-500は高翼下に短い窓列、胴体下両側に主脚整流部があります。写真では左前の大型貨物扉が開き、左後の旅客扉から内蔵階段で搭乗しており、用途が異なります。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "不要把左前貨艙門誤認成一般乘客登機門；客貨配置或改裝可能改變門的使用方式，仍應以具體照片為準。",
+        "en": "Do not mistake the forward-left cargo door for normal passenger boarding. Cabin/cargo conversions can alter door use; check the specific airframe.",
+        "ja": "左前貨物扉を通常の搭乗口と混同しないでください。客貨仕様や改造で使用方法が変わるため個別機を確認します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "左前大型貨艙門。",
+          "en": "Large forward-left cargo door.",
+          "ja": "左前に大型貨物扉。"
+        },
+        {
+          "zh": "左後乘客門與內建梯。",
+          "en": "Rear-left passenger door and stairs.",
+          "ja": "左後に旅客扉と内蔵階段。"
+        },
+        {
+          "zh": "機腹兩側有主腳整流罩。",
+          "en": "Belly-side main-gear fairings.",
+          "ja": "胴体下両側に主脚整流部。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/atr42/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATR_42-500_of_Hunnu_Air.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 ATR 42 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "附圖是 ATR 42-300 的早期座艙：圓形指針儀表搭配電子顯示器，兩席使用駕駛盤，中央台有功率與狀態控制桿。這張照片用來說明世代差異，不代表外觀照片中的 -500 或後期 -600。",
+        "en": "This is an early ATR 42-300 cockpit: round analogue instruments alongside electronic displays, yokes at both seats and power/condition levers on the pedestal. It illustrates a generation difference, not the -500 exterior examples or later -600.",
+        "ja": "写真は初期ATR 42-300の操縦席で、丸形指針計器と電子表示、両席の操縦輪、中央台の出力・コンディションレバーが見えます。世代差の例であり、外観写真の-500や後期-600を示すものではありません。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "ATR -600 的 Thales 座艙改用五具大型 LCD；因此不能把「很多圓表」當成所有 ATR 的共同特徵。",
+        "en": "The ATR -600 Thales cockpit uses five large LCDs. Many round gauges are not a universal ATR feature.",
+        "ja": "ATR -600のThales操縦席は大型LCD5面を使用します。丸形計器の多さは全ATR共通の特徴ではありません。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "照片為 ATR 42-300。",
+          "en": "Photograph shows an ATR 42-300.",
+          "ja": "写真はATR 42-300。"
+        },
+        {
+          "zh": "駕駛盤與中央控制桿。",
+          "en": "Yokes and pedestal levers.",
+          "ja": "操縦輪と中央操作レバー。"
+        },
+        {
+          "zh": "須分辨座艙世代。",
+          "en": "Distinguish cockpit generations.",
+          "ja": "操縦席の世代を区別。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/atr42/cockpit.jpg",
+          "caption": {
+            "zh": "ATR 42-300 早期座艙實照（非 -500／-600 座艙）",
+            "en": "Early ATR 42-300 cockpit (not a -500/-600 flight deck)",
+            "ja": "初期ATR 42-300の実機操縦席（-500／-600ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATR_ATR-42-300,_UTair_Aviation_AN1525686.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 ATR 42 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "ATR 42-500 的 24.57 m 主翼位於機身上方，兩具引擎掛在翼前下方；後緣襟翼、整流罩與外側副翼可從下方照片對照。",
+        "en": "The ATR 42-500's 24.57 m wing sits above the fuselage, with two engines ahead of and below it. The underside photo shows trailing-edge flaps, fairings and outboard ailerons.",
+        "ja": "ATR 42-500は翼幅24.57 mの高翼で、エンジン2基を翼前下に配置。下面写真で後縁フラップ、整流部、外側補助翼を比較できます。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "ATR 42 的翼展比自身機長還大；Q400 則機長更突出，遠看可利用這種比例差異初步篩選。",
+        "en": "The ATR 42's span exceeds its length, whereas the Q400's length is more prominent. This proportion helps initial identification at a distance.",
+        "ja": "ATR 42は翼幅が全長を上回り、Q400は長さが目立ちます。この比率は遠方での初期判別に役立ちます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "機身上方的高翼。",
+          "en": "Wing above the fuselage.",
+          "ja": "胴体上方の高翼。"
+        },
+        {
+          "zh": "翼展大於機長。",
+          "en": "Span greater than body length.",
+          "ja": "翼幅が全長より大きい。"
+        },
+        {
+          "zh": "外側副翼與內側襟翼。",
+          "en": "Outboard ailerons, inboard flaps.",
+          "ja": "外側補助翼・内側フラップ。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/atr42/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Czech_Airlines_ATR_42-500_OK-KFN.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "ATR 42 的渦輪螺旋槳引擎。以渦輪帶動螺旋槳產生推力，在中低速與短程航線上油耗效率極佳。",
+      "summary": {
+        "zh": "ATR 42-500 使用 PW127 系列渦槳引擎，配 Hamilton Standard 568F 六葉槳；實照可見彎曲的槳葉與位於主翼前方的短艙，主腳不藏在短艙裡。",
+        "en": "The ATR 42-500 uses PW127-series turboprops and six-bladed Hamilton Standard 568F propellers. The photograph shows curved blades and nacelles ahead of the wing, without main-gear bays in them.",
+        "ja": "ATR 42-500はPW127系エンジンとHamilton Standard 568Fの6枚羽根を使用。写真で湾曲した羽根と主翼前のナセルが見え、主脚室はナセルにありません。"
+      },
       "specs": [
         [
           "型式",
           "渦輪螺旋槳引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "早期 ATR 42-300／320 常見四葉槳，-500／600 為六葉；本頁外部實照為 -500，不能把六葉當成 Q400 專屬特徵。",
+        "en": "Early ATR 42-300/320s commonly have four blades; -500/600s have six. These exterior photos are -500s, so six blades are not exclusive to the Q400.",
+        "ja": "初期ATR 42-300／320は通常4枚、-500／600は6枚羽根です。外観写真は-500であり、6枚羽根をQ400専用の特徴と考えないでください。"
+      },
       "bullets": [
-        "渦輪帶動螺旋槳",
-        "中低速高效率"
+        {
+          "zh": "-500 採 PW127 系列。",
+          "en": "PW127 family on the -500.",
+          "ja": "-500はPW127系列。"
+        },
+        {
+          "zh": "六葉槳與彎曲槳葉。",
+          "en": "Six curved propeller blades.",
+          "ja": "湾曲した6枚羽根。"
+        },
+        {
+          "zh": "短艙內沒有主起落架。",
+          "en": "No main gear inside the nacelle.",
+          "ja": "ナセル内に主脚なし。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/atr42/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATR_42-500_of_Hunnu_Air.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "ATR 42 垂尾前緣後掠、頂端承載水平尾翼，根部連到短而收細的尾段；側面照片可看到方向舵分界。",
+        "en": "The ATR 42 has a swept-leading-edge fin carrying the tailplane at its top, rooted in a short tapering tailcone. The rudder boundary is visible from the side.",
+        "ja": "ATR 42は前縁が後退した垂尾頂部に水平尾翼を持ち、根元は短く絞った尾胴につながります。側面で方向舵境界が見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "尾翼上的塗裝或標誌不屬於固定辨識特徵；應看 T 尾配置、尾根與機身比例。",
+        "en": "Tail liveries and logos are not fixed identifiers. Use the T-tail arrangement, root and fuselage proportions.",
+        "ja": "尾翼の塗装・ロゴは固定識別点ではありません。T尾翼、根元、胴体との比率を見ます。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "頂端搭載水平尾翼。",
+          "en": "Tailplane at the fin top.",
+          "ja": "頂部に水平尾翼。"
+        },
+        {
+          "zh": "前緣後掠。",
+          "en": "Swept leading edge.",
+          "ja": "後退した前縁。"
+        },
+        {
+          "zh": "連接較短尾段。",
+          "en": "Joins a short tailcone.",
+          "ja": "短い尾胴へ接続。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/atr42/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATR_42-500_of_Hunnu_Air.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "ATR 42 的水平尾翼位於垂尾頂端；正面照片可清楚看見左右翼面構成的 T 字輪廓，以及中央尾翼交接處。",
+        "en": "The ATR 42 tailplane sits atop the fin. A front view clearly shows the left/right surfaces forming the T silhouette and the central junction.",
+        "ja": "ATR 42の水平尾翼は垂尾頂部にあり、正面写真で左右翼面のT字輪郭と中央接合部が明瞭です。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "T 尾是 ATR 與 Q400 的共同特徵，不是單獨判型依據；同時查看機身長度與主腳位置。",
+        "en": "A T-tail is shared by ATR and Q400, not a standalone identifier. Check body length and main-gear placement too.",
+        "ja": "T尾翼はATRとQ400の共通点で単独判定には使えません。胴体長と主脚位置も確認します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "垂尾頂端的橫向翼面。",
+          "en": "Horizontal surfaces atop the fin.",
+          "ja": "垂尾頂部の横方向翼面。"
+        },
+        {
+          "zh": "正面可見 T 字。",
+          "en": "T silhouette visible head-on.",
+          "ja": "正面でT字が見える。"
+        },
+        {
+          "zh": "需搭配機腹主腳辨識。",
+          "en": "Cross-check belly-mounted mains.",
+          "ja": "胴体下主脚も併せて確認。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/atr42/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATR_42_(8372025625).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "ATR 42 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "ATR 42 的左右主腳伸自機腹兩側整流罩，靠近機身而非引擎短艙；前腳與每側主腳各雙輪，共六輪。正面實照可觀察主輪與機腹的相對位置。",
+        "en": "ATR 42 mains extend from belly-side fairings close to the fuselage, not from engine nacelles. Twin wheels on the nose and each main leg total six. The front photo shows their relationship to the belly.",
+        "ja": "ATR 42の主脚はエンジンナセルでなく胴体下両側の整流部から伸び、胴体に近接します。前脚と左右主脚各2輪で計6輪。正面写真で胴体下との位置関係を確認できます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "與 Q400 的長支柱、短艙內收主腳相比，這種機腹配置是快速辨識 ATR 的好方法；輪數本身無法區分兩者。",
+        "en": "Compared with the Q400's long nacelle-mounted legs, this belly arrangement is a useful ATR cue. Wheel count alone cannot distinguish them.",
+        "ja": "Q400の長いナセル搭載主脚に対し、この胴体下配置はATR判別に有効です。輪数だけでは区別できません。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "主腳靠近機腹。",
+          "en": "Mains close to the belly.",
+          "ja": "胴体下寄りの主脚。"
+        },
+        {
+          "zh": "收納於機身側整流罩。",
+          "en": "Retract into body-side fairings.",
+          "ja": "胴体側整流部へ収納。"
+        },
+        {
+          "zh": "六輪，與 Q400 相同。",
+          "en": "Six wheels, like the Q400.",
+          "ja": "Q400と同じ計6輪。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/atr42/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATR_42_(8372025625).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "ATR 42 是短機身高翼雙發渦槳客機，全長 22.67 m、翼展 24.57 m，具有 T 尾與機腹兩側的主起落架整流罩。本組外觀照片均以六葉槳的 ATR 42-500 為例，不是較長的 ATR 72。",
+        "en": "The ATR 42 is a short-bodied high-wing twin turboprop, 22.67 m long with a 24.57 m span, T-tail and belly-side main-gear fairings. Exterior photos here show six-bladed ATR 42-500s, not the longer ATR 72.",
+        "ja": "ATR 42は全長22.67 m、翼幅24.57 mの短胴高翼双発ターボプロップで、T尾翼と胴体下部両側の主脚整流部を持ちます。外観写真は長胴ATR 72でなく6枚羽根のATR 42-500です。"
+      },
+      "fact": {
+        "zh": "同樣高翼 T 尾不代表同一機型；相較 Q400，ATR 42 更短，主腳也更靠近機腹。",
+        "en": "A shared high wing and T-tail do not mean the same type. Compared with the Q400, the ATR 42 is shorter and its mains sit nearer the belly.",
+        "ja": "高翼・T尾翼が共通でも同型ではありません。Q400より短く主脚も胴体下部寄りです。"
+      },
+      "bullets": [
+        {
+          "zh": "短機身高翼。",
+          "en": "Short body and high wing.",
+          "ja": "短胴・高翼。"
+        },
+        {
+          "zh": "T 尾與機腹主腳。",
+          "en": "T-tail and belly-mounted mains.",
+          "ja": "T尾翼と胴体下の主脚。"
+        },
+        {
+          "zh": "外觀以 -500 為例。",
+          "en": "Exterior examples are -500s.",
+          "ja": "外観例は-500型。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/atr42/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Czech_Airlines_ATR_42-500_OK-KFN.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "ATR 42 的主要前風擋由中央窗柱隔開，向側面還有較窄窗片；窗帶下方的鼻部較短、圓潤。正面照片可比較前窗傾角，側面照片可看清側窗分片。",
+        "en": "A centre post divides the ATR 42's main windshield, with narrower panes wrapping around the sides above a short rounded nose. Front and side photos show windshield slope and side-pane divisions.",
+        "ja": "ATR 42の主前窓は中央柱で分かれ、側面へ狭い窓が続き、その下は短く丸い機首です。正面で前窓の傾斜、側面で窓の分割を確認できます。"
+      },
+      "fact": {
+        "zh": "ATR 42 與 ATR 72 窗型相近；窗型適合辨認家族，仍需靠機身長度、門與窗列判斷 42 或 72。",
+        "en": "ATR 42 and ATR 72 glazing is similar. Windows help identify the family; body length, doors and window runs distinguish 42 from 72.",
+        "ja": "ATR 42と72の窓は類似します。系列の判定には役立ちますが、42と72は胴体長・扉・窓列も確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "中央柱分隔前窗。",
+          "en": "Centre-divided windshield.",
+          "ja": "中央柱で分かれる前窓。"
+        },
+        {
+          "zh": "側面有較窄窗片。",
+          "en": "Narrower side panes.",
+          "ja": "側面に狭い窓。"
+        },
+        {
+          "zh": "短而圓潤的機鼻。",
+          "en": "Short, rounded nose.",
+          "ja": "短く丸い機首。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/atr42/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATR_42_(8372025625).jpg"
+        },
+        {
+          "src": "assets/reference/atr42/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATR_42-500_of_Hunnu_Air.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "ATR 42 標準主翼端部平緩收束，末端有翼尖燈，沒有高大上翹的翼尖小翼。下方照片可同時看到外翼輪廓與副翼位置。",
+        "en": "The standard ATR 42 wing closes into a low tip with a light and no tall upturned winglet. The underside view shows the outer-wing outline and aileron position.",
+        "ja": "標準ATR 42の翼端は低く収束し翼端灯を持ちますが、高い上向き小翼はありません。下面写真で外翼輪郭と補助翼位置が見えます。"
+      },
+      "fact": {
+        "zh": "Q400 也沒有高大小翼；應比較主翼與機身的比例，以及主腳是否位於機腹。",
+        "en": "The Q400 also lacks tall winglets. Compare wing/body proportions and whether the mains are at the belly.",
+        "ja": "Q400にも高い小翼はありません。翼と胴体の比率、主脚が胴体下にあるかを比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "低矮翼尖。",
+          "en": "Low-profile tip.",
+          "ja": "低い翼端。"
+        },
+        {
+          "zh": "無高大上翹小翼。",
+          "en": "No tall upturned winglet.",
+          "ja": "高い上向き小翼なし。"
+        },
+        {
+          "zh": "末端燈與外翼後緣可見。",
+          "en": "Tip light and outer trailing edge visible.",
+          "ja": "翼端灯と外翼後縁を確認。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/atr42/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Czech_Airlines_ATR_42-500_OK-KFN.jpg"
+        }
+      ]
     }
   },
   "specifications": {

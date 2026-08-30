@@ -497,3 +497,41 @@ All exterior photographs show CRJ700 aircraft. The cockpit photograph is explici
 Exterior photographs show the short-body E170 (ERJ-170-100), not the E175 (ERJ-170-200) or E190. The E175 cockpit photograph is explicitly labelled as a first-generation E170/175 family-layout reference in both its caption and the three-language explanation. No AI-generated aircraft imagery is used.
 
 Technical cross-checks for this batch: [Transport Canada CRJ operational evaluation](https://tc.canada.ca/en/aviation/commercial-air-services/operational-evaluation-reports/crj-series), [JAL E170/E190 dimensions and engines](https://press.jal.co.jp/ja/release/201408/002122.html), [GE CRJ700 CF34-8C5B1 production standard](https://www.ge.com/news/press-releases/gojet-airlines-be-first-us-operator-cf34-8c5b1-engine), [Honeywell E170/190 avionics](https://aerospace.honeywell.com/content/dam/aerobt/en/documents/learn/platforms/airlines-%26-cargo/infographics/Embraer-170-190-ig.pdf). Shape comparisons are visual observations of the credited photographs; configuration-specific differences are not universal identification rules.
+
+## Dash 8 Q400 (`q400`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `q400/overview.jpg` | [Croatia Airlines Q400 9A-CQC](https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg), Julian Herzog; resized | CC BY 4.0 |
+| `q400/cockpit.jpg` | [Q400 NextGen cockpit](https://commons.wikimedia.org/wiki/File:Q400_NextGen_aircraft_cockpit.jpg), Rick Rydell; resized | CC0 1.0 |
+| `q400/window-front.jpg` | [US-Bangla Q400 S2-AGU head-on](https://commons.wikimedia.org/wiki/File:S2-AGU_head_on_US-Bangla_Airlines_Q400_(24846202901).jpg), Shadman Samee; cropped | CC BY-SA 2.0 |
+| `q400/window-side.jpg` | [Croatia Airlines Q400 9A-CQE nose](https://commons.wikimedia.org/wiki/File:9A-CQE_Croatia_Airlines_Bombardier_Dash_8_Q400_Zagorje_at_Zagreb_Airport_-_nose.jpg), 07; cropped | CC BY-SA 4.0 |
+| `q400/fuselage.jpg` | [Q400 9A-CQC fuselage](https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `q400/engine.jpg` | [Flybe Q400 G-JEDW engine nacelle](https://commons.wikimedia.org/wiki/File:Flybe_De_Havilland_Canada_Dash_8-400_G-JEDW_LHR_27-02-2020.jpg), BWard 1997; cropped | CC BY 4.0 |
+| `q400/wingtip.jpg` | [Q400 9A-CQC wingtip](https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `q400/wing.jpg` | [Q400 9A-CQC wing underside](https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `q400/vstab.jpg` | [Q400 9A-CQC vertical tail](https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `q400/hstab.jpg` | [Q400 9A-CQC horizontal tail](https://commons.wikimedia.org/wiki/File:Croatia_Airlines_Bombardier_DHC-8-402_Q400_9A-CQC_MUC_2015_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `q400/gear.jpg` | [Flybe Q400 G-JEDW main landing gear](https://commons.wikimedia.org/wiki/File:Flybe_De_Havilland_Canada_Dash_8-400_G-JEDW_LHR_27-02-2020.jpg), BWard 1997; cropped | CC BY 4.0 |
+
+All photographs show the DHC-8-400/Q400 series, not the shorter Dash 8 variants. Shape descriptions refer to the credited photographs; standard tips have no tall upturned winglets. Propellers in motion should not be used to count blades from blur alone.
+
+## ATR 42 (`atr42`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `atr42/overview.jpg` | [Czech Airlines ATR 42-500 OK-KFN](https://commons.wikimedia.org/wiki/File:Czech_Airlines_ATR_42-500_OK-KFN.jpg), Sefjo; cropped | CC BY-SA 3.0 |
+| `atr42/cockpit.jpg` | [UTair ATR 42-300 VP-BLJ cockpit](https://commons.wikimedia.org/wiki/File:ATR_ATR-42-300,_UTair_Aviation_AN1525686.jpg), Pavel Adzhigildaev / parfaits; resized | CC BY-SA 3.0 |
+| `atr42/window-front.jpg` | [TRIP ATR 42-500 front view](https://commons.wikimedia.org/wiki/File:ATR_42_(8372025625).jpg), João Carlos Medau; cropped | CC BY 2.0 |
+| `atr42/window-side.jpg` | [Hunnu Air ATR 42-500 JU-1803 side windows](https://commons.wikimedia.org/wiki/File:ATR_42-500_of_Hunnu_Air.jpg), Bernard Gagnon; cropped | CC0 1.0 |
+| `atr42/fuselage.jpg` | [Hunnu Air ATR 42-500 cargo and passenger doors](https://commons.wikimedia.org/wiki/File:ATR_42-500_of_Hunnu_Air.jpg), Bernard Gagnon; cropped | CC0 1.0 |
+| `atr42/engine.jpg` | [Hunnu Air ATR 42-500 engine and six-bladed propeller](https://commons.wikimedia.org/wiki/File:ATR_42-500_of_Hunnu_Air.jpg), Bernard Gagnon; cropped | CC0 1.0 |
+| `atr42/wingtip.jpg` | [ATR 42-500 OK-KFN wingtip](https://commons.wikimedia.org/wiki/File:Czech_Airlines_ATR_42-500_OK-KFN.jpg), Sefjo; cropped | CC BY-SA 3.0 |
+| `atr42/wing.jpg` | [ATR 42-500 OK-KFN wing underside](https://commons.wikimedia.org/wiki/File:Czech_Airlines_ATR_42-500_OK-KFN.jpg), Sefjo; cropped | CC BY-SA 3.0 |
+| `atr42/vstab.jpg` | [Hunnu Air ATR 42-500 vertical tail](https://commons.wikimedia.org/wiki/File:ATR_42-500_of_Hunnu_Air.jpg), Bernard Gagnon; cropped | CC0 1.0 |
+| `atr42/hstab.jpg` | [TRIP ATR 42-500 T-tail](https://commons.wikimedia.org/wiki/File:ATR_42_(8372025625).jpg), João Carlos Medau; cropped | CC BY 2.0 |
+| `atr42/gear.jpg` | [TRIP ATR 42-500 belly-mounted main gear](https://commons.wikimedia.org/wiki/File:ATR_42_(8372025625).jpg), João Carlos Medau; cropped | CC BY 2.0 |
+
+Exterior photographs are ATR 42-500 examples, not ATR 72s. The cockpit photograph is an explicitly labelled ATR 42-300 example illustrating generation differences; it is not presented as a -500 or -600 cockpit. The -600's five-screen Thales panel is described separately. The Hunnu Air image is CC0 according to the Commons file's licence metadata, verified 2026-08-30. No AI-generated imagery is used.
+
+Technical cross-checks: [De Havilland Dash 8-400 aircraft recovery manual](https://dehavillandportal.com/assets/public-documents/D8400-ARM.pdf), [De Havilland Dash 8-400 specifications](https://dehavilland.com/wp-content/uploads/2025/03/DHC_Dash8_Spec-Sheet_v10_DIGITAL.pdf), [ATR 42-500 dimensions and powerplant](https://www.atr-aircraft.com/wp-content/uploads/2020/07/42-500.pdf), [ATR -600 cockpit](https://www.atr-aircraft.com/innovation/cockpit/). Photos and drawings were checked for nacelle-mounted versus fuselage-mounted main landing gear. Dimensions and configurations are identification aids, not operational guidance.

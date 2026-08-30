@@ -186,6 +186,9 @@ $photos = [ordered]@{
   "e170/overview.jpg" = "Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"
   "e170/cockpit.jpg" = "Cockpit of LOT Embraer ERJ-175LR (SP-LIN).jpg"
   "e170/wing.jpg" = "Peoples Viennaline ERJ-170 OE-LMK LSZR 01.jpg"
+  "q400/overview.jpg" = "Croatia Airlines Bombardier DHC-8-402 Q400 9A-CQC MUC 2015 01.jpg"
+  "q400/cockpit.jpg" = "Q400 NextGen aircraft cockpit.jpg"
+  "atr42/cockpit.jpg" = "ATR ATR-42-300, UTair Aviation AN1525686.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -345,6 +348,25 @@ $windowPhotos = @(
   @{ Dest="e170/vstab.jpg"; Title="Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"; Crop=@(.64,.22,.35) }
   @{ Dest="e170/hstab.jpg"; Title="Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"; Crop=@(.77,.46,.20) }
   @{ Dest="e170/gear.jpg"; Title="Peoples Viennaline ERJ-170 OE-LMK LSZR 01.jpg"; Crop=@(.38,.57,.25) }
+  @{ Dest="q400/window-front.jpg"; Title="S2-AGU head on US-Bangla Airlines Q400 (24846202901).jpg"; Crop=@(.43,.48,.15) }
+  @{ Dest="q400/window-side.jpg"; Title="9A-CQE Croatia Airlines Bombardier Dash 8 Q400 Zagorje at Zagreb Airport - nose.jpg"; Crop=@(.48,.30,.32) }
+  @{ Dest="q400/fuselage.jpg"; Title="Croatia Airlines Bombardier DHC-8-402 Q400 9A-CQC MUC 2015 01.jpg"; Crop=@(.09,.24,.76) }
+  @{ Dest="q400/engine.jpg"; Title="Flybe De Havilland Canada Dash 8-400 G-JEDW LHR 27-02-2020.jpg"; Crop=@(.39,.20,.36) }
+  @{ Dest="q400/wingtip.jpg"; Title="Croatia Airlines Bombardier DHC-8-402 Q400 9A-CQC MUC 2015 01.jpg"; Crop=@(.58,.22,.16) }
+  @{ Dest="q400/wing.jpg"; Title="Croatia Airlines Bombardier DHC-8-402 Q400 9A-CQC MUC 2015 01.jpg"; Crop=@(.46,.22,.28) }
+  @{ Dest="q400/vstab.jpg"; Title="Croatia Airlines Bombardier DHC-8-402 Q400 9A-CQC MUC 2015 01.jpg"; Crop=@(.70,.42,.25) }
+  @{ Dest="q400/hstab.jpg"; Title="Croatia Airlines Bombardier DHC-8-402 Q400 9A-CQC MUC 2015 01.jpg"; Crop=@(.73,.39,.23) }
+  @{ Dest="q400/gear.jpg"; Title="Flybe De Havilland Canada Dash 8-400 G-JEDW LHR 27-02-2020.jpg"; Crop=@(.31,.45,.38) }
+  @{ Dest="atr42/overview.jpg"; Title="Czech Airlines ATR 42-500 OK-KFN.jpg"; Crop=@(.32,.26,.49) }
+  @{ Dest="atr42/window-front.jpg"; Title="ATR 42 (8372025625).jpg"; Crop=@(.52,.38,.12) }
+  @{ Dest="atr42/window-side.jpg"; Title="ATR 42-500 of Hunnu Air.jpg"; Crop=@(.17,.47,.10) }
+  @{ Dest="atr42/fuselage.jpg"; Title="ATR 42-500 of Hunnu Air.jpg"; Crop=@(.12,.28,.56) }
+  @{ Dest="atr42/engine.jpg"; Title="ATR 42-500 of Hunnu Air.jpg"; Crop=@(.34,.34,.31) }
+  @{ Dest="atr42/wingtip.jpg"; Title="Czech Airlines ATR 42-500 OK-KFN.jpg"; Crop=@(.59,.27,.12) }
+  @{ Dest="atr42/wing.jpg"; Title="Czech Airlines ATR 42-500 OK-KFN.jpg"; Crop=@(.50,.28,.19) }
+  @{ Dest="atr42/vstab.jpg"; Title="ATR 42-500 of Hunnu Air.jpg"; Crop=@(.59,.28,.28) }
+  @{ Dest="atr42/hstab.jpg"; Title="ATR 42 (8372025625).jpg"; Crop=@(.25,.16,.32) }
+  @{ Dest="atr42/gear.jpg"; Title="ATR 42 (8372025625).jpg"; Crop=@(.39,.51,.26) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600
