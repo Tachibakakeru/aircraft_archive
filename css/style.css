@@ -550,7 +550,7 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
 }
 .gallery{margin:18px 0 4px;display:flex;flex-direction:column;gap:14px}
 .gallery figure{margin:0;border-radius:8px;overflow:hidden;border:1px solid var(--stroke);background:#0e1729}
-.gallery img{display:block;width:100%;height:auto;object-fit:cover}
+.gallery img{display:block;max-width:100%;width:auto;height:auto;margin-inline:auto}
 .gallery figcaption{
   padding:8px 12px;
   font-size:12px;line-height:1.6;color:var(--muted);

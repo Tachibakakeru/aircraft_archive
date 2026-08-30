@@ -1,3 +1,4 @@
+param([switch]$Check)
 $ErrorActionPreference = "Stop"
 
 $root = Split-Path -Parent $PSScriptRoot
@@ -6,9 +7,31 @@ function Get-CommonsImageInfo($fileTitles, $width, $includeMetadata = $false) {
   $byTitle = @{}
   foreach ($title in @($fileTitles | Sort-Object -Unique)) {
     $escaped = [uri]::EscapeDataString($title)
-    $byTitle[$title] = @{ thumburl = "https://commons.wikimedia.org/wiki/Special:Redirect/file/${escaped}?width=$width" }
+    $size = if ($width -gt 0) { "?width=$width" } else { "" }
+    $byTitle[$title] = @{ thumburl = "https://commons.wikimedia.org/wiki/Special:Redirect/file/${escaped}${size}" }
   }
   return $byTitle
+}
+
+function Get-ReferenceCrop($imageWidth, $imageHeight, $crop) {
+  if ($crop.Count -ne 3 -or $imageWidth -le 0 -or $imageHeight -le 0) { throw "Invalid crop input" }
+  $w = [int]($imageWidth * $crop[2]); $h = [int]($w * 9 / 16)
+  $x = [int]($imageWidth * $crop[0]); $y = [int]($imageHeight * $crop[1])
+  if ($w -le 0 -or $h -le 0 -or $x -lt 0 -or $y -lt 0 -or $x+$w -gt $imageWidth -or $y+$h -gt $imageHeight) { throw "Crop outside source image" }
+  $outW = [Math]::Min(960, $w)
+  return @{ X=$x; Y=$y; Width=$w; Height=$h; OutWidth=$outW; OutHeight=[Math]::Max(1,[int]($outW*$h/$w)) }
+}
+
+if ($Check) {
+  $small = Get-ReferenceCrop 1000 750 @(.1,.2,.2)
+  $large = Get-ReferenceCrop 5000 3500 @(.1,.2,.4)
+  if ($small.OutWidth -ne 200 -or $large.OutWidth -ne 960) { throw "Crop must never upscale" }
+  $rejected=$false
+  try { Get-ReferenceCrop 1000 750 @(.9,.9,.5) | Out-Null } catch { $rejected=$true }
+  if (!$rejected) { throw "Out-of-bounds crop was accepted" }
+  if ((Get-CommonsImageInfo @('test.jpg') 0)['test.jpg'].thumburl.Contains('?width=')) { throw "Crops must use originals" }
+  Write-Output 'Reference crop checks passed: original URL, no upscaling, bounds validation.'
+  return
 }
 
 $photos = [ordered]@{
@@ -189,6 +212,8 @@ $photos = [ordered]@{
   "q400/overview.jpg" = "Croatia Airlines Bombardier DHC-8-402 Q400 9A-CQC MUC 2015 01.jpg"
   "q400/cockpit.jpg" = "Q400 NextGen aircraft cockpit.jpg"
   "atr42/cockpit.jpg" = "ATR ATR-42-300, UTair Aviation AN1525686.jpg"
+  "dc10/cockpit.jpg" = "DC-10 Cockpit.jpg"
+  "md11/cockpit.jpg" = "Cockpit of McDonnell Douglas MD-11 (5306565461).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -369,7 +394,30 @@ $windowPhotos = @(
   @{ Dest="atr42/gear.jpg"; Title="ATR 42 (8372025625).jpg"; Crop=@(.39,.51,.26) }
 )
 
-$windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600
+$windowPhotos += @(
+  @{ Dest="dc10/overview.jpg"; Title="KLM DC-10-30 (6068067445).jpg"; Crop=@(.025,.13,.93) }
+  @{ Dest="dc10/window-front.jpg"; Title="G-DMCA DC-10 Monarch (5894507206).jpg"; Crop=@(.10,.255,.83) }
+  @{ Dest="dc10/window-side.jpg"; Title="Biman Bangladesh Airlines McDonnell Douglas DC-10-30 S2-ACO Landing at VGHS (8124284469).jpg"; Crop=@(.74,.365,.12) }
+  @{ Dest="dc10/fuselage.jpg"; Title="McDonnell Douglas DC-10-30.jpg"; Crop=@(.01,.32,.75) }
+  @{ Dest="dc10/engine.jpg"; Title="Biman Bangladesh Airlines McDonnell Douglas DC-10-30 S2-ACO Landing at VGHS (8124284469).jpg"; Crop=@(.365,.46,.20) }
+  @{ Dest="dc10/wingtip.jpg"; Title='Swissair McDonnell Douglas DC-10-30 HB-IHH "Basel-Stadt" (26090378125).jpg'; Crop=@(.025,.415,.45) }
+  @{ Dest="dc10/wing.jpg"; Title="Biman Bangladesh Airlines McDonnell Douglas DC-10-30 S2-ACO Landing at VGHS (8124284469).jpg"; Crop=@(.01,.45,.49) }
+  @{ Dest="dc10/vstab.jpg"; Title="Biman Bangladesh Airlines McDonnell Douglas DC-10-30 S2-ACO Landing at VGHS (8124284469).jpg"; Crop=@(.065,.25,.28) }
+  @{ Dest="dc10/hstab.jpg"; Title="Finnair McDonnell Douglas DC-10-30 tail.jpg"; Crop=@(.12,.49,.83) }
+  @{ Dest="dc10/gear.jpg"; Title="Biman Bangladesh Airlines McDonnell Douglas DC-10-30 S2-ACO Landing at VGHS (8124284469).jpg"; Crop=@(.31,.55,.185) }
+  @{ Dest="md11/overview.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.01,.15,.98) }
+  @{ Dest="md11/window-front.jpg"; Title="PH-KCE KLM Royal Dutch Airlines McDonnell Douglas MD-11 - cn 48559, taxiing 22july2013 pic-001.JPG"; Crop=@(.385,.39,.22) }
+  @{ Dest="md11/window-side.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.015,.29,.18) }
+  @{ Dest="md11/fuselage.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.015,.30,.50) }
+  @{ Dest="md11/engine.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.39,.46,.20) }
+  @{ Dest="md11/wingtip.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.70,.365,.22) }
+  @{ Dest="md11/wing.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.48,.40,.42) }
+  @{ Dest="md11/vstab.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.73,.39,.26) }
+  @{ Dest="md11/hstab.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.76,.58,.23) }
+  @{ Dest="md11/gear.jpg"; Title='KLM - Royal Dutch Airlines McDonnell Douglas MD-11 PH-KCA "Amy Johnson" Toronto Pearson Street Festival (9744032460).jpg'; Crop=@(.09,.20,.82) }
+)
+
+$windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0
 
 Add-Type -AssemblyName System.Drawing
 foreach ($photo in $windowPhotos) {
@@ -384,13 +432,12 @@ foreach ($photo in $windowPhotos) {
       catch { if ($attempt -eq 4) { throw }; Start-Sleep -Seconds (10 * $attempt) }
     }
     $image = [System.Drawing.Image]::FromFile($raw)
-    $width = [int]($image.Width * $photo.Crop[2])
-    $height = [int]($width * 9 / 16)
-    $x = [int]($image.Width * $photo.Crop[0])
-    $y = [int]($image.Height * $photo.Crop[1])
-    $bitmap = [System.Drawing.Bitmap]::new(960, 540)
+    $crop = Get-ReferenceCrop $image.Width $image.Height $photo.Crop
+    if ($crop.Width -lt 480) { Write-Warning "$($photo.Dest): only $($crop.Width) source pixels; choose a closer/higher-resolution photo." }
+    $bitmap = [System.Drawing.Bitmap]::new($crop.OutWidth, $crop.OutHeight)
     $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
-    $graphics.DrawImage($image, [System.Drawing.Rectangle]::new(0, 0, 960, 540), [System.Drawing.Rectangle]::new($x, $y, $width, $height), [System.Drawing.GraphicsUnit]::Pixel)
+    $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+    $graphics.DrawImage($image, [System.Drawing.Rectangle]::new(0, 0, $crop.OutWidth, $crop.OutHeight), [System.Drawing.Rectangle]::new($crop.X, $crop.Y, $crop.Width, $crop.Height), [System.Drawing.GraphicsUnit]::Pixel)
     $graphics.Dispose(); $image.Dispose()
     $bitmap.Save($dest, [System.Drawing.Imaging.ImageFormat]::Jpeg); $bitmap.Dispose()
   } finally { Remove-Item -LiteralPath $raw -Force -ErrorAction SilentlyContinue }

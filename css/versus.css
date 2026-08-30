@@ -88,7 +88,7 @@ body{min-height:100vh}
 
 .vs-card-gallery{display:flex;flex-direction:column;gap:10px}
 .vs-card-fig{margin:0;border-radius:8px;overflow:hidden;background:var(--bg-0);border:1px solid var(--stroke)}
-.vs-card-fig img{width:100%;height:auto;display:block}
+.vs-card-fig img{max-width:100%;width:auto;height:auto;display:block;margin-inline:auto}
 .vs-card-fig figcaption{padding:8px 10px;font-size:11px;line-height:1.5;color:var(--muted)}
 .vs-card-fig figcaption a{display:block;margin-top:3px;color:var(--cyan);text-decoration:none;font-family:var(--mono);font-size:10px}
 .vs-card-fig figcaption a:hover{text-decoration:underline}

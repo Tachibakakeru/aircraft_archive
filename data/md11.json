@@ -2,112 +2,612 @@
   "title": "McDonnell Douglas MD-11",
   "sub": "MD-11 — 點選機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "MD-11 是 DC-10 的最終進化型，機身加長並換裝新式玻璃座艙，是麥道獨立開發的最後一款大型廣體客機。",
+      "summary": {
+        "zh": "MD-11 的客機照片可看到連續舷窗與分布在機翼前後的艙門。與 DC-10 相比，前後機身延長使整體更修長，但寬體截面仍相似。",
+        "en": "The passenger MD-11 photograph shows continuous window rows and doors fore and aft of the wing. Forward and aft fuselage stretches make it more slender than the DC-10 while retaining a similar widebody section.",
+        "ja": "旅客型MD-11の写真では連続窓列と翼前後の扉が見えます。前後胴体の延長でDC-10より細長く見えますが、広胴断面は似ています。"
+      },
       "specs": [
-        ["全長", "61.6 m"],
-        ["機身直徑", "6.02 m"],
-        ["結構形式", "半硬殼式鋁合金"],
-        ["典型座位數", "250–410 席"]
+        [
+          "全長",
+          "61.6 m"
+        ],
+        [
+          "機身直徑",
+          "6.02 m"
+        ],
+        [
+          "結構形式",
+          "半硬殼式鋁合金"
+        ],
+        [
+          "典型座位數",
+          "250–410 席"
+        ]
       ],
-      "fact": "MD-11 首飛於 1990 年，是麥道被波音併購前推出的最後一款全新機型，此後麥道再無獨立研發的全新客機問世。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "貨運型的大型主甲板貨門與封窗屬用途差異，不應拿它們和客機直接比較來判定 DC-10／MD-11。",
+        "en": "A freighter's large main-deck door and plugged windows reflect its role; comparing them directly with a passenger aircraft is not a reliable DC-10/MD-11 test.",
+        "ja": "貨物型の大型主甲板扉・窓閉鎖は用途差です。旅客型と直接比較してDC-10／MD-11を判定する根拠にはなりません。"
+      },
+      "bullets": [
+        {
+          "zh": "機翼前後延長的機身。",
+          "en": "Stretched body fore and aft of the wing.",
+          "ja": "翼前後を延長した胴体。"
+        },
+        {
+          "zh": "客機保留長列舷窗。",
+          "en": "Passenger version has long window rows.",
+          "ja": "旅客型は長い窓列。"
+        },
+        {
+          "zh": "貨機艙門另行判讀。",
+          "en": "Interpret freighter doors separately.",
+          "ja": "貨物型扉は別に判断。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md11/fuselage.jpg?v=bdae5b4f885a",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "MD-11 換裝全玻璃化數位座艙，取消飛航工程師職位，僅需 2 名飛行員，是麥道機隊邁入數位座艙時代的代表作。",
+      "summary": {
+        "zh": "MD-11 採雙人玻璃座艙，正面六具主要顯示器取代大量類比儀表，中央顯示引擎與系統資訊。仍保留左右駕駛盤和三支油門。",
+        "en": "The MD-11 has a two-crew glass cockpit with six main displays replacing many analog gauges. Center screens show engine and system information; conventional yokes and three throttles remain.",
+        "ja": "MD-11は2人制グラス操縦席で、多数のアナログ計器を6面の主要表示器に集約。中央画面にエンジン・システム情報を表示し、操縦輪と3本のスロットルは残ります。"
+      },
       "specs": [
-        ["機組員", "2 名"],
-        ["儀表", "數位玻璃座艙"],
-        ["飛控", "電傳輔助液壓操縱"],
-        ["對比前代", "DC-10 仍需 3 名機組員"]
+        [
+          "機組員",
+          "2 名"
+        ],
+        [
+          "儀表",
+          "數位玻璃座艙"
+        ],
+        [
+          "飛控",
+          "電傳輔助液壓操縱"
+        ],
+        [
+          "對比前代",
+          "DC-10 仍需 3 名機組員"
+        ]
       ],
-      "fact": "MD-11 拿掉了 DC-10 時代必備的飛航工程師，這在當年航空公司眼中是重要賣點——單趟航班能省下一名機組員的人事成本。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "看六面顯示器可辨認座艙世代，但 MD-10 改裝機也採相同布局；要確認 MD-11，需加看機身、小翼或機型標牌。",
+        "en": "Six screens identify the cockpit generation, but MD-10 conversions share the layout. Confirm MD-11 using the body, winglets or aircraft identification plate.",
+        "ja": "6面表示で世代は判別できますがMD-10改修機も同様です。MD-11の確定には胴体・小翼・機種銘板を確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "六具主要顯示器。",
+          "en": "Six main displays.",
+          "ja": "6面の主要表示器。"
+        },
+        {
+          "zh": "雙人操作。",
+          "en": "Two-person operation.",
+          "ja": "2人で運航。"
+        },
+        {
+          "zh": "駕駛盤與三支油門。",
+          "en": "Yokes and three throttles.",
+          "ja": "操縦輪と3本のスロットル。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md11/cockpit.jpg?v=68eaa328063f",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit_of_McDonnell_Douglas_MD-11_(5306565461).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "MD-11 主翼在 DC-10 基礎上加大並加裝翼尖小翼，後緣配備富勒襟翼與展向擾流板，翼尖小翼是與 DC-10 最容易區分的外觀特徵之一。",
+      "summary": {
+        "zh": "MD-11 為後掠低翼，仰視照片能看到後緣分段操縱面、下方整流罩和末端上下小翼。翼下引擎位置延續 DC-10 家族特徵。",
+        "en": "The MD-11 has swept low wings. This underside view shows segmented trailing-edge surfaces, fairings beneath them and upper/lower tip winglets. Underwing engine placement retains the DC-10 family layout.",
+        "ja": "MD-11は後退低翼。見上げた写真で分割された後縁舵面、下の整流部、上下翼端小翼が見えます。翼下エンジン配置はDC-10系を継承します。"
+      },
       "specs": [
-        ["翼展", "51.97 m"],
-        ["翼面積", "338.9 m²"],
-        ["後掠角", "35°"],
-        ["翼尖裝置", "翼尖小翼（winglet）"]
+        [
+          "翼展",
+          "51.97 m"
+        ],
+        [
+          "翼面積",
+          "338.9 m²"
+        ],
+        [
+          "後掠角",
+          "35°"
+        ],
+        [
+          "翼尖裝置",
+          "翼尖小翼（winglet）"
+        ]
       ],
-      "fact": "翼尖小翼是 MD-11 外觀上與 DC-10 最快能分辨的特徵——同樣三發配置，一眼看翼尖有沒有豎起的小翼就知道是哪一款。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "比較照片的襟翼收放狀態不同時，輪廓也會變；最穩定的外翼差異仍是標準上下小翼。",
+        "en": "Different flap settings change the visible outline. The standard upper/lower winglets remain the most consistent outer-wing difference.",
+        "ja": "フラップ状態で見かけの輪郭は変わります。外翼の安定した違いは標準の上下小翼です。"
+      },
+      "bullets": [
+        {
+          "zh": "後掠低翼布局。",
+          "en": "Swept low-wing layout.",
+          "ja": "後退低翼配置。"
+        },
+        {
+          "zh": "分段後緣舵面。",
+          "en": "Segmented trailing-edge surfaces.",
+          "ja": "分割された後縁舵面。"
+        },
+        {
+          "zh": "末端連接上下小翼。",
+          "en": "Upper/lower winglets at the end.",
+          "ja": "端部に上下小翼。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md11/wing.jpg?v=9486f56a2ccb",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "TURBOFAN ENGINE",
-      "summary": "MD-11 沿用 DC-10 的三發配置（兩具翼下、一具垂尾根部），可選配 General Electric CF6 或 Pratt & Whitney PW4000 系列引擎，效率較 DC-10 世代提升不少。",
+      "summary": {
+        "zh": "MD-11 可搭載 GE CF6-80C2 或 Pratt & Whitney PW4000 系列。照片呈現翼下圓形進氣口與短艙；另一具引擎位於尾部中央直通式短艙。",
+        "en": "The MD-11 can use GE CF6-80C2 or Pratt & Whitney PW4000 engines. The photo shows an underwing circular intake and nacelle; another engine sits in the straight-through center-tail nacelle.",
+        "ja": "MD-11はGE CF6-80C2またはPratt & Whitney PW4000系列を搭載。写真は翼下の円形吸気口とナセルで、もう1基は尾部中央の直通式ナセルにあります。"
+      },
       "specs": [
-        ["型號", "GE CF6-80C2 或 P&W PW4000 系列"],
-        ["型式", "高旁通比渦輪扇"],
-        ["配置", "翼下 2 具＋垂尾根部 1 具"],
-        ["單具推力", "約 267–276 kN"]
+        [
+          "型號",
+          "GE CF6-80C2 或 P&W PW4000 系列"
+        ],
+        [
+          "型式",
+          "高旁通比渦輪扇"
+        ],
+        [
+          "配置",
+          "翼下 2 具＋垂尾根部 1 具"
+        ],
+        [
+          "單具推力",
+          "約 267–276 kN"
+        ]
       ],
-      "fact": "垂尾根部引擎的維修痛點在 MD-11 依然存在——這是三發廣體機共通的宿命，也是後續機型逐漸捨棄三發佈局、轉向雙發的原因之一。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "兩家引擎的尾噴管與整流細節不同；不宜只靠一張照片的反光或塗裝判引擎廠牌，必要時核對機籍與引擎資料。",
+        "en": "Exhaust and fairing details differ between engine options. Do not infer the manufacturer from reflections or paint alone; check airframe and engine records when needed.",
+        "ja": "エンジン選択で排気・フェアリング細部が異なります。反射や塗装だけでメーカーを断定せず、必要なら機体とエンジン記録を照合します。"
+      },
+      "bullets": [
+        {
+          "zh": "翼下兩具、尾部一具。",
+          "en": "Two underwing, one in the tail.",
+          "ja": "翼下2基・尾部1基。"
+        },
+        {
+          "zh": "CF6-80C2 或 PW4000。",
+          "en": "CF6-80C2 or PW4000.",
+          "ja": "CF6-80C2またはPW4000。"
+        },
+        {
+          "zh": "尾部進排氣近直線。",
+          "en": "Near-straight tail-engine flow path.",
+          "ja": "尾部吸排気はほぼ直線。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md11/engine.jpg?v=d8190d68418f",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼除了提供方向穩定性，內部兼作第三具引擎的進氣風道，結構與氣動需求須同時滿足，是三發廣體機的共通設計。",
+      "summary": {
+        "zh": "MD-11 的後掠垂尾同樣豎立於中央引擎上方；側下方角度可分辨中央引擎進氣口與垂尾。照片左上方帶 KLM 標誌的小翼屬於主翼，不是另一片垂尾。",
+        "en": "The MD-11's swept fin likewise stands above the center engine. This side/underside view separates its intake from the fin. The KLM-marked winglet at upper left belongs to the main wing, not a second fin.",
+        "ja": "MD-11の後退垂尾も中央エンジン上に立ちます。斜め下から中央吸気口と垂尾を確認できます。左上のKLM小翼は主翼の翼端で、別の垂尾ではありません。"
+      },
       "specs": [
-        ["操縱面", "方向舵（分上下兩段）"],
-        ["結構", "鋁合金，內含引擎進氣風道"],
-        ["功能", "偏航穩定＋二號引擎進氣"],
-        ["機高", "約 17.6 m"]
+        [
+          "操縱面",
+          "方向舵（分上下兩段）"
+        ],
+        [
+          "結構",
+          "鋁合金，內含引擎進氣風道"
+        ],
+        [
+          "功能",
+          "偏航穩定＋二號引擎進氣"
+        ],
+        [
+          "機高",
+          "約 17.6 m"
+        ]
       ],
-      "fact": "MD-11 的垂尾结構承襲 DC-10，但因應機身加長與重心變化做了強度與尺寸調整，肉眼不易分辨，卻是工程團隊的重點修改項目之一。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "尾部三個部件容易在斜側面重疊；勿把噴口當作機身尾端，也不能僅憑航空公司尾翼標誌認型。",
+        "en": "These three parts overlap in oblique views. Do not mistake the nozzle for the fuselage end or identify the type solely from the airline's tail logo.",
+        "ja": "斜めからは3部品が重なります。噴口を胴体尾端と誤認せず、航空会社の尾翼ロゴだけで機種を判断しないでください。"
+      },
+      "bullets": [
+        {
+          "zh": "垂尾在引擎上方。",
+          "en": "Fin above the engine.",
+          "ja": "エンジン上の垂尾。"
+        },
+        {
+          "zh": "噴口與尾錐分開。",
+          "en": "Separate nozzle and tailcone.",
+          "ja": "噴口と胴体尾端は別。"
+        },
+        {
+          "zh": "布局與 DC-10 同源。",
+          "en": "Layout shared with the DC-10.",
+          "ja": "DC-10と同系の配置。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md11/vstab.jpg?v=68bc717dd9b8",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼位於機身尾段兩側（非 T 尾），MD-11 首次在此類機型導入「油箱式水平尾翼」，可依飛行階段調整油量配平重心、降低巡航阻力。",
+      "summary": {
+        "zh": "水平尾翼位於中央引擎下方、從後機身兩側伸出。MD-11 採較小的重新設計水平尾翼，並有整合式配平油箱；側下方照片也可對照下方延長的尾錐。",
+        "en": "The tailplane projects from the aft fuselage below the center engine. The MD-11 uses a smaller redesigned tailplane with integral trim fuel tanks; this side/underside view also shows the extended tailcone below.",
+        "ja": "水平尾翼は中央エンジン下の後胴両側から伸びます。MD-11は一体型トリム燃料タンクを持つ小型再設計尾翼を採用し、斜め下の写真で下の延長尾端も比較できます。"
+      },
       "specs": [
-        ["操縱面", "升降舵（內外分段）"],
-        ["構型", "低置傳統尾翼"],
-        ["特殊功能", "水平尾翼油箱（重心配平）"],
-        ["材料", "鋁合金"]
+        [
+          "操縱面",
+          "升降舵（內外分段）"
+        ],
+        [
+          "構型",
+          "低置傳統尾翼"
+        ],
+        [
+          "特殊功能",
+          "水平尾翼油箱（重心配平）"
+        ],
+        [
+          "材料",
+          "鋁合金"
+        ]
       ],
-      "fact": "MD-11 的水平尾翼內建油箱，飛行中可主動調整尾翼油量改變重心位置，藉此降低主翼配平阻力、節省燃油——這在當年是相當前衛的設計。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "尾翼比例可輔助辨識，但透視會影響判讀；應與 MD-11 的上下小翼及加長機身一起確認。",
+        "en": "Tailplane proportions help identification but are affected by perspective. Cross-check the MD-11's winglets and stretched fuselage.",
+        "ja": "水平尾翼比率は補助になりますが遠近法の影響を受けます。MD-11の上下小翼と延長胴体も併せて確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "低於中央引擎。",
+          "en": "Below the center engine.",
+          "ja": "中央エンジンより下。"
+        },
+        {
+          "zh": "較小的重新設計尾翼。",
+          "en": "Smaller redesigned tailplane.",
+          "ja": "小型に再設計した水平尾翼。"
+        },
+        {
+          "zh": "配合延長尾錐。",
+          "en": "Paired with an extended tailcone.",
+          "ja": "延長尾端との組合せ。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md11/hstab.jpg?v=5e6d68c9c8e3",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "MD-11 沿用 DC-10 的「五輪三支柱」起落架設計：左右主起落架各 4 輪、機腹中央另設一組獨立起落架，因應機身加長後更重的荷重需求。",
+      "summary": {
+        "zh": "MD-11 有雙輪前腳、左右各四輪台車與中央雙輪主腳，共十二輪。機腹近照中，前腳在左前方，中央雙輪在機腹中線，左右主腳位於更外側；右側部分被地勤車遮住。",
+        "en": "The MD-11 has twin nose wheels, two four-wheel main bogies and a twin-wheel center main leg: twelve wheels. In this belly close-up the nose leg is at front left, the center pair follows the fuselage centerline and the side mains sit farther out; a service vehicle partly obscures the right side.",
+        "ja": "MD-11は前脚2輪、左右主脚各4輪、中央主脚2輪の計12輪。胴体下の近接写真で前脚は左手前、中央2輪は胴体中心線、左右主脚はその外側にあります。右側の一部は地上車両に隠れます。"
+      },
       "specs": [
-        ["配置", "前三點＋機腹中央第三支柱"],
-        ["主起落架", "左右各 1 具 × 4 輪"],
-        ["中央起落架", "1 具（機腹）"],
-        ["最大起飛重量", "約 273,300 kg"]
+        [
+          "配置",
+          "前三點＋機腹中央第三支柱"
+        ],
+        [
+          "主起落架",
+          "左右各 1 具 × 4 輪"
+        ],
+        [
+          "中央起落架",
+          "1 具（機腹）"
+        ],
+        [
+          "最大起飛重量",
+          "約 273,300 kg"
+        ]
       ],
-      "fact": "機腹中央那組起落架的設計思路直接繼承自 DC-10，是這兩款機型系出同門最明顯的底盤特徵，機齡再老的飛友一眼就能認出。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "DC-10-30 同樣有中央雙輪主腳，因此輪數不能單獨區分兩者；要再找 MD-11 的上下小翼。",
+        "en": "The DC-10-30 also has twin-wheel center gear, so wheel count alone cannot distinguish the two. Check for the MD-11's upper/lower winglets.",
+        "ja": "DC-10-30にも中央2輪主脚があり、輪数だけでは区別できません。MD-11の上下翼端小翼を確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "左右四輪台車。",
+          "en": "Four-wheel side bogies.",
+          "ja": "左右各4輪台車。"
+        },
+        {
+          "zh": "中央雙輪主腳。",
+          "en": "Twin-wheel center main leg.",
+          "ja": "中央2輪主脚。"
+        },
+        {
+          "zh": "十二輪不是 MD-11 獨有。",
+          "en": "Twelve wheels are not unique to MD-11.",
+          "ja": "12輪はMD-11専用ではない。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md11/gear.jpg?v=ff06a50a53a4",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_-_Royal_Dutch_Airlines_McDonnell_Douglas_MD-11_PH-KCA_%22Amy_Johnson%22_Toronto_Pearson_Street_Festival_(9744032460).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "MD-11 延續 DC-10 的三發廣體布局，但機身拉長，標準翼尖有上下小翼。從遠處先找尾部中央引擎，再看小翼與較修長的機身。",
+        "en": "The MD-11 keeps the DC-10's widebody trijet layout but stretches the fuselage and adds standard upper/lower winglets. At a distance, locate the tail engine, then check the winglets and longer body.",
+        "ja": "MD-11はDC-10の広胴三発配置を継承し、胴体を延長して上下翼端小翼を標準装備。遠方では尾部エンジン、次に小翼と長い胴体を確認します。"
+      },
+      "fact": {
+        "zh": "照片是 KLM 客機時期的實機；MD-11 也有貨機，客艙窗與大貨門會因版本而變，不影響三發與小翼這些主要特徵。",
+        "en": "The photograph shows a KLM passenger example. Freighters have different window and cargo-door arrangements, but retain the trijet and winglet cues.",
+        "ja": "写真はKLM旅客型の実機。貨物型では窓・貨物扉が変わりますが、三発と小翼の特徴は共通です。"
+      },
+      "bullets": [
+        {
+          "zh": "較 DC-10 修長。",
+          "en": "Longer-bodied than the DC-10.",
+          "ja": "DC-10より長い胴体。"
+        },
+        {
+          "zh": "標準上下翼尖小翼。",
+          "en": "Standard upper/lower winglets.",
+          "ja": "標準の上下翼端小翼。"
+        },
+        {
+          "zh": "中央引擎位於尾根。",
+          "en": "Center engine at the tail root.",
+          "ja": "尾根の中央エンジン。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/md11/overview.jpg?v=26934510a959",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "正面照片可見中央窗柱、兩片主要前窗與左右延伸的側窗；側照中的後側窗有明顯斜邊。窗列下方是延續 DC-10 風格的圓鈍機鼻。",
+        "en": "The head-on photo shows a center post, two main front panes and wraparound side windows; the aft side pane has a sloping edge. Below is the rounded nose inherited from the DC-10 family.",
+        "ja": "正面写真に中央支柱、主要前窓2枚、左右へ回り込む側窓が見え、後方側窓は斜辺を持ちます。下にはDC-10系を継ぐ丸い機首があります。"
+      },
+      "fact": {
+        "zh": "這組窗型與 DC-10 很相近，不能像不同家族那樣單看窗數判型；下方分別使用 KLM PH-KCE 正面與 PH-KCK 側面實照。",
+        "en": "These windows closely resemble the DC-10's, so pane count alone cannot separate them. The references show KLM PH-KCE head-on and PH-KCK from the side.",
+        "ja": "DC-10と窓形状が非常に近く、枚数だけで区別できません。参考はKLM PH-KCEの正面とPH-KCKの側面実写です。"
+      },
+      "bullets": [
+        {
+          "zh": "中央窗柱清楚。",
+          "en": "Clear center post.",
+          "ja": "明瞭な中央支柱。"
+        },
+        {
+          "zh": "側窗帶斜邊。",
+          "en": "Sloping side-pane edges.",
+          "ja": "斜辺を持つ側窓。"
+        },
+        {
+          "zh": "需搭配上下小翼辨識。",
+          "en": "Cross-check upper/lower winglets.",
+          "ja": "上下小翼も併せて識別。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/md11/window-front.jpg?v=1bf0b60e71e8",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:PH-KCE_KLM_Royal_Dutch_Airlines_McDonnell_Douglas_MD-11_-_cn_48559,_taxiing_22july2013_pic-001.JPG"
+        },
+        {
+          "src": "assets/reference/md11/window-side.jpg?v=cb20acb1013f",
+          "caption": {
+            "zh": "KLM MD-11 PH-KCK 側窗（由原尺寸實照裁切）",
+            "en": "KLM MD-11 PH-KCK side windows (crop of the original-resolution photograph)",
+            "ja": "KLM MD-11 PH-KCKの側窓（原寸実写から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "MD-11 的翼尖上下各有小翼：上方較高大，下方較短。照片可清楚看到分叉輪廓，是比 DC-10 更直接的遠距辨識點。",
+        "en": "Each MD-11 tip has a tall upper winglet and a shorter lower one. The photograph shows the split outline, a direct distant-identification cue against the DC-10.",
+        "ja": "MD-11の翼端には高い上側小翼と短い下側小翼があります。写真の分岐輪郭はDC-10との遠距離識別に有効です。"
+      },
+      "fact": {
+        "zh": "從某些角度下小翼會被主翼遮住，不能因只看見上小翼就排除 MD-11；改看另一側或後方照片。",
+        "en": "The lower winglet can be hidden by the wing from some angles. Seeing only the upper one does not rule out an MD-11; check another side or a rear view.",
+        "ja": "角度によって下小翼が主翼に隠れます。上側だけ見えてもMD-11を除外せず、反対側や後方から確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "高大的上小翼。",
+          "en": "Tall upper winglet.",
+          "ja": "高い上側小翼。"
+        },
+        {
+          "zh": "短小的下小翼。",
+          "en": "Short lower winglet.",
+          "ja": "短い下側小翼。"
+        },
+        {
+          "zh": "標準 DC-10 沒有此組合。",
+          "en": "Absent on standard DC-10s.",
+          "ja": "標準DC-10にはない組合せ。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/md11/wingtip.jpg?v=01e540ecb433",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg"
+        }
+      ]
     }
   },
   "specifications": {

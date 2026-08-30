@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from hashlib import sha256
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,8 +19,10 @@ def photo(model: str, part: str, caption: dict[str, str], source: str) -> dict:
 
 
 def photo_named(model: str, filename: str, caption: dict[str, str], source: str) -> dict:
+    path = f"assets/reference/{model}/{filename}"
+    revision = sha256((ROOT / path).read_bytes()).hexdigest()[:12]
     return {
-        "src": f"assets/reference/{model}/{filename}",
+        "src": f"{path}?v={revision}",
         "caption": caption,
         "source": source,
     }
@@ -1866,6 +1869,142 @@ CONTENT.update({
     },
 })
 
+SOURCES.update({
+    "dc10": {
+        "overview": "https://commons.wikimedia.org/wiki/File:KLM_DC-10-30_(6068067445).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:DC-10_Cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:G-DMCA_DC-10_Monarch_(5894507206).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:McDonnell_Douglas_DC-10-30.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Swissair_McDonnell_Douglas_DC-10-30_HB-IHH_%22Basel-Stadt%22_(26090378125).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Finnair_McDonnell_Douglas_DC-10-30_tail.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg",
+    },
+    "md11": {
+        "overview": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Cockpit_of_McDonnell_Douglas_MD-11_(5306565461).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:PH-KCE_KLM_Royal_Dutch_Airlines_McDonnell_Douglas_MD-11_-_cn_48559,_taxiing_22july2013_pic-001.JPG",
+        "window_side": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:KLM_McDonnell_Douglas_MD-11_PH-KCK_Ingrid_Bergman.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:KLM_-_Royal_Dutch_Airlines_McDonnell_Douglas_MD-11_PH-KCA_%22Amy_Johnson%22_Toronto_Pearson_Street_Festival_(9744032460).jpg",
+    },
+})
+
+CONTENT.update({
+    "dc10": {
+        "overview": identify(
+            ("DC-10-30 是三發廣體客機：兩具翼下引擎，加上垂尾根部一具直通式中央引擎。與 MD-11 相比，機身較短、標準翼尖沒有上下小翼。", "The DC-10-30 is a widebody trijet: two underwing engines plus a straight-through center engine at the fin base. Compared with the MD-11, it has a shorter body and standard tips without upper/lower winglets.", "DC-10-30は翼下2基と垂尾根元の直通式中央エンジンを持つ広胴三発機。MD-11より胴体が短く、標準翼端に上下小翼がありません。"),
+            ("三發布局與中央引擎是家族共同點；判別 DC-10／MD-11 時，優先交叉比對翼尖和機身比例。", "The trijet layout and center engine are family traits. Cross-check wingtip devices and body proportions to distinguish DC-10 from MD-11.", "三発配置と中央エンジンは共通点です。DC-10／MD-11の判別には翼端と胴体比率を照合します。"),
+            [("短於 MD-11 的廣體機身。", "Wide body shorter than the MD-11.", "MD-11より短い広胴機体。"), ("中央引擎位於垂尾根部。", "Center engine at the fin base.", "垂尾根元に中央エンジン。"), ("標準型無上下翼尖小翼。", "No upper/lower winglets as standard.", "標準型に上下翼端小翼なし。")],
+        ),
+        "cockpit": identify(
+            ("原始 DC-10 採三人制：機長、副機長與飛航工程師。圖中早期原型機座艙以圓形類比儀表為主，中央可見三組引擎指示與三支油門。", "The original DC-10 has a three-person crew: captain, first officer and flight engineer. This early prototype cockpit is dominated by round analog instruments, with three engine-indication columns and three throttles.", "原型DC-10は機長・副操縦士・航空機関士の3人制。写真の初期試作機操縦席は丸形アナログ計器が中心で、中央に3列のエンジン計器と3本のスロットルがあります。"),
+            ("MD-10 是 DC-10 的座艙改裝名稱，可採與 MD-11 相同布局的雙人玻璃座艙；因此不能把任何玻璃座艙三發機都當成 MD-11。", "MD-10 designates a DC-10 cockpit conversion with a two-crew glass layout matching the MD-11. A glass-cockpit trijet is therefore not automatically an MD-11.", "MD-10はDC-10の操縦席改修型で、MD-11と同様の2人制グラス配置になります。グラス操縦席だけでMD-11と断定できません。"),
+            [("圓形儀表密集。", "Dense round instruments.", "密集した丸形計器。"), ("原始機組三人。", "Original three-person crew.", "原型は3人乗務。"), ("留意 MD-10 改裝例外。", "Allow for MD-10 conversions.", "MD-10改修機に注意。")],
+        ),
+        "windshield": identify(
+            ("正面外窗由中央窗柱分開，往兩側延伸為帶斜邊的多片窗；窗框下方接圓鈍機鼻。側面裁切可觀察後側窗的斜邊與高度。", "A center post divides the front windshields, which wrap into angular side panes above a rounded nose. The side crop shows the height and sloping edge of the aft side window.", "正面窓は中央支柱で分かれ、丸い機首上で斜辺のある側窓へ回り込みます。側面切り出しで後方側窓の高さと傾斜を確認できます。"),
+            ("MD-11 延續相近的機鼻與窗型；照片角度、反光與塗裝容易造成假差異，外窗只能作家族辨識，還要看翼尖。", "The MD-11 retains a similar nose and window pattern. Angle, reflections and paint can create false differences; use windows for family recognition, then check the tips.", "MD-11も似た機首と窓配置を継承します。角度・反射・塗装で差が見えるため、窓は系列確認に使い翼端も照合します。"),
+            [("中央窗柱與多片側窗。", "Center post and multiple side panes.", "中央支柱と複数の側窓。"), ("窗框有明顯直線斜邊。", "Distinct straight, sloping frame edges.", "直線的な斜辺の窓枠。"), ("窗型與 MD-11 很接近。", "Window pattern close to the MD-11.", "MD-11に近い窓形状。")],
+        ),
+        "fuselage": identify(
+            ("照片為 DC-10-30 客機，單層客艙舷窗形成長列，大型客艙門在機翼前後分布；下層貨艙門低於舷窗。圓形廣體截面與 MD-11 相近，但整體較短。", "This DC-10-30 passenger aircraft has a long single-deck window row and large cabin doors ahead of and behind the wing; lower cargo doors sit below the windows. Its round widebody section resembles the MD-11's, but the body is shorter.", "写真はDC-10-30旅客型。単層客室の窓列と翼前後の大型客室扉、窓列より下の貨物扉を確認できます。丸い広胴断面はMD-11に近い一方、全体は短めです。"),
+            ("貨機與客貨兩用型可有主甲板大貨門，封窗也會改變外觀；不要只靠舷窗有無判斷機型。", "Freighter and convertible variants may have a large main-deck cargo door, and plugged windows change the appearance. Window presence alone does not identify the type.", "貨物型・転換型では主甲板の大型貨物扉や窓閉鎖で外観が変わります。客室窓の有無だけでは判別できません。"),
+            [("單層長列舷窗。", "Single-deck window row.", "単層の客室窓列。"), ("機翼前後的大艙門。", "Large doors fore and aft of the wing.", "翼前後の大型扉。"), ("貨機的開口配置不同。", "Freighter openings differ.", "貨物型では開口配置が異なる。")],
+        ),
+        "engine": identify(
+            ("DC-10-30 使用 GE CF6-50 系列，翼下短艙有近圓形進氣口；第三具引擎完整置於垂尾根部短艙，進排氣沿近直線通過。", "The DC-10-30 uses GE CF6-50 engines, with near-circular underwing nacelle intakes. The third engine sits in a fin-base nacelle with a nearly straight intake-to-exhaust path.", "DC-10-30はGE CF6-50系列を搭載し、翼下ナセル入口はほぼ円形。第3エンジンは垂尾根元のナセル内にあり、吸排気がほぼ直線に通ります。"),
+            ("這裡的 CF6-50 說明限於 -30；DC-10-10 用 CF6-6，-40 則用 JT9D，不能把所有 DC-10 的短艙細節視為相同。", "The CF6-50 description applies to the -30. The DC-10-10 uses CF6-6 engines and the -40 uses JT9Ds; nacelle details are not identical across the family.", "CF6-50の説明は-30向けです。-10はCF6-6、-40はJT9Dを使用し、系列全体でナセル細部が同じではありません。"),
+            [("-30：CF6-50 系列。", "-30: CF6-50 family.", "-30：CF6-50系列。"), ("翼下進氣口近圓形。", "Near-circular underwing intake.", "ほぼ円形の翼下吸気口。"), ("中央引擎為直通配置。", "Straight-through center engine.", "中央エンジンは直通配置。")],
+        ),
+        "wingtip": identify(
+            ("標準 DC-10-30 外翼平緩收束，末端沒有 MD-11 那組向上與向下延伸的小翼。照片左端可看到細長、低矮的翼尖輪廓。", "The standard DC-10-30 outer wing tapers into a low tip, without the MD-11's upper and lower winglets. The left of the photograph shows the slim, low-profile tip.", "標準DC-10-30の外翼は低い翼端へ細まり、MD-11の上下小翼はありません。写真左端で細長い翼端輪郭を確認できます。"),
+            ("應比對量產標準配置；試驗機或改裝照片不能拿來概括全系列。照片保留外翼及後方水平尾翼的相對位置，兩者不要混淆。", "Compare standard production configurations; test or modified aircraft are not representative of the whole family. The crop retains the outer wing and the tailplane behind it; do not confuse the two.", "量産標準形態を比較し、試験機・改修機を全機の代表にしないでください。切り出しには外翼とその後方の水平尾翼があり、両者を混同しないでください。"),
+            [("低矮、收尖的末端。", "Low, tapering end.", "低く細まる端部。"), ("無 MD-11 式上下小翼。", "No MD-11-style upper/lower winglets.", "MD-11式上下小翼なし。"), ("與機身長度一起判讀。", "Cross-check body length.", "胴体長も併せて判断。")],
+        ),
+        "wing": identify(
+            ("DC-10-30 為後掠低翼，翼下各吊一具引擎。降落照片可看到後緣襟翼放下、襟翼下方的機構與外翼輪廓。", "The DC-10-30 has swept low-mounted wings, each carrying an engine. This landing photograph shows deployed trailing-edge flaps, their mechanisms and the outer-wing outline.", "DC-10-30は後退低翼で、左右翼下に1基ずつエンジンを搭載。着陸写真では下げた後縁フラップ、その機構、外翼輪郭が見えます。"),
+            ("襟翼角度是飛行階段造成的構型差異，不是 DC-10／MD-11 的固定差別；辨識時以翼尖裝置和機體比例為主。", "Flap position reflects flight phase, not a fixed DC-10/MD-11 difference. Prioritize tip devices and airframe proportions.", "フラップ角度は飛行段階による変化で、DC-10／MD-11固有の差ではありません。翼端装置と機体比率を優先します。"),
+            [("後掠低翼。", "Swept low wing.", "後退低翼。"), ("後緣多段襟翼。", "Segmented trailing-edge flaps.", "分割された後縁フラップ。"), ("照片為降落構型。", "Landing configuration pictured.", "写真は着陸形態。")],
+        ),
+        "vstab": identify(
+            ("垂尾從中央引擎短艙上方伸起，前緣後掠、後緣有方向舵分界。短艙的進氣口與後方噴口在側面可連成直線。", "The fin rises above the center-engine nacelle, with a swept leading edge and visible rudder boundaries aft. The nacelle inlet and rear nozzle align in the side view.", "垂尾は中央エンジンナセル上から立ち上がり、後退前縁と後縁の方向舵境界が見えます。側面では吸気口と噴口が直線状に並びます。"),
+            ("DC-10 和 MD-11 都有這種布局；塗裝不是固定辨識點，須再看翼尖及水平尾翼比例。", "Both DC-10 and MD-11 share this arrangement. Livery is not a fixed identifier; check winglets and tailplane proportions.", "DC-10とMD-11はこの配置を共有します。塗装は固定識別点ではなく、翼端と水平尾翼比率も確認します。"),
+            [("引擎上方的後掠垂尾。", "Swept fin above the engine.", "エンジン上の後退垂尾。"), ("方向舵分段可見。", "Rudder segmentation visible.", "方向舵の分割が見える。"), ("不是 T 尾布局。", "Not a T-tail arrangement.", "T尾翼配置ではない。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼裝在後機身兩側，低於中央引擎，不在垂尾頂端。這張尾部近照能看見後掠翼面與升降舵邊界。", "The tailplane mounts on the aft fuselage below the center engine, not atop the fin. This close-up shows its sweep and elevator boundary.", "水平尾翼は中央エンジンより下の後部胴体両側にあり、垂尾頂部ではありません。近接写真で後退形状と昇降舵境界が見えます。"),
+            ("MD-11 對水平尾翼與尾錐作了重新設計；比較時先確認拍攝角度，避免將透視縮短誤認為尺寸差異。", "The MD-11 redesigned the tailplane and tailcone. Compare similar camera angles so perspective shortening is not mistaken for a size difference.", "MD-11では水平尾翼と尾部フェアリングを再設計。遠近による短縮を寸法差と誤認しないよう近い角度で比較します。"),
+            [("位於中央引擎下方。", "Below the center engine.", "中央エンジンの下方。"), ("後掠水平翼面。", "Swept horizontal surfaces.", "後退した水平翼面。"), ("由後機身兩側伸出。", "Project from aft fuselage sides.", "後胴両側から張り出す。")],
+        ),
+        "gear": identify(
+            ("DC-10-30 除雙輪前腳、左右各四輪主腳，還有機腹中央雙輪主腳，合計十二輪。降落近照可辨認兩側四輪台車與中央雙輪組。", "The DC-10-30 has a twin-wheel nose leg, two four-wheel main bogies and a twin-wheel center main leg: twelve wheels total. The landing crop separates the side bogies from the center pair.", "DC-10-30は前脚2輪、左右主脚各4輪、胴体中央主脚2輪で合計12輪。着陸写真では左右の台車と中央の2輪を確認できます。"),
+            ("中央主腳不是 MD-11 獨有：DC-10-30／-40 也有；早期 -10 則沒有，不能將不同次型號混為一談。", "Center gear is not exclusive to the MD-11: DC-10-30/-40 aircraft also have it, unlike the early -10. Keep variants separate.", "中央主脚はMD-11専用ではなくDC-10-30／-40にもあり、初期-10にはありません。派生型を混同しないでください。"),
+            [("左右四輪台車。", "Four-wheel side bogies.", "左右各4輪台車。"), ("中央另有雙輪組。", "Additional center wheel pair.", "中央に別の2輪。"), ("全機十二輪。", "Twelve wheels overall.", "全機で12輪。")],
+        ),
+    },
+    "md11": {
+        "overview": identify(
+            ("MD-11 延續 DC-10 的三發廣體布局，但機身拉長，標準翼尖有上下小翼。從遠處先找尾部中央引擎，再看小翼與較修長的機身。", "The MD-11 keeps the DC-10's widebody trijet layout but stretches the fuselage and adds standard upper/lower winglets. At a distance, locate the tail engine, then check the winglets and longer body.", "MD-11はDC-10の広胴三発配置を継承し、胴体を延長して上下翼端小翼を標準装備。遠方では尾部エンジン、次に小翼と長い胴体を確認します。"),
+            ("照片是 KLM 客機時期的實機；MD-11 也有貨機，客艙窗與大貨門會因版本而變，不影響三發與小翼這些主要特徵。", "The photograph shows a KLM passenger example. Freighters have different window and cargo-door arrangements, but retain the trijet and winglet cues.", "写真はKLM旅客型の実機。貨物型では窓・貨物扉が変わりますが、三発と小翼の特徴は共通です。"),
+            [("較 DC-10 修長。", "Longer-bodied than the DC-10.", "DC-10より長い胴体。"), ("標準上下翼尖小翼。", "Standard upper/lower winglets.", "標準の上下翼端小翼。"), ("中央引擎位於尾根。", "Center engine at the tail root.", "尾根の中央エンジン。")],
+        ),
+        "cockpit": identify(
+            ("MD-11 採雙人玻璃座艙，正面六具主要顯示器取代大量類比儀表，中央顯示引擎與系統資訊。仍保留左右駕駛盤和三支油門。", "The MD-11 has a two-crew glass cockpit with six main displays replacing many analog gauges. Center screens show engine and system information; conventional yokes and three throttles remain.", "MD-11は2人制グラス操縦席で、多数のアナログ計器を6面の主要表示器に集約。中央画面にエンジン・システム情報を表示し、操縦輪と3本のスロットルは残ります。"),
+            ("看六面顯示器可辨認座艙世代，但 MD-10 改裝機也採相同布局；要確認 MD-11，需加看機身、小翼或機型標牌。", "Six screens identify the cockpit generation, but MD-10 conversions share the layout. Confirm MD-11 using the body, winglets or aircraft identification plate.", "6面表示で世代は判別できますがMD-10改修機も同様です。MD-11の確定には胴体・小翼・機種銘板を確認します。"),
+            [("六具主要顯示器。", "Six main displays.", "6面の主要表示器。"), ("雙人操作。", "Two-person operation.", "2人で運航。"), ("駕駛盤與三支油門。", "Yokes and three throttles.", "操縦輪と3本のスロットル。")],
+        ),
+        "windshield": identify(
+            ("正面照片可見中央窗柱、兩片主要前窗與左右延伸的側窗；側照中的後側窗有明顯斜邊。窗列下方是延續 DC-10 風格的圓鈍機鼻。", "The head-on photo shows a center post, two main front panes and wraparound side windows; the aft side pane has a sloping edge. Below is the rounded nose inherited from the DC-10 family.", "正面写真に中央支柱、主要前窓2枚、左右へ回り込む側窓が見え、後方側窓は斜辺を持ちます。下にはDC-10系を継ぐ丸い機首があります。"),
+            ("這組窗型與 DC-10 很相近，不能像不同家族那樣單看窗數判型；下方分別使用 KLM PH-KCE 正面與 PH-KCK 側面實照。", "These windows closely resemble the DC-10's, so pane count alone cannot separate them. The references show KLM PH-KCE head-on and PH-KCK from the side.", "DC-10と窓形状が非常に近く、枚数だけで区別できません。参考はKLM PH-KCEの正面とPH-KCKの側面実写です。"),
+            [("中央窗柱清楚。", "Clear center post.", "明瞭な中央支柱。"), ("側窗帶斜邊。", "Sloping side-pane edges.", "斜辺を持つ側窓。"), ("需搭配上下小翼辨識。", "Cross-check upper/lower winglets.", "上下小翼も併せて識別。")],
+        ),
+        "fuselage": identify(
+            ("MD-11 的客機照片可看到連續舷窗與分布在機翼前後的艙門。與 DC-10 相比，前後機身延長使整體更修長，但寬體截面仍相似。", "The passenger MD-11 photograph shows continuous window rows and doors fore and aft of the wing. Forward and aft fuselage stretches make it more slender than the DC-10 while retaining a similar widebody section.", "旅客型MD-11の写真では連続窓列と翼前後の扉が見えます。前後胴体の延長でDC-10より細長く見えますが、広胴断面は似ています。"),
+            ("貨運型的大型主甲板貨門與封窗屬用途差異，不應拿它們和客機直接比較來判定 DC-10／MD-11。", "A freighter's large main-deck door and plugged windows reflect its role; comparing them directly with a passenger aircraft is not a reliable DC-10/MD-11 test.", "貨物型の大型主甲板扉・窓閉鎖は用途差です。旅客型と直接比較してDC-10／MD-11を判定する根拠にはなりません。"),
+            [("機翼前後延長的機身。", "Stretched body fore and aft of the wing.", "翼前後を延長した胴体。"), ("客機保留長列舷窗。", "Passenger version has long window rows.", "旅客型は長い窓列。"), ("貨機艙門另行判讀。", "Interpret freighter doors separately.", "貨物型扉は別に判断。")],
+        ),
+        "engine": identify(
+            ("MD-11 可搭載 GE CF6-80C2 或 Pratt & Whitney PW4000 系列。照片呈現翼下圓形進氣口與短艙；另一具引擎位於尾部中央直通式短艙。", "The MD-11 can use GE CF6-80C2 or Pratt & Whitney PW4000 engines. The photo shows an underwing circular intake and nacelle; another engine sits in the straight-through center-tail nacelle.", "MD-11はGE CF6-80C2またはPratt & Whitney PW4000系列を搭載。写真は翼下の円形吸気口とナセルで、もう1基は尾部中央の直通式ナセルにあります。"),
+            ("兩家引擎的尾噴管與整流細節不同；不宜只靠一張照片的反光或塗裝判引擎廠牌，必要時核對機籍與引擎資料。", "Exhaust and fairing details differ between engine options. Do not infer the manufacturer from reflections or paint alone; check airframe and engine records when needed.", "エンジン選択で排気・フェアリング細部が異なります。反射や塗装だけでメーカーを断定せず、必要なら機体とエンジン記録を照合します。"),
+            [("翼下兩具、尾部一具。", "Two underwing, one in the tail.", "翼下2基・尾部1基。"), ("CF6-80C2 或 PW4000。", "CF6-80C2 or PW4000.", "CF6-80C2またはPW4000。"), ("尾部進排氣近直線。", "Near-straight tail-engine flow path.", "尾部吸排気はほぼ直線。")],
+        ),
+        "wingtip": identify(
+            ("MD-11 的翼尖上下各有小翼：上方較高大，下方較短。照片可清楚看到分叉輪廓，是比 DC-10 更直接的遠距辨識點。", "Each MD-11 tip has a tall upper winglet and a shorter lower one. The photograph shows the split outline, a direct distant-identification cue against the DC-10.", "MD-11の翼端には高い上側小翼と短い下側小翼があります。写真の分岐輪郭はDC-10との遠距離識別に有効です。"),
+            ("從某些角度下小翼會被主翼遮住，不能因只看見上小翼就排除 MD-11；改看另一側或後方照片。", "The lower winglet can be hidden by the wing from some angles. Seeing only the upper one does not rule out an MD-11; check another side or a rear view.", "角度によって下小翼が主翼に隠れます。上側だけ見えてもMD-11を除外せず、反対側や後方から確認します。"),
+            [("高大的上小翼。", "Tall upper winglet.", "高い上側小翼。"), ("短小的下小翼。", "Short lower winglet.", "短い下側小翼。"), ("標準 DC-10 沒有此組合。", "Absent on standard DC-10s.", "標準DC-10にはない組合せ。")],
+        ),
+        "wing": identify(
+            ("MD-11 為後掠低翼，仰視照片能看到後緣分段操縱面、下方整流罩和末端上下小翼。翼下引擎位置延續 DC-10 家族特徵。", "The MD-11 has swept low wings. This underside view shows segmented trailing-edge surfaces, fairings beneath them and upper/lower tip winglets. Underwing engine placement retains the DC-10 family layout.", "MD-11は後退低翼。見上げた写真で分割された後縁舵面、下の整流部、上下翼端小翼が見えます。翼下エンジン配置はDC-10系を継承します。"),
+            ("比較照片的襟翼收放狀態不同時，輪廓也會變；最穩定的外翼差異仍是標準上下小翼。", "Different flap settings change the visible outline. The standard upper/lower winglets remain the most consistent outer-wing difference.", "フラップ状態で見かけの輪郭は変わります。外翼の安定した違いは標準の上下小翼です。"),
+            [("後掠低翼布局。", "Swept low-wing layout.", "後退低翼配置。"), ("分段後緣舵面。", "Segmented trailing-edge surfaces.", "分割された後縁舵面。"), ("末端連接上下小翼。", "Upper/lower winglets at the end.", "端部に上下小翼。")],
+        ),
+        "vstab": identify(
+            ("MD-11 的後掠垂尾同樣豎立於中央引擎上方；側下方角度可分辨中央引擎進氣口與垂尾。照片左上方帶 KLM 標誌的小翼屬於主翼，不是另一片垂尾。", "The MD-11's swept fin likewise stands above the center engine. This side/underside view separates its intake from the fin. The KLM-marked winglet at upper left belongs to the main wing, not a second fin.", "MD-11の後退垂尾も中央エンジン上に立ちます。斜め下から中央吸気口と垂尾を確認できます。左上のKLM小翼は主翼の翼端で、別の垂尾ではありません。"),
+            ("尾部三個部件容易在斜側面重疊；勿把噴口當作機身尾端，也不能僅憑航空公司尾翼標誌認型。", "These three parts overlap in oblique views. Do not mistake the nozzle for the fuselage end or identify the type solely from the airline's tail logo.", "斜めからは3部品が重なります。噴口を胴体尾端と誤認せず、航空会社の尾翼ロゴだけで機種を判断しないでください。"),
+            [("垂尾在引擎上方。", "Fin above the engine.", "エンジン上の垂尾。"), ("噴口與尾錐分開。", "Separate nozzle and tailcone.", "噴口と胴体尾端は別。"), ("布局與 DC-10 同源。", "Layout shared with the DC-10.", "DC-10と同系の配置。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼位於中央引擎下方、從後機身兩側伸出。MD-11 採較小的重新設計水平尾翼，並有整合式配平油箱；側下方照片也可對照下方延長的尾錐。", "The tailplane projects from the aft fuselage below the center engine. The MD-11 uses a smaller redesigned tailplane with integral trim fuel tanks; this side/underside view also shows the extended tailcone below.", "水平尾翼は中央エンジン下の後胴両側から伸びます。MD-11は一体型トリム燃料タンクを持つ小型再設計尾翼を採用し、斜め下の写真で下の延長尾端も比較できます。"),
+            ("尾翼比例可輔助辨識，但透視會影響判讀；應與 MD-11 的上下小翼及加長機身一起確認。", "Tailplane proportions help identification but are affected by perspective. Cross-check the MD-11's winglets and stretched fuselage.", "水平尾翼比率は補助になりますが遠近法の影響を受けます。MD-11の上下小翼と延長胴体も併せて確認します。"),
+            [("低於中央引擎。", "Below the center engine.", "中央エンジンより下。"), ("較小的重新設計尾翼。", "Smaller redesigned tailplane.", "小型に再設計した水平尾翼。"), ("配合延長尾錐。", "Paired with an extended tailcone.", "延長尾端との組合せ。")],
+        ),
+        "gear": identify(
+            ("MD-11 有雙輪前腳、左右各四輪台車與中央雙輪主腳，共十二輪。機腹近照中，前腳在左前方，中央雙輪在機腹中線，左右主腳位於更外側；右側部分被地勤車遮住。", "The MD-11 has twin nose wheels, two four-wheel main bogies and a twin-wheel center main leg: twelve wheels. In this belly close-up the nose leg is at front left, the center pair follows the fuselage centerline and the side mains sit farther out; a service vehicle partly obscures the right side.", "MD-11は前脚2輪、左右主脚各4輪、中央主脚2輪の計12輪。胴体下の近接写真で前脚は左手前、中央2輪は胴体中心線、左右主脚はその外側にあります。右側の一部は地上車両に隠れます。"),
+            ("DC-10-30 同樣有中央雙輪主腳，因此輪數不能單獨區分兩者；要再找 MD-11 的上下小翼。", "The DC-10-30 also has twin-wheel center gear, so wheel count alone cannot distinguish the two. Check for the MD-11's upper/lower winglets.", "DC-10-30にも中央2輪主脚があり、輪数だけでは区別できません。MD-11の上下翼端小翼を確認します。"),
+            [("左右四輪台車。", "Four-wheel side bogies.", "左右各4輪台車。"), ("中央雙輪主腳。", "Twin-wheel center main leg.", "中央2輪主脚。"), ("十二輪不是 MD-11 獨有。", "Twelve wheels are not unique to MD-11.", "12輪はMD-11専用ではない。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -1925,6 +2064,23 @@ def update(model: str) -> None:
             "Early ATR 42-300 cockpit (not a -500/-600 flight deck)",
             "初期ATR 42-300の実機操縦席（-500／-600ではありません）",
         )
+    if model == "dc10":
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "G-DMCA 保存機首的正前斜角外窗近照（原圖裁切）",
+            "Front-oblique window close-up of G-DMCA's preserved nose (original-resolution crop)",
+            "保存されたG-DMCA機首の斜め前方窓近接写真（原寸から切り出し）",
+        )
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "早期 DC-10 原型機類比座艙（家族布局參考，非特定 -30 機籍）",
+            "Early DC-10 prototype analog cockpit (family reference, not a specific -30 airframe)",
+            "初期DC-10試作機アナログ操縦席（系列参考、特定の-30実機ではありません）",
+        )
+    if model == "md11":
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "KLM MD-11 PH-KCK 側窗（由原尺寸實照裁切）",
+            "KLM MD-11 PH-KCK side windows (crop of the original-resolution photograph)",
+            "KLM MD-11 PH-KCKの側窓（原寸実写から切り出し）",
+        )
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
@@ -1936,7 +2092,10 @@ def check() -> None:
             part = data["parts"][part_id]
             assert len(part.get("bullets", [])) >= 3
             for image in part["images"]:
-                assert (ROOT / image["src"]).is_file(), image["src"]
+                path, _, query = image["src"].partition("?")
+                assert (ROOT / path).is_file(), image["src"]
+                if query:
+                    assert query == "v=" + sha256((ROOT / path).read_bytes()).hexdigest()[:12], image["src"]
                 assert image["source"].startswith("https://commons.wikimedia.org/wiki/File:")
                 assert all(image["caption"].get(lang) for lang in ("zh", "en", "ja"))
         assert sum(len(data["parts"][part_id]["images"]) for part_id in ORDER) == 11

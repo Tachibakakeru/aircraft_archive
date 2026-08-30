@@ -2,112 +2,612 @@
   "title": "McDonnell Douglas DC-10-30",
   "sub": "DC-10-30 — 點選機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "DC-10 機身截面為當年美系廣體機的標準配置，雙走道客艙搭配下層貨艙，機腹中央另設一組獨立的第三起落架艙。",
+      "summary": {
+        "zh": "照片為 DC-10-30 客機，單層客艙舷窗形成長列，大型客艙門在機翼前後分布；下層貨艙門低於舷窗。圓形廣體截面與 MD-11 相近，但整體較短。",
+        "en": "This DC-10-30 passenger aircraft has a long single-deck window row and large cabin doors ahead of and behind the wing; lower cargo doors sit below the windows. Its round widebody section resembles the MD-11's, but the body is shorter.",
+        "ja": "写真はDC-10-30旅客型。単層客室の窓列と翼前後の大型客室扉、窓列より下の貨物扉を確認できます。丸い広胴断面はMD-11に近い一方、全体は短めです。"
+      },
       "specs": [
-        ["全長", "55.5 m"],
-        ["機身直徑", "6.02 m"],
-        ["結構形式", "半硬殼式鋁合金"],
-        ["典型座位數", "250–380 席"]
+        [
+          "全長",
+          "55.5 m"
+        ],
+        [
+          "機身直徑",
+          "6.02 m"
+        ],
+        [
+          "結構形式",
+          "半硬殼式鋁合金"
+        ],
+        [
+          "典型座位數",
+          "250–380 席"
+        ]
       ],
-      "fact": "DC-10 是史上首款採「三發廣體」佈局量產的客機之一，第三具引擎嵌在垂尾根部，機身結構須為這具引擎的進氣風道讓出通道。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "貨機與客貨兩用型可有主甲板大貨門，封窗也會改變外觀；不要只靠舷窗有無判斷機型。",
+        "en": "Freighter and convertible variants may have a large main-deck cargo door, and plugged windows change the appearance. Window presence alone does not identify the type.",
+        "ja": "貨物型・転換型では主甲板の大型貨物扉や窓閉鎖で外観が変わります。客室窓の有無だけでは判別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "單層長列舷窗。",
+          "en": "Single-deck window row.",
+          "ja": "単層の客室窓列。"
+        },
+        {
+          "zh": "機翼前後的大艙門。",
+          "en": "Large doors fore and aft of the wing.",
+          "ja": "翼前後の大型扉。"
+        },
+        {
+          "zh": "貨機的開口配置不同。",
+          "en": "Freighter openings differ.",
+          "ja": "貨物型では開口配置が異なる。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc10/fuselage.jpg?v=08f222fd4a08",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:McDonnell_Douglas_DC-10-30.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "DC-10 服役於類比儀表年代，需 3 名機組員：機長、副機長與飛航工程師，飛航工程師負責監控三具引擎與各項系統。",
+      "summary": {
+        "zh": "原始 DC-10 採三人制：機長、副機長與飛航工程師。圖中早期原型機座艙以圓形類比儀表為主，中央可見三組引擎指示與三支油門。",
+        "en": "The original DC-10 has a three-person crew: captain, first officer and flight engineer. This early prototype cockpit is dominated by round analog instruments, with three engine-indication columns and three throttles.",
+        "ja": "原型DC-10は機長・副操縦士・航空機関士の3人制。写真の初期試作機操縦席は丸形アナログ計器が中心で、中央に3列のエンジン計器と3本のスロットルがあります。"
+      },
       "specs": [
-        ["機組員", "3 名（含飛航工程師）"],
-        ["儀表", "傳統類比儀表"],
-        ["操縱", "傳統機械／液壓操縱"],
-        ["同代機型", "L-1011、747 皆設飛航工程師"]
+        [
+          "機組員",
+          "3 名（含飛航工程師）"
+        ],
+        [
+          "儀表",
+          "傳統類比儀表"
+        ],
+        [
+          "操縱",
+          "傳統機械／液壓操縱"
+        ],
+        [
+          "同代機型",
+          "L-1011、747 皆設飛航工程師"
+        ]
       ],
-      "fact": "1970 年代三發廣體機的黃金年代，DC-10 與競爭對手洛克希德 L-1011 之間的市場競爭相當激烈，某種程度上也拖累了兩家公司的財務。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "MD-10 是 DC-10 的座艙改裝名稱，可採與 MD-11 相同布局的雙人玻璃座艙；因此不能把任何玻璃座艙三發機都當成 MD-11。",
+        "en": "MD-10 designates a DC-10 cockpit conversion with a two-crew glass layout matching the MD-11. A glass-cockpit trijet is therefore not automatically an MD-11.",
+        "ja": "MD-10はDC-10の操縦席改修型で、MD-11と同様の2人制グラス配置になります。グラス操縦席だけでMD-11と断定できません。"
+      },
+      "bullets": [
+        {
+          "zh": "圓形儀表密集。",
+          "en": "Dense round instruments.",
+          "ja": "密集した丸形計器。"
+        },
+        {
+          "zh": "原始機組三人。",
+          "en": "Original three-person crew.",
+          "ja": "原型は3人乗務。"
+        },
+        {
+          "zh": "留意 MD-10 改裝例外。",
+          "en": "Allow for MD-10 conversions.",
+          "ja": "MD-10改修機に注意。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc10/cockpit.jpg?v=ebb3652a086c",
+          "caption": {
+            "zh": "早期 DC-10 原型機類比座艙（家族布局參考，非特定 -30 機籍）",
+            "en": "Early DC-10 prototype analog cockpit (family reference, not a specific -30 airframe)",
+            "ja": "初期DC-10試作機アナログ操縦席（系列参考、特定の-30実機ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:DC-10_Cockpit.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "DC-10 的主翼是三發廣體機中翼展較大的設計，翼下兩具引擎吊掛在標準派龍上，後緣配備多段式富勒襟翼提升起降性能。",
+      "summary": {
+        "zh": "DC-10-30 為後掠低翼，翼下各吊一具引擎。降落照片可看到後緣襟翼放下、襟翼下方的機構與外翼輪廓。",
+        "en": "The DC-10-30 has swept low-mounted wings, each carrying an engine. This landing photograph shows deployed trailing-edge flaps, their mechanisms and the outer-wing outline.",
+        "ja": "DC-10-30は後退低翼で、左右翼下に1基ずつエンジンを搭載。着陸写真では下げた後縁フラップ、その機構、外翼輪郭が見えます。"
+      },
       "specs": [
-        ["翼展", "50.4 m"],
-        ["翼面積", "338.9 m²"],
-        ["後掠角", "35°"],
-        ["翼下引擎", "2 具（另 1 具嵌於垂尾根部）"]
+        [
+          "翼展",
+          "50.4 m"
+        ],
+        [
+          "翼面積",
+          "338.9 m²"
+        ],
+        [
+          "後掠角",
+          "35°"
+        ],
+        [
+          "翼下引擎",
+          "2 具（另 1 具嵌於垂尾根部）"
+        ]
       ],
-      "fact": "DC-10 的機翼設計後來也用在其軍用衍生型 KC-10 加油機上，美國空軍至今仍使用改裝版的 DC-10 執行空中加油任務。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "襟翼角度是飛行階段造成的構型差異，不是 DC-10／MD-11 的固定差別；辨識時以翼尖裝置和機體比例為主。",
+        "en": "Flap position reflects flight phase, not a fixed DC-10/MD-11 difference. Prioritize tip devices and airframe proportions.",
+        "ja": "フラップ角度は飛行段階による変化で、DC-10／MD-11固有の差ではありません。翼端装置と機体比率を優先します。"
+      },
+      "bullets": [
+        {
+          "zh": "後掠低翼。",
+          "en": "Swept low wing.",
+          "ja": "後退低翼。"
+        },
+        {
+          "zh": "後緣多段襟翼。",
+          "en": "Segmented trailing-edge flaps.",
+          "ja": "分割された後縁フラップ。"
+        },
+        {
+          "zh": "照片為降落構型。",
+          "en": "Landing configuration pictured.",
+          "ja": "写真は着陸形態。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc10/wing.jpg?v=d9758d033b3c",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "TURBOFAN ENGINE",
-      "summary": "DC-10 採三發配置：兩具吊掛於機翼下方，第三具嵌入垂尾根部、進氣口位於垂尾前緣，這具「二號引擎」的維修需搭專用高空作業設備。",
+      "summary": {
+        "zh": "DC-10-30 使用 GE CF6-50 系列，翼下短艙有近圓形進氣口；第三具引擎完整置於垂尾根部短艙，進排氣沿近直線通過。",
+        "en": "The DC-10-30 uses GE CF6-50 engines, with near-circular underwing nacelle intakes. The third engine sits in a fin-base nacelle with a nearly straight intake-to-exhaust path.",
+        "ja": "DC-10-30はGE CF6-50系列を搭載し、翼下ナセル入口はほぼ円形。第3エンジンは垂尾根元のナセル内にあり、吸排気がほぼ直線に通ります。"
+      },
       "specs": [
-        ["型號", "GE CF6 或 P&W JT9D 系列"],
-        ["型式", "高旁通比渦輪扇"],
-        ["配置", "翼下 2 具＋垂尾根部 1 具"],
-        ["單具推力", "約 218–240 kN"]
+        [
+          "型號",
+          "GE CF6 或 P&W JT9D 系列"
+        ],
+        [
+          "型式",
+          "高旁通比渦輪扇"
+        ],
+        [
+          "配置",
+          "翼下 2 具＋垂尾根部 1 具"
+        ],
+        [
+          "單具推力",
+          "約 218–240 kN"
+        ]
       ],
-      "fact": "垂尾根部那具引擎維修難度出了名的高，機工要爬上專用高空工作台才能碰到，是三發廣體機共同的維護痛點。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "這裡的 CF6-50 說明限於 -30；DC-10-10 用 CF6-6，-40 則用 JT9D，不能把所有 DC-10 的短艙細節視為相同。",
+        "en": "The CF6-50 description applies to the -30. The DC-10-10 uses CF6-6 engines and the -40 uses JT9Ds; nacelle details are not identical across the family.",
+        "ja": "CF6-50の説明は-30向けです。-10はCF6-6、-40はJT9Dを使用し、系列全体でナセル細部が同じではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "-30：CF6-50 系列。",
+          "en": "-30: CF6-50 family.",
+          "ja": "-30：CF6-50系列。"
+        },
+        {
+          "zh": "翼下進氣口近圓形。",
+          "en": "Near-circular underwing intake.",
+          "ja": "ほぼ円形の翼下吸気口。"
+        },
+        {
+          "zh": "中央引擎為直通配置。",
+          "en": "Straight-through center engine.",
+          "ja": "中央エンジンは直通配置。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc10/engine.jpg?v=adcaa3c9645b",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼除了提供方向穩定性，內部還兼作第三具引擎的進氣風道，前緣開口直通引擎，結構設計必須同時滿足氣動與進氣雙重需求。",
+      "summary": {
+        "zh": "垂尾從中央引擎短艙上方伸起，前緣後掠、後緣有方向舵分界。短艙的進氣口與後方噴口在側面可連成直線。",
+        "en": "The fin rises above the center-engine nacelle, with a swept leading edge and visible rudder boundaries aft. The nacelle inlet and rear nozzle align in the side view.",
+        "ja": "垂尾は中央エンジンナセル上から立ち上がり、後退前縁と後縁の方向舵境界が見えます。側面では吸気口と噴口が直線状に並びます。"
+      },
       "specs": [
-        ["操縱面", "方向舵（分上下兩段）"],
-        ["結構", "鋁合金，內含引擎進氣風道"],
-        ["功能", "偏航穩定＋二號引擎進氣"],
-        ["機高", "17.7 m"]
+        [
+          "操縱面",
+          "方向舵（分上下兩段）"
+        ],
+        [
+          "結構",
+          "鋁合金，內含引擎進氣風道"
+        ],
+        [
+          "功能",
+          "偏航穩定＋二號引擎進氣"
+        ],
+        [
+          "機高",
+          "17.7 m"
+        ]
       ],
-      "fact": "垂尾兼做進氣風道的設計後來在 727、L-1011 等機型上都能看到，是三發廣體／幹線機時代常見的巧妙結構整合手法。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "DC-10 和 MD-11 都有這種布局；塗裝不是固定辨識點，須再看翼尖及水平尾翼比例。",
+        "en": "Both DC-10 and MD-11 share this arrangement. Livery is not a fixed identifier; check winglets and tailplane proportions.",
+        "ja": "DC-10とMD-11はこの配置を共有します。塗装は固定識別点ではなく、翼端と水平尾翼比率も確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "引擎上方的後掠垂尾。",
+          "en": "Swept fin above the engine.",
+          "ja": "エンジン上の後退垂尾。"
+        },
+        {
+          "zh": "方向舵分段可見。",
+          "en": "Rudder segmentation visible.",
+          "ja": "方向舵の分割が見える。"
+        },
+        {
+          "zh": "不是 T 尾布局。",
+          "en": "Not a T-tail arrangement.",
+          "ja": "T尾翼配置ではない。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc10/vstab.jpg?v=1799f015d68d",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼位於機身尾段兩側（非 T 尾），配備升降舵，內外側分段控制以提升操縱冗餘度。",
+      "summary": {
+        "zh": "水平尾翼裝在後機身兩側，低於中央引擎，不在垂尾頂端。這張尾部近照能看見後掠翼面與升降舵邊界。",
+        "en": "The tailplane mounts on the aft fuselage below the center engine, not atop the fin. This close-up shows its sweep and elevator boundary.",
+        "ja": "水平尾翼は中央エンジンより下の後部胴体両側にあり、垂尾頂部ではありません。近接写真で後退形状と昇降舵境界が見えます。"
+      },
       "specs": [
-        ["操縱面", "升降舵（內外分段）"],
-        ["構型", "低置傳統尾翼"],
-        ["尾翼翼展", "約 22.1 m"],
-        ["材料", "鋁合金"]
+        [
+          "操縱面",
+          "升降舵（內外分段）"
+        ],
+        [
+          "構型",
+          "低置傳統尾翼"
+        ],
+        [
+          "尾翼翼展",
+          "約 22.1 m"
+        ],
+        [
+          "材料",
+          "鋁合金"
+        ]
       ],
-      "fact": "DC-10 的水平尾翼刻意不採 T 型設計，與同樣三發的洛克希德 L-1011 不同，兩者的氣動與維護哲學在這個部位就分道揚鑣。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "MD-11 對水平尾翼與尾錐作了重新設計；比較時先確認拍攝角度，避免將透視縮短誤認為尺寸差異。",
+        "en": "The MD-11 redesigned the tailplane and tailcone. Compare similar camera angles so perspective shortening is not mistaken for a size difference.",
+        "ja": "MD-11では水平尾翼と尾部フェアリングを再設計。遠近による短縮を寸法差と誤認しないよう近い角度で比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "位於中央引擎下方。",
+          "en": "Below the center engine.",
+          "ja": "中央エンジンの下方。"
+        },
+        {
+          "zh": "後掠水平翼面。",
+          "en": "Swept horizontal surfaces.",
+          "ja": "後退した水平翼面。"
+        },
+        {
+          "zh": "由後機身兩側伸出。",
+          "en": "Project from aft fuselage sides.",
+          "ja": "後胴両側から張り出す。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc10/hstab.jpg?v=19f2d79e7ac1",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_McDonnell_Douglas_DC-10-30_tail.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "DC-10 是少數採「五輪三支柱」起落架的機型：左右主起落架各 4 輪、機腹中央另有一組獨立的第三起落架，分攤這款重型廣體機的荷重。",
+      "summary": {
+        "zh": "DC-10-30 除雙輪前腳、左右各四輪主腳，還有機腹中央雙輪主腳，合計十二輪。降落近照可辨認兩側四輪台車與中央雙輪組。",
+        "en": "The DC-10-30 has a twin-wheel nose leg, two four-wheel main bogies and a twin-wheel center main leg: twelve wheels total. The landing crop separates the side bogies from the center pair.",
+        "ja": "DC-10-30は前脚2輪、左右主脚各4輪、胴体中央主脚2輪で合計12輪。着陸写真では左右の台車と中央の2輪を確認できます。"
+      },
       "specs": [
-        ["配置", "前三點＋機腹中央第三支柱"],
-        ["主起落架", "左右各 1 具 × 4 輪"],
-        ["中央起落架", "1 具（機腹）"],
-        ["最大起飛重量", "約 251,700 kg（-30 型）"]
+        [
+          "配置",
+          "前三點＋機腹中央第三支柱"
+        ],
+        [
+          "主起落架",
+          "左右各 1 具 × 4 輪"
+        ],
+        [
+          "中央起落架",
+          "1 具（機腹）"
+        ],
+        [
+          "最大起飛重量",
+          "約 251,700 kg（-30 型）"
+        ]
       ],
-      "fact": "機腹中央那組起落架是 DC-10 最容易辨識的特徵之一——從正面或後方看，機身正下方多出一組輪子，其他多數廣體機都沒有這個設計。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "中央主腳不是 MD-11 獨有：DC-10-30／-40 也有；早期 -10 則沒有，不能將不同次型號混為一談。",
+        "en": "Center gear is not exclusive to the MD-11: DC-10-30/-40 aircraft also have it, unlike the early -10. Keep variants separate.",
+        "ja": "中央主脚はMD-11専用ではなくDC-10-30／-40にもあり、初期-10にはありません。派生型を混同しないでください。"
+      },
+      "bullets": [
+        {
+          "zh": "左右四輪台車。",
+          "en": "Four-wheel side bogies.",
+          "ja": "左右各4輪台車。"
+        },
+        {
+          "zh": "中央另有雙輪組。",
+          "en": "Additional center wheel pair.",
+          "ja": "中央に別の2輪。"
+        },
+        {
+          "zh": "全機十二輪。",
+          "en": "Twelve wheels overall.",
+          "ja": "全機で12輪。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc10/gear.jpg?v=2d32a591af39",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "DC-10-30 是三發廣體客機：兩具翼下引擎，加上垂尾根部一具直通式中央引擎。與 MD-11 相比，機身較短、標準翼尖沒有上下小翼。",
+        "en": "The DC-10-30 is a widebody trijet: two underwing engines plus a straight-through center engine at the fin base. Compared with the MD-11, it has a shorter body and standard tips without upper/lower winglets.",
+        "ja": "DC-10-30は翼下2基と垂尾根元の直通式中央エンジンを持つ広胴三発機。MD-11より胴体が短く、標準翼端に上下小翼がありません。"
+      },
+      "fact": {
+        "zh": "三發布局與中央引擎是家族共同點；判別 DC-10／MD-11 時，優先交叉比對翼尖和機身比例。",
+        "en": "The trijet layout and center engine are family traits. Cross-check wingtip devices and body proportions to distinguish DC-10 from MD-11.",
+        "ja": "三発配置と中央エンジンは共通点です。DC-10／MD-11の判別には翼端と胴体比率を照合します。"
+      },
+      "bullets": [
+        {
+          "zh": "短於 MD-11 的廣體機身。",
+          "en": "Wide body shorter than the MD-11.",
+          "ja": "MD-11より短い広胴機体。"
+        },
+        {
+          "zh": "中央引擎位於垂尾根部。",
+          "en": "Center engine at the fin base.",
+          "ja": "垂尾根元に中央エンジン。"
+        },
+        {
+          "zh": "標準型無上下翼尖小翼。",
+          "en": "No upper/lower winglets as standard.",
+          "ja": "標準型に上下翼端小翼なし。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dc10/overview.jpg?v=b9fb33b5e583",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:KLM_DC-10-30_(6068067445).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "正面外窗由中央窗柱分開，往兩側延伸為帶斜邊的多片窗；窗框下方接圓鈍機鼻。側面裁切可觀察後側窗的斜邊與高度。",
+        "en": "A center post divides the front windshields, which wrap into angular side panes above a rounded nose. The side crop shows the height and sloping edge of the aft side window.",
+        "ja": "正面窓は中央支柱で分かれ、丸い機首上で斜辺のある側窓へ回り込みます。側面切り出しで後方側窓の高さと傾斜を確認できます。"
+      },
+      "fact": {
+        "zh": "MD-11 延續相近的機鼻與窗型；照片角度、反光與塗裝容易造成假差異，外窗只能作家族辨識，還要看翼尖。",
+        "en": "The MD-11 retains a similar nose and window pattern. Angle, reflections and paint can create false differences; use windows for family recognition, then check the tips.",
+        "ja": "MD-11も似た機首と窓配置を継承します。角度・反射・塗装で差が見えるため、窓は系列確認に使い翼端も照合します。"
+      },
+      "bullets": [
+        {
+          "zh": "中央窗柱與多片側窗。",
+          "en": "Center post and multiple side panes.",
+          "ja": "中央支柱と複数の側窓。"
+        },
+        {
+          "zh": "窗框有明顯直線斜邊。",
+          "en": "Distinct straight, sloping frame edges.",
+          "ja": "直線的な斜辺の窓枠。"
+        },
+        {
+          "zh": "窗型與 MD-11 很接近。",
+          "en": "Window pattern close to the MD-11.",
+          "ja": "MD-11に近い窓形状。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dc10/window-front.jpg?v=754726e29821",
+          "caption": {
+            "zh": "G-DMCA 保存機首的正前斜角外窗近照（原圖裁切）",
+            "en": "Front-oblique window close-up of G-DMCA's preserved nose (original-resolution crop)",
+            "ja": "保存されたG-DMCA機首の斜め前方窓近接写真（原寸から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:G-DMCA_DC-10_Monarch_(5894507206).jpg"
+        },
+        {
+          "src": "assets/reference/dc10/window-side.jpg?v=7f170044fc3d",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Biman_Bangladesh_Airlines_McDonnell_Douglas_DC-10-30_S2-ACO_Landing_at_VGHS_(8124284469).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "標準 DC-10-30 外翼平緩收束，末端沒有 MD-11 那組向上與向下延伸的小翼。照片左端可看到細長、低矮的翼尖輪廓。",
+        "en": "The standard DC-10-30 outer wing tapers into a low tip, without the MD-11's upper and lower winglets. The left of the photograph shows the slim, low-profile tip.",
+        "ja": "標準DC-10-30の外翼は低い翼端へ細まり、MD-11の上下小翼はありません。写真左端で細長い翼端輪郭を確認できます。"
+      },
+      "fact": {
+        "zh": "應比對量產標準配置；試驗機或改裝照片不能拿來概括全系列。照片保留外翼及後方水平尾翼的相對位置，兩者不要混淆。",
+        "en": "Compare standard production configurations; test or modified aircraft are not representative of the whole family. The crop retains the outer wing and the tailplane behind it; do not confuse the two.",
+        "ja": "量産標準形態を比較し、試験機・改修機を全機の代表にしないでください。切り出しには外翼とその後方の水平尾翼があり、両者を混同しないでください。"
+      },
+      "bullets": [
+        {
+          "zh": "低矮、收尖的末端。",
+          "en": "Low, tapering end.",
+          "ja": "低く細まる端部。"
+        },
+        {
+          "zh": "無 MD-11 式上下小翼。",
+          "en": "No MD-11-style upper/lower winglets.",
+          "ja": "MD-11式上下小翼なし。"
+        },
+        {
+          "zh": "與機身長度一起判讀。",
+          "en": "Cross-check body length.",
+          "ja": "胴体長も併せて判断。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dc10/wingtip.jpg?v=38f7c7630c4e",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Swissair_McDonnell_Douglas_DC-10-30_HB-IHH_%22Basel-Stadt%22_(26090378125).jpg"
+        }
+      ]
     }
   },
   "specifications": {
