@@ -35,7 +35,7 @@ let idA = "b738", idB = "a320";
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=159`)).json();
+  const d = await (await fetch(`data/${id}.json?v=160`)).json();
   dataCache[id] = d;
   return d;
 }
@@ -84,7 +84,7 @@ function partCardHtml(id, pid){
   const imgHtml = images.length
     ? `<div class="vs-card-gallery">${images.map(img => `<figure class="vs-card-fig">
         <img src="${img.src}" alt="${F(img.caption) || F(part.name)}" loading="lazy">
-        ${(F(img.caption) || img.source) ? `<figcaption>${F(img.caption) || ""}${img.source ? `<a href="${img.source}" target="_blank" rel="noopener noreferrer">${I18N.t("media.source")}</a>` : ""}</figcaption>` : ""}
+        ${(F(img.caption) || img.source) ? `<figcaption>${F(img.caption) || ""}${img.source ? `<a href="${img.source}" target="_blank" rel="noopener noreferrer">${I18N.t("media.source")}</a>` : ""}${img.licenseUrl && img.license ? `<a href="${img.licenseUrl}" target="_blank" rel="noopener noreferrer">${img.license}</a>` : ""}</figcaption>` : ""}
       </figure>`).join("")}</div>`
     : `<div class="vs-card-fig vs-card-fig-empty">${I18N.t("versus.noimage")}</div>`;
   const summary = F(part.summary) || "";

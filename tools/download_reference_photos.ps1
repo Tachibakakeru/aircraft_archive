@@ -214,9 +214,14 @@ $photos = [ordered]@{
   "atr42/cockpit.jpg" = "ATR ATR-42-300, UTair Aviation AN1525686.jpg"
   "dc10/cockpit.jpg" = "DC-10 Cockpit.jpg"
   "md11/cockpit.jpg" = "Cockpit of McDonnell Douglas MD-11 (5306565461).jpg"
+  "b762/cockpit.jpg" = "The Flight Deck of the 767-200 (3615228401).jpg"
+  "b764/cockpit.jpg" = "Continental Airlines Boeing 767-400ER flight deck.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
+# Keep the GFDL 1.2 flight-deck photograph verbatim; see ATTRIBUTION.md.
+$gfdlCockpit = $photos['b764/cockpit.jpg']
+$byTitle[$gfdlCockpit] = (Get-CommonsImageInfo @($gfdlCockpit) 0)[$gfdlCockpit]
 
 foreach ($entry in $photos.GetEnumerator()) {
   $dest = Join-Path $root ("assets/reference/" + $entry.Key)
@@ -415,6 +420,30 @@ $windowPhotos += @(
   @{ Dest="md11/vstab.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.73,.39,.26) }
   @{ Dest="md11/hstab.jpg"; Title="KLM McDonnell Douglas MD-11 PH-KCK Ingrid Bergman.jpg"; Crop=@(.76,.58,.23) }
   @{ Dest="md11/gear.jpg"; Title='KLM - Royal Dutch Airlines McDonnell Douglas MD-11 PH-KCA "Amy Johnson" Toronto Pearson Street Festival (9744032460).jpg'; Crop=@(.09,.20,.82) }
+)
+
+# 767-200 / 767-400ER identification pair.
+$windowPhotos += @(
+  @{ Dest="b762/overview.jpg"; Title="Boeing 767-200 (Air Canada) Kluft Feb-2008 0374.jpg"; Crop=@(.025,.32,.57) }
+  @{ Dest="b762/window-front.jpg"; Title="Gabon Airlines. Boeing 767-200. CDG.2010.JPG"; Crop=@(.62,.45,.17) }
+  @{ Dest="b762/window-side.jpg"; Title="ATI International Boeing 767-200 N763CX BWI MD1.jpg"; Crop=@(.055,.42,.17) }
+  @{ Dest="b762/fuselage.jpg"; Title="Boeing 767-200 (Air Canada) Kluft Feb-2008 0374.jpg"; Crop=@(.19,.43,.39) }
+  @{ Dest="b762/engine.jpg"; Title="Gabon Airlines. Boeing 767-200. CDG.2010.JPG"; Crop=@(.245,.56,.17) }
+  @{ Dest="b762/wingtip.jpg"; Title="ATI International Boeing 767-200 N763CX BWI MD1.jpg"; Crop=@(.51,.20,.21) }
+  @{ Dest="b762/wing.jpg"; Title="ATI International Boeing 767-200 N763CX BWI MD1.jpg"; Crop=@(.39,.22,.32) }
+  @{ Dest="b762/vstab.jpg"; Title="ATI International Boeing 767-200 N763CX BWI MD1.jpg"; Crop=@(.64,.15,.32) }
+  @{ Dest="b762/hstab.jpg"; Title="ATI International Boeing 767-200 N763CX BWI MD1.jpg"; Crop=@(.76,.43,.21) }
+  @{ Dest="b762/gear.jpg"; Title="ATI International Boeing 767-200 N763CX BWI MD1.jpg"; Crop=@(.43,.60,.20) }
+  @{ Dest="b764/overview.jpg"; Title="Boeing 767-400ER N843MH of Delta Air Lines landing at Los Angeles International Airport, September 2023.jpg"; Crop=@(.02,.17,.97) }
+  @{ Dest="b764/window-front.jpg"; Title="Delta Airlines - 767 400 (Quintin Soloviev - QFS AVIATION ).jpg"; Crop=@(.045,.355,.16) }
+  @{ Dest="b764/window-side.jpg"; Title="Delta Airlines - 767 400 (Quintin Soloviev - QFS AVIATION).jpg"; Crop=@(.675,.39,.10) }
+  @{ Dest="b764/fuselage.jpg"; Title="Delta Airlines - 767 400 (Quintin Soloviev - QFS AVIATION).jpg"; Crop=@(.275,.375,.51) }
+  @{ Dest="b764/engine.jpg"; Title="Delta Airlines - 767 400 (Quintin Soloviev - QFS AVIATION).jpg"; Crop=@(.115,.465,.18) }
+  @{ Dest="b764/wingtip.jpg"; Title="United Boeing 767-400ER N78060 MD1.jpg"; Crop=@(.22,.125,.34) }
+  @{ Dest="b764/wing.jpg"; Title="United Boeing 767-400ER N78060 MD1.jpg"; Crop=@(.22,.125,.62) }
+  @{ Dest="b764/vstab.jpg"; Title="Boeing 767-400ER N843MH of Delta Air Lines landing at Los Angeles International Airport, September 2023.jpg"; Crop=@(.675,.17,.32) }
+  @{ Dest="b764/hstab.jpg"; Title="United Boeing 767-400ER N78060 MD1.jpg"; Crop=@(.045,.365,.30) }
+  @{ Dest="b764/gear.jpg"; Title="Boeing 767-400ER N843MH of Delta Air Lines landing at Los Angeles International Airport, September 2023.jpg"; Crop=@(.43,.515,.15) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0

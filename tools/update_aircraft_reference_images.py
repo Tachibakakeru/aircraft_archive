@@ -2005,6 +2005,142 @@ CONTENT.update({
     },
 })
 
+SOURCES.update({
+    "b762": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Boeing_767-200_(Air_Canada)_Kluft_Feb-2008_0374.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:The_Flight_Deck_of_the_767-200_(3615228401).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Gabon_Airlines._Boeing_767-200._CDG.2010.JPG",
+        "window_side": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Boeing_767-200_(Air_Canada)_Kluft_Feb-2008_0374.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Gabon_Airlines._Boeing_767-200._CDG.2010.JPG",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg"
+    },
+    "b764": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Continental_Airlines_Boeing_767-400ER_flight_deck.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION_).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg"
+    }
+})
+
+CONTENT.update({
+    "b762": {
+        "overview": identify(
+            ("767-200 是 767 家族的短機身版本，長約 48.51 m、標準翼展約 47.57 m。低單翼、兩具翼下引擎與傳統尾翼，搭配較短的機翼前後客艙，是辨識重點。", "The 767-200 is the short-body 767, about 48.51 m long with a standard span of 47.57 m. Look for a low wing, two underwing engines, conventional tail and relatively short cabin sections ahead of and behind the wing.", "767-200は全長約48.51 m、標準翼幅約47.57 mの短胴767です。低翼、翼下エンジン2基、通常尾翼と、翼前後の短い客室部分が目印です。"),
+            ("-200 與 -200ER 的外部尺寸相同，不能只憑輪廓判斷航程版本。全景為退役保存的 Air Canada C-GAUN，不是飛行中的構型展示。", "The -200 and -200ER have identical external dimensions; silhouette alone cannot identify the range version. The overview shows retired Air Canada C-GAUN, not an in-flight configuration.", "-200と-200ERの外寸は同じで、輪郭だけでは航続距離型を区別できません。全景は退役保存中のAir Canada C-GAUNです。"),
+            [("短機身 767。", "Short-body 767.", "短胴767。"), ("標準翼尖沒有直立小翼。", "No upright winglets in the standard configuration.", "標準仕様は直立小翼なし。"), ("比 -400ER 短約 12.86 m。", "About 12.86 m shorter than the -400ER.", "-400ERより約12.86 m短い。")],
+        ),
+        "cockpit": identify(
+            ("照片是 American Airlines N338AA 的 767-200 座艙。左右駕駛盤前方可見早期 EFIS 小型顯示器與獨立圓形儀表，中央為引擎資訊與兩支油門。", "This is the 767-200 cockpit of American Airlines N338AA. Early EFIS displays and separate round instruments sit ahead of the yokes; engine indications and two thrust levers occupy the center.", "写真はAmerican Airlines N338AAの767-200操縦席。操縦輪の前に初期EFIS表示器と独立した丸形計器が並び、中央にエンジン表示と2本の推力レバーがあります。"),
+            ("不要把它稱為純類比座艙；早期 767 已結合電子顯示。與 -400ER 的大面積 LCD 比較，應看螢幕尺寸與配置，而不是只數螢幕。", "This is not an all-analog cockpit: early 767s already used electronic displays. Compare screen size and arrangement with the -400ER's large LCDs rather than simply counting screens.", "初期767も電子表示を備え、完全なアナログ操縦席ではありません。-400ERの大型LCDとは枚数だけでなく大きさと配置を比べます。"),
+            [("EFIS 與圓形儀表並存。", "EFIS plus round instruments.", "EFISと丸形計器を併用。"), ("傳統駕駛盤。", "Conventional yokes.", "従来型操縦輪。"), ("不同改裝機可能換裝新顯示器。", "Retrofits may change the displays.", "改修により表示器が変わる場合あり。")],
+        ),
+        "windshield": identify(
+            ("767 的駕駛艙外窗由中央前窗向兩側延伸，窗框有清楚的斜邊；側面看，窗列位於圓鈍鼻錐上方。下方分別提供前斜角與側面實照。", "The 767's cockpit glazing wraps from the center windshield to angular side panes. In profile, the window band sits above a rounded radome. Front-oblique and side photographs are provided separately.", "767の操縦席窓は中央前窓から斜辺のある側窓へ回り込み、横から見ると丸いレドーム上方に並びます。斜め前と側面の実写を分けて掲載しています。"),
+            ("-200、-300、-400ER 的基本機鼻與窗型相近；外窗適合辨識 767 家族，細分次型號仍要看機身長度與翼尖。側照為 ATI 貨運改裝機 N763CX。", "The -200, -300 and -400ER have similar basic nose and window geometry. Glazing helps identify the family; use body length and wingtips for the variant. The side reference is ATI freighter conversion N763CX.", "-200・-300・-400ERの基本的な機首と窓形状は似ています。系列判別には窓、型式判別には胴体長と翼端を使います。側面はATI貨物改修機N763CXです。"),
+            [("前斜角看中央窗柱。", "See the center post from the front quarter.", "斜め前から中央支柱を見る。"), ("側面看窗框斜邊。", "See sloping pane edges from the side.", "側面から窓枠の斜辺を見る。"), ("外窗不能單獨區分 -200／-400ER。", "Windows alone do not separate -200/-400ER.", "窓だけで-200／-400ERは区別不可。")],
+        ),
+        "fuselage": identify(
+            ("短機身客機的前後艙門之間是較短的舷窗列，翼上緊急出口位於機翼附近。照片保留客機窗列，可與 -400ER 較長的艙門間距比較。", "The short passenger fuselage has a shorter window row between the forward and aft doors, with overwing emergency exits near the wing. The retained passenger windows provide a comparison with the -400ER's longer door spacing.", "短胴旅客型は前後扉間の窓列が短く、翼付近に翼上非常口があります。写真に残る客室窓を-400ERの長い扉間隔と比較できます。"),
+            ("部分 767-200 已改為貨機。封窗、大型主甲板貨門屬改裝與用途特徵，不是 -200／-200ER 的固定區別。", "Some 767-200s were converted to freighters. Plugged windows and a large main-deck cargo door indicate conversion and role, not a fixed -200/-200ER distinction.", "貨物改修された767-200もあります。窓の閉鎖や大型貨物扉は用途・改修の特徴で、-200と-200ERの固定的な違いではありません。"),
+            [("機翼前後的窗列較短。", "Shorter window rows fore and aft of the wing.", "翼前後の窓列が短い。"), ("觀察翼上緊急出口。", "Locate the overwing exits.", "翼上非常口を確認。"), ("客貨型門窗要分開比較。", "Compare passenger and cargo doors separately.", "旅客・貨物型の窓扉を分けて比較。")],
+        ),
+        "engine": identify(
+            ("767-200 的動力選項包含 JT9D、CF6-80A，以及部分 PW4000／CF6-80C2 配置，並非每架短艙都相同。照片呈現 Gabon Airlines 機的圓形進氣口、風扇與翼下吊架。", "767-200 powerplant options include JT9D, CF6-80A and some PW4000/CF6-80C2 configurations; nacelles are not identical across aircraft. The Gabon Airlines photograph shows the circular intake, fan and underwing pylon.", "767-200にはJT9D、CF6-80A、一部PW4000／CF6-80C2仕様があり、ナセルは全機同一ではありません。Gabon Airlines機の写真では円形吸気口、ファン、翼下パイロンが見えます。"),
+            ("波音的引擎適用表分別列出 -200 與 -200ER；不可把 -200ER 的選項直接當成所有 -200 的標準配備。僅靠航空公司塗裝也不能確認引擎型號。", "Boeing lists -200 and -200ER engine applicability separately. An option for the -200ER is not automatically standard on every -200, and airline livery does not establish engine type.", "ボーイングの適用表は-200と-200ERを区別しています。-200ERの選択肢を全-200の標準装備とせず、塗装だけでエンジン型式を断定しません。"),
+            [("兩具翼下渦扇。", "Two underwing turbofans.", "翼下ターボファン2基。"), ("比較進氣口與排氣段輪廓。", "Compare intake and exhaust profiles.", "吸気口と排気部の輪郭を比較。"), ("型號需核對實機配置。", "Verify the individual aircraft configuration.", "実機の仕様を照合。")],
+        ),
+        "wingtip": identify(
+            ("標準 767-200 翼尖為一般收尖外形，沒有 -400ER 那種明顯向後延伸的尖長翼端，也不是直立式小翼。照片的 ATI N763CX 清楚露出翼尖下表面。", "The standard 767-200 has a conventional tapered tip, without the -400ER's pronounced swept-back extension or an upright winglet. ATI N763CX exposes the underside of the tip clearly.", "標準767-200は通常の先細り翼端で、-400ERの大きく後方へ伸びる翼端や直立小翼とは異なります。ATI N763CXの写真で下面が確認できます。"),
+            ("767-300ER 上常見的改裝直立小翼，不能當成所有 767 的標準外形。這裡比較的是照片所示構型。", "Retrofit upright winglets often seen on 767-300ERs are not the standard shape of every 767. This comparison concerns the photographed configuration.", "767-300ERで見かける後付け直立小翼を、全767の標準形状と考えないでください。ここでは写真の仕様を比較します。"),
+            [("一般收尖翼端。", "Conventional tapered tip.", "通常の先細り翼端。"), ("沒有直立小翼。", "No upright winglet.", "直立小翼なし。"), ("與 -400ER 後掠延伸段對照。", "Contrast with the -400ER's raked extension.", "-400ERの後退翼端と対照。")],
+        ),
+        "wing": identify(
+            ("低置後掠主翼下方懸掛引擎。降落照片可見放下的後緣襟翼與其整流罩，並能沿外翼一路追到一般翼尖。", "The low swept wing carries an underwing engine. The landing photograph shows extended trailing-edge flaps and their fairings, with the outer wing leading to a conventional tip.", "低い後退翼にエンジンを吊り下げています。着陸写真では展開した後縁フラップとフェアリング、通常翼端までの外翼が見えます。"),
+            ("襟翼位置隨飛行階段改變，不是次型號差異；貨運改裝機照片在此用於辨識主翼，而不是客艙門窗。", "Flap position changes with flight phase, not variant. The freighter-conversion photograph is used here for wing identification, not passenger doors or windows.", "フラップ位置は飛行段階で変わり、型式差ではありません。貨物改修機写真は主翼の識別用で、旅客扉・窓の参考ではありません。"),
+            [("後掠低單翼。", "Low swept wing.", "低い後退翼。"), ("標準翼展約 47.57 m。", "Standard span about 47.57 m.", "標準翼幅約47.57 m。"), ("翼下可見襟翼機構整流罩。", "Flap-mechanism fairings below the wing.", "翼下にフラップ機構フェアリング。")],
+        ),
+        "vstab": identify(
+            ("垂直尾翼前緣後掠、後緣設方向舵，安裝在後機身上方。它與其他 767 次型號十分相似，白色無標誌尾翼也不改變其幾何特徵。", "The fin has a swept leading edge and a trailing-edge rudder above the aft fuselage. It closely resembles other 767 variants; the plain white finish does not alter its geometry.", "後退した前縁と後縁の方向舵を持つ垂直尾翼が後部胴体上にあります。他の767型式とよく似ており、白い無標識塗装でも形状は変わりません。"),
+            ("單看尾翼容易把 -200 與 -300／-400ER 混淆，應回到全機比例與翼尖交叉確認。", "The tail alone can confuse -200, -300 and -400ER; cross-check whole-aircraft proportions and tips.", "尾翼だけでは-200・-300・-400ERを混同しやすく、全機比率と翼端も確認します。"),
+            [("單片後掠垂尾。", "Single swept fin.", "後退した垂直尾翼1枚。"), ("方向舵位於後緣。", "Rudder on the trailing edge.", "後縁に方向舵。"), ("塗裝不是次型號特徵。", "Livery is not a variant identifier.", "塗装は型式識別点ではない。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼從後機身兩側向外後掠，位置低於垂直尾翼頂端，屬傳統尾翼而非 T 尾。近照可見翼面後緣及尾錐。", "The horizontal stabilizers sweep outward from the aft fuselage below the fin tip: a conventional, not T-tail, arrangement. The close-up shows the trailing edge and tailcone.", "水平尾翼は後部胴体両側から後退し、垂直尾翼頂部より低い通常尾翼です。近接写真に後縁とテールコーンが見えます。"),
+            ("-400ER 也保留同類布局；水平尾翼位置適合區分不同家族，但不是辨識 767 長短機身的主要線索。", "The -400ER retains this arrangement. Tailplane position helps distinguish families but is not the main clue to 767 body length.", "-400ERも同様の配置です。水平尾翼位置は系列の判別には役立ちますが、767の胴体長を分ける主な手掛かりではありません。"),
+            [("低置水平尾翼。", "Low-mounted tailplane.", "低い水平尾翼。"), ("後掠翼面與升降舵。", "Swept surfaces and elevators.", "後退した翼面と昇降舵。"), ("不是 T 型尾翼。", "Not a T-tail.", "T尾翼ではない。")],
+        ),
+        "gear": identify(
+            ("767-200 採前三點式起落架：雙輪鼻輪，加上左右各四輪的主起落架。主輪照片可看到兩軸輪架，沒有 777 的三軸六輪主輪架。", "The 767-200 uses tricycle gear: a twin-wheel nose unit and two four-wheel main units. The photograph shows two-axle bogies, not the 777's three-axle six-wheel main bogies.", "767-200は前輪2輪と左右各4輪の主脚を持つ前輪式です。写真は2軸台車で、777の3軸6輪主脚ではありません。"),
+            ("-400ER 同樣是每側四輪，不能只靠輪數細分；應搭配翼尖、機身長度與主腳結構。", "The -400ER also has four wheels per side, so wheel count alone cannot separate them. Use tips, body length and gear structure as well.", "-400ERも片側4輪なので輪数だけでは区別できません。翼端、胴体長、主脚構造も確認します。"),
+            [("每側主腳兩軸四輪。", "Two axles/four wheels per main unit.", "主脚は片側2軸4輪。"), ("鼻輪兩輪。", "Two nose wheels.", "前輪2輪。"), ("全機共十輪。", "Ten wheels in total.", "合計10輪。")],
+        ),
+    },
+    "b764": {
+        "overview": identify(
+            ("767-400ER 是家族最長客機，長約 61.37 m、翼展約 51.92 m。細長機身、向後延伸的翼尖與兩具翼下引擎，是與短身 767-200 比較最直接的線索。", "The 767-400ER is the longest passenger 767, about 61.37 m long with a 51.92 m span. Its slender body, swept-back tip extensions and two underwing engines provide clear comparisons with the short 767-200.", "767-400ERは全長約61.37 m、翼幅約51.92 mの最長旅客型767です。細長い胴体、後方へ伸びる翼端、翼下エンジン2基を短胴767-200と比較できます。"),
+            ("它不是裝上直立小翼的 767-300ER，也不是 777；最有效的是同時看機身比例、平面後掠翼尖和四輪主腳。", "It is neither a winglet-equipped 767-300ER nor a 777. Check body proportions, planar raked tips and four-wheel main units together.", "直立小翼付き767-300ERでも777でもありません。胴体比率、平面状の後退翼端、4輪主脚を組み合わせて確認します。"),
+            [("家族最長客機機身。", "Longest passenger 767 body.", "最長の旅客型767胴体。"), ("向後延伸的翼尖。", "Swept-back tip extensions.", "後方へ延長された翼端。"), ("每側四輪主腳。", "Four-wheel main units.", "片側4輪の主脚。")],
+        ),
+        "cockpit": identify(
+            ("767-400ER 座艙的六具大型 LCD 是重要特徵，飛行／導航顯示分布在左右，中央顯示引擎及系統資訊。仍使用傳統駕駛盤與兩支推力手柄。", "Six large LCDs are a key 767-400ER cockpit feature, with flight/navigation displays on both sides and engine/system information in the center. Conventional yokes and two thrust levers remain.", "767-400ER操縦席は大型LCD6面が特徴。左右に飛行・航法、中央にエンジン・システム情報を表示し、従来の操縦輪と2本の推力レバーを残しています。"),
+            ("顯示布局與 777 有共通設計，但不是同一架飛機；這張是 Continental N67052 的 767-400ER 實照，不是模擬器或繪圖。", "Its display arrangement shares design features with the 777, but that does not make it a 777. This is a real Continental N67052 767-400ER, not a simulator or illustration.", "表示配置には777との共通設計がありますが同じ機種ではありません。写真はContinental N67052の実機で、シミュレーターや描画ではありません。"),
+            [("六面大型 LCD。", "Six large LCDs.", "大型LCD6面。"), ("與早期小型 EFIS 明顯不同。", "Distinct from early small EFIS displays.", "初期の小型EFISと明瞭に異なる。"), ("雙人、雙引擎操作布局。", "Two-crew, twin-engine layout.", "2人制・双発の配置。")],
+        ),
+        "windshield": identify(
+            ("767-400ER 保留 767 家族的斜邊窗框與圓鈍機鼻。前斜角照片用來看前窗轉向側窗的折角，側面近照則看後側窗與鼻錐的相對位置。", "The 767-400ER retains the family's angular window frames and rounded nose. The front-quarter photograph shows the wrap from windshield to side panes; the side close-up shows the aft pane relative to the radome.", "767-400ERは系列共通の斜辺窓枠と丸い機首を残します。斜め前写真で前窓から側窓への折れ、側面近接写真で後方窓とレドームの位置を見ます。"),
+            ("即使內部換成新世代座艙，外窗仍不能單獨區分 -200／-300／-400ER。辨識時補看長機身與後掠延伸翼尖。", "The modernized interior does not make the exterior windows a standalone -200/-300/-400ER identifier. Cross-check the long body and raked tips.", "内部を近代化しても、外窓だけで-200・-300・-400ERは区別できません。長胴と後退翼端も確認してください。"),
+            [("前斜角與側面分開對照。", "Separate front-quarter and side views.", "斜め前・側面を別々に比較。"), ("沿用 767 家族機鼻。", "Retains the 767 family nose.", "767系列の機首を継承。"), ("新座艙不等於新外窗。", "New cockpit does not imply new glazing.", "新操縦席でも外窓は別問題。")],
+        ),
+        "fuselage": identify(
+            ("比 767-300 再加長的機身，讓機翼前後的客艙區段更長。近照可見前部兩道地板高度艙門、其間舷窗與下方貨艙門輪廓。", "A further stretch beyond the 767-300 lengthens the cabin sections around the wing. The close-up shows two forward floor-level doors, the windows between them and the lower cargo-door outline.", "767-300からさらに胴体を延長し、翼前後の客室が長くなっています。近接写真には前方の床面高さの扉2枚、間の窓列、下部貨物扉の輪郭が見えます。"),
+            ("門窗是位置與比例線索，不要把某一家航空公司封住的窗位視為所有 -400ER 都相同；完整長度還要回到全景比較。", "Door/window positions are proportional clues, not a guarantee that every airline leaves the same windows open. Return to the overview to compare total length.", "扉・窓の位置は比率の手掛かりですが、航空会社による窓閉鎖まで全機共通ではありません。全長の比較は全景に戻って行います。"),
+            [("機身長約 61.37 m。", "Body about 61.37 m long.", "全長約61.37 m。"), ("前後客艙區段加長。", "Longer forward/aft cabin sections.", "前後客室区間を延長。"), ("下層貨艙門與客艙門分開。", "Lower cargo doors separate from cabin doors.", "下部貨物扉と客室扉を区別。")],
+        ),
+        "engine": identify(
+            ("照片展示 Delta 767-400ER 翼下引擎短艙的側面：圓形進氣唇口、長短艙與向後伸出的排氣段。比較時可觀察短艙相對於機翼的位置。", "The Delta 767-400ER photograph shows an underwing nacelle in profile: a circular inlet lip, elongated cowling and rear exhaust section. Compare the nacelle's position relative to the wing.", "Delta 767-400ERの写真は翼下ナセル側面で、円形吸気口縁、長いカウリング、後方排気部が見えます。翼との位置関係を比較します。"),
+            ("波音規劃表列有 CF6-80C2-B8F／B7F1 與 PW4062 選項，且註明包含提供中的配置；這不代表每種列項都在照片中的航空公司使用。", "Boeing's planning table lists CF6-80C2-B8F/B7F1 and PW4062 options and notes that offered configurations are included. A table entry does not establish what the photographed airline operates.", "ボーイング計画表にはCF6-80C2-B8F／B7F1、PW4062があり、提供中仕様も含むと注記されています。表への掲載だけで写真の航空会社の採用を断定できません。"),
+            [("兩具翼下引擎。", "Two underwing engines.", "翼下エンジン2基。"), ("圓形進氣口。", "Circular intake.", "円形吸気口。"), ("不能只憑塗裝判斷動力型號。", "Livery alone cannot identify the powerplant.", "塗装だけでエンジン型式を判断しない。")],
+        ),
+        "wingtip": identify(
+            ("-400ER 的 raked wingtip 是沿翼面向外、向後延伸的尖長翼端，不是垂直向上翹的小翼。由機腹角度最容易看出外段前緣後掠增加。", "The -400ER's raked tip extends outward and rearward along the wing plane, rather than standing upright. The underside view makes the increased sweep of the outer leading edge easy to see.", "-400ERのraked wingtipは翼面に沿って外側・後方へ伸びる細長い翼端で、直立小翼ではありません。下面視点で外側前縁の大きな後退角が分かります。"),
+            ("這是區分標準 767-200／-300 與 -400ER 的重要線索；同時也要與改裝直立小翼的 -300ER 區別。", "This is a useful distinction from standard 767-200/-300 tips, and from the upright retrofit winglets on some -300ERs.", "標準767-200／-300翼端との重要な違いで、一部-300ERの後付け直立小翼とも区別できます。"),
+            [("向後延伸，不是直立。", "Rearward extension, not upright.", "後方延長で直立ではない。"), ("翼展約 51.92 m。", "Span about 51.92 m.", "翼幅約51.92 m。"), ("機腹照片呈現翼端平面形。", "Belly view reveals the tip planform.", "下面写真で翼端平面形が見える。")],
+        ),
+        "wing": identify(
+            ("主翼仍為後掠低單翼，但外端加入延伸翼尖，整體翼展比標準 -200／-300 更大。下方照片同時顯示引擎吊掛、外翼與後緣整流罩。", "The wing remains low and swept, but extended tips increase span beyond standard -200/-300 wings. The photograph shows the engine installation, outer wing and trailing-edge fairings together.", "後退した低翼を維持しつつ翼端延長で標準-200／-300より翼幅を増しています。写真にはエンジン取付部、外翼、後縁フェアリングが同時に見えます。"),
+            ("空中照片的主輪已收起；不要把這個狀態和降落時放下襟翼、起落架的照片當成結構差異。", "The gear is retracted in this airborne photograph. Do not mistake flight-phase differences from gear/flap-down landing photographs for structural differences.", "飛行中写真では脚が収納されています。着陸時の脚・フラップ展開状態との違いを構造差と誤認しないでください。"),
+            [("低置後掠主翼。", "Low swept wing.", "低い後退主翼。"), ("外翼末端有後掠延伸段。", "Raked extension at the outer tip.", "外翼端に後退延長部。"), ("對照時留意拍攝角度。", "Account for viewing angle.", "撮影角度に注意して比較。")],
+        ),
+        "vstab": identify(
+            ("照片顯示後掠垂直尾翼、方向舵分界與向後機身過渡的根部。與短機身 767 相比，尾翼的家族輪廓仍然很接近。", "The photograph shows the swept fin, rudder boundary and root blending into the aft body. The family outline remains close to the short-body 767's tail.", "写真では後退垂尾、方向舵境界、後部胴体につながる付け根が見えます。短胴767と系列の輪郭はよく似ています。"),
+            ("Delta 尾翼塗裝本身不能識別 -400ER；同一公司也使用其他 767，必須看完整機身與翼尖。", "Delta's tail livery does not identify a -400ER: the airline also uses other 767s. Check the full body and tips.", "Deltaの尾翼塗装だけでは-400ERと判定できません。同社の他の767と、全胴体・翼端を照合します。"),
+            [("單片後掠垂尾。", "Single swept fin.", "後退垂尾1枚。"), ("方向舵分界可見。", "Visible rudder boundary.", "方向舵境界が見える。"), ("不可只用塗裝判型。", "Do not identify by livery alone.", "塗装だけで型式を判断しない。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼位於後機身兩側、垂直尾翼下方，從後方機腹角度能看到翼面與尾錐。它不是 T 型尾翼，也沒有尾部中央引擎。", "The tailplanes sit on either side of the aft body below the fin. The rear-belly view shows the surfaces and tailcone. This is not a T-tail and has no center-tail engine.", "水平尾翼は垂直尾翼より下の後部胴体両側にあり、後方下面視点で翼面とテールコーンが見えます。T尾翼や中央尾部エンジンはありません。"),
+            ("尾翼布局與其他 767 相近；若與 DC-10／MD-11 等機型比較，應先看引擎數與尾部布局。", "Tail arrangement resembles other 767s. Against a DC-10 or MD-11, start with engine count and tail configuration.", "尾翼配置は他の767に似ています。DC-10／MD-11等との比較では、まずエンジン数と尾部配置を見ます。"),
+            [("傳統低置水平尾翼。", "Conventional low tailplane.", "通常の低い水平尾翼。"), ("翼面向後掠。", "Swept surfaces.", "後退した翼面。"), ("尾錐沒有推進引擎。", "No propulsion engine in the tailcone.", "尾部に推進用エンジンなし。")],
+        ),
+        "gear": identify(
+            ("-400ER 為較長機身採用重新設計的主起落架，但仍保留左右各兩軸四輪，加上雙輪鼻輪。照片中的主輪總數不要與 777 每側六輪混淆。", "The stretched -400ER uses redesigned main landing gear while retaining two axles/four wheels per side and a twin-wheel nose unit. Do not confuse its main wheels with the 777's six per side.", "長胴化した-400ERは主脚を再設計しましたが、左右各2軸4輪と前輪2輪を維持します。777の片側6輪とは区別してください。"),
+            ("四輪主腳是辨識 767 與 777 的線索，但 -200 與 -400ER 都有四輪；細分仍以機身比例、翼尖與實機機籍確認。", "Four-wheel main units help separate a 767 from a 777, but both -200 and -400ER have them. Use body proportions, tips and aircraft registration to identify the variant.", "4輪主脚は767と777の区別に役立ちますが、-200も-400ERも同じ輪数です。胴体比率、翼端、機体登録で型式を確認します。"),
+            [("重新設計的主腳。", "Redesigned main gear.", "再設計された主脚。"), ("每側兩軸四輪。", "Two axles/four wheels per side.", "片側2軸4輪。"), ("鼻輪仍為雙輪。", "Twin-wheel nose gear remains.", "前脚は引き続き2輪。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -2081,6 +2217,49 @@ def update(model: str) -> None:
             "KLM MD-11 PH-KCK side windows (crop of the original-resolution photograph)",
             "KLM MD-11 PH-KCKの側窓（原寸実写から切り出し）",
         )
+    if model == "b762":
+        for part_id in ("overview", "fuselage"):
+            parts[part_id]["images"][0]["caption"] = tr(
+                "Air Canada 767-200 C-GAUN 退役保存機（實照裁切）",
+                "Retired Air Canada 767-200 C-GAUN (photographic crop)",
+                "退役保存中のAir Canada 767-200 C-GAUN（実写切り出し）",
+            )
+        for part_id in ("wingtip", "wing", "vstab", "hstab", "gear"):
+            parts[part_id]["images"][0]["caption"] = tr(
+                "ATI 767-200 貨運改裝機 N763CX；用於此部位外形參考",
+                "ATI 767-200 freighter conversion N763CX; reference for this exterior part",
+                "ATI 767-200貨物改修機N763CX：この外部部位の形状参考",
+            )
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "Gabon Airlines 767-200 系列前斜角外窗（非完全正前方）",
+            "Gabon Airlines 767-200-family front-quarter windows (not directly head-on)",
+            "Gabon Airlines 767-200系列の斜め前方窓（真正面ではありません）",
+        )
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "ATI 767-200 貨運改裝機 N763CX 側窗",
+            "Side windows of ATI 767-200 freighter conversion N763CX",
+            "ATI 767-200貨物改修機N763CXの側窓",
+        )
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "American Airlines N338AA 的早期 EFIS 座艙實照",
+            "Early EFIS flight deck of American Airlines N338AA",
+            "American Airlines N338AAの初期EFIS操縦席実写",
+        )
+    if model == "b764":
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "Delta 767-400ER 前斜角外窗（非完全正前方）",
+            "Delta 767-400ER front-quarter windows (not directly head-on)",
+            "Delta 767-400ERの斜め前方窓（真正面ではありません）",
+        )
+        parts["cockpit"]["images"][0].update({
+            "caption": tr(
+                "Continental N67052 實機六 LCD 座艙；© Ken Iwelumo，Altair78 調整明暗；原檔未修改",
+                "Continental N67052 six-LCD flight deck; © Ken Iwelumo, levels by Altair78; file unchanged",
+                "Continental N67052の6面LCD操縦席；© Ken Iwelumo、明暗調整Altair78；原ファイル未変更",
+            ),
+            "license": "GFDL 1.2",
+            "licenseUrl": "assets/reference/GFDL-1.2.txt",
+        })
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
@@ -2098,6 +2277,8 @@ def check() -> None:
                     assert query == "v=" + sha256((ROOT / path).read_bytes()).hexdigest()[:12], image["src"]
                 assert image["source"].startswith("https://commons.wikimedia.org/wiki/File:")
                 assert all(image["caption"].get(lang) for lang in ("zh", "en", "ja"))
+                if image.get("licenseUrl"):
+                    assert image.get("license") and (ROOT / image["licenseUrl"]).is_file()
         assert sum(len(data["parts"][part_id]["images"]) for part_id in ORDER) == 11
     photo_count = len(CONTENT) * 11
     print(f"Reference-photo data check passed: {len(CONTENT)} aircraft x 10 identification parts / {photo_count} photos.")

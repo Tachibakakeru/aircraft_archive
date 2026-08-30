@@ -2,18 +2,30 @@
   "title": "Boeing 767-200",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 767-200 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "短機身客機的前後艙門之間是較短的舷窗列，翼上緊急出口位於機翼附近。照片保留客機窗列，可與 -400ER 較長的艙門間距比較。",
+        "en": "The short passenger fuselage has a shorter window row between the forward and aft doors, with overwing emergency exits near the wing. The retained passenger windows provide a comparison with the -400ER's longer door spacing.",
+        "ja": "短胴旅客型は前後扉間の窓列が短く、翼付近に翼上非常口があります。写真に残る客室窓を-400ERの長い扉間隔と比較できます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "部分 767-200 已改為貨機。封窗、大型主甲板貨門屬改裝與用途特徵，不是 -200／-200ER 的固定區別。",
+        "en": "Some 767-200s were converted to freighters. Plugged windows and a large main-deck cargo door indicate conversion and role, not a fixed -200/-200ER distinction.",
+        "ja": "貨物改修された767-200もあります。窓の閉鎖や大型貨物扉は用途・改修の特徴で、-200と-200ERの固定的な違いではありません。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "機翼前後的窗列較短。",
+          "en": "Shorter window rows fore and aft of the wing.",
+          "ja": "翼前後の窓列が短い。"
+        },
+        {
+          "zh": "觀察翼上緊急出口。",
+          "en": "Locate the overwing exits.",
+          "ja": "翼上非常口を確認。"
+        },
+        {
+          "zh": "客貨型門窗要分開比較。",
+          "en": "Compare passenger and cargo doors separately.",
+          "ja": "旅客・貨物型の窓扉を分けて比較。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b762/fuselage.jpg?v=ad622bcf7e4f",
+          "caption": {
+            "zh": "Air Canada 767-200 C-GAUN 退役保存機（實照裁切）",
+            "en": "Retired Air Canada 767-200 C-GAUN (photographic crop)",
+            "ja": "退役保存中のAir Canada 767-200 C-GAUN（実写切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_767-200_(Air_Canada)_Kluft_Feb-2008_0374.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 767-200 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "低置後掠主翼下方懸掛引擎。降落照片可見放下的後緣襟翼與其整流罩，並能沿外翼一路追到一般翼尖。",
+        "en": "The low swept wing carries an underwing engine. The landing photograph shows extended trailing-edge flaps and their fairings, with the outer wing leading to a conventional tip.",
+        "ja": "低い後退翼にエンジンを吊り下げています。着陸写真では展開した後縁フラップとフェアリング、通常翼端までの外翼が見えます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "襟翼位置隨飛行階段改變，不是次型號差異；貨運改裝機照片在此用於辨識主翼，而不是客艙門窗。",
+        "en": "Flap position changes with flight phase, not variant. The freighter-conversion photograph is used here for wing identification, not passenger doors or windows.",
+        "ja": "フラップ位置は飛行段階で変わり、型式差ではありません。貨物改修機写真は主翼の識別用で、旅客扉・窓の参考ではありません。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "後掠低單翼。",
+          "en": "Low swept wing.",
+          "ja": "低い後退翼。"
+        },
+        {
+          "zh": "標準翼展約 47.57 m。",
+          "en": "Standard span about 47.57 m.",
+          "ja": "標準翼幅約47.57 m。"
+        },
+        {
+          "zh": "翼下可見襟翼機構整流罩。",
+          "en": "Flap-mechanism fairings below the wing.",
+          "ja": "翼下にフラップ機構フェアリング。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b762/wing.jpg?v=c32aad1ad017",
+          "caption": {
+            "zh": "ATI 767-200 貨運改裝機 N763CX；用於此部位外形參考",
+            "en": "ATI 767-200 freighter conversion N763CX; reference for this exterior part",
+            "ja": "ATI 767-200貨物改修機N763CX：この外部部位の形状参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 767-200 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "767-200 的動力選項包含 JT9D、CF6-80A，以及部分 PW4000／CF6-80C2 配置，並非每架短艙都相同。照片呈現 Gabon Airlines 機的圓形進氣口、風扇與翼下吊架。",
+        "en": "767-200 powerplant options include JT9D, CF6-80A and some PW4000/CF6-80C2 configurations; nacelles are not identical across aircraft. The Gabon Airlines photograph shows the circular intake, fan and underwing pylon.",
+        "ja": "767-200にはJT9D、CF6-80A、一部PW4000／CF6-80C2仕様があり、ナセルは全機同一ではありません。Gabon Airlines機の写真では円形吸気口、ファン、翼下パイロンが見えます。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "波音的引擎適用表分別列出 -200 與 -200ER；不可把 -200ER 的選項直接當成所有 -200 的標準配備。僅靠航空公司塗裝也不能確認引擎型號。",
+        "en": "Boeing lists -200 and -200ER engine applicability separately. An option for the -200ER is not automatically standard on every -200, and airline livery does not establish engine type.",
+        "ja": "ボーイングの適用表は-200と-200ERを区別しています。-200ERの選択肢を全-200の標準装備とせず、塗装だけでエンジン型式を断定しません。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "兩具翼下渦扇。",
+          "en": "Two underwing turbofans.",
+          "ja": "翼下ターボファン2基。"
+        },
+        {
+          "zh": "比較進氣口與排氣段輪廓。",
+          "en": "Compare intake and exhaust profiles.",
+          "ja": "吸気口と排気部の輪郭を比較。"
+        },
+        {
+          "zh": "型號需核對實機配置。",
+          "en": "Verify the individual aircraft configuration.",
+          "ja": "実機の仕様を照合。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b762/engine.jpg?v=62b74becc794",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Gabon_Airlines._Boeing_767-200._CDG.2010.JPG"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "垂直尾翼前緣後掠、後緣設方向舵，安裝在後機身上方。它與其他 767 次型號十分相似，白色無標誌尾翼也不改變其幾何特徵。",
+        "en": "The fin has a swept leading edge and a trailing-edge rudder above the aft fuselage. It closely resembles other 767 variants; the plain white finish does not alter its geometry.",
+        "ja": "後退した前縁と後縁の方向舵を持つ垂直尾翼が後部胴体上にあります。他の767型式とよく似ており、白い無標識塗装でも形状は変わりません。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "單看尾翼容易把 -200 與 -300／-400ER 混淆，應回到全機比例與翼尖交叉確認。",
+        "en": "The tail alone can confuse -200, -300 and -400ER; cross-check whole-aircraft proportions and tips.",
+        "ja": "尾翼だけでは-200・-300・-400ERを混同しやすく、全機比率と翼端も確認します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "後退した垂直尾翼1枚。"
+        },
+        {
+          "zh": "方向舵位於後緣。",
+          "en": "Rudder on the trailing edge.",
+          "ja": "後縁に方向舵。"
+        },
+        {
+          "zh": "塗裝不是次型號特徵。",
+          "en": "Livery is not a variant identifier.",
+          "ja": "塗装は型式識別点ではない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b762/vstab.jpg?v=c4c99502d632",
+          "caption": {
+            "zh": "ATI 767-200 貨運改裝機 N763CX；用於此部位外形參考",
+            "en": "ATI 767-200 freighter conversion N763CX; reference for this exterior part",
+            "ja": "ATI 767-200貨物改修機N763CX：この外部部位の形状参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "水平尾翼從後機身兩側向外後掠，位置低於垂直尾翼頂端，屬傳統尾翼而非 T 尾。近照可見翼面後緣及尾錐。",
+        "en": "The horizontal stabilizers sweep outward from the aft fuselage below the fin tip: a conventional, not T-tail, arrangement. The close-up shows the trailing edge and tailcone.",
+        "ja": "水平尾翼は後部胴体両側から後退し、垂直尾翼頂部より低い通常尾翼です。近接写真に後縁とテールコーンが見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "-400ER 也保留同類布局；水平尾翼位置適合區分不同家族，但不是辨識 767 長短機身的主要線索。",
+        "en": "The -400ER retains this arrangement. Tailplane position helps distinguish families but is not the main clue to 767 body length.",
+        "ja": "-400ERも同様の配置です。水平尾翼位置は系列の判別には役立ちますが、767の胴体長を分ける主な手掛かりではありません。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "低置水平尾翼。",
+          "en": "Low-mounted tailplane.",
+          "ja": "低い水平尾翼。"
+        },
+        {
+          "zh": "後掠翼面與升降舵。",
+          "en": "Swept surfaces and elevators.",
+          "ja": "後退した翼面と昇降舵。"
+        },
+        {
+          "zh": "不是 T 型尾翼。",
+          "en": "Not a T-tail.",
+          "ja": "T尾翼ではない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b762/hstab.jpg?v=296251eba086",
+          "caption": {
+            "zh": "ATI 767-200 貨運改裝機 N763CX；用於此部位外形參考",
+            "en": "ATI 767-200 freighter conversion N763CX; reference for this exterior part",
+            "ja": "ATI 767-200貨物改修機N763CX：この外部部位の形状参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 767-200 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "767-200 採前三點式起落架：雙輪鼻輪，加上左右各四輪的主起落架。主輪照片可看到兩軸輪架，沒有 777 的三軸六輪主輪架。",
+        "en": "The 767-200 uses tricycle gear: a twin-wheel nose unit and two four-wheel main units. The photograph shows two-axle bogies, not the 777's three-axle six-wheel main bogies.",
+        "ja": "767-200は前輪2輪と左右各4輪の主脚を持つ前輪式です。写真は2軸台車で、777の3軸6輪主脚ではありません。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "-400ER 同樣是每側四輪，不能只靠輪數細分；應搭配翼尖、機身長度與主腳結構。",
+        "en": "The -400ER also has four wheels per side, so wheel count alone cannot separate them. Use tips, body length and gear structure as well.",
+        "ja": "-400ERも片側4輪なので輪数だけでは区別できません。翼端、胴体長、主脚構造も確認します。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳兩軸四輪。",
+          "en": "Two axles/four wheels per main unit.",
+          "ja": "主脚は片側2軸4輪。"
+        },
+        {
+          "zh": "鼻輪兩輪。",
+          "en": "Two nose wheels.",
+          "ja": "前輪2輪。"
+        },
+        {
+          "zh": "全機共十輪。",
+          "en": "Ten wheels in total.",
+          "ja": "合計10輪。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b762/gear.jpg?v=dbb49d47e45c",
+          "caption": {
+            "zh": "ATI 767-200 貨運改裝機 N763CX；用於此部位外形參考",
+            "en": "ATI 767-200 freighter conversion N763CX; reference for this exterior part",
+            "ja": "ATI 767-200貨物改修機N763CX：この外部部位の形状参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "767-200 是 767 家族的短機身版本，長約 48.51 m、標準翼展約 47.57 m。低單翼、兩具翼下引擎與傳統尾翼，搭配較短的機翼前後客艙，是辨識重點。",
+        "en": "The 767-200 is the short-body 767, about 48.51 m long with a standard span of 47.57 m. Look for a low wing, two underwing engines, conventional tail and relatively short cabin sections ahead of and behind the wing.",
+        "ja": "767-200は全長約48.51 m、標準翼幅約47.57 mの短胴767です。低翼、翼下エンジン2基、通常尾翼と、翼前後の短い客室部分が目印です。"
+      },
+      "fact": {
+        "zh": "-200 與 -200ER 的外部尺寸相同，不能只憑輪廓判斷航程版本。全景為退役保存的 Air Canada C-GAUN，不是飛行中的構型展示。",
+        "en": "The -200 and -200ER have identical external dimensions; silhouette alone cannot identify the range version. The overview shows retired Air Canada C-GAUN, not an in-flight configuration.",
+        "ja": "-200と-200ERの外寸は同じで、輪郭だけでは航続距離型を区別できません。全景は退役保存中のAir Canada C-GAUNです。"
+      },
+      "bullets": [
+        {
+          "zh": "短機身 767。",
+          "en": "Short-body 767.",
+          "ja": "短胴767。"
+        },
+        {
+          "zh": "標準翼尖沒有直立小翼。",
+          "en": "No upright winglets in the standard configuration.",
+          "ja": "標準仕様は直立小翼なし。"
+        },
+        {
+          "zh": "比 -400ER 短約 12.86 m。",
+          "en": "About 12.86 m shorter than the -400ER.",
+          "ja": "-400ERより約12.86 m短い。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b762/overview.jpg?v=953c88ab74cb",
+          "caption": {
+            "zh": "Air Canada 767-200 C-GAUN 退役保存機（實照裁切）",
+            "en": "Retired Air Canada 767-200 C-GAUN (photographic crop)",
+            "ja": "退役保存中のAir Canada 767-200 C-GAUN（実写切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_767-200_(Air_Canada)_Kluft_Feb-2008_0374.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "照片是 American Airlines N338AA 的 767-200 座艙。左右駕駛盤前方可見早期 EFIS 小型顯示器與獨立圓形儀表，中央為引擎資訊與兩支油門。",
+        "en": "This is the 767-200 cockpit of American Airlines N338AA. Early EFIS displays and separate round instruments sit ahead of the yokes; engine indications and two thrust levers occupy the center.",
+        "ja": "写真はAmerican Airlines N338AAの767-200操縦席。操縦輪の前に初期EFIS表示器と独立した丸形計器が並び、中央にエンジン表示と2本の推力レバーがあります。"
+      },
+      "fact": {
+        "zh": "不要把它稱為純類比座艙；早期 767 已結合電子顯示。與 -400ER 的大面積 LCD 比較，應看螢幕尺寸與配置，而不是只數螢幕。",
+        "en": "This is not an all-analog cockpit: early 767s already used electronic displays. Compare screen size and arrangement with the -400ER's large LCDs rather than simply counting screens.",
+        "ja": "初期767も電子表示を備え、完全なアナログ操縦席ではありません。-400ERの大型LCDとは枚数だけでなく大きさと配置を比べます。"
+      },
+      "bullets": [
+        {
+          "zh": "EFIS 與圓形儀表並存。",
+          "en": "EFIS plus round instruments.",
+          "ja": "EFISと丸形計器を併用。"
+        },
+        {
+          "zh": "傳統駕駛盤。",
+          "en": "Conventional yokes.",
+          "ja": "従来型操縦輪。"
+        },
+        {
+          "zh": "不同改裝機可能換裝新顯示器。",
+          "en": "Retrofits may change the displays.",
+          "ja": "改修により表示器が変わる場合あり。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b762/cockpit.jpg?v=1ea584da8d0e",
+          "caption": {
+            "zh": "American Airlines N338AA 的早期 EFIS 座艙實照",
+            "en": "Early EFIS flight deck of American Airlines N338AA",
+            "ja": "American Airlines N338AAの初期EFIS操縦席実写"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:The_Flight_Deck_of_the_767-200_(3615228401).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "767 的駕駛艙外窗由中央前窗向兩側延伸，窗框有清楚的斜邊；側面看，窗列位於圓鈍鼻錐上方。下方分別提供前斜角與側面實照。",
+        "en": "The 767's cockpit glazing wraps from the center windshield to angular side panes. In profile, the window band sits above a rounded radome. Front-oblique and side photographs are provided separately.",
+        "ja": "767の操縦席窓は中央前窓から斜辺のある側窓へ回り込み、横から見ると丸いレドーム上方に並びます。斜め前と側面の実写を分けて掲載しています。"
+      },
+      "fact": {
+        "zh": "-200、-300、-400ER 的基本機鼻與窗型相近；外窗適合辨識 767 家族，細分次型號仍要看機身長度與翼尖。側照為 ATI 貨運改裝機 N763CX。",
+        "en": "The -200, -300 and -400ER have similar basic nose and window geometry. Glazing helps identify the family; use body length and wingtips for the variant. The side reference is ATI freighter conversion N763CX.",
+        "ja": "-200・-300・-400ERの基本的な機首と窓形状は似ています。系列判別には窓、型式判別には胴体長と翼端を使います。側面はATI貨物改修機N763CXです。"
+      },
+      "bullets": [
+        {
+          "zh": "前斜角看中央窗柱。",
+          "en": "See the center post from the front quarter.",
+          "ja": "斜め前から中央支柱を見る。"
+        },
+        {
+          "zh": "側面看窗框斜邊。",
+          "en": "See sloping pane edges from the side.",
+          "ja": "側面から窓枠の斜辺を見る。"
+        },
+        {
+          "zh": "外窗不能單獨區分 -200／-400ER。",
+          "en": "Windows alone do not separate -200/-400ER.",
+          "ja": "窓だけで-200／-400ERは区別不可。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b762/window-front.jpg?v=a074d659e584",
+          "caption": {
+            "zh": "Gabon Airlines 767-200 系列前斜角外窗（非完全正前方）",
+            "en": "Gabon Airlines 767-200-family front-quarter windows (not directly head-on)",
+            "ja": "Gabon Airlines 767-200系列の斜め前方窓（真正面ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Gabon_Airlines._Boeing_767-200._CDG.2010.JPG"
+        },
+        {
+          "src": "assets/reference/b762/window-side.jpg?v=902cb54b3837",
+          "caption": {
+            "zh": "ATI 767-200 貨運改裝機 N763CX 側窗",
+            "en": "Side windows of ATI 767-200 freighter conversion N763CX",
+            "ja": "ATI 767-200貨物改修機N763CXの側窓"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "標準 767-200 翼尖為一般收尖外形，沒有 -400ER 那種明顯向後延伸的尖長翼端，也不是直立式小翼。照片的 ATI N763CX 清楚露出翼尖下表面。",
+        "en": "The standard 767-200 has a conventional tapered tip, without the -400ER's pronounced swept-back extension or an upright winglet. ATI N763CX exposes the underside of the tip clearly.",
+        "ja": "標準767-200は通常の先細り翼端で、-400ERの大きく後方へ伸びる翼端や直立小翼とは異なります。ATI N763CXの写真で下面が確認できます。"
+      },
+      "fact": {
+        "zh": "767-300ER 上常見的改裝直立小翼，不能當成所有 767 的標準外形。這裡比較的是照片所示構型。",
+        "en": "Retrofit upright winglets often seen on 767-300ERs are not the standard shape of every 767. This comparison concerns the photographed configuration.",
+        "ja": "767-300ERで見かける後付け直立小翼を、全767の標準形状と考えないでください。ここでは写真の仕様を比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "一般收尖翼端。",
+          "en": "Conventional tapered tip.",
+          "ja": "通常の先細り翼端。"
+        },
+        {
+          "zh": "沒有直立小翼。",
+          "en": "No upright winglet.",
+          "ja": "直立小翼なし。"
+        },
+        {
+          "zh": "與 -400ER 後掠延伸段對照。",
+          "en": "Contrast with the -400ER's raked extension.",
+          "ja": "-400ERの後退翼端と対照。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b762/wingtip.jpg?v=8304340758fa",
+          "caption": {
+            "zh": "ATI 767-200 貨運改裝機 N763CX；用於此部位外形參考",
+            "en": "ATI 767-200 freighter conversion N763CX; reference for this exterior part",
+            "ja": "ATI 767-200貨物改修機N763CX：この外部部位の形状参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -244,7 +646,7 @@
     "發動機": [
       [
         "型號",
-        "P&W JT9D / GE CF6-80A / RR RB211-524 ×2"
+        "P&W JT9D / PW4052 / GE CF6-80A / CF6-80C2-B2 ×2"
       ],
       [
         "型式",
@@ -252,7 +654,7 @@
       ],
       [
         "單具推力",
-        "213–227 kN（48,000–51,000 lbf）"
+        "213–234 kN（48,000–52,500 lbf）"
       ],
       [
         "旁通比",

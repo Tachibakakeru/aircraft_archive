@@ -22,7 +22,7 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=159`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=160`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 // 3D 模型是可選的（如 DC-9、707 家族等尚未建過幾何的機型只有規格文案，
@@ -368,6 +368,11 @@ function init(DATA, MODEL){
             source.rel = "noopener noreferrer";
             source.textContent = I18N.t("media.source");
             c.appendChild(source);
+          }
+          if (img.licenseUrl && img.license){
+            const license = document.createElement("a");
+            license.href = img.licenseUrl; license.target = "_blank"; license.rel = "noopener noreferrer";
+            license.textContent = img.license; c.appendChild(license);
           }
           fig.appendChild(c);
         }

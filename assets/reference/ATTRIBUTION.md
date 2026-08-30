@@ -1,6 +1,6 @@
 # Aircraft reference photo attribution
 
-These files are real-aircraft photographs downloaded from Wikimedia Commons at 960 px maximum width. They are used as visual identification references in SKY ARCHIVE. Follow each source link for the original description and full license terms.
+These files are real-aircraft photographs from Wikimedia Commons, generally resized or cropped to at most 960 px; explicitly noted unchanged originals may be larger. They are used as visual identification references in SKY ARCHIVE. Follow each source link for the original description and full license terms.
 
 ## Boeing 737-800
 
@@ -573,3 +573,48 @@ Exterior references show DC-10-30 aircraft, not the shorter-span DC-10-10 or KC-
 KLM passenger photographs are used for the exterior references. Window presence and cargo-door arrangements are not treated as fixed family identifiers. Original-resolution sources, author and license metadata rechecked 2026-08-31. License texts: [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 Technical cross-checks: [CAAC DC-10 variants, engines and landing gear](https://www.caac.gov.cn/GYMH/MHBK/HKQJS/201509/t20150923_1857.html), [CAAC MD-11 overview and upper/lower winglets](https://www.caac.gov.cn/GYMH/MHBK/HKQJS/201509/t20150923_1852.html), [Boeing MD-10 cockpit conversion](https://boeing.mediaroom.com/1999-03-19-Boeing-Rolls-Out-First-MD-10-Freighter-For-FedEx), [Boeing product history, MD-11 tailplane/tailcone changes](https://www.boeing.com/content/dam/boeing/v2/company/history/pdf/Boeing_Products.pdf), [Boeing airport planning manual index](https://www.boeing.com/commercial/airports/plan-manuals). Shape descriptions are observations from the credited photographs, not operational guidance. DC-10-30 and MD-11 both have center main gear; glass-cockpit MD-10 conversions must not be mistaken for MD-11s solely from their instrument panels.
+
+
+## Boeing 767-200 (`b762`) and 767-400ER (`b764`)
+
+Real photographs checked 2026-08-31. Crops are never enlarged beyond their input pixels. The ATI N763CX and Delta front-quarter sources were available as 3840-pixel Commons renditions when their original downloads were rate-limited; other exterior crops use downloaded originals. Cockpit photographs are copied without modification. No AI-generated imagery or artificial detail enhancement is used.
+
+### b762
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b762/overview.jpg` | [Boeing 767-200 (Air Canada) Kluft Feb-2008 0374.jpg](https://commons.wikimedia.org/wiki/File:Boeing_767-200_(Air_Canada)_Kluft_Feb-2008_0374.jpg), Ian Kluft (Ikluft); cropped | CC BY-SA 4.0 |
+| `b762/cockpit.jpg` | [The Flight Deck of the 767-200 (3615228401).jpg](https://commons.wikimedia.org/wiki/File:The_Flight_Deck_of_the_767-200_(3615228401).jpg), Cory W. Watts; unchanged copy | CC BY-SA 2.0 |
+| `b762/window-front.jpg` | [Gabon Airlines. Boeing 767-200. CDG.2010.JPG](https://commons.wikimedia.org/wiki/File:Gabon_Airlines._Boeing_767-200._CDG.2010.JPG), FRED; cropped | CC BY-SA 3.0 |
+| `b762/window-side.jpg` | [ATI International Boeing 767-200 N763CX BWI MD1.jpg](https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b762/fuselage.jpg` | [Boeing 767-200 (Air Canada) Kluft Feb-2008 0374.jpg](https://commons.wikimedia.org/wiki/File:Boeing_767-200_(Air_Canada)_Kluft_Feb-2008_0374.jpg), Ian Kluft (Ikluft); cropped | CC BY-SA 4.0 |
+| `b762/engine.jpg` | [Gabon Airlines. Boeing 767-200. CDG.2010.JPG](https://commons.wikimedia.org/wiki/File:Gabon_Airlines._Boeing_767-200._CDG.2010.JPG), FRED; cropped | CC BY-SA 3.0 |
+| `b762/wingtip.jpg` | [ATI International Boeing 767-200 N763CX BWI MD1.jpg](https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b762/wing.jpg` | [ATI International Boeing 767-200 N763CX BWI MD1.jpg](https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b762/vstab.jpg` | [ATI International Boeing 767-200 N763CX BWI MD1.jpg](https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b762/hstab.jpg` | [ATI International Boeing 767-200 N763CX BWI MD1.jpg](https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b762/gear.jpg` | [ATI International Boeing 767-200 N763CX BWI MD1.jpg](https://commons.wikimedia.org/wiki/File:ATI_International_Boeing_767-200_N763CX_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+
+### b764
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b764/overview.jpg` | [Boeing 767-400ER N843MH of Delta Air Lines landing at Los Angeles International Airport, September 2023.jpg](https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg), Piemags Aviation (uploaded by GibsonMoss); cropped | CC BY-SA 4.0 |
+| `b764/cockpit.jpg` | [Continental Airlines Boeing 767-400ER flight deck.jpg](https://commons.wikimedia.org/wiki/File:Continental_Airlines_Boeing_767-400ER_flight_deck.jpg), Ken Iwelumo; levels adjusted by Altair78; unchanged copy | GFDL 1.2 only |
+| `b764/window-front.jpg` | [Delta Airlines - 767 400 (Quintin Soloviev - QFS AVIATION ).jpg](https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION_).jpg), Quintin Soloviev; cropped | CC BY-SA 4.0 |
+| `b764/window-side.jpg` | [Delta Airlines - 767 400 (Quintin Soloviev - QFS AVIATION).jpg](https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg), Quintin Soloviev; cropped | CC BY-SA 4.0 |
+| `b764/fuselage.jpg` | [Delta Airlines - 767 400 (Quintin Soloviev - QFS AVIATION).jpg](https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg), Quintin Soloviev; cropped | CC BY-SA 4.0 |
+| `b764/engine.jpg` | [Delta Airlines - 767 400 (Quintin Soloviev - QFS AVIATION).jpg](https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg), Quintin Soloviev; cropped | CC BY-SA 4.0 |
+| `b764/wingtip.jpg` | [United Boeing 767-400ER N78060 MD1.jpg](https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b764/wing.jpg` | [United Boeing 767-400ER N78060 MD1.jpg](https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b764/vstab.jpg` | [Boeing 767-400ER N843MH of Delta Air Lines landing at Los Angeles International Airport, September 2023.jpg](https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg), Piemags Aviation (uploaded by GibsonMoss); cropped | CC BY-SA 4.0 |
+| `b764/hstab.jpg` | [United Boeing 767-400ER N78060 MD1.jpg](https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `b764/gear.jpg` | [Boeing 767-400ER N843MH of Delta Air Lines landing at Los Angeles International Airport, September 2023.jpg](https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg), Piemags Aviation (uploaded by GibsonMoss); cropped | CC BY-SA 4.0 |
+
+The -200 overview and passenger fuselage show retired Air Canada C-GAUN. ATI N763CX is a 767-200 freighter conversion: its windows, wing, tail and landing gear are identification references, not a passenger-door configuration. Gabon Airlines supplies the front-quarter window and intake references; -200/-200ER external dimensions are the same, but range and engine options must not be inferred from the photograph. Delta and United exterior photographs show actual -400ERs. Both front-window images are front-quarter views, not exact head-on views. The file named “Air new Zealand 767-200 landing Gold Coast (7911520834).jpg” was rejected: the photographed ZK-NCI is marked 767-300.
+
+### GFDL 1.2 photograph notice
+
+`b764/cockpit.jpg` is an unchanged copy of the Commons photograph of Continental N67052, copyright © Ken Iwelumo, with levels adjusted by Altair78. It is licensed under the **GNU Free Documentation License, Version 1.2 only**, with **no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts**. A complete copy of the license accompanies it as [GFDL-1.2.txt](GFDL-1.2.txt), obtained verbatim from [GNU's license archive](https://ftp.gnu.org/gnu/Licenses/fdl-1.2.txt). Keep this copyright/attribution notice and the full license with redistributed copies. The image's SHA-1 is `6e19a97ec8b693f40d5915ab40b1108be49ae07a`. This license applies to this photograph, not to the independently authored website or the other individually licensed photos. Source and full-license links are displayed with the image in both viewer and comparison pages.
+
+Technical checks: [Boeing 767 airport-planning manual Rev K, sections 1.3, 2.2 and 7.2](https://www.boeing.com/content/dam/boeing/v2/airports/acaps/767_REV_K.pdf), [Boeing's 767-400ER design announcement](https://boeing.mediaroom.com/1998-12-17-Boeing-Nears-Completion-of-Newest-767-Design), [Boeing AERO flight-deck upgrade article, reprinted with permission](https://www.aerospaceonline.com/doc/767-400er-flight-deck-upgrade-0001). Shape descriptions are observations of the credited photographs. The planning manual includes offered engine configurations, not proof of installation on every photographed aircraft.

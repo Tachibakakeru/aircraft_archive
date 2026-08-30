@@ -2,18 +2,30 @@
   "title": "Boeing 767-400",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 767-400 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "比 767-300 再加長的機身，讓機翼前後的客艙區段更長。近照可見前部兩道地板高度艙門、其間舷窗與下方貨艙門輪廓。",
+        "en": "A further stretch beyond the 767-300 lengthens the cabin sections around the wing. The close-up shows two forward floor-level doors, the windows between them and the lower cargo-door outline.",
+        "ja": "767-300からさらに胴体を延長し、翼前後の客室が長くなっています。近接写真には前方の床面高さの扉2枚、間の窓列、下部貨物扉の輪郭が見えます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "門窗是位置與比例線索，不要把某一家航空公司封住的窗位視為所有 -400ER 都相同；完整長度還要回到全景比較。",
+        "en": "Door/window positions are proportional clues, not a guarantee that every airline leaves the same windows open. Return to the overview to compare total length.",
+        "ja": "扉・窓の位置は比率の手掛かりですが、航空会社による窓閉鎖まで全機共通ではありません。全長の比較は全景に戻って行います。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "機身長約 61.37 m。",
+          "en": "Body about 61.37 m long.",
+          "ja": "全長約61.37 m。"
+        },
+        {
+          "zh": "前後客艙區段加長。",
+          "en": "Longer forward/aft cabin sections.",
+          "ja": "前後客室区間を延長。"
+        },
+        {
+          "zh": "下層貨艙門與客艙門分開。",
+          "en": "Lower cargo doors separate from cabin doors.",
+          "ja": "下部貨物扉と客室扉を区別。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b764/fuselage.jpg?v=c7138d38c49f",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 767-400 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "主翼仍為後掠低單翼，但外端加入延伸翼尖，整體翼展比標準 -200／-300 更大。下方照片同時顯示引擎吊掛、外翼與後緣整流罩。",
+        "en": "The wing remains low and swept, but extended tips increase span beyond standard -200/-300 wings. The photograph shows the engine installation, outer wing and trailing-edge fairings together.",
+        "ja": "後退した低翼を維持しつつ翼端延長で標準-200／-300より翼幅を増しています。写真にはエンジン取付部、外翼、後縁フェアリングが同時に見えます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,442 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "空中照片的主輪已收起；不要把這個狀態和降落時放下襟翼、起落架的照片當成結構差異。",
+        "en": "The gear is retracted in this airborne photograph. Do not mistake flight-phase differences from gear/flap-down landing photographs for structural differences.",
+        "ja": "飛行中写真では脚が収納されています。着陸時の脚・フラップ展開状態との違いを構造差と誤認しないでください。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "低置後掠主翼。",
+          "en": "Low swept wing.",
+          "ja": "低い後退主翼。"
+        },
+        {
+          "zh": "外翼末端有後掠延伸段。",
+          "en": "Raked extension at the outer tip.",
+          "ja": "外翼端に後退延長部。"
+        },
+        {
+          "zh": "對照時留意拍攝角度。",
+          "en": "Account for viewing angle.",
+          "ja": "撮影角度に注意して比較。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b764/wing.jpg?v=6bc47c3ede75",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 767-400 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "照片展示 Delta 767-400ER 翼下引擎短艙的側面：圓形進氣唇口、長短艙與向後伸出的排氣段。比較時可觀察短艙相對於機翼的位置。",
+        "en": "The Delta 767-400ER photograph shows an underwing nacelle in profile: a circular inlet lip, elongated cowling and rear exhaust section. Compare the nacelle's position relative to the wing.",
+        "ja": "Delta 767-400ERの写真は翼下ナセル側面で、円形吸気口縁、長いカウリング、後方排気部が見えます。翼との位置関係を比較します。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "波音規劃表列有 CF6-80C2-B8F／B7F1 與 PW4062 選項，且註明包含提供中的配置；這不代表每種列項都在照片中的航空公司使用。",
+        "en": "Boeing's planning table lists CF6-80C2-B8F/B7F1 and PW4062 options and notes that offered configurations are included. A table entry does not establish what the photographed airline operates.",
+        "ja": "ボーイング計画表にはCF6-80C2-B8F／B7F1、PW4062があり、提供中仕様も含むと注記されています。表への掲載だけで写真の航空会社の採用を断定できません。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "兩具翼下引擎。",
+          "en": "Two underwing engines.",
+          "ja": "翼下エンジン2基。"
+        },
+        {
+          "zh": "圓形進氣口。",
+          "en": "Circular intake.",
+          "ja": "円形吸気口。"
+        },
+        {
+          "zh": "不能只憑塗裝判斷動力型號。",
+          "en": "Livery alone cannot identify the powerplant.",
+          "ja": "塗装だけでエンジン型式を判断しない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b764/engine.jpg?v=3f3e6d0310e3",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "照片顯示後掠垂直尾翼、方向舵分界與向後機身過渡的根部。與短機身 767 相比，尾翼的家族輪廓仍然很接近。",
+        "en": "The photograph shows the swept fin, rudder boundary and root blending into the aft body. The family outline remains close to the short-body 767's tail.",
+        "ja": "写真では後退垂尾、方向舵境界、後部胴体につながる付け根が見えます。短胴767と系列の輪郭はよく似ています。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "Delta 尾翼塗裝本身不能識別 -400ER；同一公司也使用其他 767，必須看完整機身與翼尖。",
+        "en": "Delta's tail livery does not identify a -400ER: the airline also uses other 767s. Check the full body and tips.",
+        "ja": "Deltaの尾翼塗装だけでは-400ERと判定できません。同社の他の767と、全胴体・翼端を照合します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "後退垂尾1枚。"
+        },
+        {
+          "zh": "方向舵分界可見。",
+          "en": "Visible rudder boundary.",
+          "ja": "方向舵境界が見える。"
+        },
+        {
+          "zh": "不可只用塗裝判型。",
+          "en": "Do not identify by livery alone.",
+          "ja": "塗装だけで型式を判断しない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b764/vstab.jpg?v=aa56a6177e9b",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "水平尾翼位於後機身兩側、垂直尾翼下方，從後方機腹角度能看到翼面與尾錐。它不是 T 型尾翼，也沒有尾部中央引擎。",
+        "en": "The tailplanes sit on either side of the aft body below the fin. The rear-belly view shows the surfaces and tailcone. This is not a T-tail and has no center-tail engine.",
+        "ja": "水平尾翼は垂直尾翼より下の後部胴体両側にあり、後方下面視点で翼面とテールコーンが見えます。T尾翼や中央尾部エンジンはありません。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "尾翼布局與其他 767 相近；若與 DC-10／MD-11 等機型比較，應先看引擎數與尾部布局。",
+        "en": "Tail arrangement resembles other 767s. Against a DC-10 or MD-11, start with engine count and tail configuration.",
+        "ja": "尾翼配置は他の767に似ています。DC-10／MD-11等との比較では、まずエンジン数と尾部配置を見ます。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "傳統低置水平尾翼。",
+          "en": "Conventional low tailplane.",
+          "ja": "通常の低い水平尾翼。"
+        },
+        {
+          "zh": "翼面向後掠。",
+          "en": "Swept surfaces.",
+          "ja": "後退した翼面。"
+        },
+        {
+          "zh": "尾錐沒有推進引擎。",
+          "en": "No propulsion engine in the tailcone.",
+          "ja": "尾部に推進用エンジンなし。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b764/hstab.jpg?v=b0545aade2f5",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 767-400 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "-400ER 為較長機身採用重新設計的主起落架，但仍保留左右各兩軸四輪，加上雙輪鼻輪。照片中的主輪總數不要與 777 每側六輪混淆。",
+        "en": "The stretched -400ER uses redesigned main landing gear while retaining two axles/four wheels per side and a twin-wheel nose unit. Do not confuse its main wheels with the 777's six per side.",
+        "ja": "長胴化した-400ERは主脚を再設計しましたが、左右各2軸4輪と前輪2輪を維持します。777の片側6輪とは区別してください。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "四輪主腳是辨識 767 與 777 的線索，但 -200 與 -400ER 都有四輪；細分仍以機身比例、翼尖與實機機籍確認。",
+        "en": "Four-wheel main units help separate a 767 from a 777, but both -200 and -400ER have them. Use body proportions, tips and aircraft registration to identify the variant.",
+        "ja": "4輪主脚は767と777の区別に役立ちますが、-200も-400ERも同じ輪数です。胴体比率、翼端、機体登録で型式を確認します。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "重新設計的主腳。",
+          "en": "Redesigned main gear.",
+          "ja": "再設計された主脚。"
+        },
+        {
+          "zh": "每側兩軸四輪。",
+          "en": "Two axles/four wheels per side.",
+          "ja": "片側2軸4輪。"
+        },
+        {
+          "zh": "鼻輪仍為雙輪。",
+          "en": "Twin-wheel nose gear remains.",
+          "ja": "前脚は引き続き2輪。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b764/gear.jpg?v=938d30b43a6b",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "767-400ER 是家族最長客機，長約 61.37 m、翼展約 51.92 m。細長機身、向後延伸的翼尖與兩具翼下引擎，是與短身 767-200 比較最直接的線索。",
+        "en": "The 767-400ER is the longest passenger 767, about 61.37 m long with a 51.92 m span. Its slender body, swept-back tip extensions and two underwing engines provide clear comparisons with the short 767-200.",
+        "ja": "767-400ERは全長約61.37 m、翼幅約51.92 mの最長旅客型767です。細長い胴体、後方へ伸びる翼端、翼下エンジン2基を短胴767-200と比較できます。"
+      },
+      "fact": {
+        "zh": "它不是裝上直立小翼的 767-300ER，也不是 777；最有效的是同時看機身比例、平面後掠翼尖和四輪主腳。",
+        "en": "It is neither a winglet-equipped 767-300ER nor a 777. Check body proportions, planar raked tips and four-wheel main units together.",
+        "ja": "直立小翼付き767-300ERでも777でもありません。胴体比率、平面状の後退翼端、4輪主脚を組み合わせて確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "家族最長客機機身。",
+          "en": "Longest passenger 767 body.",
+          "ja": "最長の旅客型767胴体。"
+        },
+        {
+          "zh": "向後延伸的翼尖。",
+          "en": "Swept-back tip extensions.",
+          "ja": "後方へ延長された翼端。"
+        },
+        {
+          "zh": "每側四輪主腳。",
+          "en": "Four-wheel main units.",
+          "ja": "片側4輪の主脚。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b764/overview.jpg?v=bacef37775b0",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_767-400ER_N843MH_of_Delta_Air_Lines_landing_at_Los_Angeles_International_Airport,_September_2023.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "767-400ER 座艙的六具大型 LCD 是重要特徵，飛行／導航顯示分布在左右，中央顯示引擎及系統資訊。仍使用傳統駕駛盤與兩支推力手柄。",
+        "en": "Six large LCDs are a key 767-400ER cockpit feature, with flight/navigation displays on both sides and engine/system information in the center. Conventional yokes and two thrust levers remain.",
+        "ja": "767-400ER操縦席は大型LCD6面が特徴。左右に飛行・航法、中央にエンジン・システム情報を表示し、従来の操縦輪と2本の推力レバーを残しています。"
+      },
+      "fact": {
+        "zh": "顯示布局與 777 有共通設計，但不是同一架飛機；這張是 Continental N67052 的 767-400ER 實照，不是模擬器或繪圖。",
+        "en": "Its display arrangement shares design features with the 777, but that does not make it a 777. This is a real Continental N67052 767-400ER, not a simulator or illustration.",
+        "ja": "表示配置には777との共通設計がありますが同じ機種ではありません。写真はContinental N67052の実機で、シミュレーターや描画ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "六面大型 LCD。",
+          "en": "Six large LCDs.",
+          "ja": "大型LCD6面。"
+        },
+        {
+          "zh": "與早期小型 EFIS 明顯不同。",
+          "en": "Distinct from early small EFIS displays.",
+          "ja": "初期の小型EFISと明瞭に異なる。"
+        },
+        {
+          "zh": "雙人、雙引擎操作布局。",
+          "en": "Two-crew, twin-engine layout.",
+          "ja": "2人制・双発の配置。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b764/cockpit.jpg?v=660af15eb3cd",
+          "caption": {
+            "zh": "Continental N67052 實機六 LCD 座艙；© Ken Iwelumo，Altair78 調整明暗；原檔未修改",
+            "en": "Continental N67052 six-LCD flight deck; © Ken Iwelumo, levels by Altair78; file unchanged",
+            "ja": "Continental N67052の6面LCD操縦席；© Ken Iwelumo、明暗調整Altair78；原ファイル未変更"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Continental_Airlines_Boeing_767-400ER_flight_deck.jpg",
+          "license": "GFDL 1.2",
+          "licenseUrl": "assets/reference/GFDL-1.2.txt"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "767-400ER 保留 767 家族的斜邊窗框與圓鈍機鼻。前斜角照片用來看前窗轉向側窗的折角，側面近照則看後側窗與鼻錐的相對位置。",
+        "en": "The 767-400ER retains the family's angular window frames and rounded nose. The front-quarter photograph shows the wrap from windshield to side panes; the side close-up shows the aft pane relative to the radome.",
+        "ja": "767-400ERは系列共通の斜辺窓枠と丸い機首を残します。斜め前写真で前窓から側窓への折れ、側面近接写真で後方窓とレドームの位置を見ます。"
+      },
+      "fact": {
+        "zh": "即使內部換成新世代座艙，外窗仍不能單獨區分 -200／-300／-400ER。辨識時補看長機身與後掠延伸翼尖。",
+        "en": "The modernized interior does not make the exterior windows a standalone -200/-300/-400ER identifier. Cross-check the long body and raked tips.",
+        "ja": "内部を近代化しても、外窓だけで-200・-300・-400ERは区別できません。長胴と後退翼端も確認してください。"
+      },
+      "bullets": [
+        {
+          "zh": "前斜角與側面分開對照。",
+          "en": "Separate front-quarter and side views.",
+          "ja": "斜め前・側面を別々に比較。"
+        },
+        {
+          "zh": "沿用 767 家族機鼻。",
+          "en": "Retains the 767 family nose.",
+          "ja": "767系列の機首を継承。"
+        },
+        {
+          "zh": "新座艙不等於新外窗。",
+          "en": "New cockpit does not imply new glazing.",
+          "ja": "新操縦席でも外窓は別問題。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b764/window-front.jpg?v=e211cd5745aa",
+          "caption": {
+            "zh": "Delta 767-400ER 前斜角外窗（非完全正前方）",
+            "en": "Delta 767-400ER front-quarter windows (not directly head-on)",
+            "ja": "Delta 767-400ERの斜め前方窓（真正面ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION_).jpg"
+        },
+        {
+          "src": "assets/reference/b764/window-side.jpg?v=1f8e12cbcd74",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_Airlines_-_767_400_(Quintin_Soloviev_-_QFS_AVIATION).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "-400ER 的 raked wingtip 是沿翼面向外、向後延伸的尖長翼端，不是垂直向上翹的小翼。由機腹角度最容易看出外段前緣後掠增加。",
+        "en": "The -400ER's raked tip extends outward and rearward along the wing plane, rather than standing upright. The underside view makes the increased sweep of the outer leading edge easy to see.",
+        "ja": "-400ERのraked wingtipは翼面に沿って外側・後方へ伸びる細長い翼端で、直立小翼ではありません。下面視点で外側前縁の大きな後退角が分かります。"
+      },
+      "fact": {
+        "zh": "這是區分標準 767-200／-300 與 -400ER 的重要線索；同時也要與改裝直立小翼的 -300ER 區別。",
+        "en": "This is a useful distinction from standard 767-200/-300 tips, and from the upright retrofit winglets on some -300ERs.",
+        "ja": "標準767-200／-300翼端との重要な違いで、一部-300ERの後付け直立小翼とも区別できます。"
+      },
+      "bullets": [
+        {
+          "zh": "向後延伸，不是直立。",
+          "en": "Rearward extension, not upright.",
+          "ja": "後方延長で直立ではない。"
+        },
+        {
+          "zh": "翼展約 51.92 m。",
+          "en": "Span about 51.92 m.",
+          "ja": "翼幅約51.92 m。"
+        },
+        {
+          "zh": "機腹照片呈現翼端平面形。",
+          "en": "Belly view reveals the tip planform.",
+          "ja": "下面写真で翼端平面形が見える。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b764/wingtip.jpg?v=b5d5358a2ba9",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_767-400ER_N78060_MD1.jpg"
+        }
+      ]
     }
   },
   "specifications": {
