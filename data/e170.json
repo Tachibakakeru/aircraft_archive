@@ -2,19 +2,30 @@
   "title": "Embraer 170",
   "sub": "區域客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Embraer 170 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "E170 的 2+2 客艙採較寬機身，前後艙門之間的窗列較短，尾段沒有引擎短艙遮蔽；前後艙門和翼根的位置可用來觀察短機身比例。",
+        "en": "The E170's wider 2+2 body has a short window run between front and rear doors and no aft nacelles hiding the tail area. Door and wing-root positions help reveal the short-body proportions.",
+        "ja": "E170は幅広い2+2胴体で前後ドア間の窓列が短く、後部ナセルもありません。ドアと翼根位置で短胴比率を見ます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "每排同樣四座不代表外形一樣；CRJ700 更細長、前門離地更低，兩者外觀上的寬高比例不同。",
+        "en": "Four seats abreast does not imply the same shape. The CRJ700 is more slender with a lower front door, giving different width and height proportions.",
+        "ja": "同じ横4席でも外形は異なり、CRJ700はより細長く前方扉が低いため幅・高さの比率が違います。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "較寬、較短的客艙段。",
+          "en": "Wider, shorter cabin section.",
+          "ja": "太く短い客室部分。"
+        },
+        {
+          "zh": "前後艙門位置清楚。",
+          "en": "Clearly separated front and rear doors.",
+          "ja": "明確な前後ドア配置。"
+        },
+        {
+          "zh": "尾部兩側沒有引擎。",
+          "en": "No engines beside the tail.",
+          "ja": "尾部両側にエンジンなし。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/e170/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Embraer 170 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "E170 使用 Honeywell Primus Epic 玻璃座艙，五具大型顯示器與兩側駕駛盤是主要特徵。附圖為 E175 實照，用於示範第一代 E170／175 共通基本布局。",
+        "en": "The E170 uses a Honeywell Primus Epic glass cockpit with five large displays and yokes at both seats. The E175 photograph illustrates the shared basic first-generation E170/175 layout.",
+        "ja": "E170はHoneywell Primus Epic、主要大型画面5面、両席操縦輪が特徴です。写真はE175で、初代E170／175共通の基本配置を示します。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "不是 Airbus 式側桿座艙；與 CRJ700 相比，螢幕數目及中央顯示布局更有辨識價值。",
+        "en": "It is not an Airbus-style sidestick cockpit. Display count and centre-panel layout distinguish it from the CRJ700.",
+        "ja": "Airbus式サイドスティックではありません。CRJ700との差は画面数と中央配置を見ます。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "五具大型主要顯示器。",
+          "en": "Five large main displays.",
+          "ja": "主要大型画面5面。"
+        },
+        {
+          "zh": "左右仍有駕駛盤。",
+          "en": "Yokes at both pilot seats.",
+          "ja": "両席に操縦輪。"
+        },
+        {
+          "zh": "附圖為家族共通配置參考。",
+          "en": "Photo is a shared-family layout reference.",
+          "ja": "写真は系列共通配置の参考。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/e170/cockpit.jpg",
+          "caption": {
+            "zh": "E170/175 家族共通座艙布局參考（E175 實照）",
+            "en": "E170/175 shared cockpit-layout reference (E175 photograph)",
+            "ja": "E170/175共通操縦席配置の参考（E175実機写真）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit_of_LOT_Embraer_ERJ-175LR_(SP-LIN).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Embraer 170 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "E170 翼展 26.00 m，低置後掠主翼下承載引擎，後緣有襟翼及滑軌整流罩；正面照片可同時比較主翼、引擎和小翼的位置。",
+        "en": "The E170's 26.00 m low swept wing carries the engines and has trailing-edge flaps and track fairings. A front view shows the relationship between wing, nacelles and tips.",
+        "ja": "E170の翼幅26.00 mの低翼後退翼はエンジンを搭載し、後縁にフラップとトラック整流部があります。正面で主翼・ナセル・小翼の位置を比較できます。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "比 CRJ700 的翼展多約 2.8 m，但機身反而較短；這種短機身配寬翼展的比例有助於辨識 E170。",
+        "en": "Its span is about 2.8 m greater than the CRJ700's despite a shorter body. This short-body/wide-span proportion helps identify an E170.",
+        "ja": "CRJ700より胴体が短いのに翼幅は約2.8 m広く、この短胴・広翼の比率がE170の手掛かりです。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "低置主翼承載兩具引擎。",
+          "en": "Low wing carrying two engines.",
+          "ja": "エンジン2基を搭載する低翼。"
+        },
+        {
+          "zh": "翼展 26.00 m。",
+          "en": "26.00 m span.",
+          "ja": "翼幅26.00 m。"
+        },
+        {
+          "zh": "後緣整流罩可見。",
+          "en": "Visible trailing-edge fairings.",
+          "ja": "後縁整流部が見える。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/e170/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Embraer 170 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "E170 使用 GE CF34-8E 系列渦扇，兩具短艙由吊架懸掛在主翼下方；進氣口近圓形，側面可見短艙與機翼的明顯間隙。",
+        "en": "GE CF34-8E-series turbofans hang beneath the E170's wings on pylons. The inlets are nearly circular and a clear nacelle-to-wing gap is visible from the side.",
+        "ja": "E170はGE CF34-8E系ターボファンを主翼下パイロンに搭載。吸気口はほぼ円形で、側面からナセルと翼の間隔が見えます。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "同屬 CF34 並不表示與 CRJ700 外形相同；最明顯的差異是翼下吊掛而非後機身安裝。",
+        "en": "Sharing the CF34 name does not mean the same appearance as a CRJ700: underwing rather than rear-fuselage installation is decisive.",
+        "ja": "同じCF34でもCRJ700と外観は異なり、後部胴体でなく翼下搭載であることが決定的です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "主翼下每側一具。",
+          "en": "One beneath each wing.",
+          "ja": "左右翼下に各1基。"
+        },
+        {
+          "zh": "可見吊架與短艙間隙。",
+          "en": "Visible pylon and wing clearance.",
+          "ja": "パイロンと翼との間隔が見える。"
+        },
+        {
+          "zh": "不是 E190 的 CF34-10E。",
+          "en": "Not the E190's CF34-10E.",
+          "ja": "E190のCF34-10Eとは異なります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/e170/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "E170 垂尾是高而後掠的單一翼面，根部以背鰭平順連接後機身；垂尾頂端沒有水平尾翼，與 CRJ700 的 T 尾相反。",
+        "en": "The E170 fin is a tall swept surface with a dorsal blend into the aft body. No tailplane crosses its tip, unlike the CRJ700 T-tail.",
+        "ja": "E170垂尾は高い後退面で根元背びれが胴体へ滑らかにつながり、CRJ700と違い頂部に水平尾翼がありません。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "不要依航空公司尾翼圖案判型；確認垂尾頂端是否有橫向翼面，通常比塗裝更可靠。",
+        "en": "Do not identify the aircraft by its tail logo. Whether a horizontal surface crosses the fin tip is more reliable.",
+        "ja": "尾翼ロゴでなく垂尾頂部を横切る水平面の有無を見る方が確実です。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "頂端保持單一垂直翼面。",
+          "en": "Uninterrupted fin tip.",
+          "ja": "頂部は単一の垂直面。"
+        },
+        {
+          "zh": "根部背鰭平順延伸。",
+          "en": "Smooth dorsal-root extension.",
+          "ja": "滑らかな根元背びれ。"
+        },
+        {
+          "zh": "不承載 T 型水平尾翼。",
+          "en": "Does not carry a T-tailplane.",
+          "ja": "T字水平尾翼を支えません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/e170/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "E170 水平尾翼從後機身兩側低位伸出，後掠且向外收尖；從側面可看到翼根遠低於垂尾頂端。",
+        "en": "The E170's swept tapered tailplanes extend from low on each side of the aft fuselage. Their roots sit well below the fin tip.",
+        "ja": "E170の後退・先細水平尾翼は後部胴体両側の低位置から伸び、根元は垂尾頂端より大幅に低くなります。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "這是與 CRJ700 最容易從遠處辨識的差異之一；同時看翼下雙發，可以排除同樣短機身的 T 尾客機。",
+        "en": "This is one of the clearest distant distinctions from the CRJ700. Check the underwing engines too to exclude short-bodied T-tail jets.",
+        "ja": "遠方からCRJ700と区別しやすい特徴の一つです。翼下双発も合わせて短胴T字尾翼機を除外します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "根部接在後機身側面。",
+          "en": "Roots attach to the aft body sides.",
+          "ja": "根元は後部胴体側面。"
+        },
+        {
+          "zh": "遠低於垂尾頂端。",
+          "en": "Well below the fin tip.",
+          "ja": "垂尾頂部より低い。"
+        },
+        {
+          "zh": "後掠、向翼尖收窄。",
+          "en": "Swept and tapered.",
+          "ja": "後退・先細の形状。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/e170/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Embraer 170 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "E170 前腳雙輪、左右主腳各雙輪，共六輪；主腳位於翼根附近，照片可觀察輪距以及翼下引擎的離地間隙。",
+        "en": "The E170 uses twin nose wheels and twin wheels on each main leg, six total. The mains sit near the wing roots; the photo shows their track and underwing engine clearance.",
+        "ja": "E170は前脚2輪、左右主脚各2輪の計6輪。主脚は翼根付近にあり、写真で輪距と翼下エンジンの地上間隔を確認できます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "CRJ700 也是六輪，輪數不是兩型差別；從前方看主輪上方是否有翼下引擎，能更快完成判型。",
+        "en": "The CRJ700 also has six wheels. From the front, underwing engines above the main-wheel area are a better discriminator than wheel count.",
+        "ja": "CRJ700も6輪。正面から主輪付近上方に翼下エンジンがあるかを見る方が、輪数より有効です。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "前腳與兩側主腳均雙輪。",
+          "en": "Twin wheels on nose and both mains.",
+          "ja": "前脚・左右主脚とも2輪。"
+        },
+        {
+          "zh": "主輪位於翼根附近。",
+          "en": "Mains near the wing roots.",
+          "ja": "主輪は翼根付近。"
+        },
+        {
+          "zh": "觀察翼下短艙離地空間。",
+          "en": "Observe underwing nacelle clearance.",
+          "ja": "翼下ナセルの地上間隔を観察。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/e170/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "E170 是第一代 E-Jet 家族短機身機型，全長 29.90 m、翼展 26.00 m；翼下雙發、較寬圓潤的機身與低置水平尾翼構成主要輪廓。",
+        "en": "The E170 is a short-bodied first-generation E-Jet, 29.90 m long with a 26.00 m span. Underwing twins, a wider rounded body and low tailplanes define its silhouette.",
+        "ja": "E170は初代E-Jetの短胴型で全長29.90 m、翼幅26.00 m。翼下双発、太く丸い胴体、低位置水平尾翼が特徴です。"
+      },
+      "fact": {
+        "zh": "比 CRJ700 短但翼展更大；不要把同家族較長的 E175 或 E190 照片當成 E170。",
+        "en": "It is shorter than the CRJ700 but wider in span. Do not mistake the longer E175 or E190 for the E170.",
+        "ja": "CRJ700より短い一方で翼幅は広く、同系列の長胴E175・E190との混同に注意します。"
+      },
+      "bullets": [
+        {
+          "zh": "兩具引擎位於翼下。",
+          "en": "Two engines beneath the wings.",
+          "ja": "翼下にエンジン2基。"
+        },
+        {
+          "zh": "短而較寬的機身。",
+          "en": "Shorter, wider body.",
+          "ja": "短く太めの胴体。"
+        },
+        {
+          "zh": "水平尾翼低置。",
+          "en": "Low-mounted tailplanes.",
+          "ja": "水平尾翼は低位置。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/e170/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "E170 正面窗由中央窗柱分開，側面窗較短，配合寬圓機鼻與平順下收的鼻部輪廓；正面和側面照片可對照窗框角度。",
+        "en": "The E170 has a centre-divided windshield and short side panes above a broad rounded nose that tapers smoothly downward. Compare frame angles in front and side photos.",
+        "ja": "E170は中央で分かれた前窓と短い側窓を持ち、その下に太く丸く下へ絞られる機首があります。正面・側面で窓枠角度を比較します。"
+      },
+      "fact": {
+        "zh": "E170、E175、E190 的家族窗型相近，窗型只能先確定 E-Jet 家族，不能單靠這裡判斷機身長短。",
+        "en": "E170, E175 and E190 share similar family glazing. Windows can indicate an E-Jet but cannot establish its body-length variant alone.",
+        "ja": "E170・E175・E190の窓は類似し、E-Jet系列の判定には役立ちますが胴体長型式は断定できません。"
+      },
+      "bullets": [
+        {
+          "zh": "寬圓鼻部搭配多片窗框。",
+          "en": "Multi-pane glazing above a broad rounded nose.",
+          "ja": "太く丸い機首上の複数窓。"
+        },
+        {
+          "zh": "側面窗較短。",
+          "en": "Short side panes.",
+          "ja": "短めの側窓。"
+        },
+        {
+          "zh": "需配合翼下引擎與機身長度。",
+          "en": "Cross-check underwing engines and body length.",
+          "ja": "翼下エンジンと胴体長も確認。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/e170/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg"
+        },
+        {
+          "src": "assets/reference/e170/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "E170 的翼尖向上彎起，與主翼平順銜接；正面照片可看出小翼的傾斜與後掠，不是完全垂直的端板。",
+        "en": "The E170 wingtip curves upward with a smooth transition from the wing. Front views show its cant and sweep rather than a purely vertical end plate.",
+        "ja": "E170の翼端は滑らかにつながって上向きに曲がり、正面で傾きと後退が分かる、単なる垂直板ではない形です。"
+      },
+      "fact": {
+        "zh": "本頁為 E170 原型翼尖；較晚 E175 的加大型翼尖不可直接套用。CRJ700 也有小翼，要搭配引擎位置確認。",
+        "en": "This is the original E170 tip, not the later enlarged E175 wingtip. The CRJ700 also has winglets, so check engine location too.",
+        "ja": "本頁はE170本来の翼端で、後期E175の大型翼端とは異なります。CRJ700も小翼を持つためエンジン位置も確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "向上彎曲的翼尖。",
+          "en": "Upturned tip.",
+          "ja": "上向きに曲がる翼端。"
+        },
+        {
+          "zh": "主翼與小翼銜接平順。",
+          "en": "Smooth wing-to-winglet blend.",
+          "ja": "滑らかな主翼との接続。"
+        },
+        {
+          "zh": "需區分 E175 後期翼尖。",
+          "en": "Distinguish later E175 tips.",
+          "ja": "後期E175の翼端と区別。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/e170/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg"
+        }
+      ]
     }
   },
   "specifications": {

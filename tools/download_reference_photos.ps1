@@ -180,6 +180,12 @@ $photos = [ordered]@{
   "e190/engine.jpg" = "Embraer E190 engine in-flight.jpg"
   "e190/wingtip.jpg" = "Embraer E190 wingtip.jpg"
   "e190/wing.jpg" = "Embraer E190 wing.jpg"
+  "crj700/overview.jpg" = "D-ACPF.JPG"
+  "crj700/cockpit.jpg" = "Bombardier-crj-900-cockpit-by-RalfR.jpg"
+  "crj700/wing.jpg" = "Lufthansa D-ACPH.JPG"
+  "e170/overview.jpg" = "Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"
+  "e170/cockpit.jpg" = "Cockpit of LOT Embraer ERJ-175LR (SP-LIN).jpg"
+  "e170/wing.jpg" = "Peoples Viennaline ERJ-170 OE-LMK LSZR 01.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -323,6 +329,22 @@ $windowPhotos = @(
   @{ Dest="e190/vstab.jpg"; Title="LV-CDY Embraer 190 Austral Tail (8164021706).jpg"; Crop=@(.05,.05,.90) }
   @{ Dest="e190/hstab.jpg"; Title="LV-CDY Embraer 190 Austral Tail (8164021706).jpg"; Crop=@(.02,.30,.96) }
   @{ Dest="e190/gear.jpg"; Title="PH-EZX KLM Cityhopper Embraer ERJ-190STD (ERJ-190-100) - cn 19000545 taxiing front view 13july2013 pic1.JPG"; Crop=@(.20,.54,.60) }
+  @{ Dest="crj700/window-front.jpg"; Title="N154GJ (6961124918) (cropped).jpg"; Crop=@(.42,.26,.15) }
+  @{ Dest="crj700/window-side.jpg"; Title="D-ACPF.JPG"; Crop=@(.83,.45,.15) }
+  @{ Dest="crj700/fuselage.jpg"; Title="D-ACPF.JPG"; Crop=@(.32,.36,.66) }
+  @{ Dest="crj700/engine.jpg"; Title="D-ACPF.JPG"; Crop=@(.21,.38,.18) }
+  @{ Dest="crj700/wingtip.jpg"; Title="American Eagle CRJ-700 at Eugene Airport.jpg"; Crop=@(.20,.26,.24) }
+  @{ Dest="crj700/vstab.jpg"; Title="D-ACPF.JPG"; Crop=@(.08,.25,.28) }
+  @{ Dest="crj700/hstab.jpg"; Title="LH CRJ-700 D-ACPO EDDT.jpg"; Crop=@(.26,.39,.17) }
+  @{ Dest="crj700/gear.jpg"; Title="N154GJ (6961124918) (cropped).jpg"; Crop=@(.35,.44,.29) }
+  @{ Dest="e170/window-front.jpg"; Title="Peoples Viennaline ERJ-170 OE-LMK LSZR 01.jpg"; Crop=@(.47,.46,.105) }
+  @{ Dest="e170/window-side.jpg"; Title="Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"; Crop=@(.10,.48,.14) }
+  @{ Dest="e170/fuselage.jpg"; Title="Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"; Crop=@(.07,.40,.70) }
+  @{ Dest="e170/engine.jpg"; Title="Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"; Crop=@(.36,.54,.18) }
+  @{ Dest="e170/wingtip.jpg"; Title="Peoples Viennaline ERJ-170 OE-LMK LSZR 01.jpg"; Crop=@(.02,.43,.25) }
+  @{ Dest="e170/vstab.jpg"; Title="Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"; Crop=@(.64,.22,.35) }
+  @{ Dest="e170/hstab.jpg"; Title="Finnair Embraer 170 OH-LEK at HEL 17AUG2014.JPG"; Crop=@(.77,.46,.20) }
+  @{ Dest="e170/gear.jpg"; Title="Peoples Viennaline ERJ-170 OE-LMK LSZR 01.jpg"; Crop=@(.38,.57,.25) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600

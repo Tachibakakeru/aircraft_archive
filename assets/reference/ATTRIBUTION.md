@@ -459,3 +459,41 @@ All exterior photographs show actual CRJ900-family aircraft. The flight-deck pho
 | `e190/gear.jpg` | [KLM Cityhopper E190 PH-EZX extended landing gear](https://commons.wikimedia.org/wiki/File:PH-EZX_KLM_Cityhopper_Embraer_ERJ-190STD_(ERJ-190-100)_-_cn_19000545_taxiing_front_view_13july2013_pic1.JPG), Alf van Beem; cropped | CC0 |
 
 The photographs show first-generation E190 aircraft, not the E190-E2. The wingtip description therefore applies to the original E190 blended winglet; the E2's redesigned wing is deliberately excluded.
+
+## Bombardier CRJ700 (`crj700`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `crj700/overview.jpg` | [Lufthansa CRJ700 D-ACPF](https://commons.wikimedia.org/wiki/File:D-ACPF.JPG), ABF; resized | CC BY-SA 3.0 |
+| `crj700/cockpit.jpg` | [CRJ900 cockpit — CRJ700/900 basic-layout reference](https://commons.wikimedia.org/wiki/File:Bombardier-crj-900-cockpit-by-RalfR.jpg), Ralf Roletschek; resized | CC BY-SA 3.0 |
+| `crj700/window-front.jpg` | [GoJet CRJ700 N154GJ on approach](https://commons.wikimedia.org/wiki/File:N154GJ_(6961124918)_(cropped).jpg), redlegsfan21 / Daniel Betts; cropped | CC BY-SA 2.0 |
+| `crj700/window-side.jpg` | [CRJ700 D-ACPF side windows](https://commons.wikimedia.org/wiki/File:D-ACPF.JPG), ABF; cropped | CC BY-SA 3.0 |
+| `crj700/fuselage.jpg` | [CRJ700 D-ACPF fuselage and exits](https://commons.wikimedia.org/wiki/File:D-ACPF.JPG), ABF; cropped | CC BY-SA 3.0 |
+| `crj700/engine.jpg` | [CRJ700 D-ACPF rear engine](https://commons.wikimedia.org/wiki/File:D-ACPF.JPG), ABF; cropped | CC BY-SA 3.0 |
+| `crj700/wingtip.jpg` | [American Eagle CRJ700 winglet at Eugene](https://commons.wikimedia.org/wiki/File:American_Eagle_CRJ-700_at_Eugene_Airport.jpg), EUG737; cropped | CC BY-SA 4.0 |
+| `crj700/wing.jpg` | [Lufthansa CRJ700 D-ACPH wing underside](https://commons.wikimedia.org/wiki/File:Lufthansa_D-ACPH.JPG), Łukasz Golowanow / [Konflikty.pl](https://konflikty.pl); resized | Attribution-only permission (see source) |
+| `crj700/vstab.jpg` | [CRJ700 D-ACPF vertical tail](https://commons.wikimedia.org/wiki/File:D-ACPF.JPG), ABF; cropped | CC BY-SA 3.0 |
+| `crj700/hstab.jpg` | [CRJ700 D-ACPO rear T-tail view](https://commons.wikimedia.org/wiki/File:LH_CRJ-700_D-ACPO_EDDT.jpg), Matti Blume / MB-one; cropped | CC BY-SA 3.0 |
+| `crj700/gear.jpg` | [CRJ700 N154GJ extended landing gear](https://commons.wikimedia.org/wiki/File:N154GJ_(6961124918)_(cropped).jpg), redlegsfan21 / Daniel Betts; cropped | CC BY-SA 2.0 |
+
+All exterior photographs show CRJ700 aircraft. The cockpit photograph is explicitly labelled as a CRJ900 photograph used only for the shared basic CRJ700/900 panel layout, not as proof of a particular CRJ700's equipment fit. The D-ACPH photograph uses the attribution-only permission recorded on Commons, with attribution to Konflikty.pl and its photographer; it is not labelled as a Creative Commons licence.
+
+## Embraer E170 (`e170`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `e170/overview.jpg` | [Finnair E170 OH-LEK](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG), Lentokonefani; resized | CC BY-SA 4.0 |
+| `e170/cockpit.jpg` | [LOT E175 SP-LIN cockpit — E170/175 basic-layout reference](https://commons.wikimedia.org/wiki/File:Cockpit_of_LOT_Embraer_ERJ-175LR_(SP-LIN).jpg), Oleg Belyakov; resized | CC BY-SA 3.0 |
+| `e170/window-front.jpg` | [People's Viennaline E170 OE-LMK front windows](https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `e170/window-side.jpg` | [Finnair E170 OH-LEK side windows](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG), Lentokonefani; cropped | CC BY-SA 4.0 |
+| `e170/fuselage.jpg` | [Finnair E170 OH-LEK fuselage and doors](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG), Lentokonefani; cropped | CC BY-SA 4.0 |
+| `e170/engine.jpg` | [E170 CF34-8E installation](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG), Lentokonefani; cropped | CC BY-SA 4.0 |
+| `e170/wingtip.jpg` | [E170 OE-LMK original winglet](https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `e170/wing.jpg` | [E170 OE-LMK wing and engine layout](https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg), Julian Herzog; resized | CC BY 4.0 |
+| `e170/vstab.jpg` | [Finnair E170 OH-LEK vertical tail](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG), Lentokonefani; cropped | CC BY-SA 4.0 |
+| `e170/hstab.jpg` | [Finnair E170 OH-LEK low tailplane](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG), Lentokonefani; cropped | CC BY-SA 4.0 |
+| `e170/gear.jpg` | [E170 OE-LMK extended landing gear](https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+
+Exterior photographs show the short-body E170 (ERJ-170-100), not the E175 (ERJ-170-200) or E190. The E175 cockpit photograph is explicitly labelled as a first-generation E170/175 family-layout reference in both its caption and the three-language explanation. No AI-generated aircraft imagery is used.
+
+Technical cross-checks for this batch: [Transport Canada CRJ operational evaluation](https://tc.canada.ca/en/aviation/commercial-air-services/operational-evaluation-reports/crj-series), [JAL E170/E190 dimensions and engines](https://press.jal.co.jp/ja/release/201408/002122.html), [GE CRJ700 CF34-8C5B1 production standard](https://www.ge.com/news/press-releases/gojet-airlines-be-first-us-operator-cf34-8c5b1-engine), [Honeywell E170/190 avionics](https://aerospace.honeywell.com/content/dam/aerobt/en/documents/learn/platforms/airlines-%26-cargo/infographics/Embraer-170-190-ig.pdf). Shape comparisons are visual observations of the credited photographs; configuration-specific differences are not universal identification rules.

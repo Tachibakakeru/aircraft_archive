@@ -2,19 +2,30 @@
   "title": "Bombardier CRJ700",
   "sub": "區域客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Bombardier CRJ700 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "CRJ700 保留窄機身 2+2 客艙，前方乘客門接近地面，舷窗沿細長機身排列；照片可見翼上逃生出口與後段引擎之間的間距。",
+        "en": "The CRJ700 retains a narrow 2+2 cabin, a low front passenger door and a long row of windows. The photo shows the spacing between the overwing exit and aft engine.",
+        "ja": "CRJ700は細い2+2客室、地面に近い前方乗降扉、細長く並ぶ窓を持ちます。写真で翼上非常口と後部エンジンの間隔を確認できます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "E170 同樣每排四座，但機身更寬且較短。CRJ700 的門檻高度與細長比例，比塗裝或航空公司名稱更有判型價值。",
+        "en": "The E170 also seats four abreast but has a wider, shorter body. Door-sill height and slenderness are more useful than livery or airline branding.",
+        "ja": "E170も横4席ですが胴体は太く短く、塗装より扉の高さと細長さが識別に役立ちます。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "窄機身四座並列客艙。",
+          "en": "Narrow four-abreast cabin.",
+          "ja": "細い横4席の客室。"
+        },
+        {
+          "zh": "前乘客門門檻較低。",
+          "en": "Low front passenger-door sill.",
+          "ja": "低い前方乗降扉。"
+        },
+        {
+          "zh": "出口與後置引擎位置一起觀察。",
+          "en": "Read exits together with the rear engines.",
+          "ja": "出口と後部エンジンの位置を合わせて観察。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj700/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Bombardier CRJ700 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "CRJ700 採傳統駕駛盤與六具主要電子顯示器，左右飛行資訊及中央系統顯示形成對稱布局。附圖為 CRJ900 實照，僅示範 CRJ700／900 共通的基本座艙配置。",
+        "en": "The CRJ700 uses conventional yokes and six main electronic displays, arranged symmetrically around central system displays. The photograph is a CRJ900, illustrating the shared basic CRJ700/900 layout only.",
+        "ja": "CRJ700は操縦輪と主要表示器6面を備え、中央のシステム表示を挟む対称配置です。写真はCRJ900で、CRJ700／900共通の基本配置のみを示します。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "E170 也有駕駛盤，但使用五具大型顯示器；判別時看面板布局，不能把『有駕駛盤』直接當成 CRJ。",
+        "en": "The E170 also has yokes but uses five large displays. Identify the panel layout rather than assuming every yoke-equipped cockpit is a CRJ.",
+        "ja": "E170も操縦輪を持ちますが大型画面は5面。操縦輪の有無でなくパネル配置を比較します。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "六具主要顯示器。",
+          "en": "Six main displays.",
+          "ja": "主要表示器6面。"
+        },
+        {
+          "zh": "左右各有傳統駕駛盤。",
+          "en": "Conventional yoke at each seat.",
+          "ja": "両席に従来型操縦輪。"
+        },
+        {
+          "zh": "家族參考圖不代表所有選裝設備相同。",
+          "en": "Family reference does not imply identical optional equipment.",
+          "ja": "共通参考写真でも選択装備は機体ごとに異なります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj700/cockpit.jpg",
+          "caption": {
+            "zh": "CRJ700/900 家族共通座艙布局參考（CRJ900 實照）",
+            "en": "CRJ700/900 shared cockpit-layout reference (CRJ900 photograph)",
+            "ja": "CRJ700/900共通操縦席配置の参考（CRJ900実機写真）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Bombardier-crj-900-cockpit-by-RalfR.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Bombardier CRJ700 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "CRJ700 採低置後掠翼，翼展約 23.24 m；主翼下沒有引擎吊架，從下方可清楚觀察翼根、襟翼及收起的主輪。",
+        "en": "The CRJ700 has a low swept wing spanning about 23.24 m. With no engine pylons beneath it, the wing root, flaps and retracted main wheels are easy to distinguish from below.",
+        "ja": "CRJ700は翼幅約23.24 mの低翼後退翼です。翼下パイロンがなく、下面から翼根、フラップ、格納主輪を確認できます。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "相近座級的 E170 翼展較大且翼下有引擎。CRJ700 的窄長機身與較短主翼組合，可從斜下方辨認。",
+        "en": "The similarly sized E170 has a greater span and underwing engines. The CRJ700's narrow body and shorter wing are useful from a low oblique angle.",
+        "ja": "同程度の座席数のE170は翼幅が広く翼下エンジンを備えます。斜め下からはCRJ700の細長い胴体と短めの翼を見ます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "低置後掠主翼。",
+          "en": "Low-mounted swept wing.",
+          "ja": "低翼・後退翼。"
+        },
+        {
+          "zh": "無翼下引擎吊架。",
+          "en": "No underwing engine pylons.",
+          "ja": "翼下エンジンパイロンなし。"
+        },
+        {
+          "zh": "翼展小於 E170。",
+          "en": "Shorter span than the E170.",
+          "ja": "E170より短い翼幅。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj700/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Lufthansa_D-ACPH.JPG"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Bombardier CRJ700 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "CRJ700 的兩具 GE CF34-8C 系列引擎安裝在後機身兩側，圓形進氣口與短吊架清楚可見，主翼下方保持乾淨。",
+        "en": "Two GE CF34-8C-series engines flank the CRJ700's rear fuselage. Circular inlets and short mounting pylons are visible, leaving the wing undersides clear.",
+        "ja": "CRJ700のGE CF34-8C系2基は後部胴体両側にあり、円形吸気口と短いパイロンが見え、翼下は空いています。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "早期使用 CF34-8C1，後續有 CF34-8C5B1；不能只憑短艙照片確認細部引擎型號。E170 則是翼下 CF34-8E。",
+        "en": "Early aircraft used CF34-8C1s, followed by CF34-8C5B1s. A nacelle photo alone cannot establish the exact engine subvariant. The E170 uses underwing CF34-8Es.",
+        "ja": "初期はCF34-8C1、後にCF34-8C5B1を採用。ナセル写真だけで細部型式は断定できません。E170は翼下CF34-8Eです。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "進氣口在後段客艙兩側。",
+          "en": "Inlets flank the aft cabin.",
+          "ja": "後部客室両側に吸気口。"
+        },
+        {
+          "zh": "短吊架連接機身。",
+          "en": "Short pylons connect to the fuselage.",
+          "ja": "短いパイロンで胴体に接続。"
+        },
+        {
+          "zh": "翼下沒有引擎短艙。",
+          "en": "No underwing nacelles.",
+          "ja": "翼下ナセルなし。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj700/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "CRJ700 垂尾高而後掠，頂部承載水平尾翼，底部前方則有兩具後置引擎，形成明確的 T 字形尾部結構。",
+        "en": "The CRJ700's swept fin carries the tailplane at its top, with the rear engines just ahead of its base: a clear T-tail arrangement.",
+        "ja": "CRJ700の後退垂尾は頂部に水平尾翼、根元前方に後部エンジンを持つ明確なT字構成です。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "E170 垂尾頂端沒有橫向翼面；即使航空公司塗裝相似，只看水平尾翼接在哪裡也能快速區分。",
+        "en": "The E170 has no horizontal surface atop its fin. Tailplane attachment remains useful even with similar airline liveries.",
+        "ja": "E170は垂尾頂部に水平面がなく、似た塗装でも水平尾翼の取付位置で区別できます。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "頂端承載水平尾翼。",
+          "en": "Tailplane mounted at the fin tip.",
+          "ja": "垂尾頂部に水平尾翼。"
+        },
+        {
+          "zh": "後掠前緣。",
+          "en": "Swept leading edge.",
+          "ja": "後退した前縁。"
+        },
+        {
+          "zh": "根部鄰近兩具引擎。",
+          "en": "Two engines near the fin root.",
+          "ja": "根元近くにエンジン2基。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj700/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "CRJ700 水平尾翼架在垂尾頂端，由後方能看到橫向翼面與高垂尾組成 T 字，遠高於主翼和引擎。",
+        "en": "The CRJ700 tailplane sits atop the fin. Seen from behind, it forms a T well above the wing and engines.",
+        "ja": "CRJ700の水平尾翼は垂尾頂部にあり、後方から主翼・エンジンより高いT字形が見えます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "與 E170 低置水平尾翼相比，安裝高度是比尾翼塗裝更可靠的差異；CRJ900 同樣採 T 尾，仍須配合機身長度。",
+        "en": "Mounting height is more reliable than tail paint when comparing with the E170's low tailplane. The CRJ900 also has a T-tail, so check body length too.",
+        "ja": "E170の低位置水平尾翼との比較では塗装より取付高さが確実です。CRJ900もT字尾翼なので胴体長も確認します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "水平翼面位於機體尾端最高處。",
+          "en": "Horizontal surface at the top of the tail.",
+          "ja": "尾部最高位置の水平面。"
+        },
+        {
+          "zh": "後視呈 T 字。",
+          "en": "T-shaped rear view.",
+          "ja": "後方からT字。"
+        },
+        {
+          "zh": "明顯高於引擎中心線。",
+          "en": "Clearly above the engine centreline.",
+          "ja": "エンジン中心線より明確に高い位置。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj700/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:LH_CRJ-700_D-ACPO_EDDT.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Bombardier CRJ700 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "CRJ700 前起落架雙輪，左右主腳各雙輪，總共六輪；前視可見主輪在細窄機身兩側，尾部引擎在更高的位置。",
+        "en": "The CRJ700 has twin nose wheels and twin wheels on each main leg, six in total. Head-on, the mains flank the slim fuselage below the rear engines.",
+        "ja": "CRJ700は前脚2輪、左右主脚各2輪で計6輪。正面では細い胴体両側に主輪、その上方に後部エンジンが見えます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "E170 也是六輪，不能以輪數判型；應一起看引擎在主翼上方後段或吊掛在主翼下方。",
+        "en": "The E170 also has six wheels. Use engine installation—high at the rear or beneath the wings—rather than wheel count.",
+        "ja": "E170も6輪なので輪数では区別できません。後方高位置か翼下か、エンジン配置を合わせて確認します。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "前腳雙輪。",
+          "en": "Twin-wheel nose leg.",
+          "ja": "前脚は2輪。"
+        },
+        {
+          "zh": "左右主腳各雙輪。",
+          "en": "Twin wheels on each main leg.",
+          "ja": "左右主脚各2輪。"
+        },
+        {
+          "zh": "輪數與 E170 相同。",
+          "en": "Same wheel count as the E170.",
+          "ja": "E170と同じ輪数。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj700/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:N154GJ_(6961124918)_(cropped).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "CRJ700 全長 32.51 m、翼展 23.24 m；細長低矮的機身、尾部雙發與 T 型尾翼形成主要輪廓，翼下沒有引擎。",
+        "en": "At 32.51 m long with a 23.24 m span, the CRJ700 combines a slender low-slung body, rear engines and a T-tail; its wings carry no engines.",
+        "ja": "CRJ700は全長32.51 m、翼幅23.24 m。細長く低い胴体、後部双発、T字尾翼が特徴で、翼下にエンジンはありません。"
+      },
+      "fact": {
+        "zh": "比 E170 約長 2.6 m，翼展卻少約 2.8 m。與 CRJ900 比較則機身更短，不能只用相同的機鼻或尾翼判定子型。",
+        "en": "It is about 2.6 m longer than the E170 but about 2.8 m narrower in span. It is shorter than the CRJ900: the shared nose and tail alone cannot identify the variant.",
+        "ja": "E170より約2.6 m長い一方、翼幅は約2.8 m短くなります。CRJ900より短胴で、共通の機首・尾翼だけでは型式を判定できません。"
+      },
+      "bullets": [
+        {
+          "zh": "尾部兩側各一具引擎。",
+          "en": "One engine on each side of the rear body.",
+          "ja": "後部胴体の左右にエンジン各1基。"
+        },
+        {
+          "zh": "水平尾翼位於垂尾頂端。",
+          "en": "Tailplanes sit atop the fin.",
+          "ja": "水平尾翼は垂尾頂部。"
+        },
+        {
+          "zh": "細長機身搭配較短翼展。",
+          "en": "Slender body with a relatively short span.",
+          "ja": "細長い胴体と比較的短い翼幅。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/crj700/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "CRJ700 外窗沿狹窄機鼻環繞，正面有明顯中央窗柱，側窗呈稜角分明的梯形；窗帶下方的機鼻向前收成較尖輪廓。",
+        "en": "CRJ700 glazing wraps around a narrow nose, with a prominent centre post and angular trapezoidal side panes. Below the windows the nose tapers to a relatively pointed profile.",
+        "ja": "CRJ700の窓は細い機首を囲み、中央窓柱と角張った台形の側窓が目立ちます。窓の下の機首は比較的鋭く絞られます。"
+      },
+      "fact": {
+        "zh": "CRJ700／900 的窗型十分接近，外窗主要用來區分家族；要分辨兩者仍須看機身長度與出口配置。",
+        "en": "CRJ700 and CRJ900 window shapes are very similar. Glazing identifies the family; body length and exit layout help separate the variants.",
+        "ja": "CRJ700／900の窓形状は非常に近く、窓は系列の識別用です。型式は胴体長と出口配置も見ます。"
+      },
+      "bullets": [
+        {
+          "zh": "正面中央窗柱明顯。",
+          "en": "Distinct centre windshield post.",
+          "ja": "明確な中央窓柱。"
+        },
+        {
+          "zh": "側窗稜角清楚、機鼻狹長。",
+          "en": "Angular side glazing on a narrow nose.",
+          "ja": "角張った側窓と細い機首。"
+        },
+        {
+          "zh": "用正面與側面兩個角度交叉確認。",
+          "en": "Cross-check front and side views.",
+          "ja": "正面と側面の両方で確認。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/crj700/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:N154GJ_(6961124918)_(cropped).jpg"
+        },
+        {
+          "src": "assets/reference/crj700/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "CRJ700 翼端有細窄、向上伸起的小翼，主翼與小翼之間的轉折清楚；由正面可見兩端像小型直立鰭。",
+        "en": "The CRJ700 has narrow upturned winglets with a distinct transition from wing to tip. Head-on, each tip resembles a small upright fin.",
+        "ja": "CRJ700の翼端は細い上向き小翼で、主翼との折れ曲がりが明確です。正面では小さな立ち上がりに見えます。"
+      },
+      "fact": {
+        "zh": "E170 也有上彎小翼，因此小翼不是獨有特徵；搭配尾置引擎和 T 尾才是可靠組合。",
+        "en": "The E170 also has upturned winglets, so this is not unique. Combine the tip with rear engines and a T-tail.",
+        "ja": "E170も上向き小翼を持つため、小翼だけでなく後部エンジンとT字尾翼を組み合わせます。"
+      },
+      "bullets": [
+        {
+          "zh": "細窄向上的小翼。",
+          "en": "Narrow upward winglet.",
+          "ja": "細い上向き小翼。"
+        },
+        {
+          "zh": "翼端轉折清楚。",
+          "en": "Clear wing-to-winglet transition.",
+          "ja": "翼端の折れ曲がりが明確。"
+        },
+        {
+          "zh": "不是上下各一片的翼尖擋板。",
+          "en": "Not an upper/lower wingtip fence.",
+          "ja": "上下に分かれた翼端フェンスではありません。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/crj700/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:American_Eagle_CRJ-700_at_Eugene_Airport.jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -262,7 +652,7 @@
     "發動機": [
       [
         "型號",
-        "GE CF34-8C5 ×2"
+        "GE CF34-8C1／CF34-8C5B1 ×2"
       ],
       [
         "型式",

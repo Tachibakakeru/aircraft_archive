@@ -1594,6 +1594,142 @@ CONTENT.update({
 })
 
 
+SOURCES.update({
+    "crj700": {
+        "overview": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Bombardier-crj-900-cockpit-by-RalfR.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:N154GJ_(6961124918)_(cropped).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG",
+        "engine": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:American_Eagle_CRJ-700_at_Eugene_Airport.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Lufthansa_D-ACPH.JPG",
+        "vstab": "https://commons.wikimedia.org/wiki/File:D-ACPF.JPG",
+        "hstab": "https://commons.wikimedia.org/wiki/File:LH_CRJ-700_D-ACPO_EDDT.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:N154GJ_(6961124918)_(cropped).jpg",
+    },
+    "e170": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Cockpit_of_LOT_Embraer_ERJ-175LR_(SP-LIN).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG",
+        "engine": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_170_OH-LEK_at_HEL_17AUG2014.JPG",
+        "gear": "https://commons.wikimedia.org/wiki/File:Peoples_Viennaline_ERJ-170_OE-LMK_LSZR_01.jpg",
+    },
+})
+
+CONTENT.update({
+    "crj700": {
+        "overview": identify(
+            ("CRJ700 全長 32.51 m、翼展 23.24 m；細長低矮的機身、尾部雙發與 T 型尾翼形成主要輪廓，翼下沒有引擎。", "At 32.51 m long with a 23.24 m span, the CRJ700 combines a slender low-slung body, rear engines and a T-tail; its wings carry no engines.", "CRJ700は全長32.51 m、翼幅23.24 m。細長く低い胴体、後部双発、T字尾翼が特徴で、翼下にエンジンはありません。"),
+            ("比 E170 約長 2.6 m，翼展卻少約 2.8 m。與 CRJ900 比較則機身更短，不能只用相同的機鼻或尾翼判定子型。", "It is about 2.6 m longer than the E170 but about 2.8 m narrower in span. It is shorter than the CRJ900: the shared nose and tail alone cannot identify the variant.", "E170より約2.6 m長い一方、翼幅は約2.8 m短くなります。CRJ900より短胴で、共通の機首・尾翼だけでは型式を判定できません。"),
+            [("尾部兩側各一具引擎。", "One engine on each side of the rear body.", "後部胴体の左右にエンジン各1基。"), ("水平尾翼位於垂尾頂端。", "Tailplanes sit atop the fin.", "水平尾翼は垂尾頂部。"), ("細長機身搭配較短翼展。", "Slender body with a relatively short span.", "細長い胴体と比較的短い翼幅。")],
+        ),
+        "cockpit": identify(
+            ("CRJ700 採傳統駕駛盤與六具主要電子顯示器，左右飛行資訊及中央系統顯示形成對稱布局。附圖為 CRJ900 實照，僅示範 CRJ700／900 共通的基本座艙配置。", "The CRJ700 uses conventional yokes and six main electronic displays, arranged symmetrically around central system displays. The photograph is a CRJ900, illustrating the shared basic CRJ700/900 layout only.", "CRJ700は操縦輪と主要表示器6面を備え、中央のシステム表示を挟む対称配置です。写真はCRJ900で、CRJ700／900共通の基本配置のみを示します。"),
+            ("E170 也有駕駛盤，但使用五具大型顯示器；判別時看面板布局，不能把『有駕駛盤』直接當成 CRJ。", "The E170 also has yokes but uses five large displays. Identify the panel layout rather than assuming every yoke-equipped cockpit is a CRJ.", "E170も操縦輪を持ちますが大型画面は5面。操縦輪の有無でなくパネル配置を比較します。"),
+            [("六具主要顯示器。", "Six main displays.", "主要表示器6面。"), ("左右各有傳統駕駛盤。", "Conventional yoke at each seat.", "両席に従来型操縦輪。"), ("家族參考圖不代表所有選裝設備相同。", "Family reference does not imply identical optional equipment.", "共通参考写真でも選択装備は機体ごとに異なります。")],
+        ),
+        "windshield": identify(
+            ("CRJ700 外窗沿狹窄機鼻環繞，正面有明顯中央窗柱，側窗呈稜角分明的梯形；窗帶下方的機鼻向前收成較尖輪廓。", "CRJ700 glazing wraps around a narrow nose, with a prominent centre post and angular trapezoidal side panes. Below the windows the nose tapers to a relatively pointed profile.", "CRJ700の窓は細い機首を囲み、中央窓柱と角張った台形の側窓が目立ちます。窓の下の機首は比較的鋭く絞られます。"),
+            ("CRJ700／900 的窗型十分接近，外窗主要用來區分家族；要分辨兩者仍須看機身長度與出口配置。", "CRJ700 and CRJ900 window shapes are very similar. Glazing identifies the family; body length and exit layout help separate the variants.", "CRJ700／900の窓形状は非常に近く、窓は系列の識別用です。型式は胴体長と出口配置も見ます。"),
+            [("正面中央窗柱明顯。", "Distinct centre windshield post.", "明確な中央窓柱。"), ("側窗稜角清楚、機鼻狹長。", "Angular side glazing on a narrow nose.", "角張った側窓と細い機首。"), ("用正面與側面兩個角度交叉確認。", "Cross-check front and side views.", "正面と側面の両方で確認。")],
+        ),
+        "fuselage": identify(
+            ("CRJ700 保留窄機身 2+2 客艙，前方乘客門接近地面，舷窗沿細長機身排列；照片可見翼上逃生出口與後段引擎之間的間距。", "The CRJ700 retains a narrow 2+2 cabin, a low front passenger door and a long row of windows. The photo shows the spacing between the overwing exit and aft engine.", "CRJ700は細い2+2客室、地面に近い前方乗降扉、細長く並ぶ窓を持ちます。写真で翼上非常口と後部エンジンの間隔を確認できます。"),
+            ("E170 同樣每排四座，但機身更寬且較短。CRJ700 的門檻高度與細長比例，比塗裝或航空公司名稱更有判型價值。", "The E170 also seats four abreast but has a wider, shorter body. Door-sill height and slenderness are more useful than livery or airline branding.", "E170も横4席ですが胴体は太く短く、塗装より扉の高さと細長さが識別に役立ちます。"),
+            [("窄機身四座並列客艙。", "Narrow four-abreast cabin.", "細い横4席の客室。"), ("前乘客門門檻較低。", "Low front passenger-door sill.", "低い前方乗降扉。"), ("出口與後置引擎位置一起觀察。", "Read exits together with the rear engines.", "出口と後部エンジンの位置を合わせて観察。")],
+        ),
+        "engine": identify(
+            ("CRJ700 的兩具 GE CF34-8C 系列引擎安裝在後機身兩側，圓形進氣口與短吊架清楚可見，主翼下方保持乾淨。", "Two GE CF34-8C-series engines flank the CRJ700's rear fuselage. Circular inlets and short mounting pylons are visible, leaving the wing undersides clear.", "CRJ700のGE CF34-8C系2基は後部胴体両側にあり、円形吸気口と短いパイロンが見え、翼下は空いています。"),
+            ("早期使用 CF34-8C1，後續有 CF34-8C5B1；不能只憑短艙照片確認細部引擎型號。E170 則是翼下 CF34-8E。", "Early aircraft used CF34-8C1s, followed by CF34-8C5B1s. A nacelle photo alone cannot establish the exact engine subvariant. The E170 uses underwing CF34-8Es.", "初期はCF34-8C1、後にCF34-8C5B1を採用。ナセル写真だけで細部型式は断定できません。E170は翼下CF34-8Eです。"),
+            [("進氣口在後段客艙兩側。", "Inlets flank the aft cabin.", "後部客室両側に吸気口。"), ("短吊架連接機身。", "Short pylons connect to the fuselage.", "短いパイロンで胴体に接続。"), ("翼下沒有引擎短艙。", "No underwing nacelles.", "翼下ナセルなし。")],
+        ),
+        "wingtip": identify(
+            ("CRJ700 翼端有細窄、向上伸起的小翼，主翼與小翼之間的轉折清楚；由正面可見兩端像小型直立鰭。", "The CRJ700 has narrow upturned winglets with a distinct transition from wing to tip. Head-on, each tip resembles a small upright fin.", "CRJ700の翼端は細い上向き小翼で、主翼との折れ曲がりが明確です。正面では小さな立ち上がりに見えます。"),
+            ("E170 也有上彎小翼，因此小翼不是獨有特徵；搭配尾置引擎和 T 尾才是可靠組合。", "The E170 also has upturned winglets, so this is not unique. Combine the tip with rear engines and a T-tail.", "E170も上向き小翼を持つため、小翼だけでなく後部エンジンとT字尾翼を組み合わせます。"),
+            [("細窄向上的小翼。", "Narrow upward winglet.", "細い上向き小翼。"), ("翼端轉折清楚。", "Clear wing-to-winglet transition.", "翼端の折れ曲がりが明確。"), ("不是上下各一片的翼尖擋板。", "Not an upper/lower wingtip fence.", "上下に分かれた翼端フェンスではありません。")],
+        ),
+        "wing": identify(
+            ("CRJ700 採低置後掠翼，翼展約 23.24 m；主翼下沒有引擎吊架，從下方可清楚觀察翼根、襟翼及收起的主輪。", "The CRJ700 has a low swept wing spanning about 23.24 m. With no engine pylons beneath it, the wing root, flaps and retracted main wheels are easy to distinguish from below.", "CRJ700は翼幅約23.24 mの低翼後退翼です。翼下パイロンがなく、下面から翼根、フラップ、格納主輪を確認できます。"),
+            ("相近座級的 E170 翼展較大且翼下有引擎。CRJ700 的窄長機身與較短主翼組合，可從斜下方辨認。", "The similarly sized E170 has a greater span and underwing engines. The CRJ700's narrow body and shorter wing are useful from a low oblique angle.", "同程度の座席数のE170は翼幅が広く翼下エンジンを備えます。斜め下からはCRJ700の細長い胴体と短めの翼を見ます。"),
+            [("低置後掠主翼。", "Low-mounted swept wing.", "低翼・後退翼。"), ("無翼下引擎吊架。", "No underwing engine pylons.", "翼下エンジンパイロンなし。"), ("翼展小於 E170。", "Shorter span than the E170.", "E170より短い翼幅。")],
+        ),
+        "vstab": identify(
+            ("CRJ700 垂尾高而後掠，頂部承載水平尾翼，底部前方則有兩具後置引擎，形成明確的 T 字形尾部結構。", "The CRJ700's swept fin carries the tailplane at its top, with the rear engines just ahead of its base: a clear T-tail arrangement.", "CRJ700の後退垂尾は頂部に水平尾翼、根元前方に後部エンジンを持つ明確なT字構成です。"),
+            ("E170 垂尾頂端沒有橫向翼面；即使航空公司塗裝相似，只看水平尾翼接在哪裡也能快速區分。", "The E170 has no horizontal surface atop its fin. Tailplane attachment remains useful even with similar airline liveries.", "E170は垂尾頂部に水平面がなく、似た塗装でも水平尾翼の取付位置で区別できます。"),
+            [("頂端承載水平尾翼。", "Tailplane mounted at the fin tip.", "垂尾頂部に水平尾翼。"), ("後掠前緣。", "Swept leading edge.", "後退した前縁。"), ("根部鄰近兩具引擎。", "Two engines near the fin root.", "根元近くにエンジン2基。")],
+        ),
+        "hstab": identify(
+            ("CRJ700 水平尾翼架在垂尾頂端，由後方能看到橫向翼面與高垂尾組成 T 字，遠高於主翼和引擎。", "The CRJ700 tailplane sits atop the fin. Seen from behind, it forms a T well above the wing and engines.", "CRJ700の水平尾翼は垂尾頂部にあり、後方から主翼・エンジンより高いT字形が見えます。"),
+            ("與 E170 低置水平尾翼相比，安裝高度是比尾翼塗裝更可靠的差異；CRJ900 同樣採 T 尾，仍須配合機身長度。", "Mounting height is more reliable than tail paint when comparing with the E170's low tailplane. The CRJ900 also has a T-tail, so check body length too.", "E170の低位置水平尾翼との比較では塗装より取付高さが確実です。CRJ900もT字尾翼なので胴体長も確認します。"),
+            [("水平翼面位於機體尾端最高處。", "Horizontal surface at the top of the tail.", "尾部最高位置の水平面。"), ("後視呈 T 字。", "T-shaped rear view.", "後方からT字。"), ("明顯高於引擎中心線。", "Clearly above the engine centreline.", "エンジン中心線より明確に高い位置。")],
+        ),
+        "gear": identify(
+            ("CRJ700 前起落架雙輪，左右主腳各雙輪，總共六輪；前視可見主輪在細窄機身兩側，尾部引擎在更高的位置。", "The CRJ700 has twin nose wheels and twin wheels on each main leg, six in total. Head-on, the mains flank the slim fuselage below the rear engines.", "CRJ700は前脚2輪、左右主脚各2輪で計6輪。正面では細い胴体両側に主輪、その上方に後部エンジンが見えます。"),
+            ("E170 也是六輪，不能以輪數判型；應一起看引擎在主翼上方後段或吊掛在主翼下方。", "The E170 also has six wheels. Use engine installation—high at the rear or beneath the wings—rather than wheel count.", "E170も6輪なので輪数では区別できません。後方高位置か翼下か、エンジン配置を合わせて確認します。"),
+            [("前腳雙輪。", "Twin-wheel nose leg.", "前脚は2輪。"), ("左右主腳各雙輪。", "Twin wheels on each main leg.", "左右主脚各2輪。"), ("輪數與 E170 相同。", "Same wheel count as the E170.", "E170と同じ輪数。")],
+        ),
+    },
+    "e170": {
+        "overview": identify(
+            ("E170 是第一代 E-Jet 家族短機身機型，全長 29.90 m、翼展 26.00 m；翼下雙發、較寬圓潤的機身與低置水平尾翼構成主要輪廓。", "The E170 is a short-bodied first-generation E-Jet, 29.90 m long with a 26.00 m span. Underwing twins, a wider rounded body and low tailplanes define its silhouette.", "E170は初代E-Jetの短胴型で全長29.90 m、翼幅26.00 m。翼下双発、太く丸い胴体、低位置水平尾翼が特徴です。"),
+            ("比 CRJ700 短但翼展更大；不要把同家族較長的 E175 或 E190 照片當成 E170。", "It is shorter than the CRJ700 but wider in span. Do not mistake the longer E175 or E190 for the E170.", "CRJ700より短い一方で翼幅は広く、同系列の長胴E175・E190との混同に注意します。"),
+            [("兩具引擎位於翼下。", "Two engines beneath the wings.", "翼下にエンジン2基。"), ("短而較寬的機身。", "Shorter, wider body.", "短く太めの胴体。"), ("水平尾翼低置。", "Low-mounted tailplanes.", "水平尾翼は低位置。")],
+        ),
+        "cockpit": identify(
+            ("E170 使用 Honeywell Primus Epic 玻璃座艙，五具大型顯示器與兩側駕駛盤是主要特徵。附圖為 E175 實照，用於示範第一代 E170／175 共通基本布局。", "The E170 uses a Honeywell Primus Epic glass cockpit with five large displays and yokes at both seats. The E175 photograph illustrates the shared basic first-generation E170/175 layout.", "E170はHoneywell Primus Epic、主要大型画面5面、両席操縦輪が特徴です。写真はE175で、初代E170／175共通の基本配置を示します。"),
+            ("不是 Airbus 式側桿座艙；與 CRJ700 相比，螢幕數目及中央顯示布局更有辨識價值。", "It is not an Airbus-style sidestick cockpit. Display count and centre-panel layout distinguish it from the CRJ700.", "Airbus式サイドスティックではありません。CRJ700との差は画面数と中央配置を見ます。"),
+            [("五具大型主要顯示器。", "Five large main displays.", "主要大型画面5面。"), ("左右仍有駕駛盤。", "Yokes at both pilot seats.", "両席に操縦輪。"), ("附圖為家族共通配置參考。", "Photo is a shared-family layout reference.", "写真は系列共通配置の参考。")],
+        ),
+        "windshield": identify(
+            ("E170 正面窗由中央窗柱分開，側面窗較短，配合寬圓機鼻與平順下收的鼻部輪廓；正面和側面照片可對照窗框角度。", "The E170 has a centre-divided windshield and short side panes above a broad rounded nose that tapers smoothly downward. Compare frame angles in front and side photos.", "E170は中央で分かれた前窓と短い側窓を持ち、その下に太く丸く下へ絞られる機首があります。正面・側面で窓枠角度を比較します。"),
+            ("E170、E175、E190 的家族窗型相近，窗型只能先確定 E-Jet 家族，不能單靠這裡判斷機身長短。", "E170, E175 and E190 share similar family glazing. Windows can indicate an E-Jet but cannot establish its body-length variant alone.", "E170・E175・E190の窓は類似し、E-Jet系列の判定には役立ちますが胴体長型式は断定できません。"),
+            [("寬圓鼻部搭配多片窗框。", "Multi-pane glazing above a broad rounded nose.", "太く丸い機首上の複数窓。"), ("側面窗較短。", "Short side panes.", "短めの側窓。"), ("需配合翼下引擎與機身長度。", "Cross-check underwing engines and body length.", "翼下エンジンと胴体長も確認。")],
+        ),
+        "fuselage": identify(
+            ("E170 的 2+2 客艙採較寬機身，前後艙門之間的窗列較短，尾段沒有引擎短艙遮蔽；前後艙門和翼根的位置可用來觀察短機身比例。", "The E170's wider 2+2 body has a short window run between front and rear doors and no aft nacelles hiding the tail area. Door and wing-root positions help reveal the short-body proportions.", "E170は幅広い2+2胴体で前後ドア間の窓列が短く、後部ナセルもありません。ドアと翼根位置で短胴比率を見ます。"),
+            ("每排同樣四座不代表外形一樣；CRJ700 更細長、前門離地更低，兩者外觀上的寬高比例不同。", "Four seats abreast does not imply the same shape. The CRJ700 is more slender with a lower front door, giving different width and height proportions.", "同じ横4席でも外形は異なり、CRJ700はより細長く前方扉が低いため幅・高さの比率が違います。"),
+            [("較寬、較短的客艙段。", "Wider, shorter cabin section.", "太く短い客室部分。"), ("前後艙門位置清楚。", "Clearly separated front and rear doors.", "明確な前後ドア配置。"), ("尾部兩側沒有引擎。", "No engines beside the tail.", "尾部両側にエンジンなし。")],
+        ),
+        "engine": identify(
+            ("E170 使用 GE CF34-8E 系列渦扇，兩具短艙由吊架懸掛在主翼下方；進氣口近圓形，側面可見短艙與機翼的明顯間隙。", "GE CF34-8E-series turbofans hang beneath the E170's wings on pylons. The inlets are nearly circular and a clear nacelle-to-wing gap is visible from the side.", "E170はGE CF34-8E系ターボファンを主翼下パイロンに搭載。吸気口はほぼ円形で、側面からナセルと翼の間隔が見えます。"),
+            ("同屬 CF34 並不表示與 CRJ700 外形相同；最明顯的差異是翼下吊掛而非後機身安裝。", "Sharing the CF34 name does not mean the same appearance as a CRJ700: underwing rather than rear-fuselage installation is decisive.", "同じCF34でもCRJ700と外観は異なり、後部胴体でなく翼下搭載であることが決定的です。"),
+            [("主翼下每側一具。", "One beneath each wing.", "左右翼下に各1基。"), ("可見吊架與短艙間隙。", "Visible pylon and wing clearance.", "パイロンと翼との間隔が見える。"), ("不是 E190 的 CF34-10E。", "Not the E190's CF34-10E.", "E190のCF34-10Eとは異なります。")],
+        ),
+        "wingtip": identify(
+            ("E170 的翼尖向上彎起，與主翼平順銜接；正面照片可看出小翼的傾斜與後掠，不是完全垂直的端板。", "The E170 wingtip curves upward with a smooth transition from the wing. Front views show its cant and sweep rather than a purely vertical end plate.", "E170の翼端は滑らかにつながって上向きに曲がり、正面で傾きと後退が分かる、単なる垂直板ではない形です。"),
+            ("本頁為 E170 原型翼尖；較晚 E175 的加大型翼尖不可直接套用。CRJ700 也有小翼，要搭配引擎位置確認。", "This is the original E170 tip, not the later enlarged E175 wingtip. The CRJ700 also has winglets, so check engine location too.", "本頁はE170本来の翼端で、後期E175の大型翼端とは異なります。CRJ700も小翼を持つためエンジン位置も確認します。"),
+            [("向上彎曲的翼尖。", "Upturned tip.", "上向きに曲がる翼端。"), ("主翼與小翼銜接平順。", "Smooth wing-to-winglet blend.", "滑らかな主翼との接続。"), ("需區分 E175 後期翼尖。", "Distinguish later E175 tips.", "後期E175の翼端と区別。")],
+        ),
+        "wing": identify(
+            ("E170 翼展 26.00 m，低置後掠主翼下承載引擎，後緣有襟翼及滑軌整流罩；正面照片可同時比較主翼、引擎和小翼的位置。", "The E170's 26.00 m low swept wing carries the engines and has trailing-edge flaps and track fairings. A front view shows the relationship between wing, nacelles and tips.", "E170の翼幅26.00 mの低翼後退翼はエンジンを搭載し、後縁にフラップとトラック整流部があります。正面で主翼・ナセル・小翼の位置を比較できます。"),
+            ("比 CRJ700 的翼展多約 2.8 m，但機身反而較短；這種短機身配寬翼展的比例有助於辨識 E170。", "Its span is about 2.8 m greater than the CRJ700's despite a shorter body. This short-body/wide-span proportion helps identify an E170.", "CRJ700より胴体が短いのに翼幅は約2.8 m広く、この短胴・広翼の比率がE170の手掛かりです。"),
+            [("低置主翼承載兩具引擎。", "Low wing carrying two engines.", "エンジン2基を搭載する低翼。"), ("翼展 26.00 m。", "26.00 m span.", "翼幅26.00 m。"), ("後緣整流罩可見。", "Visible trailing-edge fairings.", "後縁整流部が見える。")],
+        ),
+        "vstab": identify(
+            ("E170 垂尾是高而後掠的單一翼面，根部以背鰭平順連接後機身；垂尾頂端沒有水平尾翼，與 CRJ700 的 T 尾相反。", "The E170 fin is a tall swept surface with a dorsal blend into the aft body. No tailplane crosses its tip, unlike the CRJ700 T-tail.", "E170垂尾は高い後退面で根元背びれが胴体へ滑らかにつながり、CRJ700と違い頂部に水平尾翼がありません。"),
+            ("不要依航空公司尾翼圖案判型；確認垂尾頂端是否有橫向翼面，通常比塗裝更可靠。", "Do not identify the aircraft by its tail logo. Whether a horizontal surface crosses the fin tip is more reliable.", "尾翼ロゴでなく垂尾頂部を横切る水平面の有無を見る方が確実です。"),
+            [("頂端保持單一垂直翼面。", "Uninterrupted fin tip.", "頂部は単一の垂直面。"), ("根部背鰭平順延伸。", "Smooth dorsal-root extension.", "滑らかな根元背びれ。"), ("不承載 T 型水平尾翼。", "Does not carry a T-tailplane.", "T字水平尾翼を支えません。")],
+        ),
+        "hstab": identify(
+            ("E170 水平尾翼從後機身兩側低位伸出，後掠且向外收尖；從側面可看到翼根遠低於垂尾頂端。", "The E170's swept tapered tailplanes extend from low on each side of the aft fuselage. Their roots sit well below the fin tip.", "E170の後退・先細水平尾翼は後部胴体両側の低位置から伸び、根元は垂尾頂端より大幅に低くなります。"),
+            ("這是與 CRJ700 最容易從遠處辨識的差異之一；同時看翼下雙發，可以排除同樣短機身的 T 尾客機。", "This is one of the clearest distant distinctions from the CRJ700. Check the underwing engines too to exclude short-bodied T-tail jets.", "遠方からCRJ700と区別しやすい特徴の一つです。翼下双発も合わせて短胴T字尾翼機を除外します。"),
+            [("根部接在後機身側面。", "Roots attach to the aft body sides.", "根元は後部胴体側面。"), ("遠低於垂尾頂端。", "Well below the fin tip.", "垂尾頂部より低い。"), ("後掠、向翼尖收窄。", "Swept and tapered.", "後退・先細の形状。")],
+        ),
+        "gear": identify(
+            ("E170 前腳雙輪、左右主腳各雙輪，共六輪；主腳位於翼根附近，照片可觀察輪距以及翼下引擎的離地間隙。", "The E170 uses twin nose wheels and twin wheels on each main leg, six total. The mains sit near the wing roots; the photo shows their track and underwing engine clearance.", "E170は前脚2輪、左右主脚各2輪の計6輪。主脚は翼根付近にあり、写真で輪距と翼下エンジンの地上間隔を確認できます。"),
+            ("CRJ700 也是六輪，輪數不是兩型差別；從前方看主輪上方是否有翼下引擎，能更快完成判型。", "The CRJ700 also has six wheels. From the front, underwing engines above the main-wheel area are a better discriminator than wheel count.", "CRJ700も6輪。正面から主輪付近上方に翼下エンジンがあるかを見る方が、輪数より有効です。"),
+            [("前腳與兩側主腳均雙輪。", "Twin wheels on nose and both mains.", "前脚・左右主脚とも2輪。"), ("主輪位於翼根附近。", "Mains near the wing roots.", "主輪は翼根付近。"), ("觀察翼下短艙離地空間。", "Observe underwing nacelle clearance.", "翼下ナセルの地上間隔を観察。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -1639,6 +1775,14 @@ def update(model: str) -> None:
         else:
             part["images"] = [photo(model, part_id, CAPTIONS[part_id], SOURCES[model][part_id])]
     data["partOrder"] = ORDER
+    if model in ("crj700", "e170"):
+        family = "CRJ700/900" if model == "crj700" else "E170/175"
+        actual = "CRJ900" if model == "crj700" else "E175"
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            f"{family} 家族共通座艙布局參考（{actual} 實照）",
+            f"{family} shared cockpit-layout reference ({actual} photograph)",
+            f"{family}共通操縦席配置の参考（{actual}実機写真）",
+        )
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
