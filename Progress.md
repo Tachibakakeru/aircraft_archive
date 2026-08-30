@@ -316,12 +316,13 @@
 - 本輪到此停止，不開始下一批。下次從上述剩餘 18 架接續；累計 34／52 架、374 張實照。
 - 提交前重跑照片資料檢查、JS 語法與差異檢查；僅提交本批明確檔案，保留 `data/korean_airlines_debug.json` 未追蹤，不包含 Token 備份。
 
-### Krueger flap 新增（2026-08-31，本地待檢查）
+### Krueger flap 新增（2026-08-31，已發布）
 
 - 查閱 NASA NTRS 的高升力裝置資料，確認 Krueger flap 是由機翼前緣下側翻出、用於低速起降的前緣高升力裝置，並區分其與滑軌式前緣縫翼的展開方式。
 - 新增 `krueger-flap` 至「系統與航機性能」互動輪轉場景，包含自訂 SVG 示意圖、繁中／英文／日文名稱、簡介、詳細解釋與三項重點；搜尋會自動納入。
 - `data/knowledge.json` 由 45 筆增加為 46 筆；首頁知識數量沿用資料庫動態計算，知識頁與首頁資料 fetch 版本更新為 v=161。
-- `python tools/check_knowledge.py` 通過：`knowledge OK: 46 topics`；尚未 commit、尚未 push，等待本地檢查。
+- `python tools/check_knowledge.py` 通過：`knowledge OK: 46 topics`；本地瀏覽器已驗證搜尋、條目開啟與首頁 `46 TOPICS`。
+- 使用者同意本輪發布；已由 commit `b0e5343` 推送至 `origin/main`。未納入未追蹤的 `data/korean_airlines_debug.json`。
 
 ### Krueger flap 名詞釐清（2026-08-31）
 
