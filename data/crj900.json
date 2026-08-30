@@ -2,19 +2,30 @@
   "title": "Bombardier CRJ900",
   "sub": "區域客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Bombardier CRJ900 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "CRJ900 外寬約 2.69 m，客艙為 2+2 座位；長而窄的窗列、低矮艙門與後機身引擎整流區形成典型 CRJ 比例。",
+        "en": "The CRJ900 fuselage is about 2.69 m wide with 2+2 seating. Its long narrow window row, compact doors and aft-engine fairings define CRJ proportions.",
+        "ja": "CRJ900の胴体幅は約2.69 mで2+2席です。長く細い窓列、小型ドア、後部エンジン整流部がCRJらしい比率を作ります。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "E190 機身約寬 3.01 m，雖然同為 2+2，艙門與舷窗看起來更大，機鼻到主翼的體積也更飽滿。",
+        "en": "The E190 is about 3.01 m wide. Though also 2+2, its doors, windows and forward body look visibly larger and fuller.",
+        "ja": "E190は幅約3.01 mで同じ2+2ですが、ドアと窓が大きく機首から主翼までの胴体もふっくら見えます。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "細長機身是最直接的比例線索。",
+          "en": "The pencil-thin body is the clearest proportion cue.",
+          "ja": "鉛筆のような細長い胴体が最も明確です。"
+        },
+        {
+          "zh": "客艙窗尺寸較小且排列密集。",
+          "en": "Cabin windows are small and closely spaced.",
+          "ja": "客室窓は小さく密に並びます。"
+        },
+        {
+          "zh": "後段機身被兩具引擎夾住。",
+          "en": "The aft fuselage is flanked by two engines.",
+          "ja": "後部胴体は2基のエンジンに挟まれます。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj900/fuselage.jpg",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Bombardier CRJ900 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "CRJ900 駕駛艙使用傳統駕駛盤與 Collins Pro Line 4 系列玻璃座艙，六具顯示器分列在兩名飛行員與中央區域。",
+        "en": "The CRJ900 flight deck uses conventional yokes and a Collins Pro Line 4 glass cockpit with six displays across the pilot and centre panels.",
+        "ja": "CRJ900は従来型操縦輪とCollins Pro Line 4グラスコックピットを採用し、操縦席と中央部に6画面を配置します。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "E190 同樣使用駕駛盤，不能只靠『有沒有駕駛盤』分辨；CRJ 面板較緊湊，中央顯示器比例也不同。",
+        "en": "The E190 also uses yokes, so yoke presence alone does not identify it. The CRJ panel is tighter, with a different centre-display arrangement.",
+        "ja": "E190も操縦輪式のため、それだけでは区別できません。CRJはパネルが狭く中央表示配置も異なります。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "兩席前方都有駕駛盤與操縱柱。",
+          "en": "Both pilots have yokes and control columns.",
+          "ja": "両席に操縦輪とコラムがあります。"
+        },
+        {
+          "zh": "典型布局為六具電子顯示器。",
+          "en": "The typical layout uses six electronic displays.",
+          "ja": "標準配置は6面電子表示器です。"
+        },
+        {
+          "zh": "窄機身讓座艙橫向空間較緊湊。",
+          "en": "The narrow fuselage makes the flight deck visibly compact.",
+          "ja": "細い胴体のため操縦席幅はコンパクトです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj900/cockpit.jpg",
+          "caption": {
+            "zh": "實機駕駛艙布局",
+            "en": "Real cockpit layout",
+            "ja": "実機コックピット配置"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Bombardier-crj-900-cockpit-by-RalfR.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Bombardier CRJ900 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "CRJ900 主翼翼展 24.85 m，後掠且面積緊湊，引擎不在翼下；機翼中央位置較後，強化細長機身的視覺比例。",
+        "en": "The CRJ900 has a compact swept 24.85 m wing with no underwing engines. Its relatively aft position emphasizes the long narrow fuselage.",
+        "ja": "CRJ900の主翼は翼幅24.85 mのコンパクトな後退翼で翼下エンジンがなく、後寄りの位置が細長い胴体を強調します。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "E190 翼展達 28.72 m，約多 3.9 m，且翼下吊有引擎；從下方或遠距離看差異很明顯。",
+        "en": "The E190 spans 28.72 m—about 3.9 m more—and carries underwing engines, making the difference clear from below or at distance.",
+        "ja": "E190の翼幅は28.72 mで約3.9 m広く、翼下エンジンもあるため下面や遠距離で差が明瞭です。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "主翼下沒有引擎吊架。",
+          "en": "No engine pylons hang beneath the wing.",
+          "ja": "主翼下にエンジンパイロンがありません。"
+        },
+        {
+          "zh": "翼展明顯短於機長。",
+          "en": "Span is much shorter than fuselage length.",
+          "ja": "翼幅は全長より大幅に短いです。"
+        },
+        {
+          "zh": "後緣可見襟翼與小型整流罩。",
+          "en": "Flaps and compact fairings line the trailing edge.",
+          "ja": "後縁にフラップと小型整流部があります。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj900/wing.jpg",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Lufthansa_Regional_Bombardier_CRJ-900LR_D-ACKK_MUC_2015_01.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Bombardier CRJ900 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "CRJ900 使用兩具 GE CF34-8C5，高旁通比短艙直接固定在後機身兩側；主翼下方完全沒有引擎吊架。",
+        "en": "The CRJ900 uses two GE CF34-8C5 turbofans attached directly to the aft fuselage, leaving the wing undersides free of engine pylons.",
+        "ja": "CRJ900はGE CF34-8C5を後部胴体両側へ直接搭載し、主翼下にエンジンパイロンがありません。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "E190 的 CF34-10E 更大且吊在主翼下；兩者雖同屬 CF34 家族，引擎安裝位置才是最強辨識點。",
+        "en": "The E190's larger CF34-10Es hang beneath the wings. Although both use CF34-family engines, installation location is decisive.",
+        "ja": "E190の大型CF34-10Eは主翼下にあり、同じCF34系でも搭載位置が決定的な識別点です。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "短艙緊貼後機身。",
+          "en": "Nacelles hug the aft fuselage.",
+          "ja": "ナセルは後部胴体に密着します。"
+        },
+        {
+          "zh": "進氣口位於主翼後方。",
+          "en": "Intakes sit behind the wing.",
+          "ja": "吸気口は主翼後方です。"
+        },
+        {
+          "zh": "翼下輪廓保持乾淨。",
+          "en": "The wing underside remains free of engines.",
+          "ja": "主翼下面にエンジンがありません。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj900/engine.jpg",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "CRJ900 垂直尾翼高而後掠，頂端直接承載水平尾翼；根部前方兩側就是引擎短艙，形成集中而複雜的尾部輪廓。",
+        "en": "The CRJ900's tall swept fin carries the tailplane at its tip, while engine nacelles flank the root, creating a concentrated T-tail silhouette.",
+        "ja": "CRJ900の高い後退垂尾は頂部に水平尾翼を載せ、根元両側にナセルがある集中的なT字尾部です。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "E190 垂尾頂端沒有水平翼面，低置尾翼從後機身兩側伸出；尾翼布局可在一秒內分開兩型。",
+        "en": "The E190 fin tip is clear, with tailplanes extending low from the aft fuselage. Tail layout separates the pair immediately.",
+        "ja": "E190は垂尾頂部が空き、水平尾翼は後部胴体低位置から伸びるため即座に区別できます。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "垂尾頂端與水平尾翼交叉。",
+          "en": "The tailplane intersects the fin tip.",
+          "ja": "垂尾頂部で水平尾翼と交差します。"
+        },
+        {
+          "zh": "垂尾根部鄰近雙發短艙。",
+          "en": "Twin nacelles flank the fin root.",
+          "ja": "垂尾根元の両側にナセルがあります。"
+        },
+        {
+          "zh": "尾部整體高度高但翼展窄。",
+          "en": "The empennage is tall but narrow in span.",
+          "ja": "尾部は高い一方で幅は狭いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj900/vstab.jpg",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "CRJ900 水平尾翼位於垂直尾翼頂端，是完整的 T 型尾翼；高置設計讓尾翼遠離主翼和後置引擎尾流。",
+        "en": "The CRJ900 tailplane sits atop the fin as a full T-tail, keeping it high above the wing and aft-engine flow field.",
+        "ja": "CRJ900の水平尾翼は垂尾頂部の完全なT字尾翼で、主翼や後置エンジン流れから高く離れます。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "E190 的水平尾翼低置在尾錐兩側；即使只看到後半機身，水平尾翼高度通常已足以分辨。",
+        "en": "The E190 tailplane mounts low beside the tailcone. Even a partial rear view usually reveals enough height difference to identify it.",
+        "ja": "E190の水平尾翼は尾部両側の低位置にあり、後半部だけでも高さで識別できます。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "位於整架飛機最高處。",
+          "en": "It sits at the aircraft's highest point.",
+          "ja": "機体の最上部にあります。"
+        },
+        {
+          "zh": "由正面形成鮮明 T 字。",
+          "en": "It forms a strong T shape head-on.",
+          "ja": "正面で明確なT字になります。"
+        },
+        {
+          "zh": "位置比 E190 高出整個後機身。",
+          "en": "It sits a full aft-fuselage height above the E190's.",
+          "ja": "E190より後部胴体一つ分ほど高い位置です。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj900/hstab.jpg",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:On_nice_looking_tail_(2813033694).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Bombardier CRJ900 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "CRJ900 為前三點式起落架，前腳雙輪、左右主腳各雙輪，共六輪；短腳柱配合窄機身，落地時姿態低而纖細。",
+        "en": "The CRJ900 has twin nose wheels and a twin-wheel main unit per side—six wheels total. Short struts support its low, slender stance.",
+        "ja": "CRJ900は前脚2輪、左右主脚各2輪の計6輪で、短い脚柱が低く細い姿勢を支えます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "E190 輪數完全相同，但腳距更寬、機身離地較高，且主腳位於翼下引擎附近；輪數不能作為判型依據。",
+        "en": "The E190 has the same wheel count but a wider track, taller stance and mains near the underwing engines. Wheel count is not diagnostic.",
+        "ja": "E190も同じ6輪ですが、輪距が広く地上高が高く、主脚は翼下エンジン近くにあります。輪数では区別できません。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "前腳與每側主腳皆為雙輪。",
+          "en": "Nose and each main unit use twin wheels.",
+          "ja": "前脚と左右主脚は各2輪です。"
+        },
+        {
+          "zh": "主腳間距較窄。",
+          "en": "The main-gear track is relatively narrow.",
+          "ja": "主脚輪距は比較的狭いです。"
+        },
+        {
+          "zh": "機身離地姿態較低。",
+          "en": "The fuselage sits relatively low.",
+          "ja": "胴体の地上高は比較的低いです。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/crj900/gear.jpg",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Lufthansa_Regional_Bombardier_CRJ-900LR_D-ACKK_MUC_2015_01.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "CRJ900 是細長的區域噴射機，全長約 36.4 m、翼展 24.85 m；兩具 CF34 裝在後機身，水平尾翼位於垂尾頂端。",
+        "en": "The CRJ900 is a slender regional jet about 36.4 m long with a 24.85 m span. Two aft-fuselage CF34s sit below a high T-tail.",
+        "ja": "CRJ900は全長約36.4 m、翼幅24.85 mの細長いリージョナル機で、後部胴体のCF34双発と高いT字尾翼が特徴です。"
+      },
+      "fact": {
+        "zh": "E190 幾乎同樣長，卻有更寬的機身與更大翼展；先看引擎位置和尾翼高度，比估算尺寸可靠。",
+        "en": "The E190 is almost the same length but wider and broader-winged. Engine location and tailplane height are more reliable than apparent size.",
+        "ja": "E190はほぼ同じ長さですが胴体と翼幅が大きく、見かけの寸法よりエンジン位置と水平尾翼高さが確実です。"
+      },
+      "bullets": [
+        {
+          "zh": "後機身左右各一具引擎。",
+          "en": "One engine mounts on each side of the aft fuselage.",
+          "ja": "後部胴体左右にエンジンが1基ずつあります。"
+        },
+        {
+          "zh": "水平尾翼形成清楚的 T 字。",
+          "en": "The tailplane forms a clear T-tail.",
+          "ja": "水平尾翼は明確なT字を形成します。"
+        },
+        {
+          "zh": "機身細、翼展短，外形像被拉長。",
+          "en": "A narrow body and short span create a stretched look.",
+          "ja": "細い胴体と短い翼幅で引き伸ばされた外観です。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/crj900/overview.jpg",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "CRJ900 正面風擋較直立而窄，中央兩片近矩形；外側窗以明顯折角接入細長機鼻，正面看窗帶較緊湊。",
+        "en": "CRJ900 windscreens are upright and narrow, with near-rectangular centre panes and sharply angled outer panes wrapping a slim nose.",
+        "ja": "CRJ900の風防は直立気味で細く、中央窓は矩形に近く、外側窓が鋭い角度で細い機首へ回り込みます。"
+      },
+      "fact": {
+        "zh": "E190 的主風擋更寬，外側窗與較圓的機鼻融合；兩型都應同時查看正面和側面，避免受拍攝角度誤導。",
+        "en": "The E190 has broader main panes blended into a rounder nose. Use front and side views together because perspective can mislead.",
+        "ja": "E190は主窓が広く丸い機首へ滑らかにつながります。撮影角度の影響を避けるため正面と側面を併用します。"
+      },
+      "bullets": [
+        {
+          "zh": "中央窗片高而較窄。",
+          "en": "Centre panes look tall and narrow.",
+          "ja": "中央窓は高く細く見えます。"
+        },
+        {
+          "zh": "外側窗折角清楚。",
+          "en": "Outer panes form a distinct angular break.",
+          "ja": "外側窓の折れ角が明瞭です。"
+        },
+        {
+          "zh": "窗帶相對整個機鼻顯得小。",
+          "en": "The glazing looks small relative to the nose.",
+          "ja": "窓帯は機首に対して小さく見えます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/crj900/window-front.jpg",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:THE_CRJ-900_head_on_(2436749543).jpg"
+        },
+        {
+          "src": "assets/reference/crj900/window-side.jpg",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "CRJ900 主翼末端有小型直立翼尖小翼，翼展短且小翼比例醒目；從正面可看見兩片小翼像細小刀片向上伸出。",
+        "en": "The CRJ900 ends its short-span wing in small upright winglets that look like thin blades from the front.",
+        "ja": "CRJ900は短い主翼端に小型直立ウイングレットを持ち、正面では細い刃のように見えます。"
+      },
+      "fact": {
+        "zh": "E190 也有上彎翼尖裝置，因此『有小翼』本身不能分辨；應搭配翼展和引擎位置。",
+        "en": "The E190 also has upturned tips, so winglets alone do not identify either aircraft; combine them with span and engine location.",
+        "ja": "E190にも上向き翼端装置があるため、小翼だけでなく翼幅とエンジン位置を併用します。"
+      },
+      "bullets": [
+        {
+          "zh": "小翼窄而接近直立。",
+          "en": "The winglet is narrow and nearly vertical.",
+          "ja": "小翼は細くほぼ直立です。"
+        },
+        {
+          "zh": "相對短翼展，小翼顯得較突出。",
+          "en": "It stands out against the short span.",
+          "ja": "短い翼幅に対して小翼が目立ちます。"
+        },
+        {
+          "zh": "不是判型的單一證據。",
+          "en": "It is not a standalone identification cue.",
+          "ja": "単独の識別根拠にはなりません。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/crj900/wingtip.jpg",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -170,7 +560,7 @@
     "尺寸": [
       [
         "全長",
-        "36.20 m（118 ft 9 in）"
+        "36.40 m（119 ft 5 in）"
       ],
       [
         "翼展",

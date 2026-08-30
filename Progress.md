@@ -226,3 +226,18 @@
 - 本地瀏覽器驗證比較頁 10 列、22 張照片、22 個 Commons 來源、20 個單機部位連結且無破圖；繁中、英文、日文切換正常，Beluga 水平尾翼與 Dreamlifter 機身深連結均載入正確照片與內容。
 - 本機預覽：`http://localhost:8000/versus.html?a=beluga&b=dreamlifter&local=154`。本批尚未 commit、尚未 push，等待使用者確認。
 - 使用者已確認本批並同意發布；準備提交並推送至 `origin/main`，之後接續下一組機型。
+
+### Bombardier CRJ900 / Embraer E190 實機部位辨識比較（2026-08-30，本地完成、待確認）
+
+- Airbus Beluga／Boeing Dreamlifter 批次已以 commit `b079ff8`（`新增 Beluga 與 Dreamlifter 實機部位辨識比較`）推送至 `origin/main`。
+- 下一批選定 Bombardier CRJ900（`crj900`）與 Embraer E190（`e190`）：兩者皆為約 90–100 座級雙發區域噴射機，但 CRJ900 採後機身引擎與 T 尾，E190 採翼下引擎與低置水平尾翼，適合建立實用辨識對照。
+- 沿用既有 10 類、Commons 真實照片、三語內容與授權管線；完成後先開本地預覽，未經使用者確認不 push。`data/korean_airlines_debug.json` 維持未追蹤且不納入作業。
+- 已完成兩型各 10 類三語辨識內容與各 11 張 Wikimedia Commons 真實照片，正／側駕駛艙外窗分開呈現，共 22 張；所有外部照片均為 CRJ900 或第一代 E190，同時排除 CRJ700、E170 與 E190-E2 混用。
+- 辨識內容聚焦於兩型近乎相同的機長，CRJ900 的 24.85 m 短翼展、後置 CF34-8C5、T 尾與窄機身，對照 E190 的 28.72 m 翼展、翼下 CF34-10E、低置尾翼與較寬 2+2 客艙；並明確說明兩型均為六輪且都有駕駛盤，不能只靠輪數或操縱盤判型。
+- 目視檢查後重裁 CRJ900 正面窗、翼尖、垂尾與 E190 正／側外窗；作者、Commons 來源、授權及第一代 E190 適用範圍已加入 `assets/reference/ATTRIBUTION.md`。
+- 同步以 Bombardier／Embraer 官方規劃資料修正 CRJ900 全長為 36.40 m，並修正 E190 典型載客描述、機高 10.55 m 與貨艙容積 22.63 m³。
+- 比較／檢視資料升為 v=155，Service Worker cache 升為 `hangar-v17`；更新工具自我檢查通過 26 架 × 10 類／286 張照片，JSON、Python、JavaScript、圖片尺寸與 `git diff --check` 均通過。
+- 最後目視檢查修正 CRJ900 垂尾來源連結、整體照片裁切及機身照片黑邊；E190 起落架改用可清楚辨識六輪放下狀態的 KLM 正面實照，同步更新來源、授權與下載工具。
+- 本地瀏覽器已驗證比較頁 10 列、22 張照片、22 個 Commons 來源、20 個單機部位連結；逐段載入後全數照片正常，繁中／英文／日文內容與標題正常，CRJ900 外窗與 E190 起落架的單機深連結亦正常。
+- 實機照片比較累計完成 26／52 架、286 張照片，尚餘 26 架。本機預覽：`http://localhost:8000/versus.html?a=crj900&b=e190&local=155-final`。本批尚未 commit、尚未 push，等待使用者確認；`data/korean_airlines_debug.json` 維持未追蹤且未修改。
+- 使用者已確認並同意發布；本批準備提交並推送至 `origin/main`，之後接續下一組機型。

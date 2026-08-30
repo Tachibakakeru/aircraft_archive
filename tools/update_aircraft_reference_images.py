@@ -342,6 +342,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:Boeing_747-409(LCF)_Dreamlifter,_N249BA_-_PAE_(21348697683).jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg",
     },
+    "crj900": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Bombardier-crj-900-cockpit-by-RalfR.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:THE_CRJ-900_head_on_(2436749543).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Lufthansa_Regional_Bombardier_CRJ-900LR_D-ACKK_MUC_2015_01.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:On_nice_looking_tail_(2813033694).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Lufthansa_Regional_Bombardier_CRJ-900LR_D-ACKK_MUC_2015_01.jpg",
+    },
+    "e190": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_190_OH-LKP_at_HEL_05JUN2015.JPG",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Cabine_do_Embraer_190.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:PH-EZX_KLM_Cityhopper_Embraer_ERJ-190STD_(ERJ-190-100)_-_cn_19000545_taxiing_front_view_13july2013_pic1.JPG",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_190_OH-LKP_at_HEL_05JUN2015.JPG",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Finnair_Embraer_190_OH-LKP_at_HEL_05JUN2015.JPG",
+        "engine": "https://commons.wikimedia.org/wiki/File:Embraer_E190_engine_in-flight.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Embraer_E190_wingtip.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Embraer_E190_wing.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:LV-CDY_Embraer_190_Austral_Tail_(8164021706).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:LV-CDY_Embraer_190_Austral_Tail_(8164021706).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:PH-EZX_KLM_Cityhopper_Embraer_ERJ-190STD_(ERJ-190-100)_-_cn_19000545_taxiing_front_view_13july2013_pic1.JPG",
+    },
 }
 
 
@@ -1455,6 +1481,114 @@ CONTENT.update({
             ("A319 前腳雙輪、左右主腳各單軸雙輪；主腳向內收入翼身整流區，艙門會遮蔽輪胎，不像 737 收輪後仍露出胎面。", "The A319 has twin nose wheels and a two-wheel main unit per side. The mains retract inward behind doors, unlike the 737's exposed tyre faces.", "A319は前脚2輪、左右主脚各単軸2輪で、内側へ格納され扉に覆われ、737のようにタイヤ面が露出しません。"),
             ("兩者總輪數都為六輪，輪數完全無法區分；最可靠的是 A319 較長腳柱、較高離地姿態與完整艙門。", "Both total six wheels, so wheel count is useless. The A319's taller struts, higher stance and full doors are stronger cues.", "両機とも合計6輪で輪数は使えません。A319の長い脚柱、高い姿勢、完全な脚扉を見ます。"),
             [("前腳與每側主腳皆為雙輪。", "Nose and each main unit use twin wheels.", "前脚と左右主脚は各2輪です。"), ("收起主輪由艙門遮蔽。", "Doors cover the retracted main wheels.", "格納主輪は扉で覆われます。"), ("離地高度高於 737-700。", "Ground clearance is greater than the 737-700's.", "地上高は737-700より高いです。")],
+        ),
+    },
+})
+
+
+CONTENT.update({
+    "crj900": {
+        "overview": identify(
+            ("CRJ900 是細長的區域噴射機，全長約 36.4 m、翼展 24.85 m；兩具 CF34 裝在後機身，水平尾翼位於垂尾頂端。", "The CRJ900 is a slender regional jet about 36.4 m long with a 24.85 m span. Two aft-fuselage CF34s sit below a high T-tail.", "CRJ900は全長約36.4 m、翼幅24.85 mの細長いリージョナル機で、後部胴体のCF34双発と高いT字尾翼が特徴です。"),
+            ("E190 幾乎同樣長，卻有更寬的機身與更大翼展；先看引擎位置和尾翼高度，比估算尺寸可靠。", "The E190 is almost the same length but wider and broader-winged. Engine location and tailplane height are more reliable than apparent size.", "E190はほぼ同じ長さですが胴体と翼幅が大きく、見かけの寸法よりエンジン位置と水平尾翼高さが確実です。"),
+            [("後機身左右各一具引擎。", "One engine mounts on each side of the aft fuselage.", "後部胴体左右にエンジンが1基ずつあります。"), ("水平尾翼形成清楚的 T 字。", "The tailplane forms a clear T-tail.", "水平尾翼は明確なT字を形成します。"), ("機身細、翼展短，外形像被拉長。", "A narrow body and short span create a stretched look.", "細い胴体と短い翼幅で引き伸ばされた外観です。")],
+        ),
+        "cockpit": identify(
+            ("CRJ900 駕駛艙使用傳統駕駛盤與 Collins Pro Line 4 系列玻璃座艙，六具顯示器分列在兩名飛行員與中央區域。", "The CRJ900 flight deck uses conventional yokes and a Collins Pro Line 4 glass cockpit with six displays across the pilot and centre panels.", "CRJ900は従来型操縦輪とCollins Pro Line 4グラスコックピットを採用し、操縦席と中央部に6画面を配置します。"),
+            ("E190 同樣使用駕駛盤，不能只靠『有沒有駕駛盤』分辨；CRJ 面板較緊湊，中央顯示器比例也不同。", "The E190 also uses yokes, so yoke presence alone does not identify it. The CRJ panel is tighter, with a different centre-display arrangement.", "E190も操縦輪式のため、それだけでは区別できません。CRJはパネルが狭く中央表示配置も異なります。"),
+            [("兩席前方都有駕駛盤與操縱柱。", "Both pilots have yokes and control columns.", "両席に操縦輪とコラムがあります。"), ("典型布局為六具電子顯示器。", "The typical layout uses six electronic displays.", "標準配置は6面電子表示器です。"), ("窄機身讓座艙橫向空間較緊湊。", "The narrow fuselage makes the flight deck visibly compact.", "細い胴体のため操縦席幅はコンパクトです。")],
+        ),
+        "windshield": identify(
+            ("CRJ900 正面風擋較直立而窄，中央兩片近矩形；外側窗以明顯折角接入細長機鼻，正面看窗帶較緊湊。", "CRJ900 windscreens are upright and narrow, with near-rectangular centre panes and sharply angled outer panes wrapping a slim nose.", "CRJ900の風防は直立気味で細く、中央窓は矩形に近く、外側窓が鋭い角度で細い機首へ回り込みます。"),
+            ("E190 的主風擋更寬，外側窗與較圓的機鼻融合；兩型都應同時查看正面和側面，避免受拍攝角度誤導。", "The E190 has broader main panes blended into a rounder nose. Use front and side views together because perspective can mislead.", "E190は主窓が広く丸い機首へ滑らかにつながります。撮影角度の影響を避けるため正面と側面を併用します。"),
+            [("中央窗片高而較窄。", "Centre panes look tall and narrow.", "中央窓は高く細く見えます。"), ("外側窗折角清楚。", "Outer panes form a distinct angular break.", "外側窓の折れ角が明瞭です。"), ("窗帶相對整個機鼻顯得小。", "The glazing looks small relative to the nose.", "窓帯は機首に対して小さく見えます。")],
+        ),
+        "fuselage": identify(
+            ("CRJ900 外寬約 2.69 m，客艙為 2+2 座位；長而窄的窗列、低矮艙門與後機身引擎整流區形成典型 CRJ 比例。", "The CRJ900 fuselage is about 2.69 m wide with 2+2 seating. Its long narrow window row, compact doors and aft-engine fairings define CRJ proportions.", "CRJ900の胴体幅は約2.69 mで2+2席です。長く細い窓列、小型ドア、後部エンジン整流部がCRJらしい比率を作ります。"),
+            ("E190 機身約寬 3.01 m，雖然同為 2+2，艙門與舷窗看起來更大，機鼻到主翼的體積也更飽滿。", "The E190 is about 3.01 m wide. Though also 2+2, its doors, windows and forward body look visibly larger and fuller.", "E190は幅約3.01 mで同じ2+2ですが、ドアと窓が大きく機首から主翼までの胴体もふっくら見えます。"),
+            [("細長機身是最直接的比例線索。", "The pencil-thin body is the clearest proportion cue.", "鉛筆のような細長い胴体が最も明確です。"), ("客艙窗尺寸較小且排列密集。", "Cabin windows are small and closely spaced.", "客室窓は小さく密に並びます。"), ("後段機身被兩具引擎夾住。", "The aft fuselage is flanked by two engines.", "後部胴体は2基のエンジンに挟まれます。")],
+        ),
+        "engine": identify(
+            ("CRJ900 使用兩具 GE CF34-8C5，高旁通比短艙直接固定在後機身兩側；主翼下方完全沒有引擎吊架。", "The CRJ900 uses two GE CF34-8C5 turbofans attached directly to the aft fuselage, leaving the wing undersides free of engine pylons.", "CRJ900はGE CF34-8C5を後部胴体両側へ直接搭載し、主翼下にエンジンパイロンがありません。"),
+            ("E190 的 CF34-10E 更大且吊在主翼下；兩者雖同屬 CF34 家族，引擎安裝位置才是最強辨識點。", "The E190's larger CF34-10Es hang beneath the wings. Although both use CF34-family engines, installation location is decisive.", "E190の大型CF34-10Eは主翼下にあり、同じCF34系でも搭載位置が決定的な識別点です。"),
+            [("短艙緊貼後機身。", "Nacelles hug the aft fuselage.", "ナセルは後部胴体に密着します。"), ("進氣口位於主翼後方。", "Intakes sit behind the wing.", "吸気口は主翼後方です。"), ("翼下輪廓保持乾淨。", "The wing underside remains free of engines.", "主翼下面にエンジンがありません。")],
+        ),
+        "wingtip": identify(
+            ("CRJ900 主翼末端有小型直立翼尖小翼，翼展短且小翼比例醒目；從正面可看見兩片小翼像細小刀片向上伸出。", "The CRJ900 ends its short-span wing in small upright winglets that look like thin blades from the front.", "CRJ900は短い主翼端に小型直立ウイングレットを持ち、正面では細い刃のように見えます。"),
+            ("E190 也有上彎翼尖裝置，因此『有小翼』本身不能分辨；應搭配翼展和引擎位置。", "The E190 also has upturned tips, so winglets alone do not identify either aircraft; combine them with span and engine location.", "E190にも上向き翼端装置があるため、小翼だけでなく翼幅とエンジン位置を併用します。"),
+            [("小翼窄而接近直立。", "The winglet is narrow and nearly vertical.", "小翼は細くほぼ直立です。"), ("相對短翼展，小翼顯得較突出。", "It stands out against the short span.", "短い翼幅に対して小翼が目立ちます。"), ("不是判型的單一證據。", "It is not a standalone identification cue.", "単独の識別根拠にはなりません。")],
+        ),
+        "wing": identify(
+            ("CRJ900 主翼翼展 24.85 m，後掠且面積緊湊，引擎不在翼下；機翼中央位置較後，強化細長機身的視覺比例。", "The CRJ900 has a compact swept 24.85 m wing with no underwing engines. Its relatively aft position emphasizes the long narrow fuselage.", "CRJ900の主翼は翼幅24.85 mのコンパクトな後退翼で翼下エンジンがなく、後寄りの位置が細長い胴体を強調します。"),
+            ("E190 翼展達 28.72 m，約多 3.9 m，且翼下吊有引擎；從下方或遠距離看差異很明顯。", "The E190 spans 28.72 m—about 3.9 m more—and carries underwing engines, making the difference clear from below or at distance.", "E190の翼幅は28.72 mで約3.9 m広く、翼下エンジンもあるため下面や遠距離で差が明瞭です。"),
+            [("主翼下沒有引擎吊架。", "No engine pylons hang beneath the wing.", "主翼下にエンジンパイロンがありません。"), ("翼展明顯短於機長。", "Span is much shorter than fuselage length.", "翼幅は全長より大幅に短いです。"), ("後緣可見襟翼與小型整流罩。", "Flaps and compact fairings line the trailing edge.", "後縁にフラップと小型整流部があります。")],
+        ),
+        "vstab": identify(
+            ("CRJ900 垂直尾翼高而後掠，頂端直接承載水平尾翼；根部前方兩側就是引擎短艙，形成集中而複雜的尾部輪廓。", "The CRJ900's tall swept fin carries the tailplane at its tip, while engine nacelles flank the root, creating a concentrated T-tail silhouette.", "CRJ900の高い後退垂尾は頂部に水平尾翼を載せ、根元両側にナセルがある集中的なT字尾部です。"),
+            ("E190 垂尾頂端沒有水平翼面，低置尾翼從後機身兩側伸出；尾翼布局可在一秒內分開兩型。", "The E190 fin tip is clear, with tailplanes extending low from the aft fuselage. Tail layout separates the pair immediately.", "E190は垂尾頂部が空き、水平尾翼は後部胴体低位置から伸びるため即座に区別できます。"),
+            [("垂尾頂端與水平尾翼交叉。", "The tailplane intersects the fin tip.", "垂尾頂部で水平尾翼と交差します。"), ("垂尾根部鄰近雙發短艙。", "Twin nacelles flank the fin root.", "垂尾根元の両側にナセルがあります。"), ("尾部整體高度高但翼展窄。", "The empennage is tall but narrow in span.", "尾部は高い一方で幅は狭いです。")],
+        ),
+        "hstab": identify(
+            ("CRJ900 水平尾翼位於垂直尾翼頂端，是完整的 T 型尾翼；高置設計讓尾翼遠離主翼和後置引擎尾流。", "The CRJ900 tailplane sits atop the fin as a full T-tail, keeping it high above the wing and aft-engine flow field.", "CRJ900の水平尾翼は垂尾頂部の完全なT字尾翼で、主翼や後置エンジン流れから高く離れます。"),
+            ("E190 的水平尾翼低置在尾錐兩側；即使只看到後半機身，水平尾翼高度通常已足以分辨。", "The E190 tailplane mounts low beside the tailcone. Even a partial rear view usually reveals enough height difference to identify it.", "E190の水平尾翼は尾部両側の低位置にあり、後半部だけでも高さで識別できます。"),
+            [("位於整架飛機最高處。", "It sits at the aircraft's highest point.", "機体の最上部にあります。"), ("由正面形成鮮明 T 字。", "It forms a strong T shape head-on.", "正面で明確なT字になります。"), ("位置比 E190 高出整個後機身。", "It sits a full aft-fuselage height above the E190's.", "E190より後部胴体一つ分ほど高い位置です。")],
+        ),
+        "gear": identify(
+            ("CRJ900 為前三點式起落架，前腳雙輪、左右主腳各雙輪，共六輪；短腳柱配合窄機身，落地時姿態低而纖細。", "The CRJ900 has twin nose wheels and a twin-wheel main unit per side—six wheels total. Short struts support its low, slender stance.", "CRJ900は前脚2輪、左右主脚各2輪の計6輪で、短い脚柱が低く細い姿勢を支えます。"),
+            ("E190 輪數完全相同，但腳距更寬、機身離地較高，且主腳位於翼下引擎附近；輪數不能作為判型依據。", "The E190 has the same wheel count but a wider track, taller stance and mains near the underwing engines. Wheel count is not diagnostic.", "E190も同じ6輪ですが、輪距が広く地上高が高く、主脚は翼下エンジン近くにあります。輪数では区別できません。"),
+            [("前腳與每側主腳皆為雙輪。", "Nose and each main unit use twin wheels.", "前脚と左右主脚は各2輪です。"), ("主腳間距較窄。", "The main-gear track is relatively narrow.", "主脚輪距は比較的狭いです。"), ("機身離地姿態較低。", "The fuselage sits relatively low.", "胴体の地上高は比較的低いです。")],
+        ),
+    },
+    "e190": {
+        "overview": identify(
+            ("E190 是約百座級 E-Jet，全長 36.24 m、翼展 28.72 m；較寬機身、翼下雙發與低置水平尾翼構成接近縮小型幹線客機的比例。", "The E190 is a roughly 100-seat E-Jet, 36.24 m long with a 28.72 m span. Its wider body, underwing twinjets and low tailplane resemble a compact mainline airliner.", "E190は約100席、全長36.24 m、翼幅28.72 mで、太い胴体、翼下双発、低位置尾翼が小型幹線機のような比率を作ります。"),
+            ("CRJ900 幾乎同長，但翼展少約 3.9 m，且引擎與水平尾翼都集中在尾部；不要靠機長猜測。", "The CRJ900 is nearly the same length but spans about 3.9 m less and concentrates engines and tailplane at the rear. Length alone misleads.", "CRJ900はほぼ同じ長さでも翼幅が約3.9 m狭く、エンジンと水平尾翼が尾部へ集中します。全長だけでは誤認します。"),
+            [("兩具引擎吊在主翼下。", "Two engines hang beneath the wings.", "2基のエンジンは主翼下です。"), ("水平尾翼位於後機身低處。", "The tailplane sits low on the aft fuselage.", "水平尾翼は後部胴体の低位置です。"), ("機身比 CRJ900 寬而飽滿。", "The body is wider and fuller than the CRJ900's.", "胴体はCRJ900より太くふっくらしています。")],
+        ),
+        "cockpit": identify(
+            ("E190 使用 Honeywell Primus Epic 玻璃座艙，兩席都有傳統駕駛盤，五具大型彩色顯示器橫向排列，面板比 CRJ900 更寬。", "The E190 uses a Honeywell Primus Epic glass cockpit with conventional yokes and five large colour displays across a broader panel.", "E190はHoneywell Primus Epicグラスコックピットで、操縦輪と幅広いパネル上の大型カラー5画面を備えます。"),
+            ("兩型都有駕駛盤；E190 的五螢幕布局、較寬中央面板與更寬座艙才是內部辨識重點。", "Both types have yokes. The E190's five-display layout, broader centre panel and wider cockpit are the useful interior cues.", "両機とも操縦輪式で、E190の5画面配置、広い中央パネル、広い操縦席が識別点です。"),
+            [("兩席前方各有駕駛盤。", "A yoke sits ahead of each pilot.", "両席正面に操縦輪があります。"), ("五具大型顯示器橫向排列。", "Five large displays span the panel.", "大型5画面が横方向に並びます。"), ("座艙寬度明顯大於 CRJ。", "The cockpit is visibly wider than the CRJ's.", "操縦席幅はCRJより明らかに広いです。")],
+        ),
+        "windshield": identify(
+            ("E190 主風擋較寬，中央接縫下方配合圓鈍機鼻形成柔和 V 形；外側窗向後收尖，整組窗帶比 CRJ900 更寬。", "The E190 has broad main windscreens forming a soft V over a rounded nose, with outer panes tapering aft into a wider glazing band.", "E190は丸い機首上に柔らかなV字を作る広い主風防と、後方へ細る外側窓を持ち、窓帯はCRJ900より幅広いです。"),
+            ("CRJ900 的中央窗更窄、折角更明顯；辨識時把窗帶寬度與機鼻圓鈍程度一起看。", "The CRJ900's centre panes are narrower and more angular. Compare glazing width together with nose fullness.", "CRJ900は中央窓が細く角張ります。窓帯幅と機首の丸みを合わせて見ます。"),
+            [("主風擋寬而稍向外傾。", "Main panes are broad and slightly splayed.", "主風防は広く外側へわずかに開きます。"), ("外側窗沿機身側面收尖。", "Outer panes taper along the fuselage side.", "外側窓は胴体側面へ細くなります。"), ("圓鼻讓窗帶顯得較低而寬。", "The round nose makes the glazing look low and wide.", "丸い機首で窓帯が低く広く見えます。")],
+        ),
+        "fuselage": identify(
+            ("E190 外寬約 3.01 m，客艙採 2+2 座位且沒有中間座；較大的舷窗、全尺寸前後艙門和飽滿翼身整流罩接近幹線客機尺度。", "The E190 is about 3.01 m wide with 2+2 seating and no middle seat. Larger windows, full-size end doors and a broad wing-body fairing give mainline-aircraft proportions.", "E190の胴体幅は約3.01 m、2+2席で中央席がありません。大きな窓、前後ドア、幅広い翼胴フェアリングが幹線機らしい比率です。"),
+            ("CRJ900 雖然同樣是 2+2，機身約窄 32 cm；從正面或艙門尺度比較，差異比側面長度更清楚。", "Although both seat 2+2, the CRJ900 is about 32 cm narrower. Front views and door scale reveal the difference better than side length.", "同じ2+2でもCRJ900は約32 cm細く、側面の長さより正面やドア寸法で差が分かります。"),
+            [("機身截面較圓且寬。", "The fuselage section is rounder and wider.", "胴体断面はより丸く幅広いです。"), ("前後均有大型客艙門。", "Large passenger doors sit fore and aft.", "前後に大型客室ドアがあります。"), ("翼身整流罩寬而平順。", "The wing-body fairing is broad and smooth.", "翼胴フェアリングは幅広く滑らかです。")],
+        ),
+        "engine": identify(
+            ("E190 使用兩具 GE CF34-10E，短艙以吊架固定在低置主翼下方；進氣口尺寸大於 CRJ900 的 CF34-8C5。", "The E190 uses two GE CF34-10E turbofans suspended below the low wing, with larger intakes than the CRJ900's CF34-8C5s.", "E190はGE CF34-10Eを低翼下へ吊り下げ、吸気口はCRJ900のCF34-8C5より大きいです。"),
+            ("兩型名稱都出現 CF34，但短艙位置完全不同；看到翼下雙發就應優先考慮 E190，而非 CRJ900。", "Both engine names include CF34, but installation is completely different. Underwing twinjets strongly favour the E190 over the CRJ900.", "両方CF34系でも搭載位置は全く異なり、翼下双発ならCRJ900よりE190を優先します。"),
+            [("每側主翼下吊掛一具引擎。", "One engine hangs beneath each wing.", "左右主翼下に1基ずつあります。"), ("短艙進氣口接近圓形。", "The nacelle intake is nearly circular.", "ナセル吸気口はほぼ円形です。"), ("後機身兩側沒有引擎。", "No engines flank the aft fuselage.", "後部胴体側面にエンジンはありません。")],
+        ),
+        "wingtip": identify(
+            ("原型 E190 主翼末端有向上延伸的融合式翼尖小翼，外形比 CRJ900 小翼更寬、後掠更明顯。", "The original E190 wing ends in an upturned blended winglet, broader and more swept than the CRJ900's narrow tip device.", "初代E190は上向きブレンデッド・ウイングレットを持ち、CRJ900の細い小翼より幅広く後退しています。"),
+            ("E190-E2 改為重新設計的無傳統小翼翼尖；本頁照片與內容描述第一代 E190，不應套用到 E190-E2。", "The E190-E2 uses a redesigned wing without this traditional winglet. This page describes the first-generation E190.", "E190-E2は従来型小翼のない新主翼で、本頁は初代E190を対象とします。"),
+            [("小翼向上且略向後彎。", "The winglet rises and sweeps slightly aft.", "小翼は上方かつやや後方へ伸びます。"), ("底部與翼尖平順融合。", "Its base blends smoothly into the tip.", "基部は翼端へ滑らかにつながります。"), ("需確認不是 E190-E2。", "Confirm that the aircraft is not an E190-E2.", "E190-E2でないことを確認します。")],
+        ),
+        "wing": identify(
+            ("E190 主翼翼展 28.72 m，後掠且翼下承載兩具引擎；大型襟翼、擾流板與明顯襟翼滑軌整流罩可從客艙清楚觀察。", "The E190's 28.72 m swept wing carries two engines and features large flaps, spoilers and visible flap-track fairings.", "E190の翼幅28.72 mの後退翼は2基のエンジンを搭載し、大型フラップ、スポイラー、フラップトラック整流部が見えます。"),
+            ("CRJ900 翼展較短且翼下完全乾淨；由下方看，E190 的引擎吊架和更寬翼面是直接差異。", "The CRJ900 has a shorter, engine-free wing underside. From below, the E190's pylons and broader wing are unmistakable.", "CRJ900は翼幅が短く翼下が空いており、下面ではE190のパイロンと広い翼面が明確です。"),
+            [("翼下可見引擎與吊架。", "Engines and pylons are visible beneath the wing.", "主翼下にエンジンとパイロンがあります。"), ("翼展約比 CRJ900 多 3.9 m。", "Span exceeds the CRJ900's by about 3.9 m.", "翼幅はCRJ900より約3.9 m広いです。"), ("後緣有明顯襟翼滑軌整流罩。", "Prominent flap-track fairings line the trailing edge.", "後縁に目立つフラップトラック整流部があります。")],
+        ),
+        "vstab": identify(
+            ("E190 垂直尾翼高而後掠，根部以寬背鰭平順接入後機身；頂端沒有水平尾翼，輪廓保持單一三角形。", "The E190 has a tall swept fin with a broad dorsal blend into the aft fuselage. Its tip is clear of the tailplane, preserving a simple triangular outline.", "E190の垂尾は高く後退し幅広い背びれで後部胴体へつながり、頂部に水平尾翼がない単純な三角形です。"),
+            ("CRJ900 的垂尾頂端被水平尾翼橫穿，根部又鄰近兩具引擎；只看垂尾輪廓就能快速排除。", "The CRJ900 fin is crossed by a tailplane at the top and flanked by engines at the root, making separation immediate.", "CRJ900は頂部を水平尾翼が横切り根元にエンジンがあるため、垂尾だけでもすぐ区別できます。"),
+            [("垂尾頂端沒有橫向翼面。", "No horizontal surface crosses the fin tip.", "垂尾頂部に水平面がありません。"), ("根部背鰭寬而平順。", "The dorsal root is broad and smooth.", "根元背びれは幅広く滑らかです。"), ("後機身側面沒有引擎短艙。", "No nacelles flank the aft fuselage.", "後部胴体側面にナセルがありません。")],
+        ),
+        "hstab": identify(
+            ("E190 水平尾翼低置在後機身兩側，後掠並向外收尖；其高度約與主翼同屬機身中下部，而非架在垂尾頂端。", "The E190's swept tapered tailplanes mount low on either side of the aft fuselage rather than atop the fin.", "E190の後退・先細水平尾翼は後部胴体両側の低位置にあり、垂尾頂部ではありません。"),
+            ("CRJ900 使用 T 尾；由正面、側面或後方，只要看到水平尾翼高度就能完成最可靠的判型。", "The CRJ900 uses a T-tail. From front, side or rear, tailplane height is the most reliable distinction.", "CRJ900はT字尾翼で、正面・側面・後方いずれも水平尾翼高さが最も確実です。"),
+            [("水平尾翼從尾錐兩側伸出。", "Tailplanes project from the sides of the tailcone.", "水平尾翼は尾部両側から伸びます。"), ("位置遠低於垂尾頂端。", "They sit well below the fin tip.", "垂尾頂部より大幅に低い位置です。"), ("低置尾翼與翼下引擎應一起確認。", "Confirm the low tail with underwing engines.", "低位置尾翼と翼下エンジンを合わせて確認します。")],
+        ),
+        "gear": identify(
+            ("E190 前腳雙輪、左右主腳各雙輪，共六輪；較長腳柱與較寬輪距讓機身和翼下引擎保持足夠離地間隙。", "The E190 has twin nose wheels and twin wheels on each main unit—six total. Taller struts and a wider track provide clearance for the body and underwing engines.", "E190は前脚2輪、左右主脚各2輪の計6輪で、長い脚柱と広い輪距が胴体と翼下エンジンの地上間隔を確保します。"),
+            ("CRJ900 也是六輪，但主腳更靠近窄機身、姿態更低；比較輪距與引擎位置，不要比較輪數。", "The CRJ900 also has six wheels, but its mains sit closer to the narrow body and lower stance. Compare track and engines, not wheel count.", "CRJ900も6輪ですが主脚は細い胴体に近く姿勢も低いため、輪数でなく輪距とエンジン位置を見ます。"),
+            [("前腳與每側主腳皆為雙輪。", "Nose and each main unit use twin wheels.", "前脚と左右主脚は各2輪です。"), ("主腳輪距較寬。", "The main-gear track is relatively wide.", "主脚輪距は比較的広いです。"), ("機身與翼下引擎離地較高。", "The fuselage and engines sit higher above ground.", "胴体と翼下エンジンの地上高が高めです。")],
         ),
     },
 })

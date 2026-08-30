@@ -423,3 +423,39 @@ The cockpit image is an A300-family layout reference because the BelugaST retain
 | `dreamlifter/gear.jpg` | [Dreamlifter landing gear extended](https://commons.wikimedia.org/wiki/File:Boeing_Dreamlifter_Landing.jpg), Ktin; cropped | CC BY-SA 4.0 |
 
 The cockpit image is a 747-400-family layout reference. The external photographs show actual Dreamlifters, including the swing-tail cargo access and the conversion's winglet-free tips.
+
+## Bombardier CRJ900 (`crj900`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `crj900/overview.jpg` | [Air Canada Express CRJ900 C-FJFZ](https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg), Acroterion; resized | CC BY-SA 4.0 |
+| `crj900/cockpit.jpg` | [CRJ900 flight deck](https://commons.wikimedia.org/wiki/File:Bombardier-crj-900-cockpit-by-RalfR.jpg), Ralf Roletschek | CC BY-SA 3.0 |
+| `crj900/window-front.jpg` | [CRJ900 head-on view](https://commons.wikimedia.org/wiki/File:THE_CRJ-900_head_on_(2436749543).jpg), Cory W. Watts; cropped | CC BY-SA 2.0 |
+| `crj900/window-side.jpg` | [Air Canada Express CRJ900 nose](https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `crj900/fuselage.jpg` | [Air Canada Express CRJ900 fuselage](https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `crj900/engine.jpg` | [CRJ900 CF34-8C5 installation](https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `crj900/wingtip.jpg` | [CRJ900 wing and winglet](https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `crj900/wing.jpg` | [Lufthansa Regional CRJ900 wing](https://commons.wikimedia.org/wiki/File:Lufthansa_Regional_Bombardier_CRJ-900LR_D-ACKK_MUC_2015_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+| `crj900/vstab.jpg` | [CRJ900 vertical tail](https://commons.wikimedia.org/wiki/File:Air_Canada_Express_Bombardier_CRJ-900_C-FJFZ_BWI_MD1.jpg), Acroterion; cropped | CC BY-SA 4.0 |
+| `crj900/hstab.jpg` | [CRJ900 T-tail close-up](https://commons.wikimedia.org/wiki/File:On_nice_looking_tail_(2813033694).jpg), Cory W. Watts; cropped | CC BY-SA 2.0 |
+| `crj900/gear.jpg` | [Lufthansa Regional CRJ900 landing gear](https://commons.wikimedia.org/wiki/File:Lufthansa_Regional_Bombardier_CRJ-900LR_D-ACKK_MUC_2015_01.jpg), Julian Herzog; cropped | CC BY 4.0 |
+
+All exterior photographs show actual CRJ900-family aircraft. The flight-deck photograph is explicitly categorized as a CRJ900 cockpit. The landing views show the extended gear and aft-mounted engine layout without borrowing CRJ700 imagery.
+
+## Embraer E190 (`e190`)
+
+| Local file | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `e190/overview.jpg` | [Finnair E190 OH-LKP](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_190_OH-LKP_at_HEL_05JUN2015.JPG), Lentokonefani; cropped | CC BY-SA 4.0 |
+| `e190/cockpit.jpg` | [Embraer 190 flight deck](https://commons.wikimedia.org/wiki/File:Cabine_do_Embraer_190.jpg), Renato Araújo / Agência Brasil | CC BY 3.0 BR |
+| `e190/window-front.jpg` | [KLM Cityhopper E190 PH-EZX head-on](https://commons.wikimedia.org/wiki/File:PH-EZX_KLM_Cityhopper_Embraer_ERJ-190STD_(ERJ-190-100)_-_cn_19000545_taxiing_front_view_13july2013_pic1.JPG), Alf van Beem; cropped | CC0 |
+| `e190/window-side.jpg` | [Finnair E190 cockpit windows](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_190_OH-LKP_at_HEL_05JUN2015.JPG), Lentokonefani; cropped | CC BY-SA 4.0 |
+| `e190/fuselage.jpg` | [Finnair E190 fuselage](https://commons.wikimedia.org/wiki/File:Finnair_Embraer_190_OH-LKP_at_HEL_05JUN2015.JPG), Lentokonefani; cropped | CC BY-SA 4.0 |
+| `e190/engine.jpg` | [E190 CF34-10E in flight](https://commons.wikimedia.org/wiki/File:Embraer_E190_engine_in-flight.jpg), Michael C. | CC0 |
+| `e190/wingtip.jpg` | [E190 wingtip device](https://commons.wikimedia.org/wiki/File:Embraer_E190_wingtip.jpg), Michael C. | CC0 |
+| `e190/wing.jpg` | [E190 wing planform](https://commons.wikimedia.org/wiki/File:Embraer_E190_wing.jpg), Michael C. | CC0 |
+| `e190/vstab.jpg` | [Austral E190 vertical tail](https://commons.wikimedia.org/wiki/File:LV-CDY_Embraer_190_Austral_Tail_(8164021706).jpg), Aeroprints.com; cropped | CC BY-SA 3.0 |
+| `e190/hstab.jpg` | [Austral E190 low-mounted tailplane](https://commons.wikimedia.org/wiki/File:LV-CDY_Embraer_190_Austral_Tail_(8164021706).jpg), Aeroprints.com; cropped | CC BY-SA 3.0 |
+| `e190/gear.jpg` | [KLM Cityhopper E190 PH-EZX extended landing gear](https://commons.wikimedia.org/wiki/File:PH-EZX_KLM_Cityhopper_Embraer_ERJ-190STD_(ERJ-190-100)_-_cn_19000545_taxiing_front_view_13july2013_pic1.JPG), Alf van Beem; cropped | CC0 |
+
+The photographs show first-generation E190 aircraft, not the E190-E2. The wingtip description therefore applies to the original E190 blended winglet; the E2's redesigned wing is deliberately excluded.

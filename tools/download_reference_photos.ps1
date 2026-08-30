@@ -174,6 +174,12 @@ $photos = [ordered]@{
   "a343/cockpit.jpg" = "A340-300 cockpit (8459431964).jpg"
   "beluga/cockpit.jpg" = "Airbus A300 panel.jpg"
   "dreamlifter/cockpit.jpg" = "Boeing 747-400 cockpit.jpg"
+  "crj900/cockpit.jpg" = "Bombardier-crj-900-cockpit-by-RalfR.jpg"
+  "crj900/overview.jpg" = "Air Canada Express Bombardier CRJ-900 C-FJFZ BWI MD1.jpg"
+  "e190/cockpit.jpg" = "Cabine do Embraer 190.jpg"
+  "e190/engine.jpg" = "Embraer E190 engine in-flight.jpg"
+  "e190/wingtip.jpg" = "Embraer E190 wingtip.jpg"
+  "e190/wing.jpg" = "Embraer E190 wing.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -301,6 +307,22 @@ $windowPhotos = @(
   @{ Dest="dreamlifter/vstab.jpg"; Title="Boeing 747-409(LCF) Dreamlifter, N249BA - PAE (21348697683).jpg"; Crop=@(.40,.02,.20); Force=$true }
   @{ Dest="dreamlifter/hstab.jpg"; Title="Boeing 747-409(LCF) Dreamlifter, N249BA - PAE (21348697683).jpg"; Crop=@(.20,.35,.60); Force=$true }
   @{ Dest="dreamlifter/gear.jpg"; Title="Boeing Dreamlifter Landing.jpg"; Crop=@(.39,.56,.40) }
+  @{ Dest="crj900/window-front.jpg"; Title="THE CRJ-900 head on (2436749543).jpg"; Crop=@(.35,.42,.30) }
+  @{ Dest="crj900/window-side.jpg"; Title="Air Canada Express Bombardier CRJ-900 C-FJFZ BWI MD1.jpg"; Crop=@(.02,.25,.27) }
+  @{ Dest="crj900/fuselage.jpg"; Title="Air Canada Express Bombardier CRJ-900 C-FJFZ BWI MD1.jpg"; Crop=@(.06,.03,.76) }
+  @{ Dest="crj900/engine.jpg"; Title="Air Canada Express Bombardier CRJ-900 C-FJFZ BWI MD1.jpg"; Crop=@(.63,.38,.25) }
+  @{ Dest="crj900/wingtip.jpg"; Title="Air Canada Express Bombardier CRJ-900 C-FJFZ BWI MD1.jpg"; Crop=@(.38,.12,.34) }
+  @{ Dest="crj900/wing.jpg"; Title="Lufthansa Regional Bombardier CRJ-900LR D-ACKK MUC 2015 01.jpg"; Crop=@(.37,.30,.39) }
+  @{ Dest="crj900/vstab.jpg"; Title="Air Canada Express Bombardier CRJ-900 C-FJFZ BWI MD1.jpg"; Crop=@(.72,.20,.25) }
+  @{ Dest="crj900/hstab.jpg"; Title="On nice looking tail (2813033694).jpg"; Crop=@(.08,.05,.84) }
+  @{ Dest="crj900/gear.jpg"; Title="Lufthansa Regional Bombardier CRJ-900LR D-ACKK MUC 2015 01.jpg"; Crop=@(.22,.47,.44) }
+  @{ Dest="e190/overview.jpg"; Title="Finnair Embraer 190 OH-LKP at HEL 05JUN2015.JPG"; Crop=@(.08,.19,.84) }
+  @{ Dest="e190/window-front.jpg"; Title="PH-EZX KLM Cityhopper Embraer ERJ-190STD (ERJ-190-100) - cn 19000545 taxiing front view 13july2013 pic1.JPG"; Crop=@(.30,.40,.40) }
+  @{ Dest="e190/window-side.jpg"; Title="Finnair Embraer 190 OH-LKP at HEL 05JUN2015.JPG"; Crop=@(.03,.39,.30) }
+  @{ Dest="e190/fuselage.jpg"; Title="Finnair Embraer 190 OH-LKP at HEL 05JUN2015.JPG"; Crop=@(.08,.25,.80) }
+  @{ Dest="e190/vstab.jpg"; Title="LV-CDY Embraer 190 Austral Tail (8164021706).jpg"; Crop=@(.05,.05,.90) }
+  @{ Dest="e190/hstab.jpg"; Title="LV-CDY Embraer 190 Austral Tail (8164021706).jpg"; Crop=@(.02,.30,.96) }
+  @{ Dest="e190/gear.jpg"; Title="PH-EZX KLM Cityhopper Embraer ERJ-190STD (ERJ-190-100) - cn 19000545 taxiing front view 13july2013 pic1.JPG"; Crop=@(.20,.54,.60) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 1600
