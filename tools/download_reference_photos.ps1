@@ -220,6 +220,10 @@ $photos = [ordered]@{
   "b753/cockpit.jpg" = "Boeing 757-300 Cockpit.JPG"
   "b739/overview.jpg" = "United Boeing 737-900 N30401 BWI MD1.jpg"
   "b753/overview.jpg" = "United Boeing 757-300 N78866 take off from Runway 27 Boston Feb 2025.jpg"
+  "cs300/overview.jpg" = "Air Canada A220-300.jpg"
+  "cs300/cockpit.jpg" = "JetBlue A220 - cockpit.jpg"
+  "b788/overview.jpg" = "United Boeing 787-8 N27908 IAD VA2.jpg"
+  "b788/cockpit.jpg" = "Boeing 787-8 N787BA cockpit.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -489,6 +493,29 @@ $windowPhotos += @(
   @{ Dest="b753/vstab.jpg"; Title="Icelandair Boeing 757 TF-ISX Oslo Gardermoen 2024 (01).jpg"; Crop=@(.27,.14,.20) }
   @{ Dest="b753/hstab.jpg"; Title="United Boeing 757-300 N77867 on final approach to Boston Feb 2022.jpg"; Crop=@(.145,.62,.36) }
   @{ Dest="b753/gear.jpg"; Title="United Boeing 757-300 N77867 on final approach to Boston Feb 2022.jpg"; Crop=@(.445,.62,.26) }
+)
+
+# A220-300 / 787-8. Some Commons source downloads use its documented
+# 3840/1920px thumbnails; crop ratios work at either size without enlargement.
+$windowPhotos += @(
+  @{ Dest="cs300/window-front.jpg"; Title="Delta Air Lines Airbus A220-300 front view November 2024.jpg"; Crop=@(.43,.30,.15) }
+  @{ Dest="cs300/window-side.jpg"; Title="Air Canada A220-300.jpg"; Crop=@(.055,.46,.10) }
+  @{ Dest="cs300/fuselage.jpg"; Title="Delta Airbus A220-300 N328DU taxiing at Boston July 2026.jpg"; Crop=@(.405,.445,.335) }
+  @{ Dest="cs300/engine.jpg"; Title="Delta Airbus A220-300 N328DU taxiing at Boston July 2026.jpg"; Crop=@(.438,.52,.16) }
+  @{ Dest="cs300/wingtip.jpg"; Title="Air Canada A220-300.jpg"; Crop=@(.515,.285,.13) }
+  @{ Dest="cs300/wing.jpg"; Title="Air Canada A220-300.jpg"; Crop=@(.365,.27,.37) }
+  @{ Dest="cs300/vstab.jpg"; Title="Air Canada A220-300.jpg"; Crop=@(.69,.26,.29) }
+  @{ Dest="cs300/hstab.jpg"; Title="Air Canada A220-300.jpg"; Crop=@(.815,.44,.175) }
+  @{ Dest="cs300/gear.jpg"; Title="Delta Air Lines Airbus A220-300 front view November 2024.jpg"; Crop=@(.36,.43,.28) }
+  @{ Dest="b788/window-front.jpg"; Title="The nose of Boeing 787-8 HS-TQB.jpg"; Crop=@(.625,.42,.26) }
+  @{ Dest="b788/window-side.jpg"; Title="Cockpit windows of a Boeing 787 (1).jpg"; Crop=@(.10,.28,.70) }
+  @{ Dest="b788/fuselage.jpg"; Title="United Boeing 787-8 N27908 IAD VA2.jpg"; Crop=@(.03,.38,.32) }
+  @{ Dest="b788/engine.jpg"; Title="United Boeing 787-8 N20904 MD1.jpg"; Crop=@(.52,.46,.21) }
+  @{ Dest="b788/wingtip.jpg"; Title="United Boeing 787-8 N20904 MD1.jpg"; Crop=@(.375,.035,.16) }
+  @{ Dest="b788/wing.jpg"; Title="United Boeing 787-8 N20904 MD1.jpg"; Crop=@(.295,.02,.59) }
+  @{ Dest="b788/vstab.jpg"; Title="United Boeing 787-8 N27908 IAD VA2.jpg"; Crop=@(.67,.08,.32) }
+  @{ Dest="b788/hstab.jpg"; Title="United Boeing 787-8 N20904 MD1.jpg"; Crop=@(.02,.36,.31) }
+  @{ Dest="b788/gear.jpg"; Title="United Boeing 787-8 N27908 IAD VA2.jpg"; Crop=@(.42,.59,.15) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0

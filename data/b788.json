@@ -2,18 +2,30 @@
   "title": "Boeing 787-8",
   "sub": "廣體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 787-8 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "N27908 的前機身裁切顯示前兩道客艙門與較大的舷窗。787-8 每側有四道地板高度客艙門，後兩道可在全景確認，並非 A220 那種翼上小型出口。",
+        "en": "N27908's forward-body crop shows the first two cabin doors and large windows. The 787-8 has four floor-level cabin doors per side; the rear two appear in the overview, unlike the A220's small overwing exit.",
+        "ja": "N27908前胴の切り出しには前方2か所の客室扉と大きい窓が写ります。787-8は片側4か所の床面高さの客室扉を持ち、後方2か所は全景で確認でき、A220の小型翼上出口とは異なります。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "機身採大量複合材料、客艙窗可電子調光，但這些不能只憑外表塗裝驗證。與-9比較時重點是門間的機身段長度。",
+        "en": "Extensive composites and electronically dimmable cabin windows are design features, not facts proven by paint appearance. Compare the body sections between doors with the -9.",
+        "ja": "複合材の多用と電子調光客室窓は設計上の特徴で、外部塗装だけからは確認できません。-9とは扉間の胴体部分の長さを比べます。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "前兩道門近照。",
+          "en": "Close-up of forward two doors.",
+          "ja": "前方2か所の扉を近接表示。"
+        },
+        {
+          "zh": "後門參照全景。",
+          "en": "See overview for aft doors.",
+          "ja": "後扉は全景を参照。"
+        },
+        {
+          "zh": "不要將門框當作舷窗。",
+          "en": "Do not confuse doors with cabin windows.",
+          "ja": "扉枠と客室窓を混同しない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b788/fuselage.jpg?v=54bf468ba7f2",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 787-8 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "N20904 的機腹視角呈現長而後掠的主翼、引擎吊架及多個後緣整流罩。照片中起落架收起，可與降落全景的放輪狀態對照。",
+        "en": "N20904's underside view shows the long swept wing, engine pylon and trailing-edge fairings. Gear is retracted here, unlike the landing overview.",
+        "ja": "N20904の下面視点で長い後退翼、エンジンパイロン、後縁フェアリングを確認できます。ここでは脚が収納され、着陸全景の脚下げ状態と比較できます。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "787 主翼在受力時會彈性彎曲；-8／-9 的翼展近似，不能僅憑照片中上彎幅度區分次型。",
+        "en": "The 787 wing flexes under load. With similar spans on -8 and -9, apparent flex in a photograph is not a reliable variant identifier.",
+        "ja": "787主翼は荷重で弾性変形します。-8と-9の翼幅は近く、写真で見えるたわみ量だけでは派生型を識別できません。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "長後掠翼。",
+          "en": "Long swept wing.",
+          "ja": "長い後退翼。"
+        },
+        {
+          "zh": "吊架與整流罩可見。",
+          "en": "Pylon and fairings visible.",
+          "ja": "パイロンとフェアリングが見える。"
+        },
+        {
+          "zh": "此圖為收輪狀態。",
+          "en": "Gear retracted in this view.",
+          "ja": "この写真は脚収納状態。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b788/wing.jpg?v=8ebc17f4e2ce",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 787-8 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "N20904 短艙後緣的鋸齒狀 chevrons 清楚可見，是辨識787家族的重要線索；與 A220 短艙平順的後緣形成對比。",
+        "en": "The chevrons on N20904's nacelle trailing edge are clearly visible, a useful 787-family clue contrasting with the A220's smoother aft nacelle outline.",
+        "ja": "N20904ナセル後縁の鋸歯状シェブロンは787系列の有効な手掛かりで、A220の滑らかな後部輪郭と対照的です。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "787 可用 GEnx-1B 或 Trent 1000。鋸齒用於噪音控制，不能只靠鋸齒就判引擎廠牌，也不是-8獨有。",
+        "en": "The 787 offers GEnx-1B or Trent 1000 engines. Chevrons help noise control but neither identify the engine maker on their own nor distinguish the -8.",
+        "ja": "787にはGEnx-1BまたはTrent 1000があります。シェブロンは騒音対策で、これだけでエンジンメーカーや-8を特定できません。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "短艙後緣鋸齒。",
+          "en": "Serrated nacelle trailing edge.",
+          "ja": "鋸歯状ナセル後縁。"
+        },
+        {
+          "zh": "兩種動力系列。",
+          "en": "Two engine families offered.",
+          "ja": "2系列のエンジンを選択。"
+        },
+        {
+          "zh": "辨識家族而非次型。",
+          "en": "Family clue, not variant proof.",
+          "ja": "系列の手掛かりで派生型の証拠ではない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b788/engine.jpg?v=575e3425a7e2",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "N27908 的單片垂尾有後掠前緣與較圓滑的頂端轉折，根部接到後機身。尾部沒有引擎，水平尾翼也不在垂尾頂端。",
+        "en": "N27908's single fin has a swept leading edge and rounded upper transition into its tip. It joins the aft body; there is no tail engine or top-mounted horizontal tail.",
+        "ja": "N27908の単垂直尾翼は後退前縁と丸みのある上端を持ち、後部胴体へつながります。尾部エンジンや頂部の水平尾翼はありません。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "787 次型的垂尾外形相近；United 圖案不代表-8。應把尾翼與客艙長度、艙門位置合併判讀。",
+        "en": "787 variants have similar fins. United's emblem does not identify a -8; combine the tail with cabin length and door positions.",
+        "ja": "787派生型の垂尾は似ています。Unitedの図柄は-8の証拠ではなく、客室長と扉位置を併せて判断します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "1枚の後退垂直尾翼。"
+        },
+        {
+          "zh": "傳統尾翼布局。",
+          "en": "Conventional tail layout.",
+          "ja": "通常尾翼配置。"
+        },
+        {
+          "zh": "尾部無引擎。",
+          "en": "No tail-mounted engine.",
+          "ja": "尾部エンジンなし。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b788/vstab.jpg?v=4451f793ccbc",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "N20904 後機腹裁切保留左右水平尾翼與尾錐。水平尾翼由後機身兩側伸出，尖端後掠，位置低於垂尾頂端。",
+        "en": "N20904's aft-underside crop includes both horizontal tailplanes and the tailcone. They extend from the rear body, with swept tips below the fin top.",
+        "ja": "N20904後部下面の切り出しには左右水平尾翼と尾部が写っています。後部胴体から伸びる翼端は後退し、垂尾頂部より低い位置にあります。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "A220 也有這種基本布局，因此尾翼先用來確認布局；787 的大型機身、四輪主腳和鋸齒短艙才更容易進一步縮小範圍。",
+        "en": "The A220 shares this basic arrangement. Use it to establish layout, then narrow the type using the 787's wide body, four-wheel main units and chevron nacelles.",
+        "ja": "A220も同じ基本配置です。まず配置を確認し、787の広い胴体、4輪主脚、シェブロン付きナセルで候補を絞ります。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "左右低置水平尾翼。",
+          "en": "Low-mounted left/right tailplanes.",
+          "ja": "左右の低い水平尾翼。"
+        },
+        {
+          "zh": "保留尾錐作定位。",
+          "en": "Tailcone retained for orientation.",
+          "ja": "位置参考に尾部を保持。"
+        },
+        {
+          "zh": "非T尾。",
+          "en": "Not a T-tail.",
+          "ja": "T字尾翼ではない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b788/hstab.jpg?v=6f90daab585b",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 787-8 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "787-8 每側主起落架有兩軸四輪，配上雙鼻輪，全機十輪。N27908 裁切可看出前後兩軸，與 A220 的單軸雙輪主腳差別清楚。",
+        "en": "Each 787-8 main unit has two axles and four wheels. With twin nose wheels, the total is ten. N27908's crop reveals the tandem axles, unlike the A220's single-axle main units.",
+        "ja": "787-8主脚は片側2軸4輪で、前脚2輪と合わせて全機10輪です。N27908の切り出しで前後2軸が見え、A220の1軸主脚と明確に異なります。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "近側與遠側的輪子會互相重疊，請先找同一組支柱和輪架；不要把露出的每個黑圈直接當成全機輪數。",
+        "en": "Near and far wheels overlap. First follow one strut and bogie; visible dark circles are not a direct count of every wheel on the aircraft.",
+        "ja": "手前と奥の車輪が重なります。まず同じ支柱とボギーを追い、見える黒い円の数を全機輪数としないでください。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳四輪。",
+          "en": "Four wheels per main unit.",
+          "ja": "片側主脚4輪。"
+        },
+        {
+          "zh": "兩軸前後排列。",
+          "en": "Two axles in tandem.",
+          "ja": "前後2軸配置。"
+        },
+        {
+          "zh": "全機十輪配置。",
+          "en": "Ten-wheel configuration.",
+          "ja": "全機10輪構成。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b788/gear.jpg?v=3f0832d39658",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "787-8 長 56.7 m，是 787 家族最短型；-9 長 62.8 m。N27908 的全景可見圓滑機鼻、寬機身、兩具大引擎、後掠延伸翼尖與四輪主腳。",
+        "en": "At 56.7 m, the 787-8 is the shortest 787; the -9 is 62.8 m. N27908 shows the smooth nose, wide body, two large engines, raked tips and four-wheel main units.",
+        "ja": "全長56.7 mの787-8は787系列で最短で、-9は62.8 mです。N27908全景で滑らかな機首、太い胴体、大型双発、後退延長翼端、4輪主脚を確認できます。"
+      },
+      "fact": {
+        "zh": "-8／-9 的翼展同為約60.1 m，窗型與引擎鋸齒也相近；辨識次型要看較短客艙段與艙門間距。",
+        "en": "The -8 and -9 both span about 60.1 m and share similar glazing and chevrons. Use the shorter cabin sections and door spacing to separate variants.",
+        "ja": "-8と-9は翼幅約60.1 mで、窓形状とシェブロンも似ています。短い客室部分と扉間隔で派生型を比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "56.7 m的短型787。",
+          "en": "Short 56.7 m 787 variant.",
+          "ja": "全長56.7 mの短い787。"
+        },
+        {
+          "zh": "雙走道廣體。",
+          "en": "Twin-aisle wide-body.",
+          "ja": "双通路広胴機。"
+        },
+        {
+          "zh": "與-9比較門間距。",
+          "en": "Compare door spacing with the -9.",
+          "ja": "-9と扉間隔を比較。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b788/overview.jpg?v=0aa9085cfe9e",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "N787BA 原型機座艙實照保留左右駕駛盤、四具橫向主螢幕及中央下方第五具。前風擋前方可見抬頭顯示器的透明組件，與 A220 的側桿布局形成對比。",
+        "en": "The N787BA prototype cockpit has two control yokes, four displays across the panel and a fifth below. Transparent head-up display components are visible ahead, contrasting with the A220's sidestick layout.",
+        "ja": "N787BA試作機の実写には左右の操縦桿、前方4面と中央下部の第5表示器があります。前方にHUDの透明部品が見え、A220のサイドスティック配置と対照的です。"
+      },
+      "fact": {
+        "zh": "這是2011年的原型機實照，不是模擬器；試飛與營運機的軟體畫面、選裝設備可能不同。787家族共通座艙也不能單獨區分-8／-9。",
+        "en": "This is a 2011 prototype photograph, not a simulator. Test and airline display software or options may differ. The shared cockpit alone cannot distinguish -8 from -9.",
+        "ja": "2011年の試作機写真で、シミュレーターではありません。試験機と運航機では画面や装備が異なる場合があります。共通操縦席だけでは-8と-9を区別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "傳統雙駕駛盤。",
+          "en": "Two conventional yokes.",
+          "ja": "左右の操縦桿。"
+        },
+        {
+          "zh": "五具大型主顯示器。",
+          "en": "Five large main displays.",
+          "ja": "大型主表示器5面。"
+        },
+        {
+          "zh": "N787BA原型機實照。",
+          "en": "N787BA prototype photograph.",
+          "ja": "N787BA試作機実写。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b788/cockpit.jpg?v=f4a2873c2e2b",
+          "caption": {
+            "zh": "Boeing 787-8 原型機 N787BA 座艙（2011年實照）",
+            "en": "Boeing 787-8 prototype N787BA cockpit (2011 photograph)",
+            "ja": "Boeing 787-8試作機N787BA操縦席（2011年実写）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_787-8_N787BA_cockpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "787 的外窗為兩片前風擋與兩片側窗，窗片較大、角落圓滑。HS-TQB 的高位前斜角呈現正面輪廓，Qatar A7-BCD 的近照另顯示向後收尖的側窗。",
+        "en": "The 787 has two forward and two side panes with large areas and rounded corners. HS-TQB's elevated front-quarter view shows the forward outline; Qatar A7-BCD's close-up shows the tapering side pane.",
+        "ja": "787は前面2枚・側面2枚の大きな丸角窓です。HS-TQBの高い斜め前方視点で正面輪郭、Qatar A7-BCDの近接写真で後方へ絞られる側窓を確認できます。"
+      },
+      "fact": {
+        "zh": "前圖不是正投影，玻璃色澤也會隨反光變化。787-8／-9／-10 的相近窗型只適合判家族，不能單獨判定機身長度型。",
+        "en": "The front image is not orthographic, and reflections alter glass colour. Similar -8/-9/-10 glazing identifies the family, not the fuselage-length variant.",
+        "ja": "前方写真は正投影ではなく、反射でガラスの色も変わります。-8/-9/-10の近似した窓は系列の手掛かりで、胴体長の型式までは判別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "四片大型外窗。",
+          "en": "Four large cockpit panes.",
+          "ja": "大型外窓4枚。"
+        },
+        {
+          "zh": "側窗後端收尖。",
+          "en": "Side pane tapers aft.",
+          "ja": "側窓後端が細くなる。"
+        },
+        {
+          "zh": "前斜角／側面各一張。",
+          "en": "One front-quarter and one side view.",
+          "ja": "斜め前方・側面各1枚。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b788/window-front.jpg?v=b6d5df4d1a9d",
+          "caption": {
+            "zh": "Thai 787-8 HS-TQB 高位前斜角窗型（非正投影）",
+            "en": "Thai 787-8 HS-TQB elevated front-quarter glazing (not orthographic)",
+            "ja": "Thai 787-8 HS-TQBの高い斜め前方窓（正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:The_nose_of_Boeing_787-8_HS-TQB.jpg"
+        },
+        {
+          "src": "assets/reference/b788/window-side.jpg?v=57baca87b8cc",
+          "caption": {
+            "zh": "Qatar 787-8 A7-BCD 側窗近照（2013巴黎航展）",
+            "en": "Qatar 787-8 A7-BCD side-window close-up (Paris Air Show 2013)",
+            "ja": "Qatar 787-8 A7-BCD側窓近接写真（2013年パリ航空ショー）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit_windows_of_a_Boeing_787_(1).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "787 的翼尖是向外、向後延伸的 raked wingtip，不是 A220 那種獨立上翹小翼。N20904 近照顯示主翼逐漸收窄到細尖端。",
+        "en": "The 787 uses an outboard, aft-swept raked wingtip rather than the A220's distinct upturned winglet. N20904's close-up shows the wing tapering into a slender tip.",
+        "ja": "787はA220の独立した上向き小翼ではなく、外側・後方へ延びるレイクドウィングチップです。N20904近接写真で主翼が細い先端へ絞られる様子が見えます。"
+      },
+      "fact": {
+        "zh": "飛行中主翼彎曲會讓翼尖看起來向上，不能因此稱它為垂直小翼；也不要把飛行姿態和透視差異當成不同零件。",
+        "en": "Wing flex makes the tip rise in flight; that does not make it a vertical winglet. Attitude and perspective changes are not different components.",
+        "ja": "飛行中の翼のたわみで翼端が上がって見えても垂直小翼にはなりません。姿勢や遠近の違いと部品形状を分けて考えます。"
+      },
+      "bullets": [
+        {
+          "zh": "後掠延伸翼尖。",
+          "en": "Raked wingtip.",
+          "ja": "後退延長翼端。"
+        },
+        {
+          "zh": "不是直立翼片。",
+          "en": "Not an upright fin.",
+          "ja": "直立した翼片ではない。"
+        },
+        {
+          "zh": "翼尖上彎含飛行載荷效應。",
+          "en": "Upward flex reflects flight loading.",
+          "ja": "上方たわみには飛行荷重も影響。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b788/wingtip.jpg?v=31037086ca7d",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg"
+        }
+      ]
     }
   },
   "specifications": {

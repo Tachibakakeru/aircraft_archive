@@ -2278,6 +2278,142 @@ CONTENT.update({
     },
 })
 
+SOURCES.update({
+    "cs300": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:JetBlue_A220_-_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Delta_Air_Lines_Airbus_A220-300_front_view_November_2024.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Delta_Airbus_A220-300_N328DU_taxiing_at_Boston_July_2026.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Delta_Airbus_A220-300_N328DU_taxiing_at_Boston_July_2026.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Delta_Air_Lines_Airbus_A220-300_front_view_November_2024.jpg",
+    },
+    "b788": {
+        "overview": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_787-8_N787BA_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:The_nose_of_Boeing_787-8_HS-TQB.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Cockpit_windows_of_a_Boeing_787_(1).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg",
+    },
+})
+
+CONTENT.update({
+    "cs300": {
+        "overview": identify(
+            ("A220-300 原稱 CS300，機身長 38.7 m，比 A220-100 約長 3.7 m。Air Canada C-GJXY 的全景可見窄機身、兩具翼下引擎、上翹小翼與傳統尾翼。", "Formerly the CS300, the A220-300 is 38.7 m long, about 3.7 m longer than the A220-100. Air Canada's C-GJXY shows its slim body, two underwing engines, upturned winglets and conventional tail.", "旧CS300のA220-300は全長38.7 mで、A220-100より約3.7 m長い機体です。Air Canada C-GJXYの全景で細身の胴体、翼下双発、上向き小翼、通常尾翼を確認できます。"),
+            ("-100 與 -300 的機鼻、座艙和多項結構共通；辨識次型應看客艙長度，不能只看尾翼塗裝。", "The -100 and -300 share the nose, cockpit and many structures. Use cabin length to distinguish them, not tail livery alone.", "-100と-300は機首・操縦席・多くの構造を共有します。型式判別には尾翼塗装ではなく客室の長さを使います。"),
+            [("全長38.7 m。", "38.7 m overall length.", "全長38.7 m。"), ("比-100長約3.7 m。", "About 3.7 m longer than the -100.", "-100より約3.7 m長い。"), ("雙發低翼布局。", "Twin-engine low-wing layout.", "双発・低翼配置。")],
+        ),
+        "cockpit": identify(
+            ("JetBlue A220-300 實機座艙有四具橫向排列的大螢幕，中央下方再一具，共五具主顯示器。左側可見側桿，前方沒有 787 那樣的中央駕駛盤。", "The real JetBlue A220-300 cockpit has four large displays across the panel and a fifth below in the centre. A sidestick is visible on the left, unlike the 787's central control columns.", "JetBlue A220-300の実機操縦席には前方4面と中央下部1面、計5面の主表示器があります。左側にサイドスティックが見え、787のような操縦桿はありません。"),
+            ("座椅遮住部分右側設備，不能把未入鏡當作未安裝。兩種 A220 次型採共通座艙，這不是區分 -100／-300 的單獨證據。", "The seat obscures some right-side equipment; out of view does not mean absent. Both A220 variants share the cockpit, so this layout alone does not separate -100 from -300.", "座席で右側の一部が隠れています。見えないことと未装備は別です。両A220型は操縦席を共有するため、この配置だけでは-100と-300を区別できません。"),
+            [("四加一主螢幕配置。", "Four-plus-one main display layout.", "4＋1面の主表示器。"), ("側桿操縱。", "Sidestick controls.", "サイドスティック。"), ("JetBlue實機照片。", "Real JetBlue aircraft photograph.", "JetBlue実機写真。")],
+        ),
+        "windshield": identify(
+            ("正面照片可見兩片前風擋向兩側窗片延伸，窗帶包覆圓滑機鼻。側面另用 C-GJXY 實照，對照斜邊側窗與前門位置。", "The front photograph shows two forward panes continuing into the side panes around the rounded nose. A separate C-GJXY side view relates the sloping side window to the forward door.", "正面写真では前方2枚から左右側窓へ続く窓帯と丸い機首を確認できます。C-GJXYの側面写真では斜辺の側窓と前扉の位置を比較できます。"),
+            ("Air Canada 的黑色眼罩包含塗裝，不全是玻璃。請沿真正窗框判讀；A220-100／-300 共用近似窗型。", "Air Canada's black mask includes paint, not just glazing. Follow the actual window frames; the A220-100 and -300 have similar glazing.", "Air Canadaの黒いマスクには塗装も含まれます。実際の窓枠を追ってください。A220-100と-300の窓形状は近似しています。"),
+            [("正面與側面分圖。", "Separate front and side views.", "正面・側面を別掲。"), ("區分玻璃與黑色塗裝。", "Separate glass from black paint.", "ガラスと黒塗装を区別。"), ("窗型不足以分辨次型。", "Glazing alone cannot identify the variant.", "窓だけでは派生型を判別できない。")],
+        ),
+        "fuselage": identify(
+            ("N328DU 側面裁切保留前客艙門、連續舷窗及翼上出口。A220 的五排並列單走道客艙，機身尺度明顯小於雙走道 787。", "The N328DU crop retains the forward cabin door, window row and overwing exit. The A220's five-abreast single-aisle cabin sits in a much smaller body than the twin-aisle 787.", "N328DUの切り出しには前部客室扉、窓列、翼上非常口が写っています。A220は横5席の単通路で、双通路787より小さい胴体です。"),
+            ("後門請配合全景查看；-300 的加長主要由機身段辨識。照片角度和塗裝會干擾窗數，不宜把肉眼數窗當成唯一依據。", "Use the overview for the aft door. The -300 is identified mainly by the fuselage stretch; perspective and paint make window counting an unreliable sole test.", "後扉は全景で確認します。-300の延長胴体が主な手掛かりです。遠近や塗装で窓数が分かりにくいため、数えるだけで判定しないでください。"),
+            [("前門與翼上出口。", "Forward door and overwing exit.", "前扉と翼上非常口。"), ("五排並列客艙。", "Five-abreast cabin.", "横5席の客室。"), ("加長段需搭配全景。", "Check the stretch in the overview.", "延長部分は全景と照合。")],
+        ),
+        "engine": identify(
+            ("A220 使用 PW1500G 齒輪傳動渦扇。N328DU 近照可見圓形進氣口、寬大的風扇短艙和向後收細的外形；沒有 787 短艙後緣那種醒目的鋸齒。", "The A220 uses PW1500G geared turbofans. N328DU shows a round intake, broad fan nacelle and tapering aft outline, without the 787's prominent serrated nacelle trailing edge.", "A220はPW1500Gギヤードターボファンを使用します。N328DUの写真では丸い吸気口、大きなファンナセル、後方へ絞られる形状が見え、787の目立つ鋸歯状後縁とは異なります。"),
+            ("齒輪機構位於引擎內，外觀照片看不到，不能靠進氣口圓不圓判定是否有齒輪；需核對機型與動力型號。", "The gearbox is internal and not visible here. A round intake does not prove a geared fan; confirm the airframe and engine model.", "ギヤ機構は内部にあり、この写真では見えません。吸気口が丸いだけではギヤの有無を判定できず、機体とエンジン型式を照合します。"),
+            [("PW1500G系列。", "PW1500G family.", "PW1500G系列。"), ("圓形進氣唇口。", "Round inlet lip.", "丸い吸気口縁。"), ("內部齒輪不可見。", "Internal gearing is not visible.", "内部ギヤは見えない。")],
+        ),
+        "wingtip": identify(
+            ("C-GJXY 的翼尖向上傾斜並向後收尖，是可辨識的獨立小翼輪廓。與 787 延長主翼平面向後伸出的翼尖相比，A220 有較明顯的上翹段。", "C-GJXY's tip rises and tapers aft as a distinct winglet. Compared with the 787's aft-swept extension of the wing planform, the A220 has a more distinct upturned segment.", "C-GJXYの翼端は上へ傾き後方へ細くなる明瞭な小翼です。主翼平面を後方へ延ばす787の翼端に比べ、A220は上向き部分が明確です。"),
+            ("A220-100 與 -300 的翼尖外形相近；不能只用小翼分辨長短型。照片中的黑色是航空公司塗裝。", "A220-100 and -300 tips look similar, so the winglet does not distinguish the two lengths. The black colour is airline paint.", "A220-100と-300の翼端は似ているため、小翼だけで長短型を区別できません。写真の黒色は航空会社の塗装です。"),
+            [("上翹且後掠。", "Upturned and swept aft.", "上向き・後退形状。"), ("與主翼接合處可見。", "Wing junction visible.", "主翼との接合部が見える。"), ("不靠塗裝判型。", "Do not identify by paint alone.", "塗装だけで判定しない。")],
+        ),
+        "wing": identify(
+            ("低置後掠翼上可看到收窄的外翼、上翹翼尖及放下的後緣襟翼。這張降落中的照片保留翼根到翼尖，方便對照各部位位置。", "The low swept wing shows a tapering outer panel, upturned tip and deployed trailing-edge flaps. This landing photograph retains root-to-tip relationships.", "低い後退翼には細くなる外翼、上向き翼端、展開した後縁フラップが見えます。着陸中の写真で翼根から翼端までの位置関係を確認できます。"),
+            ("A220 的主翼大量採用複合材料，但表面塗裝通常看不出材料種類；襟翼展開角也屬飛行狀態，不是 -300 獨有特徵。", "The A220 wing uses composites extensively, but paint usually hides the material. Flap angle is an operating state, not a -300-only feature.", "A220主翼は複合材を多用しますが、塗装面から材質は通常分かりません。フラップ角度は飛行状態であり、-300専用の特徴ではありません。"),
+            [("低置後掠翼。", "Low swept wing.", "低い後退翼。"), ("襟翼放下狀態。", "Flaps deployed.", "フラップ展開状態。"), ("翼根到翼尖完整對照。", "Compare root to tip.", "翼根から翼端を照合。")],
+        ),
+        "vstab": identify(
+            ("垂直尾翼位於後機身上方，前緣後掠，方向舵沿後緣配置；不是引擎尾置飛機常見的 T 尾。C-GJXY 裁切保留根部過渡。", "The fin rises from the aft fuselage, with a swept leading edge and rudder along its rear edge. C-GJXY's crop retains the root transition; the aircraft does not have a T-tail.", "垂直尾翼は後部胴体上に立ち、前縁が後退し、後縁に方向舵を備えます。C-GJXYの切り出しで根元のつながりが見え、T字尾翼ではありません。"),
+            ("機身長度比尾翼圖案更能區分兩種 A220；垂尾還應與水平尾翼的安裝高度一起觀察。", "Body length is more useful than the tail emblem for separating A220 variants. Also inspect the fin relative to the horizontal tail's mounting height.", "両A220型の識別には尾翼の図柄より胴体長が有効です。水平尾翼の取付高さとの関係も見ます。"),
+            [("單片後掠垂尾。", "Single swept fin.", "1枚の後退垂直尾翼。"), ("非T尾布局。", "Not a T-tail.", "T字尾翼ではない。"), ("根部過渡保留。", "Root transition retained.", "根元の接続部を保持。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼裝在後機身兩側，低於垂尾頂端。C-GJXY 近照保留翼根、尖端與尾錐，可直接辨識傳統尾翼布局。", "The horizontal tail sits on the sides of the aft body, below the fin tip. C-GJXY's close-up includes the root, tip and tailcone, showing the conventional tail layout.", "水平尾翼は後部胴体の両側で垂直尾翼頂部より低い位置にあります。C-GJXYの近接写真は翼根・翼端・尾部を含み、通常尾翼配置を示します。"),
+            ("787 也採傳統尾翼，因此這是先排除 T 尾機型的線索，不是 A220-300 的唯一識別特徵。", "The 787 also uses a conventional tail. This helps exclude T-tail types but is not unique to the A220-300.", "787も通常尾翼です。T字尾翼機を除外する手掛かりですが、A220-300固有ではありません。"),
+            [("低於垂尾頂端。", "Below the fin tip.", "垂直尾翼頂部より低い。"), ("翼根與尾錐可見。", "Root and tailcone visible.", "翼根と尾部が見える。"), ("與主翼小翼合併辨識。", "Use together with winglet shape.", "主翼端形状と併せて識別。")],
+        ),
+        "gear": identify(
+            ("A220 每側主起落架為單軸雙輪，配上雙鼻輪，全機六輪。正面降落照片可看出左右主腳的輪對與支柱，不同於 787 的四輪主腳輪架。", "Each A220 main unit has one axle with two wheels. With twin nose wheels, there are six overall. The landing view shows the paired main wheels and struts, unlike the 787's four-wheel bogies.", "A220主脚は片側1軸2輪で、前脚2輪と合わせて全機6輪です。着陸正面写真で左右主脚の車輪対と支柱を確認でき、787の4輪ボギーとは異なります。"),
+            ("此角度的鼻腳部分受機腹遮擋；全機輪數是配置說明，並非聲稱照片能看到所有六輪。", "The belly obscures part of the nose gear from this angle. The total describes the configuration, not six wheels all visible in this photograph.", "この角度では前脚の一部が胴体に隠れます。合計輪数は構成の説明で、写真に6輪すべてが見えるという意味ではありません。"),
+            [("每側主腳兩輪。", "Two wheels per main unit.", "片側主脚2輪。"), ("鼻腳也是兩輪。", "Two nose wheels too.", "前脚も2輪。"), ("全機六輪配置。", "Six-wheel configuration.", "全機6輪構成。")],
+        ),
+    },
+    "b788": {
+        "overview": identify(
+            ("787-8 長 56.7 m，是 787 家族最短型；-9 長 62.8 m。N27908 的全景可見圓滑機鼻、寬機身、兩具大引擎、後掠延伸翼尖與四輪主腳。", "At 56.7 m, the 787-8 is the shortest 787; the -9 is 62.8 m. N27908 shows the smooth nose, wide body, two large engines, raked tips and four-wheel main units.", "全長56.7 mの787-8は787系列で最短で、-9は62.8 mです。N27908全景で滑らかな機首、太い胴体、大型双発、後退延長翼端、4輪主脚を確認できます。"),
+            ("-8／-9 的翼展同為約60.1 m，窗型與引擎鋸齒也相近；辨識次型要看較短客艙段與艙門間距。", "The -8 and -9 both span about 60.1 m and share similar glazing and chevrons. Use the shorter cabin sections and door spacing to separate variants.", "-8と-9は翼幅約60.1 mで、窓形状とシェブロンも似ています。短い客室部分と扉間隔で派生型を比較します。"),
+            [("56.7 m的短型787。", "Short 56.7 m 787 variant.", "全長56.7 mの短い787。"), ("雙走道廣體。", "Twin-aisle wide-body.", "双通路広胴機。"), ("與-9比較門間距。", "Compare door spacing with the -9.", "-9と扉間隔を比較。")],
+        ),
+        "cockpit": identify(
+            ("N787BA 原型機座艙實照保留左右駕駛盤、四具橫向主螢幕及中央下方第五具。前風擋前方可見抬頭顯示器的透明組件，與 A220 的側桿布局形成對比。", "The N787BA prototype cockpit has two control yokes, four displays across the panel and a fifth below. Transparent head-up display components are visible ahead, contrasting with the A220's sidestick layout.", "N787BA試作機の実写には左右の操縦桿、前方4面と中央下部の第5表示器があります。前方にHUDの透明部品が見え、A220のサイドスティック配置と対照的です。"),
+            ("這是2011年的原型機實照，不是模擬器；試飛與營運機的軟體畫面、選裝設備可能不同。787家族共通座艙也不能單獨區分-8／-9。", "This is a 2011 prototype photograph, not a simulator. Test and airline display software or options may differ. The shared cockpit alone cannot distinguish -8 from -9.", "2011年の試作機写真で、シミュレーターではありません。試験機と運航機では画面や装備が異なる場合があります。共通操縦席だけでは-8と-9を区別できません。"),
+            [("傳統雙駕駛盤。", "Two conventional yokes.", "左右の操縦桿。"), ("五具大型主顯示器。", "Five large main displays.", "大型主表示器5面。"), ("N787BA原型機實照。", "N787BA prototype photograph.", "N787BA試作機実写。")],
+        ),
+        "windshield": identify(
+            ("787 的外窗為兩片前風擋與兩片側窗，窗片較大、角落圓滑。HS-TQB 的高位前斜角呈現正面輪廓，Qatar A7-BCD 的近照另顯示向後收尖的側窗。", "The 787 has two forward and two side panes with large areas and rounded corners. HS-TQB's elevated front-quarter view shows the forward outline; Qatar A7-BCD's close-up shows the tapering side pane.", "787は前面2枚・側面2枚の大きな丸角窓です。HS-TQBの高い斜め前方視点で正面輪郭、Qatar A7-BCDの近接写真で後方へ絞られる側窓を確認できます。"),
+            ("前圖不是正投影，玻璃色澤也會隨反光變化。787-8／-9／-10 的相近窗型只適合判家族，不能單獨判定機身長度型。", "The front image is not orthographic, and reflections alter glass colour. Similar -8/-9/-10 glazing identifies the family, not the fuselage-length variant.", "前方写真は正投影ではなく、反射でガラスの色も変わります。-8/-9/-10の近似した窓は系列の手掛かりで、胴体長の型式までは判別できません。"),
+            [("四片大型外窗。", "Four large cockpit panes.", "大型外窓4枚。"), ("側窗後端收尖。", "Side pane tapers aft.", "側窓後端が細くなる。"), ("前斜角／側面各一張。", "One front-quarter and one side view.", "斜め前方・側面各1枚。")],
+        ),
+        "fuselage": identify(
+            ("N27908 的前機身裁切顯示前兩道客艙門與較大的舷窗。787-8 每側有四道地板高度客艙門，後兩道可在全景確認，並非 A220 那種翼上小型出口。", "N27908's forward-body crop shows the first two cabin doors and large windows. The 787-8 has four floor-level cabin doors per side; the rear two appear in the overview, unlike the A220's small overwing exit.", "N27908前胴の切り出しには前方2か所の客室扉と大きい窓が写ります。787-8は片側4か所の床面高さの客室扉を持ち、後方2か所は全景で確認でき、A220の小型翼上出口とは異なります。"),
+            ("機身採大量複合材料、客艙窗可電子調光，但這些不能只憑外表塗裝驗證。與-9比較時重點是門間的機身段長度。", "Extensive composites and electronically dimmable cabin windows are design features, not facts proven by paint appearance. Compare the body sections between doors with the -9.", "複合材の多用と電子調光客室窓は設計上の特徴で、外部塗装だけからは確認できません。-9とは扉間の胴体部分の長さを比べます。"),
+            [("前兩道門近照。", "Close-up of forward two doors.", "前方2か所の扉を近接表示。"), ("後門參照全景。", "See overview for aft doors.", "後扉は全景を参照。"), ("不要將門框當作舷窗。", "Do not confuse doors with cabin windows.", "扉枠と客室窓を混同しない。")],
+        ),
+        "engine": identify(
+            ("N20904 短艙後緣的鋸齒狀 chevrons 清楚可見，是辨識787家族的重要線索；與 A220 短艙平順的後緣形成對比。", "The chevrons on N20904's nacelle trailing edge are clearly visible, a useful 787-family clue contrasting with the A220's smoother aft nacelle outline.", "N20904ナセル後縁の鋸歯状シェブロンは787系列の有効な手掛かりで、A220の滑らかな後部輪郭と対照的です。"),
+            ("787 可用 GEnx-1B 或 Trent 1000。鋸齒用於噪音控制，不能只靠鋸齒就判引擎廠牌，也不是-8獨有。", "The 787 offers GEnx-1B or Trent 1000 engines. Chevrons help noise control but neither identify the engine maker on their own nor distinguish the -8.", "787にはGEnx-1BまたはTrent 1000があります。シェブロンは騒音対策で、これだけでエンジンメーカーや-8を特定できません。"),
+            [("短艙後緣鋸齒。", "Serrated nacelle trailing edge.", "鋸歯状ナセル後縁。"), ("兩種動力系列。", "Two engine families offered.", "2系列のエンジンを選択。"), ("辨識家族而非次型。", "Family clue, not variant proof.", "系列の手掛かりで派生型の証拠ではない。")],
+        ),
+        "wingtip": identify(
+            ("787 的翼尖是向外、向後延伸的 raked wingtip，不是 A220 那種獨立上翹小翼。N20904 近照顯示主翼逐漸收窄到細尖端。", "The 787 uses an outboard, aft-swept raked wingtip rather than the A220's distinct upturned winglet. N20904's close-up shows the wing tapering into a slender tip.", "787はA220の独立した上向き小翼ではなく、外側・後方へ延びるレイクドウィングチップです。N20904近接写真で主翼が細い先端へ絞られる様子が見えます。"),
+            ("飛行中主翼彎曲會讓翼尖看起來向上，不能因此稱它為垂直小翼；也不要把飛行姿態和透視差異當成不同零件。", "Wing flex makes the tip rise in flight; that does not make it a vertical winglet. Attitude and perspective changes are not different components.", "飛行中の翼のたわみで翼端が上がって見えても垂直小翼にはなりません。姿勢や遠近の違いと部品形状を分けて考えます。"),
+            [("後掠延伸翼尖。", "Raked wingtip.", "後退延長翼端。"), ("不是直立翼片。", "Not an upright fin.", "直立した翼片ではない。"), ("翼尖上彎含飛行載荷效應。", "Upward flex reflects flight loading.", "上方たわみには飛行荷重も影響。")],
+        ),
+        "wing": identify(
+            ("N20904 的機腹視角呈現長而後掠的主翼、引擎吊架及多個後緣整流罩。照片中起落架收起，可與降落全景的放輪狀態對照。", "N20904's underside view shows the long swept wing, engine pylon and trailing-edge fairings. Gear is retracted here, unlike the landing overview.", "N20904の下面視点で長い後退翼、エンジンパイロン、後縁フェアリングを確認できます。ここでは脚が収納され、着陸全景の脚下げ状態と比較できます。"),
+            ("787 主翼在受力時會彈性彎曲；-8／-9 的翼展近似，不能僅憑照片中上彎幅度區分次型。", "The 787 wing flexes under load. With similar spans on -8 and -9, apparent flex in a photograph is not a reliable variant identifier.", "787主翼は荷重で弾性変形します。-8と-9の翼幅は近く、写真で見えるたわみ量だけでは派生型を識別できません。"),
+            [("長後掠翼。", "Long swept wing.", "長い後退翼。"), ("吊架與整流罩可見。", "Pylon and fairings visible.", "パイロンとフェアリングが見える。"), ("此圖為收輪狀態。", "Gear retracted in this view.", "この写真は脚収納状態。")],
+        ),
+        "vstab": identify(
+            ("N27908 的單片垂尾有後掠前緣與較圓滑的頂端轉折，根部接到後機身。尾部沒有引擎，水平尾翼也不在垂尾頂端。", "N27908's single fin has a swept leading edge and rounded upper transition into its tip. It joins the aft body; there is no tail engine or top-mounted horizontal tail.", "N27908の単垂直尾翼は後退前縁と丸みのある上端を持ち、後部胴体へつながります。尾部エンジンや頂部の水平尾翼はありません。"),
+            ("787 次型的垂尾外形相近；United 圖案不代表-8。應把尾翼與客艙長度、艙門位置合併判讀。", "787 variants have similar fins. United's emblem does not identify a -8; combine the tail with cabin length and door positions.", "787派生型の垂尾は似ています。Unitedの図柄は-8の証拠ではなく、客室長と扉位置を併せて判断します。"),
+            [("單片後掠垂尾。", "Single swept fin.", "1枚の後退垂直尾翼。"), ("傳統尾翼布局。", "Conventional tail layout.", "通常尾翼配置。"), ("尾部無引擎。", "No tail-mounted engine.", "尾部エンジンなし。")],
+        ),
+        "hstab": identify(
+            ("N20904 後機腹裁切保留左右水平尾翼與尾錐。水平尾翼由後機身兩側伸出，尖端後掠，位置低於垂尾頂端。", "N20904's aft-underside crop includes both horizontal tailplanes and the tailcone. They extend from the rear body, with swept tips below the fin top.", "N20904後部下面の切り出しには左右水平尾翼と尾部が写っています。後部胴体から伸びる翼端は後退し、垂尾頂部より低い位置にあります。"),
+            ("A220 也有這種基本布局，因此尾翼先用來確認布局；787 的大型機身、四輪主腳和鋸齒短艙才更容易進一步縮小範圍。", "The A220 shares this basic arrangement. Use it to establish layout, then narrow the type using the 787's wide body, four-wheel main units and chevron nacelles.", "A220も同じ基本配置です。まず配置を確認し、787の広い胴体、4輪主脚、シェブロン付きナセルで候補を絞ります。"),
+            [("左右低置水平尾翼。", "Low-mounted left/right tailplanes.", "左右の低い水平尾翼。"), ("保留尾錐作定位。", "Tailcone retained for orientation.", "位置参考に尾部を保持。"), ("非T尾。", "Not a T-tail.", "T字尾翼ではない。")],
+        ),
+        "gear": identify(
+            ("787-8 每側主起落架有兩軸四輪，配上雙鼻輪，全機十輪。N27908 裁切可看出前後兩軸，與 A220 的單軸雙輪主腳差別清楚。", "Each 787-8 main unit has two axles and four wheels. With twin nose wheels, the total is ten. N27908's crop reveals the tandem axles, unlike the A220's single-axle main units.", "787-8主脚は片側2軸4輪で、前脚2輪と合わせて全機10輪です。N27908の切り出しで前後2軸が見え、A220の1軸主脚と明確に異なります。"),
+            ("近側與遠側的輪子會互相重疊，請先找同一組支柱和輪架；不要把露出的每個黑圈直接當成全機輪數。", "Near and far wheels overlap. First follow one strut and bogie; visible dark circles are not a direct count of every wheel on the aircraft.", "手前と奥の車輪が重なります。まず同じ支柱とボギーを追い、見える黒い円の数を全機輪数としないでください。"),
+            [("每側主腳四輪。", "Four wheels per main unit.", "片側主脚4輪。"), ("兩軸前後排列。", "Two axles in tandem.", "前後2軸配置。"), ("全機十輪配置。", "Ten-wheel configuration.", "全機10輪構成。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -2323,6 +2459,33 @@ def update(model: str) -> None:
         else:
             part["images"] = [photo(model, part_id, CAPTIONS[part_id], SOURCES[model][part_id])]
     data["partOrder"] = ORDER
+    if model == "cs300":
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "JetBlue A220-300 實機座艙；右側座椅遮擋部分設備",
+            "Real JetBlue A220-300 cockpit; right seat obscures some equipment",
+            "JetBlue A220-300実機操縦席；右座席で一部装備が隠れています",
+        )
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "Delta A220-300 正面外窗（實照裁切，不放大）",
+            "Delta A220-300 front glazing (photographic crop, no enlargement)",
+            "Delta A220-300正面窓（実写切り出し、拡大なし）",
+        )
+    if model == "b788":
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "Boeing 787-8 原型機 N787BA 座艙（2011年實照）",
+            "Boeing 787-8 prototype N787BA cockpit (2011 photograph)",
+            "Boeing 787-8試作機N787BA操縦席（2011年実写）",
+        )
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "Thai 787-8 HS-TQB 高位前斜角窗型（非正投影）",
+            "Thai 787-8 HS-TQB elevated front-quarter glazing (not orthographic)",
+            "Thai 787-8 HS-TQBの高い斜め前方窓（正投影ではありません）",
+        )
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "Qatar 787-8 A7-BCD 側窗近照（2013巴黎航展）",
+            "Qatar 787-8 A7-BCD side-window close-up (Paris Air Show 2013)",
+            "Qatar 787-8 A7-BCD側窓近接写真（2013年パリ航空ショー）",
+        )
     if model in ("b739", "b753"):
         parts["windshield"]["images"][0]["caption"] = tr(
             "前斜角外窗（原尺寸實照裁切，非正投影）",
@@ -2429,6 +2592,12 @@ def check() -> None:
         assert data["partOrder"] == ORDER and len(set(data["partOrder"])) == len(ORDER)
         for part_id in ORDER:
             part = data["parts"][part_id]
+            for field in ("name", "summary", "fact"):
+                value = part[field]
+                assert value, (model, part_id, field)
+                # Older editable records also allow a single-language string.
+                if isinstance(value, dict):
+                    assert all(value.get(lang) for lang in ("zh", "en", "ja")), (model, part_id, field)
             assert len(part.get("bullets", [])) >= 3
             for image in part["images"]:
                 path, _, query = image["src"].partition("?")
@@ -2445,6 +2614,13 @@ def check() -> None:
 
 
 if __name__ == "__main__":
-    for aircraft in CONTENT:
-        update(aircraft)
+    import argparse
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="Validate without changing any data")
+    parser.add_argument("--models", nargs="+", choices=CONTENT, help="Update only these aircraft")
+    args = parser.parse_args()
+    if not args.check:
+        for aircraft in args.models or CONTENT:
+            update(aircraft)
     check()

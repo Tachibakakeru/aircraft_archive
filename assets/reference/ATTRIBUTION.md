@@ -2,6 +2,24 @@
 
 These files are real-aircraft photographs from Wikimedia Commons. Crops are generally limited to 960 px and whole-frame references to 1600 px, without enlargement; explicitly noted unchanged originals may be larger. They are used as visual identification references in SKY ARCHIVE. Follow each source link for the original description and full license terms.
 
+## Airbus A220-300 / Boeing 787-8 (2026-09-01)
+
+All 22 files are resized/cropped real photographs, without enlargement or AI enhancement. Whole-frame references are limited to 1600px; detail crops to 960px. Some source originals returned HTTP 429; their listed Commons thumbnails were used instead. The A220 front-window crop is 576px wide and the 787 main-gear crop is 576px: display respects native dimensions, rather than inventing detail.
+
+| Local files | Source / author | License / input |
+|---|---|---|
+| `cs300/overview.jpg`, `cs300/window-side.jpg`, `cs300/wingtip.jpg`, `cs300/wing.jpg`, `cs300/vstab.jpg`, `cs300/hstab.jpg` | [Air Canada A220-300.jpg](https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg), Stevenhe1997 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); 6000px original |
+| `cs300/cockpit.jpg` | [JetBlue A220 - cockpit.jpg](https://commons.wikimedia.org/wiki/File:JetBlue_A220_-_cockpit.jpg), airbus777 | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/); 4032px original |
+| `cs300/window-front.jpg`, `cs300/gear.jpg` | [Delta Air Lines Airbus A220-300 front view November 2024.jpg](https://commons.wikimedia.org/wiki/File:Delta_Air_Lines_Airbus_A220-300_front_view_November_2024.jpg), 4300streetcar | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); 3840px Commons thumbnail |
+| `cs300/fuselage.jpg`, `cs300/engine.jpg` | [Delta Airbus A220-300 N328DU taxiing at Boston July 2026.jpg](https://commons.wikimedia.org/wiki/File:Delta_Airbus_A220-300_N328DU_taxiing_at_Boston_July_2026.jpg), 4300streetcar | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); 8213px original |
+| `b788/overview.jpg`, `b788/fuselage.jpg`, `b788/vstab.jpg`, `b788/gear.jpg` | [United Boeing 787-8 N27908 IAD VA2.jpg](https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N27908_IAD_VA2.jpg), Acroterion | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); 3840px Commons thumbnail |
+| `b788/cockpit.jpg` | [Boeing 787-8 N787BA cockpit.jpg](https://commons.wikimedia.org/wiki/File:Boeing_787-8_N787BA_cockpit.jpg), Alex Beltyukov | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/); 1280px original; 2011 prototype, not a simulator |
+| `b788/window-front.jpg` | [The nose of Boeing 787-8 HS-TQB.jpg](https://commons.wikimedia.org/wiki/File:The_nose_of_Boeing_787-8_HS-TQB.jpg), Chihaya Sta | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/); 3840px Commons thumbnail; elevated front-quarter view, not orthographic |
+| `b788/window-side.jpg` | [Cockpit windows of a Boeing 787 (1).jpg](https://commons.wikimedia.org/wiki/File:Cockpit_windows_of_a_Boeing_787_(1).jpg), Olivier Cleynen | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/); 1920px Commons thumbnail; A7-BCD at Paris Air Show 2013 per Commons category |
+| `b788/engine.jpg`, `b788/wingtip.jpg`, `b788/wing.jpg`, `b788/hstab.jpg` | [United Boeing 787-8 N20904 MD1.jpg](https://commons.wikimedia.org/wiki/File:United_Boeing_787-8_N20904_MD1.jpg), Acroterion | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); 5010px original |
+
+Technical cross-checks: [Airbus A220-300 dimensions](https://www.aircraft.airbus.com/en/aircraft/a220/a220-300), [Airbus A220 airframe and cockpit](https://www.aircraft.airbus.com/en/newsroom/stories/2025-07-the-clean-sheet-single-aisle-aircraft-at-the-vanguard-of-innovation), [PW1500G application](https://www.prattwhitney.com/newsroom/news/2018/07/16/pratt-whitneys-geared-turbofan-engine-for-airbus-a220-achieves-faa-etops-certi), [Boeing 787 dimensions and engines](https://www.boeing.com/commercial/787), [787 flight deck](https://secure.boeingimages.com/archive/787-Dreamliner-Flight-Deck-2JRSXLJ2HEX4.html), [787 raked wingtips](https://boeing.mediaroom.com/2005-10-20-Boeing-Names-KAL-ASD-to-Provide-787-8-Raked-Wing-Tips), and [787 chevrons/windows](https://www.boeing.com/commercial/787/by-design). Visual observations describe the photographed configuration, not every airline's equipment or livery.
+
 ## Boeing 737-900 / 757-300 (2026-09-01)
 
 All files below are resized or cropped derivatives, without AI generation or enlargement. Source links preserve the original descriptions; front-window views are front-quarter views, not orthographic head-on photographs.

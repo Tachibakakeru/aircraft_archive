@@ -2,18 +2,30 @@
   "title": "Airbus A220-300",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
-    "hstab"
+    "hstab",
+    "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Airbus A220-300 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "N328DU 側面裁切保留前客艙門、連續舷窗及翼上出口。A220 的五排並列單走道客艙，機身尺度明顯小於雙走道 787。",
+        "en": "The N328DU crop retains the forward cabin door, window row and overwing exit. The A220's five-abreast single-aisle cabin sits in a much smaller body than the twin-aisle 787.",
+        "ja": "N328DUの切り出しには前部客室扉、窓列、翼上非常口が写っています。A220は横5席の単通路で、双通路787より小さい胴体です。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "後門請配合全景查看；-300 的加長主要由機身段辨識。照片角度和塗裝會干擾窗數，不宜把肉眼數窗當成唯一依據。",
+        "en": "Use the overview for the aft door. The -300 is identified mainly by the fuselage stretch; perspective and paint make window counting an unreliable sole test.",
+        "ja": "後扉は全景で確認します。-300の延長胴体が主な手掛かりです。遠近や塗装で窓数が分かりにくいため、数えるだけで判定しないでください。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "前門與翼上出口。",
+          "en": "Forward door and overwing exit.",
+          "ja": "前扉と翼上非常口。"
+        },
+        {
+          "zh": "五排並列客艙。",
+          "en": "Five-abreast cabin.",
+          "ja": "横5席の客室。"
+        },
+        {
+          "zh": "加長段需搭配全景。",
+          "en": "Check the stretch in the overview.",
+          "ja": "延長部分は全景と照合。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs300/fuselage.jpg?v=e30be41157b0",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_Airbus_A220-300_N328DU_taxiing_at_Boston_July_2026.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Airbus A220-300 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "JetBlue A220-300 實機座艙有四具橫向排列的大螢幕，中央下方再一具，共五具主顯示器。左側可見側桿，前方沒有 787 那樣的中央駕駛盤。",
+        "en": "The real JetBlue A220-300 cockpit has four large displays across the panel and a fifth below in the centre. A sidestick is visible on the left, unlike the 787's central control columns.",
+        "ja": "JetBlue A220-300の実機操縦席には前方4面と中央下部1面、計5面の主表示器があります。左側にサイドスティックが見え、787のような操縦桿はありません。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "座椅遮住部分右側設備，不能把未入鏡當作未安裝。兩種 A220 次型採共通座艙，這不是區分 -100／-300 的單獨證據。",
+        "en": "The seat obscures some right-side equipment; out of view does not mean absent. Both A220 variants share the cockpit, so this layout alone does not separate -100 from -300.",
+        "ja": "座席で右側の一部が隠れています。見えないことと未装備は別です。両A220型は操縦席を共有するため、この配置だけでは-100と-300を区別できません。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "四加一主螢幕配置。",
+          "en": "Four-plus-one main display layout.",
+          "ja": "4＋1面の主表示器。"
+        },
+        {
+          "zh": "側桿操縱。",
+          "en": "Sidestick controls.",
+          "ja": "サイドスティック。"
+        },
+        {
+          "zh": "JetBlue實機照片。",
+          "en": "Real JetBlue aircraft photograph.",
+          "ja": "JetBlue実機写真。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs300/cockpit.jpg?v=62ea9d9b8e28",
+          "caption": {
+            "zh": "JetBlue A220-300 實機座艙；右側座椅遮擋部分設備",
+            "en": "Real JetBlue A220-300 cockpit; right seat obscures some equipment",
+            "ja": "JetBlue A220-300実機操縦席；右座席で一部装備が隠れています"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:JetBlue_A220_-_cockpit.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Airbus A220-300 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "低置後掠翼上可看到收窄的外翼、上翹翼尖及放下的後緣襟翼。這張降落中的照片保留翼根到翼尖，方便對照各部位位置。",
+        "en": "The low swept wing shows a tapering outer panel, upturned tip and deployed trailing-edge flaps. This landing photograph retains root-to-tip relationships.",
+        "ja": "低い後退翼には細くなる外翼、上向き翼端、展開した後縁フラップが見えます。着陸中の写真で翼根から翼端までの位置関係を確認できます。"
+      },
       "specs": [
         [
           "功能",
@@ -63,66 +144,388 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "A220 的主翼大量採用複合材料，但表面塗裝通常看不出材料種類；襟翼展開角也屬飛行狀態，不是 -300 獨有特徵。",
+        "en": "The A220 wing uses composites extensively, but paint usually hides the material. Flap angle is an operating state, not a -300-only feature.",
+        "ja": "A220主翼は複合材を多用しますが、塗装面から材質は通常分かりません。フラップ角度は飛行状態であり、-300専用の特徴ではありません。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "低置後掠翼。",
+          "en": "Low swept wing.",
+          "ja": "低い後退翼。"
+        },
+        {
+          "zh": "襟翼放下狀態。",
+          "en": "Flaps deployed.",
+          "ja": "フラップ展開状態。"
+        },
+        {
+          "zh": "翼根到翼尖完整對照。",
+          "en": "Compare root to tip.",
+          "ja": "翼根から翼端を照合。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs300/wing.jpg?v=0d5207656d87",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Airbus A220-300 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "A220 使用 PW1500G 齒輪傳動渦扇。N328DU 近照可見圓形進氣口、寬大的風扇短艙和向後收細的外形；沒有 787 短艙後緣那種醒目的鋸齒。",
+        "en": "The A220 uses PW1500G geared turbofans. N328DU shows a round intake, broad fan nacelle and tapering aft outline, without the 787's prominent serrated nacelle trailing edge.",
+        "ja": "A220はPW1500Gギヤードターボファンを使用します。N328DUの写真では丸い吸気口、大きなファンナセル、後方へ絞られる形状が見え、787の目立つ鋸歯状後縁とは異なります。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "齒輪機構位於引擎內，外觀照片看不到，不能靠進氣口圓不圓判定是否有齒輪；需核對機型與動力型號。",
+        "en": "The gearbox is internal and not visible here. A round intake does not prove a geared fan; confirm the airframe and engine model.",
+        "ja": "ギヤ機構は内部にあり、この写真では見えません。吸気口が丸いだけではギヤの有無を判定できず、機体とエンジン型式を照合します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "PW1500G系列。",
+          "en": "PW1500G family.",
+          "ja": "PW1500G系列。"
+        },
+        {
+          "zh": "圓形進氣唇口。",
+          "en": "Round inlet lip.",
+          "ja": "丸い吸気口縁。"
+        },
+        {
+          "zh": "內部齒輪不可見。",
+          "en": "Internal gearing is not visible.",
+          "ja": "内部ギヤは見えない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs300/engine.jpg?v=d34879e8a53c",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_Airbus_A220-300_N328DU_taxiing_at_Boston_July_2026.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "垂直尾翼位於後機身上方，前緣後掠，方向舵沿後緣配置；不是引擎尾置飛機常見的 T 尾。C-GJXY 裁切保留根部過渡。",
+        "en": "The fin rises from the aft fuselage, with a swept leading edge and rudder along its rear edge. C-GJXY's crop retains the root transition; the aircraft does not have a T-tail.",
+        "ja": "垂直尾翼は後部胴体上に立ち、前縁が後退し、後縁に方向舵を備えます。C-GJXYの切り出しで根元のつながりが見え、T字尾翼ではありません。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "機身長度比尾翼圖案更能區分兩種 A220；垂尾還應與水平尾翼的安裝高度一起觀察。",
+        "en": "Body length is more useful than the tail emblem for separating A220 variants. Also inspect the fin relative to the horizontal tail's mounting height.",
+        "ja": "両A220型の識別には尾翼の図柄より胴体長が有効です。水平尾翼の取付高さとの関係も見ます。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "1枚の後退垂直尾翼。"
+        },
+        {
+          "zh": "非T尾布局。",
+          "en": "Not a T-tail.",
+          "ja": "T字尾翼ではない。"
+        },
+        {
+          "zh": "根部過渡保留。",
+          "en": "Root transition retained.",
+          "ja": "根元の接続部を保持。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs300/vstab.jpg?v=fb0724f81686",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "水平尾翼裝在後機身兩側，低於垂尾頂端。C-GJXY 近照保留翼根、尖端與尾錐，可直接辨識傳統尾翼布局。",
+        "en": "The horizontal tail sits on the sides of the aft body, below the fin tip. C-GJXY's close-up includes the root, tip and tailcone, showing the conventional tail layout.",
+        "ja": "水平尾翼は後部胴体の両側で垂直尾翼頂部より低い位置にあります。C-GJXYの近接写真は翼根・翼端・尾部を含み、通常尾翼配置を示します。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "787 也採傳統尾翼，因此這是先排除 T 尾機型的線索，不是 A220-300 的唯一識別特徵。",
+        "en": "The 787 also uses a conventional tail. This helps exclude T-tail types but is not unique to the A220-300.",
+        "ja": "787も通常尾翼です。T字尾翼機を除外する手掛かりですが、A220-300固有ではありません。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "低於垂尾頂端。",
+          "en": "Below the fin tip.",
+          "ja": "垂直尾翼頂部より低い。"
+        },
+        {
+          "zh": "翼根與尾錐可見。",
+          "en": "Root and tailcone visible.",
+          "ja": "翼根と尾部が見える。"
+        },
+        {
+          "zh": "與主翼小翼合併辨識。",
+          "en": "Use together with winglet shape.",
+          "ja": "主翼端形状と併せて識別。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/cs300/hstab.jpg?v=bdcf6bf37920",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "A220-300 原稱 CS300，機身長 38.7 m，比 A220-100 約長 3.7 m。Air Canada C-GJXY 的全景可見窄機身、兩具翼下引擎、上翹小翼與傳統尾翼。",
+        "en": "Formerly the CS300, the A220-300 is 38.7 m long, about 3.7 m longer than the A220-100. Air Canada's C-GJXY shows its slim body, two underwing engines, upturned winglets and conventional tail.",
+        "ja": "旧CS300のA220-300は全長38.7 mで、A220-100より約3.7 m長い機体です。Air Canada C-GJXYの全景で細身の胴体、翼下双発、上向き小翼、通常尾翼を確認できます。"
+      },
+      "fact": {
+        "zh": "-100 與 -300 的機鼻、座艙和多項結構共通；辨識次型應看客艙長度，不能只看尾翼塗裝。",
+        "en": "The -100 and -300 share the nose, cockpit and many structures. Use cabin length to distinguish them, not tail livery alone.",
+        "ja": "-100と-300は機首・操縦席・多くの構造を共有します。型式判別には尾翼塗装ではなく客室の長さを使います。"
+      },
+      "bullets": [
+        {
+          "zh": "全長38.7 m。",
+          "en": "38.7 m overall length.",
+          "ja": "全長38.7 m。"
+        },
+        {
+          "zh": "比-100長約3.7 m。",
+          "en": "About 3.7 m longer than the -100.",
+          "ja": "-100より約3.7 m長い。"
+        },
+        {
+          "zh": "雙發低翼布局。",
+          "en": "Twin-engine low-wing layout.",
+          "ja": "双発・低翼配置。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/cs300/overview.jpg?v=b29f37db532c",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "正面照片可見兩片前風擋向兩側窗片延伸，窗帶包覆圓滑機鼻。側面另用 C-GJXY 實照，對照斜邊側窗與前門位置。",
+        "en": "The front photograph shows two forward panes continuing into the side panes around the rounded nose. A separate C-GJXY side view relates the sloping side window to the forward door.",
+        "ja": "正面写真では前方2枚から左右側窓へ続く窓帯と丸い機首を確認できます。C-GJXYの側面写真では斜辺の側窓と前扉の位置を比較できます。"
+      },
+      "fact": {
+        "zh": "Air Canada 的黑色眼罩包含塗裝，不全是玻璃。請沿真正窗框判讀；A220-100／-300 共用近似窗型。",
+        "en": "Air Canada's black mask includes paint, not just glazing. Follow the actual window frames; the A220-100 and -300 have similar glazing.",
+        "ja": "Air Canadaの黒いマスクには塗装も含まれます。実際の窓枠を追ってください。A220-100と-300の窓形状は近似しています。"
+      },
+      "bullets": [
+        {
+          "zh": "正面與側面分圖。",
+          "en": "Separate front and side views.",
+          "ja": "正面・側面を別掲。"
+        },
+        {
+          "zh": "區分玻璃與黑色塗裝。",
+          "en": "Separate glass from black paint.",
+          "ja": "ガラスと黒塗装を区別。"
+        },
+        {
+          "zh": "窗型不足以分辨次型。",
+          "en": "Glazing alone cannot identify the variant.",
+          "ja": "窓だけでは派生型を判別できない。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/cs300/window-front.jpg?v=dd60510b764a",
+          "caption": {
+            "zh": "Delta A220-300 正面外窗（實照裁切，不放大）",
+            "en": "Delta A220-300 front glazing (photographic crop, no enlargement)",
+            "ja": "Delta A220-300正面窓（実写切り出し、拡大なし）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_Air_Lines_Airbus_A220-300_front_view_November_2024.jpg"
+        },
+        {
+          "src": "assets/reference/cs300/window-side.jpg?v=2a1fe23b736e",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "C-GJXY 的翼尖向上傾斜並向後收尖，是可辨識的獨立小翼輪廓。與 787 延長主翼平面向後伸出的翼尖相比，A220 有較明顯的上翹段。",
+        "en": "C-GJXY's tip rises and tapers aft as a distinct winglet. Compared with the 787's aft-swept extension of the wing planform, the A220 has a more distinct upturned segment.",
+        "ja": "C-GJXYの翼端は上へ傾き後方へ細くなる明瞭な小翼です。主翼平面を後方へ延ばす787の翼端に比べ、A220は上向き部分が明確です。"
+      },
+      "fact": {
+        "zh": "A220-100 與 -300 的翼尖外形相近；不能只用小翼分辨長短型。照片中的黑色是航空公司塗裝。",
+        "en": "A220-100 and -300 tips look similar, so the winglet does not distinguish the two lengths. The black colour is airline paint.",
+        "ja": "A220-100と-300の翼端は似ているため、小翼だけで長短型を区別できません。写真の黒色は航空会社の塗装です。"
+      },
+      "bullets": [
+        {
+          "zh": "上翹且後掠。",
+          "en": "Upturned and swept aft.",
+          "ja": "上向き・後退形状。"
+        },
+        {
+          "zh": "與主翼接合處可見。",
+          "en": "Wing junction visible.",
+          "ja": "主翼との接合部が見える。"
+        },
+        {
+          "zh": "不靠塗裝判型。",
+          "en": "Do not identify by paint alone.",
+          "ja": "塗装だけで判定しない。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/cs300/wingtip.jpg?v=6e67707e5f4f",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Air_Canada_A220-300.jpg"
+        }
+      ]
+    },
+    "gear": {
+      "summary": {
+        "zh": "A220 每側主起落架為單軸雙輪，配上雙鼻輪，全機六輪。正面降落照片可看出左右主腳的輪對與支柱，不同於 787 的四輪主腳輪架。",
+        "en": "Each A220 main unit has one axle with two wheels. With twin nose wheels, there are six overall. The landing view shows the paired main wheels and struts, unlike the 787's four-wheel bogies.",
+        "ja": "A220主脚は片側1軸2輪で、前脚2輪と合わせて全機6輪です。着陸正面写真で左右主脚の車輪対と支柱を確認でき、787の4輪ボギーとは異なります。"
+      },
+      "fact": {
+        "zh": "此角度的鼻腳部分受機腹遮擋；全機輪數是配置說明，並非聲稱照片能看到所有六輪。",
+        "en": "The belly obscures part of the nose gear from this angle. The total describes the configuration, not six wheels all visible in this photograph.",
+        "ja": "この角度では前脚の一部が胴体に隠れます。合計輪数は構成の説明で、写真に6輪すべてが見えるという意味ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "每側主腳兩輪。",
+          "en": "Two wheels per main unit.",
+          "ja": "片側主脚2輪。"
+        },
+        {
+          "zh": "鼻腳也是兩輪。",
+          "en": "Two nose wheels too.",
+          "ja": "前脚も2輪。"
+        },
+        {
+          "zh": "全機六輪配置。",
+          "en": "Six-wheel configuration.",
+          "ja": "全機6輪構成。"
+        }
+      ],
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/cs300/gear.jpg?v=d5d2860d504c",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Delta_Air_Lines_Airbus_A220-300_front_view_November_2024.jpg"
+        }
+      ]
     }
   },
   "specifications": {
