@@ -224,6 +224,10 @@ $photos = [ordered]@{
   "cs300/cockpit.jpg" = "JetBlue A220 - cockpit.jpg"
   "b788/overview.jpg" = "United Boeing 787-8 N27908 IAD VA2.jpg"
   "b788/cockpit.jpg" = "Boeing 787-8 N787BA cockpit.jpg"
+  "dc9/overview.jpg" = "AM Douglas DC-9-30 MM62012 Volandia 2024 (02).jpg"
+  "dc9/cockpit.jpg" = "DC-9 Cockpit.jpg"
+  "md80/overview.jpg" = "LZ-LDP MD-82 Bulgarian Air Charter SCQ.jpg"
+  "md80/cockpit.jpg" = "ARNOSD5 (4679033164).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -516,6 +520,28 @@ $windowPhotos += @(
   @{ Dest="b788/vstab.jpg"; Title="United Boeing 787-8 N27908 IAD VA2.jpg"; Crop=@(.67,.08,.32) }
   @{ Dest="b788/hstab.jpg"; Title="United Boeing 787-8 N20904 MD1.jpg"; Crop=@(.02,.36,.31) }
   @{ Dest="b788/gear.jpg"; Title="United Boeing 787-8 N27908 IAD VA2.jpg"; Crop=@(.42,.59,.15) }
+)
+
+# DC-9-30 / MD-82: real-aircraft originals; museum supports/covers noted in captions.
+$windowPhotos += @(
+  @{ Dest="dc9/window-front.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (01).jpg"; Crop=@(.775,.33,.13) }
+  @{ Dest="dc9/window-side.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (02).jpg"; Crop=@(.085,.32,.10) }
+  @{ Dest="dc9/fuselage.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (02).jpg"; Crop=@(.16,.32,.53) }
+  @{ Dest="dc9/engine.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (01).jpg"; Crop=@(.28,.42,.145) }
+  @{ Dest="dc9/wingtip.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (02).jpg"; Crop=@(.86,.44,.135) }
+  @{ Dest="dc9/wing.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (02).jpg"; Crop=@(.46,.24,.535) }
+  @{ Dest="dc9/vstab.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (01).jpg"; Crop=@(.135,.24,.285) }
+  @{ Dest="dc9/hstab.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (02).jpg"; Crop=@(.665,.28,.235) }
+  @{ Dest="dc9/gear.jpg"; Title="AM Douglas DC-9-30 MM62012 Volandia 2024 (02).jpg"; Crop=@(.47,.55,.17) }
+  @{ Dest="md80/window-front.jpg"; Title="Meridiana McDonnell Douglas MD-82 I-SMEL Volandia 2024 (01).jpg"; Crop=@(.09,.34,.145) }
+  @{ Dest="md80/window-side.jpg"; Title="B-2136 at CAUC (20230621143941).jpg"; Crop=@(.76,.375,.12) }
+  @{ Dest="md80/fuselage.jpg"; Title="Meridiana McDonnell Douglas MD-82 I-SMEL Volandia 2024 (01).jpg"; Crop=@(.22,.32,.55) }
+  @{ Dest="md80/engine.jpg"; Title="B-2136 at CAUC (20230621143941).jpg"; Crop=@(.115,.455,.115) }
+  @{ Dest="md80/wingtip.jpg"; Title="LZ-LDP MD-82 Bulgarian Air Charter SCQ.jpg"; Crop=@(.715,.48,.14) }
+  @{ Dest="md80/wing.jpg"; Title="LZ-LDP MD-82 Bulgarian Air Charter SCQ.jpg"; Crop=@(.455,.32,.40) }
+  @{ Dest="md80/vstab.jpg"; Title="Meridiana McDonnell Douglas MD-82 I-SMEL Volandia 2024 (01).jpg"; Crop=@(.70,.245,.25) }
+  @{ Dest="md80/hstab.jpg"; Title="Meridiana McDonnell Douglas MD-82 I-SMEL Volandia 2024 (01).jpg"; Crop=@(.67,.23,.31) }
+  @{ Dest="md80/gear.jpg"; Title="LZ-LDP MD-82 Bulgarian Air Charter SCQ.jpg"; Crop=@(.475,.55,.13) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0

@@ -2,112 +2,612 @@
   "title": "McDonnell Douglas DC-9-30",
   "sub": "DC-9-30 — 點選機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "DC-9 的窄體機身截面是這條血統延續數十年的基準，日後的 MD-80、MD-90、717 都沿用同一套機身直徑，靠加長筒段變出不同座位級距。",
+      "summary": {
+        "zh": "MM62012側面可見開啟的前艙門、客艙窗列及兩個相鄰的翼上出口。DC-9-30的客艙段比MD-82短，不需靠航空公司塗裝就能比較窗列長度。",
+        "en": "MM62012's side shows the open forward door, cabin windows and two adjacent overwing exits. The DC-9-30 has a shorter cabin section than the MD-82, a useful comparison independent of livery.",
+        "ja": "MM62012の側面には開いた前部ドア、客室窓列、隣り合う2つの翼上出口が見えます。DC-9-30の客室部分はMD-82より短く、塗装に頼らず窓列の長さを比較できます。"
+      },
       "specs": [
-        ["全長", "36.37 m"],
-        ["機身直徑", "3.35 m"],
-        ["結構形式", "半硬殼式鋁合金"],
-        ["典型座位數", "90–115 席"]
+        [
+          "全長",
+          "36.37 m"
+        ],
+        [
+          "機身直徑",
+          "3.35 m"
+        ],
+        [
+          "結構形式",
+          "半硬殼式鋁合金"
+        ],
+        [
+          "典型座位數",
+          "90–115 席"
+        ]
       ],
-      "fact": "DC-9 是道格拉斯自行研發、不靠合併取得的最後一款暢銷窄體機，後續的 MD-80／90／717 都是它的直系延伸，血統橫跨超過半世紀。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "這是軍用VIP保存機，局部封窗與內裝不代表所有航空公司客機。裁切沒有包含全部尾部出口，判讀出口總數仍須看完整配置。",
+        "en": "This preserved military VIP aircraft has window blanking and interiors that do not represent every airline aircraft. The crop excludes aft exits; use a complete configuration to count all exits.",
+        "ja": "軍用VIP保存機の窓塞ぎや内装は全旅客機の仕様ではありません。写真は尾部出口を含まないため、総数は全体配置で確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "前門位置清楚。",
+          "en": "Clear forward-door position.",
+          "ja": "前部ドア位置が明瞭。"
+        },
+        {
+          "zh": "相鄰翼上出口。",
+          "en": "Adjacent overwing exits.",
+          "ja": "隣接した翼上出口。"
+        },
+        {
+          "zh": "注意保存機配置。",
+          "en": "Allow for preserved-aircraft configuration.",
+          "ja": "保存機の仕様に注意。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc9/fuselage.jpg?v=af66fcae039e",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "DC-9 服役於類比儀表年代，僅需 2 名飛行員（機長、副機長），比同期不少三發廣體機省去了飛航工程師編制。",
+      "summary": {
+        "zh": "照片是Northwest DC-9-40的真實座艙，作為DC-9家族早期布局參考，並非本頁-30機籍。可見雙操縱盤、圓形飛航儀表、中央引擎儀表及油門座。",
+        "en": "This real Northwest DC-9-40 cockpit illustrates an early DC-9-family layout; it is not a -30 airframe. Twin yokes, round flight instruments, central engine gauges and a throttle pedestal are visible.",
+        "ja": "写真はNorthwest DC-9-40の実機操縦席で、初期DC-9系列の配置参考です。本ページの-30実機ではありません。左右の操縦輪、丸形計器、中央のエンジン計器とスロットル台が見えます。"
+      },
       "specs": [
-        ["機組員", "2 名"],
-        ["儀表", "傳統類比儀表"],
-        ["飛控", "傳統機械／液壓操縱"],
-        ["設計年代", "1960 年代"]
+        [
+          "機組員",
+          "2 名"
+        ],
+        [
+          "儀表",
+          "傳統類比儀表"
+        ],
+        [
+          "飛控",
+          "傳統機械／液壓操縱"
+        ],
+        [
+          "設計年代",
+          "1960 年代"
+        ]
       ],
-      "fact": "DC-9 只需 2 名飛行員的座艙配置，在 1965 年首飛時是相對前衛的設計——許多同期客機仍配置 3 人機組。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "DC-9採兩人飛行組員。照片中的後加電子設備不代表每架-30原始交付配置；和右側MD-82照片比較時，注意圓形儀表與電子顯示的搭配。",
+        "en": "DC-9 flight crews comprise two pilots. Added electronic equipment here does not define every -30's delivery standard; compare its round instruments with the MD-82's electronic displays.",
+        "ja": "DC-9は2人の操縦士で運航します。追加電子装備は全-30の納入時仕様を示しません。MD-82写真の電子表示と丸形計器の組み合わせを比較してください。"
+      },
+      "bullets": [
+        {
+          "zh": "-40實照，家族參考。",
+          "en": "Actual -40; family reference.",
+          "ja": "-40実写、系列参考。"
+        },
+        {
+          "zh": "雙操縱盤。",
+          "en": "Twin control yokes.",
+          "ja": "左右の操縦輪。"
+        },
+        {
+          "zh": "類比儀表為主。",
+          "en": "Predominantly analog instruments.",
+          "ja": "アナログ計器が中心。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc9/cockpit.jpg?v=d35a461633d3",
+          "caption": {
+            "zh": "Northwest DC-9-40 實機座艙；DC-9家族參考，非-30機籍",
+            "en": "Real Northwest DC-9-40 cockpit; DC-9 family reference, not a -30 airframe",
+            "ja": "Northwest DC-9-40実機操縦席：DC-9系列参考、-30実機ではありません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:DC-9_Cockpit.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "DC-9 主翼後掠角適中，配備前緣縫翼與後緣富勒襟翼提升起降性能，翼下無引擎（引擎移至機尾），主翼結構單純化、無需為引擎讓出空間。",
+      "summary": {
+        "zh": "DC-9-30採低置後掠主翼，從翼根至翼尖沒有引擎吊架。這張保存機照片顯示前緣與外翼輪廓，但不是俯視平面圖。",
+        "en": "The DC-9-30 has low-mounted swept wings with no engine pylons between root and tip. This preserved-aircraft photograph shows the leading edge and outer-wing profile, not an overhead plan view.",
+        "ja": "DC-9-30は低翼・後退翼で、翼根から翼端までエンジンパイロンがありません。保存機の前縁と外翼輪郭を示す写真で、真上からの平面図ではありません。"
+      },
       "specs": [
-        ["翼展", "27.25 m"],
-        ["翼面積", "92.97 m²"],
-        ["後掠角", "24°"],
-        ["引擎配置", "尾置雙發（翼下淨空）"]
+        [
+          "翼展",
+          "28.44 m"
+        ],
+        [
+          "翼面積",
+          "92.97 m²"
+        ],
+        [
+          "後掠角",
+          "24°"
+        ],
+        [
+          "引擎配置",
+          "尾置雙發（翼下淨空）"
+        ]
       ],
-      "fact": "尾置引擎讓 DC-9 的機翼結構可以做得更輕、更單純，這也是這個世代窄體機為何普遍偏好尾置佈局的原因之一。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "主翼布局與MD-82相近，後者的翼展更大。僅用照片上量到的像素長度比較翼展會受拍攝距離與角度誤導。",
+        "en": "The layout resembles the MD-82's, whose span is greater. Pixel lengths in differently framed photographs are not reliable span measurements.",
+        "ja": "MD-82と配置は似ていますが、MD-82の翼幅は大きくなっています。距離や角度の違う写真のピクセル長で翼幅は測れません。"
+      },
+      "bullets": [
+        {
+          "zh": "低置後掠翼。",
+          "en": "Low swept wing.",
+          "ja": "低翼・後退翼。"
+        },
+        {
+          "zh": "無翼下引擎吊架。",
+          "en": "No underwing engine pylons.",
+          "ja": "翼下エンジンパイロンなし。"
+        },
+        {
+          "zh": "斜角外形參考。",
+          "en": "Oblique profile reference.",
+          "ja": "斜め外観の参考。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc9/wing.jpg?v=d76f5c00fd78",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "TURBOFAN ENGINE",
-      "summary": "DC-9 採尾置雙發配置，早期使用 Pratt & Whitney JT8D 低旁通比渦輪扇引擎，是這具引擎家族最早的量產應用機型之一。",
+      "summary": {
+        "zh": "DC-9的JT8D短艙裝在後機身兩側，進氣口在客艙窗列後方，而非機翼下方。近照保留圓形進氣口、細長短艙與安裝位置。",
+        "en": "The DC-9's JT8D nacelles sit on the aft fuselage, with inlets behind the cabin window row rather than under the wings. The crop retains the circular inlet, slim nacelle and mounting position.",
+        "ja": "DC-9のJT8Dナセルは後部胴体の左右にあり、吸入口は主翼下ではなく客室窓列の後方です。円形吸入口、細長いナセルと取付位置を残しています。"
+      },
       "specs": [
-        ["型號", "Pratt & Whitney JT8D-9"],
-        ["型式", "低旁通比渦輪扇"],
-        ["單具推力", "64 kN"],
-        ["配置", "尾置雙發"]
+        [
+          "型號",
+          "Pratt & Whitney JT8D-9"
+        ],
+        [
+          "型式",
+          "低旁通比渦輪扇"
+        ],
+        [
+          "單具推力",
+          "64 kN"
+        ],
+        [
+          "配置",
+          "尾置雙發"
+        ]
       ],
-      "fact": "JT8D 引擎家族後來裝上 727、737 原始型等多款機型，DC-9 是讓這具引擎在商用航空站穩腳步的早期功臣之一。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "MD-80使用JT8D-200家族，外形更大；但照片中的透視會影響大小。引擎內部型號不能僅靠暗色進氣口確認。",
+        "en": "MD-80s use the larger JT8D-200 family, but perspective changes apparent size. A dark inlet alone cannot establish an engine subvariant.",
+        "ja": "MD-80は大型化したJT8D-200系列を使用しますが、見かけの大きさは遠近感でも変わります。暗い吸入口だけでエンジン細型式は確定できません。"
+      },
+      "bullets": [
+        {
+          "zh": "後機身安裝。",
+          "en": "Aft-fuselage mounting.",
+          "ja": "後部胴体に装備。"
+        },
+        {
+          "zh": "圓形進氣口。",
+          "en": "Circular intake.",
+          "ja": "円形吸入口。"
+        },
+        {
+          "zh": "翼下沒有引擎。",
+          "en": "No underwing engines.",
+          "ja": "主翼下にエンジンなし。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc9/engine.jpg?v=839fcdd09a71",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(01).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "DC-9 採 T 型尾翼配置，水平尾翼安裝於垂直尾翼頂端，這個構型後來原封不動延續到 MD-80／MD-90／717。",
+      "summary": {
+        "zh": "後掠垂直尾翼向上承接水平尾翼，形成T型。照片同時保留垂尾根部與上端，能看出尾翼不是從機身低處向兩側伸出。",
+        "en": "The swept fin supports the horizontal stabilizer at its top, forming a T-tail. Retaining the fin root and top makes the high attachment position clear.",
+        "ja": "後退した垂直尾翼の頂部で水平尾翼を支え、T字を形成します。垂尾の根元と頂部を残し、高い取付位置を確認できます。"
+      },
       "specs": [
-        ["操縱面", "方向舵"],
-        ["構型", "T 型尾翼（承載水平尾翼）"],
-        ["結構", "鋁合金"],
-        ["設計影響", "延續至 MD-80/90、717"]
+        [
+          "操縱面",
+          "方向舵"
+        ],
+        [
+          "構型",
+          "T 型尾翼（承載水平尾翼）"
+        ],
+        [
+          "結構",
+          "鋁合金"
+        ],
+        [
+          "設計影響",
+          "延續至 MD-80/90、717"
+        ]
       ],
-      "fact": "DC-9 的 T 型尾翼＋尾置雙發構型是後續整個 MD-80／90／717 家族的設計基礎，一套構型沿用了超過 50 年。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "MD-80、717及部分支線客機都有T尾；辨識時仍需搭配窗型、機身長度與短艙，而非只看T字。",
+        "en": "MD-80s, 717s and some regional jets also have T-tails. Combine this feature with glazing, fuselage length and nacelles.",
+        "ja": "MD-80、717、一部のリージョナル機もT尾翼です。窓形、胴体長、ナセルと組み合わせて判断します。"
+      },
+      "bullets": [
+        {
+          "zh": "後掠垂尾。",
+          "en": "Swept fin.",
+          "ja": "後退した垂尾。"
+        },
+        {
+          "zh": "承接頂端平尾。",
+          "en": "Supports the high stabilizer.",
+          "ja": "頂部の水平尾翼を支持。"
+        },
+        {
+          "zh": "家族共通布局。",
+          "en": "Shared family layout.",
+          "ja": "系列共通の配置。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc9/vstab.jpg?v=acd686e44aa0",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(01).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼裝在垂直尾翼頂端，配備升降舵，遠離主翼與引擎尾流干擾，操縱效率不受主翼失速狀態影響。",
+      "summary": {
+        "zh": "水平尾翼裝在垂直尾翼頂端；近照保留左右翼面與中央接合區，與一般低置水平尾翼的客機差別明顯。",
+        "en": "The horizontal stabilizer is mounted atop the fin. Both sides and the central attachment area are retained, contrasting with aircraft that have low-mounted stabilizers.",
+        "ja": "水平尾翼は垂直尾翼の頂部にあります。左右の翼面と中央取付部を残し、低い位置に水平尾翼を持つ旅客機との違いを確認できます。"
+      },
       "specs": [
-        ["操縱面", "升降舵"],
-        ["構型", "T 型尾翼頂置"],
-        ["材料", "鋁合金"],
-        ["尾翼翼展", "約 9.7 m"]
+        [
+          "操縱面",
+          "升降舵"
+        ],
+        [
+          "構型",
+          "T 型尾翼頂置"
+        ],
+        [
+          "材料",
+          "鋁合金"
+        ],
+        [
+          "尾翼翼展",
+          "約 9.7 m"
+        ]
       ],
-      "fact": "T 型尾翼機型需特別留意「深失速」風險，DC-9 是最早大量服役、讓飛行員普遍熟悉這類尾翼操縱特性的窄體機之一。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "高置不代表任何迎角都不受主翼尾流影響。這張圖只用於外形辨識，不能據此推論失速或操縱性能。",
+        "en": "A high position does not make the tail immune to wing wake at all angles of attack. This image supports identification, not conclusions about stall or control performance.",
+        "ja": "高い位置でも、あらゆる迎角で主翼後流の影響を受けないわけではありません。外形識別用で、失速・操縦性能の判断には使えません。"
+      },
+      "bullets": [
+        {
+          "zh": "垂尾頂端安裝。",
+          "en": "Mounted on top of the fin.",
+          "ja": "垂尾頂部に取付。"
+        },
+        {
+          "zh": "左右水平翼面。",
+          "en": "Left and right stabilizer surfaces.",
+          "ja": "左右の水平翼面。"
+        },
+        {
+          "zh": "T尾不等於獨有特徵。",
+          "en": "T-tail is not unique to this type.",
+          "ja": "T尾翼だけでは特定不可。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc9/hstab.jpg?v=d5a7ae343f3e",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "DC-9 採前三點式起落架，主起落架收於機身兩側整流罩內，配合尾置引擎配置，讓機翼下方保持淨空。",
+      "summary": {
+        "zh": "DC-9採前三點式起落架，每側主腳兩輪，鼻腳兩輪，共六輪。裁切展示主翼附近的主輪；輪下灰色立柱是博物館支架。",
+        "en": "The DC-9 has tricycle gear: two wheels per main unit and two nose wheels, six in total. This crop shows the main wheels near the wing; the gray columns below are museum supports.",
+        "ja": "DC-9は前輪式で、左右主脚が各2輪、前脚が2輪の計6輪です。主翼付近の主輪を示し、車輪下の灰色柱は博物館の支持台です。"
+      },
       "specs": [
-        ["配置", "前三點式"],
-        ["主起落架", "2 具 × 2 輪"],
-        ["收納位置", "機身側邊整流罩"],
-        ["煞車", "多盤式"]
+        [
+          "配置",
+          "前三點式"
+        ],
+        [
+          "主起落架",
+          "2 具 × 2 輪"
+        ],
+        [
+          "主腳位置",
+          "主翼翼根附近"
+        ],
+        [
+          "煞車",
+          "多盤式"
+        ]
       ],
-      "fact": "DC-9 的起落架設計讓它能在較短、鋪面較差的跑道起降，是這款機型早年開拓中小型機場航線的優勢之一。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "MD-82同樣是六輪，不能靠輪數分辨。不要把背景其他飛機的輪子或保存支架計入本機。",
+        "en": "The MD-82 also has six wheels, so wheel count cannot distinguish them. Exclude wheels on background aircraft and display supports.",
+        "ja": "MD-82も6輪なので輪数だけでは区別できません。背景の別機の車輪や展示支持台は数えません。"
+      },
+      "bullets": [
+        {
+          "zh": "每側主腳兩輪。",
+          "en": "Two wheels per main unit.",
+          "ja": "片側主脚2輪。"
+        },
+        {
+          "zh": "全機六輪。",
+          "en": "Six wheels overall.",
+          "ja": "全機6輪。"
+        },
+        {
+          "zh": "支架不屬於起落架。",
+          "en": "Display supports are not landing gear.",
+          "ja": "展示台は着陸装置ではない。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/dc9/gear.jpg?v=88a3a2574ad3",
+          "caption": {
+            "zh": "MM62012主起落架；灰色立柱是展示支架，不屬飛機構造",
+            "en": "MM62012 main gear; gray columns are display supports, not aircraft structure",
+            "ja": "MM62012主脚：灰色柱は展示支持台で、機体構造ではありません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "DC-9-30 是尾置雙發、T 型尾翼與五排座窄體機身的組合，全長約36.37 m，明顯短於45.06 m的MD-82。照片為Volandia保存的義大利空軍MM62012。",
+        "en": "The DC-9-30 combines rear twin engines, a T-tail and a five-abreast narrow fuselage. At about 36.37 m it is notably shorter than the 45.06 m MD-82. This is preserved Italian Air Force MM62012 at Volandia.",
+        "ja": "DC-9-30は尾部双発、T尾翼、横5席の細い胴体を組み合わせます。全長約36.37 mで45.06 mのMD-82より短く、写真はVolandiaで保存されるイタリア空軍MM62012です。"
+      },
+      "fact": {
+        "zh": "兩型外窗與尾翼布局很相似，先比較機身長短，再看引擎短艙和出口。地面的支架與登機梯屬展示設施，不是飛行構型。",
+        "en": "Window geometry and tail layout are similar: compare fuselage length, nacelles and exits together. Ground supports and access stairs are museum equipment, not flight configuration.",
+        "ja": "外窓と尾翼配置は似ています。胴体長、ナセル、出口を組み合わせて判断します。地上の支持台と階段は展示設備で、飛行時の構成ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "短於長機身MD-80。",
+          "en": "Shorter than long-body MD-80s.",
+          "ja": "長胴体MD-80より短い。"
+        },
+        {
+          "zh": "尾置雙發＋T尾。",
+          "en": "Rear twin engines and T-tail.",
+          "ja": "尾部双発＋T尾翼。"
+        },
+        {
+          "zh": "先看比例，再看細節。",
+          "en": "Start with proportions, then details.",
+          "ja": "まず比率、次に細部。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dc9/overview.jpg?v=fb498e4a6b78",
+          "caption": {
+            "zh": "義大利空軍DC-9-30 MM62012，Volandia保存展示（2024）",
+            "en": "Italian Air Force DC-9-30 MM62012 preserved at Volandia (2024)",
+            "ja": "イタリア空軍DC-9-30 MM62012、Volandia保存展示（2024年）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "前斜角與側面裁切展示DC-9-30的分片式外窗：前風擋旁接角度分明的側窗，上方另有小型眉窗。側面照片有打開的前門遮住最後方的一部分窗緣。",
+        "en": "Front-quarter and side crops show the DC-9-30's separate windshield panes, angular side windows and small upper eyebrow windows. The open forward door partly obscures the rear window edge in the side view.",
+        "ja": "斜め前方と側面の写真で、DC-9-30の分割風防、角張った側窓、上部の小さな眉窓を確認できます。側面では開いた前部ドアが最後方の窓縁を一部隠しています。"
+      },
+      "fact": {
+        "zh": "MD-80延續很接近的窗型，不能只看到眉窗就判定是DC-9。黑色塗裝、玻璃反光與照片角度也會改變視覺印象。",
+        "en": "MD-80s retain very similar glazing, so eyebrow windows alone cannot identify a DC-9. Paint, reflections and viewing angle also change the apparent shape.",
+        "ja": "MD-80も非常によく似た窓を継承するため、眉窓だけではDC-9と断定できません。塗装、反射、撮影角度でも印象が変わります。"
+      },
+      "bullets": [
+        {
+          "zh": "上方小型眉窗。",
+          "en": "Small upper eyebrow windows.",
+          "ja": "上部の小さな眉窓。"
+        },
+        {
+          "zh": "多片有框側窗。",
+          "en": "Multiple framed side panes.",
+          "ja": "枠で分かれた側窓。"
+        },
+        {
+          "zh": "需搭配機身長度。",
+          "en": "Check fuselage length too.",
+          "ja": "胴体長も確認。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dc9/window-front.jpg?v=0634d8489a95",
+          "caption": {
+            "zh": "保存機前斜角外窗（原尺寸實照裁切，非正投影）",
+            "en": "Preserved-aircraft front-quarter windows (original-resolution crop, not orthographic)",
+            "ja": "保存機の斜め前方窓（原寸実写切り出し、正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(01).jpg"
+        },
+        {
+          "src": "assets/reference/dc9/window-side.jpg?v=19a0410fc1f1",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "DC-9-30的標準翼尖沒有直立式小翼。這張近照保留主翼最外端與尖端燈罩，適合與A220或737的高聳小翼比較。",
+        "en": "The standard DC-9-30 wingtip has no upright winglet. This crop retains the outer wing and tip light housing for comparison with tall A220 or 737 winglets.",
+        "ja": "標準DC-9-30の翼端には直立ウイングレットがありません。主翼最外端と灯火カバーを残し、A220や737の高い翼端小翼と比較できます。"
+      },
+      "fact": {
+        "zh": "MD-82也通常沒有直立小翼；缺少小翼只是排除線索，不足以區分這一對機型。",
+        "en": "MD-82s also normally lack upright winglets; their absence is an elimination clue, not a way to separate this pair.",
+        "ja": "MD-82も通常は直立小翼を持ちません。小翼がないことは候補を絞る手掛かりで、この2機種の区別には不十分です。"
+      },
+      "bullets": [
+        {
+          "zh": "沒有直立小翼。",
+          "en": "No upright winglet.",
+          "ja": "直立小翼なし。"
+        },
+        {
+          "zh": "辨認主翼最外端。",
+          "en": "Locate the outer main-wing tip.",
+          "ja": "主翼最外端を確認。"
+        },
+        {
+          "zh": "不要與T尾尖端混淆。",
+          "en": "Do not confuse it with a T-tail tip.",
+          "ja": "T尾翼の先端と混同しない。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/dc9/wingtip.jpg?v=8d838ffeef74",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -140,7 +640,7 @@
       ],
       [
         "翼展",
-        "27.25 m（89 ft 5 in）"
+        "28.44 m（約93 ft 4 in）"
       ],
       [
         "機高",

@@ -2,112 +2,612 @@
   "title": "McDonnell Douglas MD-82",
   "sub": "MD-82 — 點選機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "MD-80 系列的機身是 DC-9 的加長版，沿用同一套半硬殼式鋁合金結構，靠加長機身筒段提升載客量，是「一代機身、多代機型」的典型案例。",
+      "summary": {
+        "zh": "I-SMEL裁切顯示開啟的前門、很長的客艙窗列、成對翼上出口及後方側門。與DC-9-30並排時，窗列延伸的長度是重要線索。",
+        "en": "The I-SMEL crop shows the open front door, long cabin window row, paired overwing exits and an aft side door. The extended window row is a strong clue alongside the DC-9-30.",
+        "ja": "I-SMELの写真には開いた前部ドア、長い客室窓列、対になった翼上出口、後部側面ドアが写ります。DC-9-30と並べると窓列の長さが重要な手掛かりです。"
+      },
       "specs": [
-        ["全長", "39.7 m"],
-        ["機身直徑", "3.35 m"],
-        ["結構形式", "半硬殼式鋁合金"],
-        ["典型座位數", "130–172 席"]
+        [
+          "全長",
+          "45.06 m"
+        ],
+        [
+          "機身直徑",
+          "3.35 m"
+        ],
+        [
+          "結構形式",
+          "半硬殼式鋁合金"
+        ],
+        [
+          "典型座位數",
+          "130–172 席"
+        ]
       ],
-      "fact": "MD-80 系列的機身直徑跟 60 年代首飛的 DC-9 一模一樣——窄小的客艙寬度也是這條血統機型的識別特徵之一。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "MD-82仍是五排座窄體，不是因為較長就變寬體。前門外的階梯及引擎紅色圓蓋屬保存展示配置。",
+        "en": "The MD-82 remains a five-abreast narrowbody; length does not make it a widebody. The external stairs and red engine covers belong to its preserved display configuration.",
+        "ja": "長くてもMD-82は横5席のナローボディです。外付け階段とエンジンの赤い円形蓋は保存展示時の装備です。"
+      },
+      "bullets": [
+        {
+          "zh": "長客艙窗列。",
+          "en": "Long cabin window row.",
+          "ja": "長い客室窓列。"
+        },
+        {
+          "zh": "翼上出口與後側門。",
+          "en": "Overwing exits and aft side door.",
+          "ja": "翼上出口と後部側面ドア。"
+        },
+        {
+          "zh": "窄體五排座。",
+          "en": "Five-abreast narrowbody.",
+          "ja": "横5席ナローボディ。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md80/fuselage.jpg?v=c6329a71e7ad",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Meridiana_McDonnell_Douglas_MD-82_I-SMEL_Volandia_2024_(01).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "MD-80 系列座艙介於類比與數位之間，部分後期機型加裝電子飛航儀表，仍配置 2 名飛行員，操作邏輯後來也延續到 717/MD-90。",
+      "summary": {
+        "zh": "SAS MD-82 LN-ROT的飛行中實照，可見雙操縱盤、電子飛航顯示、中央引擎指示與頂板開關；機組員遮住部分右側儀表。",
+        "en": "This in-flight photograph of SAS MD-82 LN-ROT shows yokes, electronic flight displays, central engine indications and overhead switches. The crew obscure some right-side instruments.",
+        "ja": "SAS MD-82 LN-ROTの飛行中実写です。操縦輪、電子飛行表示、中央エンジン表示、頭上スイッチが見え、乗員が右側計器の一部を隠しています。"
+      },
       "specs": [
-        ["機組員", "2 名"],
-        ["儀表", "類比為主，部分電子化"],
-        ["飛控", "傳統機械／液壓操縱"],
-        ["設計淵源", "DC-9 座艙延伸"]
+        [
+          "機組員",
+          "2 名"
+        ],
+        [
+          "儀表",
+          "類比為主，部分電子化"
+        ],
+        [
+          "飛控",
+          "傳統機械／液壓操縱"
+        ],
+        [
+          "設計淵源",
+          "DC-9 座艙延伸"
+        ]
       ],
-      "fact": "MD-80 的座艙操作邏輯後來原封不動延續到 MD-90，再演化成 717——三個世代的機型飛行員幾乎能無縫轉換駕駛。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "MD-80座艙設備隨次型與改裝而異，照片不是所有MD-82的固定規格。與DC-9類比座艙相比，可觀察顯示器增加，但仍保留許多傳統控制件。",
+        "en": "MD-80 equipment varies by subvariant and retrofit; this is not a universal MD-82 standard. Compared with the analog DC-9, note the displays alongside retained conventional controls.",
+        "ja": "MD-80の装備は細型式や改修で異なり、全MD-82共通仕様ではありません。DC-9のアナログ操縦席と比べ、従来操作部と電子表示の共存に注目します。"
+      },
+      "bullets": [
+        {
+          "zh": "LN-ROT真實座艙。",
+          "en": "Real LN-ROT flight deck.",
+          "ja": "LN-ROT実機操縦席。"
+        },
+        {
+          "zh": "電子與傳統儀表並存。",
+          "en": "Electronic and conventional instruments coexist.",
+          "ja": "電子表示と従来計器が共存。"
+        },
+        {
+          "zh": "留意人物遮擋。",
+          "en": "Allow for crew obstruction.",
+          "ja": "乗員による遮蔽に注意。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md80/cockpit.jpg?v=ac92cdba6b78",
+          "caption": {
+            "zh": "SAS MD-82 LN-ROT飛行中實照（2010）；保留原作者署名",
+            "en": "SAS MD-82 LN-ROT in flight (2010); original photographer credit retained",
+            "ja": "飛行中のSAS MD-82 LN-ROT（2010年）：元写真の著作者表記を保持"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ARNOSD5_(4679033164).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "MD-80 主翼在 DC-9 基礎上加大翼展與翼面積，後緣配備富勒襟翼與展向縫翼提升起降性能，翼尖沒有小翼（部分後期加裝版本除外）。",
+      "summary": {
+        "zh": "MD-82有比DC-9-30更大的低置後掠翼。LZ-LDP進場實照可見後緣襟翼放下，翼下沒有引擎，主輪在翼根附近。",
+        "en": "The MD-82 has a larger low-mounted swept wing than the DC-9-30. LZ-LDP's approach photo shows deployed trailing-edge flaps, no underwing engines and main wheels near the root.",
+        "ja": "MD-82の低い後退翼はDC-9-30より大型です。進入中のLZ-LDPには下がった後縁フラップ、エンジンのない翼下、翼根付近の主輪が見えます。"
+      },
       "specs": [
-        ["翼展", "32.87 m"],
-        ["翼面積", "118.4 m²"],
-        ["後掠角", "24.5°"],
-        ["設計淵源", "DC-9 主翼放大版"]
+        [
+          "翼展",
+          "32.87 m"
+        ],
+        [
+          "翼面積",
+          "118.4 m²"
+        ],
+        [
+          "後掠角",
+          "24.5°"
+        ],
+        [
+          "設計淵源",
+          "DC-9 主翼放大版"
+        ]
       ],
-      "fact": "MD-80 的機翼展弦比在當年窄體機中偏高，這讓它在巡航油耗表現上優於同期不少競爭對手，是這款機型長壽的原因之一。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "起降時展開的襟翼會改變輪廓，不代表主翼型號不同。不能用這張斜角照片量測實際翼展或後掠角。",
+        "en": "Deployed landing flaps change the outline without indicating a different wing model. Do not measure true span or sweep from this oblique photograph.",
+        "ja": "着陸時のフラップ展開で輪郭が変わっても、別の主翼型式とは限りません。この斜め写真から実翼幅や後退角は測れません。"
+      },
+      "bullets": [
+        {
+          "zh": "低置後掠翼。",
+          "en": "Low swept wing.",
+          "ja": "低翼・後退翼。"
+        },
+        {
+          "zh": "後緣襟翼展開。",
+          "en": "Trailing-edge flaps deployed.",
+          "ja": "後縁フラップ展開。"
+        },
+        {
+          "zh": "無翼下引擎。",
+          "en": "No underwing engines.",
+          "ja": "翼下エンジンなし。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md80/wing.jpg?v=199d1aecac51",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:LZ-LDP_MD-82_Bulgarian_Air_Charter_SCQ.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "TURBOFAN ENGINE",
-      "summary": "MD-80 尾置雙發配置，換裝比 DC-9 更省油、更安靜的 Pratt & Whitney JT8D-200 系列引擎，是 DC-9 血統邁向新世代的關鍵升級。",
+      "summary": {
+        "zh": "B-2136近照展示後機身JT8D-200系列短艙的進氣口及翼上方安裝位置。MD-80使用較大風扇的JT8D衍生型，仍不是當代高旁通比大風扇的外形。",
+        "en": "B-2136 shows the aft JT8D-200-family nacelle inlet and its position above the wing. The MD-80 uses a larger-fan JT8D derivative, not the appearance of a modern high-bypass big fan.",
+        "ja": "B-2136の写真で後部JT8D-200系列ナセルの吸入口と主翼より上の配置を確認できます。大型ファンのJT8D派生型ですが、現代の高バイパス大型ファンとは外形が異なります。"
+      },
       "specs": [
-        ["型號", "Pratt & Whitney JT8D-200 系列"],
-        ["型式", "高旁通比渦輪扇（改良型）"],
-        ["配置", "尾置雙發"],
-        ["單具推力", "82–93 kN"]
+        [
+          "型號",
+          "Pratt & Whitney JT8D-200 系列"
+        ],
+        [
+          "型式",
+          "渦輪扇（JT8D-200）"
+        ],
+        [
+          "配置",
+          "尾置雙發"
+        ],
+        [
+          "單具推力",
+          "82–93 kN"
+        ]
       ],
-      "fact": "JT8D-200 系列引擎的風扇直徑比原本 DC-9 用的 JT8D 更大，短艙外觀也隨之變得更粗——熟悉機型的人光看引擎輪廓就能分辨 DC-9 與 MD-80。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "不要把MD-80的JT8D-200與MD-90的V2500或717的BR715混為一談。B-2136是退役教學／研究機，照片不代表目前營運狀態。",
+        "en": "Do not confuse the MD-80's JT8D-200 with the MD-90's V2500 or the 717's BR715. B-2136 is a retired teaching/research airframe, not evidence of current service.",
+        "ja": "MD-80のJT8D-200をMD-90のV2500や717のBR715と混同しないでください。B-2136は退役した教育・研究用機で、現役運航を示しません。"
+      },
+      "bullets": [
+        {
+          "zh": "尾置JT8D-200家族。",
+          "en": "Rear-mounted JT8D-200 family.",
+          "ja": "尾部JT8D-200系列。"
+        },
+        {
+          "zh": "圓形進氣口。",
+          "en": "Circular inlet.",
+          "ja": "円形吸入口。"
+        },
+        {
+          "zh": "不同於MD-90／717引擎。",
+          "en": "Different from MD-90/717 engines.",
+          "ja": "MD-90／717とは別エンジン。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md80/engine.jpg?v=786ae5ffad1f",
+          "caption": {
+            "zh": "退役B-2136的JT8D-200家族短艙；非現役營運證明",
+            "en": "JT8D-200-family nacelle on retired B-2136; not evidence of current airline service",
+            "ja": "退役B-2136のJT8D-200系列ナセル：現役運航を示すものではありません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-2136_at_CAUC_(20230621143941).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向穩定性與偏航操縱，承接置於頂端的水平尾翼（T 型尾翼構型），結構延續 DC-9 家族設計。",
+      "summary": {
+        "zh": "I-SMEL的後掠垂尾支撐頂端水平尾翼，與DC-9同為T尾；裁切保留尾根與頂部接合，便於看清布局。",
+        "en": "I-SMEL's swept fin supports a high horizontal stabilizer, the same basic T-tail arrangement as the DC-9. The crop retains the root and top junction.",
+        "ja": "I-SMELの後退垂尾は高い水平尾翼を支え、DC-9と同じ基本T尾翼配置です。根元と頂部の接合部を残しています。"
+      },
       "specs": [
-        ["操縱面", "方向舵"],
-        ["構型", "T 型尾翼（承載水平尾翼）"],
-        ["結構", "鋁合金"],
-        ["設計淵源", "DC-9 尾翼延伸"]
+        [
+          "操縱面",
+          "方向舵"
+        ],
+        [
+          "構型",
+          "T 型尾翼（承載水平尾翼）"
+        ],
+        [
+          "結構",
+          "鋁合金"
+        ],
+        [
+          "設計淵源",
+          "DC-9 尾翼延伸"
+        ]
       ],
-      "fact": "T 型尾翼＋尾置引擎的組合讓客艙地板更貼近地面，登機不需高聳空橋，這是 DC-9/MD-80 系列長年在支線與次級機場受歡迎的原因。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "塗裝、方向舵偏轉與視角都會影響輪廓。單看垂尾無法可靠分辨MD-81／82／83。",
+        "en": "Livery, rudder deflection and angle affect the outline. The fin alone cannot reliably separate MD-81/82/83 variants.",
+        "ja": "塗装、方向舵の偏向、角度で輪郭が変わります。垂尾だけでMD-81／82／83を確実に区別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "T型布局。",
+          "en": "T-tail layout.",
+          "ja": "T尾翼配置。"
+        },
+        {
+          "zh": "後掠垂尾。",
+          "en": "Swept fin.",
+          "ja": "後退垂尾。"
+        },
+        {
+          "zh": "搭配長機身判讀。",
+          "en": "Combine with long-fuselage proportions.",
+          "ja": "長胴体の比率と併用。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md80/vstab.jpg?v=df234fb6546e",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Meridiana_McDonnell_Douglas_MD-82_I-SMEL_Volandia_2024_(01).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼裝在垂直尾翼頂端，配備升降舵與多組配平調整片，遠離主翼與引擎尾流干擾。",
+      "summary": {
+        "zh": "水平尾翼位於垂尾頂端，兩側翼面從中央接合處向外延伸。它與主翼同樣可能因透視看起來不對稱。",
+        "en": "The horizontal stabilizer sits atop the fin, extending to both sides from the central junction. Perspective may make its two sides appear asymmetric.",
+        "ja": "水平尾翼は垂尾頂部にあり、中央接合部から左右へ伸びます。遠近感で左右非対称に見える場合があります。"
+      },
       "specs": [
-        ["操縱面", "升降舵＋配平調整片"],
-        ["構型", "T 型尾翼頂置"],
-        ["材料", "鋁合金"],
-        ["設計淵源", "DC-9 水平尾翼"]
+        [
+          "操縱面",
+          "升降舵＋配平調整片"
+        ],
+        [
+          "構型",
+          "T 型尾翼頂置"
+        ],
+        [
+          "材料",
+          "鋁合金"
+        ],
+        [
+          "設計淵源",
+          "DC-9 水平尾翼"
+        ]
       ],
-      "fact": "MD-80 的水平尾翼配平系統對重心變化特別敏感，這也是為什麼這類機型的載重平衡計算在起飛前特別受機組重視。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "DC-9、MD-80和717共享T尾概念，但不能據此認為尺寸或所有零件相同。照片用來比較布局，不是零件互換依據。",
+        "en": "DC-9, MD-80 and 717 share the T-tail concept, not necessarily dimensions or interchangeable parts. Photographs compare layout, not interchangeability.",
+        "ja": "DC-9、MD-80、717はT尾翼の概念を共有しますが、寸法や部品互換性まで同じではありません。写真は配置比較用です。"
+      },
+      "bullets": [
+        {
+          "zh": "頂置水平尾翼。",
+          "en": "High-mounted horizontal stabilizer.",
+          "ja": "高位置の水平尾翼。"
+        },
+        {
+          "zh": "左右翼面及接合區。",
+          "en": "Both sides and center junction.",
+          "ja": "左右翼面と中央接合部。"
+        },
+        {
+          "zh": "透視會改變外觀比例。",
+          "en": "Perspective changes apparent proportions.",
+          "ja": "遠近感で比率が変わる。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md80/hstab.jpg?v=cd7e3929ab94",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Meridiana_McDonnell_Douglas_MD-82_I-SMEL_Volandia_2024_(01).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "MD-80 採前三點式起落架，主起落架收於機身兩側整流罩內，配合尾置引擎配置，讓機翼下方保持淨空、無需為起落架讓出結構空間。",
+      "summary": {
+        "zh": "MD-82兩具主起落架各兩輪，配雙鼻輪，全機六輪。LZ-LDP進場近照保留左右主輪與支柱，可以與DC-9相同的輪對布局並排比較。",
+        "en": "The MD-82 has two wheels on each main unit plus twin nose wheels, six in total. LZ-LDP's approach close-up retains both main units and struts for comparison with the DC-9's wheel pairs.",
+        "ja": "MD-82は左右主脚各2輪と前脚2輪の計6輪です。進入中のLZ-LDPの近接写真で左右主輪と支柱を残し、DC-9の同様の車輪配置と比較できます。"
+      },
       "specs": [
-        ["配置", "前三點式"],
-        ["主起落架", "2 具 × 2 輪"],
-        ["收納位置", "機身側邊整流罩"],
-        ["煞車", "多盤式"]
+        [
+          "配置",
+          "前三點式"
+        ],
+        [
+          "主起落架",
+          "2 具 × 2 輪"
+        ],
+        [
+          "主腳位置",
+          "主翼翼根附近"
+        ],
+        [
+          "煞車",
+          "多盤式"
+        ]
       ],
-      "fact": "主起落架收在機身側邊而非翼根，是尾置引擎機型的共通設計語言——從 DC-9、MD-80 到 717，這個佈局延續了超過 50 年。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "雙輪會因角度重疊，先追蹤各組支柱與輪軸再計數；這張主腳裁切沒有包含鼻輪。",
+        "en": "Paired wheels overlap in perspective: trace each strut and axle before counting. This main-gear crop excludes the nose wheels.",
+        "ja": "双輪は遠近感で重なります。支柱と車軸を追って数えてください。この主脚写真には前輪は含まれません。"
+      },
+      "bullets": [
+        {
+          "zh": "主腳各兩輪。",
+          "en": "Two wheels per main unit.",
+          "ja": "主脚各2輪。"
+        },
+        {
+          "zh": "鼻腳兩輪。",
+          "en": "Twin nose wheels.",
+          "ja": "前脚2輪。"
+        },
+        {
+          "zh": "輪數與DC-9相同。",
+          "en": "Same wheel count as the DC-9.",
+          "ja": "DC-9と同じ輪数。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/md80/gear.jpg?v=e8dcdb6d9bab",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:LZ-LDP_MD-82_Bulgarian_Air_Charter_SCQ.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "本頁以MD-82代表MD-80家族。LZ-LDP實照展示約45.06 m的細長機身、後機身雙發及T尾，比DC-9-30多出約8.7 m機長。",
+        "en": "This page represents the MD-80 family with the MD-82. LZ-LDP shows its roughly 45.06 m slender fuselage, aft twin engines and T-tail, about 8.7 m longer than the DC-9-30.",
+        "ja": "本ページはMD-80系列のMD-82を扱います。LZ-LDPの実写で約45.06 mの細長い胴体、尾部双発、T尾翼を確認でき、DC-9-30より約8.7 m長くなっています。"
+      },
+      "fact": {
+        "zh": "MD-81／82／83／88外觀接近，不能只憑長機身就確認-82；本頁照片已依機籍辨識。短機身MD-87也不能套用相同機長。",
+        "en": "MD-81/82/83/88 appearances are close; a long fuselage alone cannot establish -82. The photographs are identified by airframe records, and the short MD-87 does not share this length.",
+        "ja": "MD-81／82／83／88の外観は近く、長胴体だけで-82とは確定できません。写真は機籍で確認しており、短胴体MD-87にはこの全長を適用できません。"
+      },
+      "bullets": [
+        {
+          "zh": "長機身約45.06 m。",
+          "en": "Long fuselage, about 45.06 m.",
+          "ja": "長胴体、約45.06 m。"
+        },
+        {
+          "zh": "後置雙發與T尾。",
+          "en": "Rear twin engines and T-tail.",
+          "ja": "尾部双発とT尾翼。"
+        },
+        {
+          "zh": "次型需核對機籍。",
+          "en": "Check registration for subvariant.",
+          "ja": "細型式は機籍を照合。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/md80/overview.jpg?v=df6e080ea6ff",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:LZ-LDP_MD-82_Bulgarian_Air_Charter_SCQ.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "I-SMEL前斜角近照與B-2136側窗照分別呈現前風擋、梯形側窗及小型眉窗。這組輪廓延續DC-9，並非現代787那種四大片外窗。",
+        "en": "I-SMEL's front-quarter close-up and B-2136's side view show the windshield, trapezoidal side panes and small eyebrow windows. This DC-9-derived geometry differs from a modern 787's four large panes.",
+        "ja": "I-SMELの斜め前方近接写真とB-2136の側面写真で、前風防、台形側窓、小さな眉窓を示します。DC-9由来の形で、787の大きな4枚窓とは異なります。"
+      },
+      "fact": {
+        "zh": "相同眉窗與側窗讓DC-9／MD-80很容易混淆；再看客艙長度、引擎短艙與出口。黑色防眩塗裝不是玻璃。",
+        "en": "Shared eyebrow and side-window geometry makes DC-9/MD-80 identification tricky; add cabin length, nacelles and exits. Black anti-glare paint is not glazing.",
+        "ja": "眉窓と側窓が共通するためDC-9／MD-80は混同しやすく、客室長、ナセル、出口も確認します。黒い防眩塗装はガラスではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "前斜角與側面分圖。",
+          "en": "Separate front-quarter and side views.",
+          "ja": "斜め前方・側面を別写真で表示。"
+        },
+        {
+          "zh": "保留小眉窗。",
+          "en": "Small eyebrow panes retained.",
+          "ja": "小さな眉窓を継承。"
+        },
+        {
+          "zh": "窗型不是-82獨有。",
+          "en": "Glazing is not unique to the -82.",
+          "ja": "-82専用の窓形ではない。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/md80/window-front.jpg?v=9f87469fada3",
+          "caption": {
+            "zh": "保存機前斜角外窗（原尺寸實照裁切，非正投影）",
+            "en": "Preserved-aircraft front-quarter windows (original-resolution crop, not orthographic)",
+            "ja": "保存機の斜め前方窓（原寸実写切り出し、正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Meridiana_McDonnell_Douglas_MD-82_I-SMEL_Volandia_2024_(01).jpg"
+        },
+        {
+          "src": "assets/reference/md80/window-side.jpg?v=152ade28e9a1",
+          "caption": {
+            "zh": "退役教育／研究用MD-82 B-2136側窗（2023實照）",
+            "en": "Side windows of retired teaching/research MD-82 B-2136 (2023 photograph)",
+            "ja": "退役教育・研究用MD-82 B-2136の側窓（2023年実写）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-2136_at_CAUC_(20230621143941).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "LZ-LDP進場照的翼尖沒有直立小翼，保留端部燈光與後掠輪廓。照片中向上後掠的白色高尾翼不是主翼小翼。",
+        "en": "LZ-LDP's approach photo shows a tip without an upright winglet, retaining its light and swept outline. The high white tail behind it is not a main-wing winglet.",
+        "ja": "進入中のLZ-LDPの翼端には直立小翼がなく、灯火と後退した輪郭を確認できます。後方の高い白い尾翼を主翼小翼と混同しないでください。"
+      },
+      "fact": {
+        "zh": "DC-9與標準MD-82都是沒有直立小翼的設計；這項比較主要用來排除其他機型，而非單獨辨識-82。",
+        "en": "Both DC-9 and standard MD-82 designs lack upright winglets. This comparison mainly excludes other types rather than identifying a -82 by itself.",
+        "ja": "DC-9と標準MD-82はいずれも直立小翼がありません。他機種を除外する参考で、これだけで-82とは特定できません。"
+      },
+      "bullets": [
+        {
+          "zh": "平展尖端。",
+          "en": "Non-upright tip.",
+          "ja": "直立しない翼端。"
+        },
+        {
+          "zh": "端部燈光可見。",
+          "en": "Tip light visible.",
+          "ja": "翼端灯が見える。"
+        },
+        {
+          "zh": "與DC-9同樣無直立小翼。",
+          "en": "Like the DC-9, no upright winglet.",
+          "ja": "DC-9同様、直立小翼なし。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/md80/wingtip.jpg?v=99f9b24af6f0",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:LZ-LDP_MD-82_Bulgarian_Air_Charter_SCQ.jpg"
+        }
+      ]
     }
   },
   "specifications": {

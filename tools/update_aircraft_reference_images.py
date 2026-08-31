@@ -2414,6 +2414,143 @@ CONTENT.update({
     },
 })
 
+# DC-9-30 / MD-82. Sources distinguish preserved airframes and family cockpit references.
+SOURCES.update({
+    "dc9": {
+        "overview": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:DC-9_Cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(01).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(01).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(01).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:AM_Douglas_DC-9-30_MM62012_Volandia_2024_(02).jpg",
+    },
+    "md80": {
+        "overview": "https://commons.wikimedia.org/wiki/File:LZ-LDP_MD-82_Bulgarian_Air_Charter_SCQ.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:ARNOSD5_(4679033164).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Meridiana_McDonnell_Douglas_MD-82_I-SMEL_Volandia_2024_(01).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:B-2136_at_CAUC_(20230621143941).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Meridiana_McDonnell_Douglas_MD-82_I-SMEL_Volandia_2024_(01).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:B-2136_at_CAUC_(20230621143941).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:LZ-LDP_MD-82_Bulgarian_Air_Charter_SCQ.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:LZ-LDP_MD-82_Bulgarian_Air_Charter_SCQ.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Meridiana_McDonnell_Douglas_MD-82_I-SMEL_Volandia_2024_(01).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Meridiana_McDonnell_Douglas_MD-82_I-SMEL_Volandia_2024_(01).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:LZ-LDP_MD-82_Bulgarian_Air_Charter_SCQ.jpg",
+    },
+})
+
+CONTENT.update({
+    "dc9": {
+        "overview": identify(
+            ("DC-9-30 是尾置雙發、T 型尾翼與五排座窄體機身的組合，全長約36.37 m，明顯短於45.06 m的MD-82。照片為Volandia保存的義大利空軍MM62012。", "The DC-9-30 combines rear twin engines, a T-tail and a five-abreast narrow fuselage. At about 36.37 m it is notably shorter than the 45.06 m MD-82. This is preserved Italian Air Force MM62012 at Volandia.", "DC-9-30は尾部双発、T尾翼、横5席の細い胴体を組み合わせます。全長約36.37 mで45.06 mのMD-82より短く、写真はVolandiaで保存されるイタリア空軍MM62012です。"),
+            ("兩型外窗與尾翼布局很相似，先比較機身長短，再看引擎短艙和出口。地面的支架與登機梯屬展示設施，不是飛行構型。", "Window geometry and tail layout are similar: compare fuselage length, nacelles and exits together. Ground supports and access stairs are museum equipment, not flight configuration.", "外窓と尾翼配置は似ています。胴体長、ナセル、出口を組み合わせて判断します。地上の支持台と階段は展示設備で、飛行時の構成ではありません。"),
+            [("短於長機身MD-80。", "Shorter than long-body MD-80s.", "長胴体MD-80より短い。"), ("尾置雙發＋T尾。", "Rear twin engines and T-tail.", "尾部双発＋T尾翼。"), ("先看比例，再看細節。", "Start with proportions, then details.", "まず比率、次に細部。")],
+        ),
+        "cockpit": identify(
+            ("照片是Northwest DC-9-40的真實座艙，作為DC-9家族早期布局參考，並非本頁-30機籍。可見雙操縱盤、圓形飛航儀表、中央引擎儀表及油門座。", "This real Northwest DC-9-40 cockpit illustrates an early DC-9-family layout; it is not a -30 airframe. Twin yokes, round flight instruments, central engine gauges and a throttle pedestal are visible.", "写真はNorthwest DC-9-40の実機操縦席で、初期DC-9系列の配置参考です。本ページの-30実機ではありません。左右の操縦輪、丸形計器、中央のエンジン計器とスロットル台が見えます。"),
+            ("DC-9採兩人飛行組員。照片中的後加電子設備不代表每架-30原始交付配置；和右側MD-82照片比較時，注意圓形儀表與電子顯示的搭配。", "DC-9 flight crews comprise two pilots. Added electronic equipment here does not define every -30's delivery standard; compare its round instruments with the MD-82's electronic displays.", "DC-9は2人の操縦士で運航します。追加電子装備は全-30の納入時仕様を示しません。MD-82写真の電子表示と丸形計器の組み合わせを比較してください。"),
+            [("-40實照，家族參考。", "Actual -40; family reference.", "-40実写、系列参考。"), ("雙操縱盤。", "Twin control yokes.", "左右の操縦輪。"), ("類比儀表為主。", "Predominantly analog instruments.", "アナログ計器が中心。")],
+        ),
+        "windshield": identify(
+            ("前斜角與側面裁切展示DC-9-30的分片式外窗：前風擋旁接角度分明的側窗，上方另有小型眉窗。側面照片有打開的前門遮住最後方的一部分窗緣。", "Front-quarter and side crops show the DC-9-30's separate windshield panes, angular side windows and small upper eyebrow windows. The open forward door partly obscures the rear window edge in the side view.", "斜め前方と側面の写真で、DC-9-30の分割風防、角張った側窓、上部の小さな眉窓を確認できます。側面では開いた前部ドアが最後方の窓縁を一部隠しています。"),
+            ("MD-80延續很接近的窗型，不能只看到眉窗就判定是DC-9。黑色塗裝、玻璃反光與照片角度也會改變視覺印象。", "MD-80s retain very similar glazing, so eyebrow windows alone cannot identify a DC-9. Paint, reflections and viewing angle also change the apparent shape.", "MD-80も非常によく似た窓を継承するため、眉窓だけではDC-9と断定できません。塗装、反射、撮影角度でも印象が変わります。"),
+            [("上方小型眉窗。", "Small upper eyebrow windows.", "上部の小さな眉窓。"), ("多片有框側窗。", "Multiple framed side panes.", "枠で分かれた側窓。"), ("需搭配機身長度。", "Check fuselage length too.", "胴体長も確認。")],
+        ),
+        "fuselage": identify(
+            ("MM62012側面可見開啟的前艙門、客艙窗列及兩個相鄰的翼上出口。DC-9-30的客艙段比MD-82短，不需靠航空公司塗裝就能比較窗列長度。", "MM62012's side shows the open forward door, cabin windows and two adjacent overwing exits. The DC-9-30 has a shorter cabin section than the MD-82, a useful comparison independent of livery.", "MM62012の側面には開いた前部ドア、客室窓列、隣り合う2つの翼上出口が見えます。DC-9-30の客室部分はMD-82より短く、塗装に頼らず窓列の長さを比較できます。"),
+            ("這是軍用VIP保存機，局部封窗與內裝不代表所有航空公司客機。裁切沒有包含全部尾部出口，判讀出口總數仍須看完整配置。", "This preserved military VIP aircraft has window blanking and interiors that do not represent every airline aircraft. The crop excludes aft exits; use a complete configuration to count all exits.", "軍用VIP保存機の窓塞ぎや内装は全旅客機の仕様ではありません。写真は尾部出口を含まないため、総数は全体配置で確認します。"),
+            [("前門位置清楚。", "Clear forward-door position.", "前部ドア位置が明瞭。"), ("相鄰翼上出口。", "Adjacent overwing exits.", "隣接した翼上出口。"), ("注意保存機配置。", "Allow for preserved-aircraft configuration.", "保存機の仕様に注意。")],
+        ),
+        "engine": identify(
+            ("DC-9的JT8D短艙裝在後機身兩側，進氣口在客艙窗列後方，而非機翼下方。近照保留圓形進氣口、細長短艙與安裝位置。", "The DC-9's JT8D nacelles sit on the aft fuselage, with inlets behind the cabin window row rather than under the wings. The crop retains the circular inlet, slim nacelle and mounting position.", "DC-9のJT8Dナセルは後部胴体の左右にあり、吸入口は主翼下ではなく客室窓列の後方です。円形吸入口、細長いナセルと取付位置を残しています。"),
+            ("MD-80使用JT8D-200家族，外形更大；但照片中的透視會影響大小。引擎內部型號不能僅靠暗色進氣口確認。", "MD-80s use the larger JT8D-200 family, but perspective changes apparent size. A dark inlet alone cannot establish an engine subvariant.", "MD-80は大型化したJT8D-200系列を使用しますが、見かけの大きさは遠近感でも変わります。暗い吸入口だけでエンジン細型式は確定できません。"),
+            [("後機身安裝。", "Aft-fuselage mounting.", "後部胴体に装備。"), ("圓形進氣口。", "Circular intake.", "円形吸入口。"), ("翼下沒有引擎。", "No underwing engines.", "主翼下にエンジンなし。")],
+        ),
+        "wingtip": identify(
+            ("DC-9-30的標準翼尖沒有直立式小翼。這張近照保留主翼最外端與尖端燈罩，適合與A220或737的高聳小翼比較。", "The standard DC-9-30 wingtip has no upright winglet. This crop retains the outer wing and tip light housing for comparison with tall A220 or 737 winglets.", "標準DC-9-30の翼端には直立ウイングレットがありません。主翼最外端と灯火カバーを残し、A220や737の高い翼端小翼と比較できます。"),
+            ("MD-82也通常沒有直立小翼；缺少小翼只是排除線索，不足以區分這一對機型。", "MD-82s also normally lack upright winglets; their absence is an elimination clue, not a way to separate this pair.", "MD-82も通常は直立小翼を持ちません。小翼がないことは候補を絞る手掛かりで、この2機種の区別には不十分です。"),
+            [("沒有直立小翼。", "No upright winglet.", "直立小翼なし。"), ("辨認主翼最外端。", "Locate the outer main-wing tip.", "主翼最外端を確認。"), ("不要與T尾尖端混淆。", "Do not confuse it with a T-tail tip.", "T尾翼の先端と混同しない。")],
+        ),
+        "wing": identify(
+            ("DC-9-30採低置後掠主翼，從翼根至翼尖沒有引擎吊架。這張保存機照片顯示前緣與外翼輪廓，但不是俯視平面圖。", "The DC-9-30 has low-mounted swept wings with no engine pylons between root and tip. This preserved-aircraft photograph shows the leading edge and outer-wing profile, not an overhead plan view.", "DC-9-30は低翼・後退翼で、翼根から翼端までエンジンパイロンがありません。保存機の前縁と外翼輪郭を示す写真で、真上からの平面図ではありません。"),
+            ("主翼布局與MD-82相近，後者的翼展更大。僅用照片上量到的像素長度比較翼展會受拍攝距離與角度誤導。", "The layout resembles the MD-82's, whose span is greater. Pixel lengths in differently framed photographs are not reliable span measurements.", "MD-82と配置は似ていますが、MD-82の翼幅は大きくなっています。距離や角度の違う写真のピクセル長で翼幅は測れません。"),
+            [("低置後掠翼。", "Low swept wing.", "低翼・後退翼。"), ("無翼下引擎吊架。", "No underwing engine pylons.", "翼下エンジンパイロンなし。"), ("斜角外形參考。", "Oblique profile reference.", "斜め外観の参考。")],
+        ),
+        "vstab": identify(
+            ("後掠垂直尾翼向上承接水平尾翼，形成T型。照片同時保留垂尾根部與上端，能看出尾翼不是從機身低處向兩側伸出。", "The swept fin supports the horizontal stabilizer at its top, forming a T-tail. Retaining the fin root and top makes the high attachment position clear.", "後退した垂直尾翼の頂部で水平尾翼を支え、T字を形成します。垂尾の根元と頂部を残し、高い取付位置を確認できます。"),
+            ("MD-80、717及部分支線客機都有T尾；辨識時仍需搭配窗型、機身長度與短艙，而非只看T字。", "MD-80s, 717s and some regional jets also have T-tails. Combine this feature with glazing, fuselage length and nacelles.", "MD-80、717、一部のリージョナル機もT尾翼です。窓形、胴体長、ナセルと組み合わせて判断します。"),
+            [("後掠垂尾。", "Swept fin.", "後退した垂尾。"), ("承接頂端平尾。", "Supports the high stabilizer.", "頂部の水平尾翼を支持。"), ("家族共通布局。", "Shared family layout.", "系列共通の配置。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼裝在垂直尾翼頂端；近照保留左右翼面與中央接合區，與一般低置水平尾翼的客機差別明顯。", "The horizontal stabilizer is mounted atop the fin. Both sides and the central attachment area are retained, contrasting with aircraft that have low-mounted stabilizers.", "水平尾翼は垂直尾翼の頂部にあります。左右の翼面と中央取付部を残し、低い位置に水平尾翼を持つ旅客機との違いを確認できます。"),
+            ("高置不代表任何迎角都不受主翼尾流影響。這張圖只用於外形辨識，不能據此推論失速或操縱性能。", "A high position does not make the tail immune to wing wake at all angles of attack. This image supports identification, not conclusions about stall or control performance.", "高い位置でも、あらゆる迎角で主翼後流の影響を受けないわけではありません。外形識別用で、失速・操縦性能の判断には使えません。"),
+            [("垂尾頂端安裝。", "Mounted on top of the fin.", "垂尾頂部に取付。"), ("左右水平翼面。", "Left and right stabilizer surfaces.", "左右の水平翼面。"), ("T尾不等於獨有特徵。", "T-tail is not unique to this type.", "T尾翼だけでは特定不可。")],
+        ),
+        "gear": identify(
+            ("DC-9採前三點式起落架，每側主腳兩輪，鼻腳兩輪，共六輪。裁切展示主翼附近的主輪；輪下灰色立柱是博物館支架。", "The DC-9 has tricycle gear: two wheels per main unit and two nose wheels, six in total. This crop shows the main wheels near the wing; the gray columns below are museum supports.", "DC-9は前輪式で、左右主脚が各2輪、前脚が2輪の計6輪です。主翼付近の主輪を示し、車輪下の灰色柱は博物館の支持台です。"),
+            ("MD-82同樣是六輪，不能靠輪數分辨。不要把背景其他飛機的輪子或保存支架計入本機。", "The MD-82 also has six wheels, so wheel count cannot distinguish them. Exclude wheels on background aircraft and display supports.", "MD-82も6輪なので輪数だけでは区別できません。背景の別機の車輪や展示支持台は数えません。"),
+            [("每側主腳兩輪。", "Two wheels per main unit.", "片側主脚2輪。"), ("全機六輪。", "Six wheels overall.", "全機6輪。"), ("支架不屬於起落架。", "Display supports are not landing gear.", "展示台は着陸装置ではない。")],
+        ),
+    },
+    "md80": {
+        "overview": identify(
+            ("本頁以MD-82代表MD-80家族。LZ-LDP實照展示約45.06 m的細長機身、後機身雙發及T尾，比DC-9-30多出約8.7 m機長。", "This page represents the MD-80 family with the MD-82. LZ-LDP shows its roughly 45.06 m slender fuselage, aft twin engines and T-tail, about 8.7 m longer than the DC-9-30.", "本ページはMD-80系列のMD-82を扱います。LZ-LDPの実写で約45.06 mの細長い胴体、尾部双発、T尾翼を確認でき、DC-9-30より約8.7 m長くなっています。"),
+            ("MD-81／82／83／88外觀接近，不能只憑長機身就確認-82；本頁照片已依機籍辨識。短機身MD-87也不能套用相同機長。", "MD-81/82/83/88 appearances are close; a long fuselage alone cannot establish -82. The photographs are identified by airframe records, and the short MD-87 does not share this length.", "MD-81／82／83／88の外観は近く、長胴体だけで-82とは確定できません。写真は機籍で確認しており、短胴体MD-87にはこの全長を適用できません。"),
+            [("長機身約45.06 m。", "Long fuselage, about 45.06 m.", "長胴体、約45.06 m。"), ("後置雙發與T尾。", "Rear twin engines and T-tail.", "尾部双発とT尾翼。"), ("次型需核對機籍。", "Check registration for subvariant.", "細型式は機籍を照合。")],
+        ),
+        "cockpit": identify(
+            ("SAS MD-82 LN-ROT的飛行中實照，可見雙操縱盤、電子飛航顯示、中央引擎指示與頂板開關；機組員遮住部分右側儀表。", "This in-flight photograph of SAS MD-82 LN-ROT shows yokes, electronic flight displays, central engine indications and overhead switches. The crew obscure some right-side instruments.", "SAS MD-82 LN-ROTの飛行中実写です。操縦輪、電子飛行表示、中央エンジン表示、頭上スイッチが見え、乗員が右側計器の一部を隠しています。"),
+            ("MD-80座艙設備隨次型與改裝而異，照片不是所有MD-82的固定規格。與DC-9類比座艙相比，可觀察顯示器增加，但仍保留許多傳統控制件。", "MD-80 equipment varies by subvariant and retrofit; this is not a universal MD-82 standard. Compared with the analog DC-9, note the displays alongside retained conventional controls.", "MD-80の装備は細型式や改修で異なり、全MD-82共通仕様ではありません。DC-9のアナログ操縦席と比べ、従来操作部と電子表示の共存に注目します。"),
+            [("LN-ROT真實座艙。", "Real LN-ROT flight deck.", "LN-ROT実機操縦席。"), ("電子與傳統儀表並存。", "Electronic and conventional instruments coexist.", "電子表示と従来計器が共存。"), ("留意人物遮擋。", "Allow for crew obstruction.", "乗員による遮蔽に注意。")],
+        ),
+        "windshield": identify(
+            ("I-SMEL前斜角近照與B-2136側窗照分別呈現前風擋、梯形側窗及小型眉窗。這組輪廓延續DC-9，並非現代787那種四大片外窗。", "I-SMEL's front-quarter close-up and B-2136's side view show the windshield, trapezoidal side panes and small eyebrow windows. This DC-9-derived geometry differs from a modern 787's four large panes.", "I-SMELの斜め前方近接写真とB-2136の側面写真で、前風防、台形側窓、小さな眉窓を示します。DC-9由来の形で、787の大きな4枚窓とは異なります。"),
+            ("相同眉窗與側窗讓DC-9／MD-80很容易混淆；再看客艙長度、引擎短艙與出口。黑色防眩塗裝不是玻璃。", "Shared eyebrow and side-window geometry makes DC-9/MD-80 identification tricky; add cabin length, nacelles and exits. Black anti-glare paint is not glazing.", "眉窓と側窓が共通するためDC-9／MD-80は混同しやすく、客室長、ナセル、出口も確認します。黒い防眩塗装はガラスではありません。"),
+            [("前斜角與側面分圖。", "Separate front-quarter and side views.", "斜め前方・側面を別写真で表示。"), ("保留小眉窗。", "Small eyebrow panes retained.", "小さな眉窓を継承。"), ("窗型不是-82獨有。", "Glazing is not unique to the -82.", "-82専用の窓形ではない。")],
+        ),
+        "fuselage": identify(
+            ("I-SMEL裁切顯示開啟的前門、很長的客艙窗列、成對翼上出口及後方側門。與DC-9-30並排時，窗列延伸的長度是重要線索。", "The I-SMEL crop shows the open front door, long cabin window row, paired overwing exits and an aft side door. The extended window row is a strong clue alongside the DC-9-30.", "I-SMELの写真には開いた前部ドア、長い客室窓列、対になった翼上出口、後部側面ドアが写ります。DC-9-30と並べると窓列の長さが重要な手掛かりです。"),
+            ("MD-82仍是五排座窄體，不是因為較長就變寬體。前門外的階梯及引擎紅色圓蓋屬保存展示配置。", "The MD-82 remains a five-abreast narrowbody; length does not make it a widebody. The external stairs and red engine covers belong to its preserved display configuration.", "長くてもMD-82は横5席のナローボディです。外付け階段とエンジンの赤い円形蓋は保存展示時の装備です。"),
+            [("長客艙窗列。", "Long cabin window row.", "長い客室窓列。"), ("翼上出口與後側門。", "Overwing exits and aft side door.", "翼上出口と後部側面ドア。"), ("窄體五排座。", "Five-abreast narrowbody.", "横5席ナローボディ。")],
+        ),
+        "engine": identify(
+            ("B-2136近照展示後機身JT8D-200系列短艙的進氣口及翼上方安裝位置。MD-80使用較大風扇的JT8D衍生型，仍不是當代高旁通比大風扇的外形。", "B-2136 shows the aft JT8D-200-family nacelle inlet and its position above the wing. The MD-80 uses a larger-fan JT8D derivative, not the appearance of a modern high-bypass big fan.", "B-2136の写真で後部JT8D-200系列ナセルの吸入口と主翼より上の配置を確認できます。大型ファンのJT8D派生型ですが、現代の高バイパス大型ファンとは外形が異なります。"),
+            ("不要把MD-80的JT8D-200與MD-90的V2500或717的BR715混為一談。B-2136是退役教學／研究機，照片不代表目前營運狀態。", "Do not confuse the MD-80's JT8D-200 with the MD-90's V2500 or the 717's BR715. B-2136 is a retired teaching/research airframe, not evidence of current service.", "MD-80のJT8D-200をMD-90のV2500や717のBR715と混同しないでください。B-2136は退役した教育・研究用機で、現役運航を示しません。"),
+            [("尾置JT8D-200家族。", "Rear-mounted JT8D-200 family.", "尾部JT8D-200系列。"), ("圓形進氣口。", "Circular inlet.", "円形吸入口。"), ("不同於MD-90／717引擎。", "Different from MD-90/717 engines.", "MD-90／717とは別エンジン。")],
+        ),
+        "wingtip": identify(
+            ("LZ-LDP進場照的翼尖沒有直立小翼，保留端部燈光與後掠輪廓。照片中向上後掠的白色高尾翼不是主翼小翼。", "LZ-LDP's approach photo shows a tip without an upright winglet, retaining its light and swept outline. The high white tail behind it is not a main-wing winglet.", "進入中のLZ-LDPの翼端には直立小翼がなく、灯火と後退した輪郭を確認できます。後方の高い白い尾翼を主翼小翼と混同しないでください。"),
+            ("DC-9與標準MD-82都是沒有直立小翼的設計；這項比較主要用來排除其他機型，而非單獨辨識-82。", "Both DC-9 and standard MD-82 designs lack upright winglets. This comparison mainly excludes other types rather than identifying a -82 by itself.", "DC-9と標準MD-82はいずれも直立小翼がありません。他機種を除外する参考で、これだけで-82とは特定できません。"),
+            [("平展尖端。", "Non-upright tip.", "直立しない翼端。"), ("端部燈光可見。", "Tip light visible.", "翼端灯が見える。"), ("與DC-9同樣無直立小翼。", "Like the DC-9, no upright winglet.", "DC-9同様、直立小翼なし。")],
+        ),
+        "wing": identify(
+            ("MD-82有比DC-9-30更大的低置後掠翼。LZ-LDP進場實照可見後緣襟翼放下，翼下沒有引擎，主輪在翼根附近。", "The MD-82 has a larger low-mounted swept wing than the DC-9-30. LZ-LDP's approach photo shows deployed trailing-edge flaps, no underwing engines and main wheels near the root.", "MD-82の低い後退翼はDC-9-30より大型です。進入中のLZ-LDPには下がった後縁フラップ、エンジンのない翼下、翼根付近の主輪が見えます。"),
+            ("起降時展開的襟翼會改變輪廓，不代表主翼型號不同。不能用這張斜角照片量測實際翼展或後掠角。", "Deployed landing flaps change the outline without indicating a different wing model. Do not measure true span or sweep from this oblique photograph.", "着陸時のフラップ展開で輪郭が変わっても、別の主翼型式とは限りません。この斜め写真から実翼幅や後退角は測れません。"),
+            [("低置後掠翼。", "Low swept wing.", "低翼・後退翼。"), ("後緣襟翼展開。", "Trailing-edge flaps deployed.", "後縁フラップ展開。"), ("無翼下引擎。", "No underwing engines.", "翼下エンジンなし。")],
+        ),
+        "vstab": identify(
+            ("I-SMEL的後掠垂尾支撐頂端水平尾翼，與DC-9同為T尾；裁切保留尾根與頂部接合，便於看清布局。", "I-SMEL's swept fin supports a high horizontal stabilizer, the same basic T-tail arrangement as the DC-9. The crop retains the root and top junction.", "I-SMELの後退垂尾は高い水平尾翼を支え、DC-9と同じ基本T尾翼配置です。根元と頂部の接合部を残しています。"),
+            ("塗裝、方向舵偏轉與視角都會影響輪廓。單看垂尾無法可靠分辨MD-81／82／83。", "Livery, rudder deflection and angle affect the outline. The fin alone cannot reliably separate MD-81/82/83 variants.", "塗装、方向舵の偏向、角度で輪郭が変わります。垂尾だけでMD-81／82／83を確実に区別できません。"),
+            [("T型布局。", "T-tail layout.", "T尾翼配置。"), ("後掠垂尾。", "Swept fin.", "後退垂尾。"), ("搭配長機身判讀。", "Combine with long-fuselage proportions.", "長胴体の比率と併用。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼位於垂尾頂端，兩側翼面從中央接合處向外延伸。它與主翼同樣可能因透視看起來不對稱。", "The horizontal stabilizer sits atop the fin, extending to both sides from the central junction. Perspective may make its two sides appear asymmetric.", "水平尾翼は垂尾頂部にあり、中央接合部から左右へ伸びます。遠近感で左右非対称に見える場合があります。"),
+            ("DC-9、MD-80和717共享T尾概念，但不能據此認為尺寸或所有零件相同。照片用來比較布局，不是零件互換依據。", "DC-9, MD-80 and 717 share the T-tail concept, not necessarily dimensions or interchangeable parts. Photographs compare layout, not interchangeability.", "DC-9、MD-80、717はT尾翼の概念を共有しますが、寸法や部品互換性まで同じではありません。写真は配置比較用です。"),
+            [("頂置水平尾翼。", "High-mounted horizontal stabilizer.", "高位置の水平尾翼。"), ("左右翼面及接合區。", "Both sides and center junction.", "左右翼面と中央接合部。"), ("透視會改變外觀比例。", "Perspective changes apparent proportions.", "遠近感で比率が変わる。")],
+        ),
+        "gear": identify(
+            ("MD-82兩具主起落架各兩輪，配雙鼻輪，全機六輪。LZ-LDP進場近照保留左右主輪與支柱，可以與DC-9相同的輪對布局並排比較。", "The MD-82 has two wheels on each main unit plus twin nose wheels, six in total. LZ-LDP's approach close-up retains both main units and struts for comparison with the DC-9's wheel pairs.", "MD-82は左右主脚各2輪と前脚2輪の計6輪です。進入中のLZ-LDPの近接写真で左右主輪と支柱を残し、DC-9の同様の車輪配置と比較できます。"),
+            ("雙輪會因角度重疊，先追蹤各組支柱與輪軸再計數；這張主腳裁切沒有包含鼻輪。", "Paired wheels overlap in perspective: trace each strut and axle before counting. This main-gear crop excludes the nose wheels.", "双輪は遠近感で重なります。支柱と車軸を追って数えてください。この主脚写真には前輪は含まれません。"),
+            [("主腳各兩輪。", "Two wheels per main unit.", "主脚各2輪。"), ("鼻腳兩輪。", "Twin nose wheels.", "前脚2輪。"), ("輪數與DC-9相同。", "Same wheel count as the DC-9.", "DC-9と同じ輪数。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -2459,6 +2596,44 @@ def update(model: str) -> None:
         else:
             part["images"] = [photo(model, part_id, CAPTIONS[part_id], SOURCES[model][part_id])]
     data["partOrder"] = ORDER
+    if model in ("dc9", "md80"):
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "保存機前斜角外窗（原尺寸實照裁切，非正投影）",
+            "Preserved-aircraft front-quarter windows (original-resolution crop, not orthographic)",
+            "保存機の斜め前方窓（原寸実写切り出し、正投影ではありません）",
+        )
+    if model == "dc9":
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "Northwest DC-9-40 實機座艙；DC-9家族參考，非-30機籍",
+            "Real Northwest DC-9-40 cockpit; DC-9 family reference, not a -30 airframe",
+            "Northwest DC-9-40実機操縦席：DC-9系列参考、-30実機ではありません",
+        )
+        parts["overview"]["images"][0]["caption"] = tr(
+            "義大利空軍DC-9-30 MM62012，Volandia保存展示（2024）",
+            "Italian Air Force DC-9-30 MM62012 preserved at Volandia (2024)",
+            "イタリア空軍DC-9-30 MM62012、Volandia保存展示（2024年）",
+        )
+        parts["gear"]["images"][0]["caption"] = tr(
+            "MM62012主起落架；灰色立柱是展示支架，不屬飛機構造",
+            "MM62012 main gear; gray columns are display supports, not aircraft structure",
+            "MM62012主脚：灰色柱は展示支持台で、機体構造ではありません",
+        )
+    if model == "md80":
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "SAS MD-82 LN-ROT飛行中實照（2010）；保留原作者署名",
+            "SAS MD-82 LN-ROT in flight (2010); original photographer credit retained",
+            "飛行中のSAS MD-82 LN-ROT（2010年）：元写真の著作者表記を保持",
+        )
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "退役教育／研究用MD-82 B-2136側窗（2023實照）",
+            "Side windows of retired teaching/research MD-82 B-2136 (2023 photograph)",
+            "退役教育・研究用MD-82 B-2136の側窓（2023年実写）",
+        )
+        parts["engine"]["images"][0]["caption"] = tr(
+            "退役B-2136的JT8D-200家族短艙；非現役營運證明",
+            "JT8D-200-family nacelle on retired B-2136; not evidence of current airline service",
+            "退役B-2136のJT8D-200系列ナセル：現役運航を示すものではありません",
+        )
     if model == "cs300":
         parts["cockpit"]["images"][0]["caption"] = tr(
             "JetBlue A220-300 實機座艙；右側座椅遮擋部分設備",
