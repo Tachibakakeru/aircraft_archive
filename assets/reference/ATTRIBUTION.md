@@ -1,6 +1,22 @@
 # Aircraft reference photo attribution
 
-These files are real-aircraft photographs from Wikimedia Commons, generally resized or cropped to at most 960 px; explicitly noted unchanged originals may be larger. They are used as visual identification references in SKY ARCHIVE. Follow each source link for the original description and full license terms.
+These files are real-aircraft photographs from Wikimedia Commons. Crops are generally limited to 960 px and whole-frame references to 1600 px, without enlargement; explicitly noted unchanged originals may be larger. They are used as visual identification references in SKY ARCHIVE. Follow each source link for the original description and full license terms.
+
+## Boeing 737-900 / 757-300 (2026-09-01)
+
+All files below are resized or cropped derivatives, without AI generation or enlargement. Source links preserve the original descriptions; front-window views are front-quarter views, not orthographic head-on photographs.
+
+| Local files | Source / author | License |
+|---|---|---|
+| `b739/overview.jpg`, `window-front.jpg`, `engine.jpg`, `wingtip.jpg`, `wing.jpg`, `gear.jpg` | [United Boeing 737-900 N30401 BWI MD1](https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg), Acroterion | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `b739/window-side.jpg`, `fuselage.jpg`, `vstab.jpg`, `hstab.jpg` | [United Boeing 737-900 N38403 BWI MD1](https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg), Acroterion | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `b739/cockpit.jpg` | [The Flight Deck of the Boeing 737-800](https://commons.wikimedia.org/wiki/File:The_Flight_Deck_of_the_Boeing_737-800._(2956276002).jpg), Cory W. Watts; actual aircraft N734MA, explicitly labeled 737NG family reference, not a 737-900 cockpit photograph | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
+| `b753/overview.jpg`, `wingtip.jpg`, `wing.jpg` | [United Boeing 757-300 N78866 take off from Runway 27 Boston Feb 2025](https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N78866_take_off_from_Runway_27_Boston_Feb_2025.jpg), 4300streetcar | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `b753/window-front.jpg`, `engine.jpg`, `hstab.jpg`, `gear.jpg` | [United Boeing 757-300 N77867 on final approach to Boston Feb 2022](https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg), 4300streetcar | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `b753/window-side.jpg`, `fuselage.jpg`, `vstab.jpg` | [Icelandair Boeing 757 TF-ISX Oslo Gardermoen 2024 (01)](https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISX_Oslo_Gardermoen_2024_(01).jpg), Bahnfrend; actual 757-3E7 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `b753/cockpit.jpg` | [Boeing 757-300 Cockpit](https://commons.wikimedia.org/wiki/File:Boeing_757-300_Cockpit.JPG), JHenryW; foreground levels adjusted by Altair78; actual Condor D-ABOA | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (chosen from offered licenses) |
+
+Technical cross-checks: [Boeing airport planning manuals](https://www.boeing.com/commercial/airports/plan-manuals), [757 Rev H](https://www.boeing.com/content/dam/boeing/v2/airports/acaps/757_Rev_H.pdf), [Boeing 737-900ER exit changes](https://secure.boeingimages.com/archive/Boeing-737-900ER-2F3XC56CLZE.html), and [Aviation Partners winglet types](https://www.aviationpartners.com/winglet-types/). The 737-900 exterior references are non-ER aircraft; winglet retrofits are not presented as universal model features.
 
 ## Boeing 737-800
 

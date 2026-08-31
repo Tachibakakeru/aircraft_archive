@@ -2141,6 +2141,143 @@ CONTENT.update({
     },
 })
 
+# 737-900 / 757-300: exact exterior variants; 737 cockpit explicitly labelled as NG-family reference.
+SOURCES.update({
+    "b739": {
+        "overview": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:The_Flight_Deck_of_the_Boeing_737-800._(2956276002).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg",
+    },
+    "b753": {
+        "overview": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N78866_take_off_from_Runway_27_Boston_Feb_2025.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_757-300_Cockpit.JPG",
+        "window_front": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISX_Oslo_Gardermoen_2024_(01).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISX_Oslo_Gardermoen_2024_(01).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N78866_take_off_from_Runway_27_Boston_Feb_2025.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N78866_take_off_from_Runway_27_Boston_Feb_2025.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISX_Oslo_Gardermoen_2024_(01).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg",
+    },
+})
+
+CONTENT.update({
+    "b739": {
+        "overview": identify(
+            ("737-900 的機身長約 42.11 m，明顯短於 54.5 m 級的 757-300。低矮機身、短起落架與每側雙輪主腳，是全景中容易辨識的組合。", "The 737-900 is about 42.11 m long, clearly shorter than the roughly 54.5 m 757-300. Its low body, short gear and twin-wheel main units form a useful identification combination.", "737-900は全長約42.11 mで、約54.5 mの757-300より明確に短い機体です。低い胴体、短い脚、片側2輪の主脚を組み合わせて識別します。"),
+            ("本頁外觀使用 United N30401／N38403，均為 737-924 非 ER 型。-900ER 與 -900 長度相同，不能只看長短；應加看機翼後方是否有 ER 額外出口及其封堵輪廓。", "The exterior photographs show United N30401/N38403, both non-ER 737-924s. The -900ER has the same length; also examine the additional aft-of-wing exit or its plugged outline.", "外観写真のUnited N30401／N38403は非ER型737-924です。-900ERも全長は同じなので、翼後方の追加出口や閉鎖された輪郭も確認してください。"),
+            [("低矮機身與短腳。", "Low body and short gear.", "低い胴体と短い脚。"), ("兩具翼下引擎。", "Two underwing engines.", "翼下エンジン2基。"), ("-900 不等於 -900ER。", "-900 is not the same as -900ER.", "-900と-900ERを区別。")],
+        ),
+        "cockpit": identify(
+            ("737NG 的座艙保留兩組駕駛盤，主儀表板使用六具顯示器。相較照片中的 757-300，737NG 的主飛行資訊集中在較大的矩形畫面，獨立圓形儀表較少。", "The 737NG retains dual control yokes and six displays. Compared with the photographed 757-300, its primary flight information is concentrated on larger rectangular screens, with fewer separate round instruments.", "737NGは2組の操縦輪と6面の表示器を備えます。写真の757-300と比べ、主要飛行情報を大きな矩形画面にまとめ、独立した丸形計器が少ない配置です。"),
+            ("此圖是 Miami Air N734MA 的 737-800 實照，僅作 737NG 共通布局參考，並非 737-900 實拍。個別改裝、航電選項與顯示模式會不同。", "This is a real Miami Air N734MA 737-800, used only as a shared 737NG layout reference, not a 737-900 photograph. Retrofits, avionics options and display modes vary.", "写真はMiami Air N734MAの737-800実機です。737NG共通配置の参考であり、737-900の実写ではありません。改修・装備・表示モードには差があります。"),
+            [("六具顯示器。", "Six display units.", "表示器6面。"), ("保留傳統駕駛盤。", "Conventional yokes retained.", "従来の操縦輪を維持。"), ("明確標示家族參考照片。", "Family reference explicitly labelled.", "系列参考写真と明示。")],
+        ),
+        "windshield": identify(
+            ("737 的正面風擋較低，窗框在機鼻兩側形成明顯折角；側窗外形帶有斜邊。前斜角與側面照片分開呈現，可對照窗帶高度及其與鼻錐的距離。", "The 737 has a relatively low front windshield and angular transitions around the nose, with slanted side-pane edges. Separate front-quarter and side views show glazing height and its distance from the radome.", "737の前面風防は比較的低く、機首側面へ明瞭な角度で回り込み、側窓には斜辺があります。斜め前方・側面の別写真で窓帯の高さとレドームとの距離を比較できます。"),
+            ("外窗形狀在多種 737NG 次型間相近，不能單獨識別 -900。照片中的機體沒有眉窗；眉窗封閉或省略也不能作為 ER 型的唯一判據。", "Glazing is similar across several 737NG variants and cannot identify a -900 alone. These aircraft have no eyebrow windows; their omission or closure is not a standalone ER identifier.", "外窓は737NGの複数型式で似ており、単独では-900と判定できません。写真には眉窓がありませんが、省略・閉鎖だけでER型とは判断できません。"),
+            [("前斜角／側面分開。", "Separate front-quarter/side views.", "斜め前方・側面を分離。"), ("窗框有明顯折角。", "Angular window framing.", "角のある窓枠。"), ("搭配機身與出口判型。", "Cross-check body and exits.", "胴体・出口も照合。")],
+        ),
+        "fuselage": identify(
+            ("非 ER 的 737-900 每側有前後兩道地板高度客艙門，以及兩個翼上緊急出口。照片裁切可看見前門、舷窗列與翼上出口；後門可回全景對照。", "The non-ER 737-900 has forward/aft floor-level cabin doors and two overwing exits on each side. This crop shows the forward door, window row and overwing exits; check the overview for the aft door.", "非ER型737-900は片側に前後の床面高さの客室扉と翼上非常口2か所を備えます。切り出しには前扉・窓列・翼上非常口が写り、後扉は全景で確認できます。"),
+            ("-900ER 增加一對機翼後方出口位置，部分客艙配置會封堵；不能只靠舷窗數或航空公司塗裝判型。", "The -900ER adds a pair of exit positions aft of the wing, plugged in some cabin configurations. Window count or airline livery alone is insufficient for identification.", "-900ERでは翼後方に1対の出口位置を追加し、客室仕様によって閉鎖します。窓数や航空会社の塗装だけでは識別できません。"),
+            [("每側兩個翼上出口。", "Two overwing exits per side.", "片側に翼上非常口2か所。"), ("非 ER 無新增的翼後出口。", "Non-ER lacks the extra aft-wing exit.", "非ER型は追加の翼後出口なし。"), ("前門與貨艙門位置不同。", "Cabin and cargo doors occupy different levels.", "客室扉と貨物扉の高さは異なる。")],
+        ),
+        "engine": identify(
+            ("CFM56-7B 短艙靠近地面，進氣口下緣輪廓較扁，與 757 較圓的進氣口和較高吊掛形成對照。此圖由 N30401 實照裁切，能看見進氣唇口、風扇入口及吊架。", "The low-mounted CFM56-7B nacelle has a flatter lower inlet outline, contrasting with the 757's rounder intake and taller installation. This N30401 crop shows the inlet lip, fan entrance and pylon.", "低い位置のCFM56-7Bナセルは吸気口下縁が比較的平らで、757の丸い吸気口と高い取付位置と対照的です。N30401の写真で吸気口縁・ファン入口・パイロンを確認できます。"),
+            ("這是 737NG，不是使用 LEAP-1B 的 737 MAX。兩者都可能有上下分叉翼尖，因此需把短艙、翼尖與機身一起判讀。", "This is a 737NG, not a LEAP-1B-powered 737 MAX. Both can have upper/lower wingtip elements, so assess nacelles, tips and body together.", "これは737NGで、LEAP-1B搭載の737 MAXではありません。両者とも上下に分かれた翼端を持つ場合があるため、ナセル・翼端・胴体を合わせて判断します。"),
+            [("CFM56-7B 系列。", "CFM56-7B family.", "CFM56-7B系列。"), ("進氣口下緣較扁。", "Flatter lower inlet edge.", "比較的平らな吸気口下縁。"), ("翼下間隙較小。", "Lower underwing clearance.", "翼下の地上高が低い。")],
+        ),
+        "wingtip": identify(
+            ("N30401 的翼尖是改裝的 Split Scimitar 形式，上方高小翼配合下方伸出的翼片。這張近照用來辨認分叉位置，不是將它誤認為 MAX 專屬設計。", "N30401 has retrofitted Split Scimitar tips, with a tall upper winglet and a lower blade. The close-up shows where the elements split; it is not a MAX-only design.", "N30401は上側の高い小翼と下側のブレードを備えた後付けSplit Scimitar翼端です。近接写真で分岐位置を確認でき、MAX専用設計と混同しないことが重要です。"),
+            ("737-900 可見不同小翼改裝狀態；737NG 的 Split Scimitar 與 MAX 的原廠翼尖並不相同。小翼有無及樣式都不足以單獨識別 -900ER。", "737-900 winglet retrofits vary. NG Split Scimitar tips differ from the MAX's factory tips; presence or style alone does not identify a -900ER.", "737-900の小翼改修状態は機体によって異なります。NGのSplit ScimitarはMAXの標準翼端と異なり、小翼の有無・形だけでは-900ERを識別できません。"),
+            [("上下分叉。", "Upper/lower split.", "上下に分岐。"), ("NG 也有此改裝。", "Also fitted to NG aircraft.", "NGにも装着。"), ("留意照片拍攝年代。", "Consider the photograph date.", "撮影年代にも注意。")],
+        ),
+        "wing": identify(
+            ("後掠低單翼的下方可看到襟翼軌道整流罩，以及放下的後緣襟翼。與 757-300 比較時，先看翼面相對短艙、機身與翼尖的比例。", "Under the swept low wing are flap-track fairings and deployed trailing-edge flaps. Compare wing proportions relative to nacelles, body and tips with the 757-300.", "後退した低翼の下面にはフラップトラック・フェアリングと展開中の後縁フラップが見えます。757-300とはナセル・胴体・翼端に対する翼面の比率を比較します。"),
+            ("兩型都有後掠翼與高升力裝置，不能以降落時的襟翼角度判型；先排除飛行階段造成的外形變化。", "Both types have swept wings and high-lift devices. Flap angle during landing is not an identifier; account for flight-phase differences first.", "両型とも後退翼と高揚力装置を備えます。着陸時のフラップ角で判型せず、飛行段階による形状変化を考慮してください。"),
+            [("後掠低翼。", "Swept low wing.", "後退低翼。"), ("後緣整流罩可見。", "Visible trailing-edge fairings.", "後縁フェアリングが見える。"), ("勿把襟翼狀態當型號差異。", "Separate flap state from variant differences.", "フラップ状態と型式差を区別。")],
+        ),
+        "vstab": identify(
+            ("垂直尾翼前緣後掠，根部以背鰭形狀銜接後機身。N38403 的側面裁切可對照尾翼高度、方向舵輪廓與根部過渡。", "The swept fin blends into the aft body through a dorsal-root extension. The N38403 side crop shows fin height, rudder outline and root transition.", "後退した垂直尾翼は背びれ状の付け根で後部胴体へつながります。N38403の側面切り出しで垂尾の高さ・方向舵輪郭・付け根を比較できます。"),
+            ("737NG 的多個次型共有近似垂尾外形；United 塗裝也不是 -900 的識別特徵。應配合機長和出口。", "Several 737NG variants share a similar fin. United livery is not a -900 identifier either; check length and exits.", "737NGの複数型式はよく似た垂尾を持ちます。Unitedの塗装も-900固有ではなく、全長と出口を照合します。"),
+            [("單片後掠垂尾。", "Single swept fin.", "後退垂尾1枚。"), ("根部有背鰭過渡。", "Dorsal-root transition.", "背びれ状の付け根。"), ("搭配機長判讀。", "Cross-check body length.", "全長も確認。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼低置於後機身兩側，沒有 T 尾或尾部引擎。側後方裁切保留尾錐與翼根，可看清它與垂直尾翼的相對位置。", "The horizontal tail is mounted low on the aft body, without a T-tail or rear engines. This side-rear crop retains the tailcone and root to show its position below the fin.", "水平尾翼は後部胴体の低い位置にあり、T尾翼や尾部エンジンはありません。側後方の切り出しにテールコーンと翼根を残し、垂尾との位置関係を示します。"),
+            ("與 757 同屬傳統尾翼布局，只看水平尾翼不容易分型；需再看主起落架和機鼻。", "The 757 also has a conventional tail. The tailplane alone is a weak identifier; examine main gear and nose as well.", "757も通常尾翼配置のため、水平尾翼だけでは識別しにくく、主脚と機首も確認します。"),
+            [("低置水平尾翼。", "Low-mounted tailplane.", "低い水平尾翼。"), ("尾錐可作位置參考。", "Tailcone provides a position reference.", "テールコーンが位置の目安。"), ("不是獨立判型依據。", "Not a standalone identifier.", "単独の識別基準ではない。")],
+        ),
+        "gear": identify(
+            ("737-900 每側主起落架只有一軸雙輪，鼻輪也為雙輪，合計六輪。照片可看到左右兩組短主腳，與 757 每側兩軸四輪有明顯差異。", "Each 737-900 main unit has one axle and two wheels; the nose unit also has two, for six in total. The short main units contrast clearly with the 757's four-wheel, two-axle units.", "737-900の主脚は片側1軸2輪、前脚も2輪で合計6輪です。短い左右主脚は、757の片側2軸4輪と明確に異なります。"),
+            ("輪數通常比塗裝更可靠，但有重疊或陰影時要確認同一支主腳的輪子，別把遠側主腳重複計入。", "Wheel arrangement is usually more useful than livery. With overlap or shadow, identify wheels on one unit rather than counting the far-side unit twice.", "車輪配置は塗装より有効ですが、重なりや影がある場合は同じ主脚の車輪を確認し、反対側を重複して数えないでください。"),
+            [("主腳每側兩輪。", "Two wheels per main unit.", "片側主脚2輪。"), ("全機六輪。", "Six wheels in total.", "全機で6輪。"), ("明顯短於 757 的主腳。", "Clearly shorter than the 757 gear.", "757より明確に短い主脚。")],
+        ),
+    },
+    "b753": {
+        "overview": identify(
+            ("757-300 是加長的 757，機身約 54.5 m；狹長機身、細長機鼻與較高起落架，是對照 737-900 的首要線索。United N78866 全景可見長客艙與大型翼下引擎。", "The stretched 757-300 is about 54.5 m long. A very slender body, long nose and taller gear are primary clues against the 737-900. United N78866's overview shows the long cabin and large underwing engines.", "757-300は全長約54.5 mの延長型757です。非常に細長い胴体、長い機首、高い脚が737-900との主要な識別点で、United N78866全景に長い客室と大きい翼下エンジンが見えます。"),
+            ("它不是雙走道 767；757 和 737 的機身外寬同為約 3.76 m。長度、出口分布與四輪主腳比單靠機身寬窄更有用。", "It is not a twin-aisle 767: the 757 and 737 both have a body width of about 3.76 m. Length, exit distribution and four-wheel main units are more useful than width alone.", "双通路の767ではなく、757と737の胴体外幅はともに約3.76 mです。幅だけより全長・出口配置・4輪主脚が有効です。"),
+            [("約 54.5 m 長機身。", "Body about 54.5 m long.", "約54.5 mの長胴。"), ("單走道窄體機。", "Single-aisle narrow-body.", "単通路の狭胴機。"), ("每側四輪主腳。", "Four-wheel main units.", "片側4輪の主脚。")],
+        ),
+        "cockpit": identify(
+            ("Condor D-ABOA 的實機座艙保留左右上下排列的飛行／導航顯示器、中央引擎顯示，以及周圍多具圓形儀表。雙駕駛盤與兩支推力手柄清楚可見。", "Condor D-ABOA's real cockpit has vertically stacked flight/navigation displays on each side, center engine displays and numerous surrounding round instruments. Dual yokes and two thrust levers are visible.", "Condor D-ABOA実機には左右で上下に並ぶ飛行・航法表示器、中央エンジン表示、周囲の丸形計器があります。2組の操縦輪と2本の推力レバーが見えます。"),
+            ("這是 757-300 真實座艙，而非模擬器。757 與 767 有共通設計；不同營運者可能改裝顯示器，不能將這張照片套用到每一架飛機。", "This is a real 757-300 flight deck, not a simulator. The 757 and 767 share design features; operator display retrofits mean this photograph does not describe every airframe.", "シミュレーターではなく757-300の実機操縦席です。757と767には共通設計があり、運航会社の表示器改修で全機が同じとは限りません。"),
+            [("飛行／導航顯示上下排列。", "Vertically stacked flight/navigation displays.", "飛行・航法表示を上下配置。"), ("中央引擎資訊。", "Central engine information.", "中央にエンジン情報。"), ("周圍仍有獨立圓形儀表。", "Separate round instruments remain.", "独立した丸形計器も残る。")],
+        ),
+        "windshield": identify(
+            ("757 窗帶包覆細長機鼻，前窗轉入側窗時形成斜角。United N77867 的前斜角和 Icelandair TF-ISX 的側斜角，分別顯示正面與側面窗框輪廓。", "The 757 glazing wraps around its long nose with angled transitions into the side panes. Front-quarter United N77867 and side-oblique Icelandair TF-ISX views show the two aspects separately.", "757の窓帯は長い機首を包み、側窓へ斜めに移行します。United N77867の斜め前方とIcelandair TF-ISXの斜め側方で、前面・側面の窓枠を別々に示します。"),
+            ("兩張均非精準正投影；透視會改變窗片看起來的寬度。-200 與 -300 的機鼻和外窗相近，要用加長客艙及出口布局區分。", "Neither image is an orthographic view; perspective changes apparent pane width. The -200 and -300 share similar noses and glazing, so compare cabin stretch and exit layout.", "どちらも厳密な正投影ではなく、遠近法で窓の見かけの幅が変わります。-200と-300は機首・外窓が似るため、客室延長と出口配置で区別します。"),
+            [("前斜角與側斜角實照。", "Real front-quarter and side-oblique views.", "斜め前方・側方の実写。"), ("機鼻比 737 更修長。", "More elongated nose than the 737.", "737より細長い機首。"), ("外窗不單獨區分 757 次型。", "Glazing alone does not identify the 757 variant.", "外窓だけで757の派生型を区別しない。")],
+        ),
+        "fuselage": identify(
+            ("757-300 在機翼前後增加機身段。TF-ISX 側面可見長舷窗列、前部兩道大門，以及翼附近與後部的出口位置；不是只把 737 拉長而已。", "The 757-300 adds body sections ahead of and behind the wing. TF-ISX shows long window rows, two large forward doors and exit positions around and aft of the wing; it is a separate design from the 737.", "757-300は主翼の前後で胴体を延長しています。TF-ISX側面には長い窓列、前方の大型扉2枚、翼付近と後方の出口位置が見え、737とは別設計です。"),
+            ("-300 同時具有翼上出口與翼後出口；757-200 的出口布局另有不同選配。辨識時需看完整分布，不能把單一道門作為唯一依據。", "The -300 has both overwing and aft-of-wing exits; the 757-200 has different optional exit layouts. Inspect the full distribution rather than relying on one door.", "-300は翼上と翼後方の両方に出口があり、757-200には別の選択配置があります。1枚の扉だけでなく全体の分布を確認します。"),
+            [("前後客艙段加長。", "Stretched forward and aft cabin sections.", "前後客室区間を延長。"), ("多組出口分布。", "Multiple exit groups.", "複数の出口群。"), ("塗裝可能降低門框對比。", "Livery can obscure door outlines.", "塗装で扉輪郭が見にくくなる場合あり。")],
+        ),
+        "engine": identify(
+            ("757 的引擎短艙有較圓的進氣口，吊掛在較高的主翼下。N77867 的近照可見進氣唇口、風扇及較長的短艙，不具有 737NG 那種明顯壓扁的下緣。", "The 757 nacelle has a rounder inlet beneath its higher wing. N77867's close-up shows the lip, fan and elongated nacelle without the pronounced flattened lower inlet of the 737NG.", "757のナセルは高い主翼下にあり、吸気口が比較的丸い形です。N77867近接写真に吸気口縁・ファン・長いナセルが見え、737NGのような平らな下縁は目立ちません。"),
+            ("波音規劃資料列出 -300 可用 PW2040／PW2043 或 RB211-535E4／E4B；照片不能代表全部動力選項。不要以航空公司名稱推定每架飛機的引擎。", "Boeing planning data lists PW2040/PW2043 or RB211-535E4/E4B for the -300. A photograph does not cover every powerplant option, and an airline name alone does not establish the engine.", "ボーイング資料には-300用にPW2040／PW2043とRB211-535E4／E4Bが掲載されています。1枚の写真で全仕様は示せず、航空会社名だけでエンジン型式を断定しません。"),
+            [("較圓的進氣口。", "Rounder inlet.", "比較的丸い吸気口。"), ("兩具翼下渦扇。", "Two underwing turbofans.", "翼下ターボファン2基。"), ("動力選項不只一種。", "More than one powerplant option.", "複数のエンジン選択肢。")],
+        ),
+        "wingtip": identify(
+            ("照片中的 N78866 裝有高而向上彎曲的融合式小翼，下方沒有 737NG Split Scimitar 那樣的獨立翼片。近照保留翼尖與主翼接合處。", "Photographed N78866 has tall blended winglets without the separate lower blade seen on NG Split Scimitar tips. The close-up retains the wing-to-winglet transition.", "写真のN78866は高く上方へ曲がるブレンデッド・ウィングレットを装備し、NGのSplit Scimitarのような独立した下側ブレードはありません。接合部も写しています。"),
+            ("757-300 小翼屬改裝配置，不能假定所有年代或所有飛機都有；有無小翼也不能單獨區分 -200／-300。", "757-300 winglets are a retrofit configuration, not universal across aircraft or dates. Their presence alone also cannot distinguish a -200 from a -300.", "757-300の小翼は後付け仕様で、全機・全時代に共通ではありません。有無だけで-200と-300を区別することもできません。"),
+            [("向上彎曲的融合式小翼。", "Upward-curving blended winglet.", "上方へ曲がるブレンデッド小翼。"), ("照片無獨立下翼片。", "No separate lower blade in this photo.", "写真には独立した下側翼片なし。"), ("改裝狀態依機籍不同。", "Retrofit state varies by airframe.", "改修状態は機体ごとに異なる。")],
+        ),
+        "wing": identify(
+            ("N78866 的飛行中照片顯示大面積後掠翼、襟翼軌道整流罩與融合式小翼。機腹視角可看到翼根與引擎吊架的連接關係。", "N78866 in flight shows the large swept wing, flap-track fairings and blended tip. The underside view reveals the wing-root and engine-pylon relationship.", "飛行中のN78866写真には大きな後退翼、フラップトラック・フェアリング、ブレンデッド翼端が見えます。下面視点で翼根とパイロンの関係を確認できます。"),
+            ("757-300 加長機身但仍延續 757 家族主翼；此處是起飛後照片，起落架已收起，不能與降落照片的放輪狀態混為結構差異。", "The stretched -300 retains the 757-family wing. This post-takeoff photograph has retracted gear; do not treat its difference from a landing photograph as a structural change.", "胴体延長型-300も757系列の主翼を継承します。離陸後写真では脚が収納されており、着陸時の脚展開との差を構造差と混同しないでください。"),
+            [("低置後掠主翼。", "Low swept wing.", "低い後退主翼。"), ("整流罩與吊架可見。", "Visible fairings and pylon.", "フェアリングとパイロンが見える。"), ("照片已收輪。", "Gear retracted in this photograph.", "写真では脚収納。")],
+        ),
+        "vstab": identify(
+            ("TF-ISX 的垂尾高聳且前緣後掠，根部位於較細的後機身上。照片採停機狀態，方便比較方向舵與尾翼根部輪廓。", "TF-ISX's tall, swept fin rises from the relatively narrow aft body. The parked view makes the rudder and root outline easy to compare.", "TF-ISXの高い後退垂尾は比較的細い後部胴体に立ちます。駐機中の写真で方向舵と付け根の輪郭を比較できます。"),
+            ("-200 與 -300 的垂尾外形近似，航空公司尾翼圖案也不表示次型；仍需看加長機身與出口。", "The -200 and -300 fins are similar, and airline tail markings do not identify the variant. Cross-check the stretched body and exits.", "-200と-300の垂尾は似ており、航空会社のマークも型式を示しません。延長胴体と出口を確認します。"),
+            [("高聳後掠垂尾。", "Tall swept fin.", "高い後退垂尾。"), ("尾部沒有引擎。", "No tail-mounted engine.", "尾部エンジンなし。"), ("全景補看機身比例。", "Use the overview for body proportions.", "全景で胴体比率も確認。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼位於後機身低處，左右向外後掠。N77867 後機腹裁切保留兩側尾翼與尾錐，可比較它們與垂尾的高度關係。", "The horizontal tail is mounted low on the aft body and sweeps outward on both sides. N77867's rear-underside crop retains both tailplanes and the tailcone for comparison below the fin.", "水平尾翼は後部胴体の低い位置から左右に後退して伸びます。N77867の後方下面切り出しには両側尾翼とテールコーンを残し、垂尾との高さ関係を示します。"),
+            ("與 737 都是傳統尾翼；水平尾翼的相似外形不代表機型相同。757 主腳四輪與修長機鼻更有判別力。", "Both 737 and 757 have conventional tails. Similar tailplanes do not imply the same type; the 757's four-wheel main units and elongated nose are stronger clues.", "737も757も通常尾翼です。水平尾翼が似ていても同じ型式とは限らず、757の4輪主脚と長い機首がより有効な手掛かりです。"),
+            [("傳統低尾布局。", "Conventional low tailplane.", "通常の低い水平尾翼。"), ("尾錐位於兩尾翼之間。", "Tailcone between tailplanes.", "両尾翼の間にテールコーン。"), ("結合主腳特徵比較。", "Compare alongside main-gear features.", "主脚の特徴も照合。")],
+        ),
+        "gear": identify(
+            ("757-300 每側主腳有兩軸四輪，鼻腳雙輪，全機合計十輪。較長的支柱與四輪輪架，是與六輪的 737-900 區分時很直接的特徵。", "The 757-300 has two-axle, four-wheel main units and a twin-wheel nose unit, for ten wheels overall. Tall struts and four-wheel bogies clearly distinguish it from the six-wheel 737-900.", "757-300の主脚は片側2軸4輪、前脚は2輪で合計10輪です。長い支柱と4輪ボギーは、6輪の737-900との明確な違いです。"),
+            ("斜角照片可能讓前後輪重疊，請看輪架兩個軸的位置，不要僅計算露出的黑色輪胎圓形。", "Oblique views can overlap front and rear wheels. Look for the bogie's two axles instead of merely counting exposed tire circles.", "斜め視点では前後輪が重なるため、黒いタイヤの円だけでなく、ボギーの2本の軸の位置を確認してください。"),
+            [("每側主腳四輪。", "Four wheels per main unit.", "片側主脚4輪。"), ("全機十輪。", "Ten wheels overall.", "全機で10輪。"), ("辨識兩軸輪架。", "Identify the two-axle bogie.", "2軸ボギーを確認。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -2186,6 +2323,29 @@ def update(model: str) -> None:
         else:
             part["images"] = [photo(model, part_id, CAPTIONS[part_id], SOURCES[model][part_id])]
     data["partOrder"] = ORDER
+    if model in ("b739", "b753"):
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "前斜角外窗（原尺寸實照裁切，非正投影）",
+            "Front-quarter glazing (original-resolution photo crop, not orthographic)",
+            "斜め前方の外窓（原寸実写から切り出し、正投影ではありません）",
+        )
+    if model == "b739":
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "737NG 共通布局參考：Miami Air 737-800 N734MA 實照，非 -900 機籍",
+            "Shared 737NG layout reference: real Miami Air 737-800 N734MA, not a -900 airframe",
+            "737NG共通配置参考：Miami Air 737-800 N734MA実写、-900ではありません",
+        )
+    if model == "b753":
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "Condor 757-300 D-ABOA 實機座艙；JHenryW 攝影，Altair78 調整前景明暗",
+            "Real Condor 757-300 D-ABOA cockpit; JHenryW, foreground levels adjusted by Altair78",
+            "Condor 757-300 D-ABOA実機操縦席；撮影JHenryW、前景明暗調整Altair78",
+        )
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "Icelandair 757-300 TF-ISX 側斜角窗型（原尺寸實照裁切）",
+            "Icelandair 757-300 TF-ISX side-oblique glazing (original-resolution photo crop)",
+            "Icelandair 757-300 TF-ISXの斜め側方窓（原寸実写から切り出し）",
+        )
     if model in ("crj700", "e170"):
         family = "CRJ700/900" if model == "crj700" else "E170/175"
         actual = "CRJ900" if model == "crj700" else "E175"

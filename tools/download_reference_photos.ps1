@@ -1,4 +1,4 @@
-param([switch]$Check)
+param([switch]$Check, [string]$SourceDirectory, [string[]]$Models = @())
 $ErrorActionPreference = "Stop"
 
 $root = Split-Path -Parent $PSScriptRoot
@@ -216,6 +216,10 @@ $photos = [ordered]@{
   "md11/cockpit.jpg" = "Cockpit of McDonnell Douglas MD-11 (5306565461).jpg"
   "b762/cockpit.jpg" = "The Flight Deck of the 767-200 (3615228401).jpg"
   "b764/cockpit.jpg" = "Continental Airlines Boeing 767-400ER flight deck.jpg"
+  "b739/cockpit.jpg" = "The Flight Deck of the Boeing 737-800. (2956276002).jpg"
+  "b753/cockpit.jpg" = "Boeing 757-300 Cockpit.JPG"
+  "b739/overview.jpg" = "United Boeing 737-900 N30401 BWI MD1.jpg"
+  "b753/overview.jpg" = "United Boeing 757-300 N78866 take off from Runway 27 Boston Feb 2025.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -223,12 +227,31 @@ $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
 $gfdlCockpit = $photos['b764/cockpit.jpg']
 $byTitle[$gfdlCockpit] = (Get-CommonsImageInfo @($gfdlCockpit) 0)[$gfdlCockpit]
 
+Add-Type -AssemblyName System.Drawing
 foreach ($entry in $photos.GetEnumerator()) {
+  if ($Models.Count -and $entry.Key.Split('/')[0] -notin $Models) { continue }
   $dest = Join-Path $root ("assets/reference/" + $entry.Key)
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $dest) | Out-Null
   $info = $byTitle[$entry.Value]
   if (-not $info) { throw "Wikimedia Commons file not found: $($entry.Value)" }
   if (-not (Test-Path $dest)) {
+    if ($SourceDirectory -and (Test-Path -LiteralPath (Join-Path $SourceDirectory $entry.Value))) {
+      $sourcePath = Join-Path $SourceDirectory $entry.Value
+      if ($entry.Value -eq $gfdlCockpit) {
+        Copy-Item -LiteralPath $sourcePath -Destination $dest
+      } else {
+        $image = [System.Drawing.Image]::FromFile($sourcePath)
+        $outW = [Math]::Min(1600, $image.Width)
+        $outH = [Math]::Max(1, [int]($outW * $image.Height / $image.Width))
+        $bitmap = [System.Drawing.Bitmap]::new($outW, $outH)
+        $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
+        $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+        $graphics.DrawImage($image, 0, 0, $outW, $outH)
+        $graphics.Dispose(); $image.Dispose()
+        $bitmap.Save($dest, [System.Drawing.Imaging.ImageFormat]::Jpeg); $bitmap.Dispose()
+      }
+      continue
+    }
     for ($attempt = 1; $attempt -le 4; $attempt++) {
       try {
         Invoke-WebRequest -Uri $info.thumburl -OutFile $dest -UserAgent "SKY-ARCHIVE/1.0 (reference photo downloader)"
@@ -446,20 +469,45 @@ $windowPhotos += @(
   @{ Dest="b764/gear.jpg"; Title="Boeing 767-400ER N843MH of Delta Air Lines landing at Los Angeles International Airport, September 2023.jpg"; Crop=@(.43,.515,.15) }
 )
 
+# 737-900 (not -900ER) / 757-300; original-resolution crops.
+$windowPhotos += @(
+  @{ Dest="b739/window-front.jpg"; Title="United Boeing 737-900 N30401 BWI MD1.jpg"; Crop=@(.10,.315,.115) }
+  @{ Dest="b739/window-side.jpg"; Title="United Boeing 737-900 N38403 BWI MD1.jpg"; Crop=@(.065,.49,.10) }
+  @{ Dest="b739/fuselage.jpg"; Title="United Boeing 737-900 N38403 BWI MD1.jpg"; Crop=@(.11,.40,.46) }
+  @{ Dest="b739/engine.jpg"; Title="United Boeing 737-900 N30401 BWI MD1.jpg"; Crop=@(.415,.43,.16) }
+  @{ Dest="b739/wingtip.jpg"; Title="United Boeing 737-900 N30401 BWI MD1.jpg"; Crop=@(.75,.12,.20) }
+  @{ Dest="b739/wing.jpg"; Title="United Boeing 737-900 N30401 BWI MD1.jpg"; Crop=@(.50,.12,.40) }
+  @{ Dest="b739/vstab.jpg"; Title="United Boeing 737-900 N38403 BWI MD1.jpg"; Crop=@(.70,.16,.29) }
+  @{ Dest="b739/hstab.jpg"; Title="United Boeing 737-900 N38403 BWI MD1.jpg"; Crop=@(.80,.43,.19) }
+  @{ Dest="b739/gear.jpg"; Title="United Boeing 737-900 N30401 BWI MD1.jpg"; Crop=@(.39,.535,.20) }
+  @{ Dest="b753/window-front.jpg"; Title="United Boeing 757-300 N77867 on final approach to Boston Feb 2022.jpg"; Crop=@(.79,.16,.12) }
+  @{ Dest="b753/window-side.jpg"; Title="Icelandair Boeing 757 TF-ISX Oslo Gardermoen 2024 (01).jpg"; Crop=@(.72,.35,.095) }
+  @{ Dest="b753/fuselage.jpg"; Title="Icelandair Boeing 757 TF-ISX Oslo Gardermoen 2024 (01).jpg"; Crop=@(.345,.29,.465) }
+  @{ Dest="b753/engine.jpg"; Title="United Boeing 757-300 N77867 on final approach to Boston Feb 2022.jpg"; Crop=@(.40,.46,.145) }
+  @{ Dest="b753/wingtip.jpg"; Title="United Boeing 757-300 N78866 take off from Runway 27 Boston Feb 2025.jpg"; Crop=@(.495,.145,.14) }
+  @{ Dest="b753/wing.jpg"; Title="United Boeing 757-300 N78866 take off from Runway 27 Boston Feb 2025.jpg"; Crop=@(.31,.115,.48) }
+  @{ Dest="b753/vstab.jpg"; Title="Icelandair Boeing 757 TF-ISX Oslo Gardermoen 2024 (01).jpg"; Crop=@(.27,.14,.20) }
+  @{ Dest="b753/hstab.jpg"; Title="United Boeing 757-300 N77867 on final approach to Boston Feb 2022.jpg"; Crop=@(.145,.62,.36) }
+  @{ Dest="b753/gear.jpg"; Title="United Boeing 757-300 N77867 on final approach to Boston Feb 2022.jpg"; Crop=@(.445,.62,.26) }
+)
+
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0
 
 Add-Type -AssemblyName System.Drawing
 foreach ($photo in $windowPhotos) {
+  if ($Models.Count -and $photo.Dest.Split('/')[0] -notin $Models) { continue }
   $dest = Join-Path $root ("assets/reference/" + $photo.Dest)
   if ((Test-Path $dest) -and -not $photo.Force) { continue }
   $info = $windowByTitle[$photo.Title]
   if (-not $info) { throw "Wikimedia Commons file not found: $($photo.Title)" }
   $raw = [System.IO.Path]::GetTempFileName()
   try {
-    for ($attempt = 1; $attempt -le 4; $attempt++) {
+    if ($SourceDirectory -and (Test-Path -LiteralPath (Join-Path $SourceDirectory $photo.Title))) {
+      Copy-Item -LiteralPath (Join-Path $SourceDirectory $photo.Title) -Destination $raw
+    } else { for ($attempt = 1; $attempt -le 4; $attempt++) {
       try { Invoke-WebRequest -Uri $info.thumburl -OutFile $raw -UserAgent "SKY-ARCHIVE/1.0 (reference photo downloader)"; break }
       catch { if ($attempt -eq 4) { throw }; Start-Sleep -Seconds (10 * $attempt) }
-    }
+    } }
     $image = [System.Drawing.Image]::FromFile($raw)
     $crop = Get-ReferenceCrop $image.Width $image.Height $photo.Crop
     if ($crop.Width -lt 480) { Write-Warning "$($photo.Dest): only $($crop.Width) source pixels; choose a closer/higher-resolution photo." }
@@ -470,7 +518,7 @@ foreach ($photo in $windowPhotos) {
     $graphics.Dispose(); $image.Dispose()
     $bitmap.Save($dest, [System.Drawing.Imaging.ImageFormat]::Jpeg); $bitmap.Dispose()
   } finally { Remove-Item -LiteralPath $raw -Force -ErrorAction SilentlyContinue }
-  Start-Sleep -Seconds 6
+  if (!$SourceDirectory) { Start-Sleep -Seconds 6 }
 }
 
 Write-Host "Downloaded and checked $($photos.Count + $windowPhotos.Count) reference photos."

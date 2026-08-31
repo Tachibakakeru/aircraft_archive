@@ -2,18 +2,30 @@
   "title": "Boeing 737-900",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 737-900 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "非 ER 的 737-900 每側有前後兩道地板高度客艙門，以及兩個翼上緊急出口。照片裁切可看見前門、舷窗列與翼上出口；後門可回全景對照。",
+        "en": "The non-ER 737-900 has forward/aft floor-level cabin doors and two overwing exits on each side. This crop shows the forward door, window row and overwing exits; check the overview for the aft door.",
+        "ja": "非ER型737-900は片側に前後の床面高さの客室扉と翼上非常口2か所を備えます。切り出しには前扉・窓列・翼上非常口が写り、後扉は全景で確認できます。"
+      },
       "specs": [
         [
           "結構形式",
@@ -24,18 +36,52 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "-900ER 增加一對機翼後方出口位置，部分客艙配置會封堵；不能只靠舷窗數或航空公司塗裝判型。",
+        "en": "The -900ER adds a pair of exit positions aft of the wing, plugged in some cabin configurations. Window count or airline livery alone is insufficient for identification.",
+        "ja": "-900ERでは翼後方に1対の出口位置を追加し、客室仕様によって閉鎖します。窓数や航空会社の塗装だけでは識別できません。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "每側兩個翼上出口。",
+          "en": "Two overwing exits per side.",
+          "ja": "片側に翼上非常口2か所。"
+        },
+        {
+          "zh": "非 ER 無新增的翼後出口。",
+          "en": "Non-ER lacks the extra aft-wing exit.",
+          "ja": "非ER型は追加の翼後出口なし。"
+        },
+        {
+          "zh": "前門與貨艙門位置不同。",
+          "en": "Cabin and cargo doors occupy different levels.",
+          "ja": "客室扉と貨物扉の高さは異なる。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b739/fuselage.jpg?v=882544233516",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 737-900 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "後掠低單翼的下方可看到襟翼軌道整流罩，以及放下的後緣襟翼。與 757-300 比較時，先看翼面相對短艙、機身與翼尖的比例。",
+        "en": "Under the swept low wing are flap-track fairings and deployed trailing-edge flaps. Compare wing proportions relative to nacelles, body and tips with the 757-300.",
+        "ja": "後退した低翼の下面にはフラップトラック・フェアリングと展開中の後縁フラップが見えます。757-300とはナセル・胴体・翼端に対する翼面の比率を比較します。"
+      },
       "specs": [
         [
           "功能",
@@ -46,84 +92,440 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "兩型都有後掠翼與高升力裝置，不能以降落時的襟翼角度判型；先排除飛行階段造成的外形變化。",
+        "en": "Both types have swept wings and high-lift devices. Flap angle during landing is not an identifier; account for flight-phase differences first.",
+        "ja": "両型とも後退翼と高揚力装置を備えます。着陸時のフラップ角で判型せず、飛行段階による形状変化を考慮してください。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "後掠低翼。",
+          "en": "Swept low wing.",
+          "ja": "後退低翼。"
+        },
+        {
+          "zh": "後緣整流罩可見。",
+          "en": "Visible trailing-edge fairings.",
+          "ja": "後縁フェアリングが見える。"
+        },
+        {
+          "zh": "勿把襟翼狀態當型號差異。",
+          "en": "Separate flap state from variant differences.",
+          "ja": "フラップ状態と型式差を区別。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b739/wing.jpg?v=b6712e91f2eb",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 737-900 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "CFM56-7B 短艙靠近地面，進氣口下緣輪廓較扁，與 757 較圓的進氣口和較高吊掛形成對照。此圖由 N30401 實照裁切，能看見進氣唇口、風扇入口及吊架。",
+        "en": "The low-mounted CFM56-7B nacelle has a flatter lower inlet outline, contrasting with the 757's rounder intake and taller installation. This N30401 crop shows the inlet lip, fan entrance and pylon.",
+        "ja": "低い位置のCFM56-7Bナセルは吸気口下縁が比較的平らで、757の丸い吸気口と高い取付位置と対照的です。N30401の写真で吸気口縁・ファン入口・パイロンを確認できます。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "這是 737NG，不是使用 LEAP-1B 的 737 MAX。兩者都可能有上下分叉翼尖，因此需把短艙、翼尖與機身一起判讀。",
+        "en": "This is a 737NG, not a LEAP-1B-powered 737 MAX. Both can have upper/lower wingtip elements, so assess nacelles, tips and body together.",
+        "ja": "これは737NGで、LEAP-1B搭載の737 MAXではありません。両者とも上下に分かれた翼端を持つ場合があるため、ナセル・翼端・胴体を合わせて判断します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "CFM56-7B 系列。",
+          "en": "CFM56-7B family.",
+          "ja": "CFM56-7B系列。"
+        },
+        {
+          "zh": "進氣口下緣較扁。",
+          "en": "Flatter lower inlet edge.",
+          "ja": "比較的平らな吸気口下縁。"
+        },
+        {
+          "zh": "翼下間隙較小。",
+          "en": "Lower underwing clearance.",
+          "ja": "翼下の地上高が低い。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b739/engine.jpg?v=e09f457418e5",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "垂直尾翼前緣後掠，根部以背鰭形狀銜接後機身。N38403 的側面裁切可對照尾翼高度、方向舵輪廓與根部過渡。",
+        "en": "The swept fin blends into the aft body through a dorsal-root extension. The N38403 side crop shows fin height, rudder outline and root transition.",
+        "ja": "後退した垂直尾翼は背びれ状の付け根で後部胴体へつながります。N38403の側面切り出しで垂尾の高さ・方向舵輪郭・付け根を比較できます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "737NG 的多個次型共有近似垂尾外形；United 塗裝也不是 -900 的識別特徵。應配合機長和出口。",
+        "en": "Several 737NG variants share a similar fin. United livery is not a -900 identifier either; check length and exits.",
+        "ja": "737NGの複数型式はよく似た垂尾を持ちます。Unitedの塗装も-900固有ではなく、全長と出口を照合します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "後退垂尾1枚。"
+        },
+        {
+          "zh": "根部有背鰭過渡。",
+          "en": "Dorsal-root transition.",
+          "ja": "背びれ状の付け根。"
+        },
+        {
+          "zh": "搭配機長判讀。",
+          "en": "Cross-check body length.",
+          "ja": "全長も確認。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b739/vstab.jpg?v=460fdd9a6fda",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "水平尾翼低置於後機身兩側，沒有 T 尾或尾部引擎。側後方裁切保留尾錐與翼根，可看清它與垂直尾翼的相對位置。",
+        "en": "The horizontal tail is mounted low on the aft body, without a T-tail or rear engines. This side-rear crop retains the tailcone and root to show its position below the fin.",
+        "ja": "水平尾翼は後部胴体の低い位置にあり、T尾翼や尾部エンジンはありません。側後方の切り出しにテールコーンと翼根を残し、垂尾との位置関係を示します。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "與 757 同屬傳統尾翼布局，只看水平尾翼不容易分型；需再看主起落架和機鼻。",
+        "en": "The 757 also has a conventional tail. The tailplane alone is a weak identifier; examine main gear and nose as well.",
+        "ja": "757も通常尾翼配置のため、水平尾翼だけでは識別しにくく、主脚と機首も確認します。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "低置水平尾翼。",
+          "en": "Low-mounted tailplane.",
+          "ja": "低い水平尾翼。"
+        },
+        {
+          "zh": "尾錐可作位置參考。",
+          "en": "Tailcone provides a position reference.",
+          "ja": "テールコーンが位置の目安。"
+        },
+        {
+          "zh": "不是獨立判型依據。",
+          "en": "Not a standalone identifier.",
+          "ja": "単独の識別基準ではない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b739/hstab.jpg?v=3e8ad28e4880",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 737-900 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "737-900 每側主起落架只有一軸雙輪，鼻輪也為雙輪，合計六輪。照片可看到左右兩組短主腳，與 757 每側兩軸四輪有明顯差異。",
+        "en": "Each 737-900 main unit has one axle and two wheels; the nose unit also has two, for six in total. The short main units contrast clearly with the 757's four-wheel, two-axle units.",
+        "ja": "737-900の主脚は片側1軸2輪、前脚も2輪で合計6輪です。短い左右主脚は、757の片側2軸4輪と明確に異なります。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "輪數通常比塗裝更可靠，但有重疊或陰影時要確認同一支主腳的輪子，別把遠側主腳重複計入。",
+        "en": "Wheel arrangement is usually more useful than livery. With overlap or shadow, identify wheels on one unit rather than counting the far-side unit twice.",
+        "ja": "車輪配置は塗装より有効ですが、重なりや影がある場合は同じ主脚の車輪を確認し、反対側を重複して数えないでください。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "主腳每側兩輪。",
+          "en": "Two wheels per main unit.",
+          "ja": "片側主脚2輪。"
+        },
+        {
+          "zh": "全機六輪。",
+          "en": "Six wheels in total.",
+          "ja": "全機で6輪。"
+        },
+        {
+          "zh": "明顯短於 757 的主腳。",
+          "en": "Clearly shorter than the 757 gear.",
+          "ja": "757より明確に短い主脚。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b739/gear.jpg?v=5bbf5b31d804",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "737-900 的機身長約 42.11 m，明顯短於 54.5 m 級的 757-300。低矮機身、短起落架與每側雙輪主腳，是全景中容易辨識的組合。",
+        "en": "The 737-900 is about 42.11 m long, clearly shorter than the roughly 54.5 m 757-300. Its low body, short gear and twin-wheel main units form a useful identification combination.",
+        "ja": "737-900は全長約42.11 mで、約54.5 mの757-300より明確に短い機体です。低い胴体、短い脚、片側2輪の主脚を組み合わせて識別します。"
+      },
+      "fact": {
+        "zh": "本頁外觀使用 United N30401／N38403，均為 737-924 非 ER 型。-900ER 與 -900 長度相同，不能只看長短；應加看機翼後方是否有 ER 額外出口及其封堵輪廓。",
+        "en": "The exterior photographs show United N30401/N38403, both non-ER 737-924s. The -900ER has the same length; also examine the additional aft-of-wing exit or its plugged outline.",
+        "ja": "外観写真のUnited N30401／N38403は非ER型737-924です。-900ERも全長は同じなので、翼後方の追加出口や閉鎖された輪郭も確認してください。"
+      },
+      "bullets": [
+        {
+          "zh": "低矮機身與短腳。",
+          "en": "Low body and short gear.",
+          "ja": "低い胴体と短い脚。"
+        },
+        {
+          "zh": "兩具翼下引擎。",
+          "en": "Two underwing engines.",
+          "ja": "翼下エンジン2基。"
+        },
+        {
+          "zh": "-900 不等於 -900ER。",
+          "en": "-900 is not the same as -900ER.",
+          "ja": "-900と-900ERを区別。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b739/overview.jpg?v=34aec56e313c",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "737NG 的座艙保留兩組駕駛盤，主儀表板使用六具顯示器。相較照片中的 757-300，737NG 的主飛行資訊集中在較大的矩形畫面，獨立圓形儀表較少。",
+        "en": "The 737NG retains dual control yokes and six displays. Compared with the photographed 757-300, its primary flight information is concentrated on larger rectangular screens, with fewer separate round instruments.",
+        "ja": "737NGは2組の操縦輪と6面の表示器を備えます。写真の757-300と比べ、主要飛行情報を大きな矩形画面にまとめ、独立した丸形計器が少ない配置です。"
+      },
+      "fact": {
+        "zh": "此圖是 Miami Air N734MA 的 737-800 實照，僅作 737NG 共通布局參考，並非 737-900 實拍。個別改裝、航電選項與顯示模式會不同。",
+        "en": "This is a real Miami Air N734MA 737-800, used only as a shared 737NG layout reference, not a 737-900 photograph. Retrofits, avionics options and display modes vary.",
+        "ja": "写真はMiami Air N734MAの737-800実機です。737NG共通配置の参考であり、737-900の実写ではありません。改修・装備・表示モードには差があります。"
+      },
+      "bullets": [
+        {
+          "zh": "六具顯示器。",
+          "en": "Six display units.",
+          "ja": "表示器6面。"
+        },
+        {
+          "zh": "保留傳統駕駛盤。",
+          "en": "Conventional yokes retained.",
+          "ja": "従来の操縦輪を維持。"
+        },
+        {
+          "zh": "明確標示家族參考照片。",
+          "en": "Family reference explicitly labelled.",
+          "ja": "系列参考写真と明示。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b739/cockpit.jpg?v=ae0d575495c4",
+          "caption": {
+            "zh": "737NG 共通布局參考：Miami Air 737-800 N734MA 實照，非 -900 機籍",
+            "en": "Shared 737NG layout reference: real Miami Air 737-800 N734MA, not a -900 airframe",
+            "ja": "737NG共通配置参考：Miami Air 737-800 N734MA実写、-900ではありません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:The_Flight_Deck_of_the_Boeing_737-800._(2956276002).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "737 的正面風擋較低，窗框在機鼻兩側形成明顯折角；側窗外形帶有斜邊。前斜角與側面照片分開呈現，可對照窗帶高度及其與鼻錐的距離。",
+        "en": "The 737 has a relatively low front windshield and angular transitions around the nose, with slanted side-pane edges. Separate front-quarter and side views show glazing height and its distance from the radome.",
+        "ja": "737の前面風防は比較的低く、機首側面へ明瞭な角度で回り込み、側窓には斜辺があります。斜め前方・側面の別写真で窓帯の高さとレドームとの距離を比較できます。"
+      },
+      "fact": {
+        "zh": "外窗形狀在多種 737NG 次型間相近，不能單獨識別 -900。照片中的機體沒有眉窗；眉窗封閉或省略也不能作為 ER 型的唯一判據。",
+        "en": "Glazing is similar across several 737NG variants and cannot identify a -900 alone. These aircraft have no eyebrow windows; their omission or closure is not a standalone ER identifier.",
+        "ja": "外窓は737NGの複数型式で似ており、単独では-900と判定できません。写真には眉窓がありませんが、省略・閉鎖だけでER型とは判断できません。"
+      },
+      "bullets": [
+        {
+          "zh": "前斜角／側面分開。",
+          "en": "Separate front-quarter/side views.",
+          "ja": "斜め前方・側面を分離。"
+        },
+        {
+          "zh": "窗框有明顯折角。",
+          "en": "Angular window framing.",
+          "ja": "角のある窓枠。"
+        },
+        {
+          "zh": "搭配機身與出口判型。",
+          "en": "Cross-check body and exits.",
+          "ja": "胴体・出口も照合。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b739/window-front.jpg?v=f7a890d00c9c",
+          "caption": {
+            "zh": "前斜角外窗（原尺寸實照裁切，非正投影）",
+            "en": "Front-quarter glazing (original-resolution photo crop, not orthographic)",
+            "ja": "斜め前方の外窓（原寸実写から切り出し、正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg"
+        },
+        {
+          "src": "assets/reference/b739/window-side.jpg?v=26e5e196ac1e",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N38403_BWI_MD1.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "N30401 的翼尖是改裝的 Split Scimitar 形式，上方高小翼配合下方伸出的翼片。這張近照用來辨認分叉位置，不是將它誤認為 MAX 專屬設計。",
+        "en": "N30401 has retrofitted Split Scimitar tips, with a tall upper winglet and a lower blade. The close-up shows where the elements split; it is not a MAX-only design.",
+        "ja": "N30401は上側の高い小翼と下側のブレードを備えた後付けSplit Scimitar翼端です。近接写真で分岐位置を確認でき、MAX専用設計と混同しないことが重要です。"
+      },
+      "fact": {
+        "zh": "737-900 可見不同小翼改裝狀態；737NG 的 Split Scimitar 與 MAX 的原廠翼尖並不相同。小翼有無及樣式都不足以單獨識別 -900ER。",
+        "en": "737-900 winglet retrofits vary. NG Split Scimitar tips differ from the MAX's factory tips; presence or style alone does not identify a -900ER.",
+        "ja": "737-900の小翼改修状態は機体によって異なります。NGのSplit ScimitarはMAXの標準翼端と異なり、小翼の有無・形だけでは-900ERを識別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "上下分叉。",
+          "en": "Upper/lower split.",
+          "ja": "上下に分岐。"
+        },
+        {
+          "zh": "NG 也有此改裝。",
+          "en": "Also fitted to NG aircraft.",
+          "ja": "NGにも装着。"
+        },
+        {
+          "zh": "留意照片拍攝年代。",
+          "en": "Consider the photograph date.",
+          "ja": "撮影年代にも注意。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b739/wingtip.jpg?v=3f4857b8d241",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_737-900_N30401_BWI_MD1.jpg"
+        }
+      ]
     }
   },
   "specifications": {

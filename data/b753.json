@@ -2,19 +2,30 @@
   "title": "Boeing 757-300",
   "sub": "窄體客機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Boeing 757-300 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "757-300 在機翼前後增加機身段。TF-ISX 側面可見長舷窗列、前部兩道大門，以及翼附近與後部的出口位置；不是只把 737 拉長而已。",
+        "en": "The 757-300 adds body sections ahead of and behind the wing. TF-ISX shows long window rows, two large forward doors and exit positions around and aft of the wing; it is a separate design from the 737.",
+        "ja": "757-300は主翼の前後で胴体を延長しています。TF-ISX側面には長い窓列、前方の大型扉2枚、翼付近と後方の出口位置が見え、737とは別設計です。"
+      },
       "specs": [
         [
           "結構形式",
@@ -25,35 +36,104 @@
           "鋁合金／複合材料"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "-300 同時具有翼上出口與翼後出口；757-200 的出口布局另有不同選配。辨識時需看完整分布，不能把單一道門作為唯一依據。",
+        "en": "The -300 has both overwing and aft-of-wing exits; the 757-200 has different optional exit layouts. Inspect the full distribution rather than relying on one door.",
+        "ja": "-300は翼上と翼後方の両方に出口があり、757-200には別の選択配置があります。1枚の扉だけでなく全体の分布を確認します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "前後客艙段加長。",
+          "en": "Stretched forward and aft cabin sections.",
+          "ja": "前後客室区間を延長。"
+        },
+        {
+          "zh": "多組出口分布。",
+          "en": "Multiple exit groups.",
+          "ja": "複数の出口群。"
+        },
+        {
+          "zh": "塗裝可能降低門框對比。",
+          "en": "Livery can obscure door outlines.",
+          "ja": "塗装で扉輪郭が見にくくなる場合あり。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b753/fuselage.jpg?v=2e8aea94f62b",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISX_Oslo_Gardermoen_2024_(01).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Boeing 757-300 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "Condor D-ABOA 的實機座艙保留左右上下排列的飛行／導航顯示器、中央引擎顯示，以及周圍多具圓形儀表。雙駕駛盤與兩支推力手柄清楚可見。",
+        "en": "Condor D-ABOA's real cockpit has vertically stacked flight/navigation displays on each side, center engine displays and numerous surrounding round instruments. Dual yokes and two thrust levers are visible.",
+        "ja": "Condor D-ABOA実機には左右で上下に並ぶ飛行・航法表示器、中央エンジン表示、周囲の丸形計器があります。2組の操縦輪と2本の推力レバーが見えます。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "這是 757-300 真實座艙，而非模擬器。757 與 767 有共通設計；不同營運者可能改裝顯示器，不能將這張照片套用到每一架飛機。",
+        "en": "This is a real 757-300 flight deck, not a simulator. The 757 and 767 share design features; operator display retrofits mean this photograph does not describe every airframe.",
+        "ja": "シミュレーターではなく757-300の実機操縦席です。757と767には共通設計があり、運航会社の表示器改修で全機が同じとは限りません。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "飛行／導航顯示上下排列。",
+          "en": "Vertically stacked flight/navigation displays.",
+          "ja": "飛行・航法表示を上下配置。"
+        },
+        {
+          "zh": "中央引擎資訊。",
+          "en": "Central engine information.",
+          "ja": "中央にエンジン情報。"
+        },
+        {
+          "zh": "周圍仍有獨立圓形儀表。",
+          "en": "Separate round instruments remain.",
+          "ja": "独立した丸形計器も残る。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b753/cockpit.jpg?v=4a53d69e2c16",
+          "caption": {
+            "zh": "Condor 757-300 D-ABOA 實機座艙；JHenryW 攝影，Altair78 調整前景明暗",
+            "en": "Real Condor 757-300 D-ABOA cockpit; JHenryW, foreground levels adjusted by Altair78",
+            "ja": "Condor 757-300 D-ABOA実機操縦席；撮影JHenryW、前景明暗調整Altair78"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_757-300_Cockpit.JPG"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Boeing 757-300 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "N78866 的飛行中照片顯示大面積後掠翼、襟翼軌道整流罩與融合式小翼。機腹視角可看到翼根與引擎吊架的連接關係。",
+        "en": "N78866 in flight shows the large swept wing, flap-track fairings and blended tip. The underside view reveals the wing-root and engine-pylon relationship.",
+        "ja": "飛行中のN78866写真には大きな後退翼、フラップトラック・フェアリング、ブレンデッド翼端が見えます。下面視点で翼根とパイロンの関係を確認できます。"
+      },
       "specs": [
         [
           "功能",
@@ -64,84 +144,394 @@
           "主油箱"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "757-300 加長機身但仍延續 757 家族主翼；此處是起飛後照片，起落架已收起，不能與降落照片的放輪狀態混為結構差異。",
+        "en": "The stretched -300 retains the 757-family wing. This post-takeoff photograph has retracted gear; do not treat its difference from a landing photograph as a structural change.",
+        "ja": "胴体延長型-300も757系列の主翼を継承します。離陸後写真では脚が収納されており、着陸時の脚展開との差を構造差と混同しないでください。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "低置後掠主翼。",
+          "en": "Low swept wing.",
+          "ja": "低い後退主翼。"
+        },
+        {
+          "zh": "整流罩與吊架可見。",
+          "en": "Visible fairings and pylon.",
+          "ja": "フェアリングとパイロンが見える。"
+        },
+        {
+          "zh": "照片已收輪。",
+          "en": "Gear retracted in this photograph.",
+          "ja": "写真では脚収納。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b753/wing.jpg?v=e5a70cdb84b2",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N78866_take_off_from_Runway_27_Boston_Feb_2025.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Boeing 757-300 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "757 的引擎短艙有較圓的進氣口，吊掛在較高的主翼下。N77867 的近照可見進氣唇口、風扇及較長的短艙，不具有 737NG 那種明顯壓扁的下緣。",
+        "en": "The 757 nacelle has a rounder inlet beneath its higher wing. N77867's close-up shows the lip, fan and elongated nacelle without the pronounced flattened lower inlet of the 737NG.",
+        "ja": "757のナセルは高い主翼下にあり、吸気口が比較的丸い形です。N77867近接写真に吸気口縁・ファン・長いナセルが見え、737NGのような平らな下縁は目立ちません。"
+      },
       "specs": [
         [
           "型式",
           "渦輪扇引擎"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "波音規劃資料列出 -300 可用 PW2040／PW2043 或 RB211-535E4／E4B；照片不能代表全部動力選項。不要以航空公司名稱推定每架飛機的引擎。",
+        "en": "Boeing planning data lists PW2040/PW2043 or RB211-535E4/E4B for the -300. A photograph does not cover every powerplant option, and an airline name alone does not establish the engine.",
+        "ja": "ボーイング資料には-300用にPW2040／PW2043とRB211-535E4／E4Bが掲載されています。1枚の写真で全仕様は示せず、航空会社名だけでエンジン型式を断定しません。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "較圓的進氣口。",
+          "en": "Rounder inlet.",
+          "ja": "比較的丸い吸気口。"
+        },
+        {
+          "zh": "兩具翼下渦扇。",
+          "en": "Two underwing turbofans.",
+          "ja": "翼下ターボファン2基。"
+        },
+        {
+          "zh": "動力選項不只一種。",
+          "en": "More than one powerplant option.",
+          "ja": "複数のエンジン選択肢。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b753/engine.jpg?v=765ff9215791",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "TF-ISX 的垂尾高聳且前緣後掠，根部位於較細的後機身上。照片採停機狀態，方便比較方向舵與尾翼根部輪廓。",
+        "en": "TF-ISX's tall, swept fin rises from the relatively narrow aft body. The parked view makes the rudder and root outline easy to compare.",
+        "ja": "TF-ISXの高い後退垂尾は比較的細い後部胴体に立ちます。駐機中の写真で方向舵と付け根の輪郭を比較できます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "-200 與 -300 的垂尾外形近似，航空公司尾翼圖案也不表示次型；仍需看加長機身與出口。",
+        "en": "The -200 and -300 fins are similar, and airline tail markings do not identify the variant. Cross-check the stretched body and exits.",
+        "ja": "-200と-300の垂尾は似ており、航空会社のマークも型式を示しません。延長胴体と出口を確認します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "高聳後掠垂尾。",
+          "en": "Tall swept fin.",
+          "ja": "高い後退垂尾。"
+        },
+        {
+          "zh": "尾部沒有引擎。",
+          "en": "No tail-mounted engine.",
+          "ja": "尾部エンジンなし。"
+        },
+        {
+          "zh": "全景補看機身比例。",
+          "en": "Use the overview for body proportions.",
+          "ja": "全景で胴体比率も確認。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b753/vstab.jpg?v=101329d1b8a4",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISX_Oslo_Gardermoen_2024_(01).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "水平尾翼位於後機身低處，左右向外後掠。N77867 後機腹裁切保留兩側尾翼與尾錐，可比較它們與垂尾的高度關係。",
+        "en": "The horizontal tail is mounted low on the aft body and sweeps outward on both sides. N77867's rear-underside crop retains both tailplanes and the tailcone for comparison below the fin.",
+        "ja": "水平尾翼は後部胴体の低い位置から左右に後退して伸びます。N77867の後方下面切り出しには両側尾翼とテールコーンを残し、垂尾との高さ関係を示します。"
+      },
       "specs": [
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "與 737 都是傳統尾翼；水平尾翼的相似外形不代表機型相同。757 主腳四輪與修長機鼻更有判別力。",
+        "en": "Both 737 and 757 have conventional tails. Similar tailplanes do not imply the same type; the 757's four-wheel main units and elongated nose are stronger clues.",
+        "ja": "737も757も通常尾翼です。水平尾翼が似ていても同じ型式とは限らず、757の4輪主脚と長い機首がより有効な手掛かりです。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "傳統低尾布局。",
+          "en": "Conventional low tailplane.",
+          "ja": "通常の低い水平尾翼。"
+        },
+        {
+          "zh": "尾錐位於兩尾翼之間。",
+          "en": "Tailcone between tailplanes.",
+          "ja": "両尾翼の間にテールコーン。"
+        },
+        {
+          "zh": "結合主腳特徵比較。",
+          "en": "Compare alongside main-gear features.",
+          "ja": "主脚の特徴も照合。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b753/hstab.jpg?v=2e7d0098121a",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Boeing 757-300 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "757-300 每側主腳有兩軸四輪，鼻腳雙輪，全機合計十輪。較長的支柱與四輪輪架，是與六輪的 737-900 區分時很直接的特徵。",
+        "en": "The 757-300 has two-axle, four-wheel main units and a twin-wheel nose unit, for ten wheels overall. Tall struts and four-wheel bogies clearly distinguish it from the six-wheel 737-900.",
+        "ja": "757-300の主脚は片側2軸4輪、前脚は2輪で合計10輪です。長い支柱と4輪ボギーは、6輪の737-900との明確な違いです。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "斜角照片可能讓前後輪重疊，請看輪架兩個軸的位置，不要僅計算露出的黑色輪胎圓形。",
+        "en": "Oblique views can overlap front and rear wheels. Look for the bogie's two axles instead of merely counting exposed tire circles.",
+        "ja": "斜め視点では前後輪が重なるため、黒いタイヤの円だけでなく、ボギーの2本の軸の位置を確認してください。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "每側主腳四輪。",
+          "en": "Four wheels per main unit.",
+          "ja": "片側主脚4輪。"
+        },
+        {
+          "zh": "全機十輪。",
+          "en": "Ten wheels overall.",
+          "ja": "全機で10輪。"
+        },
+        {
+          "zh": "辨識兩軸輪架。",
+          "en": "Identify the two-axle bogie.",
+          "ja": "2軸ボギーを確認。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/b753/gear.jpg?v=99d300ca8445",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "757-300 是加長的 757，機身約 54.5 m；狹長機身、細長機鼻與較高起落架，是對照 737-900 的首要線索。United N78866 全景可見長客艙與大型翼下引擎。",
+        "en": "The stretched 757-300 is about 54.5 m long. A very slender body, long nose and taller gear are primary clues against the 737-900. United N78866's overview shows the long cabin and large underwing engines.",
+        "ja": "757-300は全長約54.5 mの延長型757です。非常に細長い胴体、長い機首、高い脚が737-900との主要な識別点で、United N78866全景に長い客室と大きい翼下エンジンが見えます。"
+      },
+      "fact": {
+        "zh": "它不是雙走道 767；757 和 737 的機身外寬同為約 3.76 m。長度、出口分布與四輪主腳比單靠機身寬窄更有用。",
+        "en": "It is not a twin-aisle 767: the 757 and 737 both have a body width of about 3.76 m. Length, exit distribution and four-wheel main units are more useful than width alone.",
+        "ja": "双通路の767ではなく、757と737の胴体外幅はともに約3.76 mです。幅だけより全長・出口配置・4輪主脚が有効です。"
+      },
+      "bullets": [
+        {
+          "zh": "約 54.5 m 長機身。",
+          "en": "Body about 54.5 m long.",
+          "ja": "約54.5 mの長胴。"
+        },
+        {
+          "zh": "單走道窄體機。",
+          "en": "Single-aisle narrow-body.",
+          "ja": "単通路の狭胴機。"
+        },
+        {
+          "zh": "每側四輪主腳。",
+          "en": "Four-wheel main units.",
+          "ja": "片側4輪の主脚。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b753/overview.jpg?v=22e9aca18f21",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N78866_take_off_from_Runway_27_Boston_Feb_2025.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "757 窗帶包覆細長機鼻，前窗轉入側窗時形成斜角。United N77867 的前斜角和 Icelandair TF-ISX 的側斜角，分別顯示正面與側面窗框輪廓。",
+        "en": "The 757 glazing wraps around its long nose with angled transitions into the side panes. Front-quarter United N77867 and side-oblique Icelandair TF-ISX views show the two aspects separately.",
+        "ja": "757の窓帯は長い機首を包み、側窓へ斜めに移行します。United N77867の斜め前方とIcelandair TF-ISXの斜め側方で、前面・側面の窓枠を別々に示します。"
+      },
+      "fact": {
+        "zh": "兩張均非精準正投影；透視會改變窗片看起來的寬度。-200 與 -300 的機鼻和外窗相近，要用加長客艙及出口布局區分。",
+        "en": "Neither image is an orthographic view; perspective changes apparent pane width. The -200 and -300 share similar noses and glazing, so compare cabin stretch and exit layout.",
+        "ja": "どちらも厳密な正投影ではなく、遠近法で窓の見かけの幅が変わります。-200と-300は機首・外窓が似るため、客室延長と出口配置で区別します。"
+      },
+      "bullets": [
+        {
+          "zh": "前斜角與側斜角實照。",
+          "en": "Real front-quarter and side-oblique views.",
+          "ja": "斜め前方・側方の実写。"
+        },
+        {
+          "zh": "機鼻比 737 更修長。",
+          "en": "More elongated nose than the 737.",
+          "ja": "737より細長い機首。"
+        },
+        {
+          "zh": "外窗不單獨區分 757 次型。",
+          "en": "Glazing alone does not identify the 757 variant.",
+          "ja": "外窓だけで757の派生型を区別しない。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b753/window-front.jpg?v=6d6f5eff2858",
+          "caption": {
+            "zh": "前斜角外窗（原尺寸實照裁切，非正投影）",
+            "en": "Front-quarter glazing (original-resolution photo crop, not orthographic)",
+            "ja": "斜め前方の外窓（原寸実写から切り出し、正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N77867_on_final_approach_to_Boston_Feb_2022.jpg"
+        },
+        {
+          "src": "assets/reference/b753/window-side.jpg?v=3b580ab72ecb",
+          "caption": {
+            "zh": "Icelandair 757-300 TF-ISX 側斜角窗型（原尺寸實照裁切）",
+            "en": "Icelandair 757-300 TF-ISX side-oblique glazing (original-resolution photo crop)",
+            "ja": "Icelandair 757-300 TF-ISXの斜め側方窓（原寸実写から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Icelandair_Boeing_757_TF-ISX_Oslo_Gardermoen_2024_(01).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "照片中的 N78866 裝有高而向上彎曲的融合式小翼，下方沒有 737NG Split Scimitar 那樣的獨立翼片。近照保留翼尖與主翼接合處。",
+        "en": "Photographed N78866 has tall blended winglets without the separate lower blade seen on NG Split Scimitar tips. The close-up retains the wing-to-winglet transition.",
+        "ja": "写真のN78866は高く上方へ曲がるブレンデッド・ウィングレットを装備し、NGのSplit Scimitarのような独立した下側ブレードはありません。接合部も写しています。"
+      },
+      "fact": {
+        "zh": "757-300 小翼屬改裝配置，不能假定所有年代或所有飛機都有；有無小翼也不能單獨區分 -200／-300。",
+        "en": "757-300 winglets are a retrofit configuration, not universal across aircraft or dates. Their presence alone also cannot distinguish a -200 from a -300.",
+        "ja": "757-300の小翼は後付け仕様で、全機・全時代に共通ではありません。有無だけで-200と-300を区別することもできません。"
+      },
+      "bullets": [
+        {
+          "zh": "向上彎曲的融合式小翼。",
+          "en": "Upward-curving blended winglet.",
+          "ja": "上方へ曲がるブレンデッド小翼。"
+        },
+        {
+          "zh": "照片無獨立下翼片。",
+          "en": "No separate lower blade in this photo.",
+          "ja": "写真には独立した下側翼片なし。"
+        },
+        {
+          "zh": "改裝狀態依機籍不同。",
+          "en": "Retrofit state varies by airframe.",
+          "ja": "改修状態は機体ごとに異なる。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b753/wingtip.jpg?v=40e1d04b5906",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:United_Boeing_757-300_N78866_take_off_from_Runway_27_Boston_Feb_2025.jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -262,7 +652,7 @@
     "發動機": [
       [
         "型號",
-        "RR RB211-535E4 / PW2043 ×2"
+        "RR RB211-535E4/-535E4B / PW2040/PW2043 ×2"
       ],
       [
         "型式",
@@ -270,7 +660,7 @@
       ],
       [
         "單具推力",
-        "193 kN（43,500 lbf）"
+        "約 178–195 kN（40,100–43,850 lbf，依引擎型號）"
       ],
       [
         "旁通比",
