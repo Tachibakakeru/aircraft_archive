@@ -382,3 +382,20 @@
 - 驗證通過：42 架 × 10 類／462 張資料檢查、下載來源／裁切界線／不放大自我檢查、22 張新圖解碼、三語欄位、5 份 JavaScript 語法及 `git diff --check`。Browser 實測比較頁 10 列、22／22 照片載入、22 個來源、20 個單機部位連結且 0 張超過原生尺寸顯示；中／英／日切換正常，An-225 外窗與 BAe 146 起落架深連結均顯示照片及 3D canvas。
 - 比較／檢視與相關資料引用升至 v=165，Service Worker cache 升為 `hangar-v26`。本地預覽：`http://localhost:8000/versus.html?a=an225&b=bae146&local=165`。
 - 累計完成 42／52 架、462 張實照，尚餘 10 架：`citation, pa28, ask21, heli, b707, b727, c909, c919, c929, c939`。既有舊批次低解析照片仍保留為獨立待查項目；`data/korean_airlines_debug.json` 維持未追蹤且未修改。
+
+### Citation XLS+／Piper PA-28 Archer II 實機部位比較（2026-09-01，本地完成）
+
+- 已依使用者授權將上一批 An-225／BAe 146 以 commit `6e750b8` 推送至 `origin/main`；本批接續 `citation`／`pa28`，完成後先留本地驗收，不自行提交／推送。
+- 兩型各補齊 10 類部位、11 張實照（共 22 張）：整體、座艙、駕駛艙外窗正／側面、機身、引擎、翼尖、主翼、垂尾、平尾、起落架；三語名稱、簡介、補充、辨識重點與圖說完整。
+- Citation 以 XLS+ 為規格基準，修正全長為 16.00 m、PW545C 單具推力為 18.32 kN；部分座艙與外窗照片採 560XL／XLS 家族實機並在圖說明確標示。PA-28 以固定腳 PA-28-181 Archer II 為代表，修正舊模板的加壓、渦輪扇與定速螺旋槳錯誤，並將平尾辨識改為全動式 stabilator。
+- 實照取自 Wikimedia Commons，技術資料參考 Piper 官方 Archer LX 資料、Citation XLS+ 產品卡與 Transport Canada 560XL 家族資料；來源、作者、授權與裁切用途已寫入 `assets/reference/ATTRIBUTION.md`。所有裁切不放大、不使用 AI 增強。
+- 資料工具檢查及照片來源／裁切界線／不放大檢查通過：累計 44 架 × 10 類／484 張照片；22 張新圖可解碼，5 份相關 JavaScript 語法與 `git diff --check` 通過。
+- Browser 本地確認比較頁 10 列、22／22 張實照載入、22 個來源／20 個部位連結、0 張超過原生尺寸顯示；繁中、英文、日文切換正常。Citation 外窗深連結顯示 2 張照片與 3D canvas，PA-28 起落架深連結顯示 1 張照片與 3D canvas。
+- 比較／檢視與相關資料引用升至 v=166，Service Worker cache 升為 `hangar-v27`。本地預覽：`http://localhost:8000/versus.html?a=citation&b=pa28&local=166`。
+- 本批未 commit／push；`data/korean_airlines_debug.json` 維持未追蹤且未修改。累計尚餘 8 架：`ask21, heli, b707, b727, c909, c919, c929, c939`。
+
+### Citation／PA-28 批次發布與本輪收尾（2026-09-01）
+
+- 使用者確認本地結果並授權 PUSH；發布 Citation XLS+／PA-28 Archer II 的三語部位資料、22 張實機照片、來源授權、工具設定及 v=166／`hangar-v27` 快取更新。
+- 本輪到此停止，下次由剩餘 8 架 `ask21, heli, b707, b727, c909, c919, c929, c939` 接續；累計 44／52 架、484 張實照。
+- 提交時排除未追蹤的 `data/korean_airlines_debug.json`，不包含 Token 備份或其他不相關資料。

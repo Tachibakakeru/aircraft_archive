@@ -40,7 +40,7 @@ async function airportCoords(id){
 async function cruiseSpeedKmh(id){
   if (speedCache[id] != null) return speedCache[id];
   try {
-    const res = await fetch(`data/${id}.json?v=165`);
+    const res = await fetch(`data/${id}.json?v=166`);
     if (!res.ok) throw new Error();
     const d = await res.json();
     let kmh = null;
@@ -107,7 +107,7 @@ function fmtHours(h){
   try {
     const [aRes, fRes] = await Promise.all([
       fetch("data/airports.json?v=128"),
-      fetch("data/fleet.json?v=165"),
+      fetch("data/fleet.json?v=166"),
     ]);
     AIRPORTS = (await aRes.json()).airports;
     FLEET = (await fRes.json()).aircraft;

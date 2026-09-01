@@ -2,109 +2,550 @@
   "title": "Piper PA-28",
   "sub": "通用航空 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
-    "hstab"
+    "hstab",
+    "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Piper PA-28 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "Archer II採全金屬半硬殼式四座機身，右側只有一扇主要艙門；座艙後方逐漸收細至普通尾翼。",
+        "en": "The Archer II uses an all-metal semi-monocoque four-seat fuselage with one main door on the right, tapering aft to a conventional tail.",
+        "ja": "Archer IIは全金属セミモノコック4座胴体で、右側に主扉1枚を持ち、後方は通常尾翼へ細くなります。"
+      },
       "specs": [
         [
-          "結構形式",
-          "半硬殼式"
+          "結構",
+          "全金屬半硬殼式"
         ],
         [
-          "主要材料",
-          "鋁合金／複合材料"
+          "加壓",
+          "無"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "PA-28不是加壓機；舊資料中『高空維持座艙加壓』屬通用模板錯誤，本批已移除。",
+        "en": "The PA-28 is unpressurized; the previous generic statement about maintaining cabin pressure at altitude was incorrect and has been removed.",
+        "ja": "PA-28は非与圧機で、従来の汎用文にあった高空与圧の記述は誤りのため削除しました。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "全金屬四座機身。",
+          "en": "All-metal four-seat fuselage.",
+          "ja": "全金属4座胴体。"
+        },
+        {
+          "zh": "右側單一主門。",
+          "en": "Single right-side main door.",
+          "ja": "右側主扉1枚。"
+        },
+        {
+          "zh": "非加壓座艙。",
+          "en": "Unpressurized cabin.",
+          "ja": "非与圧客室。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/pa28/fuselage.jpg?v=ec345fec6ab8",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_03.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Piper PA-28 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "低置半錐形主翼翼展約10.67公尺，翼根近矩形、外翼向翼尖收窄；後緣配置手動襟翼與副翼。",
+        "en": "The low semi-tapered wing spans about 10.67 m, with a near-rectangular inner panel and narrowing outer panel; manual flaps and ailerons occupy the trailing edge.",
+        "ja": "低位置半テーパー主翼は翼幅約10.67 mで、内翼は矩形に近く外翼が細まり、後縁に手動フラップと補助翼があります。"
+      },
       "specs": [
         [
-          "功能",
-          "產生升力"
+          "翼展",
+          "10.67 m"
         ],
         [
-          "翼內",
-          "主油箱"
+          "構型",
+          "低置半錐形翼"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "照片中的機翼可能受草地與透視遮擋；用翼根、折線與收尖外翼判斷，不要只看翼展長短。",
+        "en": "Grass and perspective obscure parts of the wing; identify the root, planform break and tapered outer panel rather than apparent span alone.",
+        "ja": "草地と遠近で翼の一部が隠れるため、見かけの翼幅だけでなく翼根、平面形の折れ、先細り外翼を見ます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "低置半錐形翼。",
+          "en": "Low semi-tapered wing.",
+          "ja": "低位置半テーパー翼。"
+        },
+        {
+          "zh": "翼展約10.67公尺。",
+          "en": "About 10.67 m span.",
+          "ja": "翼幅約10.67 m。"
+        },
+        {
+          "zh": "手動後緣襟翼。",
+          "en": "Manual trailing-edge flaps.",
+          "ja": "手動後縁フラップ。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/pa28/wing.jpg?v=6a71c3c8e88d",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EHLY)_01.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Piper PA-28 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "PA-28-181以機鼻內的Lycoming O-360-A4M四缸水平對臥活塞引擎驅動兩葉螺旋槳，額定180 hp。",
+        "en": "The PA-28-181 uses a nose-mounted 180 hp Lycoming O-360-A4M four-cylinder horizontally opposed piston engine driving a two-blade propeller.",
+        "ja": "PA-28-181は機首の180 hp Lycoming O-360-A4M水平対向4気筒ピストンで2翅プロペラを駆動します。"
+      },
       "specs": [
         [
-          "型式",
-          "渦輪扇引擎"
+          "型號",
+          "Lycoming O-360-A4M ×1"
+        ],
+        [
+          "功率",
+          "180 hp"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "螺旋槳旋轉時不可從照片估算葉片數；地面靜止照才能可靠確認兩葉配置。",
+        "en": "Do not infer blade count from a spinning propeller; a stationary ground photograph is needed to confirm the two-blade arrangement.",
+        "ja": "回転中のプロペラ写真から枚数を数えず、停止した地上写真で2翅を確認します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "O-360水平對臥四缸。",
+          "en": "O-360 flat-four.",
+          "ja": "O-360水平対向4気筒。"
+        },
+        {
+          "zh": "180 hp。",
+          "en": "180 hp.",
+          "ja": "180 hp。"
+        },
+        {
+          "zh": "機鼻兩葉螺旋槳。",
+          "en": "Nose-mounted two-blade propeller.",
+          "ja": "機首2翅プロペラ。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/pa28/engine.jpg?v=34703b91f9cf",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_04.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "單片垂直尾翼前緣後掠、頂端較平，後緣為大面積方向舵；背鰭由後機身平順接入垂尾。",
+        "en": "The single fin has a swept leading edge and relatively flat top, with a large rudder on the trailing edge and a dorsal fillet blending into the fuselage.",
+        "ja": "単一垂尾は後退前縁と比較的平らな頂部を持ち、後縁に大面積方向舵、前方に胴体へ滑らかにつながる背びれがあります。"
+      },
       "specs": [
+        [
+          "構型",
+          "普通尾翼"
+        ],
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "塗裝色帶常沿方向舵延伸，不能把色帶邊界誤當成鉸鏈線。",
+        "en": "Livery stripes often continue across the rudder; do not mistake paint boundaries for hinge lines.",
+        "ja": "塗装帯は方向舵へ続くことがあり、色境界をヒンジ線と誤認しないでください。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "単一後退垂尾。"
+        },
+        {
+          "zh": "大面積方向舵。",
+          "en": "Large rudder.",
+          "ja": "大面積方向舵。"
+        },
+        {
+          "zh": "機身背鰭平順接合。",
+          "en": "Dorsal fillet blends into fuselage.",
+          "ja": "背びれが胴体へ滑らかに接続。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/pa28/vstab.jpg?v=0572cbfcb9fa",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_03.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "全動式水平尾翼（stabilator）裝在後機身低位兩側，整片翼面控制俯仰，後緣另有防伺服／配平片。",
+        "en": "An all-moving stabilator mounts low on either side of the aft fuselage; the whole surface controls pitch and carries an anti-servo/trim tab on its trailing edge.",
+        "ja": "全遊動スタビレーターが後部胴体の低位置両側に付き、翼面全体でピッチを制御し、後縁にアンチサーボ／トリムタブを備えます。"
+      },
       "specs": [
         [
-          "操縱面",
-          "升降舵"
+          "構型",
+          "全動式 stabilator"
+        ],
+        [
+          "配平",
+          "防伺服／配平片"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "PA-28家族通常以整體式stabilator控制俯仰，Archer亦為全動式水平尾翼並帶防伺服配平片；外觀上鉸鏈線較一般升降舵不明顯。",
+        "en": "PA-28-family aircraft use an all-moving stabilator with an anti-servo/trim tab; its hinge layout is subtler than a conventional elevator seam.",
+        "ja": "PA-28系列はアンチサーボ／トリムタブ付き全遊動スタビレーターを用い、通常昇降舵よりヒンジ線が目立ちにくい構造です。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "低置普通尾形。",
+          "en": "Low conventional tail position.",
+          "ja": "低位置通常尾形。"
+        },
+        {
+          "zh": "全動式stabilator。",
+          "en": "All-moving stabilator.",
+          "ja": "全遊動スタビレーター。"
+        },
+        {
+          "zh": "後緣防伺服配平片。",
+          "en": "Trailing anti-servo/trim tab.",
+          "ja": "後縁アンチサーボ／トリムタブ。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/pa28/hstab.jpg?v=ee2b3f908b15",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_03.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "本頁以固定式起落架的PA-28-181 Archer II為代表：低翼、單具機鼻活塞引擎、四座座艙與普通尾翼構成經典教練／旅行機輪廓。",
+        "en": "This page uses the fixed-gear PA-28-181 Archer II as its reference: low wing, one nose-mounted piston engine, four-seat cabin and conventional tail form a classic trainer/touring-aircraft silhouette.",
+        "ja": "本ページは固定脚PA-28-181 Archer IIを基準とし、低翼、機首単発ピストン、4座客室、通常尾翼が典型的な訓練・旅行機の輪郭を作ります。"
+      },
+      "fact": {
+        "zh": "PA-28家族包含Warrior、Arrow、Dakota等；Arrow的可收放起落架與部分翼型不同，不能全部套用Archer特徵。",
+        "en": "The PA-28 family includes Warrior, Arrow and Dakota variants; retractable-gear Arrows and different wing versions cannot all be identified by Archer features.",
+        "ja": "PA-28系列にはWarrior、Arrow、Dakotaなどがあり、引込脚Arrowや異なる翼型へArcherの特徴を一律適用できません。"
+      },
+      "bullets": [
+        {
+          "zh": "低翼單發。",
+          "en": "Low-wing single engine.",
+          "ja": "低翼単発。"
+        },
+        {
+          "zh": "固定前三點式起落架。",
+          "en": "Fixed tricycle gear.",
+          "ja": "固定前三点式脚。"
+        },
+        {
+          "zh": "四座小型座艙。",
+          "en": "Compact four-seat cabin.",
+          "ja": "小型4座客室。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/pa28/overview.jpg?v=5684487cf0e0",
+          "caption": {
+            "zh": "Piper PA-28-181 Archer II D-EJFK 實機",
+            "en": "Piper PA-28-181 Archer II D-EJFK",
+            "ja": "Piper PA-28-181 Archer II D-EJFK実機"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_04.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "Archer II實機座艙為左右並列座，具雙操縱盤、中央油門／混合比控制與傳統圓形飛行儀表。",
+        "en": "The real Archer II cockpit has side-by-side seating, twin yokes, center throttle/mixture controls and traditional round flight instruments.",
+        "ja": "Archer II実機操縦席は横並び座席、左右の操縦輪、中央のスロットル／混合比操作、伝統的な丸形飛行計器を備えます。"
+      },
+      "fact": {
+        "zh": "現代Archer LX可裝Garmin G1000 NXi玻璃座艙；本照是1976年Archer II，不代表新機航電。",
+        "en": "Modern Archer LX aircraft may use Garmin G1000 NXi glass avionics; this 1976 Archer II does not represent a new-production panel.",
+        "ja": "現代Archer LXはGarmin G1000 NXiを装備できますが、写真は1976年Archer IIで、新造機の航電を示しません。"
+      },
+      "bullets": [
+        {
+          "zh": "左右並列座。",
+          "en": "Side-by-side seating.",
+          "ja": "横並び座席。"
+        },
+        {
+          "zh": "雙操縱盤。",
+          "en": "Twin control yokes.",
+          "ja": "左右の操縦輪。"
+        },
+        {
+          "zh": "傳統圓形儀表。",
+          "en": "Traditional round instruments.",
+          "ja": "伝統的丸形計器。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/pa28/cockpit.jpg?v=67b1dab47672",
+          "caption": {
+            "zh": "1976年PA-28-181 Archer II G-SAPI 實機座艙",
+            "en": "Real cockpit of 1976 PA-28-181 Archer II G-SAPI",
+            "ja": "1976年PA-28-181 Archer II G-SAPI実機操縦席"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cockpit_of_Piper_PA28-181_Archer_II_%E2%80%98G-SAPI%E2%80%99_(34105117476).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "前方風擋由左右兩大片組成，側窗延伸至四座座艙；窗框近乎直立，與流線公務噴射機差異明顯。",
+        "en": "The windshield has two large front panes with side windows extending along the four-seat cabin. Upright frames contrast with the swept glazing of business jets.",
+        "ja": "前面風防は左右2枚の大型窓で、側窓が4座客室まで続きます。直立気味の窓枠はビジネスジェットの後退窓と明確に異なります。"
+      },
+      "fact": {
+        "zh": "前斜角照片會讓一側窗變窄；辨識重點是兩片主風擋、箱形座艙與右側單門配置。",
+        "en": "An oblique view narrows one pane. Look for the two main windshields, boxy cabin and right-side single door.",
+        "ja": "斜め写真では片側窓が狭く見えるため、主風防2枚、箱形客室、右側単扉を確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "兩片大型前風擋。",
+          "en": "Two large front panes.",
+          "ja": "大型前面窓2枚。"
+        },
+        {
+          "zh": "近直立窗框。",
+          "en": "Nearly upright frames.",
+          "ja": "直立に近い窓枠。"
+        },
+        {
+          "zh": "側窗延伸至後座。",
+          "en": "Side glazing reaches the rear seats.",
+          "ja": "側窓は後席まで続く。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/pa28/window-front.jpg?v=31429a162ff7",
+          "caption": {
+            "zh": "Archer II D-EHLY 前斜角窗型（非正投影）",
+            "en": "Archer II D-EHLY front-quarter glazing (not orthographic)",
+            "ja": "Archer II D-EHLYの斜め前方窓（正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EHLY)_01.jpg"
+        },
+        {
+          "src": "assets/reference/pa28/window-side.jpg?v=c94b304fa82c",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_03.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "Archer II的半錐形外翼直接收至平直圓角翼尖，沒有翼尖小翼；翼尖燈罩位於最外端。",
+        "en": "The Archer II's semi-tapered outer wing ends in a plain rounded tip without a winglet, with a light fairing at the extremity.",
+        "ja": "Archer IIの半テーパー外翼はウイングレットなしの丸い通常翼端で終わり、最外端に灯火カバーがあります。"
+      },
+      "fact": {
+        "zh": "早期PA-28有矩形Hershey-bar翼；照片中的外翼收尖是Archer II的重要世代線索。",
+        "en": "Early PA-28s used rectangular Hershey-bar wings; the tapered outer panel is an important Archer II generation clue.",
+        "ja": "初期PA-28は矩形Hershey-bar翼で、写真の先細り外翼はArcher II世代の重要な手掛かりです。"
+      },
+      "bullets": [
+        {
+          "zh": "無翼尖小翼。",
+          "en": "No winglet.",
+          "ja": "ウイングレットなし。"
+        },
+        {
+          "zh": "半錐形外翼。",
+          "en": "Semi-tapered outer panel.",
+          "ja": "半テーパー外翼。"
+        },
+        {
+          "zh": "圓角平直翼尖。",
+          "en": "Plain rounded tip.",
+          "ja": "丸い通常翼端。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [
+        [
+          "構型",
+          "無翼尖小翼"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/pa28/wingtip.jpg?v=c373a89a40e0",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EHLY)_01.jpg"
+        }
+      ]
+    },
+    "gear": {
+      "summary": {
+        "zh": "Archer II採固定前三點式起落架，每支柱一輪，共三輪；主輪與鼻輪都有流線整流罩的機體很常見。",
+        "en": "The Archer II has fixed tricycle gear with one wheel on each leg, three wheels total. Streamlined wheel fairings on mains and nose are common.",
+        "ja": "Archer IIは各脚1輪、計3輪の固定前三点式脚で、主輪と前輪に流線形フェアリングを装備する機体が多く見られます。"
+      },
+      "fact": {
+        "zh": "整流罩可拆除，缺少輪罩不代表不同型號；Arrow則使用可收放起落架。",
+        "en": "Wheel fairings can be removed, so bare wheels do not imply another model; Arrow variants instead use retractable gear.",
+        "ja": "輪罩は取り外せるため、露出車輪だけで別型とは言えず、Arrowは引込脚です。"
+      },
+      "bullets": [
+        {
+          "zh": "固定前三點式。",
+          "en": "Fixed tricycle gear.",
+          "ja": "固定前三点式。"
+        },
+        {
+          "zh": "每支柱單輪。",
+          "en": "One wheel per leg.",
+          "ja": "各脚1輪。"
+        },
+        {
+          "zh": "常見流線輪罩。",
+          "en": "Common streamlined fairings.",
+          "ja": "流線形輪罩が一般的。"
+        }
+      ],
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "specs": [
+        [
+          "配置",
+          "固定前三點式"
+        ],
+        [
+          "總輪數",
+          "3 輪"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/pa28/gear.jpg?v=d5c5fd84f930",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_04.jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -233,7 +674,7 @@
       ],
       [
         "螺旋槳",
-        "雙葉定速"
+        "雙葉固定螺距"
       ],
       [
         "螺旋槳直徑",

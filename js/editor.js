@@ -21,7 +21,7 @@ const setZh = (old, value) => old && typeof old === "object" && !Array.isArray(o
   wirePwToggle($("gh-token"));
 
   try {
-    fleet = await (await fetch("data/fleet.json?v=165")).json();
+    fleet = await (await fetch("data/fleet.json?v=166")).json();
   } catch {
     $("ed-note").innerHTML = "無法載入 <code>data/fleet.json</code>，請以本機伺服器開啟（<code>python3 -m http.server</code>）。";
     return;
@@ -59,7 +59,7 @@ async function loadModel(id){
 }
 
 async function fetchModel(id){
-  const d = await (await fetch(`data/${id}.json?v=165`)).json();
+  const d = await (await fetch(`data/${id}.json?v=166`)).json();
   // 確保每個部位都有 bullets / images 欄位
   for (const p of Object.values(d.parts || {})){
     p.bullets = p.bullets || [];

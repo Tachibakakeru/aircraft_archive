@@ -64,7 +64,7 @@
 (async () => {
   const grid = document.getElementById("fleet-grid");
   try {
-    const res = await fetch("data/fleet.json?v=165");
+    const res = await fetch("data/fleet.json?v=166");
     if (!res.ok) throw new Error(res.status);
     const fleet = await res.json();
 

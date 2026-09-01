@@ -2,146 +2,557 @@
   "title": "Cessna Citation",
   "sub": "公務機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Cessna Citation 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "XLS+全長約16.00公尺，客艙窗小而呈橢圓形；左前方主艙門與少量窗列反映公務機的低載客、高舒適配置。",
+        "en": "The XLS+ is about 16.00 m long with small oval cabin windows. Its forward main door and short window row reflect a low-capacity, comfort-oriented business-jet cabin.",
+        "ja": "XLS+は全長約16.00 mで小型楕円客室窓を持ち、前方主扉と短い窓列が少人数・快適重視のビジネス機客室を示します。"
+      },
       "specs": [
         [
-          "結構形式",
-          "半硬殼式"
+          "全長",
+          "16.00 m"
         ],
         [
-          "主要材料",
-          "鋁合金／複合材料"
+          "客艙寬度",
+          "1.68 m"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "窗數與內裝可由客戶選配改變；辨識時要把機身比例與引擎、翼形一起看。",
+        "en": "Window count and interior arrangements can vary by customer; combine fuselage proportions with engines and wing shape.",
+        "ja": "窓数や内装は顧客仕様で変わるため、胴体比率をエンジン・翼形と組み合わせて判断します。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "約16.00公尺長。",
+          "en": "About 16.00 m long.",
+          "ja": "全長約16.00 m。"
+        },
+        {
+          "zh": "小型橢圓客艙窗。",
+          "en": "Small oval cabin windows.",
+          "ja": "小型楕円客室窓。"
+        },
+        {
+          "zh": "左前方主艙門。",
+          "en": "Forward left main door.",
+          "ja": "左前方主扉。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/citation/fuselage.jpg?v=c976454c3f8e",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:YU-RDA_Cessna_Citation_560_XLS%2B_Airpink_at_MSQ_(2).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Cessna Citation 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "Citation 560XL實機座艙具雙操縱盤與中央油門台；本照顯示較早期Excel／XLS家族的電子飛航顯示與保留式儀表布局。",
+        "en": "The real Citation 560XL cockpit has twin yokes and a center throttle pedestal. This photograph shows the earlier Excel/XLS-family mix of electronic flight displays and retained instruments.",
+        "ja": "Citation 560XL実機操縦席は左右の操縦輪と中央スロットル台を備え、写真は初期Excel／XLS系列の電子表示と残存計器の組合せを示します。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "XLS+與後續Gen2的航電配置會更新；此照適合辨識家族控制布局，不代表每個年份的螢幕數與型號。",
+        "en": "XLS+ and later Gen2 avionics evolved; use this image for family control layout, not as an exact display fit for every production year.",
+        "ja": "XLS+や後期Gen2では航電が更新されるため、系列の操作配置参考であり、全製造年の画面構成を示すものではありません。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "雙操縱盤。",
+          "en": "Twin control yokes.",
+          "ja": "左右の操縦輪。"
+        },
+        {
+          "zh": "中央雙發油門。",
+          "en": "Center twin-engine throttles.",
+          "ja": "中央の双発スロットル。"
+        },
+        {
+          "zh": "航電隨世代更新。",
+          "en": "Avionics vary by generation.",
+          "ja": "航電は世代で異なる。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/citation/cockpit.jpg?v=5d4d98a6d292",
+          "caption": {
+            "zh": "Citation 560XL 實機座艙；Excel／XLS家族布局參考",
+            "en": "Real Citation 560XL cockpit; Excel/XLS-family layout reference",
+            "ja": "Citation 560XL実機操縦席；Excel／XLS系列配置参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:CitationXL-Cockpit.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Cessna Citation 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "低置主翼翼展約17.17公尺，後緣配置大型襟翼與副翼；引擎不掛在翼下。",
+        "en": "The low-mounted wing spans about 17.17 m and carries large trailing-edge flaps and ailerons, with no underwing engines.",
+        "ja": "低位置主翼は翼幅約17.17 mで、後縁に大型フラップと補助翼を持ち、翼下エンジンはありません。"
+      },
       "specs": [
         [
-          "功能",
-          "產生升力"
+          "翼展",
+          "17.17 m"
         ],
         [
-          "翼內",
-          "主油箱"
+          "構型",
+          "低置主翼"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "本照從下方展示翼面；不可直接用像素推算後掠角，且左右翼受透視影響並不等長。",
+        "en": "This underside view shows the planform, but pixel measurements cannot establish sweep and perspective makes the two wings appear unequal.",
+        "ja": "下面写真で平面形を確認できますが、ピクセルから後退角は測れず、遠近で左右翼長も異なって見えます。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "低置主翼。",
+          "en": "Low-mounted wing.",
+          "ja": "低位置主翼。"
+        },
+        {
+          "zh": "翼展約17.17公尺。",
+          "en": "About 17.17 m span.",
+          "ja": "翼幅約17.17 m。"
+        },
+        {
+          "zh": "翼下無短艙。",
+          "en": "No underwing nacelles.",
+          "ja": "翼下ナセルなし。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/citation/wing.jpg?v=53f68afe8fa4",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cessna_560XL_Citation_XLS%2B_(N415HS,_cn_560-6110)_(2-16-2025).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "Cessna Citation 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "兩具Pratt & Whitney Canada PW545C裝在後機身兩側，短艙位於客艙窗列後方，使主翼保持乾淨。",
+        "en": "Two Pratt & Whitney Canada PW545Cs mount on the aft fuselage behind the cabin window row, leaving the wing free of engine pylons.",
+        "ja": "Pratt & Whitney Canada PW545Cを2基、客室窓列後方の胴体両側に搭載し、主翼にはエンジンパイロンがありません。"
+      },
       "specs": [
         [
-          "型式",
-          "渦輪扇引擎"
+          "型號",
+          "PW545C ×2"
+        ],
+        [
+          "單具推力",
+          "18.32 kN"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "後置雙發常見於多種公務機；需再確認XLS+的低翼、窗列與沒有T尾的普通尾翼。",
+        "en": "Aft-mounted twins are common among business jets; also confirm the XLS+'s low wing, window row and conventional rather than T-tail layout.",
+        "ja": "後部双発は多くのビジネス機にあるため、XLS+の低翼、窓列、T尾ではない通常尾翼も確認します。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "PW545C雙發。",
+          "en": "Twin PW545Cs.",
+          "ja": "PW545C双発。"
+        },
+        {
+          "zh": "安裝於後機身。",
+          "en": "Mounted on the aft fuselage.",
+          "ja": "後部胴体に装備。"
+        },
+        {
+          "zh": "主翼下方無引擎。",
+          "en": "No engines beneath the wing.",
+          "ja": "主翼下にエンジンなし。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/citation/engine.jpg?v=f2a0d2d97f76",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:YU-RDA_Cessna_Citation_560_XLS%2B_Airpink_at_MSQ_(2).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "單片後掠垂直尾翼位於機身尾端，後緣方向舵高而窄；水平尾翼在較低位置穿過尾部。",
+        "en": "A single swept fin rises from the tail with a tall narrow rudder; the horizontal stabilizer crosses the tail at a lower level.",
+        "ja": "単一後退垂尾が尾部に立ち、後縁に高く細い方向舵があり、水平尾翼は低い位置で尾部を横切ります。"
+      },
       "specs": [
+        [
+          "構型",
+          "普通尾翼"
+        ],
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "Citation家族也有T尾型號；本頁XLS+應看到普通尾翼，不能把所有Citation都視為同一尾型。",
+        "en": "Some Citation models use T-tails; this XLS+ has a conventional tail, so do not generalize one tail arrangement to the whole family.",
+        "ja": "Citation系列にはT尾型もありますが、本ページのXLS+は通常尾翼で、系列全体を同じ尾形とみなせません。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "単一後退垂尾。"
+        },
+        {
+          "zh": "高而窄的方向舵。",
+          "en": "Tall narrow rudder.",
+          "ja": "高く細い方向舵。"
+        },
+        {
+          "zh": "不是T型尾翼。",
+          "en": "Not a T-tail.",
+          "ja": "T尾翼ではない。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/citation/vstab.jpg?v=bde6c6219ee0",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:YU-RDA_Cessna_Citation_560_XLS%2B_Airpink_at_MSQ_(2).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "水平尾翼裝在後機身兩側、位置低於垂尾頂端，形成普通十字形尾翼；外緣略為後掠。",
+        "en": "The horizontal stabilizer mounts on the aft fuselage below the fin tip, forming a conventional cruciform silhouette with mildly swept outer edges.",
+        "ja": "水平尾翼は垂尾頂端より低い後部胴体両側に付き、外縁がやや後退した通常の十字形尾翼を作ります。"
+      },
       "specs": [
+        [
+          "位置",
+          "後機身低位"
+        ],
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "俯視照中的尾翼與主翼部分重疊；水平尾翼尺寸小、位於引擎短艙後方。",
+        "en": "The overhead view overlaps tailplane and wing; the tailplane is smaller and lies behind the engine nacelles.",
+        "ja": "上方写真では主翼と重なりますが、水平尾翼は小さく、エンジンナセル後方にあります。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "低於垂尾頂端。",
+          "en": "Below the fin tip.",
+          "ja": "垂尾頂端より低い。"
+        },
+        {
+          "zh": "普通十字形尾翼。",
+          "en": "Conventional tail arrangement.",
+          "ja": "通常尾翼配置。"
+        },
+        {
+          "zh": "位於引擎後方。",
+          "en": "Behind the engines.",
+          "ja": "エンジン後方。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/citation/hstab.jpg?v=e4eb46aef66f",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cessna_560XL_Citation_XLS%2B_(N415HS,_cn_560-6110)_(2-16-2025).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Cessna Citation 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "XLS+採前三點式六輪起落架：鼻腳雙輪，左右主腳各雙輪；主腳向內收入翼根／機身區域。",
+        "en": "The XLS+ uses six-wheel tricycle gear: twin nose wheels and twin wheels on each main leg, with the mains retracting inward near the wing root and fuselage.",
+        "ja": "XLS+は前脚2輪、左右主脚各2輪の計6輪で、主脚は翼根・胴体付近へ内側に格納されます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
+        ],
+        [
+          "總輪數",
+          "6 輪"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "正面照會讓左右主輪與支柱重疊；總輪數應依各支柱輪組計算，不靠單張像素點。",
+        "en": "A head-on view overlaps wheels and struts; count wheel pairs by gear leg rather than isolated dark shapes.",
+        "ja": "正面写真では左右車輪と支柱が重なるため、黒い点ではなく各脚の輪組で数えます。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "鼻腳雙輪。",
+          "en": "Twin nose wheels.",
+          "ja": "前脚2輪。"
+        },
+        {
+          "zh": "每側主腳雙輪。",
+          "en": "Twin wheels per main leg.",
+          "ja": "主脚片側2輪。"
+        },
+        {
+          "zh": "全機共六輪。",
+          "en": "Six wheels total.",
+          "ja": "全機計6輪。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/citation/gear.jpg?v=fe8663a22fa3",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cessna_Citation_XLS_N876AD_FDK_MD2.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "本頁以Citation XLS+為代表：低翼、後機身雙發、十字形尾翼與修長小型客艙，構成典型中型公務噴射機輪廓。",
+        "en": "This page uses the Citation XLS+ as its reference: low wing, twin aft-mounted engines, conventional tail and a slim compact cabin form a typical midsize business-jet silhouette.",
+        "ja": "本ページはCitation XLS+を基準とし、低翼、後部胴体双発、通常尾翼、細身の小型客室が典型的な中型ビジネスジェットの輪郭を作ります。"
+      },
+      "fact": {
+        "zh": "Citation是大型家族名稱；CJ、Latitude、Longitude等外形不同，不能看到『Citation』塗字就套用本頁特徵。",
+        "en": "Citation is a large family name; CJ, Latitude and Longitude variants have different shapes, so the word Citation alone does not establish an XLS+.",
+        "ja": "Citationは広い系列名で、CJ、Latitude、Longitudeなどは形が異なります。Citation表記だけでXLS+とは判断できません。"
+      },
+      "bullets": [
+        {
+          "zh": "後機身雙發。",
+          "en": "Twin aft-mounted engines.",
+          "ja": "後部胴体双発。"
+        },
+        {
+          "zh": "低置後掠翼。",
+          "en": "Low swept wing.",
+          "ja": "低位置後退翼。"
+        },
+        {
+          "zh": "修長小型客艙。",
+          "en": "Slim compact cabin.",
+          "ja": "細身の小型客室。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/citation/overview.jpg?v=4080708b2e27",
+          "caption": {
+            "zh": "Airpink Citation XLS+ YU-RDA 滑行實照",
+            "en": "Airpink Citation XLS+ YU-RDA taxiing",
+            "ja": "Airpink Citation XLS+ YU-RDAの地上走行実写"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:YU-RDA_Cessna_Citation_560_XLS%2B_Airpink_at_MSQ_(2).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "正面可見兩片寬中央風擋與兩側梯形窗；側面窗帶略向下收尖，機鼻比支線客機更細長。",
+        "en": "Head-on, two broad center windshields meet trapezoidal outer panes. The side glazing tapers slightly downward over a nose slimmer than a regional airliner's.",
+        "ja": "正面では幅広い中央2枚と外側台形窓が見え、側窓帯はやや下へ細まり、機首は地域旅客機より細長い形です。"
+      },
+      "fact": {
+        "zh": "正面照是Citation XLS，側面照是XLS+；兩者共用560XL基本窗型，但細節與航電世代不等同。",
+        "en": "The front image is a Citation XLS and the side image an XLS+; both share the 560XL basic glazing, but subtype details and avionics are not identical.",
+        "ja": "正面はCitation XLS、側面はXLS+で、560XLの基本窓形は共通ですが細部と航電世代は同一ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "中央兩片寬風擋。",
+          "en": "Two broad center panes.",
+          "ja": "幅広い中央2枚。"
+        },
+        {
+          "zh": "外側梯形窗。",
+          "en": "Trapezoidal outer panes.",
+          "ja": "外側台形窓。"
+        },
+        {
+          "zh": "細長下斜機鼻。",
+          "en": "Slim down-sloping nose.",
+          "ja": "細長く下がる機首。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/citation/window-front.jpg?v=e1429c07fa58",
+          "caption": {
+            "zh": "Citation XLS N876AD 正面窗型；560XL家族參考",
+            "en": "Citation XLS N876AD front glazing; 560XL-family reference",
+            "ja": "Citation XLS N876AD正面窓；560XL系列参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cessna_Citation_XLS_N876AD_FDK_MD2.jpg"
+        },
+        {
+          "src": "assets/reference/citation/window-side.jpg?v=a54cb26a389b",
+          "caption": {
+            "zh": "Citation XLS N876AD 側窗與機鼻；560XL家族參考",
+            "en": "Citation XLS N876AD side windows and nose; 560XL-family reference",
+            "ja": "Citation XLS N876ADの側窓と機首；560XL系列参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cessna_Citation_XLS_N876AD_FDK_MD3.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "XLS+標準翼尖平順收尖，沒有大型直立翼尖小翼；航行燈位於最外端。",
+        "en": "The standard XLS+ wing tapers to a clean tip without a large upright winglet; the navigation light sits at the outer end.",
+        "ja": "標準XLS+の翼は滑らかに先細りし、大型直立ウイングレットはなく、航法灯が最外端にあります。"
+      },
+      "fact": {
+        "zh": "俯視照有透視與機身遮擋；沿主翼前後緣追到最外端，不要把水平尾翼當作翼尖。",
+        "en": "Perspective and fuselage overlap affect the overhead view. Trace the wing edges outward and do not confuse the tailplane with the wingtip.",
+        "ja": "上方写真は遠近と胴体重なりがあるため、主翼前後縁を外端まで追い、水平尾翼と混同しないでください。"
+      },
+      "bullets": [
+        {
+          "zh": "無大型直立小翼。",
+          "en": "No large upright winglet.",
+          "ja": "大型直立小翼なし。"
+        },
+        {
+          "zh": "外翼平順收尖。",
+          "en": "Clean tapered outer wing.",
+          "ja": "滑らかな先細り外翼。"
+        },
+        {
+          "zh": "翼端航行燈。",
+          "en": "Tip navigation light.",
+          "ja": "翼端航法灯。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [
+        [
+          "標準構型",
+          "平直收尖，無大型翼尖小翼"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/citation/wingtip.jpg?v=5781bf848088",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Cessna_Citation_XLS_N876AD_FDK_MD3.jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -170,7 +581,7 @@
     "尺寸": [
       [
         "全長",
-        "15.79 m（51 ft 10 in）"
+        "16.00 m（52 ft 6 in）"
       ],
       [
         "翼展",
@@ -270,7 +681,7 @@
       ],
       [
         "單具推力",
-        "17.1 kN（3,860 lbf）"
+        "18.32 kN（4,119 lbf）"
       ],
       [
         "旁通比",

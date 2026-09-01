@@ -2688,6 +2688,142 @@ CONTENT.update({
     },
 })
 
+SOURCES.update({
+    "citation": {
+        "overview": "https://commons.wikimedia.org/wiki/File:YU-RDA_Cessna_Citation_560_XLS%2B_Airpink_at_MSQ_(2).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:CitationXL-Cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Cessna_Citation_XLS_N876AD_FDK_MD2.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Cessna_Citation_XLS_N876AD_FDK_MD3.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:YU-RDA_Cessna_Citation_560_XLS%2B_Airpink_at_MSQ_(2).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:YU-RDA_Cessna_Citation_560_XLS%2B_Airpink_at_MSQ_(2).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Cessna_Citation_XLS_N876AD_FDK_MD3.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Cessna_560XL_Citation_XLS%2B_(N415HS,_cn_560-6110)_(2-16-2025).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:YU-RDA_Cessna_Citation_560_XLS%2B_Airpink_at_MSQ_(2).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Cessna_560XL_Citation_XLS%2B_(N415HS,_cn_560-6110)_(2-16-2025).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Cessna_Citation_XLS_N876AD_FDK_MD2.jpg",
+    },
+    "pa28": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_04.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Cockpit_of_Piper_PA28-181_Archer_II_%E2%80%98G-SAPI%E2%80%99_(34105117476).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EHLY)_01.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_03.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_03.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_04.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EHLY)_01.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EHLY)_01.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_03.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_03.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Piper_PA-28-181_Archer_II_(D-EJFK)_04.jpg",
+    },
+})
+
+CONTENT.update({
+    "citation": {
+        "overview": identify(
+            ("本頁以Citation XLS+為代表：低翼、後機身雙發、十字形尾翼與修長小型客艙，構成典型中型公務噴射機輪廓。", "This page uses the Citation XLS+ as its reference: low wing, twin aft-mounted engines, conventional tail and a slim compact cabin form a typical midsize business-jet silhouette.", "本ページはCitation XLS+を基準とし、低翼、後部胴体双発、通常尾翼、細身の小型客室が典型的な中型ビジネスジェットの輪郭を作ります。"),
+            ("Citation是大型家族名稱；CJ、Latitude、Longitude等外形不同，不能看到『Citation』塗字就套用本頁特徵。", "Citation is a large family name; CJ, Latitude and Longitude variants have different shapes, so the word Citation alone does not establish an XLS+.", "Citationは広い系列名で、CJ、Latitude、Longitudeなどは形が異なります。Citation表記だけでXLS+とは判断できません。"),
+            [("後機身雙發。", "Twin aft-mounted engines.", "後部胴体双発。"), ("低置後掠翼。", "Low swept wing.", "低位置後退翼。"), ("修長小型客艙。", "Slim compact cabin.", "細身の小型客室。")],
+        ),
+        "cockpit": identify(
+            ("Citation 560XL實機座艙具雙操縱盤與中央油門台；本照顯示較早期Excel／XLS家族的電子飛航顯示與保留式儀表布局。", "The real Citation 560XL cockpit has twin yokes and a center throttle pedestal. This photograph shows the earlier Excel/XLS-family mix of electronic flight displays and retained instruments.", "Citation 560XL実機操縦席は左右の操縦輪と中央スロットル台を備え、写真は初期Excel／XLS系列の電子表示と残存計器の組合せを示します。"),
+            ("XLS+與後續Gen2的航電配置會更新；此照適合辨識家族控制布局，不代表每個年份的螢幕數與型號。", "XLS+ and later Gen2 avionics evolved; use this image for family control layout, not as an exact display fit for every production year.", "XLS+や後期Gen2では航電が更新されるため、系列の操作配置参考であり、全製造年の画面構成を示すものではありません。"),
+            [("雙操縱盤。", "Twin control yokes.", "左右の操縦輪。"), ("中央雙發油門。", "Center twin-engine throttles.", "中央の双発スロットル。"), ("航電隨世代更新。", "Avionics vary by generation.", "航電は世代で異なる。")],
+        ),
+        "windshield": identify(
+            ("正面可見兩片寬中央風擋與兩側梯形窗；側面窗帶略向下收尖，機鼻比支線客機更細長。", "Head-on, two broad center windshields meet trapezoidal outer panes. The side glazing tapers slightly downward over a nose slimmer than a regional airliner's.", "正面では幅広い中央2枚と外側台形窓が見え、側窓帯はやや下へ細まり、機首は地域旅客機より細長い形です。"),
+            ("正面照是Citation XLS，側面照是XLS+；兩者共用560XL基本窗型，但細節與航電世代不等同。", "The front image is a Citation XLS and the side image an XLS+; both share the 560XL basic glazing, but subtype details and avionics are not identical.", "正面はCitation XLS、側面はXLS+で、560XLの基本窓形は共通ですが細部と航電世代は同一ではありません。"),
+            [("中央兩片寬風擋。", "Two broad center panes.", "幅広い中央2枚。"), ("外側梯形窗。", "Trapezoidal outer panes.", "外側台形窓。"), ("細長下斜機鼻。", "Slim down-sloping nose.", "細長く下がる機首。")],
+        ),
+        "fuselage": identify(
+            ("XLS+全長約16.00公尺，客艙窗小而呈橢圓形；左前方主艙門與少量窗列反映公務機的低載客、高舒適配置。", "The XLS+ is about 16.00 m long with small oval cabin windows. Its forward main door and short window row reflect a low-capacity, comfort-oriented business-jet cabin.", "XLS+は全長約16.00 mで小型楕円客室窓を持ち、前方主扉と短い窓列が少人数・快適重視のビジネス機客室を示します。"),
+            ("窗數與內裝可由客戶選配改變；辨識時要把機身比例與引擎、翼形一起看。", "Window count and interior arrangements can vary by customer; combine fuselage proportions with engines and wing shape.", "窓数や内装は顧客仕様で変わるため、胴体比率をエンジン・翼形と組み合わせて判断します。"),
+            [("約16.00公尺長。", "About 16.00 m long.", "全長約16.00 m。"), ("小型橢圓客艙窗。", "Small oval cabin windows.", "小型楕円客室窓。"), ("左前方主艙門。", "Forward left main door.", "左前方主扉。")],
+        ),
+        "engine": identify(
+            ("兩具Pratt & Whitney Canada PW545C裝在後機身兩側，短艙位於客艙窗列後方，使主翼保持乾淨。", "Two Pratt & Whitney Canada PW545Cs mount on the aft fuselage behind the cabin window row, leaving the wing free of engine pylons.", "Pratt & Whitney Canada PW545Cを2基、客室窓列後方の胴体両側に搭載し、主翼にはエンジンパイロンがありません。"),
+            ("後置雙發常見於多種公務機；需再確認XLS+的低翼、窗列與沒有T尾的普通尾翼。", "Aft-mounted twins are common among business jets; also confirm the XLS+'s low wing, window row and conventional rather than T-tail layout.", "後部双発は多くのビジネス機にあるため、XLS+の低翼、窓列、T尾ではない通常尾翼も確認します。"),
+            [("PW545C雙發。", "Twin PW545Cs.", "PW545C双発。"), ("安裝於後機身。", "Mounted on the aft fuselage.", "後部胴体に装備。"), ("主翼下方無引擎。", "No engines beneath the wing.", "主翼下にエンジンなし。")],
+        ),
+        "wingtip": identify(
+            ("XLS+標準翼尖平順收尖，沒有大型直立翼尖小翼；航行燈位於最外端。", "The standard XLS+ wing tapers to a clean tip without a large upright winglet; the navigation light sits at the outer end.", "標準XLS+の翼は滑らかに先細りし、大型直立ウイングレットはなく、航法灯が最外端にあります。"),
+            ("俯視照有透視與機身遮擋；沿主翼前後緣追到最外端，不要把水平尾翼當作翼尖。", "Perspective and fuselage overlap affect the overhead view. Trace the wing edges outward and do not confuse the tailplane with the wingtip.", "上方写真は遠近と胴体重なりがあるため、主翼前後縁を外端まで追い、水平尾翼と混同しないでください。"),
+            [("無大型直立小翼。", "No large upright winglet.", "大型直立小翼なし。"), ("外翼平順收尖。", "Clean tapered outer wing.", "滑らかな先細り外翼。"), ("翼端航行燈。", "Tip navigation light.", "翼端航法灯。")],
+        ),
+        "wing": identify(
+            ("低置主翼翼展約17.17公尺，後緣配置大型襟翼與副翼；引擎不掛在翼下。", "The low-mounted wing spans about 17.17 m and carries large trailing-edge flaps and ailerons, with no underwing engines.", "低位置主翼は翼幅約17.17 mで、後縁に大型フラップと補助翼を持ち、翼下エンジンはありません。"),
+            ("本照從下方展示翼面；不可直接用像素推算後掠角，且左右翼受透視影響並不等長。", "This underside view shows the planform, but pixel measurements cannot establish sweep and perspective makes the two wings appear unequal.", "下面写真で平面形を確認できますが、ピクセルから後退角は測れず、遠近で左右翼長も異なって見えます。"),
+            [("低置主翼。", "Low-mounted wing.", "低位置主翼。"), ("翼展約17.17公尺。", "About 17.17 m span.", "翼幅約17.17 m。"), ("翼下無短艙。", "No underwing nacelles.", "翼下ナセルなし。")],
+        ),
+        "vstab": identify(
+            ("單片後掠垂直尾翼位於機身尾端，後緣方向舵高而窄；水平尾翼在較低位置穿過尾部。", "A single swept fin rises from the tail with a tall narrow rudder; the horizontal stabilizer crosses the tail at a lower level.", "単一後退垂尾が尾部に立ち、後縁に高く細い方向舵があり、水平尾翼は低い位置で尾部を横切ります。"),
+            ("Citation家族也有T尾型號；本頁XLS+應看到普通尾翼，不能把所有Citation都視為同一尾型。", "Some Citation models use T-tails; this XLS+ has a conventional tail, so do not generalize one tail arrangement to the whole family.", "Citation系列にはT尾型もありますが、本ページのXLS+は通常尾翼で、系列全体を同じ尾形とみなせません。"),
+            [("單片後掠垂尾。", "Single swept fin.", "単一後退垂尾。"), ("高而窄的方向舵。", "Tall narrow rudder.", "高く細い方向舵。"), ("不是T型尾翼。", "Not a T-tail.", "T尾翼ではない。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼裝在後機身兩側、位置低於垂尾頂端，形成普通十字形尾翼；外緣略為後掠。", "The horizontal stabilizer mounts on the aft fuselage below the fin tip, forming a conventional cruciform silhouette with mildly swept outer edges.", "水平尾翼は垂尾頂端より低い後部胴体両側に付き、外縁がやや後退した通常の十字形尾翼を作ります。"),
+            ("俯視照中的尾翼與主翼部分重疊；水平尾翼尺寸小、位於引擎短艙後方。", "The overhead view overlaps tailplane and wing; the tailplane is smaller and lies behind the engine nacelles.", "上方写真では主翼と重なりますが、水平尾翼は小さく、エンジンナセル後方にあります。"),
+            [("低於垂尾頂端。", "Below the fin tip.", "垂尾頂端より低い。"), ("普通十字形尾翼。", "Conventional tail arrangement.", "通常尾翼配置。"), ("位於引擎後方。", "Behind the engines.", "エンジン後方。")],
+        ),
+        "gear": identify(
+            ("XLS+採前三點式六輪起落架：鼻腳雙輪，左右主腳各雙輪；主腳向內收入翼根／機身區域。", "The XLS+ uses six-wheel tricycle gear: twin nose wheels and twin wheels on each main leg, with the mains retracting inward near the wing root and fuselage.", "XLS+は前脚2輪、左右主脚各2輪の計6輪で、主脚は翼根・胴体付近へ内側に格納されます。"),
+            ("正面照會讓左右主輪與支柱重疊；總輪數應依各支柱輪組計算，不靠單張像素點。", "A head-on view overlaps wheels and struts; count wheel pairs by gear leg rather than isolated dark shapes.", "正面写真では左右車輪と支柱が重なるため、黒い点ではなく各脚の輪組で数えます。"),
+            [("鼻腳雙輪。", "Twin nose wheels.", "前脚2輪。"), ("每側主腳雙輪。", "Twin wheels per main leg.", "主脚片側2輪。"), ("全機共六輪。", "Six wheels total.", "全機計6輪。")],
+        ),
+    },
+    "pa28": {
+        "overview": identify(
+            ("本頁以固定式起落架的PA-28-181 Archer II為代表：低翼、單具機鼻活塞引擎、四座座艙與普通尾翼構成經典教練／旅行機輪廓。", "This page uses the fixed-gear PA-28-181 Archer II as its reference: low wing, one nose-mounted piston engine, four-seat cabin and conventional tail form a classic trainer/touring-aircraft silhouette.", "本ページは固定脚PA-28-181 Archer IIを基準とし、低翼、機首単発ピストン、4座客室、通常尾翼が典型的な訓練・旅行機の輪郭を作ります。"),
+            ("PA-28家族包含Warrior、Arrow、Dakota等；Arrow的可收放起落架與部分翼型不同，不能全部套用Archer特徵。", "The PA-28 family includes Warrior, Arrow and Dakota variants; retractable-gear Arrows and different wing versions cannot all be identified by Archer features.", "PA-28系列にはWarrior、Arrow、Dakotaなどがあり、引込脚Arrowや異なる翼型へArcherの特徴を一律適用できません。"),
+            [("低翼單發。", "Low-wing single engine.", "低翼単発。"), ("固定前三點式起落架。", "Fixed tricycle gear.", "固定前三点式脚。"), ("四座小型座艙。", "Compact four-seat cabin.", "小型4座客室。")],
+        ),
+        "cockpit": identify(
+            ("Archer II實機座艙為左右並列座，具雙操縱盤、中央油門／混合比控制與傳統圓形飛行儀表。", "The real Archer II cockpit has side-by-side seating, twin yokes, center throttle/mixture controls and traditional round flight instruments.", "Archer II実機操縦席は横並び座席、左右の操縦輪、中央のスロットル／混合比操作、伝統的な丸形飛行計器を備えます。"),
+            ("現代Archer LX可裝Garmin G1000 NXi玻璃座艙；本照是1976年Archer II，不代表新機航電。", "Modern Archer LX aircraft may use Garmin G1000 NXi glass avionics; this 1976 Archer II does not represent a new-production panel.", "現代Archer LXはGarmin G1000 NXiを装備できますが、写真は1976年Archer IIで、新造機の航電を示しません。"),
+            [("左右並列座。", "Side-by-side seating.", "横並び座席。"), ("雙操縱盤。", "Twin control yokes.", "左右の操縦輪。"), ("傳統圓形儀表。", "Traditional round instruments.", "伝統的丸形計器。")],
+        ),
+        "windshield": identify(
+            ("前方風擋由左右兩大片組成，側窗延伸至四座座艙；窗框近乎直立，與流線公務噴射機差異明顯。", "The windshield has two large front panes with side windows extending along the four-seat cabin. Upright frames contrast with the swept glazing of business jets.", "前面風防は左右2枚の大型窓で、側窓が4座客室まで続きます。直立気味の窓枠はビジネスジェットの後退窓と明確に異なります。"),
+            ("前斜角照片會讓一側窗變窄；辨識重點是兩片主風擋、箱形座艙與右側單門配置。", "An oblique view narrows one pane. Look for the two main windshields, boxy cabin and right-side single door.", "斜め写真では片側窓が狭く見えるため、主風防2枚、箱形客室、右側単扉を確認します。"),
+            [("兩片大型前風擋。", "Two large front panes.", "大型前面窓2枚。"), ("近直立窗框。", "Nearly upright frames.", "直立に近い窓枠。"), ("側窗延伸至後座。", "Side glazing reaches the rear seats.", "側窓は後席まで続く。")],
+        ),
+        "fuselage": identify(
+            ("Archer II採全金屬半硬殼式四座機身，右側只有一扇主要艙門；座艙後方逐漸收細至普通尾翼。", "The Archer II uses an all-metal semi-monocoque four-seat fuselage with one main door on the right, tapering aft to a conventional tail.", "Archer IIは全金属セミモノコック4座胴体で、右側に主扉1枚を持ち、後方は通常尾翼へ細くなります。"),
+            ("PA-28不是加壓機；舊資料中『高空維持座艙加壓』屬通用模板錯誤，本批已移除。", "The PA-28 is unpressurized; the previous generic statement about maintaining cabin pressure at altitude was incorrect and has been removed.", "PA-28は非与圧機で、従来の汎用文にあった高空与圧の記述は誤りのため削除しました。"),
+            [("全金屬四座機身。", "All-metal four-seat fuselage.", "全金属4座胴体。"), ("右側單一主門。", "Single right-side main door.", "右側主扉1枚。"), ("非加壓座艙。", "Unpressurized cabin.", "非与圧客室。")],
+        ),
+        "engine": identify(
+            ("PA-28-181以機鼻內的Lycoming O-360-A4M四缸水平對臥活塞引擎驅動兩葉螺旋槳，額定180 hp。", "The PA-28-181 uses a nose-mounted 180 hp Lycoming O-360-A4M four-cylinder horizontally opposed piston engine driving a two-blade propeller.", "PA-28-181は機首の180 hp Lycoming O-360-A4M水平対向4気筒ピストンで2翅プロペラを駆動します。"),
+            ("螺旋槳旋轉時不可從照片估算葉片數；地面靜止照才能可靠確認兩葉配置。", "Do not infer blade count from a spinning propeller; a stationary ground photograph is needed to confirm the two-blade arrangement.", "回転中のプロペラ写真から枚数を数えず、停止した地上写真で2翅を確認します。"),
+            [("O-360水平對臥四缸。", "O-360 flat-four.", "O-360水平対向4気筒。"), ("180 hp。", "180 hp.", "180 hp。"), ("機鼻兩葉螺旋槳。", "Nose-mounted two-blade propeller.", "機首2翅プロペラ。")],
+        ),
+        "wingtip": identify(
+            ("Archer II的半錐形外翼直接收至平直圓角翼尖，沒有翼尖小翼；翼尖燈罩位於最外端。", "The Archer II's semi-tapered outer wing ends in a plain rounded tip without a winglet, with a light fairing at the extremity.", "Archer IIの半テーパー外翼はウイングレットなしの丸い通常翼端で終わり、最外端に灯火カバーがあります。"),
+            ("早期PA-28有矩形Hershey-bar翼；照片中的外翼收尖是Archer II的重要世代線索。", "Early PA-28s used rectangular Hershey-bar wings; the tapered outer panel is an important Archer II generation clue.", "初期PA-28は矩形Hershey-bar翼で、写真の先細り外翼はArcher II世代の重要な手掛かりです。"),
+            [("無翼尖小翼。", "No winglet.", "ウイングレットなし。"), ("半錐形外翼。", "Semi-tapered outer panel.", "半テーパー外翼。"), ("圓角平直翼尖。", "Plain rounded tip.", "丸い通常翼端。")],
+        ),
+        "wing": identify(
+            ("低置半錐形主翼翼展約10.67公尺，翼根近矩形、外翼向翼尖收窄；後緣配置手動襟翼與副翼。", "The low semi-tapered wing spans about 10.67 m, with a near-rectangular inner panel and narrowing outer panel; manual flaps and ailerons occupy the trailing edge.", "低位置半テーパー主翼は翼幅約10.67 mで、内翼は矩形に近く外翼が細まり、後縁に手動フラップと補助翼があります。"),
+            ("照片中的機翼可能受草地與透視遮擋；用翼根、折線與收尖外翼判斷，不要只看翼展長短。", "Grass and perspective obscure parts of the wing; identify the root, planform break and tapered outer panel rather than apparent span alone.", "草地と遠近で翼の一部が隠れるため、見かけの翼幅だけでなく翼根、平面形の折れ、先細り外翼を見ます。"),
+            [("低置半錐形翼。", "Low semi-tapered wing.", "低位置半テーパー翼。"), ("翼展約10.67公尺。", "About 10.67 m span.", "翼幅約10.67 m。"), ("手動後緣襟翼。", "Manual trailing-edge flaps.", "手動後縁フラップ。")],
+        ),
+        "vstab": identify(
+            ("單片垂直尾翼前緣後掠、頂端較平，後緣為大面積方向舵；背鰭由後機身平順接入垂尾。", "The single fin has a swept leading edge and relatively flat top, with a large rudder on the trailing edge and a dorsal fillet blending into the fuselage.", "単一垂尾は後退前縁と比較的平らな頂部を持ち、後縁に大面積方向舵、前方に胴体へ滑らかにつながる背びれがあります。"),
+            ("塗裝色帶常沿方向舵延伸，不能把色帶邊界誤當成鉸鏈線。", "Livery stripes often continue across the rudder; do not mistake paint boundaries for hinge lines.", "塗装帯は方向舵へ続くことがあり、色境界をヒンジ線と誤認しないでください。"),
+            [("單片後掠垂尾。", "Single swept fin.", "単一後退垂尾。"), ("大面積方向舵。", "Large rudder.", "大面積方向舵。"), ("機身背鰭平順接合。", "Dorsal fillet blends into fuselage.", "背びれが胴体へ滑らかに接続。")],
+        ),
+        "hstab": identify(
+            ("全動式水平尾翼（stabilator）裝在後機身低位兩側，整片翼面控制俯仰，後緣另有防伺服／配平片。", "An all-moving stabilator mounts low on either side of the aft fuselage; the whole surface controls pitch and carries an anti-servo/trim tab on its trailing edge.", "全遊動スタビレーターが後部胴体の低位置両側に付き、翼面全体でピッチを制御し、後縁にアンチサーボ／トリムタブを備えます。"),
+            ("PA-28家族通常以整體式stabilator控制俯仰，Archer亦為全動式水平尾翼並帶防伺服配平片；外觀上鉸鏈線較一般升降舵不明顯。", "PA-28-family aircraft use an all-moving stabilator with an anti-servo/trim tab; its hinge layout is subtler than a conventional elevator seam.", "PA-28系列はアンチサーボ／トリムタブ付き全遊動スタビレーターを用い、通常昇降舵よりヒンジ線が目立ちにくい構造です。"),
+            [("低置普通尾形。", "Low conventional tail position.", "低位置通常尾形。"), ("全動式stabilator。", "All-moving stabilator.", "全遊動スタビレーター。"), ("後緣防伺服配平片。", "Trailing anti-servo/trim tab.", "後縁アンチサーボ／トリムタブ。")],
+        ),
+        "gear": identify(
+            ("Archer II採固定前三點式起落架，每支柱一輪，共三輪；主輪與鼻輪都有流線整流罩的機體很常見。", "The Archer II has fixed tricycle gear with one wheel on each leg, three wheels total. Streamlined wheel fairings on mains and nose are common.", "Archer IIは各脚1輪、計3輪の固定前三点式脚で、主輪と前輪に流線形フェアリングを装備する機体が多く見られます。"),
+            ("整流罩可拆除，缺少輪罩不代表不同型號；Arrow則使用可收放起落架。", "Wheel fairings can be removed, so bare wheels do not imply another model; Arrow variants instead use retractable gear.", "輪罩は取り外せるため、露出車輪だけで別型とは言えず、Arrowは引込脚です。"),
+            [("固定前三點式。", "Fixed tricycle gear.", "固定前三点式。"), ("每支柱單輪。", "One wheel per leg.", "各脚1輪。"), ("常見流線輪罩。", "Common streamlined fairings.", "流線形輪罩が一般的。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -2814,6 +2950,57 @@ def update(model: str) -> None:
         parts["vstab"]["specs"] = [["構型", "T 型尾翼"], ["操縱面", "方向舵"]]
         parts["hstab"]["specs"] = [["位置", "垂尾頂端"], ["尾錐", "分瓣式空中煞車"]]
         parts["gear"]["specs"] = [["配置", "前三點式"], ["總輪數", "6 輪"]]
+    if model == "citation":
+        parts["overview"]["images"][0]["caption"] = tr(
+            "Airpink Citation XLS+ YU-RDA 滑行實照",
+            "Airpink Citation XLS+ YU-RDA taxiing",
+            "Airpink Citation XLS+ YU-RDAの地上走行実写",
+        )
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "Citation 560XL 實機座艙；Excel／XLS家族布局參考",
+            "Real Citation 560XL cockpit; Excel/XLS-family layout reference",
+            "Citation 560XL実機操縦席；Excel／XLS系列配置参考",
+        )
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "Citation XLS N876AD 正面窗型；560XL家族參考",
+            "Citation XLS N876AD front glazing; 560XL-family reference",
+            "Citation XLS N876AD正面窓；560XL系列参考",
+        )
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "Citation XLS N876AD 側窗與機鼻；560XL家族參考",
+            "Citation XLS N876AD side windows and nose; 560XL-family reference",
+            "Citation XLS N876ADの側窓と機首；560XL系列参考",
+        )
+        parts["fuselage"]["specs"] = [["全長", "16.00 m"], ["客艙寬度", "1.68 m"]]
+        parts["engine"]["specs"] = [["型號", "PW545C ×2"], ["單具推力", "18.32 kN"]]
+        parts["wing"]["specs"] = [["翼展", "17.17 m"], ["構型", "低置主翼"]]
+        parts["wingtip"]["specs"] = [["標準構型", "平直收尖，無大型翼尖小翼"]]
+        parts["vstab"]["specs"] = [["構型", "普通尾翼"], ["操縱面", "方向舵"]]
+        parts["hstab"]["specs"] = [["位置", "後機身低位"], ["操縱面", "升降舵"]]
+        parts["gear"]["specs"] = [["配置", "前三點式"], ["總輪數", "6 輪"]]
+    if model == "pa28":
+        parts["overview"]["images"][0]["caption"] = tr(
+            "Piper PA-28-181 Archer II D-EJFK 實機",
+            "Piper PA-28-181 Archer II D-EJFK",
+            "Piper PA-28-181 Archer II D-EJFK実機",
+        )
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "1976年PA-28-181 Archer II G-SAPI 實機座艙",
+            "Real cockpit of 1976 PA-28-181 Archer II G-SAPI",
+            "1976年PA-28-181 Archer II G-SAPI実機操縦席",
+        )
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "Archer II D-EHLY 前斜角窗型（非正投影）",
+            "Archer II D-EHLY front-quarter glazing (not orthographic)",
+            "Archer II D-EHLYの斜め前方窓（正投影ではありません）",
+        )
+        parts["fuselage"]["specs"] = [["結構", "全金屬半硬殼式"], ["加壓", "無"]]
+        parts["engine"]["specs"] = [["型號", "Lycoming O-360-A4M ×1"], ["功率", "180 hp"]]
+        parts["wing"]["specs"] = [["翼展", "10.67 m"], ["構型", "低置半錐形翼"]]
+        parts["wingtip"]["specs"] = [["構型", "無翼尖小翼"]]
+        parts["vstab"]["specs"] = [["構型", "普通尾翼"], ["操縱面", "方向舵"]]
+        parts["hstab"]["specs"] = [["構型", "全動式 stabilator"], ["配平", "防伺服／配平片"]]
+        parts["gear"]["specs"] = [["配置", "固定前三點式"], ["總輪數", "3 輪"]]
     if model == "cs300":
         parts["cockpit"]["images"][0]["caption"] = tr(
             "JetBlue A220-300 實機座艙；右側座椅遮擋部分設備",

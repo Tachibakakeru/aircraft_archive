@@ -232,6 +232,10 @@ $photos = [ordered]@{
   "an225/cockpit.jpg" = "An-225 Mrija - kokpit.jpg"
   "bae146/overview.jpg" = "BAe 146-200 Pingüino Rey CC-ACO.jpg"
   "bae146/cockpit.jpg" = "Avro RJ70 cockpit.jpg"
+  "citation/overview.jpg" = "YU-RDA Cessna Citation 560 XLS+ Airpink at MSQ (2).jpg"
+  "citation/cockpit.jpg" = "CitationXL-Cockpit.jpg"
+  "pa28/overview.jpg" = "Piper PA-28-181 Archer II (D-EJFK) 04.jpg"
+  "pa28/cockpit.jpg" = "Cockpit of Piper PA28-181 Archer II ‘G-SAPI’ (34105117476).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -564,6 +568,24 @@ $windowPhotos += @(
   @{ Dest="bae146/vstab.jpg"; Title="American Airlines BAe 146-200; N142AC, April 1988 BZE (4848631160).jpg"; Crop=@(.15,.18,.23) }
   @{ Dest="bae146/hstab.jpg"; Title="American Airlines BAe 146-200; N142AC, April 1988 BZE (4848631160).jpg"; Crop=@(.10,.20,.32) }
   @{ Dest="bae146/gear.jpg"; Title="BAe 146-200 Pingüino Rey CC-ACO.jpg"; Crop=@(.24,.48,.48) }
+  @{ Dest="citation/window-front.jpg"; Title="Cessna Citation XLS N876AD FDK MD2.jpg"; Crop=@(.56,.26,.19) }
+  @{ Dest="citation/window-side.jpg"; Title="Cessna Citation XLS N876AD FDK MD3.jpg"; Crop=@(.71,.28,.18) }
+  @{ Dest="citation/fuselage.jpg"; Title="YU-RDA Cessna Citation 560 XLS+ Airpink at MSQ (2).jpg"; Crop=@(.12,.27,.76) }
+  @{ Dest="citation/engine.jpg"; Title="YU-RDA Cessna Citation 560 XLS+ Airpink at MSQ (2).jpg"; Crop=@(.17,.41,.25) }
+  @{ Dest="citation/wingtip.jpg"; Title="Cessna Citation XLS N876AD FDK MD3.jpg"; Crop=@(.00,.45,.25) }
+  @{ Dest="citation/wing.jpg"; Title="Cessna 560XL Citation XLS+ (N415HS, cn 560-6110) (2-16-2025).jpg"; Crop=@(.32,.32,.60) }
+  @{ Dest="citation/vstab.jpg"; Title="YU-RDA Cessna Citation 560 XLS+ Airpink at MSQ (2).jpg"; Crop=@(.00,.24,.22) }
+  @{ Dest="citation/hstab.jpg"; Title="Cessna 560XL Citation XLS+ (N415HS, cn 560-6110) (2-16-2025).jpg"; Crop=@(.72,.37,.20) }
+  @{ Dest="citation/gear.jpg"; Title="Cessna Citation XLS N876AD FDK MD2.jpg"; Crop=@(.30,.47,.40) }
+  @{ Dest="pa28/window-front.jpg"; Title="Piper PA-28-181 Archer II (D-EHLY) 01.jpg"; Crop=@(.36,.24,.23) }
+  @{ Dest="pa28/window-side.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 03.jpg"; Crop=@(.28,.30,.22) }
+  @{ Dest="pa28/fuselage.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 03.jpg"; Crop=@(.20,.28,.60) }
+  @{ Dest="pa28/engine.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 04.jpg"; Crop=@(.10,.40,.25) }
+  @{ Dest="pa28/wingtip.jpg"; Title="Piper PA-28-181 Archer II (D-EHLY) 01.jpg"; Crop=@(.75,.42,.22) }
+  @{ Dest="pa28/wing.jpg"; Title="Piper PA-28-181 Archer II (D-EHLY) 01.jpg"; Crop=@(.35,.22,.48) }
+  @{ Dest="pa28/vstab.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 03.jpg"; Crop=@(.75,.20,.20) }
+  @{ Dest="pa28/hstab.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 03.jpg"; Crop=@(.73,.38,.24) }
+  @{ Dest="pa28/gear.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 04.jpg"; Crop=@(.12,.49,.45) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0
