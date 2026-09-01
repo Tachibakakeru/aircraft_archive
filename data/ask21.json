@@ -2,8 +2,12 @@
   "title": "Schleicher ASK 21",
   "sub": "滑翔機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
     "wing",
     "vstab",
     "hstab",
@@ -11,119 +15,547 @@
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "Schleicher ASK 21 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "8.35公尺長的玻璃纖維複合材料機身由圓滑機鼻收細至尾梁；機身只容納雙座座艙、操縱與起落架結構，沒有加壓客艙。",
+        "en": "The 8.35 m glass-fibre composite fuselage tapers from a smooth nose into a slender tail boom. It houses the tandem cockpit, controls and landing gear, not a pressurized cabin.",
+        "ja": "全長8.35 mのガラス繊維複合胴体は滑らかな機首から細い尾部へ絞られ、縦列操縦席・操縦系統・脚を収めますが与圧客室はありません。"
+      },
       "specs": [
         [
-          "結構形式",
-          "半硬殼式"
+          "材料",
+          "玻璃纖維複合材料"
         ],
         [
-          "主要材料",
-          "鋁合金／複合材料"
+          "全長",
+          "8.35 m"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "白色平滑表面來自複合材料外殼與塗裝，不是金屬客機的鋁合金蒙皮；不能用鉚釘列辨識。",
+        "en": "Its smooth white surface is a composite shell and finish, not an aluminium-airliner skin; rivet rows are not an identification cue.",
+        "ja": "滑らかな白い表面は複合材外皮と塗装で、旅客機のアルミ外板ではなく、リベット列は識別点になりません。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "玻璃纖維複合材料。",
+          "en": "Glass-fibre composite construction.",
+          "ja": "ガラス繊維複合構造。"
+        },
+        {
+          "zh": "全長8.35公尺。",
+          "en": "8.35 m long.",
+          "ja": "全長8.35 m。"
+        },
+        {
+          "zh": "非加壓細長尾梁。",
+          "en": "Unpressurized slender tail boom.",
+          "ja": "非与圧の細い尾部。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/ask21/fuselage.jpg?v=2b952adceb1e",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_Towed_(53787201215).jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 Schleicher ASK 21 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "前後串列座艙均具完整操縱裝置；照片可見空速表、高度表、機械升降率表／電子變率儀與無線電等滑翔飛行儀表。",
+        "en": "Both tandem cockpits have full controls. The photograph shows sailplane instruments including airspeed, altitude, mechanical/electronic variometers and radio equipment.",
+        "ja": "前後の縦列席には完全な操縦装置があり、写真には速度計、高度計、機械・電子バリオメーター、無線機など滑空用計器が見えます。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "這張儀表板明確標示為非標準改裝配置；它適合說明滑翔機所需資訊，不代表每架ASK 21的儀表位置都相同。",
+        "en": "This panel is explicitly a non-standard installation. It illustrates glider information needs, not an identical layout in every ASK 21.",
+        "ja": "この計器板は非標準改修品です。滑空機に必要な情報の参考であり、全ASK 21が同じ配置ではありません。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "前後座皆可操縱。",
+          "en": "Full controls at both seats.",
+          "ja": "前後席とも操縦可能。"
+        },
+        {
+          "zh": "變率儀是核心儀表。",
+          "en": "Variometers are central instruments.",
+          "ja": "バリオメーターが主要計器。"
+        },
+        {
+          "zh": "照片為非標準面板。",
+          "en": "Photograph shows a non-standard panel.",
+          "ja": "写真は非標準計器板。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/ask21/cockpit.jpg?v=1fe21f41f331",
+          "caption": {
+            "zh": "ASK 21 非標準改裝儀表板實照",
+            "en": "Real non-standard ASK 21 instrument panel",
+            "ja": "ASK 21非標準改修計器板の実写"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Nicht_serienm%C3%A4ssiges_Instrumentenbrett_f%C3%BCr_gr%C3%B6ssere_Personen_mit_Vario,_E-Vario,_Fahrtenmesser,_H%C3%B6henmesser,_Funkger%C3%A4t,_G-Kraft-Messer_und_Kompass_2014-05-04_19-23.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 Schleicher ASK 21 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "17公尺中置主翼面積17.95平方公尺、展弦比16.1；後緣配置副翼，翼上表面的大型空氣煞車用來控制下滑角。",
+        "en": "The 17 m mid-wing has 17.95 m² area and aspect ratio 16.1. Ailerons occupy the trailing edge, while large upper-surface airbrakes control descent angle.",
+        "ja": "翼幅17 mの中翼は面積17.95 m²、アスペクト比16.1で、後縁に補助翼、上面に降下角を調整する大型エアブレーキがあります。"
+      },
       "specs": [
         [
-          "功能",
-          "產生升力"
+          "翼展",
+          "17.00 m"
         ],
         [
-          "翼內",
-          "主油箱"
+          "空氣煞車",
+          "翼上表面"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "ASK 21沒有一般動力飛機的燃油箱與增升襟翼；翼內主要是複合結構、操縱連桿與空氣煞車機構。",
+        "en": "The ASK 21 does not use airliner-like fuel tanks or lift flaps. Its wing houses composite structure, control linkages and airbrake mechanisms.",
+        "ja": "ASK 21には動力機のような燃料タンクや高揚力フラップはなく、翼内には複合構造、操縦リンク、エアブレーキ機構があります。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "翼展17公尺。",
+          "en": "17 m span.",
+          "ja": "翼幅17 m。"
+        },
+        {
+          "zh": "展弦比16.1。",
+          "en": "Aspect ratio 16.1.",
+          "ja": "アスペクト比16.1。"
+        },
+        {
+          "zh": "上表面大型空氣煞車。",
+          "en": "Large upper-surface airbrakes.",
+          "ja": "上面大型エアブレーキ。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/ask21/wing.jpg?v=d29c7adabd52",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_2_(53786781741).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "高而窄的垂直尾翼由機身尾梁向上延伸，後緣方向舵以鋼索操縱；水平尾翼安裝在垂尾頂端。",
+        "en": "A tall narrow fin rises from the tail boom, with a cable-operated rudder on its trailing edge; the horizontal tail mounts at the fin tip.",
+        "ja": "高く細い垂尾が尾部から立ち、後縁の方向舵はケーブルで操作され、水平尾翼は垂尾頂部に付きます。"
+      },
       "specs": [
         [
           "操縱面",
           "方向舵"
+        ],
+        [
+          "尾型",
+          "T 型尾翼"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "照片同時看得到頂部水平尾翼；垂尾是下方直立表面，不要把橫向白色翼面誤當方向舵。",
+        "en": "The photograph also includes the top-mounted tailplane. The fin is the upright surface below it, not the transverse white surface.",
+        "ja": "写真には上部水平尾翼も写ります。垂尾はその下の直立面で、横向きの白い翼面ではありません。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "高窄單垂尾。",
+          "en": "Tall narrow single fin.",
+          "ja": "高く細い単垂尾。"
+        },
+        {
+          "zh": "鋼索操縱方向舵。",
+          "en": "Cable-operated rudder.",
+          "ja": "ケーブル操作方向舵。"
+        },
+        {
+          "zh": "頂端承載水平尾翼。",
+          "en": "Carries the tailplane at its tip.",
+          "ja": "頂部に水平尾翼。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/ask21/vstab.jpg?v=b53647670a8e",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:G-CJKA.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "水平安定面安裝在垂直尾翼頂端形成T尾；後緣升降舵控制俯仰，裝配時採自動連接機構避免操縱未接妥。",
+        "en": "The tailplane mounts atop the fin to form a T-tail. Its elevator controls pitch, and an automatic connection helps ensure correct control attachment during rigging.",
+        "ja": "水平安定板は垂尾頂部に付きT尾を形成し、後縁昇降舵がピッチを制御します。組立時には自動接続機構で操縦系統の接続を確実にします。"
+      },
       "specs": [
+        [
+          "位置",
+          "垂尾頂端"
+        ],
         [
           "操縱面",
           "升降舵"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "T尾位置可讓尾翼遠離主翼大部分尾流，但不能解讀為所有迎角都完全不受流場影響。",
+        "en": "The T-tail places the surface away from much of the wing wake, but it is not free of aerodynamic interference at every angle of attack.",
+        "ja": "T尾は主翼後流の多くから離れますが、全迎角で流れの影響が皆無という意味ではありません。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "垂尾頂端安裝。",
+          "en": "Mounted atop the fin.",
+          "ja": "垂尾頂部に装備。"
+        },
+        {
+          "zh": "後緣升降舵。",
+          "en": "Trailing-edge elevator.",
+          "ja": "後縁昇降舵。"
+        },
+        {
+          "zh": "形成T型尾翼。",
+          "en": "Forms a T-tail.",
+          "ja": "T尾翼を形成。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/ask21/hstab.jpg?v=f5b8ca476432",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:G-CJKA.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "Schleicher ASK 21 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "固定式中央主輪承受主要落地載荷並配液壓碟煞；機鼻另有小輪，部分機體選裝尾輪或翼尖小輪。",
+        "en": "A fixed central main wheel carries most landing loads and has a hydraulic disc brake. A small nose wheel is fitted, while tail and wingtip wheels may be optional depending on configuration.",
+        "ja": "固定中央主輪が主な着陸荷重を受け油圧ディスクブレーキを備えます。小型前輪があり、構成により尾輪や翼端車輪が追加されます。"
+      },
       "specs": [
         [
-          "配置",
-          "前三點式"
+          "主輪",
+          "固定中央單輪"
+        ],
+        [
+          "煞車",
+          "液壓碟煞"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "滑翔機不是一般左右兩組主腳；辨識時先找機身中線的大主輪，不要把翼尖接地保護誤算成客機式主起落架。",
+        "en": "This sailplane does not have conventional left and right main gears. Find the large centerline wheel first and do not count wingtip protection as airliner-style main gear.",
+        "ja": "一般機の左右主脚ではありません。まず胴体中心線の大型主輪を確認し、翼端保護を旅客機式主脚と数えないでください。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "固定中央主輪。",
+          "en": "Fixed centerline main wheel.",
+          "ja": "固定中央主輪。"
+        },
+        {
+          "zh": "液壓碟煞。",
+          "en": "Hydraulic disc brake.",
+          "ja": "油圧ディスクブレーキ。"
+        },
+        {
+          "zh": "尾輪／翼尖輪依配置選裝。",
+          "en": "Tail/wingtip wheels vary by configuration.",
+          "ja": "尾輪・翼端車輪は構成による。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/ask21/gear.jpg?v=747e578ea8d5",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_3_(53787201065).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "ASK 21是17公尺翼展的雙座中翼教練滑翔機；長串列座艙罩、無發動機的細長機鼻、平直高展弦比主翼與T型尾翼構成主要輪廓。",
+        "en": "The ASK 21 is a two-seat, 17 m-span mid-wing training sailplane. Its long tandem canopy, engine-less slender nose, straight high-aspect-ratio wing and T-tail define the silhouette.",
+        "ja": "ASK 21は翼幅17 mの複座中翼練習滑空機で、長い縦列キャノピー、エンジンのない細い機首、直線的な高アスペクト比主翼、T尾翼が外形を特徴づけます。"
+      },
+      "fact": {
+        "zh": "本頁是純滑翔型ASK 21，不是另設動力系統的ASK 21 Mi；兩者不能只靠同一個家族名稱互換規格。",
+        "en": "This page covers the unpowered ASK 21, not the separately configured self-launching ASK 21 Mi; their specifications are not interchangeable.",
+        "ja": "本ページは無動力ASK 21であり、別構成の自力発航型ASK 21 Miではありません。系列名だけで仕様を置き換えられません。"
+      },
+      "bullets": [
+        {
+          "zh": "雙座串列座艙。",
+          "en": "Two tandem seats.",
+          "ja": "複座縦列座席。"
+        },
+        {
+          "zh": "17公尺平直中翼。",
+          "en": "Straight 17 m mid-wing.",
+          "ja": "17 mの直線的中翼。"
+        },
+        {
+          "zh": "T型尾翼、無發動機。",
+          "en": "T-tail and no engine.",
+          "ja": "T尾翼・エンジンなし。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/ask21/overview.jpg?v=24a1b2be31d0",
+          "caption": {
+            "zh": "ASK 21 G-DJMC 飛機拖曳中的實機側視",
+            "en": "Real ASK 21 G-DJMC under aerotow, side view",
+            "ja": "飛行機曳航中のASK 21 G-DJMC実機側面"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_Towed_(53787201215).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "長形透明座艙罩覆蓋前後兩席，前段低矮圓滑、後段逐漸抬高；側面可見框架與通風滑窗。",
+        "en": "A long transparent canopy covers both tandem seats, low and rounded at the nose and rising toward the rear; frames and a sliding ventilation window are visible from the side.",
+        "ja": "長い透明キャノピーが前後席を覆い、前部は低く丸く後方へ高くなります。側面にはフレームと換気用スライド窓が見えます。"
+      },
+      "fact": {
+        "zh": "正面參考照由機腹斜前方拍攝，並非正投影；可用來看狹窄串列座艙罩，但不能量測實際寬度。",
+        "en": "The frontal reference is an oblique underside view, not an orthographic image. It shows the narrow tandem canopy but cannot be used to measure true width.",
+        "ja": "正面参考は機腹側からの斜視で正投影ではありません。細い縦列キャノピーは確認できますが実幅の測定には使えません。"
+      },
+      "bullets": [
+        {
+          "zh": "長形串列座艙罩。",
+          "en": "Long tandem canopy.",
+          "ja": "長い縦列キャノピー。"
+        },
+        {
+          "zh": "前低後高的輪廓。",
+          "en": "Low front, higher rear profile.",
+          "ja": "前が低く後方が高い。"
+        },
+        {
+          "zh": "側面通風滑窗。",
+          "en": "Sliding ventilation window.",
+          "ja": "側面換気スライド窓。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/ask21/window-front.jpg?v=c9461ad90192",
+          "caption": {
+            "zh": "ASK 21 機腹前斜角座艙罩（非正投影）",
+            "en": "ASK 21 underside front-oblique canopy (not orthographic)",
+            "ja": "ASK 21機腹側斜め前方キャノピー（正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_1_(53787100709).jpg"
+        },
+        {
+          "src": "assets/reference/ask21/window-side.jpg?v=7706191e3436",
+          "caption": {
+            "zh": "ASK 21 地面整備時的側面座艙罩與通風窗",
+            "en": "ASK 21 side canopy and ventilation window during ground preparation",
+            "ja": "地上準備中のASK 21側面キャノピーと換気窓"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ASK_21_bei_der_Startvorbereitung.jpg"
+        }
+      ]
+    },
+    "engine": {
+      "summary": {
+        "zh": "標準ASK 21沒有發動機；起飛依靠飛機拖曳或絞盤，機鼻拖鉤用於飛機拖曳，重心附近另有絞盤安全脫鉤裝置。",
+        "en": "The standard ASK 21 has no engine. It launches by aerotow or winch, using a nose release for aerotow and a center-of-gravity release for winch launching.",
+        "ja": "標準ASK 21にエンジンはなく、飛行機曳航またはウインチで発航します。機首曳航金具は飛行機曳航、重心付近の金具はウインチ発航に使います。"
+      },
+      "fact": {
+        "zh": "照片是機鼻拖鉤關閉／開啟近照；金屬鉤具是脫離拖索的機械裝置，不是進氣口或動力系統。",
+        "en": "The photograph shows the nose release closed and open. This metal mechanism releases the tow rope; it is not an intake or powerplant.",
+        "ja": "写真は機首曳航金具の閉・開状態です。金属機構は曳航索を外す装置で、吸気口や動力装置ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "標準型無發動機。",
+          "en": "Standard model has no engine.",
+          "ja": "標準型は無動力。"
+        },
+        {
+          "zh": "飛機拖曳或絞盤起飛。",
+          "en": "Aerotow or winch launch.",
+          "ja": "飛行機曳航・ウインチ発航。"
+        },
+        {
+          "zh": "機鼻與重心拖鉤。",
+          "en": "Nose and C.G. releases.",
+          "ja": "機首・重心曳航金具。"
+        }
+      ],
+      "name": {
+        "zh": "動力與拖曳鉤",
+        "en": "Launch system and tow releases",
+        "ja": "発航方式・曳航金具"
+      },
+      "specs": [
+        [
+          "發動機",
+          "無"
+        ],
+        [
+          "起飛方式",
+          "飛機拖曳／絞盤"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/ask21/engine.jpg?v=129074524e73",
+          "caption": {
+            "zh": "ASK 21 機鼻拖鉤關閉／開啟近照",
+            "en": "ASK 21 nose tow release, closed and open",
+            "ja": "ASK 21機首曳航金具の閉・開状態"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Bugkupplung_ASK_21_geschlossen-offen.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "長直主翼以小圓角翼尖結束，沒有翼尖小翼；翼尖有紅色警示／可視標記，並可選裝地面滑行小輪。",
+        "en": "The long straight wing ends in a small rounded tip without a winglet. Red visibility markings are common, and small wingtip wheels are optional for ground handling.",
+        "ja": "長い直線翼は小さな丸い通常翼端で終わり、ウイングレットはありません。赤い視認標識があり、地上用翼端車輪はオプションです。"
+      },
+      "fact": {
+        "zh": "照片由下方拍攝，一側翼尖受透視放大；紅色帶是塗裝標記，不是可動操縱面。",
+        "en": "The underside view enlarges one tip through perspective. The red band is a visibility marking, not a movable control surface.",
+        "ja": "下面写真では遠近で片側翼端が大きく見えます。赤帯は視認塗装で可動操縦面ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "無翼尖小翼。",
+          "en": "No winglet.",
+          "ja": "ウイングレットなし。"
+        },
+        {
+          "zh": "小圓角普通翼尖。",
+          "en": "Small rounded plain tip.",
+          "ja": "小さな丸い通常翼端。"
+        },
+        {
+          "zh": "翼尖小輪可選裝。",
+          "en": "Optional wingtip wheels.",
+          "ja": "翼端車輪はオプション。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "specs": [
+        [
+          "構型",
+          "普通圓角翼尖"
+        ],
+        [
+          "翼尖小輪",
+          "選配"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/ask21/wingtip.jpg?v=d4761e9efb77",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_2_(53786781741).jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -191,16 +623,12 @@
       [
         "最大零燃油重量（MZFW）",
         "不適用"
-      ],
-      [
-        "最大水袋壓艙",
-        "約 180 kg"
       ]
     ],
     "容量": [
       [
-        "行李／載重",
-        "雙座配置，可加裝壓艙水袋"
+        "座艙有效載重",
+        "前後座各最多 110 kg"
       ],
       [
         "油箱容量",
@@ -214,7 +642,7 @@
       ],
       [
         "最小下沉率",
-        "0.63 m/s"
+        "0.65 m/s"
       ],
       [
         "最大速度（VNE）",
@@ -247,12 +675,12 @@
         "絞盤／飛機拖曳"
       ],
       [
-        "特技能力",
-        "可執行基本特技飛行"
+        "拖鉤",
+        "機鼻與重心安全脫鉤裝置"
       ],
       [
-        "備註",
-        "部分機型可加裝自力起飛動力套件"
+        "衍生型",
+        "ASK 21 Mi 為另設自力起飛動力的衍生型"
       ]
     ]
   }

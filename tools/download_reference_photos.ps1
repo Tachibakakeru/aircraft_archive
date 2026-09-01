@@ -236,6 +236,10 @@ $photos = [ordered]@{
   "citation/cockpit.jpg" = "CitationXL-Cockpit.jpg"
   "pa28/overview.jpg" = "Piper PA-28-181 Archer II (D-EJFK) 04.jpg"
   "pa28/cockpit.jpg" = "Cockpit of Piper PA28-181 Archer II ‘G-SAPI’ (34105117476).jpg"
+  "ask21/overview.jpg" = "ASK-21 Glider Towed (53787201215).jpg"
+  "ask21/cockpit.jpg" = "Nicht serienmässiges Instrumentenbrett für grössere Personen mit Vario, E-Vario, Fahrtenmesser, Höhenmesser, Funkgerät, G-Kraft-Messer und Kompass 2014-05-04 19-23.jpg"
+  "heli/overview.jpg" = "EGLK - AgustaWestland AW139 - Irish Air Corps - 277 - Flickr - lynothehammer1978.jpg"
+  "heli/cockpit.jpg" = "AgustaWestland AW 139 helicopter cockpit.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -586,6 +590,24 @@ $windowPhotos += @(
   @{ Dest="pa28/vstab.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 03.jpg"; Crop=@(.75,.20,.20) }
   @{ Dest="pa28/hstab.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 03.jpg"; Crop=@(.73,.38,.24) }
   @{ Dest="pa28/gear.jpg"; Title="Piper PA-28-181 Archer II (D-EJFK) 04.jpg"; Crop=@(.12,.49,.45) }
+  @{ Dest="ask21/window-front.jpg"; Title="ASK-21 Glider 1 (53787100709).jpg"; Crop=@(.38,.52,.26) }
+  @{ Dest="ask21/window-side.jpg"; Title="ASK 21 bei der Startvorbereitung.jpg"; Crop=@(.14,.16,.38) }
+  @{ Dest="ask21/fuselage.jpg"; Title="ASK-21 Glider Towed (53787201215).jpg"; Crop=@(.28,.18,.58) }
+  @{ Dest="ask21/engine.jpg"; Title="Bugkupplung ASK 21 geschlossen-offen.jpg"; Crop=@(.08,.12,.84) }
+  @{ Dest="ask21/wingtip.jpg"; Title="ASK-21 Glider 2 (53786781741).jpg"; Crop=@(.04,.14,.34) }
+  @{ Dest="ask21/wing.jpg"; Title="ASK-21 Glider 2 (53786781741).jpg"; Crop=@(.08,.16,.82) }
+  @{ Dest="ask21/vstab.jpg"; Title="G-CJKA.jpg"; Crop=@(.83,.45,.16) }
+  @{ Dest="ask21/hstab.jpg"; Title="G-CJKA.jpg"; Crop=@(.76,.36,.23) }
+  @{ Dest="ask21/gear.jpg"; Title="ASK-21 Glider 3 (53787201065).jpg"; Crop=@(.20,.48,.38) }
+  @{ Dest="heli/window-front.jpg"; Title="RAF Northolt IMG 8100 (48859947286).jpg"; Crop=@(.28,.24,.42) }
+  @{ Dest="heli/window-side.jpg"; Title="RAF Northolt IMG 8116 (48860148517).jpg"; Crop=@(.15,.31,.40) }
+  @{ Dest="heli/fuselage.jpg"; Title="EGLK - AgustaWestland AW139 - Irish Air Corps - 277 - Flickr - lynothehammer1978.jpg"; Crop=@(.10,.30,.72) }
+  @{ Dest="heli/engine.jpg"; Title="RAF Northolt IMG 8100 (48859947286).jpg"; Crop=@(.29,.12,.42) }
+  @{ Dest="heli/wingtip.jpg"; Title="RAF Northolt IMG 8116 (48860148517).jpg"; Crop=@(.72,.23,.24) }
+  @{ Dest="heli/wing.jpg"; Title="RAF Northolt IMG 8100 (48859947286).jpg"; Crop=@(.04,.05,.90) }
+  @{ Dest="heli/vstab.jpg"; Title="EGLK - AgustaWestland AW139 - Irish Air Corps - 277 - Flickr - lynothehammer1978.jpg"; Crop=@(.78,.18,.18) }
+  @{ Dest="heli/hstab.jpg"; Title="EGLK - AgustaWestland AW139 - Irish Air Corps - 277 - Flickr - lynothehammer1978.jpg"; Crop=@(.68,.28,.28) }
+  @{ Dest="heli/gear.jpg"; Title="RAF Northolt IMG 8100 (48859947286).jpg"; Crop=@(.27,.50,.46) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0

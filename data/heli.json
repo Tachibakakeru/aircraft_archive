@@ -2,127 +2,560 @@
   "title": "直升機",
   "sub": "旋翼機 — 點擊機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
+    "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "直升機 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "AW139流線機身包含前方雙人座艙、可容納最多15名乘客的模組化客艙、兩側滑門、尾梁與起落架整流艙。",
+        "en": "The streamlined AW139 fuselage contains a two-seat cockpit, modular cabin for up to 15 passengers, sliding doors on both sides, a tail boom and landing-gear sponsons.",
+        "ja": "流線型AW139胴体は前方複座操縦席、最大15名のモジュール客室、両側スライド扉、尾部ブーム、脚スポンソンで構成されます。"
+      },
       "specs": [
         [
-          "結構形式",
-          "半硬殼式"
+          "代表型",
+          "Leonardo AW139"
         ],
         [
-          "主要材料",
-          "鋁合金／複合材料"
+          "載客",
+          "最多 15 名"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "照片為軍用塗裝機，外部天線與任務設備不代表所有民用AW139；機身基本比例與門窗配置才是共通辨識點。",
+        "en": "The photograph shows a military aircraft; its antennas and mission fittings are not universal. Fuselage proportions and door/window layout are the shared cues.",
+        "ja": "写真は軍用機で、外部アンテナや任務装備は全民間機共通ではありません。胴体比率と扉・窓配置が共通識別点です。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "最多15名乘客。",
+          "en": "Up to 15 passengers.",
+          "ja": "最大15名。"
+        },
+        {
+          "zh": "兩側大型滑門。",
+          "en": "Large sliding doors on both sides.",
+          "ja": "両側大型スライド扉。"
+        },
+        {
+          "zh": "尾梁可拆式接合。",
+          "en": "Detachable tail-boom joint.",
+          "ja": "着脱式尾部ブーム接合。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/heli/fuselage.jpg?v=a01e09593db2",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:EGLK_-_AgustaWestland_AW139_-_Irish_Air_Corps_-_277_-_Flickr_-_lynothehammer1978.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "駕駛艙是 直升機 的操縱核心，飛行員在此監控飛行、導航與各系統狀態。",
+      "summary": {
+        "zh": "AW139雙人座艙以四具大型電子飛行顯示器、中央系統／導航台、循環桿與各自的總距桿控制旋翼推力與姿態。",
+        "en": "The AW139's two-seat cockpit uses four large electronic flight displays, a central systems/navigation console, cyclic controls and individual collective levers to control attitude and rotor thrust.",
+        "ja": "AW139の複座操縦席は4面大型電子表示、中央システム／航法台、サイクリック、各席コレクティブで姿勢と回転翼推力を制御します。"
+      },
       "specs": [
         [
           "機組",
           "2 名飛行員"
         ]
       ],
-      "fact": "現代客機多採玻璃座艙，以大型顯示器整合過去數十個機械儀表的資訊。",
+      "fact": {
+        "zh": "照片是早期AW139實機座艙；後期航電、任務設備與四螢幕軟體頁面會依客戶和年份變化。",
+        "en": "The photograph shows an early real AW139 cockpit. Later avionics, mission equipment and four-display pages vary by customer and production year.",
+        "ja": "写真は初期AW139実機操縦席で、後期航電、任務装備、4画面の表示内容は顧客・製造年で異なります。"
+      },
       "bullets": [
-        "飛行操縱與系統監控",
-        "整合式顯示儀表"
+        {
+          "zh": "雙人並列座艙。",
+          "en": "Side-by-side two-pilot cockpit.",
+          "ja": "横並び複座操縦席。"
+        },
+        {
+          "zh": "四具大型電子顯示器。",
+          "en": "Four large electronic displays.",
+          "ja": "4面大型電子表示。"
+        },
+        {
+          "zh": "循環桿與總距桿。",
+          "en": "Cyclic and collective controls.",
+          "ja": "サイクリックとコレクティブ。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/heli/cockpit.jpg?v=f87fd723abed",
+          "caption": {
+            "zh": "早期 AW139 四螢幕實機座艙",
+            "en": "Early AW139 real four-display cockpit",
+            "ja": "初期AW139の4画面実機操縦席"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:AgustaWestland_AW_139_helicopter_cockpit.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主旋翼",
+        "en": "Main rotor",
+        "ja": "主回転翼"
+      },
       "en": "WING",
-      "summary": "主翼為 直升機 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "直徑13.80公尺的五葉全鉸接主旋翼產生升力與大部分推進力；循環變距改變旋翼盤傾斜，總距變距同步改變五片葉片攻角。",
+        "en": "The 13.80 m, five-blade fully articulated main rotor produces lift and most propulsive force. Cyclic pitch tilts the rotor disc, while collective pitch changes all five blade angles together.",
+        "ja": "直径13.80 mの5枚全関節式主回転翼が揚力と大部分の推進力を生み、サイクリックで回転面を傾け、コレクティブで5枚の迎角を同時変更します。"
+      },
       "specs": [
         [
-          "功能",
-          "產生升力"
+          "葉片數",
+          "5 葉"
         ],
         [
-          "翼內",
-          "主油箱"
+          "直徑",
+          "13.80 m"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "正面照片中旋翼盤因曝光而模糊；固定翼術語的『主翼』在此應理解為主旋翼系統，不是機身兩側短翼。",
+        "en": "The rotor disc blurs in the frontal photograph. Here the comparison category means the main-rotor system, not fixed wings on the fuselage sides.",
+        "ja": "正面写真では回転面がぶれます。この比較欄の『主翼』は主回転翼系統を指し、胴体側面の固定翼ではありません。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "五葉全鉸接旋翼。",
+          "en": "Five-blade fully articulated rotor.",
+          "ja": "5枚全関節式回転翼。"
+        },
+        {
+          "zh": "直徑13.80公尺。",
+          "en": "13.80 m diameter.",
+          "ja": "直径13.80 m。"
+        },
+        {
+          "zh": "循環與總距變距控制。",
+          "en": "Cyclic and collective pitch control.",
+          "ja": "サイクリック・コレクティブ変距。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/heli/wing.jpg?v=f2a4e9cbcb73",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8100_(48859947286).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "直升機 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "兩具Pratt & Whitney Canada PT6C-67C渦輪軸引擎裝在客艙上方，透過主減速箱驅動主旋翼與尾旋翼，而不是直接以排氣產生主要推力。",
+        "en": "Two Pratt & Whitney Canada PT6C-67C turboshafts sit above the cabin and drive the main and tail rotors through the main gearbox rather than producing primary thrust directly from exhaust.",
+        "ja": "Pratt & Whitney Canada PT6C-67Cターボシャフト2基を客室上部に搭載し、主減速機を介して主・尾回転翼を駆動し、排気で主推力を直接生みません。"
+      },
       "specs": [
+        [
+          "型號",
+          "PT6C-67C ×2"
+        ],
         [
           "型式",
-          "渦輪扇引擎"
+          "渦輪軸"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "照片顯示的是上甲板進氣口、整流罩與旋翼桅桿區；引擎本體被整流罩遮住，不能把整個上部凸起都稱為引擎。",
+        "en": "The photograph shows upper-deck intakes, cowlings and mast area. The engines are enclosed, so the entire upper fairing should not be called the engine.",
+        "ja": "写真は上部デッキ吸気口、カウル、マスト部を示し、エンジン本体は覆われています。上部膨らみ全体がエンジンではありません。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "PT6C-67C雙發。",
+          "en": "Twin PT6C-67Cs.",
+          "ja": "PT6C-67C双発。"
+        },
+        {
+          "zh": "FADEC控制。",
+          "en": "FADEC control.",
+          "ja": "FADEC制御。"
+        },
+        {
+          "zh": "透過主減速箱驅動旋翼。",
+          "en": "Drives rotors through the main gearbox.",
+          "ja": "主減速機経由で回転翼駆動。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/heli/engine.jpg?v=a3402c451779",
+          "caption": {
+            "zh": "AW139 上甲板引擎進氣、整流罩與旋翼桅桿區",
+            "en": "AW139 upper-deck engine intakes, cowlings and rotor-mast area",
+            "ja": "AW139上部デッキのエンジン吸気・カウル・回転翼マスト部"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8100_(48859947286).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "尾梁末端的垂直安定面在前飛時提供方向穩定，並承載尾旋翼與傳動末端；外形帶後掠前緣與截角頂端。",
+        "en": "The vertical fin at the tail-boom end adds directional stability in forward flight and supports the tail-rotor drivetrain, with a swept leading edge and clipped tip.",
+        "ja": "尾部ブーム末端の垂直安定面は前進飛行の方向安定を補い、尾部回転翼駆動端を支持し、後退前縁と切り落とした頂部を持ちます。"
+      },
       "specs": [
         [
-          "操縱面",
-          "方向舵"
+          "位置",
+          "尾梁末端"
+        ],
+        [
+          "功能",
+          "方向穩定"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "照片中的旋翼光環遮住部分垂尾；垂尾是固定綠色表面，旋轉的圓環是尾旋翼。",
+        "en": "The rotor light trail obscures part of the fin. The fixed green surface is the vertical stabilizer; the rotating ring is the tail rotor.",
+        "ja": "写真では回転翼光跡が垂尾の一部を隠します。固定された緑の面が垂直安定面、回転円が尾部回転翼です。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "尾梁末端固定面。",
+          "en": "Fixed surface at tail-boom end.",
+          "ja": "尾部ブーム末端固定面。"
+        },
+        {
+          "zh": "增強前飛方向穩定。",
+          "en": "Adds forward-flight directional stability.",
+          "ja": "前進時の方向安定を補助。"
+        },
+        {
+          "zh": "承載尾旋翼傳動端。",
+          "en": "Supports tail-rotor drive end.",
+          "ja": "尾部回転翼駆動端を支持。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/heli/vstab.jpg?v=256245c85834",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:EGLK_-_AgustaWestland_AW139_-_Irish_Air_Corps_-_277_-_Flickr_-_lynothehammer1978.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "直升機 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "AW139採可收放前三點式輪式起落架：鼻腳雙輪，左右主腳各一輪，共四輪；主腳收入機身兩側整流艙。",
+        "en": "The AW139 has retractable tricycle wheeled gear: twin nose wheels and one wheel on each main leg, four wheels total, with the mains retracting into side sponsons.",
+        "ja": "AW139は引込前三点式車輪脚で、前脚2輪、左右主脚各1輪の計4輪、主脚は側面スポンソンへ格納されます。"
+      },
       "specs": [
         [
           "配置",
-          "前三點式"
+          "可收放前三點式"
+        ],
+        [
+          "總輪數",
+          "4 輪"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "照片前方可見鼻腳雙輪與支柱，主腳位在機身較後兩側；不要把地面燈或艙門支架算成輪組。",
+        "en": "The frontal image shows the twin nose wheels and strut; the single main wheels sit farther aft on each side. Do not count ground lights or door hardware as wheels.",
+        "ja": "正面写真では前脚2輪と支柱が見え、単輪主脚は後方左右にあります。地上灯や扉金具を車輪に数えません。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "可收放前三點式。",
+          "en": "Retractable tricycle arrangement.",
+          "ja": "引込前三点式。"
+        },
+        {
+          "zh": "鼻腳雙輪。",
+          "en": "Twin nose wheels.",
+          "ja": "前脚2輪。"
+        },
+        {
+          "zh": "主腳每側單輪。",
+          "en": "One wheel per main leg.",
+          "ja": "主脚片側1輪。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/heli/gear.jpg?v=1ec6a10ec8c9",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8100_(48859947286).jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "本頁以Leonardo AW139為直升機代表：五葉主旋翼、四葉尾旋翼、流線中型機身、雙渦輪軸引擎與可收放前三點式起落架形成主要輪廓。",
+        "en": "This page uses the Leonardo AW139 as its helicopter reference: a five-blade main rotor, four-blade tail rotor, streamlined medium fuselage, twin turboshafts and retractable tricycle gear define its profile.",
+        "ja": "本ページはLeonardo AW139を直升機代表とし、5枚主回転翼、4枚尾部回転翼、流線型中型胴体、双発ターボシャフト、引込前三点式脚が外形を特徴づけます。"
+      },
+      "fact": {
+        "zh": "『直升機』涵蓋許多構型；本頁數據與照片僅代表AW139，不能套用到單發輕型機、同軸旋翼或無尾旋翼機。",
+        "en": "Helicopter covers many configurations. These photographs and figures describe the AW139, not light singles, coaxial types or NOTAR aircraft.",
+        "ja": "『直升機』には多様な構成があり、本ページの写真・数値はAW139を示すもので、軽単発、同軸、NOTAR機には適用できません。"
+      },
+      "bullets": [
+        {
+          "zh": "五葉主旋翼。",
+          "en": "Five-blade main rotor.",
+          "ja": "5枚主回転翼。"
+        },
+        {
+          "zh": "雙PT6C渦輪軸引擎。",
+          "en": "Twin PT6C turboshafts.",
+          "ja": "PT6Cターボシャフト双発。"
+        },
+        {
+          "zh": "可收放輪式起落架。",
+          "en": "Retractable wheeled gear.",
+          "ja": "引込式車輪脚。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/heli/overview.jpg?v=5f963214759e",
+          "caption": {
+            "zh": "愛爾蘭空軍 AW139 277 地面實機側視",
+            "en": "Irish Air Corps AW139 277 on the ground, side view",
+            "ja": "アイルランド空軍AW139 277地上実機側面"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:EGLK_-_AgustaWestland_AW139_-_Irish_Air_Corps_-_277_-_Flickr_-_lynothehammer1978.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "機首有兩片大型前風擋，左右駕駛門另有側窗；下機鼻與頂部透明窗擴大向下及向上的視野。",
+        "en": "Two large front windshields dominate the nose, with side glazing in both crew doors; lower-nose and overhead transparencies extend downward and upward visibility.",
+        "ja": "機首には大型前面風防2枚と左右操縦席扉の側窓があり、下部機首窓と頭上窓が上下方向の視界を広げます。"
+      },
+      "fact": {
+        "zh": "正面夜間照片中旋翼與燈光會產生光軌；辨識窗型時只看固定窗框，不把反光當成額外窗格。",
+        "en": "Rotor motion and lights create streaks in the night frontal image. Identify only the fixed frames and do not count reflections as extra panes.",
+        "ja": "夜間正面写真では回転翼と灯火が光跡を作るため、固定窓枠だけを見て反射を追加窓と数えません。"
+      },
+      "bullets": [
+        {
+          "zh": "兩片大型前風擋。",
+          "en": "Two large front windshields.",
+          "ja": "大型前面風防2枚。"
+        },
+        {
+          "zh": "駕駛門側窗。",
+          "en": "Crew-door side windows.",
+          "ja": "操縦席扉側窓。"
+        },
+        {
+          "zh": "下方與頂部透明窗。",
+          "en": "Lower and overhead transparencies.",
+          "ja": "下部・頭上透明窓。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/heli/window-front.jpg?v=fad9eb315029",
+          "caption": {
+            "zh": "AW139 夜間正面外窗；旋翼與燈光有光軌",
+            "en": "AW139 front glazing at night; rotor and lights create trails",
+            "ja": "AW139夜間正面窓；回転翼と灯火に光跡あり"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8100_(48859947286).jpg"
+        },
+        {
+          "src": "assets/reference/heli/window-side.jpg?v=f1600a7320dc",
+          "caption": {
+            "zh": "AW139 側面駕駛艙窗與客艙窗",
+            "en": "AW139 side cockpit and cabin glazing",
+            "ja": "AW139側面操縦席窓・客室窓"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8116_(48860148517).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "AW139以四葉尾旋翼抵消主旋翼反扭矩並控制偏航；它裝在尾梁末端垂尾一側，不是固定翼飛機的翼尖小翼。",
+        "en": "The AW139's four-blade tail rotor counters main-rotor torque and controls yaw. It mounts beside the fin at the tail-boom end and is not a fixed-wing winglet.",
+        "ja": "AW139の4枚尾部回転翼は主回転翼反トルクを打ち消しヨーを制御します。尾部ブーム末端の垂尾側面に付き、固定翼機のウイングレットではありません。"
+      },
+      "fact": {
+        "zh": "夜間長曝光使四片旋翼形成圓形光軌；葉片數應由靜止影像或型式資料確認，不能靠光環直接計數。",
+        "en": "Night exposure turns the four blades into circular light trails. Confirm blade count from static imagery or type data, not the luminous ring.",
+        "ja": "夜間露光で4枚翼は円形光跡になります。枚数は静止写真や型式資料で確認し、光環を直接数えません。"
+      },
+      "bullets": [
+        {
+          "zh": "四葉尾旋翼。",
+          "en": "Four-blade tail rotor.",
+          "ja": "4枚尾部回転翼。"
+        },
+        {
+          "zh": "抵消反扭矩。",
+          "en": "Counters main-rotor torque.",
+          "ja": "主回転翼反トルクを相殺。"
+        },
+        {
+          "zh": "控制偏航。",
+          "en": "Controls yaw.",
+          "ja": "ヨー制御。"
+        }
+      ],
+      "name": {
+        "zh": "尾旋翼",
+        "en": "Tail rotor",
+        "ja": "尾部回転翼"
+      },
+      "specs": [
+        [
+          "葉片數",
+          "4 葉"
+        ],
+        [
+          "功能",
+          "反扭矩／偏航控制"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/heli/wingtip.jpg?v=790df509600a",
+          "caption": {
+            "zh": "四葉尾旋翼夜間光軌；葉片本體部分模糊",
+            "en": "Four-blade tail-rotor light trail; blades partly blurred",
+            "ja": "4枚尾部回転翼の夜間光跡；翼本体は一部ぶれています"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8116_(48860148517).jpg"
+        }
+      ]
+    },
+    "hstab": {
+      "summary": {
+        "zh": "尾梁後段設水平安定面，兩端帶複合材料小端板；它在前飛時平衡俯仰力矩並減少主旋翼持續修正量。",
+        "en": "A horizontal stabilizer on the aft tail boom carries small composite endplates. In forward flight it balances pitch moments and reduces continuous main-rotor correction.",
+        "ja": "尾部ブーム後部の水平安定面には小型複合材端板があり、前進時のピッチモーメントを釣り合わせ主回転翼の連続補正を減らします。"
+      },
+      "fact": {
+        "zh": "斜側照片使水平尾翼與尾旋翼重疊；先找橫向固定翼面，再區分後方旋轉葉片。",
+        "en": "In the oblique image the tailplane overlaps the tail rotor. Find the transverse fixed surface first, then separate it from the rotating blades behind it.",
+        "ja": "斜側写真では水平尾翼と尾部回転翼が重なるため、横向き固定翼面を先に探し、後方の回転翼と区別します。"
+      },
+      "bullets": [
+        {
+          "zh": "安裝於尾梁後段。",
+          "en": "Mounted on aft tail boom.",
+          "ja": "尾部ブーム後部に装備。"
+        },
+        {
+          "zh": "兩端小型端板。",
+          "en": "Small endplates at both ends.",
+          "ja": "両端に小型端板。"
+        },
+        {
+          "zh": "輔助俯仰穩定。",
+          "en": "Supports pitch stability.",
+          "ja": "ピッチ安定を補助。"
+        }
+      ],
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "specs": [
+        [
+          "位置",
+          "尾梁後段"
+        ],
+        [
+          "端板",
+          "複合材料小翼"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/heli/hstab.jpg?v=5e2b6c1b321a",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:EGLK_-_AgustaWestland_AW139_-_Irish_Air_Corps_-_277_-_Flickr_-_lynothehammer1978.jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -212,12 +645,12 @@
         "306 km/h（165 kt）"
       ],
       [
-        "最大操作速度（VMO）",
-        "310 km/h（167 kt）"
+        "最大允許速度（VNE）",
+        "309 km/h（167 kt）"
       ],
       [
         "飛行距離（滿載）",
-        "1,061 km（573 nmi）"
+        "最遠 1,187 km（641 nmi，輔助油箱、無預備油）"
       ],
       [
         "航程分類",
@@ -243,19 +676,23 @@
       ],
       [
         "型式",
-        "渦輪軸發動機"
+        "FADEC 渦輪軸發動機"
       ],
       [
-        "單具功率",
-        "1,142 kW（1,531 shp）"
+        "起飛功率（5分鐘）",
+        "單具 1,252 kW（1,679 shp）"
       ],
       [
-        "傳動",
-        "雙發雙冗餘"
+        "最大連續功率",
+        "單具 1,142 kW（1,531 shp）"
       ],
       [
-        "主旋翼轉速",
-        "約 296 rpm"
+        "主旋翼",
+        "5 葉全鉸接，直徑 13.80 m"
+      ],
+      [
+        "尾旋翼",
+        "4 葉"
       ]
     ]
   }

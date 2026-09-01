@@ -399,3 +399,14 @@
 - 使用者確認本地結果並授權 PUSH；發布 Citation XLS+／PA-28 Archer II 的三語部位資料、22 張實機照片、來源授權、工具設定及 v=166／`hangar-v27` 快取更新。
 - 本輪到此停止，下次由剩餘 8 架 `ask21, heli, b707, b727, c909, c919, c929, c939` 接續；累計 44／52 架、484 張實照。
 - 提交時排除未追蹤的 `data/korean_airlines_debug.json`，不包含 Token 備份或其他不相關資料。
+
+### Schleicher ASK 21／Leonardo AW139 實機部位比較（2026-09-02，本地完成）
+
+- 上一批 Citation XLS+／PA-28 Archer II 已以 commit `c18c942` 推送至 `origin/main`；本批接續 `ask21`／`heli`，目前只保留本地，未提交／推送。
+- 兩型各補齊 10 類部位、11 張實照（共 22 張）：整體、座艙、駕駛艙外窗正／側面、機身、動力或拖曳系統、翼尖或尾旋翼、主翼或主旋翼、垂直尾翼、水平尾翼與起落架；三語名稱、簡介、補充、辨識重點與圖說完整。
+- ASK 21 依 Alexander Schleicher 官方資料修正為 17 m 雙座純滑翔機、34:1 最佳滑翔比、0.65 m/s 最小下沉率與 280 km/h VNE；移除燃油、加壓、襟翼與內建動力等通用模板誤套，並明確區分另設動力的 ASK 21 Mi 衍生型。
+- AW139 依 Leonardo 官方型錄與 EASA 資料改為五葉主旋翼、四葉尾旋翼、雙 PT6C-67C 渦輪軸與可收放前三點式起落架；規格補上 309 km/h VNE 與輔助油箱、無預備油條件下 1,187 km 航程。
+- 照片均取自 Wikimedia Commons，來源、作者、CC 授權、裁切用途及官方技術參考已加入 `assets/reference/ATTRIBUTION.md`；裁切不放大、不使用 AI 生成或增強。AW139 尾翼照片受夜間拍攝條件限制，圖說已保留視角與畫質提示。
+- 資料與照片工具檢查通過：累計 46 架 × 10 類／506 張照片；22 張本批圖片已可解碼，來源 URL、裁切界線與不放大規則通過。比較／檢視等資料引用升至 v=167，Service Worker cache 升為 `hangar-v28`。
+- Browser 本地確認比較頁 10 列、22／22 張實照載入、22 個來源／20 個部位連結，且沒有破圖或圖片超過原生尺寸顯示；繁中、英文、日文切換正常。ASK 21「動力與拖曳鉤」與 AW139「尾旋翼」深連結均顯示正確照片及 3D canvas。預覽：`http://localhost:8000/versus.html?a=ask21&b=heli&local=167`。
+- 尚待完成 6 架：`b707, b727, c909, c919, c929, c939`。`data/korean_airlines_debug.json` 維持未追蹤且未修改。

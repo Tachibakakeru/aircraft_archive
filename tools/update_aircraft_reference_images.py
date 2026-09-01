@@ -2824,6 +2824,145 @@ CONTENT.update({
     },
 })
 
+SOURCES.update({
+    "ask21": {
+        "overview": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_Towed_(53787201215).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Nicht_serienm%C3%A4ssiges_Instrumentenbrett_f%C3%BCr_gr%C3%B6ssere_Personen_mit_Vario,_E-Vario,_Fahrtenmesser,_H%C3%B6henmesser,_Funkger%C3%A4t,_G-Kraft-Messer_und_Kompass_2014-05-04_19-23.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_1_(53787100709).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:ASK_21_bei_der_Startvorbereitung.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_Towed_(53787201215).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Bugkupplung_ASK_21_geschlossen-offen.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_2_(53786781741).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_2_(53786781741).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:G-CJKA.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:G-CJKA.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:ASK-21_Glider_3_(53787201065).jpg",
+    },
+    "heli": {
+        "overview": "https://commons.wikimedia.org/wiki/File:EGLK_-_AgustaWestland_AW139_-_Irish_Air_Corps_-_277_-_Flickr_-_lynothehammer1978.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:AgustaWestland_AW_139_helicopter_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8100_(48859947286).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8116_(48860148517).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:EGLK_-_AgustaWestland_AW139_-_Irish_Air_Corps_-_277_-_Flickr_-_lynothehammer1978.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8100_(48859947286).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8116_(48860148517).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8100_(48859947286).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:EGLK_-_AgustaWestland_AW139_-_Irish_Air_Corps_-_277_-_Flickr_-_lynothehammer1978.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:EGLK_-_AgustaWestland_AW139_-_Irish_Air_Corps_-_277_-_Flickr_-_lynothehammer1978.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:RAF_Northolt_IMG_8100_(48859947286).jpg",
+    },
+})
+
+CONTENT.update({
+    "ask21": {
+        "overview": identify(
+            ("ASK 21是17公尺翼展的雙座中翼教練滑翔機；長串列座艙罩、無發動機的細長機鼻、平直高展弦比主翼與T型尾翼構成主要輪廓。", "The ASK 21 is a two-seat, 17 m-span mid-wing training sailplane. Its long tandem canopy, engine-less slender nose, straight high-aspect-ratio wing and T-tail define the silhouette.", "ASK 21は翼幅17 mの複座中翼練習滑空機で、長い縦列キャノピー、エンジンのない細い機首、直線的な高アスペクト比主翼、T尾翼が外形を特徴づけます。"),
+            ("本頁是純滑翔型ASK 21，不是另設動力系統的ASK 21 Mi；兩者不能只靠同一個家族名稱互換規格。", "This page covers the unpowered ASK 21, not the separately configured self-launching ASK 21 Mi; their specifications are not interchangeable.", "本ページは無動力ASK 21であり、別構成の自力発航型ASK 21 Miではありません。系列名だけで仕様を置き換えられません。"),
+            [("雙座串列座艙。", "Two tandem seats.", "複座縦列座席。"), ("17公尺平直中翼。", "Straight 17 m mid-wing.", "17 mの直線的中翼。"), ("T型尾翼、無發動機。", "T-tail and no engine.", "T尾翼・エンジンなし。")],
+        ),
+        "cockpit": identify(
+            ("前後串列座艙均具完整操縱裝置；照片可見空速表、高度表、機械升降率表／電子變率儀與無線電等滑翔飛行儀表。", "Both tandem cockpits have full controls. The photograph shows sailplane instruments including airspeed, altitude, mechanical/electronic variometers and radio equipment.", "前後の縦列席には完全な操縦装置があり、写真には速度計、高度計、機械・電子バリオメーター、無線機など滑空用計器が見えます。"),
+            ("這張儀表板明確標示為非標準改裝配置；它適合說明滑翔機所需資訊，不代表每架ASK 21的儀表位置都相同。", "This panel is explicitly a non-standard installation. It illustrates glider information needs, not an identical layout in every ASK 21.", "この計器板は非標準改修品です。滑空機に必要な情報の参考であり、全ASK 21が同じ配置ではありません。"),
+            [("前後座皆可操縱。", "Full controls at both seats.", "前後席とも操縦可能。"), ("變率儀是核心儀表。", "Variometers are central instruments.", "バリオメーターが主要計器。"), ("照片為非標準面板。", "Photograph shows a non-standard panel.", "写真は非標準計器板。")],
+        ),
+        "windshield": identify(
+            ("長形透明座艙罩覆蓋前後兩席，前段低矮圓滑、後段逐漸抬高；側面可見框架與通風滑窗。", "A long transparent canopy covers both tandem seats, low and rounded at the nose and rising toward the rear; frames and a sliding ventilation window are visible from the side.", "長い透明キャノピーが前後席を覆い、前部は低く丸く後方へ高くなります。側面にはフレームと換気用スライド窓が見えます。"),
+            ("正面參考照由機腹斜前方拍攝，並非正投影；可用來看狹窄串列座艙罩，但不能量測實際寬度。", "The frontal reference is an oblique underside view, not an orthographic image. It shows the narrow tandem canopy but cannot be used to measure true width.", "正面参考は機腹側からの斜視で正投影ではありません。細い縦列キャノピーは確認できますが実幅の測定には使えません。"),
+            [("長形串列座艙罩。", "Long tandem canopy.", "長い縦列キャノピー。"), ("前低後高的輪廓。", "Low front, higher rear profile.", "前が低く後方が高い。"), ("側面通風滑窗。", "Sliding ventilation window.", "側面換気スライド窓。")],
+        ),
+        "fuselage": identify(
+            ("8.35公尺長的玻璃纖維複合材料機身由圓滑機鼻收細至尾梁；機身只容納雙座座艙、操縱與起落架結構，沒有加壓客艙。", "The 8.35 m glass-fibre composite fuselage tapers from a smooth nose into a slender tail boom. It houses the tandem cockpit, controls and landing gear, not a pressurized cabin.", "全長8.35 mのガラス繊維複合胴体は滑らかな機首から細い尾部へ絞られ、縦列操縦席・操縦系統・脚を収めますが与圧客室はありません。"),
+            ("白色平滑表面來自複合材料外殼與塗裝，不是金屬客機的鋁合金蒙皮；不能用鉚釘列辨識。", "Its smooth white surface is a composite shell and finish, not an aluminium-airliner skin; rivet rows are not an identification cue.", "滑らかな白い表面は複合材外皮と塗装で、旅客機のアルミ外板ではなく、リベット列は識別点になりません。"),
+            [("玻璃纖維複合材料。", "Glass-fibre composite construction.", "ガラス繊維複合構造。"), ("全長8.35公尺。", "8.35 m long.", "全長8.35 m。"), ("非加壓細長尾梁。", "Unpressurized slender tail boom.", "非与圧の細い尾部。")],
+        ),
+        "engine": identify(
+            ("標準ASK 21沒有發動機；起飛依靠飛機拖曳或絞盤，機鼻拖鉤用於飛機拖曳，重心附近另有絞盤安全脫鉤裝置。", "The standard ASK 21 has no engine. It launches by aerotow or winch, using a nose release for aerotow and a center-of-gravity release for winch launching.", "標準ASK 21にエンジンはなく、飛行機曳航またはウインチで発航します。機首曳航金具は飛行機曳航、重心付近の金具はウインチ発航に使います。"),
+            ("照片是機鼻拖鉤關閉／開啟近照；金屬鉤具是脫離拖索的機械裝置，不是進氣口或動力系統。", "The photograph shows the nose release closed and open. This metal mechanism releases the tow rope; it is not an intake or powerplant.", "写真は機首曳航金具の閉・開状態です。金属機構は曳航索を外す装置で、吸気口や動力装置ではありません。"),
+            [("標準型無發動機。", "Standard model has no engine.", "標準型は無動力。"), ("飛機拖曳或絞盤起飛。", "Aerotow or winch launch.", "飛行機曳航・ウインチ発航。"), ("機鼻與重心拖鉤。", "Nose and C.G. releases.", "機首・重心曳航金具。")],
+        ),
+        "wingtip": identify(
+            ("長直主翼以小圓角翼尖結束，沒有翼尖小翼；翼尖有紅色警示／可視標記，並可選裝地面滑行小輪。", "The long straight wing ends in a small rounded tip without a winglet. Red visibility markings are common, and small wingtip wheels are optional for ground handling.", "長い直線翼は小さな丸い通常翼端で終わり、ウイングレットはありません。赤い視認標識があり、地上用翼端車輪はオプションです。"),
+            ("照片由下方拍攝，一側翼尖受透視放大；紅色帶是塗裝標記，不是可動操縱面。", "The underside view enlarges one tip through perspective. The red band is a visibility marking, not a movable control surface.", "下面写真では遠近で片側翼端が大きく見えます。赤帯は視認塗装で可動操縦面ではありません。"),
+            [("無翼尖小翼。", "No winglet.", "ウイングレットなし。"), ("小圓角普通翼尖。", "Small rounded plain tip.", "小さな丸い通常翼端。"), ("翼尖小輪可選裝。", "Optional wingtip wheels.", "翼端車輪はオプション。")],
+        ),
+        "wing": identify(
+            ("17公尺中置主翼面積17.95平方公尺、展弦比16.1；後緣配置副翼，翼上表面的大型空氣煞車用來控制下滑角。", "The 17 m mid-wing has 17.95 m² area and aspect ratio 16.1. Ailerons occupy the trailing edge, while large upper-surface airbrakes control descent angle.", "翼幅17 mの中翼は面積17.95 m²、アスペクト比16.1で、後縁に補助翼、上面に降下角を調整する大型エアブレーキがあります。"),
+            ("ASK 21沒有一般動力飛機的燃油箱與增升襟翼；翼內主要是複合結構、操縱連桿與空氣煞車機構。", "The ASK 21 does not use airliner-like fuel tanks or lift flaps. Its wing houses composite structure, control linkages and airbrake mechanisms.", "ASK 21には動力機のような燃料タンクや高揚力フラップはなく、翼内には複合構造、操縦リンク、エアブレーキ機構があります。"),
+            [("翼展17公尺。", "17 m span.", "翼幅17 m。"), ("展弦比16.1。", "Aspect ratio 16.1.", "アスペクト比16.1。"), ("上表面大型空氣煞車。", "Large upper-surface airbrakes.", "上面大型エアブレーキ。")],
+        ),
+        "vstab": identify(
+            ("高而窄的垂直尾翼由機身尾梁向上延伸，後緣方向舵以鋼索操縱；水平尾翼安裝在垂尾頂端。", "A tall narrow fin rises from the tail boom, with a cable-operated rudder on its trailing edge; the horizontal tail mounts at the fin tip.", "高く細い垂尾が尾部から立ち、後縁の方向舵はケーブルで操作され、水平尾翼は垂尾頂部に付きます。"),
+            ("照片同時看得到頂部水平尾翼；垂尾是下方直立表面，不要把橫向白色翼面誤當方向舵。", "The photograph also includes the top-mounted tailplane. The fin is the upright surface below it, not the transverse white surface.", "写真には上部水平尾翼も写ります。垂尾はその下の直立面で、横向きの白い翼面ではありません。"),
+            [("高窄單垂尾。", "Tall narrow single fin.", "高く細い単垂尾。"), ("鋼索操縱方向舵。", "Cable-operated rudder.", "ケーブル操作方向舵。"), ("頂端承載水平尾翼。", "Carries the tailplane at its tip.", "頂部に水平尾翼。")],
+        ),
+        "hstab": identify(
+            ("水平安定面安裝在垂直尾翼頂端形成T尾；後緣升降舵控制俯仰，裝配時採自動連接機構避免操縱未接妥。", "The tailplane mounts atop the fin to form a T-tail. Its elevator controls pitch, and an automatic connection helps ensure correct control attachment during rigging.", "水平安定板は垂尾頂部に付きT尾を形成し、後縁昇降舵がピッチを制御します。組立時には自動接続機構で操縦系統の接続を確実にします。"),
+            ("T尾位置可讓尾翼遠離主翼大部分尾流，但不能解讀為所有迎角都完全不受流場影響。", "The T-tail places the surface away from much of the wing wake, but it is not free of aerodynamic interference at every angle of attack.", "T尾は主翼後流の多くから離れますが、全迎角で流れの影響が皆無という意味ではありません。"),
+            [("垂尾頂端安裝。", "Mounted atop the fin.", "垂尾頂部に装備。"), ("後緣升降舵。", "Trailing-edge elevator.", "後縁昇降舵。"), ("形成T型尾翼。", "Forms a T-tail.", "T尾翼を形成。")],
+        ),
+        "gear": identify(
+            ("固定式中央主輪承受主要落地載荷並配液壓碟煞；機鼻另有小輪，部分機體選裝尾輪或翼尖小輪。", "A fixed central main wheel carries most landing loads and has a hydraulic disc brake. A small nose wheel is fitted, while tail and wingtip wheels may be optional depending on configuration.", "固定中央主輪が主な着陸荷重を受け油圧ディスクブレーキを備えます。小型前輪があり、構成により尾輪や翼端車輪が追加されます。"),
+            ("滑翔機不是一般左右兩組主腳；辨識時先找機身中線的大主輪，不要把翼尖接地保護誤算成客機式主起落架。", "This sailplane does not have conventional left and right main gears. Find the large centerline wheel first and do not count wingtip protection as airliner-style main gear.", "一般機の左右主脚ではありません。まず胴体中心線の大型主輪を確認し、翼端保護を旅客機式主脚と数えないでください。"),
+            [("固定中央主輪。", "Fixed centerline main wheel.", "固定中央主輪。"), ("液壓碟煞。", "Hydraulic disc brake.", "油圧ディスクブレーキ。"), ("尾輪／翼尖輪依配置選裝。", "Tail/wingtip wheels vary by configuration.", "尾輪・翼端車輪は構成による。")],
+        ),
+    },
+})
+
+CONTENT.update({
+    "heli": {
+        "overview": identify(
+            ("本頁以Leonardo AW139為直升機代表：五葉主旋翼、四葉尾旋翼、流線中型機身、雙渦輪軸引擎與可收放前三點式起落架形成主要輪廓。", "This page uses the Leonardo AW139 as its helicopter reference: a five-blade main rotor, four-blade tail rotor, streamlined medium fuselage, twin turboshafts and retractable tricycle gear define its profile.", "本ページはLeonardo AW139を直升機代表とし、5枚主回転翼、4枚尾部回転翼、流線型中型胴体、双発ターボシャフト、引込前三点式脚が外形を特徴づけます。"),
+            ("『直升機』涵蓋許多構型；本頁數據與照片僅代表AW139，不能套用到單發輕型機、同軸旋翼或無尾旋翼機。", "Helicopter covers many configurations. These photographs and figures describe the AW139, not light singles, coaxial types or NOTAR aircraft.", "『直升機』には多様な構成があり、本ページの写真・数値はAW139を示すもので、軽単発、同軸、NOTAR機には適用できません。"),
+            [("五葉主旋翼。", "Five-blade main rotor.", "5枚主回転翼。"), ("雙PT6C渦輪軸引擎。", "Twin PT6C turboshafts.", "PT6Cターボシャフト双発。"), ("可收放輪式起落架。", "Retractable wheeled gear.", "引込式車輪脚。")],
+        ),
+        "cockpit": identify(
+            ("AW139雙人座艙以四具大型電子飛行顯示器、中央系統／導航台、循環桿與各自的總距桿控制旋翼推力與姿態。", "The AW139's two-seat cockpit uses four large electronic flight displays, a central systems/navigation console, cyclic controls and individual collective levers to control attitude and rotor thrust.", "AW139の複座操縦席は4面大型電子表示、中央システム／航法台、サイクリック、各席コレクティブで姿勢と回転翼推力を制御します。"),
+            ("照片是早期AW139實機座艙；後期航電、任務設備與四螢幕軟體頁面會依客戶和年份變化。", "The photograph shows an early real AW139 cockpit. Later avionics, mission equipment and four-display pages vary by customer and production year.", "写真は初期AW139実機操縦席で、後期航電、任務装備、4画面の表示内容は顧客・製造年で異なります。"),
+            [("雙人並列座艙。", "Side-by-side two-pilot cockpit.", "横並び複座操縦席。"), ("四具大型電子顯示器。", "Four large electronic displays.", "4面大型電子表示。"), ("循環桿與總距桿。", "Cyclic and collective controls.", "サイクリックとコレクティブ。")],
+        ),
+        "windshield": identify(
+            ("機首有兩片大型前風擋，左右駕駛門另有側窗；下機鼻與頂部透明窗擴大向下及向上的視野。", "Two large front windshields dominate the nose, with side glazing in both crew doors; lower-nose and overhead transparencies extend downward and upward visibility.", "機首には大型前面風防2枚と左右操縦席扉の側窓があり、下部機首窓と頭上窓が上下方向の視界を広げます。"),
+            ("正面夜間照片中旋翼與燈光會產生光軌；辨識窗型時只看固定窗框，不把反光當成額外窗格。", "Rotor motion and lights create streaks in the night frontal image. Identify only the fixed frames and do not count reflections as extra panes.", "夜間正面写真では回転翼と灯火が光跡を作るため、固定窓枠だけを見て反射を追加窓と数えません。"),
+            [("兩片大型前風擋。", "Two large front windshields.", "大型前面風防2枚。"), ("駕駛門側窗。", "Crew-door side windows.", "操縦席扉側窓。"), ("下方與頂部透明窗。", "Lower and overhead transparencies.", "下部・頭上透明窓。")],
+        ),
+        "fuselage": identify(
+            ("AW139流線機身包含前方雙人座艙、可容納最多15名乘客的模組化客艙、兩側滑門、尾梁與起落架整流艙。", "The streamlined AW139 fuselage contains a two-seat cockpit, modular cabin for up to 15 passengers, sliding doors on both sides, a tail boom and landing-gear sponsons.", "流線型AW139胴体は前方複座操縦席、最大15名のモジュール客室、両側スライド扉、尾部ブーム、脚スポンソンで構成されます。"),
+            ("照片為軍用塗裝機，外部天線與任務設備不代表所有民用AW139；機身基本比例與門窗配置才是共通辨識點。", "The photograph shows a military aircraft; its antennas and mission fittings are not universal. Fuselage proportions and door/window layout are the shared cues.", "写真は軍用機で、外部アンテナや任務装備は全民間機共通ではありません。胴体比率と扉・窓配置が共通識別点です。"),
+            [("最多15名乘客。", "Up to 15 passengers.", "最大15名。"), ("兩側大型滑門。", "Large sliding doors on both sides.", "両側大型スライド扉。"), ("尾梁可拆式接合。", "Detachable tail-boom joint.", "着脱式尾部ブーム接合。")],
+        ),
+        "engine": identify(
+            ("兩具Pratt & Whitney Canada PT6C-67C渦輪軸引擎裝在客艙上方，透過主減速箱驅動主旋翼與尾旋翼，而不是直接以排氣產生主要推力。", "Two Pratt & Whitney Canada PT6C-67C turboshafts sit above the cabin and drive the main and tail rotors through the main gearbox rather than producing primary thrust directly from exhaust.", "Pratt & Whitney Canada PT6C-67Cターボシャフト2基を客室上部に搭載し、主減速機を介して主・尾回転翼を駆動し、排気で主推力を直接生みません。"),
+            ("照片顯示的是上甲板進氣口、整流罩與旋翼桅桿區；引擎本體被整流罩遮住，不能把整個上部凸起都稱為引擎。", "The photograph shows upper-deck intakes, cowlings and mast area. The engines are enclosed, so the entire upper fairing should not be called the engine.", "写真は上部デッキ吸気口、カウル、マスト部を示し、エンジン本体は覆われています。上部膨らみ全体がエンジンではありません。"),
+            [("PT6C-67C雙發。", "Twin PT6C-67Cs.", "PT6C-67C双発。"), ("FADEC控制。", "FADEC control.", "FADEC制御。"), ("透過主減速箱驅動旋翼。", "Drives rotors through the main gearbox.", "主減速機経由で回転翼駆動。")],
+        ),
+        "wingtip": identify(
+            ("AW139以四葉尾旋翼抵消主旋翼反扭矩並控制偏航；它裝在尾梁末端垂尾一側，不是固定翼飛機的翼尖小翼。", "The AW139's four-blade tail rotor counters main-rotor torque and controls yaw. It mounts beside the fin at the tail-boom end and is not a fixed-wing winglet.", "AW139の4枚尾部回転翼は主回転翼反トルクを打ち消しヨーを制御します。尾部ブーム末端の垂尾側面に付き、固定翼機のウイングレットではありません。"),
+            ("夜間長曝光使四片旋翼形成圓形光軌；葉片數應由靜止影像或型式資料確認，不能靠光環直接計數。", "Night exposure turns the four blades into circular light trails. Confirm blade count from static imagery or type data, not the luminous ring.", "夜間露光で4枚翼は円形光跡になります。枚数は静止写真や型式資料で確認し、光環を直接数えません。"),
+            [("四葉尾旋翼。", "Four-blade tail rotor.", "4枚尾部回転翼。"), ("抵消反扭矩。", "Counters main-rotor torque.", "主回転翼反トルクを相殺。"), ("控制偏航。", "Controls yaw.", "ヨー制御。")],
+        ),
+        "wing": identify(
+            ("直徑13.80公尺的五葉全鉸接主旋翼產生升力與大部分推進力；循環變距改變旋翼盤傾斜，總距變距同步改變五片葉片攻角。", "The 13.80 m, five-blade fully articulated main rotor produces lift and most propulsive force. Cyclic pitch tilts the rotor disc, while collective pitch changes all five blade angles together.", "直径13.80 mの5枚全関節式主回転翼が揚力と大部分の推進力を生み、サイクリックで回転面を傾け、コレクティブで5枚の迎角を同時変更します。"),
+            ("正面照片中旋翼盤因曝光而模糊；固定翼術語的『主翼』在此應理解為主旋翼系統，不是機身兩側短翼。", "The rotor disc blurs in the frontal photograph. Here the comparison category means the main-rotor system, not fixed wings on the fuselage sides.", "正面写真では回転面がぶれます。この比較欄の『主翼』は主回転翼系統を指し、胴体側面の固定翼ではありません。"),
+            [("五葉全鉸接旋翼。", "Five-blade fully articulated rotor.", "5枚全関節式回転翼。"), ("直徑13.80公尺。", "13.80 m diameter.", "直径13.80 m。"), ("循環與總距變距控制。", "Cyclic and collective pitch control.", "サイクリック・コレクティブ変距。")],
+        ),
+        "vstab": identify(
+            ("尾梁末端的垂直安定面在前飛時提供方向穩定，並承載尾旋翼與傳動末端；外形帶後掠前緣與截角頂端。", "The vertical fin at the tail-boom end adds directional stability in forward flight and supports the tail-rotor drivetrain, with a swept leading edge and clipped tip.", "尾部ブーム末端の垂直安定面は前進飛行の方向安定を補い、尾部回転翼駆動端を支持し、後退前縁と切り落とした頂部を持ちます。"),
+            ("照片中的旋翼光環遮住部分垂尾；垂尾是固定綠色表面，旋轉的圓環是尾旋翼。", "The rotor light trail obscures part of the fin. The fixed green surface is the vertical stabilizer; the rotating ring is the tail rotor.", "写真では回転翼光跡が垂尾の一部を隠します。固定された緑の面が垂直安定面、回転円が尾部回転翼です。"),
+            [("尾梁末端固定面。", "Fixed surface at tail-boom end.", "尾部ブーム末端固定面。"), ("增強前飛方向穩定。", "Adds forward-flight directional stability.", "前進時の方向安定を補助。"), ("承載尾旋翼傳動端。", "Supports tail-rotor drive end.", "尾部回転翼駆動端を支持。")],
+        ),
+        "hstab": identify(
+            ("尾梁後段設水平安定面，兩端帶複合材料小端板；它在前飛時平衡俯仰力矩並減少主旋翼持續修正量。", "A horizontal stabilizer on the aft tail boom carries small composite endplates. In forward flight it balances pitch moments and reduces continuous main-rotor correction.", "尾部ブーム後部の水平安定面には小型複合材端板があり、前進時のピッチモーメントを釣り合わせ主回転翼の連続補正を減らします。"),
+            ("斜側照片使水平尾翼與尾旋翼重疊；先找橫向固定翼面，再區分後方旋轉葉片。", "In the oblique image the tailplane overlaps the tail rotor. Find the transverse fixed surface first, then separate it from the rotating blades behind it.", "斜側写真では水平尾翼と尾部回転翼が重なるため、横向き固定翼面を先に探し、後方の回転翼と区別します。"),
+            [("安裝於尾梁後段。", "Mounted on aft tail boom.", "尾部ブーム後部に装備。"), ("兩端小型端板。", "Small endplates at both ends.", "両端に小型端板。"), ("輔助俯仰穩定。", "Supports pitch stability.", "ピッチ安定を補助。")],
+        ),
+        "gear": identify(
+            ("AW139採可收放前三點式輪式起落架：鼻腳雙輪，左右主腳各一輪，共四輪；主腳收入機身兩側整流艙。", "The AW139 has retractable tricycle wheeled gear: twin nose wheels and one wheel on each main leg, four wheels total, with the mains retracting into side sponsons.", "AW139は引込前三点式車輪脚で、前脚2輪、左右主脚各1輪の計4輪、主脚は側面スポンソンへ格納されます。"),
+            ("照片前方可見鼻腳雙輪與支柱，主腳位在機身較後兩側；不要把地面燈或艙門支架算成輪組。", "The frontal image shows the twin nose wheels and strut; the single main wheels sit farther aft on each side. Do not count ground lights or door hardware as wheels.", "正面写真では前脚2輪と支柱が見え、単輪主脚は後方左右にあります。地上灯や扉金具を車輪に数えません。"),
+            [("可收放前三點式。", "Retractable tricycle arrangement.", "引込前三点式。"), ("鼻腳雙輪。", "Twin nose wheels.", "前脚2輪。"), ("主腳每側單輪。", "One wheel per main leg.", "主脚片側1輪。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -3001,6 +3140,92 @@ def update(model: str) -> None:
         parts["vstab"]["specs"] = [["構型", "普通尾翼"], ["操縱面", "方向舵"]]
         parts["hstab"]["specs"] = [["構型", "全動式 stabilator"], ["配平", "防伺服／配平片"]]
         parts["gear"]["specs"] = [["配置", "固定前三點式"], ["總輪數", "3 輪"]]
+    if model == "ask21":
+        parts["overview"]["images"][0]["caption"] = tr(
+            "ASK 21 G-DJMC 飛機拖曳中的實機側視",
+            "Real ASK 21 G-DJMC under aerotow, side view",
+            "飛行機曳航中のASK 21 G-DJMC実機側面",
+        )
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "ASK 21 非標準改裝儀表板實照",
+            "Real non-standard ASK 21 instrument panel",
+            "ASK 21非標準改修計器板の実写",
+        )
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "ASK 21 機腹前斜角座艙罩（非正投影）",
+            "ASK 21 underside front-oblique canopy (not orthographic)",
+            "ASK 21機腹側斜め前方キャノピー（正投影ではありません）",
+        )
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "ASK 21 地面整備時的側面座艙罩與通風窗",
+            "ASK 21 side canopy and ventilation window during ground preparation",
+            "地上準備中のASK 21側面キャノピーと換気窓",
+        )
+        parts["engine"]["name"] = tr("動力與拖曳鉤", "Launch system and tow releases", "発航方式・曳航金具")
+        parts["engine"]["images"][0]["caption"] = tr(
+            "ASK 21 機鼻拖鉤關閉／開啟近照",
+            "ASK 21 nose tow release, closed and open",
+            "ASK 21機首曳航金具の閉・開状態",
+        )
+        parts["wingtip"]["name"] = tr("翼尖", "Wingtip", "翼端")
+        parts["fuselage"]["specs"] = [["材料", "玻璃纖維複合材料"], ["全長", "8.35 m"]]
+        parts["engine"]["specs"] = [["發動機", "無"], ["起飛方式", "飛機拖曳／絞盤"]]
+        parts["wing"]["specs"] = [["翼展", "17.00 m"], ["空氣煞車", "翼上表面"]]
+        parts["wingtip"]["specs"] = [["構型", "普通圓角翼尖"], ["翼尖小輪", "選配"]]
+        parts["vstab"]["specs"] = [["操縱面", "方向舵"], ["尾型", "T 型尾翼"]]
+        parts["hstab"]["specs"] = [["位置", "垂尾頂端"], ["操縱面", "升降舵"]]
+        parts["gear"]["specs"] = [["主輪", "固定中央單輪"], ["煞車", "液壓碟煞"]]
+        specs = data["specifications"]
+        specs["重量"] = [row for row in specs["重量"] if row[0] != "最大水袋壓艙"]
+        specs["容量"] = [["座艙有效載重", "前後座各最多 110 kg"], ["油箱容量", "無（純滑翔機）"]]
+        for row in specs["性能"]:
+            if row[0] == "最小下沉率": row[1] = "0.65 m/s"
+        specs["發動機"] = [["型號", "無動力（純滑翔機）"], ["型式", "無發動機"], ["起飛方式", "絞盤／飛機拖曳"], ["拖鉤", "機鼻與重心安全脫鉤裝置"], ["衍生型", "ASK 21 Mi 為另設自力起飛動力的衍生型"]]
+    if model == "heli":
+        parts["overview"]["images"][0]["caption"] = tr(
+            "愛爾蘭空軍 AW139 277 地面實機側視",
+            "Irish Air Corps AW139 277 on the ground, side view",
+            "アイルランド空軍AW139 277地上実機側面",
+        )
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "早期 AW139 四螢幕實機座艙",
+            "Early AW139 real four-display cockpit",
+            "初期AW139の4画面実機操縦席",
+        )
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "AW139 夜間正面外窗；旋翼與燈光有光軌",
+            "AW139 front glazing at night; rotor and lights create trails",
+            "AW139夜間正面窓；回転翼と灯火に光跡あり",
+        )
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "AW139 側面駕駛艙窗與客艙窗",
+            "AW139 side cockpit and cabin glazing",
+            "AW139側面操縦席窓・客室窓",
+        )
+        parts["engine"]["images"][0]["caption"] = tr(
+            "AW139 上甲板引擎進氣、整流罩與旋翼桅桿區",
+            "AW139 upper-deck engine intakes, cowlings and rotor-mast area",
+            "AW139上部デッキのエンジン吸気・カウル・回転翼マスト部",
+        )
+        parts["wingtip"]["name"] = tr("尾旋翼", "Tail rotor", "尾部回転翼")
+        parts["wingtip"]["images"][0]["caption"] = tr(
+            "四葉尾旋翼夜間光軌；葉片本體部分模糊",
+            "Four-blade tail-rotor light trail; blades partly blurred",
+            "4枚尾部回転翼の夜間光跡；翼本体は一部ぶれています",
+        )
+        parts["wing"]["name"] = tr("主旋翼", "Main rotor", "主回転翼")
+        parts["fuselage"]["specs"] = [["代表型", "Leonardo AW139"], ["載客", "最多 15 名"]]
+        parts["engine"]["specs"] = [["型號", "PT6C-67C ×2"], ["型式", "渦輪軸"]]
+        parts["wingtip"]["specs"] = [["葉片數", "4 葉"], ["功能", "反扭矩／偏航控制"]]
+        parts["wing"]["specs"] = [["葉片數", "5 葉"], ["直徑", "13.80 m"]]
+        parts["vstab"]["specs"] = [["位置", "尾梁末端"], ["功能", "方向穩定"]]
+        parts["hstab"]["specs"] = [["位置", "尾梁後段"], ["端板", "複合材料小翼"]]
+        parts["gear"]["specs"] = [["配置", "可收放前三點式"], ["總輪數", "4 輪"]]
+        specs = data["specifications"]
+        for row in specs["性能"]:
+            if row[0] == "飛行距離（滿載）": row[1] = "最遠 1,187 km（641 nmi，輔助油箱、無預備油）"
+            if row[0] == "最大操作速度（VMO）": row[:] = ["最大允許速度（VNE）", "309 km/h（167 kt）"]
+        specs["發動機"] = [["型號", "P&WC PT6C-67C 渦輪軸 ×2"], ["型式", "FADEC 渦輪軸發動機"], ["起飛功率（5分鐘）", "單具 1,252 kW（1,679 shp）"], ["最大連續功率", "單具 1,142 kW（1,531 shp）"], ["主旋翼", "5 葉全鉸接，直徑 13.80 m"], ["尾旋翼", "4 葉"]]
     if model == "cs300":
         parts["cockpit"]["images"][0]["caption"] = tr(
             "JetBlue A220-300 實機座艙；右側座椅遮擋部分設備",
