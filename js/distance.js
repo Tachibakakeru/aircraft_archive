@@ -1,4 +1,4 @@
-﻿"use strict";
+"use strict";
 /* ═══════════════════════════════════════════════
    距離與飛行時間計算器 — 選兩座機場與一款機型，算大圓距離
    （haversine 公式）與粗估飛行時間（距離 / 巡航速度 + 30 分鐘
@@ -40,7 +40,7 @@ async function airportCoords(id){
 async function cruiseSpeedKmh(id){
   if (speedCache[id] != null) return speedCache[id];
   try {
-    const res = await fetch(`data/${id}.json?v=164`);
+    const res = await fetch(`data/${id}.json?v=165`);
     if (!res.ok) throw new Error();
     const d = await res.json();
     let kmh = null;
@@ -107,7 +107,7 @@ function fmtHours(h){
   try {
     const [aRes, fRes] = await Promise.all([
       fetch("data/airports.json?v=128"),
-      fetch("data/fleet.json?v=164"),
+      fetch("data/fleet.json?v=165"),
     ]);
     AIRPORTS = (await aRes.json()).airports;
     FLEET = (await fRes.json()).aircraft;

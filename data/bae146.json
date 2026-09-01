@@ -2,128 +2,546 @@
   "title": "BAe 146",
   "sub": "區域客機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "BAe 146 的機身是承載客艙、貨艙與駕駛艙的主體結構，採半硬殼式設計，由蒙皮、隔框與縱梁共同受力，並在高空維持座艙加壓。",
+      "summary": {
+        "zh": "146-200全長約28.55公尺，機身短而寬；側面可見前後艙門、規整窗列與高翼穿越機身上部的布局。",
+        "en": "The 146-200 is about 28.55 m long with a short broad fuselage. The side view shows forward and aft doors, an even window row and the high wing crossing above the cabin.",
+        "ja": "146-200は全長約28.55 mの短く太い胴体で、前後扉、整った窓列、客室上方を通る高翼配置が側面から分かります。"
+      },
       "specs": [
         [
-          "結構形式",
-          "半硬殼式"
+          "全長",
+          "28.55 m"
         ],
         [
-          "主要材料",
-          "鋁合金／複合材料"
+          "機身寬度",
+          "3.56 m"
         ]
       ],
-      "fact": "機身每次飛行都會隨座艙加壓微幅脹縮，因此壽命以「起降循環次數」計算，而非單純的飛行時數。",
+      "fact": {
+        "zh": "照片是1988年的N142AC底片掃描；顆粒不代表裁切失焦，且塗裝色帶不等於結構接縫。",
+        "en": "This is a scan of N142AC photographed in 1988. Film grain is not crop blur, and livery stripes are not structural seams.",
+        "ja": "1988年撮影N142ACのフィルムスキャンです。粒状感は切り出しのピンぼけではなく、塗装帯も構造継ぎ目ではありません。"
+      },
       "bullets": [
-        "承載客艙、貨艙與駕駛艙",
-        "半硬殼式蒙皮結構",
-        "維持高空座艙加壓"
+        {
+          "zh": "全長約28.55公尺。",
+          "en": "About 28.55 m long.",
+          "ja": "全長約28.55 m。"
+        },
+        {
+          "zh": "短而寬的客艙。",
+          "en": "Short broad cabin.",
+          "ja": "短く幅広い客室。"
+        },
+        {
+          "zh": "高翼位於窗列上方。",
+          "en": "High wing above the window row.",
+          "ja": "窓列上方の高翼。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/bae146/fuselage.jpg?v=41d25201fe8d",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:American_Airlines_BAe_146-200;_N142AC,_April_1988_BZE_(4848631160).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "主翼為 BAe 146 產生升力，翼內通常兼作油箱；翼面配置副翼、襟翼與縫翼等操縱面。",
+      "summary": {
+        "zh": "BAe 146採高置、低後掠主翼，四具引擎掛在翼下；後緣大型襟翼與擾流板支援短場與陡角進場任務。",
+        "en": "The BAe 146 uses a high, modestly swept wing with four underslung engines. Large trailing-edge flaps and spoilers support short-field and steep-approach work.",
+        "ja": "BAe 146は後退の小さい高翼に4発を吊り下げ、大型後縁フラップとスポイラーが短距離・急角度進入を支えます。"
+      },
       "specs": [
         [
-          "功能",
-          "產生升力"
+          "翼展",
+          "26.34 m"
         ],
         [
-          "翼內",
-          "主油箱"
+          "翼面積",
+          "77.3 m²"
         ]
       ],
-      "fact": "機翼在飛行中會明顯上彎，這是刻意的彈性設計，用以吸收陣風與機動時的載荷。",
+      "fact": {
+        "zh": "地面照片中的襟翼位置不代表所有飛行階段；辨識主要看高翼與四發配置。",
+        "en": "Flap position in a ground photograph does not represent every flight phase. The high-wing/four-engine arrangement is the primary clue.",
+        "ja": "地上写真のフラップ位置は全飛行段階を示しません。高翼・4発配置を主な識別点にします。"
+      },
       "bullets": [
-        "產生主要升力",
-        "翼內兼作油箱",
-        "配置增升與滾轉操縱面"
+        {
+          "zh": "高置低後掠翼。",
+          "en": "High wing with modest sweep.",
+          "ja": "後退の小さい高翼。"
+        },
+        {
+          "zh": "大型後緣襟翼。",
+          "en": "Large trailing-edge flaps.",
+          "ja": "大型後縁フラップ。"
+        },
+        {
+          "zh": "四具翼下引擎。",
+          "en": "Four underwing engines.",
+          "ja": "翼下4発。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/bae146/wing.jpg?v=2360ea86cc69",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "BAe 146 的渦輪扇引擎。前方風扇吸入的空氣大部分繞過核心機直接向後噴出，兼顧推力、油耗與噪音。",
+      "summary": {
+        "zh": "146-200的四具Lycoming ALF 502R分成每側兩具，緊貼高翼下方；小直徑短艙與短吊架是典型輪廓。",
+        "en": "Four Lycoming ALF 502Rs are paired two per side close beneath the high wing. Small-diameter nacelles and short pylons are characteristic.",
+        "ja": "146-200のLycoming ALF 502Rは片側2基ずつ高翼直下に密接配置され、小径ナセルと短いパイロンが特徴です。"
+      },
       "specs": [
         [
-          "型式",
-          "渦輪扇引擎"
+          "型號",
+          "Lycoming ALF 502R ×4"
+        ],
+        [
+          "單具推力",
+          "約 31 kN"
         ]
       ],
-      "fact": "現代渦輪扇約八成推力來自風扇旁通氣流，引擎越「胖」通常代表旁通比越高、越省油。",
+      "fact": {
+        "zh": "照片中的黑色企鵝塗裝會弱化短艙邊界；先找四個圓形進氣口，再沿吊架連回高翼。",
+        "en": "The black penguin livery hides nacelle edges. Find four circular inlets first, then trace their short pylons to the high wing.",
+        "ja": "黒いペンギン塗装でナセル境界が見えにくいため、4つの円形吸入口を探し、短いパイロンを高翼まで追います。"
+      },
       "bullets": [
-        "高旁通比渦輪扇",
-        "旁通氣流提供主推力"
+        {
+          "zh": "每側兩具引擎。",
+          "en": "Two engines per side.",
+          "ja": "片側2発。"
+        },
+        {
+          "zh": "小直徑圓形短艙。",
+          "en": "Small circular nacelles.",
+          "ja": "小径円形ナセル。"
+        },
+        {
+          "zh": "緊貼高翼下方。",
+          "en": "Close beneath the high wing.",
+          "ja": "高翼直下に密接。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/bae146/engine.jpg?v=3a8a54199d25",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向（偏航）穩定性，後緣方向舵用於協調轉彎、側風修正與單發失效時的推力補償。",
+      "summary": {
+        "zh": "高大的後掠垂直尾翼支撐頂端水平尾翼，構成T尾；N142AC側面能看清垂尾根部、方向舵與頂端接合。",
+        "en": "The tall swept fin supports the horizontal stabilizer at its tip, forming a T-tail. N142AC's side view shows the fin root, rudder and top junction.",
+        "ja": "高く後退した垂尾の頂部に水平尾翼を載せるT尾翼で、N142AC側面では根元、方向舵、頂部接合が見えます。"
+      },
       "specs": [
+        [
+          "構型",
+          "T 型尾翼"
+        ],
         [
           "操縱面",
           "方向舵"
         ]
       ],
-      "fact": "垂直尾翼是航空公司塗裝最醒目的位置，許多人辨認航空公司靠的就是尾翼圖案。",
+      "fact": {
+        "zh": "T尾並非146獨有；需搭配高翼四發與短機身，才能排除DC-9、MD-80或其他支線機。",
+        "en": "A T-tail is not unique to the 146. Combine it with the high wing, four engines and short fuselage to exclude DC-9s, MD-80s and other regional jets.",
+        "ja": "T尾翼だけでは146に固有ではありません。高翼4発と短い胴体を組み合わせて他機種を除外します。"
+      },
       "bullets": [
-        "提供偏航穩定",
-        "方向舵協調轉彎",
-        "航空公司塗裝位置"
+        {
+          "zh": "高大後掠垂尾。",
+          "en": "Tall swept fin.",
+          "ja": "高い後退垂尾。"
+        },
+        {
+          "zh": "方向舵位於後緣。",
+          "en": "Rudder on the trailing edge.",
+          "ja": "後縁の方向舵。"
+        },
+        {
+          "zh": "頂端承接水平尾翼。",
+          "en": "Supports the top-mounted tailplane.",
+          "ja": "頂部で水平尾翼を支持。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/bae146/vstab.jpg?v=6648a03c015a",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:American_Airlines_BAe_146-200;_N142AC,_April_1988_BZE_(4848631160).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，後緣升降舵控制機頭上下，整片安定面角度可配平以平衡重心變化。",
+      "summary": {
+        "zh": "水平尾翼裝在垂尾頂端，左右形成清楚的T字；機尾後端另有可左右張開的分瓣式空中煞車，兩者不是同一構件。",
+        "en": "The horizontal stabilizer sits atop the fin to form a clear T. Separate clamshell airbrakes open from the tailcone; they are not the tailplane.",
+        "ja": "水平尾翼は垂尾頂部にあり明確なT字を作ります。尾錐には左右に開く別体クラムシェル式エアブレーキがあり、水平尾翼とは別部品です。"
+      },
       "specs": [
         [
-          "操縱面",
-          "升降舵"
+          "位置",
+          "垂尾頂端"
+        ],
+        [
+          "尾錐",
+          "分瓣式空中煞車"
         ]
       ],
-      "fact": "巡航中水平尾翼常產生向下的力，用來平衡主翼升力與重心的力矩——飛機是在精巧的平衡上飛行。",
+      "fact": {
+        "zh": "側面照看不到空中煞車展開狀態；不能把一般尾錐輪廓當成已開啟。",
+        "en": "The side view does not show the airbrake deployed; do not interpret the normal tailcone outline as an open brake.",
+        "ja": "側面写真ではエアブレーキは展開しておらず、通常の尾錐輪郭を開状態と解釈しないでください。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "升降舵控制機頭",
-        "可配平平衡重心"
+        {
+          "zh": "垂尾頂端安裝。",
+          "en": "Mounted atop the fin.",
+          "ja": "垂尾頂部に装備。"
+        },
+        {
+          "zh": "形成T型尾翼。",
+          "en": "Forms a T-tail.",
+          "ja": "T尾翼を形成。"
+        },
+        {
+          "zh": "尾錐另有分瓣煞車。",
+          "en": "Separate tailcone clamshell brake.",
+          "ja": "尾錐に別体クラムシェルブレーキ。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/bae146/hstab.jpg?v=1058505d1e67",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:American_Airlines_BAe_146-200;_N142AC,_April_1988_BZE_(4848631160).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "BAe 146 採前三點式起落架，支撐地面重量並吸收落地衝擊，起飛後多可收入機身以減阻。",
+      "summary": {
+        "zh": "BAe 146採前三點式六輪配置：左右主腳各雙輪、鼻腳雙輪。高翼讓主腳以長支柱從機身下部伸出。",
+        "en": "The BAe 146 has six-wheel tricycle gear: twin wheels on each main unit and twin nose wheels. Its high wing leaves long main struts extending from the lower fuselage.",
+        "ja": "BAe 146は左右主脚各2輪と前脚2輪の計6輪で、高翼のため長い主脚支柱が胴体下部から伸びます。"
+      },
       "specs": [
         [
           "配置",
           "前三點式"
+        ],
+        [
+          "總輪數",
+          "6 輪"
         ]
       ],
-      "fact": "落地瞬間輪胎從靜止被瞬間帶轉到極高轉速，胎內多充填氮氣以避免高溫起火。",
+      "fact": {
+        "zh": "照片有登機梯與地勤設備遮擋；先沿支柱找到輪軸，不要把梯輪算進起落架。",
+        "en": "Stairs and ground equipment obscure parts of the view. Trace each strut to its axle and do not count stair wheels as landing gear.",
+        "ja": "階段や地上設備で一部が隠れます。支柱から車軸を追い、階段の車輪を着陸装置に数えないでください。"
+      },
       "bullets": [
-        "支撐地面重量",
-        "吸收落地衝擊",
-        "前輪負責地面轉向"
+        {
+          "zh": "主腳每側雙輪。",
+          "en": "Twin wheels per main unit.",
+          "ja": "主脚は片側2輪。"
+        },
+        {
+          "zh": "鼻腳雙輪。",
+          "en": "Twin nose wheels.",
+          "ja": "前脚2輪。"
+        },
+        {
+          "zh": "全機共六輪。",
+          "en": "Six wheels overall.",
+          "ja": "全機計6輪。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/bae146/gear.jpg?v=eccb7ebb0c5e",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "本頁以BAe 146-200為尺寸基準。短粗機身、高翼下四具小型引擎、T尾與沒有翼尖小翼的組合，是最實用的外觀辨識法。",
+        "en": "This page uses the BAe 146-200 as its dimensional reference. A short broad fuselage, four small engines under a high wing, T-tail and no winglets are its practical identifying combination.",
+        "ja": "本ページはBAe 146-200の寸法を基準とします。短く太い胴体、高翼下の小型4発、T尾翼、ウイングレットなしの組合せが実用的な識別点です。"
+      },
+      "fact": {
+        "zh": "Avro RJ85沿用相同基本外形；僅靠遠距離照片常無法區分早期146-200與後期RJ85，需核對機籍與引擎／座艙版本。",
+        "en": "The Avro RJ85 retains the same basic shape. Distant photos often cannot separate an early 146-200 from a later RJ85 without registration and engine/cockpit evidence.",
+        "ja": "Avro RJ85も同じ基本外形で、遠景だけでは初期146-200と後期RJ85を分けにくく、機籍やエンジン・操縦席仕様の確認が必要です。"
+      },
+      "bullets": [
+        {
+          "zh": "高翼四發。",
+          "en": "High wing with four engines.",
+          "ja": "高翼4発。"
+        },
+        {
+          "zh": "短粗機身。",
+          "en": "Short broad fuselage.",
+          "ja": "短く太い胴体。"
+        },
+        {
+          "zh": "T尾與無小翼翼尖。",
+          "en": "T-tail and unwingleted tips.",
+          "ja": "T尾翼と小翼なしの翼端。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/bae146/overview.jpg?v=e504080eecee",
+          "caption": {
+            "zh": "Aerovías DAP BAe 146-200 CC-ACO（2016實照）",
+            "en": "Aerovías DAP BAe 146-200 CC-ACO (2016 photograph)",
+            "ja": "Aerovías DAP BAe 146-200 CC-ACO（2016年実写）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "照片是後期Avro RJ70實機座艙，作為146／Avro RJ家族布局參考；可見雙操縱盤、電子飛航顯示與中央四具引擎控制。",
+        "en": "This real later Avro RJ70 cockpit is a 146/Avro RJ family layout reference. It shows twin yokes, electronic flight displays and center controls for four engines.",
+        "ja": "写真は後期Avro RJ70の実機操縦席で、146／Avro RJ系列の配置参考です。左右の操縦輪、電子飛行表示、中央の4発操作系が見えます。"
+      },
+      "fact": {
+        "zh": "它不是早期BAe 146-200的原始類比座艙；比較儀表時必須把世代差異列入。",
+        "en": "It is not an early BAe 146-200's original analog flight deck; account for the generation difference when comparing instruments.",
+        "ja": "初期BAe 146-200の純アナログ操縦席ではないため、計器比較では世代差を考慮します。"
+      },
+      "bullets": [
+        {
+          "zh": "RJ70實照，家族參考。",
+          "en": "Actual RJ70; family reference.",
+          "ja": "RJ70実写、系列参考。"
+        },
+        {
+          "zh": "雙操縱盤。",
+          "en": "Twin control yokes.",
+          "ja": "左右の操縦輪。"
+        },
+        {
+          "zh": "四具引擎控制。",
+          "en": "Controls for four engines.",
+          "ja": "4発分の操作系。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/bae146/cockpit.jpg?v=f73d1d3a052a",
+          "caption": {
+            "zh": "Avro RJ70 EI-CPJ實機座艙；146／Avro RJ家族參考，非早期146-200原始座艙",
+            "en": "Real Avro RJ70 EI-CPJ cockpit; 146/Avro RJ family reference, not an early 146-200 flight deck",
+            "ja": "Avro RJ70 EI-CPJ実機操縦席：146／Avro RJ系列参考、初期146-200操縦席ではありません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Avro_RJ70_cockpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "正面與側斜角顯示BAe 146家族的分片式外窗：兩片中央風擋、外側梯形窗與較低的側窗共同形成圓鈍機鼻表情。",
+        "en": "Front and side-oblique views show the BAe 146 family's segmented glazing: two center panes, outer trapezoidal panes and lower side windows on a blunt nose.",
+        "ja": "正面と斜め側面で、中央2枚、外側台形窓、低い側窓からなるBAe 146系列の分割窓と丸い機首形状を確認できます。"
+      },
+      "fact": {
+        "zh": "正面照為同家族G-JOTR，側面照為146-200；窗型可比較家族特徵，但不能單靠它判定-200次型。",
+        "en": "The front view is family aircraft G-JOTR and the side view is a 146-200. They show family glazing, but windows alone cannot establish the -200 subtype.",
+        "ja": "正面は同系列G-JOTR、側面は146-200です。系列の窓形比較には使えますが、窓だけで-200とは確定できません。"
+      },
+      "bullets": [
+        {
+          "zh": "中央兩片風擋。",
+          "en": "Two center windshields.",
+          "ja": "中央風防2枚。"
+        },
+        {
+          "zh": "外側梯形窗。",
+          "en": "Outer trapezoidal panes.",
+          "ja": "外側の台形窓。"
+        },
+        {
+          "zh": "圓鈍短機鼻。",
+          "en": "Blunt compact nose.",
+          "ja": "丸く短い機首。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/bae146/window-front.jpg?v=18c68e6fd637",
+          "caption": {
+            "zh": "BAe 146／Avro RJ家族G-JOTR正面窗型（2016實照）",
+            "en": "Front glazing of BAe 146/Avro RJ family aircraft G-JOTR (2016 photograph)",
+            "ja": "BAe 146／Avro RJ系列G-JOTRの正面窓（2016年実写）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BAe_146_G-JOTR_IMG_8067_(31347110881).jpg"
+        },
+        {
+          "src": "assets/reference/bae146/window-side.jpg?v=1c552f04701f",
+          "caption": {
+            "zh": "Aerovías DAP BAe 146-200 CC-ACO側窗（實照裁切）",
+            "en": "Aerovías DAP BAe 146-200 CC-ACO side windows (photographic crop)",
+            "ja": "Aerovías DAP BAe 146-200 CC-ACO側窓（実写切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "BAe 146-200的標準翼尖沒有直立翼尖小翼，外翼緩慢收尖；近翼尖的燈具與翼緣能協助定位。",
+        "en": "The standard BAe 146-200 tip has no upright winglet and the outer wing tapers gently. Tip lights and wing edges help locate it.",
+        "ja": "標準BAe 146-200の翼端には直立ウイングレットがなく、外翼は緩やかに先細りします。翼端灯と翼縁で位置を確認できます。"
+      },
+      "fact": {
+        "zh": "高置水平尾翼也向左右伸展，遠景中不要把T尾兩端誤認為主翼翼尖。",
+        "en": "The high tailplane also extends sideways; do not mistake its ends for main-wing tips in distant views.",
+        "ja": "高い水平尾翼も左右へ伸びるため、遠景でその端を主翼端と誤認しないでください。"
+      },
+      "bullets": [
+        {
+          "zh": "無直立式小翼。",
+          "en": "No upright winglet.",
+          "ja": "直立小翼なし。"
+        },
+        {
+          "zh": "外翼緩慢收尖。",
+          "en": "Gently tapered outer wing.",
+          "ja": "緩やかに先細る外翼。"
+        },
+        {
+          "zh": "主翼位於機身高處。",
+          "en": "Main wing high on the fuselage.",
+          "ja": "胴体上部の主翼。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/bae146/wingtip.jpg?v=64868f050019",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg"
+        }
+      ]
     }
   },
   "specifications": {

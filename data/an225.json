@@ -2,18 +2,30 @@
   "title": "Antonov An-225 Mriya",
   "sub": "史上最大的飛機 — 點擊機體部位查看解說",
   "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
     "fuselage",
-    "wing",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "An-225「夢想」（Mriya）是史上最大、最重的飛機，全長 84 公尺。龐大的機身為運送蘇聯暴風雪號太空梭而生，貨艙長達 43 公尺，可吞下整節火車車廂或發電機組。",
+      "summary": {
+        "zh": "84公尺機身具有抬高座艙與可向上掀起的機鼻貨門；側面窗數很少，重點是巨大的加壓貨艙而非客艙窗列。",
+        "en": "The 84 m fuselage has a raised cockpit and an upward-opening nose cargo door. Few side windows emphasize its huge pressurized freight hold rather than a passenger cabin.",
+        "ja": "全長84 mの胴体は高い操縦席と上方へ開く機首貨物扉を持ち、側窓は少なく、旅客室より巨大な与圧貨物室が主体です。"
+      },
       "specs": [
         [
           "全長",
@@ -32,18 +44,52 @@
           "僅 1 架"
         ]
       ],
-      "fact": "An-225 全世界只造出一架，2022 年在基輔近郊的機場毀於戰火。它保持著單機運送最重貨物（189 噸）等數十項世界紀錄。",
+      "fact": {
+        "zh": "照片中的塗裝線不是艙門接縫；辨識機鼻貨門應找整個機鼻外殼的接合線與抬高座艙。",
+        "en": "Livery stripes are not door seams. Identify the nose door by the shell joint around the nose and the raised cockpit.",
+        "ja": "塗装線を扉の継ぎ目と混同せず、機首外殻の接合線と高い操縦席で機首扉を確認します。"
+      },
       "bullets": [
-        "史上最大最重的飛機",
-        "為運送太空梭而生",
-        "貨艙可容整節火車車廂"
+        {
+          "zh": "可掀式機鼻貨門。",
+          "en": "Hinged nose cargo door.",
+          "ja": "上開き機首貨物扉。"
+        },
+        {
+          "zh": "側窗數量很少。",
+          "en": "Very few side windows.",
+          "ja": "側窓が非常に少ない。"
+        },
+        {
+          "zh": "貨艙長約43.3公尺。",
+          "en": "Cargo hold about 43.3 m long.",
+          "ja": "貨物室長約43.3 m。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/an225/fuselage.jpg?v=e78646e23b1e",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_front_left_view.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "An-225 的巨大主翼翼展達 88.4 公尺，是有史以來量產飛機中最寬的。寬廣的翼面積提供承載 640 噸起飛重量所需的龐大升力，翼下掛載六具引擎。",
+      "summary": {
+        "zh": "高置後掠主翼翼展88.4公尺、面積905平方公尺；六具引擎分成每側三具，構成An-225最醒目的正面輪廓。",
+        "en": "The high swept wing spans 88.4 m and covers 905 m². Six engines arranged three per side define the An-225's frontal silhouette.",
+        "ja": "高位置の後退翼は幅88.4 m、面積905 m²で、片側3発ずつの配置がAn-225の正面輪郭を決めます。"
+      },
       "specs": [
         [
           "翼展",
@@ -62,18 +108,52 @@
           "6 具"
         ]
       ],
-      "fact": "An-225 的翼展比波音 747-8 還寬 20 多公尺——把它停在標準足球場上，機翼會從兩側邊線大幅突出。",
+      "fact": {
+        "zh": "照片為斜側面，不可直接用像素量翼展或後掠角；外翼被透視壓縮。",
+        "en": "This oblique side view cannot be used to measure span or sweep from pixels; perspective foreshortens the outer wing.",
+        "ja": "斜め側面写真なので、ピクセルから翼幅や後退角は測れず、外翼は遠近感で短く見えます。"
+      },
       "bullets": [
-        "翼展 88.4 公尺，量產機最寬",
-        "承載 640 噸起飛重量",
-        "翼下掛載六具引擎"
+        {
+          "zh": "高置後掠翼。",
+          "en": "High-mounted swept wing.",
+          "ja": "高位置の後退翼。"
+        },
+        {
+          "zh": "翼展88.4公尺。",
+          "en": "88.4 m span.",
+          "ja": "翼幅88.4 m。"
+        },
+        {
+          "zh": "每側三具吊架。",
+          "en": "Three pylons per side.",
+          "ja": "片側3本のパイロン。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/an225/wing.jpg?v=5f6388348fed",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_front_left_view.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "ENGINE",
-      "summary": "An-225 配備六具 Progress D-18T 渦輪扇引擎，全部吊掛於主翼下方。六發配置在噴射運輸機中極為罕見，是為了推動這架 640 噸巨獸升空所必需。",
+      "summary": {
+        "zh": "每側主翼吊掛三具Progress D-18T，合計六具；近照可同時看到三個大型圓形進氣口與各自獨立的短艙、吊架。",
+        "en": "Three Progress D-18Ts hang beneath each wing, six in total. The crop shows three large circular inlets with separate nacelles and pylons.",
+        "ja": "片翼3基、計6基のProgress D-18Tを搭載し、写真では3つの大径円形吸入口と独立したナセル・パイロンが見えます。"
+      },
       "specs": [
         [
           "型式",
@@ -92,18 +172,52 @@
           "約 5.6 : 1"
         ]
       ],
-      "fact": "多數大型客貨機用四具引擎就夠了，An-225 卻需要六具——單是這些引擎的總推力，就相當於七、八架小型客機的動力總和。",
+      "fact": {
+        "zh": "An-124通常是四發；六個進氣口是區分兩型最直接的外觀線索。",
+        "en": "An An-124 normally has four engines; six inlets are the clearest external clue separating the two types.",
+        "ja": "An-124は通常4発で、6つの吸入口が両機を分ける最も直接的な外観手掛かりです。"
+      },
       "bullets": [
-        "六具 D-18T 渦輪扇",
-        "翼下吊掛配置",
-        "總推力約 1,380 kN"
+        {
+          "zh": "每翼三具引擎。",
+          "en": "Three engines per wing.",
+          "ja": "片翼3発。"
+        },
+        {
+          "zh": "D-18T大型圓形進氣口。",
+          "en": "Large circular D-18T inlets.",
+          "ja": "D-18Tの大径円形吸入口。"
+        },
+        {
+          "zh": "總計六發。",
+          "en": "Six engines total.",
+          "ja": "合計6発。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/an225/engine.jpg?v=0e6066ef6105",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_Mriya_(14425906933).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "An-225 採用雙垂直尾翼（H 型尾翼），兩片安定面立於水平尾翼兩端。這是為了避開機身後方運載大型外部貨物時的氣流干擾，也提供足夠的方向穩定性。",
+      "summary": {
+        "zh": "兩片大型垂直尾翼立在水平尾翼兩端，形成H型尾翼；後方近照能同時看到左右方向舵外形。",
+        "en": "Two large fins stand at the ends of the horizontal stabilizer, forming an H-tail. The rear close-up shows both rudder profiles.",
+        "ja": "大型垂直尾翼2枚が水平尾翼両端に立つH尾翼で、後方近接写真では左右方向舵の輪郭も見えます。"
+      },
       "specs": [
         [
           "構型",
@@ -122,18 +236,52 @@
           "偏航穩定"
         ]
       ],
-      "fact": "雙垂尾是為了「背貨」設計——原本 An-225 要在機背上馱運暴風雪號太空梭，單一中央垂尾會被太空梭尾流干擾，因此改用兩側雙垂尾。",
+      "fact": {
+        "zh": "雙垂尾為機背載運Buran時避開中央貨物尾流而採用；不是兩架飛機重疊。",
+        "en": "The twin fins were adopted to stay clear of wake from the externally carried Buran; they are not overlapping tails from two aircraft.",
+        "ja": "双垂尾は機背搭載するBuranの後流を避けるためで、2機の尾翼が重なったものではありません。"
+      },
       "bullets": [
-        "雙垂尾 H 型構型",
-        "為機背載運太空梭而設計",
-        "兩側各一片方向舵"
+        {
+          "zh": "水平尾翼兩端各一片。",
+          "en": "One fin at each tailplane tip.",
+          "ja": "水平尾翼両端に各1枚。"
+        },
+        {
+          "zh": "兩片方向舵。",
+          "en": "Two rudders.",
+          "ja": "方向舵2枚。"
+        },
+        {
+          "zh": "H型尾翼。",
+          "en": "H-tail arrangement.",
+          "ja": "H型尾翼。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/an225/vstab.jpg?v=2f8adf2d9b23",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:The_Antonov_An-225_Mriya_-_back.JPG"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定，並在兩端支撐雙垂直尾翼，形成 H 型尾翼結構。升降舵控制這架巨機的機頭俯仰。",
+      "summary": {
+        "zh": "巨大水平尾翼橫跨後機身上方，翼展約32.65公尺，兩端支撐雙垂尾；後視圖可看出整個H型結構。",
+        "en": "The huge horizontal stabilizer spans about 32.65 m above the aft fuselage and supports a fin at each end, creating the complete H-tail.",
+        "ja": "巨大な水平尾翼は後部胴体上方で約32.65 mに達し、両端の垂尾を支えてH型構造を作ります。"
+      },
       "specs": [
         [
           "操縱面",
@@ -152,18 +300,52 @@
           "俯仰穩定"
         ]
       ],
-      "fact": "An-225 的水平尾翼翼展 32.65 公尺，比許多窄體客機（如 A320，翼展 34 公尺）的整個主翼還要接近——尾翼就有一架客機那麼大。",
+      "fact": {
+        "zh": "裁切中的外側白色翼面是水平尾翼，不是主翼；可用它與垂尾的直角接合判斷。",
+        "en": "The outer white surfaces here are tailplanes, not main wings; their near-right-angle junction with the fins identifies them.",
+        "ja": "外側の白い翼面は主翼ではなく水平尾翼で、垂尾とのほぼ直角の接合で判別できます。"
+      },
       "bullets": [
-        "提供俯仰穩定",
-        "兩端支撐雙垂尾",
-        "翼展達 32.65 公尺"
+        {
+          "zh": "翼展約32.65公尺。",
+          "en": "About 32.65 m span.",
+          "ja": "翼幅約32.65 m。"
+        },
+        {
+          "zh": "支撐兩片垂尾。",
+          "en": "Supports both fins.",
+          "ja": "両垂尾を支持。"
+        },
+        {
+          "zh": "位於後機身上方。",
+          "en": "Mounted above the aft fuselage.",
+          "ja": "後部胴体上方に配置。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/an225/hstab.jpg?v=e5684e8f2dcd",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:The_Antonov_An-225_Mriya_-_back.JPG"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "為支撐 640 噸的龐大重量，An-225 採用多達 32 個機輪的起落架系統：前起落架 4 輪、主起落架多達 28 輪，分佈於機身兩側以分散對跑道的壓力。",
+      "summary": {
+        "zh": "An-225共有32個機輪：雙支柱鼻輪共四輪，左右主起落架各有七組雙輪，共二十八個主輪。",
+        "en": "The An-225 has 32 wheels: four on twin nose struts and seven twin-wheel main units per side, giving 28 main wheels.",
+        "ja": "An-225は計32輪で、2本の前脚に4輪、左右それぞれ7組の双輪主脚に計28輪を備えます。"
+      },
       "specs": [
         [
           "總機輪數",
@@ -182,13 +364,232 @@
           "可跪姿裝卸貨"
         ]
       ],
-      "fact": "An-225 有 32 個輪子（一般客機約 6–10 個）。前起落架還能「跪下」讓機鼻降低，方便貨物從掀開的機首直接開進貨艙。",
+      "fact": {
+        "zh": "近照只顯示一側主腳列；不要把輪擋或另一側重疊輪胎當成額外輪組。",
+        "en": "The close-up shows one main-gear row only. Do not count wheel chocks or overlapping wheels on the far side as extra units.",
+        "ja": "近接写真は片側主脚列のみです。輪止めや奥側の重なった車輪を追加の輪組として数えないでください。"
+      },
       "bullets": [
-        "多達 32 個機輪",
-        "分散跑道壓力",
-        "前起落架可跪姿裝卸"
+        {
+          "zh": "每側七組雙輪主腳。",
+          "en": "Seven twin-wheel main units per side.",
+          "ja": "片側7組の双輪主脚。"
+        },
+        {
+          "zh": "主輪共二十八個。",
+          "en": "Twenty-eight main wheels.",
+          "ja": "主輪計28輪。"
+        },
+        {
+          "zh": "全機共三十二輪。",
+          "en": "Thirty-two wheels overall.",
+          "ja": "全機計32輪。"
+        }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/an225/gear.jpg?v=e76f975671ea",
+          "caption": {
+            "zh": "An-225單側主起落架列；美國海軍陸戰隊公務照片（2011）",
+            "en": "One An-225 main-gear row; official U.S. Marine Corps photograph (2011)",
+            "ja": "An-225片側主脚列：米海兵隊公務写真（2011年）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Antono_An-225_undercarriages.JPG"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "An-225 以高翼、六具翼下引擎、雙垂尾與84公尺長機身形成幾乎不會認錯的輪廓；本照為唯一完工機UR-82060。",
+        "en": "The An-225's high wing, six underwing engines, twin fins and 84 m fuselage form an almost unmistakable silhouette. This is the sole completed airframe, UR-82060.",
+        "ja": "An-225は高翼、翼下6発、双垂尾、全長84 mの組合せでほぼ見間違えない輪郭です。写真は唯一完成したUR-82060です。"
+      },
+      "fact": {
+        "zh": "尺寸感會受焦段影響；辨識時先數六具引擎，再確認雙垂尾與高翼，不要只靠『看起來很大』。",
+        "en": "Perspective can distort apparent size. Count six engines, then confirm the twin fins and high wing rather than relying on the aircraft merely looking large.",
+        "ja": "見かけの大きさは撮影条件で変わります。大きく見えることだけに頼らず、6発、高翼、双垂尾を確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "六具翼下引擎。",
+          "en": "Six underwing engines.",
+          "ja": "翼下6発。"
+        },
+        {
+          "zh": "高翼與雙垂尾。",
+          "en": "High wing and twin fins.",
+          "ja": "高翼と双垂尾。"
+        },
+        {
+          "zh": "唯一完工機UR-82060。",
+          "en": "Sole completed airframe UR-82060.",
+          "ja": "唯一完成したUR-82060。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/an225/overview.jpg?v=4d475fb957b7",
+          "caption": {
+            "zh": "唯一完工的An-225 UR-82060，斯德哥爾摩阿蘭達機場（2012）",
+            "en": "The sole completed An-225, UR-82060, at Stockholm Arlanda (2012)",
+            "ja": "唯一完成したAn-225 UR-82060、ストックホルム・アーランダ（2012年）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_front_left_view.jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "An-225實機座艙保留蘇聯大型運輸機的多席、類比儀表布局，可見雙操縱盤、密集圓形儀表與中央多組油門。",
+        "en": "The real An-225 flight deck retains a multi-crew Soviet heavy-transport layout, with twin yokes, dense round instruments and multiple throttles on the center pedestal.",
+        "ja": "An-225実機操縦席はソ連大型輸送機らしい多人数・アナログ計器配置で、左右の操縦輪、密集した丸形計器、中央の多数のスロットルが見えます。"
+      },
+      "fact": {
+        "zh": "這是2013年拍攝的真實座艙；後期加裝設備不等於1988年首飛時的原始配置。",
+        "en": "This is a real cockpit photographed in 2013; later equipment additions do not necessarily represent the 1988 first-flight configuration.",
+        "ja": "2013年撮影の実機操縦席で、後年の追加装備が1988年初飛行時の原仕様とは限りません。"
+      },
+      "bullets": [
+        {
+          "zh": "雙操縱盤。",
+          "en": "Twin control yokes.",
+          "ja": "左右の操縦輪。"
+        },
+        {
+          "zh": "大量圓形儀表。",
+          "en": "Dense round instrumentation.",
+          "ja": "多数の丸形計器。"
+        },
+        {
+          "zh": "中央六具引擎油門。",
+          "en": "Center controls for six engines.",
+          "ja": "中央に6発分の操作系。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/an225/cockpit.jpg?v=b4436b76f59b",
+          "caption": {
+            "zh": "An-225實機座艙（2013）；後期設備不代表1988年原始配置",
+            "en": "Real An-225 cockpit (2013); later equipment does not define the 1988 original fit",
+            "ja": "An-225実機操縦席（2013年）：後年装備は1988年原仕様を示しません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:An-225_Mrija_-_kokpit.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "正面近照顯示兩片寬大的中央風擋與向外後掠的側窗；側斜角可看出座艙位於抬高的貨艙機鼻上方。",
+        "en": "The head-on close-up shows two broad center panes and swept side windows; the oblique view reveals the cockpit raised above the cargo nose.",
+        "ja": "正面近接写真では幅広い中央2枚と後方へ傾く側窓が見え、斜め写真では貨物機首上に高く置かれた操縦席が分かります。"
+      },
+      "fact": {
+        "zh": "An-124的窗型與抬高座艙概念接近；必須再用六發與雙垂尾確認An-225。",
+        "en": "The An-124 has similar glazing and a raised-cockpit concept; use six engines and twin fins to confirm an An-225.",
+        "ja": "An-124も似た窓形と高い操縦席を持つため、6発と双垂尾でAn-225を確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "寬大中央風擋。",
+          "en": "Broad center panes.",
+          "ja": "幅広い中央風防。"
+        },
+        {
+          "zh": "外側窗向後傾斜。",
+          "en": "Outer panes sweep aft.",
+          "ja": "外側窓は後方へ傾斜。"
+        },
+        {
+          "zh": "座艙高於貨艙機鼻。",
+          "en": "Cockpit above the cargo nose.",
+          "ja": "操縦席は貨物機首の上。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/an225/window-front.jpg?v=1a16189100d1",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_Mriya_(14402381751).jpg"
+        },
+        {
+          "src": "assets/reference/an225/window-side.jpg?v=6529241e17aa",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_Mriya_front.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "An-225主翼末端直接收尖，沒有直立式翼尖小翼；側面照保留外翼、翼尖與雙垂尾，便於分清不同翼面。",
+        "en": "The An-225 wing tapers directly to its tip without an upright winglet. The side view retains the outer wing, tip and twin fins for orientation.",
+        "ja": "An-225の主翼端はそのまま細くなり、直立ウイングレットはありません。側面写真は外翼・翼端・双垂尾を同時に示します。"
+      },
+      "fact": {
+        "zh": "遠處翼尖可能與後方水平尾翼重疊；先沿主翼前後緣追到最外端再判讀。",
+        "en": "A distant wingtip can overlap the tailplane. Follow the wing's leading and trailing edges to the outermost point before identifying it.",
+        "ja": "遠い翼端は水平尾翼と重なることがあります。主翼前後縁を最外端まで追って判断します。"
+      },
+      "bullets": [
+        {
+          "zh": "無直立小翼。",
+          "en": "No upright winglet.",
+          "ja": "直立小翼なし。"
+        },
+        {
+          "zh": "長而漸縮的外翼。",
+          "en": "Long tapered outer wing.",
+          "ja": "長く先細りの外翼。"
+        },
+        {
+          "zh": "先沿主翼邊緣定位。",
+          "en": "Trace the wing edges first.",
+          "ja": "主翼縁を追って位置確認。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/an225/wingtip.jpg?v=8faaa27ebef2",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_front_left_view.jpg"
+        }
+      ]
     }
   },
   "specifications": {
@@ -225,7 +626,7 @@
       ],
       [
         "機高",
-        "18.10 m（59 ft 5 in）"
+        "18.20 m（59 ft 8 in）"
       ],
       [
         "貨艙長度",
@@ -295,7 +696,7 @@
       ],
       [
         "飛行高度上限",
-        "11,000 m（36,100 ft）"
+        "9,000 m（29,528 ft）"
       ],
       [
         "起飛所需跑道長度",

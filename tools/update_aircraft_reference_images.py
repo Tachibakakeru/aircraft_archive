@@ -2551,6 +2551,143 @@ CONTENT.update({
     },
 })
 
+# Antonov An-225 / BAe 146-200.
+SOURCES.update({
+    "an225": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_front_left_view.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:An-225_Mrija_-_kokpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_Mriya_(14402381751).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_Mriya_front.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_front_left_view.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_Mriya_(14425906933).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_front_left_view.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Antonov_An-225_front_left_view.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:The_Antonov_An-225_Mriya_-_back.JPG",
+        "hstab": "https://commons.wikimedia.org/wiki/File:The_Antonov_An-225_Mriya_-_back.JPG",
+        "gear": "https://commons.wikimedia.org/wiki/File:Antono_An-225_undercarriages.JPG",
+    },
+    "bae146": {
+        "overview": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Avro_RJ70_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:BAe_146_G-JOTR_IMG_8067_(31347110881).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:American_Airlines_BAe_146-200;_N142AC,_April_1988_BZE_(4848631160).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:American_Airlines_BAe_146-200;_N142AC,_April_1988_BZE_(4848631160).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:American_Airlines_BAe_146-200;_N142AC,_April_1988_BZE_(4848631160).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:BAe_146-200_Ping%C3%BCino_Rey_CC-ACO.jpg",
+    },
+})
+
+CONTENT.update({
+    "an225": {
+        "overview": identify(
+            ("An-225 以高翼、六具翼下引擎、雙垂尾與84公尺長機身形成幾乎不會認錯的輪廓；本照為唯一完工機UR-82060。", "The An-225's high wing, six underwing engines, twin fins and 84 m fuselage form an almost unmistakable silhouette. This is the sole completed airframe, UR-82060.", "An-225は高翼、翼下6発、双垂尾、全長84 mの組合せでほぼ見間違えない輪郭です。写真は唯一完成したUR-82060です。"),
+            ("尺寸感會受焦段影響；辨識時先數六具引擎，再確認雙垂尾與高翼，不要只靠『看起來很大』。", "Perspective can distort apparent size. Count six engines, then confirm the twin fins and high wing rather than relying on the aircraft merely looking large.", "見かけの大きさは撮影条件で変わります。大きく見えることだけに頼らず、6発、高翼、双垂尾を確認します。"),
+            [("六具翼下引擎。", "Six underwing engines.", "翼下6発。"), ("高翼與雙垂尾。", "High wing and twin fins.", "高翼と双垂尾。"), ("唯一完工機UR-82060。", "Sole completed airframe UR-82060.", "唯一完成したUR-82060。")],
+        ),
+        "cockpit": identify(
+            ("An-225實機座艙保留蘇聯大型運輸機的多席、類比儀表布局，可見雙操縱盤、密集圓形儀表與中央多組油門。", "The real An-225 flight deck retains a multi-crew Soviet heavy-transport layout, with twin yokes, dense round instruments and multiple throttles on the center pedestal.", "An-225実機操縦席はソ連大型輸送機らしい多人数・アナログ計器配置で、左右の操縦輪、密集した丸形計器、中央の多数のスロットルが見えます。"),
+            ("這是2013年拍攝的真實座艙；後期加裝設備不等於1988年首飛時的原始配置。", "This is a real cockpit photographed in 2013; later equipment additions do not necessarily represent the 1988 first-flight configuration.", "2013年撮影の実機操縦席で、後年の追加装備が1988年初飛行時の原仕様とは限りません。"),
+            [("雙操縱盤。", "Twin control yokes.", "左右の操縦輪。"), ("大量圓形儀表。", "Dense round instrumentation.", "多数の丸形計器。"), ("中央六具引擎油門。", "Center controls for six engines.", "中央に6発分の操作系。")],
+        ),
+        "windshield": identify(
+            ("正面近照顯示兩片寬大的中央風擋與向外後掠的側窗；側斜角可看出座艙位於抬高的貨艙機鼻上方。", "The head-on close-up shows two broad center panes and swept side windows; the oblique view reveals the cockpit raised above the cargo nose.", "正面近接写真では幅広い中央2枚と後方へ傾く側窓が見え、斜め写真では貨物機首上に高く置かれた操縦席が分かります。"),
+            ("An-124的窗型與抬高座艙概念接近；必須再用六發與雙垂尾確認An-225。", "The An-124 has similar glazing and a raised-cockpit concept; use six engines and twin fins to confirm an An-225.", "An-124も似た窓形と高い操縦席を持つため、6発と双垂尾でAn-225を確認します。"),
+            [("寬大中央風擋。", "Broad center panes.", "幅広い中央風防。"), ("外側窗向後傾斜。", "Outer panes sweep aft.", "外側窓は後方へ傾斜。"), ("座艙高於貨艙機鼻。", "Cockpit above the cargo nose.", "操縦席は貨物機首の上。")],
+        ),
+        "fuselage": identify(
+            ("84公尺機身具有抬高座艙與可向上掀起的機鼻貨門；側面窗數很少，重點是巨大的加壓貨艙而非客艙窗列。", "The 84 m fuselage has a raised cockpit and an upward-opening nose cargo door. Few side windows emphasize its huge pressurized freight hold rather than a passenger cabin.", "全長84 mの胴体は高い操縦席と上方へ開く機首貨物扉を持ち、側窓は少なく、旅客室より巨大な与圧貨物室が主体です。"),
+            ("照片中的塗裝線不是艙門接縫；辨識機鼻貨門應找整個機鼻外殼的接合線與抬高座艙。", "Livery stripes are not door seams. Identify the nose door by the shell joint around the nose and the raised cockpit.", "塗装線を扉の継ぎ目と混同せず、機首外殻の接合線と高い操縦席で機首扉を確認します。"),
+            [("可掀式機鼻貨門。", "Hinged nose cargo door.", "上開き機首貨物扉。"), ("側窗數量很少。", "Very few side windows.", "側窓が非常に少ない。"), ("貨艙長約43.3公尺。", "Cargo hold about 43.3 m long.", "貨物室長約43.3 m。")],
+        ),
+        "engine": identify(
+            ("每側主翼吊掛三具Progress D-18T，合計六具；近照可同時看到三個大型圓形進氣口與各自獨立的短艙、吊架。", "Three Progress D-18Ts hang beneath each wing, six in total. The crop shows three large circular inlets with separate nacelles and pylons.", "片翼3基、計6基のProgress D-18Tを搭載し、写真では3つの大径円形吸入口と独立したナセル・パイロンが見えます。"),
+            ("An-124通常是四發；六個進氣口是區分兩型最直接的外觀線索。", "An An-124 normally has four engines; six inlets are the clearest external clue separating the two types.", "An-124は通常4発で、6つの吸入口が両機を分ける最も直接的な外観手掛かりです。"),
+            [("每翼三具引擎。", "Three engines per wing.", "片翼3発。"), ("D-18T大型圓形進氣口。", "Large circular D-18T inlets.", "D-18Tの大径円形吸入口。"), ("總計六發。", "Six engines total.", "合計6発。")],
+        ),
+        "wingtip": identify(
+            ("An-225主翼末端直接收尖，沒有直立式翼尖小翼；側面照保留外翼、翼尖與雙垂尾，便於分清不同翼面。", "The An-225 wing tapers directly to its tip without an upright winglet. The side view retains the outer wing, tip and twin fins for orientation.", "An-225の主翼端はそのまま細くなり、直立ウイングレットはありません。側面写真は外翼・翼端・双垂尾を同時に示します。"),
+            ("遠處翼尖可能與後方水平尾翼重疊；先沿主翼前後緣追到最外端再判讀。", "A distant wingtip can overlap the tailplane. Follow the wing's leading and trailing edges to the outermost point before identifying it.", "遠い翼端は水平尾翼と重なることがあります。主翼前後縁を最外端まで追って判断します。"),
+            [("無直立小翼。", "No upright winglet.", "直立小翼なし。"), ("長而漸縮的外翼。", "Long tapered outer wing.", "長く先細りの外翼。"), ("先沿主翼邊緣定位。", "Trace the wing edges first.", "主翼縁を追って位置確認。")],
+        ),
+        "wing": identify(
+            ("高置後掠主翼翼展88.4公尺、面積905平方公尺；六具引擎分成每側三具，構成An-225最醒目的正面輪廓。", "The high swept wing spans 88.4 m and covers 905 m². Six engines arranged three per side define the An-225's frontal silhouette.", "高位置の後退翼は幅88.4 m、面積905 m²で、片側3発ずつの配置がAn-225の正面輪郭を決めます。"),
+            ("照片為斜側面，不可直接用像素量翼展或後掠角；外翼被透視壓縮。", "This oblique side view cannot be used to measure span or sweep from pixels; perspective foreshortens the outer wing.", "斜め側面写真なので、ピクセルから翼幅や後退角は測れず、外翼は遠近感で短く見えます。"),
+            [("高置後掠翼。", "High-mounted swept wing.", "高位置の後退翼。"), ("翼展88.4公尺。", "88.4 m span.", "翼幅88.4 m。"), ("每側三具吊架。", "Three pylons per side.", "片側3本のパイロン。")],
+        ),
+        "vstab": identify(
+            ("兩片大型垂直尾翼立在水平尾翼兩端，形成H型尾翼；後方近照能同時看到左右方向舵外形。", "Two large fins stand at the ends of the horizontal stabilizer, forming an H-tail. The rear close-up shows both rudder profiles.", "大型垂直尾翼2枚が水平尾翼両端に立つH尾翼で、後方近接写真では左右方向舵の輪郭も見えます。"),
+            ("雙垂尾為機背載運Buran時避開中央貨物尾流而採用；不是兩架飛機重疊。", "The twin fins were adopted to stay clear of wake from the externally carried Buran; they are not overlapping tails from two aircraft.", "双垂尾は機背搭載するBuranの後流を避けるためで、2機の尾翼が重なったものではありません。"),
+            [("水平尾翼兩端各一片。", "One fin at each tailplane tip.", "水平尾翼両端に各1枚。"), ("兩片方向舵。", "Two rudders.", "方向舵2枚。"), ("H型尾翼。", "H-tail arrangement.", "H型尾翼。")],
+        ),
+        "hstab": identify(
+            ("巨大水平尾翼橫跨後機身上方，翼展約32.65公尺，兩端支撐雙垂尾；後視圖可看出整個H型結構。", "The huge horizontal stabilizer spans about 32.65 m above the aft fuselage and supports a fin at each end, creating the complete H-tail.", "巨大な水平尾翼は後部胴体上方で約32.65 mに達し、両端の垂尾を支えてH型構造を作ります。"),
+            ("裁切中的外側白色翼面是水平尾翼，不是主翼；可用它與垂尾的直角接合判斷。", "The outer white surfaces here are tailplanes, not main wings; their near-right-angle junction with the fins identifies them.", "外側の白い翼面は主翼ではなく水平尾翼で、垂尾とのほぼ直角の接合で判別できます。"),
+            [("翼展約32.65公尺。", "About 32.65 m span.", "翼幅約32.65 m。"), ("支撐兩片垂尾。", "Supports both fins.", "両垂尾を支持。"), ("位於後機身上方。", "Mounted above the aft fuselage.", "後部胴体上方に配置。")],
+        ),
+        "gear": identify(
+            ("An-225共有32個機輪：雙支柱鼻輪共四輪，左右主起落架各有七組雙輪，共二十八個主輪。", "The An-225 has 32 wheels: four on twin nose struts and seven twin-wheel main units per side, giving 28 main wheels.", "An-225は計32輪で、2本の前脚に4輪、左右それぞれ7組の双輪主脚に計28輪を備えます。"),
+            ("近照只顯示一側主腳列；不要把輪擋或另一側重疊輪胎當成額外輪組。", "The close-up shows one main-gear row only. Do not count wheel chocks or overlapping wheels on the far side as extra units.", "近接写真は片側主脚列のみです。輪止めや奥側の重なった車輪を追加の輪組として数えないでください。"),
+            [("每側七組雙輪主腳。", "Seven twin-wheel main units per side.", "片側7組の双輪主脚。"), ("主輪共二十八個。", "Twenty-eight main wheels.", "主輪計28輪。"), ("全機共三十二輪。", "Thirty-two wheels overall.", "全機計32輪。")],
+        ),
+    },
+    "bae146": {
+        "overview": identify(
+            ("本頁以BAe 146-200為尺寸基準。短粗機身、高翼下四具小型引擎、T尾與沒有翼尖小翼的組合，是最實用的外觀辨識法。", "This page uses the BAe 146-200 as its dimensional reference. A short broad fuselage, four small engines under a high wing, T-tail and no winglets are its practical identifying combination.", "本ページはBAe 146-200の寸法を基準とします。短く太い胴体、高翼下の小型4発、T尾翼、ウイングレットなしの組合せが実用的な識別点です。"),
+            ("Avro RJ85沿用相同基本外形；僅靠遠距離照片常無法區分早期146-200與後期RJ85，需核對機籍與引擎／座艙版本。", "The Avro RJ85 retains the same basic shape. Distant photos often cannot separate an early 146-200 from a later RJ85 without registration and engine/cockpit evidence.", "Avro RJ85も同じ基本外形で、遠景だけでは初期146-200と後期RJ85を分けにくく、機籍やエンジン・操縦席仕様の確認が必要です。"),
+            [("高翼四發。", "High wing with four engines.", "高翼4発。"), ("短粗機身。", "Short broad fuselage.", "短く太い胴体。"), ("T尾與無小翼翼尖。", "T-tail and unwingleted tips.", "T尾翼と小翼なしの翼端。")],
+        ),
+        "cockpit": identify(
+            ("照片是後期Avro RJ70實機座艙，作為146／Avro RJ家族布局參考；可見雙操縱盤、電子飛航顯示與中央四具引擎控制。", "This real later Avro RJ70 cockpit is a 146/Avro RJ family layout reference. It shows twin yokes, electronic flight displays and center controls for four engines.", "写真は後期Avro RJ70の実機操縦席で、146／Avro RJ系列の配置参考です。左右の操縦輪、電子飛行表示、中央の4発操作系が見えます。"),
+            ("它不是早期BAe 146-200的原始類比座艙；比較儀表時必須把世代差異列入。", "It is not an early BAe 146-200's original analog flight deck; account for the generation difference when comparing instruments.", "初期BAe 146-200の純アナログ操縦席ではないため、計器比較では世代差を考慮します。"),
+            [("RJ70實照，家族參考。", "Actual RJ70; family reference.", "RJ70実写、系列参考。"), ("雙操縱盤。", "Twin control yokes.", "左右の操縦輪。"), ("四具引擎控制。", "Controls for four engines.", "4発分の操作系。")],
+        ),
+        "windshield": identify(
+            ("正面與側斜角顯示BAe 146家族的分片式外窗：兩片中央風擋、外側梯形窗與較低的側窗共同形成圓鈍機鼻表情。", "Front and side-oblique views show the BAe 146 family's segmented glazing: two center panes, outer trapezoidal panes and lower side windows on a blunt nose.", "正面と斜め側面で、中央2枚、外側台形窓、低い側窓からなるBAe 146系列の分割窓と丸い機首形状を確認できます。"),
+            ("正面照為同家族G-JOTR，側面照為146-200；窗型可比較家族特徵，但不能單靠它判定-200次型。", "The front view is family aircraft G-JOTR and the side view is a 146-200. They show family glazing, but windows alone cannot establish the -200 subtype.", "正面は同系列G-JOTR、側面は146-200です。系列の窓形比較には使えますが、窓だけで-200とは確定できません。"),
+            [("中央兩片風擋。", "Two center windshields.", "中央風防2枚。"), ("外側梯形窗。", "Outer trapezoidal panes.", "外側の台形窓。"), ("圓鈍短機鼻。", "Blunt compact nose.", "丸く短い機首。")],
+        ),
+        "fuselage": identify(
+            ("146-200全長約28.55公尺，機身短而寬；側面可見前後艙門、規整窗列與高翼穿越機身上部的布局。", "The 146-200 is about 28.55 m long with a short broad fuselage. The side view shows forward and aft doors, an even window row and the high wing crossing above the cabin.", "146-200は全長約28.55 mの短く太い胴体で、前後扉、整った窓列、客室上方を通る高翼配置が側面から分かります。"),
+            ("照片是1988年的N142AC底片掃描；顆粒不代表裁切失焦，且塗裝色帶不等於結構接縫。", "This is a scan of N142AC photographed in 1988. Film grain is not crop blur, and livery stripes are not structural seams.", "1988年撮影N142ACのフィルムスキャンです。粒状感は切り出しのピンぼけではなく、塗装帯も構造継ぎ目ではありません。"),
+            [("全長約28.55公尺。", "About 28.55 m long.", "全長約28.55 m。"), ("短而寬的客艙。", "Short broad cabin.", "短く幅広い客室。"), ("高翼位於窗列上方。", "High wing above the window row.", "窓列上方の高翼。")],
+        ),
+        "engine": identify(
+            ("146-200的四具Lycoming ALF 502R分成每側兩具，緊貼高翼下方；小直徑短艙與短吊架是典型輪廓。", "Four Lycoming ALF 502Rs are paired two per side close beneath the high wing. Small-diameter nacelles and short pylons are characteristic.", "146-200のLycoming ALF 502Rは片側2基ずつ高翼直下に密接配置され、小径ナセルと短いパイロンが特徴です。"),
+            ("照片中的黑色企鵝塗裝會弱化短艙邊界；先找四個圓形進氣口，再沿吊架連回高翼。", "The black penguin livery hides nacelle edges. Find four circular inlets first, then trace their short pylons to the high wing.", "黒いペンギン塗装でナセル境界が見えにくいため、4つの円形吸入口を探し、短いパイロンを高翼まで追います。"),
+            [("每側兩具引擎。", "Two engines per side.", "片側2発。"), ("小直徑圓形短艙。", "Small circular nacelles.", "小径円形ナセル。"), ("緊貼高翼下方。", "Close beneath the high wing.", "高翼直下に密接。")],
+        ),
+        "wingtip": identify(
+            ("BAe 146-200的標準翼尖沒有直立翼尖小翼，外翼緩慢收尖；近翼尖的燈具與翼緣能協助定位。", "The standard BAe 146-200 tip has no upright winglet and the outer wing tapers gently. Tip lights and wing edges help locate it.", "標準BAe 146-200の翼端には直立ウイングレットがなく、外翼は緩やかに先細りします。翼端灯と翼縁で位置を確認できます。"),
+            ("高置水平尾翼也向左右伸展，遠景中不要把T尾兩端誤認為主翼翼尖。", "The high tailplane also extends sideways; do not mistake its ends for main-wing tips in distant views.", "高い水平尾翼も左右へ伸びるため、遠景でその端を主翼端と誤認しないでください。"),
+            [("無直立式小翼。", "No upright winglet.", "直立小翼なし。"), ("外翼緩慢收尖。", "Gently tapered outer wing.", "緩やかに先細る外翼。"), ("主翼位於機身高處。", "Main wing high on the fuselage.", "胴体上部の主翼。")],
+        ),
+        "wing": identify(
+            ("BAe 146採高置、低後掠主翼，四具引擎掛在翼下；後緣大型襟翼與擾流板支援短場與陡角進場任務。", "The BAe 146 uses a high, modestly swept wing with four underslung engines. Large trailing-edge flaps and spoilers support short-field and steep-approach work.", "BAe 146は後退の小さい高翼に4発を吊り下げ、大型後縁フラップとスポイラーが短距離・急角度進入を支えます。"),
+            ("地面照片中的襟翼位置不代表所有飛行階段；辨識主要看高翼與四發配置。", "Flap position in a ground photograph does not represent every flight phase. The high-wing/four-engine arrangement is the primary clue.", "地上写真のフラップ位置は全飛行段階を示しません。高翼・4発配置を主な識別点にします。"),
+            [("高置低後掠翼。", "High wing with modest sweep.", "後退の小さい高翼。"), ("大型後緣襟翼。", "Large trailing-edge flaps.", "大型後縁フラップ。"), ("四具翼下引擎。", "Four underwing engines.", "翼下4発。")],
+        ),
+        "vstab": identify(
+            ("高大的後掠垂直尾翼支撐頂端水平尾翼，構成T尾；N142AC側面能看清垂尾根部、方向舵與頂端接合。", "The tall swept fin supports the horizontal stabilizer at its tip, forming a T-tail. N142AC's side view shows the fin root, rudder and top junction.", "高く後退した垂尾の頂部に水平尾翼を載せるT尾翼で、N142AC側面では根元、方向舵、頂部接合が見えます。"),
+            ("T尾並非146獨有；需搭配高翼四發與短機身，才能排除DC-9、MD-80或其他支線機。", "A T-tail is not unique to the 146. Combine it with the high wing, four engines and short fuselage to exclude DC-9s, MD-80s and other regional jets.", "T尾翼だけでは146に固有ではありません。高翼4発と短い胴体を組み合わせて他機種を除外します。"),
+            [("高大後掠垂尾。", "Tall swept fin.", "高い後退垂尾。"), ("方向舵位於後緣。", "Rudder on the trailing edge.", "後縁の方向舵。"), ("頂端承接水平尾翼。", "Supports the top-mounted tailplane.", "頂部で水平尾翼を支持。")],
+        ),
+        "hstab": identify(
+            ("水平尾翼裝在垂尾頂端，左右形成清楚的T字；機尾後端另有可左右張開的分瓣式空中煞車，兩者不是同一構件。", "The horizontal stabilizer sits atop the fin to form a clear T. Separate clamshell airbrakes open from the tailcone; they are not the tailplane.", "水平尾翼は垂尾頂部にあり明確なT字を作ります。尾錐には左右に開く別体クラムシェル式エアブレーキがあり、水平尾翼とは別部品です。"),
+            ("側面照看不到空中煞車展開狀態；不能把一般尾錐輪廓當成已開啟。", "The side view does not show the airbrake deployed; do not interpret the normal tailcone outline as an open brake.", "側面写真ではエアブレーキは展開しておらず、通常の尾錐輪郭を開状態と解釈しないでください。"),
+            [("垂尾頂端安裝。", "Mounted atop the fin.", "垂尾頂部に装備。"), ("形成T型尾翼。", "Forms a T-tail.", "T尾翼を形成。"), ("尾錐另有分瓣煞車。", "Separate tailcone clamshell brake.", "尾錐に別体クラムシェルブレーキ。")],
+        ),
+        "gear": identify(
+            ("BAe 146採前三點式六輪配置：左右主腳各雙輪、鼻腳雙輪。高翼讓主腳以長支柱從機身下部伸出。", "The BAe 146 has six-wheel tricycle gear: twin wheels on each main unit and twin nose wheels. Its high wing leaves long main struts extending from the lower fuselage.", "BAe 146は左右主脚各2輪と前脚2輪の計6輪で、高翼のため長い主脚支柱が胴体下部から伸びます。"),
+            ("照片有登機梯與地勤設備遮擋；先沿支柱找到輪軸，不要把梯輪算進起落架。", "Stairs and ground equipment obscure parts of the view. Trace each strut to its axle and do not count stair wheels as landing gear.", "階段や地上設備で一部が隠れます。支柱から車軸を追い、階段の車輪を着陸装置に数えないでください。"),
+            [("主腳每側雙輪。", "Twin wheels per main unit.", "主脚は片側2輪。"), ("鼻腳雙輪。", "Twin nose wheels.", "前脚2輪。"), ("全機共六輪。", "Six wheels overall.", "全機計6輪。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -2634,6 +2771,49 @@ def update(model: str) -> None:
             "JT8D-200-family nacelle on retired B-2136; not evidence of current airline service",
             "退役B-2136のJT8D-200系列ナセル：現役運航を示すものではありません",
         )
+    if model == "an225":
+        parts["overview"]["images"][0]["caption"] = tr(
+            "唯一完工的An-225 UR-82060，斯德哥爾摩阿蘭達機場（2012）",
+            "The sole completed An-225, UR-82060, at Stockholm Arlanda (2012)",
+            "唯一完成したAn-225 UR-82060、ストックホルム・アーランダ（2012年）",
+        )
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "An-225實機座艙（2013）；後期設備不代表1988年原始配置",
+            "Real An-225 cockpit (2013); later equipment does not define the 1988 original fit",
+            "An-225実機操縦席（2013年）：後年装備は1988年原仕様を示しません",
+        )
+        parts["gear"]["images"][0]["caption"] = tr(
+            "An-225單側主起落架列；美國海軍陸戰隊公務照片（2011）",
+            "One An-225 main-gear row; official U.S. Marine Corps photograph (2011)",
+            "An-225片側主脚列：米海兵隊公務写真（2011年）",
+        )
+    if model == "bae146":
+        parts["overview"]["images"][0]["caption"] = tr(
+            "Aerovías DAP BAe 146-200 CC-ACO（2016實照）",
+            "Aerovías DAP BAe 146-200 CC-ACO (2016 photograph)",
+            "Aerovías DAP BAe 146-200 CC-ACO（2016年実写）",
+        )
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "Avro RJ70 EI-CPJ實機座艙；146／Avro RJ家族參考，非早期146-200原始座艙",
+            "Real Avro RJ70 EI-CPJ cockpit; 146/Avro RJ family reference, not an early 146-200 flight deck",
+            "Avro RJ70 EI-CPJ実機操縦席：146／Avro RJ系列参考、初期146-200操縦席ではありません",
+        )
+        parts["windshield"]["images"][0]["caption"] = tr(
+            "BAe 146／Avro RJ家族G-JOTR正面窗型（2016實照）",
+            "Front glazing of BAe 146/Avro RJ family aircraft G-JOTR (2016 photograph)",
+            "BAe 146／Avro RJ系列G-JOTRの正面窓（2016年実写）",
+        )
+        parts["windshield"]["images"][1]["caption"] = tr(
+            "Aerovías DAP BAe 146-200 CC-ACO側窗（實照裁切）",
+            "Aerovías DAP BAe 146-200 CC-ACO side windows (photographic crop)",
+            "Aerovías DAP BAe 146-200 CC-ACO側窓（実写切り出し）",
+        )
+        parts["fuselage"]["specs"] = [["全長", "28.55 m"], ["機身寬度", "3.56 m"]]
+        parts["engine"]["specs"] = [["型號", "Lycoming ALF 502R ×4"], ["單具推力", "約 31 kN"]]
+        parts["wing"]["specs"] = [["翼展", "26.34 m"], ["翼面積", "77.3 m²"]]
+        parts["vstab"]["specs"] = [["構型", "T 型尾翼"], ["操縱面", "方向舵"]]
+        parts["hstab"]["specs"] = [["位置", "垂尾頂端"], ["尾錐", "分瓣式空中煞車"]]
+        parts["gear"]["specs"] = [["配置", "前三點式"], ["總輪數", "6 輪"]]
     if model == "cs300":
         parts["cockpit"]["images"][0]["caption"] = tr(
             "JetBlue A220-300 實機座艙；右側座椅遮擋部分設備",

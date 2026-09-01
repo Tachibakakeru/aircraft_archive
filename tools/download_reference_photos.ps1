@@ -228,6 +228,10 @@ $photos = [ordered]@{
   "dc9/cockpit.jpg" = "DC-9 Cockpit.jpg"
   "md80/overview.jpg" = "LZ-LDP MD-82 Bulgarian Air Charter SCQ.jpg"
   "md80/cockpit.jpg" = "ARNOSD5 (4679033164).jpg"
+  "an225/overview.jpg" = "Antonov An-225 front left view.jpg"
+  "an225/cockpit.jpg" = "An-225 Mrija - kokpit.jpg"
+  "bae146/overview.jpg" = "BAe 146-200 Pingüino Rey CC-ACO.jpg"
+  "bae146/cockpit.jpg" = "Avro RJ70 cockpit.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -542,6 +546,24 @@ $windowPhotos += @(
   @{ Dest="md80/vstab.jpg"; Title="Meridiana McDonnell Douglas MD-82 I-SMEL Volandia 2024 (01).jpg"; Crop=@(.70,.245,.25) }
   @{ Dest="md80/hstab.jpg"; Title="Meridiana McDonnell Douglas MD-82 I-SMEL Volandia 2024 (01).jpg"; Crop=@(.67,.23,.31) }
   @{ Dest="md80/gear.jpg"; Title="LZ-LDP MD-82 Bulgarian Air Charter SCQ.jpg"; Crop=@(.475,.55,.13) }
+  @{ Dest="an225/window-front.jpg"; Title="Antonov An-225 Mriya (14402381751).jpg"; Crop=@(.30,.31,.40) }
+  @{ Dest="an225/window-side.jpg"; Title="Antonov An-225 Mriya front.jpg"; Crop=@(.18,.15,.20) }
+  @{ Dest="an225/fuselage.jpg"; Title="Antonov An-225 front left view.jpg"; Crop=@(.08,.31,.45) }
+  @{ Dest="an225/engine.jpg"; Title="Antonov An-225 Mriya (14425906933).jpg"; Crop=@(.26,.35,.70) }
+  @{ Dest="an225/wingtip.jpg"; Title="Antonov An-225 front left view.jpg"; Crop=@(.65,.30,.32) }
+  @{ Dest="an225/wing.jpg"; Title="Antonov An-225 front left view.jpg"; Crop=@(.35,.20,.60) }
+  @{ Dest="an225/vstab.jpg"; Title="The Antonov An-225 Mriya - back.JPG"; Crop=@(.15,.10,.82) }
+  @{ Dest="an225/hstab.jpg"; Title="The Antonov An-225 Mriya - back.JPG"; Crop=@(.15,.34,.82) }
+  @{ Dest="an225/gear.jpg"; Title="Antono An-225 undercarriages.JPG"; Crop=@(.02,.16,.96) }
+  @{ Dest="bae146/window-front.jpg"; Title="BAe 146 G-JOTR IMG 8067 (31347110881).jpg"; Crop=@(.36,.45,.28) }
+  @{ Dest="bae146/window-side.jpg"; Title="BAe 146-200 Pingüino Rey CC-ACO.jpg"; Crop=@(.16,.39,.22) }
+  @{ Dest="bae146/fuselage.jpg"; Title="American Airlines BAe 146-200; N142AC, April 1988 BZE (4848631160).jpg"; Crop=@(.20,.32,.70) }
+  @{ Dest="bae146/engine.jpg"; Title="BAe 146-200 Pingüino Rey CC-ACO.jpg"; Crop=@(.48,.38,.22) }
+  @{ Dest="bae146/wingtip.jpg"; Title="BAe 146-200 Pingüino Rey CC-ACO.jpg"; Crop=@(.74,.22,.25) }
+  @{ Dest="bae146/wing.jpg"; Title="BAe 146-200 Pingüino Rey CC-ACO.jpg"; Crop=@(.48,.25,.50) }
+  @{ Dest="bae146/vstab.jpg"; Title="American Airlines BAe 146-200; N142AC, April 1988 BZE (4848631160).jpg"; Crop=@(.15,.18,.23) }
+  @{ Dest="bae146/hstab.jpg"; Title="American Airlines BAe 146-200; N142AC, April 1988 BZE (4848631160).jpg"; Crop=@(.10,.20,.32) }
+  @{ Dest="bae146/gear.jpg"; Title="BAe 146-200 Pingüino Rey CC-ACO.jpg"; Crop=@(.24,.48,.48) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0
