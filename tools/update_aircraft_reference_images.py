@@ -3099,6 +3099,142 @@ CONTENT.update({
     },
 })
 
+SOURCES.update({
+    "c909": {
+        "overview": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200802164325).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200905164455).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200905164455).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200905164455).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200802164331).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:ARJ21%E7%9A%84CF34%E5%BC%95%E6%93%8E.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200802164325).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200802164331).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200905164455).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200905164455).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200628125529).jpg",
+    },
+    "c919": {
+        "overview": "https://commons.wikimedia.org/wiki/File:B-919X@PEK_(20240829112234).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:B-919X@PEK_(20240829112234).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:B-919X@PEK_(20240829112234).jpg",
+    },
+})
+
+CONTENT.update({
+    "c909": {
+        "overview": identify(
+            ("C909是原ARJ21的新名稱，採低置後掠翼、後機身雙發與T型尾翼；五人並排的短機身比例，是辨識這款區域噴射客機的核心。", "The C909, formerly named ARJ21, combines a swept low wing, two aft-mounted engines and a T-tail. Its short five-abreast fuselage is the key regional-jet identifier.", "C909は旧ARJ21の新名称で、後退低翼、後部双発、T尾翼を組み合わせます。短い横5席胴体が主要な識別点です。"),
+            ("照片仍標示ARJ21-700，因C909是2024年採用的新商品名稱；外形辨識可沿用，但不要把塗裝名稱差異誤認為不同機型。", "The aircraft still carries ARJ21-700 markings because C909 is the commercial name adopted in 2024. The airframe cues remain valid; the different titles do not indicate separate types.", "写真機はARJ21-700表記ですが、C909は2024年採用の商品名です。外形識別は共通で、名称差を別機種と誤認しません。"),
+            [("後機身雙發。", "Twin aft-mounted engines.", "後部双発。"), ("高置T型尾翼。", "High T-tail.", "高位置T尾翼。"), ("五人並排區域機身。", "Five-abreast regional fuselage.", "横5席の地域機胴体。")],
+        ),
+        "cockpit": identify(
+            ("C909採雙人玻璃化飛行甲板，以多具電子顯示器集中呈現飛行、導航與系統資訊。", "The C909 uses a two-pilot glass flight deck with electronic displays consolidating flight, navigation and systems information.", "C909は2名用グラスコックピットで、電子表示器に飛行・航法・システム情報を集約します。"),
+            ("目前沒有找到授權可重用且能確認為C909的真實座艙內裝照；本圖只顯示實機座艙區外觀，不以模型或模擬器冒充。", "No reusable, positively identified real C909 flight-deck interior was found. This image shows only the exterior cockpit area; no mock-up or simulator is substituted.", "再利用可能でC909と確認できる実機操縦席内写真がないため、本画像は実機の操縦席外部のみです。模型やシミュレーターで代用していません。"),
+            [("雙人飛行甲板。", "Two-pilot flight deck.", "2名用飛行甲板。"), ("電子顯示器為主。", "Display-centered instrumentation.", "電子表示器中心。"), ("本圖僅供外部定位。", "Exterior location reference only.", "本画像は外部位置参考のみ。")],
+        ),
+        "windshield": identify(
+            ("C909機鼻風擋由寬中央窗與向後折收的側窗組成，外側窗框稜角清楚；機鼻短而圓鈍。", "The C909 windshield combines broad center panes with sharply framed side panes canted aft, above a short rounded nose.", "C909の風防は幅広い中央窓と後方へ折れる角張った側窓で構成され、機首は短く丸みがあります。"),
+            ("兩張照片都是前側斜角，不能當成正投影量測；應比較窗框折線、側窗長寬與機鼻曲率。", "Both photographs are oblique rather than orthographic; compare frame breaks, side-pane proportions and nose curvature instead of measuring pixels.", "2枚とも斜め視点で正投影ではありません。画素寸法ではなく窓枠の折れ、側窓比率、機首曲率を比較します。"),
+            [("中央窗較寬。", "Broad center panes.", "幅広い中央窓。"), ("側窗向後收折。", "Side panes cant aft.", "側窓は後方へ傾く。"), ("短圓機鼻。", "Short rounded nose.", "短く丸い機首。")],
+        ),
+        "fuselage": identify(
+            ("C909全長33.46公尺、機身寬3.14公尺，典型客艙為2+3五人並排；照片可見橢圓窗列與前後客艙門。", "The C909 is 33.46 m long and 3.14 m wide, normally seating five abreast in a 2+3 cabin. The photograph shows the oval window row and forward and aft passenger doors.", "C909は全長33.46 m、胴体幅3.14 mで、通常2+3の横5席です。写真では楕円窓列と前後客室扉を確認できます。"),
+            ("後機身在引擎前方開始收細，尾錐位於兩具短艙之間；這種輪廓可與翼下雙發窄體機區分。", "The aft fuselage narrows ahead of the engines and ends in a tailcone between the nacelles, separating its silhouette from underwing twinjets.", "後部胴体はエンジン前方から細まり、ナセル間の尾錐で終わるため、翼下双発ナローボディと区別できます。"),
+            [("全長33.46公尺。", "33.46 m long.", "全長33.46 m。"), ("2+3五人並排。", "2+3 five-abreast cabin.", "2+3横5席。"), ("尾錐位於引擎之間。", "Tailcone between engines.", "尾錐はエンジン間。")],
+        ),
+        "engine": identify(
+            ("C909由兩具GE CF34-10A高旁通比渦輪扇推進，短艙直接裝在後機身兩側，不設翼下引擎吊架。", "The C909 is powered by two GE CF34-10A high-bypass turbofans mounted on the aft fuselage, with no underwing engine pylons.", "C909はGE CF34-10A高バイパスターボファン2基を後部胴体側面に装備し、翼下エンジンパイロンはありません。"),
+            ("近照呈現CF34進氣唇口與短艙鉚接表面；風扇位於陰影中，不應從此角度估算風扇直徑。", "The close-up shows the CF34 inlet lip and riveted nacelle skin; the fan sits in shadow, so its diameter should not be inferred from this perspective.", "近接写真はCF34吸入口リップとリベット外板を示します。ファンは影内のため、この視点から直径を推定しません。"),
+            [("CF34-10A ×2。", "Two CF34-10A engines.", "CF34-10A×2。"), ("後機身安裝。", "Aft-fuselage mounting.", "後部胴体装備。"), ("主翼下方無短艙。", "No underwing nacelles.", "翼下ナセルなし。")],
+        ),
+        "wingtip": identify(
+            ("C909低翼末端裝有小型上翹翼尖小翼；尺寸不大，但從正面斜角可看到翼端明顯向上折起。", "The C909 low wing ends in a small upturned winglet. It is modest in size but visibly rises from the tip in front-quarter views.", "C909低翼端には小型の上向きウイングレットがあり、前斜め視点で翼端の折れ上がりを確認できます。"),
+            ("不要把遠側翼尖小翼與T尾的水平尾翼尖混淆；沿主翼前後緣追到最外端判讀。", "Do not confuse the far winglet with the T-tail tip; trace the main-wing leading and trailing edges to the extremity.", "遠側ウイングレットをT尾翼端と混同せず、主翼前後縁を外端まで追って判定します。"),
+            [("小型上翹翼尖。", "Small upturned winglet.", "小型上向き翼端。"), ("主翼外端明顯折起。", "Visible break at outer wing.", "外翼端で明確に折れる。"), ("不是大型直立鯊鰭。", "Not a tall sharklet.", "大型シャークレットではない。")],
+        ),
+        "wing": identify(
+            ("C909採翼展27.28公尺的低置超臨界後掠翼，前緣後掠約25度；引擎移到後機身，使主翼下方輪廓乾淨。", "The C909 uses a 27.28 m low-mounted supercritical swept wing with about 25 degrees of leading-edge sweep. Aft engines leave the wing underside free of nacelles.", "C909は翼幅27.28 m、前縁後退約25度の低位置超臨界翼で、後部エンジンのため翼下面にナセルがありません。"),
+            ("進場照片顯示後緣襟翼展開；這是起降構型，不代表巡航時的翼面外形。", "The approach photograph shows trailing-edge flaps deployed; this is a landing configuration, not the clean cruise profile.", "進入写真では後縁フラップ展開中で、巡航時のクリーン翼形ではありません。"),
+            [("翼展27.28公尺。", "27.28 m span.", "翼幅27.28 m。"), ("約25度後掠。", "About 25° sweep.", "後退約25度。"), ("翼下無引擎短艙。", "No underwing nacelles.", "翼下ナセルなし。")],
+        ),
+        "vstab": identify(
+            ("C909具有高而後掠的單片垂直尾翼；尾翼根部前方與後機身整流順接，方向舵位於後緣。", "The C909 has a tall swept single fin blended into the aft fuselage, with the rudder along its trailing edge.", "C909は高く後退した単垂尾を持ち、後部胴体へ滑らかにつながり、後縁に方向舵があります。"),
+            ("垂尾頂端承載整組水平尾翼，因此辨識時應同時確認T尾，而不是只看塗裝。", "The complete horizontal tail sits at the fin tip, so identification should confirm the T-tail rather than relying on livery.", "垂尾頂部に水平尾翼全体が載るため、塗装だけでなくT尾翼を確認します。"),
+            [("高後掠單垂尾。", "Tall swept single fin.", "高い後退単垂尾。"), ("後緣方向舵。", "Trailing-edge rudder.", "後縁方向舵。"), ("頂端支撐平尾。", "Carries tailplane at tip.", "頂部に水平尾翼。")],
+        ),
+        "hstab": identify(
+            ("C909水平尾翼安裝在垂尾頂端，形成真正T型尾翼；位置高於兩具後機身引擎。", "The C909 horizontal stabilizer is mounted atop the fin, forming a true T-tail above the two aft-fuselage engines.", "C909の水平尾翼は垂尾頂部に装備され、後部双発より高い真正T尾翼を形成します。"),
+            ("高置平尾是後置引擎區域機常見輪廓；由側面看，平尾與主翼不在同一高度。", "The high tailplane is a common aft-engine regional-jet cue; in profile it is clearly not level with the main wing.", "高位置水平尾翼は後部エンジン地域機の典型で、側面では主翼と同じ高さにありません。"),
+            [("垂尾頂端安裝。", "Mounted atop the fin.", "垂尾頂部装備。"), ("真正T型尾翼。", "True T-tail.", "真正T尾翼。"), ("高於引擎短艙。", "Above the engine nacelles.", "エンジンナセルより上。")],
+        ),
+        "gear": identify(
+            ("C909採可收放前三點式起落架：鼻腳雙輪，左右主腳各雙輪，共六輪。", "The C909 has retractable tricycle landing gear with twin nose wheels and two wheels on each main leg, six wheels total.", "C909は引込前三点式で、前脚2輪、左右主脚各2輪の計6輪です。"),
+            ("進場照片可見主腳位於翼根／機腹區，而不是靠近尾置引擎；輪組較小，符合區域客機尺度。", "The approach image places the mains near the wing-root belly area rather than the aft engines; the compact bogies match a regional jet.", "進入写真では主脚が後部エンジン近くではなく翼根・腹部にあり、小型輪組は地域機の尺度です。"),
+            [("前三點式。", "Tricycle arrangement.", "前三点式。"), ("總輪數六輪。", "Six wheels total.", "計6輪。"), ("主腳每側雙輪。", "Twin wheels per main leg.", "主脚片側2輪。")],
+        ),
+    },
+    "c919": {
+        "overview": identify(
+            ("C919是3+3窄體雙發客機，採低置後掠翼、翼下LEAP-1C引擎與普通尾翼；整體級距接近A320與737家族。", "The C919 is a six-abreast narrowbody twinjet with a swept low wing, underwing LEAP-1C engines and a conventional tail, in the A320/737 class.", "C919は横6席ナローボディ双発で、後退低翼、翼下LEAP-1C、通常尾翼を備え、A320／737級です。"),
+            ("照片為中國國際航空延程型B-919X；塗裝與客艙配置不同不改變C919的基本外形辨識。", "The photograph shows Air China extended-range aircraft B-919X; livery and cabin fit do not change the basic C919 recognition cues.", "写真は中国国際航空の延程型B-919Xで、塗装や客室仕様が違ってもC919の基本識別点は変わりません。"),
+            [("翼下雙發。", "Twin underwing engines.", "翼下双発。"), ("3+3窄體機身。", "Six-abreast narrowbody.", "横6席ナローボディ。"), ("普通低置平尾。", "Conventional low tailplane.", "通常の低位置水平尾翼。")],
+        ),
+        "cockpit": identify(
+            ("C919採雙人玻璃化飛行甲板，以大型電子顯示器整合飛行、導航與系統資訊。", "The C919 uses a two-pilot glass flight deck with large electronic displays integrating flight, navigation and systems information.", "C919は2名用グラスコックピットで、大型電子表示器に飛行・航法・システム情報を統合します。"),
+            ("目前沒有找到授權可重用且能確認為C919的真實座艙內裝照；本圖只顯示實機座艙區外觀，不以展示模型或模擬器替代。", "No reusable, positively identified real C919 flight-deck interior was found. This image shows only the exterior cockpit area; no display mock-up or simulator is substituted.", "再利用可能でC919と確認できる実機操縦席内写真がないため、本画像は実機の操縦席外部のみです。展示模型やシミュレーターで代用していません。"),
+            [("雙人飛行甲板。", "Two-pilot flight deck.", "2名用飛行甲板。"), ("大型電子顯示器。", "Large electronic displays.", "大型電子表示器。"), ("本圖僅供外部定位。", "Exterior location reference only.", "本画像は外部位置参考のみ。")],
+        ),
+        "windshield": identify(
+            ("C919風擋具有寬大的中央窗與外側梯形側窗，窗帶向後上方收窄；沒有舊式眉窗。", "The C919 windshield has broad center panes and trapezoidal outer side panes, with the glazing band tapering aft and upward and no old-style eyebrow windows.", "C919風防は幅広い中央窓と台形の外側窓を持ち、窓帯は後上方へ細まり、旧式眉窓はありません。"),
+            ("正面圖為前斜角、側面圖為遠攝側視；辨識時看中央窗比例、外側窗後緣與短圓機鼻，不以反光顏色判型。", "The front image is oblique and the side image telephoto; use center-pane proportions, the aft edge of the side pane and the short rounded nose, not reflected color.", "正面画像は斜め、側面画像は望遠です。反射色ではなく中央窓比率、側窓後縁、短い丸い機首を見ます。"),
+            [("寬大中央窗。", "Broad center panes.", "幅広い中央窓。"), ("梯形外側窗。", "Trapezoidal outer panes.", "台形外側窓。"), ("無眉窗。", "No eyebrow windows.", "眉窓なし。")],
+        ),
+        "fuselage": identify(
+            ("C919全長38.9公尺、機身寬3.96公尺，客艙採3+3六人並排；照片顯示橢圓窗列、前後主艙門及翼上出口區。", "The C919 is 38.9 m long and 3.96 m wide with six-abreast 3+3 seating. The image shows the oval window row, main doors and overwing-exit area.", "C919は全長38.9 m、胴体幅3.96 mで3+3横6席です。写真では楕円窓列、主扉、翼上出口部を確認できます。"),
+            ("從側面看，機腹由機鼻向翼盒逐漸加深，尾錐較短；門窗數量會受客艙配置影響，不能單獨作為唯一判據。", "In profile the belly deepens toward the wing box and ends in a short tailcone. Door and window counts vary with cabin fit and should not be used alone.", "側面では機腹が翼箱へ向かい深くなり、短い尾錐で終わります。扉・窓数は客室仕様で変わるため単独判定しません。"),
+            [("全長38.9公尺。", "38.9 m long.", "全長38.9 m。"), ("3+3六人並排。", "3+3 six-abreast cabin.", "3+3横6席。"), ("橢圓舷窗列。", "Oval cabin-window row.", "楕円客室窓列。")],
+        ),
+        "engine": identify(
+            ("C919以兩具CFM LEAP-1C高旁通比渦輪扇為標準動力，短艙由吊架安裝在主翼下方。", "The C919 is powered by two CFM LEAP-1C high-bypass turbofans suspended beneath the wing on pylons.", "C919はCFM LEAP-1C高バイパスターボファン2基を主翼下パイロンに装備します。"),
+            ("LEAP-1C短艙外形圓整，照片可見大直徑進氣口；辨識時不要把整流罩接縫誤認為787式鋸齒噴口。", "The LEAP-1C nacelle is smoothly rounded with a large inlet. Do not mistake cowling seams for the serrated nozzle treatment associated with the 787.", "LEAP-1Cナセルは大径吸入口を持つ滑らかな形で、カウル継ぎ目を787型の鋸歯状ノズルと誤認しません。"),
+            [("LEAP-1C ×2。", "Two LEAP-1C engines.", "LEAP-1C×2。"), ("翼下吊架安裝。", "Underwing pylon mounting.", "翼下パイロン装備。"), ("圓整大直徑短艙。", "Large rounded nacelle.", "大型円形ナセル。")],
+        ),
+        "wingtip": identify(
+            ("C919外翼末端向上彎曲並後掠收尖，形成融合式翼尖輪廓，而不是獨立高直立翼片。", "The C919 outer wing curves upward into a swept, blended tip rather than carrying a separate tall vertical winglet.", "C919外翼端は上方へ湾曲し後退して一体化翼端となり、独立した高い直立翼片ではありません。"),
+            ("前斜角照片中近側翼尖伸向畫面右上；沿主翼前後緣追蹤，可看到連續曲面而非明顯接合線。", "In the front-quarter image the near tip extends to the upper right; tracing both wing edges reveals a continuous curve rather than a distinct joint.", "前斜め写真で近側翼端は右上へ伸び、主翼前後縁を追うと明確な接合線のない連続曲面が分かります。"),
+            [("融合式上彎翼尖。", "Blended upturned tip.", "一体型上向き翼端。"), ("無大型直立小翼。", "No tall separate winglet.", "大型独立ウイングレットなし。"), ("翼端後掠收尖。", "Swept tapered extremity.", "後退して細る翼端。")],
+        ),
+        "wing": identify(
+            ("C919採翼展35.8公尺的低置超臨界後掠翼，兩具引擎懸掛翼下；前後緣高升力裝置在進場時展開。", "The C919 uses a 35.8 m low-mounted supercritical swept wing with two underwing engines; leading- and trailing-edge high-lift devices deploy for approach.", "C919は翼幅35.8 mの低位置超臨界後退翼で翼下双発を装備し、進入時に前後縁高揚力装置を展開します。"),
+            ("照片為進場構型，可見襟翼與縫翼展開；比較翼形時要與巡航收起狀態分開理解。", "The photograph shows an approach configuration with flaps and slats deployed; distinguish it from the clean cruise wing.", "写真はフラップとスラットを展開した進入形態で、巡航時のクリーン翼と分けて理解します。"),
+            [("翼展35.8公尺。", "35.8 m span.", "翼幅35.8 m。"), ("低置後掠翼。", "Swept low wing.", "後退低翼。"), ("翼下雙發吊架。", "Two underwing pylons.", "翼下双発パイロン。")],
+        ),
+        "vstab": identify(
+            ("C919採單片後掠垂直尾翼，根部以背鰭整流連接後機身，後緣配置方向舵。", "The C919 has a single swept fin blended into the aft fuselage by a dorsal fairing, with a rudder on the trailing edge.", "C919は背びれ整流部で後部胴体へつながる単一後退垂尾を持ち、後縁に方向舵があります。"),
+            ("普通尾翼配置使垂尾上方沒有水平尾翼；這是與C909高置T尾最直接的輪廓差異。", "Its conventional tail leaves the fin top free of a horizontal stabilizer, a direct silhouette contrast with the C909 T-tail.", "通常尾翼のため垂尾頂部に水平尾翼はなく、C909のT尾翼との直接的な輪郭差です。"),
+            [("單片後掠垂尾。", "Single swept fin.", "単一後退垂尾。"), ("根部背鰭整流。", "Dorsal root fairing.", "根部背びれ整流。"), ("頂端無平尾。", "No tailplane at fin tip.", "頂部に水平尾翼なし。")],
+        ),
+        "hstab": identify(
+            ("C919水平尾翼安裝在後機身低位，構成普通尾翼；位置明顯低於垂尾頂端。", "The C919 horizontal stabilizer is mounted low on the aft fuselage in a conventional-tail arrangement, well below the fin tip.", "C919水平尾翼は後部胴体の低位置に装備される通常尾翼で、垂尾頂部より明確に低い位置です。"),
+            ("側面照片可見平尾由尾錐上方伸出；不要把近側主翼後緣誤當成水平尾翼。", "The profile image shows the tailplane extending above the tailcone; do not confuse the near main-wing trailing edge with it.", "側面写真では尾錐上方から平尾が伸びます。近側主翼後縁と混同しません。"),
+            [("後機身低位安裝。", "Low aft-fuselage mounting.", "後部胴体低位置。"), ("普通尾翼。", "Conventional tail.", "通常尾翼。"), ("低於垂尾頂端。", "Below fin tip.", "垂尾頂部より低い。")],
+        ),
+        "gear": identify(
+            ("C919採可收放前三點式起落架：鼻腳雙輪，左右主腳各雙輪，共六輪。", "The C919 has retractable tricycle landing gear with twin nose wheels and two wheels on each main leg, six wheels total.", "C919は引込前三点式で、前脚2輪、左右主脚各2輪の計6輪です。"),
+            ("主腳從翼盒／機腹附近伸出，收入機腹輪艙；進場照片可同時看到鼻腳與左右主腳位置。", "The main legs extend from the wing-box belly area and retract into belly bays; the approach image shows the nose and both main positions together.", "主脚は翼箱・機腹付近から伸び機腹脚室へ格納され、進入写真で前脚と左右主脚位置を同時に確認できます。"),
+            [("前三點式。", "Tricycle arrangement.", "前三点式。"), ("總輪數六輪。", "Six wheels total.", "計6輪。"), ("主腳每側雙輪。", "Twin wheels per main leg.", "主脚片側2輪。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -3389,6 +3525,32 @@ def update(model: str) -> None:
         parts["wing"]["specs"] = [["翼展", "32.92 m"], ["高升力裝置", "前緣裝置＋三縫襟翼"]]
         parts["vstab"]["specs"] = [["構型", "T 型尾翼"], ["根部", "中央引擎進氣口"]]
         parts["hstab"]["specs"] = [["位置", "垂尾頂端"], ["操縱面", "升降舵"]]
+        parts["gear"]["specs"] = [["配置", "前三點式"], ["總輪數", "6 輪"]]
+    if model == "c909":
+        parts["overview"]["images"][0]["caption"] = tr("中國國際航空ARJ21-700 B-605U進場；C909為2024年採用的新名稱", "Air China ARJ21-700 B-605U on approach; C909 is the name adopted in 2024", "中国国際航空ARJ21-700 B-605U進入；C909は2024年採用名称")
+        parts["cockpit"]["images"][0]["caption"] = tr("C909／ARJ21實機座艙區外觀；非座艙內裝照", "Exterior cockpit area of a real C909/ARJ21; not a flight-deck interior", "C909／ARJ21実機の操縦席外部；操縦席内写真ではありません")
+        parts["windshield"]["images"][0]["caption"] = tr("ARJ21-700 B-605U前斜角窗型（非正投影）", "ARJ21-700 B-605U front-quarter glazing (not orthographic)", "ARJ21-700 B-605U斜め前方窓（正投影ではありません）")
+        parts["windshield"]["images"][1]["caption"] = tr("ARJ21-700 B-605U側窗（進場實照裁切）", "ARJ21-700 B-605U side glazing (approach-photo crop)", "ARJ21-700 B-605U側窓（進入写真切り出し）")
+        parts["engine"]["images"][0]["caption"] = tr("C909／ARJ21的CF34短艙與進氣唇口近照", "Close-up of a C909/ARJ21 CF34 nacelle and inlet lip", "C909／ARJ21 CF34ナセルと吸入口リップの近接写真")
+        parts["fuselage"]["specs"] = [["全長", "33.46 m"], ["機身寬度", "3.14 m"]]
+        parts["engine"]["specs"] = [["型號", "GE CF34-10A ×2"], ["位置", "後機身兩側"]]
+        parts["wingtip"]["specs"] = [["構型", "小型上翹翼尖小翼"]]
+        parts["wing"]["specs"] = [["翼展", "27.28 m"], ["前緣後掠", "約 25°"]]
+        parts["vstab"]["specs"] = [["構型", "單片後掠垂尾"], ["尾翼", "T 型"]]
+        parts["hstab"]["specs"] = [["位置", "垂尾頂端"], ["構型", "T 型尾翼"]]
+        parts["gear"]["specs"] = [["配置", "前三點式"], ["總輪數", "6 輪"]]
+    if model == "c919":
+        parts["overview"]["images"][0]["caption"] = tr("中國國際航空C919延程型B-919X進場", "Air China extended-range C919 B-919X on approach", "中国国際航空C919延程型B-919X進入")
+        parts["cockpit"]["images"][0]["caption"] = tr("C919 B-919A實機座艙區外觀；非座艙內裝照", "Exterior cockpit area of real C919 B-919A; not a flight-deck interior", "C919 B-919A実機の操縦席外部；操縦席内写真ではありません")
+        parts["windshield"]["images"][0]["caption"] = tr("C919 B-919A前斜角窗型（非正投影）", "C919 B-919A front-quarter glazing (not orthographic)", "C919 B-919A斜め前方窓（正投影ではありません）")
+        parts["windshield"]["images"][1]["caption"] = tr("中國東方航空C919 B-919G側窗（遠攝實照裁切）", "China Eastern C919 B-919G side glazing (telephoto crop)", "中国東方航空C919 B-919G側窓（望遠写真切り出し）")
+        parts["fuselage"]["images"][0]["caption"] = tr("中國東方航空C919 B-919G側面門窗與機身", "China Eastern C919 B-919G fuselage, doors and windows", "中国東方航空C919 B-919G側面胴体・扉・窓")
+        parts["fuselage"]["specs"] = [["全長", "38.9 m"], ["機身寬度", "3.96 m"]]
+        parts["engine"]["specs"] = [["型號", "CFM LEAP-1C ×2"], ["位置", "主翼下方"]]
+        parts["wingtip"]["specs"] = [["構型", "融合式上彎翼尖"]]
+        parts["wing"]["specs"] = [["翼展", "35.8 m"], ["構型", "低置超臨界後掠翼"]]
+        parts["vstab"]["specs"] = [["構型", "單片後掠垂尾"], ["操縱面", "方向舵"]]
+        parts["hstab"]["specs"] = [["位置", "後機身低位"], ["構型", "普通尾翼"]]
         parts["gear"]["specs"] = [["配置", "前三點式"], ["總輪數", "6 輪"]]
     if model == "cs300":
         parts["cockpit"]["images"][0]["caption"] = tr(

@@ -76,5 +76,547 @@
         "高旁通比渦輪扇"
       ]
     ]
-  }
+  },
+  "parts": {
+    "overview": {
+      "summary": {
+        "zh": "C919是3+3窄體雙發客機，採低置後掠翼、翼下LEAP-1C引擎與普通尾翼；整體級距接近A320與737家族。",
+        "en": "The C919 is a six-abreast narrowbody twinjet with a swept low wing, underwing LEAP-1C engines and a conventional tail, in the A320/737 class.",
+        "ja": "C919は横6席ナローボディ双発で、後退低翼、翼下LEAP-1C、通常尾翼を備え、A320／737級です。"
+      },
+      "fact": {
+        "zh": "照片為中國國際航空延程型B-919X；塗裝與客艙配置不同不改變C919的基本外形辨識。",
+        "en": "The photograph shows Air China extended-range aircraft B-919X; livery and cabin fit do not change the basic C919 recognition cues.",
+        "ja": "写真は中国国際航空の延程型B-919Xで、塗装や客室仕様が違ってもC919の基本識別点は変わりません。"
+      },
+      "bullets": [
+        {
+          "zh": "翼下雙發。",
+          "en": "Twin underwing engines.",
+          "ja": "翼下双発。"
+        },
+        {
+          "zh": "3+3窄體機身。",
+          "en": "Six-abreast narrowbody.",
+          "ja": "横6席ナローボディ。"
+        },
+        {
+          "zh": "普通低置平尾。",
+          "en": "Conventional low tailplane.",
+          "ja": "通常の低位置水平尾翼。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/c919/overview.jpg?v=9323e0c4b6d1",
+          "caption": {
+            "zh": "中國國際航空C919延程型B-919X進場",
+            "en": "Air China extended-range C919 B-919X on approach",
+            "ja": "中国国際航空C919延程型B-919X進入"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-919X@PEK_(20240829112234).jpg"
+        }
+      ]
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "C919採雙人玻璃化飛行甲板，以大型電子顯示器整合飛行、導航與系統資訊。",
+        "en": "The C919 uses a two-pilot glass flight deck with large electronic displays integrating flight, navigation and systems information.",
+        "ja": "C919は2名用グラスコックピットで、大型電子表示器に飛行・航法・システム情報を統合します。"
+      },
+      "fact": {
+        "zh": "目前沒有找到授權可重用且能確認為C919的真實座艙內裝照；本圖只顯示實機座艙區外觀，不以展示模型或模擬器替代。",
+        "en": "No reusable, positively identified real C919 flight-deck interior was found. This image shows only the exterior cockpit area; no display mock-up or simulator is substituted.",
+        "ja": "再利用可能でC919と確認できる実機操縦席内写真がないため、本画像は実機の操縦席外部のみです。展示模型やシミュレーターで代用していません。"
+      },
+      "bullets": [
+        {
+          "zh": "雙人飛行甲板。",
+          "en": "Two-pilot flight deck.",
+          "ja": "2名用飛行甲板。"
+        },
+        {
+          "zh": "大型電子顯示器。",
+          "en": "Large electronic displays.",
+          "ja": "大型電子表示器。"
+        },
+        {
+          "zh": "本圖僅供外部定位。",
+          "en": "Exterior location reference only.",
+          "ja": "本画像は外部位置参考のみ。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/c919/cockpit.jpg?v=800362447532",
+          "caption": {
+            "zh": "C919 B-919A實機座艙區外觀；非座艙內裝照",
+            "en": "Exterior cockpit area of real C919 B-919A; not a flight-deck interior",
+            "ja": "C919 B-919A実機の操縦席外部；操縦席内写真ではありません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "C919風擋具有寬大的中央窗與外側梯形側窗，窗帶向後上方收窄；沒有舊式眉窗。",
+        "en": "The C919 windshield has broad center panes and trapezoidal outer side panes, with the glazing band tapering aft and upward and no old-style eyebrow windows.",
+        "ja": "C919風防は幅広い中央窓と台形の外側窓を持ち、窓帯は後上方へ細まり、旧式眉窓はありません。"
+      },
+      "fact": {
+        "zh": "正面圖為前斜角、側面圖為遠攝側視；辨識時看中央窗比例、外側窗後緣與短圓機鼻，不以反光顏色判型。",
+        "en": "The front image is oblique and the side image telephoto; use center-pane proportions, the aft edge of the side pane and the short rounded nose, not reflected color.",
+        "ja": "正面画像は斜め、側面画像は望遠です。反射色ではなく中央窓比率、側窓後縁、短い丸い機首を見ます。"
+      },
+      "bullets": [
+        {
+          "zh": "寬大中央窗。",
+          "en": "Broad center panes.",
+          "ja": "幅広い中央窓。"
+        },
+        {
+          "zh": "梯形外側窗。",
+          "en": "Trapezoidal outer panes.",
+          "ja": "台形外側窓。"
+        },
+        {
+          "zh": "無眉窗。",
+          "en": "No eyebrow windows.",
+          "ja": "眉窓なし。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/c919/window-front.jpg?v=423d497ef941",
+          "caption": {
+            "zh": "C919 B-919A前斜角窗型（非正投影）",
+            "en": "C919 B-919A front-quarter glazing (not orthographic)",
+            "ja": "C919 B-919A斜め前方窓（正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg"
+        },
+        {
+          "src": "assets/reference/c919/window-side.jpg?v=b5f457f99dcb",
+          "caption": {
+            "zh": "中國東方航空C919 B-919G側窗（遠攝實照裁切）",
+            "en": "China Eastern C919 B-919G side glazing (telephoto crop)",
+            "ja": "中国東方航空C919 B-919G側窓（望遠写真切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg"
+        }
+      ]
+    },
+    "fuselage": {
+      "summary": {
+        "zh": "C919全長38.9公尺、機身寬3.96公尺，客艙採3+3六人並排；照片顯示橢圓窗列、前後主艙門及翼上出口區。",
+        "en": "The C919 is 38.9 m long and 3.96 m wide with six-abreast 3+3 seating. The image shows the oval window row, main doors and overwing-exit area.",
+        "ja": "C919は全長38.9 m、胴体幅3.96 mで3+3横6席です。写真では楕円窓列、主扉、翼上出口部を確認できます。"
+      },
+      "fact": {
+        "zh": "從側面看，機腹由機鼻向翼盒逐漸加深，尾錐較短；門窗數量會受客艙配置影響，不能單獨作為唯一判據。",
+        "en": "In profile the belly deepens toward the wing box and ends in a short tailcone. Door and window counts vary with cabin fit and should not be used alone.",
+        "ja": "側面では機腹が翼箱へ向かい深くなり、短い尾錐で終わります。扉・窓数は客室仕様で変わるため単独判定しません。"
+      },
+      "bullets": [
+        {
+          "zh": "全長38.9公尺。",
+          "en": "38.9 m long.",
+          "ja": "全長38.9 m。"
+        },
+        {
+          "zh": "3+3六人並排。",
+          "en": "3+3 six-abreast cabin.",
+          "ja": "3+3横6席。"
+        },
+        {
+          "zh": "橢圓舷窗列。",
+          "en": "Oval cabin-window row.",
+          "ja": "楕円客室窓列。"
+        }
+      ],
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "specs": [
+        [
+          "全長",
+          "38.9 m"
+        ],
+        [
+          "機身寬度",
+          "3.96 m"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/c919/fuselage.jpg?v=55bc52a12a9e",
+          "caption": {
+            "zh": "中國東方航空C919 B-919G側面門窗與機身",
+            "en": "China Eastern C919 B-919G fuselage, doors and windows",
+            "ja": "中国東方航空C919 B-919G側面胴体・扉・窓"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg"
+        }
+      ]
+    },
+    "engine": {
+      "summary": {
+        "zh": "C919以兩具CFM LEAP-1C高旁通比渦輪扇為標準動力，短艙由吊架安裝在主翼下方。",
+        "en": "The C919 is powered by two CFM LEAP-1C high-bypass turbofans suspended beneath the wing on pylons.",
+        "ja": "C919はCFM LEAP-1C高バイパスターボファン2基を主翼下パイロンに装備します。"
+      },
+      "fact": {
+        "zh": "LEAP-1C短艙外形圓整，照片可見大直徑進氣口；辨識時不要把整流罩接縫誤認為787式鋸齒噴口。",
+        "en": "The LEAP-1C nacelle is smoothly rounded with a large inlet. Do not mistake cowling seams for the serrated nozzle treatment associated with the 787.",
+        "ja": "LEAP-1Cナセルは大径吸入口を持つ滑らかな形で、カウル継ぎ目を787型の鋸歯状ノズルと誤認しません。"
+      },
+      "bullets": [
+        {
+          "zh": "LEAP-1C ×2。",
+          "en": "Two LEAP-1C engines.",
+          "ja": "LEAP-1C×2。"
+        },
+        {
+          "zh": "翼下吊架安裝。",
+          "en": "Underwing pylon mounting.",
+          "ja": "翼下パイロン装備。"
+        },
+        {
+          "zh": "圓整大直徑短艙。",
+          "en": "Large rounded nacelle.",
+          "ja": "大型円形ナセル。"
+        }
+      ],
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "specs": [
+        [
+          "型號",
+          "CFM LEAP-1C ×2"
+        ],
+        [
+          "位置",
+          "主翼下方"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/c919/engine.jpg?v=1ee117677c8b",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "C919外翼末端向上彎曲並後掠收尖，形成融合式翼尖輪廓，而不是獨立高直立翼片。",
+        "en": "The C919 outer wing curves upward into a swept, blended tip rather than carrying a separate tall vertical winglet.",
+        "ja": "C919外翼端は上方へ湾曲し後退して一体化翼端となり、独立した高い直立翼片ではありません。"
+      },
+      "fact": {
+        "zh": "前斜角照片中近側翼尖伸向畫面右上；沿主翼前後緣追蹤，可看到連續曲面而非明顯接合線。",
+        "en": "In the front-quarter image the near tip extends to the upper right; tracing both wing edges reveals a continuous curve rather than a distinct joint.",
+        "ja": "前斜め写真で近側翼端は右上へ伸び、主翼前後縁を追うと明確な接合線のない連続曲面が分かります。"
+      },
+      "bullets": [
+        {
+          "zh": "融合式上彎翼尖。",
+          "en": "Blended upturned tip.",
+          "ja": "一体型上向き翼端。"
+        },
+        {
+          "zh": "無大型直立小翼。",
+          "en": "No tall separate winglet.",
+          "ja": "大型独立ウイングレットなし。"
+        },
+        {
+          "zh": "翼端後掠收尖。",
+          "en": "Swept tapered extremity.",
+          "ja": "後退して細る翼端。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [
+        [
+          "構型",
+          "融合式上彎翼尖"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/c919/wingtip.jpg?v=d01fad52e6fb",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg"
+        }
+      ]
+    },
+    "wing": {
+      "summary": {
+        "zh": "C919採翼展35.8公尺的低置超臨界後掠翼，兩具引擎懸掛翼下；前後緣高升力裝置在進場時展開。",
+        "en": "The C919 uses a 35.8 m low-mounted supercritical swept wing with two underwing engines; leading- and trailing-edge high-lift devices deploy for approach.",
+        "ja": "C919は翼幅35.8 mの低位置超臨界後退翼で翼下双発を装備し、進入時に前後縁高揚力装置を展開します。"
+      },
+      "fact": {
+        "zh": "照片為進場構型，可見襟翼與縫翼展開；比較翼形時要與巡航收起狀態分開理解。",
+        "en": "The photograph shows an approach configuration with flaps and slats deployed; distinguish it from the clean cruise wing.",
+        "ja": "写真はフラップとスラットを展開した進入形態で、巡航時のクリーン翼と分けて理解します。"
+      },
+      "bullets": [
+        {
+          "zh": "翼展35.8公尺。",
+          "en": "35.8 m span.",
+          "ja": "翼幅35.8 m。"
+        },
+        {
+          "zh": "低置後掠翼。",
+          "en": "Swept low wing.",
+          "ja": "後退低翼。"
+        },
+        {
+          "zh": "翼下雙發吊架。",
+          "en": "Two underwing pylons.",
+          "ja": "翼下双発パイロン。"
+        }
+      ],
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "specs": [
+        [
+          "翼展",
+          "35.8 m"
+        ],
+        [
+          "構型",
+          "低置超臨界後掠翼"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/c919/wing.jpg?v=b33d882b4147",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-919X@PEK_(20240829112234).jpg"
+        }
+      ]
+    },
+    "vstab": {
+      "summary": {
+        "zh": "C919採單片後掠垂直尾翼，根部以背鰭整流連接後機身，後緣配置方向舵。",
+        "en": "The C919 has a single swept fin blended into the aft fuselage by a dorsal fairing, with a rudder on the trailing edge.",
+        "ja": "C919は背びれ整流部で後部胴体へつながる単一後退垂尾を持ち、後縁に方向舵があります。"
+      },
+      "fact": {
+        "zh": "普通尾翼配置使垂尾上方沒有水平尾翼；這是與C909高置T尾最直接的輪廓差異。",
+        "en": "Its conventional tail leaves the fin top free of a horizontal stabilizer, a direct silhouette contrast with the C909 T-tail.",
+        "ja": "通常尾翼のため垂尾頂部に水平尾翼はなく、C909のT尾翼との直接的な輪郭差です。"
+      },
+      "bullets": [
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "単一後退垂尾。"
+        },
+        {
+          "zh": "根部背鰭整流。",
+          "en": "Dorsal root fairing.",
+          "ja": "根部背びれ整流。"
+        },
+        {
+          "zh": "頂端無平尾。",
+          "en": "No tailplane at fin tip.",
+          "ja": "頂部に水平尾翼なし。"
+        }
+      ],
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "specs": [
+        [
+          "構型",
+          "單片後掠垂尾"
+        ],
+        [
+          "操縱面",
+          "方向舵"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/c919/vstab.jpg?v=ffa98f03a917",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg"
+        }
+      ]
+    },
+    "hstab": {
+      "summary": {
+        "zh": "C919水平尾翼安裝在後機身低位，構成普通尾翼；位置明顯低於垂尾頂端。",
+        "en": "The C919 horizontal stabilizer is mounted low on the aft fuselage in a conventional-tail arrangement, well below the fin tip.",
+        "ja": "C919水平尾翼は後部胴体の低位置に装備される通常尾翼で、垂尾頂部より明確に低い位置です。"
+      },
+      "fact": {
+        "zh": "側面照片可見平尾由尾錐上方伸出；不要把近側主翼後緣誤當成水平尾翼。",
+        "en": "The profile image shows the tailplane extending above the tailcone; do not confuse the near main-wing trailing edge with it.",
+        "ja": "側面写真では尾錐上方から平尾が伸びます。近側主翼後縁と混同しません。"
+      },
+      "bullets": [
+        {
+          "zh": "後機身低位安裝。",
+          "en": "Low aft-fuselage mounting.",
+          "ja": "後部胴体低位置。"
+        },
+        {
+          "zh": "普通尾翼。",
+          "en": "Conventional tail.",
+          "ja": "通常尾翼。"
+        },
+        {
+          "zh": "低於垂尾頂端。",
+          "en": "Below fin tip.",
+          "ja": "垂尾頂部より低い。"
+        }
+      ],
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "specs": [
+        [
+          "位置",
+          "後機身低位"
+        ],
+        [
+          "構型",
+          "普通尾翼"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/c919/hstab.jpg?v=9bdc67bde80a",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg"
+        }
+      ]
+    },
+    "gear": {
+      "summary": {
+        "zh": "C919採可收放前三點式起落架：鼻腳雙輪，左右主腳各雙輪，共六輪。",
+        "en": "The C919 has retractable tricycle landing gear with twin nose wheels and two wheels on each main leg, six wheels total.",
+        "ja": "C919は引込前三点式で、前脚2輪、左右主脚各2輪の計6輪です。"
+      },
+      "fact": {
+        "zh": "主腳從翼盒／機腹附近伸出，收入機腹輪艙；進場照片可同時看到鼻腳與左右主腳位置。",
+        "en": "The main legs extend from the wing-box belly area and retract into belly bays; the approach image shows the nose and both main positions together.",
+        "ja": "主脚は翼箱・機腹付近から伸び機腹脚室へ格納され、進入写真で前脚と左右主脚位置を同時に確認できます。"
+      },
+      "bullets": [
+        {
+          "zh": "前三點式。",
+          "en": "Tricycle arrangement.",
+          "ja": "前三点式。"
+        },
+        {
+          "zh": "總輪數六輪。",
+          "en": "Six wheels total.",
+          "ja": "計6輪。"
+        },
+        {
+          "zh": "主腳每側雙輪。",
+          "en": "Twin wheels per main leg.",
+          "ja": "主脚片側2輪。"
+        }
+      ],
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "specs": [
+        [
+          "配置",
+          "前三點式"
+        ],
+        [
+          "總輪數",
+          "6 輪"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/c919/gear.jpg?v=078383b695f5",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B-919X@PEK_(20240829112234).jpg"
+        }
+      ]
+    }
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ]
 }

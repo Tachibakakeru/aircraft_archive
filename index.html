@@ -70,7 +70,7 @@ document.addEventListener("langchange", () => I18N.apply());
     return ids.size;
   };
   const [fleet, airlines, airports, knowledge] = await Promise.all([
-    fetch("data/fleet.json?v=168").then(r => r.json()),
+    fetch("data/fleet.json?v=169").then(r => r.json()),
         fetch("data/airlines.json?v=139").then(r => r.json()),
     fetch("data/airport_count.json?v=138").then(r => r.json()),
     fetch("data/knowledge.json?v=161").then(r => r.json()),

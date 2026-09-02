@@ -753,3 +753,29 @@ The page describes the 707-320. Exterior references are 707-300-family aircraft:
 The main exterior reference is a real 727-223 Advanced freighter. Cargo conversion details do not represent the original passenger window and door arrangement. The engine/tail photograph shows a Stage Three hush kit, not the original JT8D exhaust shape. The museum cockpit's exact subtype is not established. These limitations are stated in captions and descriptions.
 
 Technical cross-checks for both aircraft: [Boeing airport planning manuals](https://www.boeing.com/commercial/airports/plan-manuals) (707 D6-58322 and 727 D6-58324) and [Boeing three-view drawings](https://www.boeing.com/commercial/airports/3-view). No AI-generated or AI-enhanced aircraft imagery is used; crops are produced from credited real photographs without intentional upscaling.
+
+## COMAC C909 / ARJ21-700 (`c909`)
+
+| Local file(s) | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `c909/overview.jpg`, `wingtip.jpg` | [Air China ARJ21-700 B-605U, 16:43:25](https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200802164325).jpg), N509FZ; resized/cropped | CC BY-SA 4.0 |
+| `c909/cockpit.jpg`, `window-front.jpg`, `window-side.jpg`, `vstab.jpg`, `hstab.jpg` | [Air China ARJ21-700 B-605U, 16:44:55](https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200905164455).jpg), N509FZ; cropped | CC BY-SA 4.0 |
+| `c909/fuselage.jpg`, `wing.jpg` | [Air China ARJ21-700 B-605U, 16:43:31](https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200802164331).jpg), N509FZ; cropped | CC BY-SA 4.0 |
+| `c909/gear.jpg` | [Air China ARJ21-700 B-605U, 12:55:29](https://commons.wikimedia.org/wiki/File:B-605U@PEK_(20200628125529).jpg), N509FZ; cropped | CC BY-SA 4.0 |
+| `c909/engine.jpg` | [ARJ21 CF34 engine](https://commons.wikimedia.org/wiki/File:ARJ21%E7%9A%84CF34%E5%BC%95%E6%93%8E.jpg), Lhzss8; cropped | CC BY-SA 4.0 |
+
+C909 is the commercial name adopted for the ARJ21 family in 2024, so the credited aircraft still carries ARJ21-700 markings. No freely reusable photograph positively identified as a real C909 flight-deck interior was found; `cockpit.jpg` is therefore a crop of the real aircraft's exterior cockpit area. No mock-up, simulator, AI-generated or AI-enhanced image is substituted.
+
+Technical cross-check: [COMAC ARJ21 aircraft characteristics for airport planning](https://www.comac.cc/pdf/acap_en.pdf). Shape descriptions are observations of the credited real-aircraft photographs.
+
+## COMAC C919 (`c919`)
+
+| Local file(s) | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `c919/overview.jpg`, `wing.jpg`, `gear.jpg` | [Air China C919 B-919X](https://commons.wikimedia.org/wiki/File:B-919X@PEK_(20240829112234).jpg), N509FZ; resized/cropped | CC BY-SA 4.0 |
+| `c919/cockpit.jpg`, `window-front.jpg`, `engine.jpg`, `wingtip.jpg` | [China Eastern C919 B-919A](https://commons.wikimedia.org/wiki/File:B-919A@PEK_(20221226151718).jpg), N509FZ; cropped | CC BY-SA 4.0 |
+| `c919/window-side.jpg`, `fuselage.jpg`, `vstab.jpg`, `hstab.jpg` | [China Eastern C919 B-919G on final approach](https://commons.wikimedia.org/wiki/File:China_Eastern_Comac_C919_B-919G_on_final_approach_to_Shanghai_Hongqiao_May_2026_1.jpg), 4300streetcar; cropped | CC BY 4.0 |
+
+No freely reusable photograph positively identified as a real C919 flight-deck interior was found; `cockpit.jpg` is a crop of the real aircraft's exterior cockpit area. No display mock-up, simulator, AI-generated or AI-enhanced image is substituted. B-919X is an extended-range delivery, while the external recognition notes are limited to features shared by the photographed C919 airframes.
+
+Technical cross-check: [COMAC C919 aircraft characteristics for airport planning](https://www.comac.cc/fujian/c919acap_en.pdf). Shape descriptions are observations of the credited real-aircraft photographs.

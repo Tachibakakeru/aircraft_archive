@@ -244,6 +244,8 @@ $photos = [ordered]@{
   "b707/cockpit.jpg" = "Museum of Flight Boeing 707 cockpit.jpg"
   "b727/overview.jpg" = "N727US Boeing 727-223 Advanced of USAJet.jpg"
   "b727/cockpit.jpg" = "Boeing 727 cockpit Aviation museum (29097199906).jpg"
+  "c909/overview.jpg" = "B-605U@PEK (20200802164325).jpg"
+  "c919/overview.jpg" = "B-919X@PEK (20240829112234).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -630,6 +632,26 @@ $windowPhotos += @(
   @{ Dest="b727/vstab.jpg"; Title="B727 (4764445359).jpg"; Crop=@(.30,.05,.45) }
   @{ Dest="b727/hstab.jpg"; Title="B727 (4764445359).jpg"; Crop=@(.00,.10,.54) }
   @{ Dest="b727/gear.jpg"; Title="N727US Boeing 727-223 Advanced of USAJet.jpg"; Crop=@(.20,.47,.52) }
+  @{ Dest="c909/cockpit.jpg"; Title="B-605U@PEK (20200905164455).jpg"; Crop=@(.03,.29,.31); Force=$true }
+  @{ Dest="c909/window-front.jpg"; Title="B-605U@PEK (20200905164455).jpg"; Crop=@(.03,.30,.27); Force=$true }
+  @{ Dest="c909/window-side.jpg"; Title="B-605U@PEK (20200905164455).jpg"; Crop=@(.04,.31,.27); Force=$true }
+  @{ Dest="c909/fuselage.jpg"; Title="B-605U@PEK (20200802164331).jpg"; Crop=@(.08,.30,.68) }
+  @{ Dest="c909/engine.jpg"; Title="ARJ21的CF34引擎.jpg"; Crop=@(.05,.14,.90) }
+  @{ Dest="c909/wingtip.jpg"; Title="B-605U@PEK (20200802164325).jpg"; Crop=@(.62,.30,.35) }
+  @{ Dest="c909/wing.jpg"; Title="B-605U@PEK (20200802164331).jpg"; Crop=@(.36,.30,.55) }
+  @{ Dest="c909/vstab.jpg"; Title="B-605U@PEK (20200905164455).jpg"; Crop=@(.69,.21,.28); Force=$true }
+  @{ Dest="c909/hstab.jpg"; Title="B-605U@PEK (20200905164455).jpg"; Crop=@(.69,.18,.28); Force=$true }
+  @{ Dest="c909/gear.jpg"; Title="B-605U@PEK (20200628125529).jpg"; Crop=@(.25,.46,.50) }
+  @{ Dest="c919/cockpit.jpg"; Title="B-919A@PEK (20221226151718).jpg"; Crop=@(.04,.25,.31) }
+  @{ Dest="c919/window-front.jpg"; Title="B-919A@PEK (20221226151718).jpg"; Crop=@(.04,.24,.24) }
+  @{ Dest="c919/window-side.jpg"; Title="China Eastern Comac C919 B-919G on final approach to Shanghai Hongqiao May 2026 1.jpg"; Crop=@(.77,.29,.21) }
+  @{ Dest="c919/fuselage.jpg"; Title="China Eastern Comac C919 B-919G on final approach to Shanghai Hongqiao May 2026 1.jpg"; Crop=@(.17,.29,.67) }
+  @{ Dest="c919/engine.jpg"; Title="B-919A@PEK (20221226151718).jpg"; Crop=@(.34,.42,.46) }
+  @{ Dest="c919/wingtip.jpg"; Title="B-919A@PEK (20221226151718).jpg"; Crop=@(.66,.31,.31) }
+  @{ Dest="c919/wing.jpg"; Title="B-919X@PEK (20240829112234).jpg"; Crop=@(.18,.22,.60) }
+  @{ Dest="c919/vstab.jpg"; Title="China Eastern Comac C919 B-919G on final approach to Shanghai Hongqiao May 2026 1.jpg"; Crop=@(.08,.20,.25) }
+  @{ Dest="c919/hstab.jpg"; Title="China Eastern Comac C919 B-919G on final approach to Shanghai Hongqiao May 2026 1.jpg"; Crop=@(.07,.36,.30) }
+  @{ Dest="c919/gear.jpg"; Title="B-919X@PEK (20240829112234).jpg"; Crop=@(.42,.49,.38) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0
