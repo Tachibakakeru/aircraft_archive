@@ -1,0 +1,618 @@
+{
+  "updated": "2026-09-02",
+  "fleetCount": 169,
+  "modelCount": 47,
+  "missingCount": 122,
+  "missing": [
+    {
+      "id": "dreamlifter",
+      "name": "Boeing 747-400 Dreamlifter",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "c909",
+      "name": "COMAC C909 (ARJ21)",
+      "manufacturer": "COMAC"
+    },
+    {
+      "id": "c919",
+      "name": "COMAC C919",
+      "manufacturer": "COMAC"
+    },
+    {
+      "id": "c929",
+      "name": "COMAC C929",
+      "manufacturer": "COMAC"
+    },
+    {
+      "id": "c939",
+      "name": "COMAC C939",
+      "manufacturer": "COMAC"
+    },
+    {
+      "id": "a319n",
+      "name": "Airbus A319neo",
+      "manufacturer": "Airbus"
+    },
+    {
+      "id": "a320n",
+      "name": "Airbus A320neo",
+      "manufacturer": "Airbus"
+    },
+    {
+      "id": "a321n",
+      "name": "Airbus A321neo",
+      "manufacturer": "Airbus"
+    },
+    {
+      "id": "a321xlr",
+      "name": "Airbus A321XLR",
+      "manufacturer": "Airbus"
+    },
+    {
+      "id": "a338",
+      "name": "Airbus A330-800",
+      "manufacturer": "Airbus"
+    },
+    {
+      "id": "a339",
+      "name": "Airbus A330-900",
+      "manufacturer": "Airbus"
+    },
+    {
+      "id": "a35k",
+      "name": "Airbus A350-1000",
+      "manufacturer": "Airbus"
+    },
+    {
+      "id": "belugaxl",
+      "name": "Airbus BelugaXL",
+      "manufacturer": "Airbus"
+    },
+    {
+      "id": "b37m",
+      "name": "Boeing 737 MAX 7",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "b38m",
+      "name": "Boeing 737 MAX 8",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "b39m",
+      "name": "Boeing 737 MAX 9",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "b3xm",
+      "name": "Boeing 737 MAX 10",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "b779",
+      "name": "Boeing 777-9",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "b78x",
+      "name": "Boeing 787-10",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "b763f",
+      "name": "Boeing 767-300F",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "b77f",
+      "name": "Boeing 777 Freighter",
+      "manufacturer": "Boeing"
+    },
+    {
+      "id": "e175",
+      "name": "Embraer E175",
+      "manufacturer": "Embraer"
+    },
+    {
+      "id": "e190e2",
+      "name": "Embraer E190-E2",
+      "manufacturer": "Embraer"
+    },
+    {
+      "id": "e195e2",
+      "name": "Embraer E195-E2",
+      "manufacturer": "Embraer"
+    },
+    {
+      "id": "atr72",
+      "name": "ATR 72-600",
+      "manufacturer": "ATR"
+    },
+    {
+      "id": "atr72f",
+      "name": "ATR 72-600F",
+      "manufacturer": "ATR"
+    },
+    {
+      "id": "dhc6-400",
+      "name": "De Havilland Canada DHC-6 Twin Otter Series 400",
+      "manufacturer": "De Havilland Canada"
+    },
+    {
+      "id": "c408",
+      "name": "Cessna 408 SkyCourier",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "l410ng",
+      "name": "Aircraft Industries L 410 NG",
+      "manufacturer": "Aircraft Industries"
+    },
+    {
+      "id": "g400",
+      "name": "Gulfstream G400",
+      "manufacturer": "Gulfstream"
+    },
+    {
+      "id": "g500",
+      "name": "Gulfstream G500",
+      "manufacturer": "Gulfstream"
+    },
+    {
+      "id": "g600",
+      "name": "Gulfstream G600",
+      "manufacturer": "Gulfstream"
+    },
+    {
+      "id": "g700",
+      "name": "Gulfstream G700",
+      "manufacturer": "Gulfstream"
+    },
+    {
+      "id": "g800",
+      "name": "Gulfstream G800",
+      "manufacturer": "Gulfstream"
+    },
+    {
+      "id": "cl3500",
+      "name": "Bombardier Challenger 3500",
+      "manufacturer": "Bombardier"
+    },
+    {
+      "id": "cl650",
+      "name": "Bombardier Challenger 650",
+      "manufacturer": "Bombardier"
+    },
+    {
+      "id": "global5500",
+      "name": "Bombardier Global 5500",
+      "manufacturer": "Bombardier"
+    },
+    {
+      "id": "global6500",
+      "name": "Bombardier Global 6500",
+      "manufacturer": "Bombardier"
+    },
+    {
+      "id": "global7500",
+      "name": "Bombardier Global 7500",
+      "manufacturer": "Bombardier"
+    },
+    {
+      "id": "global8000",
+      "name": "Bombardier Global 8000",
+      "manufacturer": "Bombardier"
+    },
+    {
+      "id": "f2000lxs",
+      "name": "Dassault Falcon 2000LXS",
+      "manufacturer": "Dassault"
+    },
+    {
+      "id": "f900lx",
+      "name": "Dassault Falcon 900LX",
+      "manufacturer": "Dassault"
+    },
+    {
+      "id": "f6x",
+      "name": "Dassault Falcon 6X",
+      "manufacturer": "Dassault"
+    },
+    {
+      "id": "f8x",
+      "name": "Dassault Falcon 8X",
+      "manufacturer": "Dassault"
+    },
+    {
+      "id": "f10x",
+      "name": "Dassault Falcon 10X",
+      "manufacturer": "Dassault"
+    },
+    {
+      "id": "phenom100ex",
+      "name": "Embraer Phenom 100EX",
+      "manufacturer": "Embraer"
+    },
+    {
+      "id": "phenom300ev",
+      "name": "Embraer Phenom 300EV",
+      "manufacturer": "Embraer"
+    },
+    {
+      "id": "praetor500e",
+      "name": "Embraer Praetor 500E",
+      "manufacturer": "Embraer"
+    },
+    {
+      "id": "praetor600e",
+      "name": "Embraer Praetor 600E",
+      "manufacturer": "Embraer"
+    },
+    {
+      "id": "citationm2",
+      "name": "Cessna Citation M2 Gen3",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "citationcj3",
+      "name": "Cessna Citation CJ3 Gen3",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "citationcj4",
+      "name": "Cessna Citation CJ4 Gen3",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "citationxls",
+      "name": "Cessna Citation XLS Gen2",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "citationlat",
+      "name": "Cessna Citation Latitude",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "citationlong",
+      "name": "Cessna Citation Longitude",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "hondajet",
+      "name": "HondaJet Elite II",
+      "manufacturer": "Honda Aircraft"
+    },
+    {
+      "id": "visionjet",
+      "name": "Cirrus Vision Jet G3",
+      "manufacturer": "Cirrus Aircraft"
+    },
+    {
+      "id": "pc24",
+      "name": "Pilatus PC-24",
+      "manufacturer": "Pilatus"
+    },
+    {
+      "id": "acj220",
+      "name": "Airbus ACJ TwoTwenty",
+      "manufacturer": "Airbus Corporate Jets"
+    },
+    {
+      "id": "c172",
+      "name": "Cessna 172 Skyhawk",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "c182",
+      "name": "Cessna 182 Skylane",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "c182t",
+      "name": "Cessna Turbo Skylane",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "c206",
+      "name": "Cessna Turbo Stationair HD",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "c208",
+      "name": "Cessna Caravan",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "c208b",
+      "name": "Cessna Grand Caravan EX",
+      "manufacturer": "Cessna"
+    },
+    {
+      "id": "bonanza",
+      "name": "Beechcraft Bonanza G36",
+      "manufacturer": "Beechcraft"
+    },
+    {
+      "id": "baron",
+      "name": "Beechcraft Baron G58",
+      "manufacturer": "Beechcraft"
+    },
+    {
+      "id": "kingair260",
+      "name": "Beechcraft King Air 260",
+      "manufacturer": "Beechcraft"
+    },
+    {
+      "id": "kingair360",
+      "name": "Beechcraft King Air 360",
+      "manufacturer": "Beechcraft"
+    },
+    {
+      "id": "kingair360er",
+      "name": "Beechcraft King Air 360ER",
+      "manufacturer": "Beechcraft"
+    },
+    {
+      "id": "denali",
+      "name": "Beechcraft Denali",
+      "manufacturer": "Beechcraft"
+    },
+    {
+      "id": "m700",
+      "name": "Piper M700 Fury",
+      "manufacturer": "Piper"
+    },
+    {
+      "id": "m500",
+      "name": "Piper M500",
+      "manufacturer": "Piper"
+    },
+    {
+      "id": "m350",
+      "name": "Piper M350",
+      "manufacturer": "Piper"
+    },
+    {
+      "id": "archerlx",
+      "name": "Piper Archer LX",
+      "manufacturer": "Piper"
+    },
+    {
+      "id": "archerdx",
+      "name": "Piper Archer DX",
+      "manufacturer": "Piper"
+    },
+    {
+      "id": "pilot100i",
+      "name": "Piper Pilot 100i",
+      "manufacturer": "Piper"
+    },
+    {
+      "id": "seminole",
+      "name": "Piper Seminole",
+      "manufacturer": "Piper"
+    },
+    {
+      "id": "sr20",
+      "name": "Cirrus SR20 G7+",
+      "manufacturer": "Cirrus Aircraft"
+    },
+    {
+      "id": "sr22",
+      "name": "Cirrus SR22 G7+",
+      "manufacturer": "Cirrus Aircraft"
+    },
+    {
+      "id": "sr22t",
+      "name": "Cirrus SR22T G7+",
+      "manufacturer": "Cirrus Aircraft"
+    },
+    {
+      "id": "da20",
+      "name": "Diamond DA20 Series",
+      "manufacturer": "Diamond Aircraft"
+    },
+    {
+      "id": "da40",
+      "name": "Diamond DA40 Series",
+      "manufacturer": "Diamond Aircraft"
+    },
+    {
+      "id": "da42",
+      "name": "Diamond DA42-VI",
+      "manufacturer": "Diamond Aircraft"
+    },
+    {
+      "id": "da50",
+      "name": "Diamond DA50 RG",
+      "manufacturer": "Diamond Aircraft"
+    },
+    {
+      "id": "da62",
+      "name": "Diamond DA62",
+      "manufacturer": "Diamond Aircraft"
+    },
+    {
+      "id": "tbm910",
+      "name": "Daher TBM 910",
+      "manufacturer": "Daher"
+    },
+    {
+      "id": "tbm960",
+      "name": "Daher TBM 960",
+      "manufacturer": "Daher"
+    },
+    {
+      "id": "kodiak100",
+      "name": "Daher Kodiak 100 Series III",
+      "manufacturer": "Daher"
+    },
+    {
+      "id": "kodiak900",
+      "name": "Daher Kodiak 900",
+      "manufacturer": "Daher"
+    },
+    {
+      "id": "pc12pro",
+      "name": "Pilatus PC-12 PRO",
+      "manufacturer": "Pilatus"
+    },
+    {
+      "id": "pmentor",
+      "name": "Tecnam P-Mentor",
+      "manufacturer": "Tecnam"
+    },
+    {
+      "id": "p2010",
+      "name": "Tecnam P2010",
+      "manufacturer": "Tecnam"
+    },
+    {
+      "id": "p2006t",
+      "name": "Tecnam P2006T NG",
+      "manufacturer": "Tecnam"
+    },
+    {
+      "id": "p2012",
+      "name": "Tecnam P2012 Traveller",
+      "manufacturer": "Tecnam"
+    },
+    {
+      "id": "p2012stol",
+      "name": "Tecnam P2012 STOL",
+      "manufacturer": "Tecnam"
+    },
+    {
+      "id": "h125",
+      "name": "Airbus H125",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "h130",
+      "name": "Airbus H130",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "h135",
+      "name": "Airbus H135",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "h140",
+      "name": "Airbus H140",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "h145",
+      "name": "Airbus H145",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "h160",
+      "name": "Airbus H160",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "h175",
+      "name": "Airbus H175",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "h215",
+      "name": "Airbus H215",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "h225",
+      "name": "Airbus H225",
+      "manufacturer": "Airbus Helicopters"
+    },
+    {
+      "id": "bell505",
+      "name": "Bell 505 Jet Ranger X",
+      "manufacturer": "Bell"
+    },
+    {
+      "id": "bell407",
+      "name": "Bell 407GXi",
+      "manufacturer": "Bell"
+    },
+    {
+      "id": "bell429",
+      "name": "Bell 429",
+      "manufacturer": "Bell"
+    },
+    {
+      "id": "bell412",
+      "name": "Subaru Bell 412EPX",
+      "manufacturer": "Bell / Subaru"
+    },
+    {
+      "id": "bell525",
+      "name": "Bell 525 Relentless",
+      "manufacturer": "Bell"
+    },
+    {
+      "id": "aw109",
+      "name": "Leonardo AW109 Trekker",
+      "manufacturer": "Leonardo"
+    },
+    {
+      "id": "aw119",
+      "name": "Leonardo AW119Kx",
+      "manufacturer": "Leonardo"
+    },
+    {
+      "id": "aw169",
+      "name": "Leonardo AW169",
+      "manufacturer": "Leonardo"
+    },
+    {
+      "id": "aw189",
+      "name": "Leonardo AW189",
+      "manufacturer": "Leonardo"
+    },
+    {
+      "id": "aw09",
+      "name": "Leonardo AW09",
+      "manufacturer": "Leonardo"
+    },
+    {
+      "id": "r22",
+      "name": "Robinson R22 Beta II",
+      "manufacturer": "Robinson"
+    },
+    {
+      "id": "r44",
+      "name": "Robinson R44 Raven II",
+      "manufacturer": "Robinson"
+    },
+    {
+      "id": "r44cadet",
+      "name": "Robinson R44 Cadet",
+      "manufacturer": "Robinson"
+    },
+    {
+      "id": "r66",
+      "name": "Robinson R66 NxG",
+      "manufacturer": "Robinson"
+    },
+    {
+      "id": "md500e",
+      "name": "MD Helicopters MD 500E",
+      "manufacturer": "MD Helicopters"
+    },
+    {
+      "id": "md530f",
+      "name": "MD Helicopters MD 530F",
+      "manufacturer": "MD Helicopters"
+    },
+    {
+      "id": "s92",
+      "name": "Sikorsky S-92A+",
+      "manufacturer": "Sikorsky"
+    }
+  ]
+}

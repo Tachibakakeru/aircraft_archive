@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H140",
+  "sub": {
+    "zh": "已完成實體首飛的新一代三噸級輕型雙發直升機。",
+    "en": "A new-generation three-tonne-class light twin that has completed its physical first flight.",
+    "ja": "実機初飛行を完了した新世代3トン級軽双発ヘリコプターです。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h140"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1–2 + 6"
+      ],
+      [
+        "首飛年份",
+        "2025"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.8 m（約）"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 650 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Safran Arrius 2E"
+      ]
+    ]
+  }
+}

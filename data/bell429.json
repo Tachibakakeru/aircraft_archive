@@ -1,0 +1,41 @@
+{
+  "title": "Bell 429",
+  "sub": {
+    "zh": "具寬敞平地板客艙與 IFR 能力的輕型雙發多任務直升機。",
+    "en": "A light twin multi-mission helicopter with a spacious flat-floor cabin and IFR capability.",
+    "ja": "広いフラットフロア客室とIFR能力を持つ軽双発多任務ヘリコプターです。"
+  },
+  "sources": [
+    "https://www.bellflight.com/products/bell-429"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1 + 7"
+      ],
+      [
+        "首飛年份",
+        "2007"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "11.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "689 km (372 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW207D1"
+      ]
+    ]
+  }
+}

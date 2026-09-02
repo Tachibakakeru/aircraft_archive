@@ -1,0 +1,41 @@
+{
+  "title": "Bombardier Global 7500",
+  "sub": {
+    "zh": "四個獨立生活區與超長程航程的 Bombardier 旗艦。",
+    "en": "Bombardier's ultra-long-range flagship with four distinct living spaces.",
+    "ja": "4つの独立した居住区画を備えるボンバルディアの超長距離旗艦機です。"
+  },
+  "sources": [
+    "https://bombardier.com/en/aircraft/global-7500"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "31.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "14,260 km (7,700 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric Passport"
+      ]
+    ]
+  }
+}

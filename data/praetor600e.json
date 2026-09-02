@@ -1,0 +1,41 @@
+{
+  "title": "Embraer Praetor 600E",
+  "sub": {
+    "zh": "Praetor 家族的超中型長程型，可執行跨大西洋任務。",
+    "en": "The super-midsize, longer-range Praetor capable of transatlantic missions.",
+    "ja": "大西洋横断に対応するPraetorファミリーのスーパー・ミッドサイズ長距離型です。"
+  },
+  "sources": [
+    "https://embraer.com/executive-jets/praetor-600e/en/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 12"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "21.5 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "7,441 km (4,018 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Honeywell HTF7500E"
+      ]
+    ]
+  }
+}

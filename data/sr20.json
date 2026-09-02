@@ -1,0 +1,41 @@
+{
+  "title": "Cirrus SR20 G7+",
+  "sub": {
+    "zh": "具 CAPS 整機降落傘與 Safe Return 自動降落的入門 SR 系列。",
+    "en": "The entry SR Series model with CAPS whole-aircraft parachute and Safe Return autoland.",
+    "ja": "CAPS機体パラシュートとSafe Return自動着陸を備えるSRシリーズ入門型です。"
+  },
+  "sources": [
+    "https://cirrusaircraft.com/aircraft/sr-series/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 5"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,161 km (627 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming IO-390-C3B6"
+      ]
+    ]
+  }
+}

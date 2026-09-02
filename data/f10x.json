@@ -1,0 +1,41 @@
+{
+  "title": "Dassault Falcon 10X",
+  "sub": {
+    "zh": "已完成實體出廠展示、採超寬客艙與複合材料機翼的次世代 Falcon。",
+    "en": "A rolled-out next-generation Falcon with an exceptionally wide cabin and composite wing.",
+    "ja": "実機ロールアウト済みで、超広幅客室と複合材主翼を備える次世代Falconです。"
+  },
+  "sources": [
+    "https://www.dassaultfalcon.com/aircraft/falcon-10x/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "33.6 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "13,890 km (7,500 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Pearl 10X"
+      ]
+    ]
+  }
+}

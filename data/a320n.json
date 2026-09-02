@@ -1,0 +1,41 @@
+{
+  "title": "Airbus A320neo",
+  "sub": {
+    "zh": "換裝新世代引擎與 Sharklet 的 A320 主力新世代型。",
+    "en": "The core new-generation A320 variant with new engines and Sharklets.",
+    "ja": "新世代エンジンとシャークレットを備えるA320の主力型です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/commercial-aircraft/passenger-aircraft/a320-family"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "150–180"
+      ],
+      [
+        "首飛年份",
+        "2014"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "35.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "6,300 km (3,400 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × CFM LEAP-1A / Pratt & Whitney PW1100G-JM"
+      ]
+    ]
+  }
+}

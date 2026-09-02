@@ -1,0 +1,41 @@
+{
+  "title": "Bell 525 Relentless",
+  "sub": {
+    "zh": "已完成實體試飛、採線傳飛控與大型客艙的超中型雙發直升機。",
+    "en": "A flight-tested super-medium twin with fly-by-wire controls and a large cabin.",
+    "ja": "実機飛行試験済みで、フライ・バイ・ワイヤと大型客室を備えるスーパー・ミディアム双発機です。"
+  },
+  "sources": [
+    "https://www.bellflight.com/products/bell-525"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 16"
+      ],
+      [
+        "首飛年份",
+        "2015"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "16.2 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,146 km (619 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric CT7-2F1"
+      ]
+    ]
+  }
+}

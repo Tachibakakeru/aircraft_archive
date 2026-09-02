@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H160",
+  "sub": {
+    "zh": "採 Blue Edge 槳葉、傾斜 Fenestron 與 Helionix 的中型雙發直升機。",
+    "en": "A medium twin with Blue Edge blades, a canted Fenestron, and Helionix avionics.",
+    "ja": "Blue Edgeブレード、傾斜フェネストロン、Helionixを備える中型双発機です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h160"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 最多 12"
+      ],
+      [
+        "首飛年份",
+        "2015"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "13.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 880 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Safran Arrano 1A"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H215",
+  "sub": {
+    "zh": "Super Puma 家族的重型多用途型，保留寬大客艙與外吊能力。",
+    "en": "A heavy multi-role Super Puma retaining a large cabin and external-lift capability.",
+    "ja": "大型客室と外部吊下げ能力を持つSuper Puma系列の重多用途型です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h215"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 最多 19"
+      ],
+      [
+        "首飛年份",
+        "1978"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "16.2 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 841 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Safran Makila 1A1"
+      ]
+    ]
+  }
+}

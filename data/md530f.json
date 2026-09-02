@@ -1,0 +1,41 @@
+{
+  "title": "MD Helicopters MD 530F",
+  "sub": {
+    "zh": "針對高溫高原與外吊任務強化的 MD 500 家族型。",
+    "en": "An MD 500-family variant strengthened for hot-and-high and external-load missions.",
+    "ja": "高温・高高度および外部吊下げ任務向けに強化したMD 500系列型です。"
+  },
+  "sources": [
+    "https://www.mdhelicopters.com/models/md-530f/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1 + 4"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "8.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 432 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Rolls-Royce 250-C30"
+      ]
+    ]
+  }
+}

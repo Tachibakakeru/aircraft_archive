@@ -1,0 +1,41 @@
+{
+  "title": "Beechcraft King Air 360ER",
+  "sub": {
+    "zh": "增加燃油與航程、常用於特種任務的 King Air 360 衍生型。",
+    "en": "An extended-range King Air 360 derivative often used for special missions.",
+    "ja": "燃料搭載量と航続距離を増やし、特殊任務にも使われるKing Air 360派生型です。"
+  },
+  "sources": [
+    "https://beechcraft.txtav.com/en/king-air-360er"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 11"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "17.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "4,985 km (2,692 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PT6A-60A"
+      ]
+    ]
+  }
+}

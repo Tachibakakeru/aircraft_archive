@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Citation M2 Gen3",
+  "sub": {
+    "zh": "配備 Garmin G3000、Autoland 與自動油門的入門 Citation。",
+    "en": "An entry-level Citation with Garmin G3000, Autoland, and autothrottles.",
+    "ja": "Garmin G3000、Autoland、自動推力制御を備える入門Citationです。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/citation/m2"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 7"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "14.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,871 km (1,550 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Williams FJ44-1AP"
+      ]
+    ]
+  }
+}

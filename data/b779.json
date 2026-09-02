@@ -1,0 +1,41 @@
+{
+  "title": "Boeing 777-9",
+  "sub": {
+    "zh": "777X 家族的大型客機，採複合材料機翼、折疊翼尖與 GE9X。",
+    "en": "The large 777X passenger model with a composite wing, folding tips, and GE9X engines.",
+    "ja": "複合材主翼、折り畳み翼端、GE9Xを備える777Xの大型旅客型です。"
+  },
+  "sources": [
+    "https://www.boeing.com/commercial/777x"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "約 426"
+      ],
+      [
+        "首飛年份",
+        "2020"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "71.8 m（地面折翼 64.8 m）"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "13,500 km (7,285 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric GE9X"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Diamond DA50 RG",
+  "sub": {
+    "zh": "具可收放起落架、五座寬客艙與 Jet A 動力的單發機。",
+    "en": "A five-seat, wide-cabin single with retractable gear and Jet-A power.",
+    "ja": "引込脚、5座ワイドキャビン、Jet A動力を備える単発機です。"
+  },
+  "sources": [
+    "https://www.diamondaircraft.com/en/private-owners/aircraft/da50/overview/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 5"
+      ],
+      [
+        "首飛年份",
+        "2019"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "13.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,396 km (754 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Continental CD-300"
+      ]
+    ]
+  }
+}

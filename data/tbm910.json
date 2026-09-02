@@ -1,0 +1,41 @@
+{
+  "title": "Daher TBM 910",
+  "sub": {
+    "zh": "採 G1000 NXi 的高速單發加壓渦槳機。",
+    "en": "A fast pressurized single turboprop equipped with Garmin G1000 NXi avionics.",
+    "ja": "Garmin G1000 NXiを備える高速加圧単発ターボプロップです。"
+  },
+  "sources": [
+    "https://www.daher.com/en/aircraft-manufacturer-turboprop-business-aircraft/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 6"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "12.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,204 km (1,730 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6A-66D"
+      ]
+    ]
+  }
+}

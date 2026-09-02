@@ -1,0 +1,41 @@
+{
+  "title": "Boeing 787-10",
+  "sub": {
+    "zh": "787 家族最長、載客量最高的型號，適合高需求中長程航線。",
+    "en": "The longest and highest-capacity 787, optimized for high-demand medium- and long-haul routes.",
+    "ja": "787で最長・最大容量の型で、需要の高い中長距離路線向けです。"
+  },
+  "sources": [
+    "https://www.boeing.com/commercial/787"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "約 336"
+      ],
+      [
+        "首飛年份",
+        "2017"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "60.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "11,730 km (6,330 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × GEnx-1B / Rolls-Royce Trent 1000"
+      ]
+    ]
+  }
+}

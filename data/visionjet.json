@@ -1,0 +1,41 @@
+{
+  "title": "Cirrus Vision Jet G3",
+  "sub": {
+    "zh": "單發個人噴射機，具整機降落傘與 Safe Return 緊急自動降落。",
+    "en": "A single-engine personal jet with a whole-aircraft parachute and Safe Return emergency autoland.",
+    "ja": "機体全体用パラシュートとSafe Return緊急自動着陸を備える単発パーソナルジェットです。"
+  },
+  "sources": [
+    "https://cirrusaircraft.com/aircraft/vision-jet/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 7"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,361 km (1,275 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Williams FJ33"
+      ]
+    ]
+  }
+}

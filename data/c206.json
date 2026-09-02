@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Turbo Stationair HD",
+  "sub": {
+    "zh": "具大型艙門、六座與高有效載重的單發多用途機。",
+    "en": "A six-seat single-engine utility aircraft with large doors and a high useful load.",
+    "ja": "大型扉、6座、高い有効搭載量を持つ単発多用途機です。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/piston/turbo-stationair-hd"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 6"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,302 km (703 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming TIO-540-AJ1A"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Airbus A330-800",
+  "sub": {
+    "zh": "A330neo 家族的短機身長航程型，採 Trent 7000 與新翼尖。",
+    "en": "The shorter, longer-range A330neo with Trent 7000 engines and new wingtip devices.",
+    "ja": "Trent 7000と新型翼端を備えるA330neoの短胴・長距離型です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/commercial-aircraft/passenger-aircraft/a330-family"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "220–260"
+      ],
+      [
+        "首飛年份",
+        "2018"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "64.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "15,000 km (8,100 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Trent 7000"
+      ]
+    ]
+  }
+}

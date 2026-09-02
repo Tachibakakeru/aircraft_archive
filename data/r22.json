@@ -1,0 +1,41 @@
+{
+  "title": "Robinson R22 Beta II",
+  "sub": {
+    "zh": "結構簡潔、成本較低的雙座活塞訓練與私人直升機。",
+    "en": "A simple, economical two-seat piston helicopter for training and private flying.",
+    "ja": "簡素で経済的な2座ピストン練習・個人用ヘリコプターです。"
+  },
+  "sources": [
+    "https://www.robinsonheli.com/r22-beta-ii"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "1975"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "7.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 463 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming O-360-J2A"
+      ]
+    ]
+  }
+}

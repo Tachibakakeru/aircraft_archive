@@ -1,0 +1,41 @@
+{
+  "title": "Leonardo AW109 Trekker",
+  "sub": {
+    "zh": "以滑橇起落架強化野外任務能力的 AW109 輕型雙發型。",
+    "en": "A skid-equipped light-twin AW109 variant optimized for field operations.",
+    "ja": "スキッド脚で野外任務能力を高めたAW109軽双発型です。"
+  },
+  "sources": [
+    "https://helicopters.leonardo.com/en/products/aw109-trekker"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 最多 6"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 828 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW207C"
+      ]
+    ]
+  }
+}

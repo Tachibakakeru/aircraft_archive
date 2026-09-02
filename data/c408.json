@@ -1,0 +1,41 @@
+{
+  "title": "Cessna 408 SkyCourier",
+  "sub": {
+    "zh": "可快速切換客運與貨運任務的高翼雙發通勤運輸機。",
+    "en": "A high-wing twin turboprop commuter designed for passenger and freighter missions.",
+    "ja": "旅客・貨物任務に対応する高翼双発コミューター輸送機です。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/turboprop/skycourier"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "19 或 3 個 LD3 貨櫃"
+      ],
+      [
+        "首飛年份",
+        "2020"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "22.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,704 km (920 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PT6A-65SC"
+      ]
+    ]
+  }
+}

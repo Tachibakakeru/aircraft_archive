@@ -1,0 +1,41 @@
+{
+  "title": "Airbus A350-1000",
+  "sub": {
+    "zh": "A350 家族的加長高容量型，配備推力更大的 Trent XWB-97。",
+    "en": "The stretched, higher-capacity A350 powered by the higher-thrust Trent XWB-97.",
+    "ja": "高推力Trent XWB-97を搭載するA350の長胴・大容量型です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/commercial-aircraft/passenger-aircraft/a350-family"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "350–410"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "64.75 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "16,100 km (8,700 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Trent XWB-97"
+      ]
+    ]
+  }
+}

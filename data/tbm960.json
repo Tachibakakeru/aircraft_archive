@@ -1,0 +1,41 @@
+{
+  "title": "Daher TBM 960",
+  "sub": {
+    "zh": "具數位引擎與螺旋槳控制、Autoland 的 TBM 旗艦。",
+    "en": "The TBM flagship with digital engine/propeller control and Autoland.",
+    "ja": "デジタル式エンジン・プロペラ制御とAutolandを備えるTBM旗艦です。"
+  },
+  "sources": [
+    "https://www.daher.com/en/aircraft-manufacturer-turboprop-business-aircraft/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 6"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "12.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,204 km (1,730 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6E-66XT"
+      ]
+    ]
+  }
+}

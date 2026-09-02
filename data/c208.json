@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Caravan",
+  "sub": {
+    "zh": "可在簡易跑道運作、兼顧客貨任務的單發渦槳機。",
+    "en": "A single-engine turboprop for passenger and cargo work from austere airstrips.",
+    "ja": "簡易滑走路で旅客・貨物任務に使える単発ターボプロップです。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/turboprop/caravan"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 14"
+      ],
+      [
+        "首飛年份",
+        "1982"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "15.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,982 km (1,070 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6A-114A"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Embraer E190-E2",
+  "sub": {
+    "zh": "第二代 E-Jet 中型支線客機，採新機翼與齒輪傳動渦扇。",
+    "en": "The mid-size second-generation E-Jet with a new wing and geared turbofans.",
+    "ja": "新主翼とギヤードターボファンを採用する第2世代E-Jetの中型機です。"
+  },
+  "sources": [
+    "https://www.embraercommercialaviation.com/commercial-jets/e190-e2/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "97–114"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "33.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "5,278 km (2,850 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney PW1900G"
+      ]
+    ]
+  }
+}

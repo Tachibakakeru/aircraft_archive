@@ -1,0 +1,41 @@
+{
+  "title": "Airbus ACJ TwoTwenty",
+  "sub": {
+    "zh": "以 A220-100 平台打造、具有多個生活區的大型商務機。",
+    "en": "A large business aircraft based on the A220-100 platform with multiple living areas.",
+    "ja": "A220-100を基礎に複数の居住区画を備えた大型ビジネス機です。"
+  },
+  "sources": [
+    "https://www.acj.airbus.com/en/exclusive-aircraft/acj-twotwenty"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "2020"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "35.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "10,463 km (5,650 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney PW1500G"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "HondaJet Elite II",
+  "sub": {
+    "zh": "採翼上引擎配置、可單人駕駛的輕型公務機。",
+    "en": "A single-pilot light jet distinguished by its over-the-wing engine mounts.",
+    "ja": "主翼上面エンジン配置を特徴とする単独操縦対応ライトジェットです。"
+  },
+  "sources": [
+    "https://www.hondajet.com/en/Products/HondaJet-Elite-II"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 8"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "12.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,865 km (1,547 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × GE Honda HF120"
+      ]
+    ]
+  }
+}

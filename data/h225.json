@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H225",
+  "sub": {
+    "zh": "Super Puma 家族長航程重型雙發型，用於海上、搜救與政府運輸。",
+    "en": "The long-range heavy Super Puma for offshore, SAR, and government transport.",
+    "ja": "洋上、捜索救難、政府輸送に使われるSuper Puma系列の長距離重双発型です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h225"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 最多 19"
+      ],
+      [
+        "首飛年份",
+        "2000"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "16.2 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 857 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Safran Makila 2A1"
+      ]
+    ]
+  }
+}

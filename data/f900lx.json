@@ -1,0 +1,41 @@
+{
+  "title": "Dassault Falcon 900LX",
+  "sub": {
+    "zh": "採三發配置與翼尖小翼的成熟大型 Falcon。",
+    "en": "A mature large-cabin Falcon distinguished by three engines and winglets.",
+    "ja": "3発配置とウイングレットを特徴とする実績豊富な大型Falconです。"
+  },
+  "sources": [
+    "https://www.dassaultfalcon.com/aircraft/falcon-900lx/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 14"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "21.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "8,800 km (4,750 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "3 × Honeywell TFE731-60"
+      ]
+    ]
+  }
+}

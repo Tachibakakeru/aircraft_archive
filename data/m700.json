@@ -1,0 +1,41 @@
+{
+  "title": "Piper M700 Fury",
+  "sub": {
+    "zh": "具 700 shp、Autoland 與加壓客艙的 Piper M-Class 旗艦。",
+    "en": "Piper's M-Class flagship with 700 shp, Autoland, and a pressurized cabin.",
+    "ja": "700 shp、Autoland、加圧客室を備えるPiper M-Classの旗艦です。"
+  },
+  "sources": [
+    "https://www.piper.com/model/m700-fury/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 6"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "13.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,430 km (1,852 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6A-52"
+      ]
+    ]
+  }
+}

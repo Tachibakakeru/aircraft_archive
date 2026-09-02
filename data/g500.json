@@ -1,0 +1,41 @@
+{
+  "title": "Gulfstream G500",
+  "sub": {
+    "zh": "強調高速巡航與大型全新客艙的雙發公務機。",
+    "en": "A twinjet combining high-speed cruise with a clean-sheet large cabin.",
+    "ja": "高速巡航と新設計の大型客室を両立する双発ビジネスジェットです。"
+  },
+  "sources": [
+    "https://www.gulfstream.com/en/aircraft/gulfstream-g500"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "2015"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "26.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "9,816 km (5,300 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney PW814GA"
+      ]
+    ]
+  }
+}

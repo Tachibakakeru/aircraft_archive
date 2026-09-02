@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H130",
+  "sub": {
+    "zh": "具寬客艙與 Fenestron 涵道尾旋翼的觀光與私人運輸直升機。",
+    "en": "A sightseeing and private-transport helicopter with a wide cabin and Fenestron tail rotor.",
+    "ja": "広い客室とフェネストロンを備える遊覧・個人輸送ヘリコプターです。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h130"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1 + 7"
+      ],
+      [
+        "首飛年份",
+        "1999"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 644 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Safran Arriel 2D"
+      ]
+    ]
+  }
+}

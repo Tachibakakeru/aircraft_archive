@@ -1,0 +1,41 @@
+{
+  "title": "Boeing 737 MAX 8",
+  "sub": {
+    "zh": "737 MAX 家族的主力型，採 LEAP-1B 與 Advanced Technology 翼尖小翼。",
+    "en": "The core 737 MAX variant with LEAP-1B engines and Advanced Technology winglets.",
+    "ja": "LEAP-1BとAdvanced Technologyウイングレットを備える737 MAXの主力型です。"
+  },
+  "sources": [
+    "https://www.boeing.com/commercial/737max"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "162–178"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "35.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "6,480 km (3,500 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × CFM LEAP-1B"
+      ]
+    ]
+  }
+}

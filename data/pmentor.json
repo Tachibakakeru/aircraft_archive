@@ -1,0 +1,41 @@
+{
+  "title": "Tecnam P-Mentor",
+  "sub": {
+    "zh": "為初級、儀表與複雜飛行訓練設計的雙座機。",
+    "en": "A two-seat aircraft designed for primary, instrument, and complex-aircraft training.",
+    "ja": "初等・計器・複雑機訓練向けの2座機です。"
+  },
+  "sources": [
+    "https://tecnam.com/aircraft/p-mentor/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 2"
+      ],
+      [
+        "首飛年份",
+        "2022"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "8.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 1,352 km (730 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Rotax 912 iS3c"
+      ]
+    ]
+  }
+}

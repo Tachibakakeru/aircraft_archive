@@ -1,0 +1,41 @@
+{
+  "title": "Tecnam P2010",
+  "sub": {
+    "zh": "金屬機翼與複合材料機身結合的四座高翼旅行機。",
+    "en": "A four-seat high-wing tourer combining metal wings with a composite fuselage.",
+    "ja": "金属主翼と複合材胴体を組み合わせた4座高翼旅行機です。"
+  },
+  "sources": [
+    "https://tecnam.com/aircraft/p2010/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 4"
+      ],
+      [
+        "首飛年份",
+        "2012"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "最多 2,408 km (1,300 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Continental CD-170 / Lycoming IO-360"
+      ]
+    ]
+  }
+}

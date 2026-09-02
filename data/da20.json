@@ -1,0 +1,41 @@
+{
+  "title": "Diamond DA20 Series",
+  "sub": {
+    "zh": "採複合材料機身與座艙罩視野的雙座初級訓練機。",
+    "en": "A two-seat primary trainer with a composite airframe and panoramic canopy.",
+    "ja": "複合材機体と広視界キャノピーを持つ2座初等練習機です。"
+  },
+  "sources": [
+    "https://www.diamondaircraft.com/en/private-owners/aircraft/da20/overview/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 2"
+      ],
+      [
+        "首飛年份",
+        "1991"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,302 km (703 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Rotax 912 iS3c / Continental IO-240"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Daher Kodiak 100 Series III",
+  "sub": {
+    "zh": "可在粗糙短跑道與水面運作的堅固單發渦槳機。",
+    "en": "A rugged single turboprop for short, rough strips and optional float operations.",
+    "ja": "短い未舗装滑走路やフロート運用に対応する堅牢な単発ターボプロップです。"
+  },
+  "sources": [
+    "https://prod-kodiak.daher.com/en/aircraft/kodiak-100"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 10"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "13.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 1,861 km (1,005 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6A-34"
+      ]
+    ]
+  }
+}

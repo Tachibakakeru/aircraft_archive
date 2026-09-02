@@ -1,0 +1,41 @@
+{
+  "title": "Embraer E195-E2",
+  "sub": {
+    "zh": "E2 家族最大型，座位容量接近小型主線窄體客機。",
+    "en": "The largest E2-family aircraft, approaching small mainline narrow-body capacity.",
+    "ja": "小型幹線ナローボディに近い容量を持つE2ファミリー最大型です。"
+  },
+  "sources": [
+    "https://www.embraercommercialaviation.com/commercial-jets/e195-e2/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "120–146"
+      ],
+      [
+        "首飛年份",
+        "2017"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "35.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "5,556 km (3,000 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney PW1900G"
+      ]
+    ]
+  }
+}

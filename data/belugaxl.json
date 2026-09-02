@@ -1,0 +1,41 @@
+{
+  "title": "Airbus BelugaXL",
+  "sub": {
+    "zh": "以 A330-200F 為基礎的大型超尺寸零件運輸機，服務 Airbus 生產網路。",
+    "en": "An outsized-component transporter based on the A330-200F for Airbus industrial logistics.",
+    "ja": "A330-200Fを基礎とし、エアバスの大型部品輸送に使われる特殊貨物機です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/commercial-aircraft/beluga"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最大酬載 51 t"
+      ],
+      [
+        "首飛年份",
+        "2018"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "60.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "4,000 km (2,200 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Trent 700"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Bell 407GXi",
+  "sub": {
+    "zh": "四葉主旋翼、G1000H NXi 與高機動性兼具的輕型單發機。",
+    "en": "A light single combining a four-blade rotor, G1000H NXi, and agile handling.",
+    "ja": "4枚主ローター、G1000H NXi、高い機動性を併せ持つ軽単発機です。"
+  },
+  "sources": [
+    "https://www.bellflight.com/products/bell-407"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1 + 6"
+      ],
+      [
+        "首飛年份",
+        "1995"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "624 km (337 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Rolls-Royce 250-C47E/4"
+      ]
+    ]
+  }
+}

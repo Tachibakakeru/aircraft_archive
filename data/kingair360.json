@@ -1,0 +1,41 @@
+{
+  "title": "Beechcraft King Air 360",
+  "sub": {
+    "zh": "King Air 旗艦標準型，強調加壓客艙與多任務能力。",
+    "en": "The standard King Air flagship, emphasizing a pressurized cabin and multi-mission utility.",
+    "ja": "加圧客室と多用途性を重視するKing Airの標準旗艦型です。"
+  },
+  "sources": [
+    "https://beechcraft.txtav.com/en/king-air-360"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 11"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "17.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,345 km (1,806 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PT6A-60A"
+      ]
+    ]
+  }
+}

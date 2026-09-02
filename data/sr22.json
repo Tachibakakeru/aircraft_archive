@@ -1,0 +1,41 @@
+{
+  "title": "Cirrus SR22 G7+",
+  "sub": {
+    "zh": "高性能自然進氣 SR 系列，結合複合材料機體與整機降落傘。",
+    "en": "The high-performance naturally aspirated SR model with a composite airframe and whole-aircraft parachute.",
+    "ja": "複合材機体と機体パラシュートを備える高性能自然吸気SRモデルです。"
+  },
+  "sources": [
+    "https://cirrusaircraft.com/aircraft/sr-series/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 5"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,165 km (1,169 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Continental IO-550-N"
+      ]
+    ]
+  }
+}

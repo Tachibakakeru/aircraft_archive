@@ -1,0 +1,41 @@
+{
+  "title": "Tecnam P2006T NG",
+  "sub": {
+    "zh": "以低油耗 Rotax 引擎為特色的四座輕型雙發訓練機。",
+    "en": "A four-seat light twin trainer distinguished by fuel-efficient Rotax engines.",
+    "ja": "低燃費Rotaxエンジンを特徴とする4座軽双発練習機です。"
+  },
+  "sources": [
+    "https://tecnam.com/aircraft/p2006t-ng/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 4"
+      ],
+      [
+        "首飛年份",
+        "2007"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,722 km (930 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rotax 912 iS3c"
+      ]
+    ]
+  }
+}

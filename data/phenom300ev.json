@@ -1,0 +1,41 @@
+{
+  "title": "Embraer Phenom 300EV",
+  "sub": {
+    "zh": "以高速、單人駕駛能力與自動油門為重點的輕型公務機。",
+    "en": "A light business jet focused on speed, single-pilot operation, and autothrottle capability.",
+    "ja": "高速性能、単独操縦、自動推力制御を特徴とするライトジェットです。"
+  },
+  "sources": [
+    "https://embraer.com/executive-jets/phenom-300ev/en/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 10"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "15.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,723 km (2,010 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW535E1"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Embraer E175",
+  "sub": {
+    "zh": "E-Jet 家族廣泛使用的支線型，主打 70 至 80 席級市場。",
+    "en": "A widely used E-Jet regional model serving the 70- to 80-seat market.",
+    "ja": "70～80席市場で広く使われるE-Jetのリージョナル型です。"
+  },
+  "sources": [
+    "https://www.embraercommercialaviation.com/commercial-jets/e175/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "76–88"
+      ],
+      [
+        "首飛年份",
+        "2003"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "26.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "4,074 km (2,200 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric CF34-8E"
+      ]
+    ]
+  }
+}

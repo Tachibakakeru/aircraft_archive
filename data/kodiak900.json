@@ -1,0 +1,41 @@
+{
+  "title": "Daher Kodiak 900",
+  "sub": {
+    "zh": "Kodiak 100 的加長高速型，保留短場與偏遠地區能力。",
+    "en": "A stretched, faster Kodiak retaining short-field and remote-airstrip capability.",
+    "ja": "短距離・僻地運用能力を保ちながら延長・高速化したKodiakです。"
+  },
+  "sources": [
+    "https://prod-kodiak.daher.com/en/aircraft/kodiak-900"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 10"
+      ],
+      [
+        "首飛年份",
+        "2020"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "13.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,091 km (1,129 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6A-140A"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Leonardo AW169",
+  "sub": {
+    "zh": "AWFamily 中的輕中型雙發機，採可變轉速主旋翼與玻璃座艙。",
+    "en": "The light-intermediate AWFamily twin with variable rotor speed and a glass cockpit.",
+    "ja": "可変ローター回転数とグラスコックピットを備えるAWFamilyの軽中間双発機です。"
+  },
+  "sources": [
+    "https://helicopters.leonardo.com/en/products/aw169"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 最多 10"
+      ],
+      [
+        "首飛年份",
+        "2012"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "12.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 820 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW210A"
+      ]
+    ]
+  }
+}

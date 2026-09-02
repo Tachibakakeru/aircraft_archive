@@ -1,6 +1,10 @@
 {
-  "title": "直升機",
-  "sub": "旋翼機 — 點擊機體部位查看解說",
+  "title": "Leonardo AW139",
+  "sub": {
+    "zh": "廣泛用於海上、搜救、醫療與企業運輸的中型雙發直升機。",
+    "en": "A widely used intermediate twin for offshore, SAR, EMS, and corporate transport.",
+    "ja": "洋上、捜索救難、救急、企業輸送に広く使われる中型双発ヘリコプターです。"
+  },
   "partOrder": [
     "overview",
     "cockpit",
@@ -695,5 +699,8 @@
         "4 葉"
       ]
     ]
-  }
+  },
+  "sources": [
+    "https://helicopters.leonardo.com/en/products/aw139"
+  ]
 }

@@ -1,0 +1,41 @@
+{
+  "title": "Bombardier Global 5500",
+  "sub": {
+    "zh": "採 Pearl 15 與新翼的 Global 中長程型。",
+    "en": "A Global-family long-range model with Pearl 15 engines and a redesigned wing.",
+    "ja": "Pearl 15と新設計主翼を備えるGlobalファミリーの長距離型です。"
+  },
+  "sources": [
+    "https://bombardier.com/en/aircraft/global-5500"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 16"
+      ],
+      [
+        "首飛年份",
+        "2018"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "28.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "10,556 km (5,700 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Pearl 15"
+      ]
+    ]
+  }
+}

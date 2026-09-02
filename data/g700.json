@@ -1,0 +1,41 @@
+{
+  "title": "Gulfstream G700",
+  "sub": {
+    "zh": "具多個生活區與超長程能力的 Gulfstream 大型旗艦。",
+    "en": "A Gulfstream flagship with multiple living areas and ultra-long-range capability.",
+    "ja": "複数の居住区画と超長距離性能を持つガルフストリームの旗艦機です。"
+  },
+  "sources": [
+    "https://www.gulfstream.com/en/aircraft/gulfstream-g700"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "2020"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "31.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "14,353 km (7,750 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Pearl 700"
+      ]
+    ]
+  }
+}

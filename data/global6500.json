@@ -1,0 +1,41 @@
+{
+  "title": "Bombardier Global 6500",
+  "sub": {
+    "zh": "Global 5500 的加長航程姊妹型，兼顧高速與大型客艙。",
+    "en": "The longer-range sister to the Global 5500, combining speed with a large cabin.",
+    "ja": "Global 5500の長距離姉妹型で、高速性能と大型客室を両立します。"
+  },
+  "sources": [
+    "https://bombardier.com/en/aircraft/global-6500"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 17"
+      ],
+      [
+        "首飛年份",
+        "2018"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "28.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "12,223 km (6,600 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Pearl 15"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Robinson R66 NxG",
+  "sub": {
+    "zh": "五座渦輪軸直升機，保留 Robinson 簡潔機體與低營運成本取向。",
+    "en": "A five-seat turboshaft helicopter retaining Robinson's simple, cost-conscious design philosophy.",
+    "ja": "Robinsonの簡潔で低運航費志向の設計を受け継ぐ5座ターボシャフト機です。"
+  },
+  "sources": [
+    "https://www.robinsonheli.com/r66"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "5"
+      ],
+      [
+        "首飛年份",
+        "2007"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 648 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Rolls-Royce RR300"
+      ]
+    ]
+  }
+}

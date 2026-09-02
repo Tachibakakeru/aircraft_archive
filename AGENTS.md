@@ -4,7 +4,7 @@
 
 「天空檔案 / SKY ARCHIVE」是部署在 Cloudflare Pages 的純靜態航空資料網站與 PWA。它有四個可獨立瀏覽、可經驗證後編輯並發布的資料庫：
 
-1. **飛行器圖鑑**：52 個機型的資料、規格、家族、比較與可互動的 Three.js 3D 檢視器。
+1. **飛行器圖鑑**：169 個機型的資料、規格、家族、比較與可互動的 Three.js 3D 檢視器；其中 47 型已有 3D，122 型待補。
 2. **機場與跑道**：85,587 座機場的搜尋、跑道、衛星圖、比較、收藏與資料編輯。
 3. **全球航空公司**：目前 594 家航空公司的公司資料、呼號、機隊、樞紐、航線、收藏與航線地圖。
 4. **航空小知識**：46 個三語航空知識條目，以座艙／飛航場景的可滑動互動 UI 呈現。
@@ -41,9 +41,11 @@
 - `data/<id>.json`：機型文案、部位、規格、圖片；由 `viewer.html`、`editor.html` 使用。
 - `models/<id>.json`：壓縮後 3D 幾何（格式 v2）。
 - `assets/thumb_<id>.png`：機型卡片縮圖。
+- `data/model_inventory.json`：由盤點工具產生的 3D 模型現況與缺模清單。
 - `tools/convert_fr24.py`：glTF 1.0 → 站內 v2 模型格式。
 - `tools/ac3d_lib.py` 與 `tools/convert_ac3d_*.py`：FlightGear AC3D 模型的解析與轉換。
 - `tools/make_thumb.py`：由 `models/*.json` 產生縮圖。
+- `tools/check_model_inventory.py`：依 `data/fleet.json` 與 `models/*.json` 重建 3D 模型盤點。
 - `tools/check_knowledge.py`：驗證知識條目 ID 與三語欄位完整性；執行 `python tools/check_knowledge.py`。
 
 ### 機場
@@ -64,7 +66,7 @@
 
 ### 航空小知識
 
-- `data/knowledge.json`：45 筆主題，類別為 `instrument`、`runway`、`nav`、`systems`。
+- `data/knowledge.json`：46 筆主題，類別為 `instrument`、`runway`、`nav`、`systems`。
 - `js/knowledge.js`：三份內容複製形成無縫輪轉、覆蓋式詳情與本機／發布編輯。
 - `css/knowledge.css`：輪轉、儀表與互動場景外觀。
 

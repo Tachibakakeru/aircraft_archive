@@ -1,0 +1,41 @@
+{
+  "title": "Cessna 172 Skyhawk",
+  "sub": {
+    "zh": "全球最普及的四座單發訓練與旅行機之一。",
+    "en": "One of the world's most widely used four-seat single-engine trainers and touring aircraft.",
+    "ja": "世界で最も広く使われる4座単発練習・旅行機の一つです。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/piston/skyhawk"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 4"
+      ],
+      [
+        "首飛年份",
+        "1955"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,185 km (640 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming IO-360-L2A"
+      ]
+    ]
+  }
+}

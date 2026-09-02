@@ -1,0 +1,41 @@
+{
+  "title": "Beechcraft King Air 260",
+  "sub": {
+    "zh": "King Air 家族的小型雙發加壓渦槳機。",
+    "en": "The smaller pressurized twin-turboprop in the current King Air family.",
+    "ja": "現行King Airファミリーの小型加圧双発ターボプロップです。"
+  },
+  "sources": [
+    "https://beechcraft.txtav.com/en/king-air-260"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 9"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "17.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,185 km (1,720 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PT6A-52"
+      ]
+    ]
+  }
+}

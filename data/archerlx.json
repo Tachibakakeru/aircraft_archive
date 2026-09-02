@@ -1,0 +1,41 @@
+{
+  "title": "Piper Archer LX",
+  "sub": {
+    "zh": "PA-28 家族的現代四座私人旅行型。",
+    "en": "The modern four-seat personal touring member of the PA-28 family.",
+    "ja": "PA-28ファミリーの現代的な4座個人旅行型です。"
+  },
+  "sources": [
+    "https://www.piper.com/model/archer-lx/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 4"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "967 km (522 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming IO-360-B4A"
+      ]
+    ]
+  }
+}

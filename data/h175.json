@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H175",
+  "sub": {
+    "zh": "面向海上能源、搜救與企業運輸的超中型雙發直升機。",
+    "en": "A super-medium twin for offshore energy, search and rescue, and corporate transport.",
+    "ja": "洋上エネルギー、捜索救難、企業輸送向けのスーパー・ミディアム双発機です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h175"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 最多 16"
+      ],
+      [
+        "首飛年份",
+        "2009"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "14.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 1,067 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PT6C-67E"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "ATR 72-600F",
+  "sub": {
+    "zh": "原廠新造、配備大型貨門的 ATR 72 專用貨機。",
+    "en": "A purpose-built ATR 72 freighter with a large main-deck cargo door.",
+    "ja": "大型貨物扉を備える新造ATR 72専用貨物機です。"
+  },
+  "sources": [
+    "https://www.atr-aircraft.com/our-aircraft/atr-72-600f-freighter/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最大酬載約 9.2 t"
+      ],
+      [
+        "首飛年份",
+        "2020"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "27.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,528 km (825 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW127M"
+      ]
+    ]
+  }
+}

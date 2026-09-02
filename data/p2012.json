@@ -1,0 +1,41 @@
+{
+  "title": "Tecnam P2012 Traveller",
+  "sub": {
+    "zh": "供支線、包機與貨運任務使用的十一座高翼雙發機。",
+    "en": "An eleven-seat high-wing twin for commuter, charter, and cargo missions.",
+    "ja": "コミューター、チャーター、貨物任務向けの11座高翼双発機です。"
+  },
+  "sources": [
+    "https://tecnam.com/aircraft/p2012-traveller/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 11"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "14.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,760 km (950 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Lycoming TEO-540-C1A"
+      ]
+    ]
+  }
+}

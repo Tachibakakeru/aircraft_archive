@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H135",
+  "sub": {
+    "zh": "廣泛用於醫療、警務、訓練與私人運輸的輕型雙發直升機。",
+    "en": "A light twin widely used for EMS, police, training, and private transport.",
+    "ja": "救急、警察、訓練、個人輸送に広く使われる軽双発ヘリコプターです。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h135"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1–2 + 5–6"
+      ],
+      [
+        "首飛年份",
+        "1994"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "626 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Safran Arrius 2B2 Plus / Pratt & Whitney PW206B3"
+      ]
+    ]
+  }
+}

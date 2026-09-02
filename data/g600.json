@@ -1,0 +1,41 @@
+{
+  "title": "Gulfstream G600",
+  "sub": {
+    "zh": "G500 的長航程大型客艙姊妹型，可高速跨洲飛行。",
+    "en": "The longer-range large-cabin sister model to the G500 for fast intercontinental travel.",
+    "ja": "G500の長距離型にあたる大型客室機で、高速大陸間飛行に対応します。"
+  },
+  "sources": [
+    "https://www.gulfstream.com/en/aircraft/gulfstream-g600"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "29.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "12,223 km (6,600 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney PW815GA"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Dassault Falcon 8X",
+  "sub": {
+    "zh": "長客艙、三發與遠程能力兼具的 Falcon 旗艦之一。",
+    "en": "A long-cabin, three-engine Falcon combining range with flexible airport access.",
+    "ja": "長い客室、3発、長距離性能を併せ持つFalconの旗艦機です。"
+  },
+  "sources": [
+    "https://www.dassaultfalcon.com/aircraft/falcon-8x/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 16"
+      ],
+      [
+        "首飛年份",
+        "2015"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "26.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "11,945 km (6,450 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "3 × Pratt & Whitney Canada PW307D"
+      ]
+    ]
+  }
+}

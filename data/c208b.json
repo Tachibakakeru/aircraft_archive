@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Grand Caravan EX",
+  "sub": {
+    "zh": "Caravan 的加長高功率型，增加客艙與貨運能力。",
+    "en": "The stretched, higher-powered Caravan with greater cabin and cargo capability.",
+    "ja": "客室と貨物能力を高めたCaravanの長胴・高出力型です。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/turboprop/grand-caravan-ex"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 14"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "15.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,689 km (912 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6A-140"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Subaru Bell 412EPX",
+  "sub": {
+    "zh": "Bell 412 家族最新重載版本，強化傳動與最大起飛重量。",
+    "en": "The latest heavy-lift Bell 412 evolution with upgraded transmission and gross weight.",
+    "ja": "伝動系と最大重量を強化したBell 412系列の最新重搭載型です。"
+  },
+  "sources": [
+    "https://www.bellflight.com/products/bell-412"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1–2 + 最多 14"
+      ],
+      [
+        "首飛年份",
+        "1979"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "14.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 659 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PT6T-9 Twin-Pac"
+      ]
+    ]
+  }
+}

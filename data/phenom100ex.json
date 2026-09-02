@@ -1,0 +1,41 @@
+{
+  "title": "Embraer Phenom 100EX",
+  "sub": {
+    "zh": "可單人駕駛的入門級雙發公務噴射機。",
+    "en": "A single-pilot-capable entry-level twin-engine business jet.",
+    "ja": "単独操縦に対応するエントリー級双発ビジネスジェットです。"
+  },
+  "sources": [
+    "https://embraer.com/executive-jets/phenom-100ex/en/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 7"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "12.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,182 km (1,178 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW617F1-E"
+      ]
+    ]
+  }
+}

@@ -849,18 +849,20 @@
     },
     {
       "id": "heli",
-      "name": "直升機",
-      "manufacturer": "—",
+      "name": "Leonardo AW139",
+      "manufacturer": "Leonardo",
       "category": {
-        "zh": "旋翼機",
-        "en": "Rotorcraft",
-        "ja": "回転翼機"
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
       },
-      "firstFlight": "—",
-      "span": "—",
-      "seats": "—",
+      "firstFlight": "2001",
+      "span": "13.8 m",
+      "seats": "2 + 最多 15",
       "tagline": {
-        "zh": "以主旋翼產生升力與推力的旋翼航空器示範模型。"
+        "zh": "廣泛用於海上、搜救、醫療與企業運輸的中型雙發直升機。",
+        "en": "A widely used intermediate twin for offshore, SAR, EMS, and corporate transport.",
+        "ja": "洋上、捜索救難、救急、企業輸送に広く使われる中型双発ヘリコプターです。"
       },
       "thumb": "assets/thumb_heli.png",
       "icao": "A139",
@@ -1015,6 +1017,2580 @@
       "thumb": "assets/thumb_nomodel.svg",
       "icao": null,
       "iata": null,
+      "has3d": false
+    },
+    {
+      "id": "a319n",
+      "name": "Airbus A319neo",
+      "manufacturer": "Airbus",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2017",
+      "span": "35.8 m",
+      "seats": "120–150",
+      "tagline": {
+        "zh": "A320neo 家族的短機身型，兼顧較低需求航線與長程能力。",
+        "en": "The short-fuselage A320neo-family member, combining lower-capacity economics with long-range capability.",
+        "ja": "A320neoファミリーの短胴型で、低需要路線と長距離性能を両立します。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A19N",
+      "iata": "319",
+      "has3d": false
+    },
+    {
+      "id": "a320n",
+      "name": "Airbus A320neo",
+      "manufacturer": "Airbus",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2014",
+      "span": "35.8 m",
+      "seats": "150–180",
+      "tagline": {
+        "zh": "換裝新世代引擎與 Sharklet 的 A320 主力新世代型。",
+        "en": "The core new-generation A320 variant with new engines and Sharklets.",
+        "ja": "新世代エンジンとシャークレットを備えるA320の主力型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A20N",
+      "iata": "32N",
+      "has3d": false
+    },
+    {
+      "id": "a321n",
+      "name": "Airbus A321neo",
+      "manufacturer": "Airbus",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2016",
+      "span": "35.8 m",
+      "seats": "180–220",
+      "tagline": {
+        "zh": "A320neo 家族的加長高容量型，可執行中長程單走道航線。",
+        "en": "The stretched, high-capacity A320neo-family member for medium- and long-range single-aisle routes.",
+        "ja": "A320neoファミリーの長胴・大容量型で、中長距離路線に対応します。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A21N",
+      "iata": "32Q",
+      "has3d": false
+    },
+    {
+      "id": "a321xlr",
+      "name": "Airbus A321XLR",
+      "manufacturer": "Airbus",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2022",
+      "span": "35.8 m",
+      "seats": "180–220",
+      "tagline": {
+        "zh": "增設中央油箱與強化起落架的超長程 A321neo 衍生型。",
+        "en": "The extra-long-range A321neo derivative with an integrated centre tank and reinforced landing gear.",
+        "ja": "中央燃料タンクと強化降着装置を備えたA321neoの超長距離型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A21N",
+      "iata": "32Q",
+      "has3d": false
+    },
+    {
+      "id": "a338",
+      "name": "Airbus A330-800",
+      "manufacturer": "Airbus",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "2018",
+      "span": "64.0 m",
+      "seats": "220–260",
+      "tagline": {
+        "zh": "A330neo 家族的短機身長航程型，採 Trent 7000 與新翼尖。",
+        "en": "The shorter, longer-range A330neo with Trent 7000 engines and new wingtip devices.",
+        "ja": "Trent 7000と新型翼端を備えるA330neoの短胴・長距離型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A338",
+      "iata": "338",
+      "has3d": false
+    },
+    {
+      "id": "a339",
+      "name": "Airbus A330-900",
+      "manufacturer": "Airbus",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "2017",
+      "span": "64.0 m",
+      "seats": "260–300",
+      "tagline": {
+        "zh": "A330neo 家族主力型，在 A330-300 尺寸上導入新翼與新引擎。",
+        "en": "The principal A330neo variant, adding a new wing and engines to the A330-300-sized airframe.",
+        "ja": "A330-300級の機体に新主翼と新エンジンを導入したA330neoの主力型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A339",
+      "iata": "339",
+      "has3d": false
+    },
+    {
+      "id": "a35k",
+      "name": "Airbus A350-1000",
+      "manufacturer": "Airbus",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "2016",
+      "span": "64.75 m",
+      "seats": "350–410",
+      "tagline": {
+        "zh": "A350 家族的加長高容量型，配備推力更大的 Trent XWB-97。",
+        "en": "The stretched, higher-capacity A350 powered by the higher-thrust Trent XWB-97.",
+        "ja": "高推力Trent XWB-97を搭載するA350の長胴・大容量型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A35K",
+      "iata": "351",
+      "has3d": false
+    },
+    {
+      "id": "belugaxl",
+      "name": "Airbus BelugaXL",
+      "manufacturer": "Airbus",
+      "category": {
+        "zh": "貨機",
+        "en": "Freighter",
+        "ja": "貨物機"
+      },
+      "firstFlight": "2018",
+      "span": "60.3 m",
+      "seats": "最大酬載 51 t",
+      "tagline": {
+        "zh": "以 A330-200F 為基礎的大型超尺寸零件運輸機，服務 Airbus 生產網路。",
+        "en": "An outsized-component transporter based on the A330-200F for Airbus industrial logistics.",
+        "ja": "A330-200Fを基礎とし、エアバスの大型部品輸送に使われる特殊貨物機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A337",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "b37m",
+      "name": "Boeing 737 MAX 7",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2018",
+      "span": "35.9 m",
+      "seats": "138–153",
+      "tagline": {
+        "zh": "737 MAX 家族的短機身長航程型，承接 737-700 級距市場。",
+        "en": "The short-fuselage, long-range 737 MAX member succeeding the 737-700 size class.",
+        "ja": "737-700級市場を継ぐ737 MAXの短胴・長距離型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B37M",
+      "iata": "7M7",
+      "has3d": false
+    },
+    {
+      "id": "b38m",
+      "name": "Boeing 737 MAX 8",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2016",
+      "span": "35.9 m",
+      "seats": "162–178",
+      "tagline": {
+        "zh": "737 MAX 家族的主力型，採 LEAP-1B 與 Advanced Technology 翼尖小翼。",
+        "en": "The core 737 MAX variant with LEAP-1B engines and Advanced Technology winglets.",
+        "ja": "LEAP-1BとAdvanced Technologyウイングレットを備える737 MAXの主力型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B38M",
+      "iata": "7M8",
+      "has3d": false
+    },
+    {
+      "id": "b39m",
+      "name": "Boeing 737 MAX 9",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2017",
+      "span": "35.9 m",
+      "seats": "178–193",
+      "tagline": {
+        "zh": "737 MAX 8 的加長型，提高座位與貨艙容量。",
+        "en": "A stretched 737 MAX 8 derivative with greater seating and cargo capacity.",
+        "ja": "737 MAX 8を延長し、座席数と貨物容量を増やした型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B39M",
+      "iata": "7M9",
+      "has3d": false
+    },
+    {
+      "id": "b3xm",
+      "name": "Boeing 737 MAX 10",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "窄體客機",
+        "en": "Narrow-body",
+        "ja": "ナローボディ"
+      },
+      "firstFlight": "2021",
+      "span": "35.9 m",
+      "seats": "188–204",
+      "tagline": {
+        "zh": "737 MAX 家族最長、容量最大的型號，採改良式主起落架。",
+        "en": "The longest and highest-capacity 737 MAX, with revised main landing gear geometry.",
+        "ja": "737 MAXで最長・最大容量の型で、改良型主脚を採用します。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B3XM",
+      "iata": "7MJ",
+      "has3d": false
+    },
+    {
+      "id": "b779",
+      "name": "Boeing 777-9",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "2020",
+      "span": "71.8 m（地面折翼 64.8 m）",
+      "seats": "約 426",
+      "tagline": {
+        "zh": "777X 家族的大型客機，採複合材料機翼、折疊翼尖與 GE9X。",
+        "en": "The large 777X passenger model with a composite wing, folding tips, and GE9X engines.",
+        "ja": "複合材主翼、折り畳み翼端、GE9Xを備える777Xの大型旅客型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B779",
+      "iata": "779",
+      "has3d": false
+    },
+    {
+      "id": "b78x",
+      "name": "Boeing 787-10",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "廣體客機",
+        "en": "Wide-body",
+        "ja": "ワイドボディ"
+      },
+      "firstFlight": "2017",
+      "span": "60.1 m",
+      "seats": "約 336",
+      "tagline": {
+        "zh": "787 家族最長、載客量最高的型號，適合高需求中長程航線。",
+        "en": "The longest and highest-capacity 787, optimized for high-demand medium- and long-haul routes.",
+        "ja": "787で最長・最大容量の型で、需要の高い中長距離路線向けです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B78X",
+      "iata": "781",
+      "has3d": false
+    },
+    {
+      "id": "b763f",
+      "name": "Boeing 767-300F",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "貨機",
+        "en": "Freighter",
+        "ja": "貨物機"
+      },
+      "firstFlight": "1995",
+      "span": "47.6 m",
+      "seats": "最大酬載約 52.5 t",
+      "tagline": {
+        "zh": "目前仍列於 Boeing 貨機產品線的中型雙發貨機。",
+        "en": "A medium twin-engine freighter that remains in Boeing's commercial product lineup.",
+        "ja": "ボーイングの製品群に残る中型双発貨物機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B763",
+      "iata": "76Y",
+      "has3d": false
+    },
+    {
+      "id": "b77f",
+      "name": "Boeing 777 Freighter",
+      "manufacturer": "Boeing",
+      "category": {
+        "zh": "貨機",
+        "en": "Freighter",
+        "ja": "貨物機"
+      },
+      "firstFlight": "2008",
+      "span": "64.8 m",
+      "seats": "最大酬載約 102 t",
+      "tagline": {
+        "zh": "以 777-200LR 為基礎的長程大型雙發貨機。",
+        "en": "A long-range large twin-engine freighter derived from the 777-200LR.",
+        "ja": "777-200LRを基礎とする長距離大型双発貨物機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B77L",
+      "iata": "77X",
+      "has3d": false
+    },
+    {
+      "id": "e175",
+      "name": "Embraer E175",
+      "manufacturer": "Embraer",
+      "category": {
+        "zh": "區域客機",
+        "en": "Regional airliner",
+        "ja": "リージョナル旅客機"
+      },
+      "firstFlight": "2003",
+      "span": "26.0 m",
+      "seats": "76–88",
+      "tagline": {
+        "zh": "E-Jet 家族廣泛使用的支線型，主打 70 至 80 席級市場。",
+        "en": "A widely used E-Jet regional model serving the 70- to 80-seat market.",
+        "ja": "70～80席市場で広く使われるE-Jetのリージョナル型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "E75L",
+      "iata": "E75",
+      "has3d": false
+    },
+    {
+      "id": "e190e2",
+      "name": "Embraer E190-E2",
+      "manufacturer": "Embraer",
+      "category": {
+        "zh": "區域客機",
+        "en": "Regional airliner",
+        "ja": "リージョナル旅客機"
+      },
+      "firstFlight": "2016",
+      "span": "33.7 m",
+      "seats": "97–114",
+      "tagline": {
+        "zh": "第二代 E-Jet 中型支線客機，採新機翼與齒輪傳動渦扇。",
+        "en": "The mid-size second-generation E-Jet with a new wing and geared turbofans.",
+        "ja": "新主翼とギヤードターボファンを採用する第2世代E-Jetの中型機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "E290",
+      "iata": "290",
+      "has3d": false
+    },
+    {
+      "id": "e195e2",
+      "name": "Embraer E195-E2",
+      "manufacturer": "Embraer",
+      "category": {
+        "zh": "區域客機",
+        "en": "Regional airliner",
+        "ja": "リージョナル旅客機"
+      },
+      "firstFlight": "2017",
+      "span": "35.1 m",
+      "seats": "120–146",
+      "tagline": {
+        "zh": "E2 家族最大型，座位容量接近小型主線窄體客機。",
+        "en": "The largest E2-family aircraft, approaching small mainline narrow-body capacity.",
+        "ja": "小型幹線ナローボディに近い容量を持つE2ファミリー最大型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "E295",
+      "iata": "295",
+      "has3d": false
+    },
+    {
+      "id": "atr72",
+      "name": "ATR 72-600",
+      "manufacturer": "ATR",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "2009",
+      "span": "27.1 m",
+      "seats": "68–78",
+      "tagline": {
+        "zh": "ATR 家族的高容量渦輪螺旋槳支線客機。",
+        "en": "The higher-capacity turboprop regional airliner in the ATR family.",
+        "ja": "ATRファミリーの大容量ターボプロップ・リージョナル機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AT76",
+      "iata": "ATR",
+      "has3d": false
+    },
+    {
+      "id": "atr72f",
+      "name": "ATR 72-600F",
+      "manufacturer": "ATR",
+      "category": {
+        "zh": "貨機",
+        "en": "Freighter",
+        "ja": "貨物機"
+      },
+      "firstFlight": "2020",
+      "span": "27.1 m",
+      "seats": "最大酬載約 9.2 t",
+      "tagline": {
+        "zh": "原廠新造、配備大型貨門的 ATR 72 專用貨機。",
+        "en": "A purpose-built ATR 72 freighter with a large main-deck cargo door.",
+        "ja": "大型貨物扉を備える新造ATR 72専用貨物機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AT76",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "dhc6-400",
+      "name": "De Havilland Canada DHC-6 Twin Otter Series 400",
+      "manufacturer": "De Havilland Canada",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "2008",
+      "span": "19.8 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "可裝輪式、浮筒或雪橇起落架的短場多用途雙發渦槳機。",
+        "en": "A short-field twin turboprop utility aircraft available with wheels, floats, or skis.",
+        "ja": "車輪・フロート・スキーに対応する短距離離着陸用の双発多用途ターボプロップです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "DHC6",
+      "iata": "DHT",
+      "has3d": false
+    },
+    {
+      "id": "c408",
+      "name": "Cessna 408 SkyCourier",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "2020",
+      "span": "22.0 m",
+      "seats": "19 或 3 個 LD3 貨櫃",
+      "tagline": {
+        "zh": "可快速切換客運與貨運任務的高翼雙發通勤運輸機。",
+        "en": "A high-wing twin turboprop commuter designed for passenger and freighter missions.",
+        "ja": "旅客・貨物任務に対応する高翼双発コミューター輸送機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C408",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "l410ng",
+      "name": "Aircraft Industries L 410 NG",
+      "manufacturer": "Aircraft Industries",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "2015",
+      "span": "20.0 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "L 410 家族的現代化短場通勤機，採新翼、玻璃座艙與 H85 引擎。",
+        "en": "The modernized short-field L 410 with a new wing, glass cockpit, and H85 engines.",
+        "ja": "新主翼、グラスコックピット、H85エンジンを備えるL 410の近代化型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "L410",
+      "iata": "L4T",
+      "has3d": false
+    },
+    {
+      "id": "g400",
+      "name": "Gulfstream G400",
+      "manufacturer": "Gulfstream",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2024",
+      "span": "26.3 m",
+      "seats": "最多 12",
+      "tagline": {
+        "zh": "新世代大型客艙公務機，採主動式側桿與 Symmetry Flight Deck。",
+        "en": "A new-generation large-cabin jet with active-control sidesticks and the Symmetry Flight Deck.",
+        "ja": "アクティブ・サイドスティックとSymmetry Flight Deckを備える新世代大型客室機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GLF4",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "g500",
+      "name": "Gulfstream G500",
+      "manufacturer": "Gulfstream",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2015",
+      "span": "26.3 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "強調高速巡航與大型全新客艙的雙發公務機。",
+        "en": "A twinjet combining high-speed cruise with a clean-sheet large cabin.",
+        "ja": "高速巡航と新設計の大型客室を両立する双発ビジネスジェットです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GLF5",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "g600",
+      "name": "Gulfstream G600",
+      "manufacturer": "Gulfstream",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2016",
+      "span": "29.0 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "G500 的長航程大型客艙姊妹型，可高速跨洲飛行。",
+        "en": "The longer-range large-cabin sister model to the G500 for fast intercontinental travel.",
+        "ja": "G500の長距離型にあたる大型客室機で、高速大陸間飛行に対応します。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GLF6",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "g700",
+      "name": "Gulfstream G700",
+      "manufacturer": "Gulfstream",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2020",
+      "span": "31.4 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "具多個生活區與超長程能力的 Gulfstream 大型旗艦。",
+        "en": "A Gulfstream flagship with multiple living areas and ultra-long-range capability.",
+        "ja": "複数の居住区画と超長距離性能を持つガルフストリームの旗艦機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GLF7",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "g800",
+      "name": "Gulfstream G800",
+      "manufacturer": "Gulfstream",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2022",
+      "span": "31.4 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "以 8,200 海里級航程為主軸的 Gulfstream 最長程機型。",
+        "en": "Gulfstream's longest-range model, centered on an 8,200-nautical-mile mission.",
+        "ja": "8,200海里級の航続距離を持つガルフストリーム最長距離型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GLF8",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "cl3500",
+      "name": "Bombardier Challenger 3500",
+      "manufacturer": "Bombardier",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "21.0 m",
+      "seats": "最多 10",
+      "tagline": {
+        "zh": "Challenger 350 平台的最新客艙與航電升級型。",
+        "en": "The latest cabin and avionics evolution of the Challenger 350 platform.",
+        "ja": "Challenger 350を基礎に客室とアビオニクスを刷新した型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "CL35",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "cl650",
+      "name": "Bombardier Challenger 650",
+      "manufacturer": "Bombardier",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "19.6 m",
+      "seats": "最多 12",
+      "tagline": {
+        "zh": "以寬敞客艙、成熟系統與洲際航程見長的大型公務機。",
+        "en": "A large business jet known for its wide cabin, mature systems, and transcontinental range.",
+        "ja": "広い客室、実績あるシステム、大陸横断性能を特徴とする大型ビジネスジェットです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "CL60",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "global5500",
+      "name": "Bombardier Global 5500",
+      "manufacturer": "Bombardier",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2018",
+      "span": "28.7 m",
+      "seats": "最多 16",
+      "tagline": {
+        "zh": "採 Pearl 15 與新翼的 Global 中長程型。",
+        "en": "A Global-family long-range model with Pearl 15 engines and a redesigned wing.",
+        "ja": "Pearl 15と新設計主翼を備えるGlobalファミリーの長距離型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GL5T",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "global6500",
+      "name": "Bombardier Global 6500",
+      "manufacturer": "Bombardier",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2018",
+      "span": "28.7 m",
+      "seats": "最多 17",
+      "tagline": {
+        "zh": "Global 5500 的加長航程姊妹型，兼顧高速與大型客艙。",
+        "en": "The longer-range sister to the Global 5500, combining speed with a large cabin.",
+        "ja": "Global 5500の長距離姉妹型で、高速性能と大型客室を両立します。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GL6T",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "global7500",
+      "name": "Bombardier Global 7500",
+      "manufacturer": "Bombardier",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2016",
+      "span": "31.7 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "四個獨立生活區與超長程航程的 Bombardier 旗艦。",
+        "en": "Bombardier's ultra-long-range flagship with four distinct living spaces.",
+        "ja": "4つの独立した居住区画を備えるボンバルディアの超長距離旗艦機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GL7T",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "global8000",
+      "name": "Bombardier Global 8000",
+      "manufacturer": "Bombardier",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "31.7 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "由 Global 7500 發展、提高航程與速度性能的超長程型。",
+        "en": "An ultra-long-range evolution of the Global 7500 with greater range and speed.",
+        "ja": "Global 7500から航続距離と速度を高めた超長距離型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "GL7T",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "f2000lxs",
+      "name": "Dassault Falcon 2000LXS",
+      "manufacturer": "Dassault",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "21.4 m",
+      "seats": "8–10",
+      "tagline": {
+        "zh": "雙發寬客艙 Falcon，兼顧短場性能與洲際航程。",
+        "en": "A wide-cabin twin-engine Falcon balancing short-field capability and intercontinental range.",
+        "ja": "短距離性能と大陸間航続距離を両立する広胴双発Falconです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "F2TH",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "f900lx",
+      "name": "Dassault Falcon 900LX",
+      "manufacturer": "Dassault",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "21.4 m",
+      "seats": "最多 14",
+      "tagline": {
+        "zh": "採三發配置與翼尖小翼的成熟大型 Falcon。",
+        "en": "A mature large-cabin Falcon distinguished by three engines and winglets.",
+        "ja": "3発配置とウイングレットを特徴とする実績豊富な大型Falconです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "F900",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "f6x",
+      "name": "Dassault Falcon 6X",
+      "manufacturer": "Dassault",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2017",
+      "span": "25.9 m",
+      "seats": "最多 16",
+      "tagline": {
+        "zh": "具有超寬客艙與數位飛控的新世代雙發 Falcon。",
+        "en": "A new-generation twin-engine Falcon with an extra-wide cabin and digital flight controls.",
+        "ja": "超広幅客室とデジタル飛行制御を備える新世代双発Falconです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "FA6X",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "f8x",
+      "name": "Dassault Falcon 8X",
+      "manufacturer": "Dassault",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2015",
+      "span": "26.3 m",
+      "seats": "最多 16",
+      "tagline": {
+        "zh": "長客艙、三發與遠程能力兼具的 Falcon 旗艦之一。",
+        "en": "A long-cabin, three-engine Falcon combining range with flexible airport access.",
+        "ja": "長い客室、3発、長距離性能を併せ持つFalconの旗艦機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "FA8X",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "f10x",
+      "name": "Dassault Falcon 10X",
+      "manufacturer": "Dassault",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "33.6 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "已完成實體出廠展示、採超寬客艙與複合材料機翼的次世代 Falcon。",
+        "en": "A rolled-out next-generation Falcon with an exceptionally wide cabin and composite wing.",
+        "ja": "実機ロールアウト済みで、超広幅客室と複合材主翼を備える次世代Falconです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "phenom100ex",
+      "name": "Embraer Phenom 100EX",
+      "manufacturer": "Embraer",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "12.3 m",
+      "seats": "最多 7",
+      "tagline": {
+        "zh": "可單人駕駛的入門級雙發公務噴射機。",
+        "en": "A single-pilot-capable entry-level twin-engine business jet.",
+        "ja": "単独操縦に対応するエントリー級双発ビジネスジェットです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "E50P",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "phenom300ev",
+      "name": "Embraer Phenom 300EV",
+      "manufacturer": "Embraer",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "15.9 m",
+      "seats": "最多 10",
+      "tagline": {
+        "zh": "以高速、單人駕駛能力與自動油門為重點的輕型公務機。",
+        "en": "A light business jet focused on speed, single-pilot operation, and autothrottle capability.",
+        "ja": "高速性能、単独操縦、自動推力制御を特徴とするライトジェットです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "E55P",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "praetor500e",
+      "name": "Embraer Praetor 500E",
+      "manufacturer": "Embraer",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "20.7 m",
+      "seats": "最多 9",
+      "tagline": {
+        "zh": "具線傳飛控與主動亂流抑制的中型公務機。",
+        "en": "A midsize business jet with fly-by-wire controls and active turbulence reduction.",
+        "ja": "フライ・バイ・ワイヤと能動乱気流低減を備える中型ビジネスジェットです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "E545",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "praetor600e",
+      "name": "Embraer Praetor 600E",
+      "manufacturer": "Embraer",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "21.5 m",
+      "seats": "最多 12",
+      "tagline": {
+        "zh": "Praetor 家族的超中型長程型，可執行跨大西洋任務。",
+        "en": "The super-midsize, longer-range Praetor capable of transatlantic missions.",
+        "ja": "大西洋横断に対応するPraetorファミリーのスーパー・ミッドサイズ長距離型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "E550",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "citationm2",
+      "name": "Cessna Citation M2 Gen3",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "14.4 m",
+      "seats": "最多 7",
+      "tagline": {
+        "zh": "配備 Garmin G3000、Autoland 與自動油門的入門 Citation。",
+        "en": "An entry-level Citation with Garmin G3000, Autoland, and autothrottles.",
+        "ja": "Garmin G3000、Autoland、自動推力制御を備える入門Citationです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C25M",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "citationcj3",
+      "name": "Cessna Citation CJ3 Gen3",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "16.7 m",
+      "seats": "最多 9",
+      "tagline": {
+        "zh": "在 CJ3 平台加入新世代航電、自動油門與緊急自動降落。",
+        "en": "A CJ3 evolution with new-generation avionics, autothrottles, and emergency autoland.",
+        "ja": "CJ3に新世代アビオニクス、自動推力制御、緊急自動着陸を加えた型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C25B",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "citationcj4",
+      "name": "Cessna Citation CJ4 Gen3",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "15.5 m",
+      "seats": "最多 10",
+      "tagline": {
+        "zh": "CJ 家族中航程與性能最高的單人駕駛型。",
+        "en": "The longest-range and highest-performance single-pilot member of the CJ family.",
+        "ja": "CJファミリーで最長航続・最高性能の単独操縦対応型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C25C",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "citationxls",
+      "name": "Cessna Citation XLS Gen2",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "17.2 m",
+      "seats": "最多 12",
+      "tagline": {
+        "zh": "以短場性能和直立客艙見長的中型 Citation 最新升級。",
+        "en": "The latest midsize Citation evolution, known for short-field performance and a stand-up cabin.",
+        "ja": "短距離性能と立って移動できる客室を特徴とする中型Citationの最新型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C56X",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "citationlat",
+      "name": "Cessna Citation Latitude",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2014",
+      "span": "22.1 m",
+      "seats": "最多 9",
+      "tagline": {
+        "zh": "以平地板寬客艙為特色的中型 Citation。",
+        "en": "A midsize Citation distinguished by its wide, flat-floor cabin.",
+        "ja": "幅広いフラットフロア客室を特徴とする中型Citationです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C68A",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "citationlong",
+      "name": "Cessna Citation Longitude",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2016",
+      "span": "21.0 m",
+      "seats": "最多 12",
+      "tagline": {
+        "zh": "Citation 家族的超中型旗艦，主打低客艙高度與長航程。",
+        "en": "Citation's super-midsize flagship, emphasizing low cabin altitude and long range.",
+        "ja": "低い客室高度と長距離性能を重視するCitationのスーパー・ミッドサイズ旗艦です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C700",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "hondajet",
+      "name": "HondaJet Elite II",
+      "manufacturer": "Honda Aircraft",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "12.1 m",
+      "seats": "最多 8",
+      "tagline": {
+        "zh": "採翼上引擎配置、可單人駕駛的輕型公務機。",
+        "en": "A single-pilot light jet distinguished by its over-the-wing engine mounts.",
+        "ja": "主翼上面エンジン配置を特徴とする単独操縦対応ライトジェットです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "HDJT",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "visionjet",
+      "name": "Cirrus Vision Jet G3",
+      "manufacturer": "Cirrus Aircraft",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "—",
+      "span": "11.8 m",
+      "seats": "最多 7",
+      "tagline": {
+        "zh": "單發個人噴射機，具整機降落傘與 Safe Return 緊急自動降落。",
+        "en": "A single-engine personal jet with a whole-aircraft parachute and Safe Return emergency autoland.",
+        "ja": "機体全体用パラシュートとSafe Return緊急自動着陸を備える単発パーソナルジェットです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "SF50",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "pc24",
+      "name": "Pilatus PC-24",
+      "manufacturer": "Pilatus",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2015",
+      "span": "17.0 m",
+      "seats": "最多 11",
+      "tagline": {
+        "zh": "可使用短小、甚至部分非鋪裝跑道的雙發公務噴射機。",
+        "en": "A twin-engine business jet designed for short and selected unpaved runways.",
+        "ja": "短距離および一部未舗装滑走路に対応する双発ビジネスジェットです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "PC24",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "acj220",
+      "name": "Airbus ACJ TwoTwenty",
+      "manufacturer": "Airbus Corporate Jets",
+      "category": {
+        "zh": "公務機",
+        "en": "Business aircraft",
+        "ja": "ビジネス機"
+      },
+      "firstFlight": "2020",
+      "span": "35.1 m",
+      "seats": "最多 19",
+      "tagline": {
+        "zh": "以 A220-100 平台打造、具有多個生活區的大型商務機。",
+        "en": "A large business aircraft based on the A220-100 platform with multiple living areas.",
+        "ja": "A220-100を基礎に複数の居住区画を備えた大型ビジネス機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "BCS3",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "c172",
+      "name": "Cessna 172 Skyhawk",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "飛行訓練機",
+        "en": "Flight trainer",
+        "ja": "飛行訓練機"
+      },
+      "firstFlight": "1955",
+      "span": "11.0 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "全球最普及的四座單發訓練與旅行機之一。",
+        "en": "One of the world's most widely used four-seat single-engine trainers and touring aircraft.",
+        "ja": "世界で最も広く使われる4座単発練習・旅行機の一つです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C172",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "c182",
+      "name": "Cessna 182 Skylane",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "1956",
+      "span": "11.2 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "具固定起落架與較高酬載能力的四座高翼旅行機。",
+        "en": "A four-seat high-wing touring aircraft with fixed gear and greater payload capability.",
+        "ja": "固定脚と高い搭載力を持つ4座高翼旅行機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C182",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "c182t",
+      "name": "Cessna Turbo Skylane",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "—",
+      "span": "11.2 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "渦輪增壓 Skylane，提升高空與高溫機場性能。",
+        "en": "The turbocharged Skylane, improving high-altitude and hot-weather performance.",
+        "ja": "高高度・高温条件での性能を高めたターボ過給Skylaneです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C182",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "c206",
+      "name": "Cessna Turbo Stationair HD",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "—",
+      "span": "11.0 m",
+      "seats": "最多 6",
+      "tagline": {
+        "zh": "具大型艙門、六座與高有效載重的單發多用途機。",
+        "en": "A six-seat single-engine utility aircraft with large doors and a high useful load.",
+        "ja": "大型扉、6座、高い有効搭載量を持つ単発多用途機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C206",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "c208",
+      "name": "Cessna Caravan",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "1982",
+      "span": "15.9 m",
+      "seats": "最多 14",
+      "tagline": {
+        "zh": "可在簡易跑道運作、兼顧客貨任務的單發渦槳機。",
+        "en": "A single-engine turboprop for passenger and cargo work from austere airstrips.",
+        "ja": "簡易滑走路で旅客・貨物任務に使える単発ターボプロップです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C208",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "c208b",
+      "name": "Cessna Grand Caravan EX",
+      "manufacturer": "Cessna",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "—",
+      "span": "15.9 m",
+      "seats": "最多 14",
+      "tagline": {
+        "zh": "Caravan 的加長高功率型，增加客艙與貨運能力。",
+        "en": "The stretched, higher-powered Caravan with greater cabin and cargo capability.",
+        "ja": "客室と貨物能力を高めたCaravanの長胴・高出力型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "C208",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "bonanza",
+      "name": "Beechcraft Bonanza G36",
+      "manufacturer": "Beechcraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "—",
+      "span": "10.2 m",
+      "seats": "最多 6",
+      "tagline": {
+        "zh": "V 尾早期家族後續發展出的六座傳統尾翼單發旅行機。",
+        "en": "A six-seat conventional-tail single-engine tourer descended from the historic Bonanza family.",
+        "ja": "歴史あるBonanza系列から発展した6座・通常尾翼の単発旅行機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "BE36",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "baron",
+      "name": "Beechcraft Baron G58",
+      "manufacturer": "Beechcraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "—",
+      "span": "11.5 m",
+      "seats": "最多 6",
+      "tagline": {
+        "zh": "六座雙發活塞旅行機，具玻璃座艙與較高巡航性能。",
+        "en": "A six-seat twin-piston tourer with a glass cockpit and strong cruise performance.",
+        "ja": "グラスコックピットと高い巡航性能を備える6座双発ピストン機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "BE58",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "kingair260",
+      "name": "Beechcraft King Air 260",
+      "manufacturer": "Beechcraft",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "—",
+      "span": "17.7 m",
+      "seats": "最多 9",
+      "tagline": {
+        "zh": "King Air 家族的小型雙發加壓渦槳機。",
+        "en": "The smaller pressurized twin-turboprop in the current King Air family.",
+        "ja": "現行King Airファミリーの小型加圧双発ターボプロップです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "BE20",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "kingair360",
+      "name": "Beechcraft King Air 360",
+      "manufacturer": "Beechcraft",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "—",
+      "span": "17.7 m",
+      "seats": "最多 11",
+      "tagline": {
+        "zh": "King Air 旗艦標準型，強調加壓客艙與多任務能力。",
+        "en": "The standard King Air flagship, emphasizing a pressurized cabin and multi-mission utility.",
+        "ja": "加圧客室と多用途性を重視するKing Airの標準旗艦型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B350",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "kingair360er",
+      "name": "Beechcraft King Air 360ER",
+      "manufacturer": "Beechcraft",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "—",
+      "span": "17.7 m",
+      "seats": "最多 11",
+      "tagline": {
+        "zh": "增加燃油與航程、常用於特種任務的 King Air 360 衍生型。",
+        "en": "An extended-range King Air 360 derivative often used for special missions.",
+        "ja": "燃料搭載量と航続距離を増やし、特殊任務にも使われるKing Air 360派生型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B350",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "denali",
+      "name": "Beechcraft Denali",
+      "manufacturer": "Beechcraft",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "2021",
+      "span": "16.5 m",
+      "seats": "最多 11",
+      "tagline": {
+        "zh": "採全新 Catalyst 引擎與大型客艙的單發加壓渦槳機。",
+        "en": "A pressurized single-engine turboprop with a clean-sheet Catalyst engine and large cabin.",
+        "ja": "新設計Catalystエンジンと大型客室を備える加圧単発ターボプロップです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "m700",
+      "name": "Piper M700 Fury",
+      "manufacturer": "Piper",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "—",
+      "span": "13.1 m",
+      "seats": "最多 6",
+      "tagline": {
+        "zh": "具 700 shp、Autoland 與加壓客艙的 Piper M-Class 旗艦。",
+        "en": "Piper's M-Class flagship with 700 shp, Autoland, and a pressurized cabin.",
+        "ja": "700 shp、Autoland、加圧客室を備えるPiper M-Classの旗艦です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P46T",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "m500",
+      "name": "Piper M500",
+      "manufacturer": "Piper",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "—",
+      "span": "13.1 m",
+      "seats": "最多 6",
+      "tagline": {
+        "zh": "以操作效率與加壓舒適性為主的單發渦槳 M-Class。",
+        "en": "A pressurized M-Class single turboprop focused on operating efficiency.",
+        "ja": "運用効率と加圧快適性を重視するM-Class単発ターボプロップです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P46T",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "m350",
+      "name": "Piper M350",
+      "manufacturer": "Piper",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "—",
+      "span": "13.1 m",
+      "seats": "最多 6",
+      "tagline": {
+        "zh": "少數仍提供加壓客艙的單發活塞旅行機之一。",
+        "en": "One of the few current single-engine piston touring aircraft with a pressurized cabin.",
+        "ja": "現行機では数少ない加圧客室付き単発ピストン旅行機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "PA46",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "archerlx",
+      "name": "Piper Archer LX",
+      "manufacturer": "Piper",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "—",
+      "span": "10.7 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "PA-28 家族的現代四座私人旅行型。",
+        "en": "The modern four-seat personal touring member of the PA-28 family.",
+        "ja": "PA-28ファミリーの現代的な4座個人旅行型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P28A",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "archerdx",
+      "name": "Piper Archer DX",
+      "manufacturer": "Piper",
+      "category": {
+        "zh": "飛行訓練機",
+        "en": "Flight trainer",
+        "ja": "飛行訓練機"
+      },
+      "firstFlight": "—",
+      "span": "10.7 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "使用 Jet A 柴油循環引擎的 Archer 訓練型。",
+        "en": "An Archer training variant powered by a Jet-A-burning compression-ignition engine.",
+        "ja": "Jet A対応ディーゼルサイクルエンジンを搭載するArcher練習型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P28A",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "pilot100i",
+      "name": "Piper Pilot 100i",
+      "manufacturer": "Piper",
+      "category": {
+        "zh": "飛行訓練機",
+        "en": "Flight trainer",
+        "ja": "飛行訓練機"
+      },
+      "firstFlight": "—",
+      "span": "10.7 m",
+      "seats": "最多 3",
+      "tagline": {
+        "zh": "為飛行學校成本與耐用性設計的三座入門訓練機。",
+        "en": "A three-seat primary trainer designed around flight-school cost and durability.",
+        "ja": "飛行学校のコストと耐久性を重視した3座初等練習機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P28A",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "seminole",
+      "name": "Piper Seminole",
+      "manufacturer": "Piper",
+      "category": {
+        "zh": "飛行訓練機",
+        "en": "Flight trainer",
+        "ja": "飛行訓練機"
+      },
+      "firstFlight": "1976",
+      "span": "11.8 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "廣泛用於多發儀表與商用飛行員訓練的雙發活塞機。",
+        "en": "A twin-piston aircraft widely used for multi-engine, instrument, and commercial-pilot training.",
+        "ja": "多発・計器・事業用操縦士訓練に広く使われる双発ピストン機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "PA44",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "sr20",
+      "name": "Cirrus SR20 G7+",
+      "manufacturer": "Cirrus Aircraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "—",
+      "span": "11.7 m",
+      "seats": "最多 5",
+      "tagline": {
+        "zh": "具 CAPS 整機降落傘與 Safe Return 自動降落的入門 SR 系列。",
+        "en": "The entry SR Series model with CAPS whole-aircraft parachute and Safe Return autoland.",
+        "ja": "CAPS機体パラシュートとSafe Return自動着陸を備えるSRシリーズ入門型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "SR20",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "sr22",
+      "name": "Cirrus SR22 G7+",
+      "manufacturer": "Cirrus Aircraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "—",
+      "span": "11.7 m",
+      "seats": "最多 5",
+      "tagline": {
+        "zh": "高性能自然進氣 SR 系列，結合複合材料機體與整機降落傘。",
+        "en": "The high-performance naturally aspirated SR model with a composite airframe and whole-aircraft parachute.",
+        "ja": "複合材機体と機体パラシュートを備える高性能自然吸気SRモデルです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "SR22",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "sr22t",
+      "name": "Cirrus SR22T G7+",
+      "manufacturer": "Cirrus Aircraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "—",
+      "span": "11.7 m",
+      "seats": "最多 5",
+      "tagline": {
+        "zh": "SR22 的渦輪增壓高空型，可在高海拔維持較佳性能。",
+        "en": "The turbocharged high-altitude SR22 variant for stronger performance at elevation.",
+        "ja": "高高度で性能を維持しやすいSR22のターボ過給型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "S22T",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "da20",
+      "name": "Diamond DA20 Series",
+      "manufacturer": "Diamond Aircraft",
+      "category": {
+        "zh": "飛行訓練機",
+        "en": "Flight trainer",
+        "ja": "飛行訓練機"
+      },
+      "firstFlight": "1991",
+      "span": "10.9 m",
+      "seats": "最多 2",
+      "tagline": {
+        "zh": "採複合材料機身與座艙罩視野的雙座初級訓練機。",
+        "en": "A two-seat primary trainer with a composite airframe and panoramic canopy.",
+        "ja": "複合材機体と広視界キャノピーを持つ2座初等練習機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "DV20",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "da40",
+      "name": "Diamond DA40 Series",
+      "manufacturer": "Diamond Aircraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "1997",
+      "span": "11.9 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "四座複合材料旅行與訓練機，可選 Jet A 或 AVGAS 動力。",
+        "en": "A four-seat composite tourer and trainer offered with Jet-A or avgas power.",
+        "ja": "Jet AまたはAVGAS動力を選べる4座複合材旅行・練習機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "DA40",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "da42",
+      "name": "Diamond DA42-VI",
+      "manufacturer": "Diamond Aircraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "2002",
+      "span": "13.6 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "使用 Jet A 柴油循環引擎的四座複合材料雙發機。",
+        "en": "A four-seat composite twin powered by Jet-A compression-ignition engines.",
+        "ja": "Jet A対応ディーゼルサイクルエンジンを搭載する4座複合材双発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "DA42",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "da50",
+      "name": "Diamond DA50 RG",
+      "manufacturer": "Diamond Aircraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "2019",
+      "span": "13.4 m",
+      "seats": "最多 5",
+      "tagline": {
+        "zh": "具可收放起落架、五座寬客艙與 Jet A 動力的單發機。",
+        "en": "A five-seat, wide-cabin single with retractable gear and Jet-A power.",
+        "ja": "引込脚、5座ワイドキャビン、Jet A動力を備える単発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "DA50",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "da62",
+      "name": "Diamond DA62",
+      "manufacturer": "Diamond Aircraft",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "2012",
+      "span": "14.6 m",
+      "seats": "最多 7",
+      "tagline": {
+        "zh": "可載七人的大型複合材料雙發活塞旅行機。",
+        "en": "A large composite twin-piston touring aircraft seating up to seven.",
+        "ja": "最大7人を収容する大型複合材双発ピストン旅行機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "DA62",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "tbm910",
+      "name": "Daher TBM 910",
+      "manufacturer": "Daher",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "—",
+      "span": "12.8 m",
+      "seats": "最多 6",
+      "tagline": {
+        "zh": "採 G1000 NXi 的高速單發加壓渦槳機。",
+        "en": "A fast pressurized single turboprop equipped with Garmin G1000 NXi avionics.",
+        "ja": "Garmin G1000 NXiを備える高速加圧単発ターボプロップです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "TBM9",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "tbm960",
+      "name": "Daher TBM 960",
+      "manufacturer": "Daher",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "—",
+      "span": "12.8 m",
+      "seats": "最多 6",
+      "tagline": {
+        "zh": "具數位引擎與螺旋槳控制、Autoland 的 TBM 旗艦。",
+        "en": "The TBM flagship with digital engine/propeller control and Autoland.",
+        "ja": "デジタル式エンジン・プロペラ制御とAutolandを備えるTBM旗艦です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "TBM9",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "kodiak100",
+      "name": "Daher Kodiak 100 Series III",
+      "manufacturer": "Daher",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "—",
+      "span": "13.7 m",
+      "seats": "最多 10",
+      "tagline": {
+        "zh": "可在粗糙短跑道與水面運作的堅固單發渦槳機。",
+        "en": "A rugged single turboprop for short, rough strips and optional float operations.",
+        "ja": "短い未舗装滑走路やフロート運用に対応する堅牢な単発ターボプロップです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "K100",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "kodiak900",
+      "name": "Daher Kodiak 900",
+      "manufacturer": "Daher",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "2020",
+      "span": "13.7 m",
+      "seats": "最多 10",
+      "tagline": {
+        "zh": "Kodiak 100 的加長高速型，保留短場與偏遠地區能力。",
+        "en": "A stretched, faster Kodiak retaining short-field and remote-airstrip capability.",
+        "ja": "短距離・僻地運用能力を保ちながら延長・高速化したKodiakです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "K900",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "pc12pro",
+      "name": "Pilatus PC-12 PRO",
+      "manufacturer": "Pilatus",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "—",
+      "span": "16.3 m",
+      "seats": "最多 9",
+      "tagline": {
+        "zh": "具大型貨門、非鋪裝跑道能力與新 G3000 Prime 座艙的單發渦槳機。",
+        "en": "A single turboprop with a large cargo door, unpaved-runway capability, and a new G3000 Prime cockpit.",
+        "ja": "大型貨物扉、未舗装滑走路能力、新G3000 Primeコックピットを備える単発ターボプロップです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "PC12",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "pmentor",
+      "name": "Tecnam P-Mentor",
+      "manufacturer": "Tecnam",
+      "category": {
+        "zh": "飛行訓練機",
+        "en": "Flight trainer",
+        "ja": "飛行訓練機"
+      },
+      "firstFlight": "2022",
+      "span": "8.9 m",
+      "seats": "最多 2",
+      "tagline": {
+        "zh": "為初級、儀表與複雜飛行訓練設計的雙座機。",
+        "en": "A two-seat aircraft designed for primary, instrument, and complex-aircraft training.",
+        "ja": "初等・計器・複雑機訓練向けの2座機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "PMEN",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "p2010",
+      "name": "Tecnam P2010",
+      "manufacturer": "Tecnam",
+      "category": {
+        "zh": "活塞通用航空",
+        "en": "Piston general aviation",
+        "ja": "ピストン一般航空"
+      },
+      "firstFlight": "2012",
+      "span": "10.3 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "金屬機翼與複合材料機身結合的四座高翼旅行機。",
+        "en": "A four-seat high-wing tourer combining metal wings with a composite fuselage.",
+        "ja": "金属主翼と複合材胴体を組み合わせた4座高翼旅行機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P201",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "p2006t",
+      "name": "Tecnam P2006T NG",
+      "manufacturer": "Tecnam",
+      "category": {
+        "zh": "飛行訓練機",
+        "en": "Flight trainer",
+        "ja": "飛行訓練機"
+      },
+      "firstFlight": "2007",
+      "span": "11.4 m",
+      "seats": "最多 4",
+      "tagline": {
+        "zh": "以低油耗 Rotax 引擎為特色的四座輕型雙發訓練機。",
+        "en": "A four-seat light twin trainer distinguished by fuel-efficient Rotax engines.",
+        "ja": "低燃費Rotaxエンジンを特徴とする4座軽双発練習機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P200",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "p2012",
+      "name": "Tecnam P2012 Traveller",
+      "manufacturer": "Tecnam",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "2016",
+      "span": "14.0 m",
+      "seats": "最多 11",
+      "tagline": {
+        "zh": "供支線、包機與貨運任務使用的十一座高翼雙發機。",
+        "en": "An eleven-seat high-wing twin for commuter, charter, and cargo missions.",
+        "ja": "コミューター、チャーター、貨物任務向けの11座高翼双発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P212",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "p2012stol",
+      "name": "Tecnam P2012 STOL",
+      "manufacturer": "Tecnam",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "2022",
+      "span": "14.0 m",
+      "seats": "最多 11",
+      "tagline": {
+        "zh": "針對短跑道與偏遠社區運輸強化的 P2012 衍生型。",
+        "en": "A P2012 derivative optimized for short runways and remote-community transport.",
+        "ja": "短い滑走路と遠隔地域輸送向けに最適化したP2012派生型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "P212",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h125",
+      "name": "Airbus H125",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1974",
+      "span": "10.7 m",
+      "seats": "1 + 6",
+      "tagline": {
+        "zh": "高溫高原性能突出的輕型單發多用途直升機。",
+        "en": "A light single-engine utility helicopter noted for hot-and-high performance.",
+        "ja": "高温・高高度性能に優れる軽単発多用途ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AS50",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h130",
+      "name": "Airbus H130",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1999",
+      "span": "10.7 m",
+      "seats": "1 + 7",
+      "tagline": {
+        "zh": "具寬客艙與 Fenestron 涵道尾旋翼的觀光與私人運輸直升機。",
+        "en": "A sightseeing and private-transport helicopter with a wide cabin and Fenestron tail rotor.",
+        "ja": "広い客室とフェネストロンを備える遊覧・個人輸送ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "EC30",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h135",
+      "name": "Airbus H135",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1994",
+      "span": "10.4 m",
+      "seats": "1–2 + 5–6",
+      "tagline": {
+        "zh": "廣泛用於醫療、警務、訓練與私人運輸的輕型雙發直升機。",
+        "en": "A light twin widely used for EMS, police, training, and private transport.",
+        "ja": "救急、警察、訓練、個人輸送に広く使われる軽双発ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "EC35",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h140",
+      "name": "Airbus H140",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2025",
+      "span": "10.8 m（約）",
+      "seats": "1–2 + 6",
+      "tagline": {
+        "zh": "已完成實體首飛的新一代三噸級輕型雙發直升機。",
+        "en": "A new-generation three-tonne-class light twin that has completed its physical first flight.",
+        "ja": "実機初飛行を完了した新世代3トン級軽双発ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h145",
+      "name": "Airbus H145",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1999",
+      "span": "10.8 m",
+      "seats": "1–2 + 最多 9",
+      "tagline": {
+        "zh": "採五葉主旋翼與 Fenestron、適合醫療與公共服務的四噸級雙發機。",
+        "en": "A four-tonne twin with a five-blade rotor and Fenestron, optimized for EMS and public-service missions.",
+        "ja": "5枚主ローターとフェネストロンを備え、救急・公共任務に適する4トン級双発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "EC45",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h160",
+      "name": "Airbus H160",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2015",
+      "span": "13.4 m",
+      "seats": "2 + 最多 12",
+      "tagline": {
+        "zh": "採 Blue Edge 槳葉、傾斜 Fenestron 與 Helionix 的中型雙發直升機。",
+        "en": "A medium twin with Blue Edge blades, a canted Fenestron, and Helionix avionics.",
+        "ja": "Blue Edgeブレード、傾斜フェネストロン、Helionixを備える中型双発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "H160",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h175",
+      "name": "Airbus H175",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2009",
+      "span": "14.8 m",
+      "seats": "2 + 最多 16",
+      "tagline": {
+        "zh": "面向海上能源、搜救與企業運輸的超中型雙發直升機。",
+        "en": "A super-medium twin for offshore energy, search and rescue, and corporate transport.",
+        "ja": "洋上エネルギー、捜索救難、企業輸送向けのスーパー・ミディアム双発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "EC75",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h215",
+      "name": "Airbus H215",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1978",
+      "span": "16.2 m",
+      "seats": "2 + 最多 19",
+      "tagline": {
+        "zh": "Super Puma 家族的重型多用途型，保留寬大客艙與外吊能力。",
+        "en": "A heavy multi-role Super Puma retaining a large cabin and external-lift capability.",
+        "ja": "大型客室と外部吊下げ能力を持つSuper Puma系列の重多用途型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AS32",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "h225",
+      "name": "Airbus H225",
+      "manufacturer": "Airbus Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2000",
+      "span": "16.2 m",
+      "seats": "2 + 最多 19",
+      "tagline": {
+        "zh": "Super Puma 家族長航程重型雙發型，用於海上、搜救與政府運輸。",
+        "en": "The long-range heavy Super Puma for offshore, SAR, and government transport.",
+        "ja": "洋上、捜索救難、政府輸送に使われるSuper Puma系列の長距離重双発型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "EC25",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "bell505",
+      "name": "Bell 505 Jet Ranger X",
+      "manufacturer": "Bell",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2014",
+      "span": "11.3 m",
+      "seats": "1 + 4",
+      "tagline": {
+        "zh": "採 G1000H 航電與開放式客艙的輕型單發直升機。",
+        "en": "A light single with G1000H avionics and an open, flexible cabin.",
+        "ja": "G1000Hアビオニクスと開放的で柔軟な客室を持つ軽単発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B505",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "bell407",
+      "name": "Bell 407GXi",
+      "manufacturer": "Bell",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1995",
+      "span": "10.7 m",
+      "seats": "1 + 6",
+      "tagline": {
+        "zh": "四葉主旋翼、G1000H NXi 與高機動性兼具的輕型單發機。",
+        "en": "A light single combining a four-blade rotor, G1000H NXi, and agile handling.",
+        "ja": "4枚主ローター、G1000H NXi、高い機動性を併せ持つ軽単発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B407",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "bell429",
+      "name": "Bell 429",
+      "manufacturer": "Bell",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2007",
+      "span": "11.0 m",
+      "seats": "1 + 7",
+      "tagline": {
+        "zh": "具寬敞平地板客艙與 IFR 能力的輕型雙發多任務直升機。",
+        "en": "A light twin multi-mission helicopter with a spacious flat-floor cabin and IFR capability.",
+        "ja": "広いフラットフロア客室とIFR能力を持つ軽双発多任務ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B429",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "bell412",
+      "name": "Subaru Bell 412EPX",
+      "manufacturer": "Bell / Subaru",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1979",
+      "span": "14.0 m",
+      "seats": "1–2 + 最多 14",
+      "tagline": {
+        "zh": "Bell 412 家族最新重載版本，強化傳動與最大起飛重量。",
+        "en": "The latest heavy-lift Bell 412 evolution with upgraded transmission and gross weight.",
+        "ja": "伝動系と最大重量を強化したBell 412系列の最新重搭載型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B412",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "bell525",
+      "name": "Bell 525 Relentless",
+      "manufacturer": "Bell",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2015",
+      "span": "16.2 m",
+      "seats": "2 + 16",
+      "tagline": {
+        "zh": "已完成實體試飛、採線傳飛控與大型客艙的超中型雙發直升機。",
+        "en": "A flight-tested super-medium twin with fly-by-wire controls and a large cabin.",
+        "ja": "実機飛行試験済みで、フライ・バイ・ワイヤと大型客室を備えるスーパー・ミディアム双発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "B525",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "aw109",
+      "name": "Leonardo AW109 Trekker",
+      "manufacturer": "Leonardo",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2016",
+      "span": "10.8 m",
+      "seats": "2 + 最多 6",
+      "tagline": {
+        "zh": "以滑橇起落架強化野外任務能力的 AW109 輕型雙發型。",
+        "en": "A skid-equipped light-twin AW109 variant optimized for field operations.",
+        "ja": "スキッド脚で野外任務能力を高めたAW109軽双発型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A109",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "aw119",
+      "name": "Leonardo AW119Kx",
+      "manufacturer": "Leonardo",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1995",
+      "span": "10.8 m",
+      "seats": "1 + 最多 7",
+      "tagline": {
+        "zh": "具寬客艙、IFR 航電與高功率的輕型單發直升機。",
+        "en": "A light single combining a spacious cabin, IFR avionics, and strong power.",
+        "ja": "広い客室、IFRアビオニクス、高出力を備える軽単発ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A119",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "aw169",
+      "name": "Leonardo AW169",
+      "manufacturer": "Leonardo",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2012",
+      "span": "12.1 m",
+      "seats": "2 + 最多 10",
+      "tagline": {
+        "zh": "AWFamily 中的輕中型雙發機，採可變轉速主旋翼與玻璃座艙。",
+        "en": "The light-intermediate AWFamily twin with variable rotor speed and a glass cockpit.",
+        "ja": "可変ローター回転数とグラスコックピットを備えるAWFamilyの軽中間双発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A169",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "aw189",
+      "name": "Leonardo AW189",
+      "manufacturer": "Leonardo",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2011",
+      "span": "14.6 m",
+      "seats": "2 + 最多 16",
+      "tagline": {
+        "zh": "面向海上能源與搜救的超中型雙發直升機。",
+        "en": "A super-medium twin designed for offshore energy and search-and-rescue missions.",
+        "ja": "洋上エネルギーと捜索救難向けのスーパー・ミディアム双発ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A189",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "aw09",
+      "name": "Leonardo AW09",
+      "manufacturer": "Leonardo",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2020",
+      "span": "10.8 m（約）",
+      "seats": "1 + 最多 7",
+      "tagline": {
+        "zh": "已完成實體試飛、具複合材料機身與寬客艙的新世代輕型單發機。",
+        "en": "A flight-tested new-generation light single with a composite airframe and wide cabin.",
+        "ja": "実機飛行試験済みで、複合材機体と広い客室を備える新世代軽単発機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "r22",
+      "name": "Robinson R22 Beta II",
+      "manufacturer": "Robinson",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1975",
+      "span": "7.7 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "結構簡潔、成本較低的雙座活塞訓練與私人直升機。",
+        "en": "A simple, economical two-seat piston helicopter for training and private flying.",
+        "ja": "簡素で経済的な2座ピストン練習・個人用ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "R22",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "r44",
+      "name": "Robinson R44 Raven II",
+      "manufacturer": "Robinson",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "1990",
+      "span": "10.1 m",
+      "seats": "4",
+      "tagline": {
+        "zh": "四座活塞直升機，廣泛用於私人、訓練與巡查任務。",
+        "en": "A four-seat piston helicopter widely used for private, training, and patrol work.",
+        "ja": "個人、訓練、巡視に広く使われる4座ピストンヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "R44",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "r44cadet",
+      "name": "Robinson R44 Cadet",
+      "manufacturer": "Robinson",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "—",
+      "span": "10.1 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "以 R44 機體打造、降低載重與功率的雙座訓練型。",
+        "en": "A two-seat training derivative using the R44 airframe with reduced weight and power.",
+        "ja": "R44機体を使い、重量と出力を抑えた2座練習型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "R44",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "r66",
+      "name": "Robinson R66 NxG",
+      "manufacturer": "Robinson",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "2007",
+      "span": "10.1 m",
+      "seats": "5",
+      "tagline": {
+        "zh": "五座渦輪軸直升機，保留 Robinson 簡潔機體與低營運成本取向。",
+        "en": "A five-seat turboshaft helicopter retaining Robinson's simple, cost-conscious design philosophy.",
+        "ja": "Robinsonの簡潔で低運航費志向の設計を受け継ぐ5座ターボシャフト機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "R66",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "md500e",
+      "name": "MD Helicopters MD 500E",
+      "manufacturer": "MD Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "—",
+      "span": "8.1 m",
+      "seats": "1 + 4",
+      "tagline": {
+        "zh": "採五葉主旋翼、機身緊湊且機動性高的輕型單發直升機。",
+        "en": "A compact, agile light single with a five-blade main rotor.",
+        "ja": "5枚主ローターを備える小型で機動性の高い軽単発ヘリコプターです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "H500",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "md530f",
+      "name": "MD Helicopters MD 530F",
+      "manufacturer": "MD Helicopters",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "—",
+      "span": "8.3 m",
+      "seats": "1 + 4",
+      "tagline": {
+        "zh": "針對高溫高原與外吊任務強化的 MD 500 家族型。",
+        "en": "An MD 500-family variant strengthened for hot-and-high and external-load missions.",
+        "ja": "高温・高高度および外部吊下げ任務向けに強化したMD 500系列型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "H500",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "s92",
+      "name": "Sikorsky S-92A+",
+      "manufacturer": "Sikorsky",
+      "category": {
+        "zh": "直升機",
+        "en": "Helicopter",
+        "ja": "ヘリコプター"
+      },
+      "firstFlight": "—",
+      "span": "17.2 m",
+      "seats": "2 + 最多 19",
+      "tagline": {
+        "zh": "S-92 的新造升級型，增強引擎、變速箱、酬載與重型民用任務能力。",
+        "en": "The new-production S-92 evolution with upgraded engines, gearbox, payload, and heavy civil capability.",
+        "ja": "エンジン、変速機、搭載量を強化した新造S-92の重民用型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "S92",
+      "iata": "",
       "has3d": false
     }
   ]

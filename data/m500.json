@@ -1,0 +1,41 @@
+{
+  "title": "Piper M500",
+  "sub": {
+    "zh": "以操作效率與加壓舒適性為主的單發渦槳 M-Class。",
+    "en": "A pressurized M-Class single turboprop focused on operating efficiency.",
+    "ja": "運用効率と加圧快適性を重視するM-Class単発ターボプロップです。"
+  },
+  "sources": [
+    "https://www.piper.com/model/m500/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 6"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "13.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,852 km (1,000 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6A-42A"
+      ]
+    ]
+  }
+}

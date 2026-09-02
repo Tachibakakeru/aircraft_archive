@@ -1,0 +1,41 @@
+{
+  "title": "De Havilland Canada DHC-6 Twin Otter Series 400",
+  "sub": {
+    "zh": "可裝輪式、浮筒或雪橇起落架的短場多用途雙發渦槳機。",
+    "en": "A short-field twin turboprop utility aircraft available with wheels, floats, or skis.",
+    "ja": "車輪・フロート・スキーに対応する短距離離着陸用の双発多用途ターボプロップです。"
+  },
+  "sources": [
+    "https://dehavilland.com/twin-otter/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "2008"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "19.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,435 km (775 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PT6A-34"
+      ]
+    ]
+  }
+}

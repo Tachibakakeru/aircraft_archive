@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H145",
+  "sub": {
+    "zh": "採五葉主旋翼與 Fenestron、適合醫療與公共服務的四噸級雙發機。",
+    "en": "A four-tonne twin with a five-blade rotor and Fenestron, optimized for EMS and public-service missions.",
+    "ja": "5枚主ローターとフェネストロンを備え、救急・公共任務に適する4トン級双発機です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h145"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1–2 + 最多 9"
+      ],
+      [
+        "首飛年份",
+        "1999"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 650 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Safran Arriel 2E"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Boeing 737 MAX 9",
+  "sub": {
+    "zh": "737 MAX 8 的加長型，提高座位與貨艙容量。",
+    "en": "A stretched 737 MAX 8 derivative with greater seating and cargo capacity.",
+    "ja": "737 MAX 8を延長し、座席数と貨物容量を増やした型です。"
+  },
+  "sources": [
+    "https://www.boeing.com/commercial/737max"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "178–193"
+      ],
+      [
+        "首飛年份",
+        "2017"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "35.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "6,110 km (3,300 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × CFM LEAP-1B"
+      ]
+    ]
+  }
+}

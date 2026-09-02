@@ -1,0 +1,41 @@
+{
+  "title": "Bombardier Challenger 650",
+  "sub": {
+    "zh": "以寬敞客艙、成熟系統與洲際航程見長的大型公務機。",
+    "en": "A large business jet known for its wide cabin, mature systems, and transcontinental range.",
+    "ja": "広い客室、実績あるシステム、大陸横断性能を特徴とする大型ビジネスジェットです。"
+  },
+  "sources": [
+    "https://bombardier.com/en/aircraft/challenger-650"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 12"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "19.6 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "7,408 km (4,000 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric CF34-3B"
+      ]
+    ]
+  }
+}

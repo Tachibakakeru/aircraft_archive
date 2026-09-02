@@ -1,0 +1,41 @@
+{
+  "title": "Dassault Falcon 2000LXS",
+  "sub": {
+    "zh": "雙發寬客艙 Falcon，兼顧短場性能與洲際航程。",
+    "en": "A wide-cabin twin-engine Falcon balancing short-field capability and intercontinental range.",
+    "ja": "短距離性能と大陸間航続距離を両立する広胴双発Falconです。"
+  },
+  "sources": [
+    "https://www.dassaultfalcon.com/aircraft/falcon-2000lxs/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "8–10"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "21.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "7,408 km (4,000 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW308C"
+      ]
+    ]
+  }
+}

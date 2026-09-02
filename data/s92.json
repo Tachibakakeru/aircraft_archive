@@ -1,0 +1,41 @@
+{
+  "title": "Sikorsky S-92A+",
+  "sub": {
+    "zh": "S-92 的新造升級型，增強引擎、變速箱、酬載與重型民用任務能力。",
+    "en": "The new-production S-92 evolution with upgraded engines, gearbox, payload, and heavy civil capability.",
+    "ja": "エンジン、変速機、搭載量を強化した新造S-92の重民用型です。"
+  },
+  "sources": [
+    "https://www.lockheedmartin.com/en-us/products/sikorsky-s-92-helicopter.html"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 最多 19"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "17.2 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 1,014 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric CT7-8A6"
+      ]
+    ]
+  }
+}

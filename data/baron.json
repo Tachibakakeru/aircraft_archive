@@ -1,0 +1,41 @@
+{
+  "title": "Beechcraft Baron G58",
+  "sub": {
+    "zh": "六座雙發活塞旅行機，具玻璃座艙與較高巡航性能。",
+    "en": "A six-seat twin-piston tourer with a glass cockpit and strong cruise performance.",
+    "ja": "グラスコックピットと高い巡航性能を備える6座双発ピストン機です。"
+  },
+  "sources": [
+    "https://beechcraft.txtav.com/en/baron-g58"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 6"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.5 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,741 km (1,480 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Continental IO-550-C"
+      ]
+    ]
+  }
+}

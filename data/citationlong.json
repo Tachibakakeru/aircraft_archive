@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Citation Longitude",
+  "sub": {
+    "zh": "Citation 家族的超中型旗艦，主打低客艙高度與長航程。",
+    "en": "Citation's super-midsize flagship, emphasizing low cabin altitude and long range.",
+    "ja": "低い客室高度と長距離性能を重視するCitationのスーパー・ミッドサイズ旗艦です。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/citation/longitude"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 12"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "21.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "6,482 km (3,500 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Honeywell HTF7700L"
+      ]
+    ]
+  }
+}

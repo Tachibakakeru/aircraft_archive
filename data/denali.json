@@ -1,0 +1,41 @@
+{
+  "title": "Beechcraft Denali",
+  "sub": {
+    "zh": "採全新 Catalyst 引擎與大型客艙的單發加壓渦槳機。",
+    "en": "A pressurized single-engine turboprop with a clean-sheet Catalyst engine and large cabin.",
+    "ja": "新設計Catalystエンジンと大型客室を備える加圧単発ターボプロップです。"
+  },
+  "sources": [
+    "https://beechcraft.txtav.com/en/denali"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 11"
+      ],
+      [
+        "首飛年份",
+        "2021"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "16.5 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,963 km (1,600 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × GE Aerospace Catalyst"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Boeing 737 MAX 7",
+  "sub": {
+    "zh": "737 MAX 家族的短機身長航程型，承接 737-700 級距市場。",
+    "en": "The short-fuselage, long-range 737 MAX member succeeding the 737-700 size class.",
+    "ja": "737-700級市場を継ぐ737 MAXの短胴・長距離型です。"
+  },
+  "sources": [
+    "https://www.boeing.com/commercial/737max"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "138–153"
+      ],
+      [
+        "首飛年份",
+        "2018"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "35.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "7,130 km (3,850 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × CFM LEAP-1B"
+      ]
+    ]
+  }
+}

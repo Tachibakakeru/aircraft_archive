@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Citation Latitude",
+  "sub": {
+    "zh": "以平地板寬客艙為特色的中型 Citation。",
+    "en": "A midsize Citation distinguished by its wide, flat-floor cabin.",
+    "ja": "幅広いフラットフロア客室を特徴とする中型Citationです。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/citation/latitude"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 9"
+      ],
+      [
+        "首飛年份",
+        "2014"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "22.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "5,000 km (2,700 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW306D1"
+      ]
+    ]
+  }
+}

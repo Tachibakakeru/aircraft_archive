@@ -1,0 +1,41 @@
+{
+  "title": "Tecnam P2012 STOL",
+  "sub": {
+    "zh": "針對短跑道與偏遠社區運輸強化的 P2012 衍生型。",
+    "en": "A P2012 derivative optimized for short runways and remote-community transport.",
+    "ja": "短い滑走路と遠隔地域輸送向けに最適化したP2012派生型です。"
+  },
+  "sources": [
+    "https://tecnam.com/aircraft/p2012-stol/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 11"
+      ],
+      [
+        "首飛年份",
+        "2022"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "14.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Lycoming TEO-540-C1A"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Piper Archer DX",
+  "sub": {
+    "zh": "使用 Jet A 柴油循環引擎的 Archer 訓練型。",
+    "en": "An Archer training variant powered by a Jet-A-burning compression-ignition engine.",
+    "ja": "Jet A対応ディーゼルサイクルエンジンを搭載するArcher練習型です。"
+  },
+  "sources": [
+    "https://www.piper.com/model/archer-dx/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 4"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,570 km (848 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Continental CD-155"
+      ]
+    ]
+  }
+}

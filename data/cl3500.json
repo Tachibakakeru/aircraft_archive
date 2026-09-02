@@ -1,0 +1,41 @@
+{
+  "title": "Bombardier Challenger 3500",
+  "sub": {
+    "zh": "Challenger 350 平台的最新客艙與航電升級型。",
+    "en": "The latest cabin and avionics evolution of the Challenger 350 platform.",
+    "ja": "Challenger 350を基礎に客室とアビオニクスを刷新した型です。"
+  },
+  "sources": [
+    "https://bombardier.com/en/aircraft/challenger-3500"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 10"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "21.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "6,297 km (3,400 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Honeywell HTF7350"
+      ]
+    ]
+  }
+}

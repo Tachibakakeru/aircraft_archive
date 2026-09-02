@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Citation CJ4 Gen3",
+  "sub": {
+    "zh": "CJ 家族中航程與性能最高的單人駕駛型。",
+    "en": "The longest-range and highest-performance single-pilot member of the CJ family.",
+    "ja": "CJファミリーで最長航続・最高性能の単独操縦対応型です。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/citation/cj4"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 10"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "15.5 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "4,010 km (2,165 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Williams FJ44-4A"
+      ]
+    ]
+  }
+}

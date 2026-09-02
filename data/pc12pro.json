@@ -1,0 +1,41 @@
+{
+  "title": "Pilatus PC-12 PRO",
+  "sub": {
+    "zh": "具大型貨門、非鋪裝跑道能力與新 G3000 Prime 座艙的單發渦槳機。",
+    "en": "A single turboprop with a large cargo door, unpaved-runway capability, and a new G3000 Prime cockpit.",
+    "ja": "大型貨物扉、未舗装滑走路能力、新G3000 Primeコックピットを備える単発ターボプロップです。"
+  },
+  "sources": [
+    "https://www.pilatus-aircraft.com/en/pc-12"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 9"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "16.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,269 km (1,765 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6E-67XP"
+      ]
+    ]
+  }
+}

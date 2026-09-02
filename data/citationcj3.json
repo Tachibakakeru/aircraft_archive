@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Citation CJ3 Gen3",
+  "sub": {
+    "zh": "在 CJ3 平台加入新世代航電、自動油門與緊急自動降落。",
+    "en": "A CJ3 evolution with new-generation avionics, autothrottles, and emergency autoland.",
+    "ja": "CJ3に新世代アビオニクス、自動推力制御、緊急自動着陸を加えた型です。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/citation/cj3"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 9"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "16.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,778 km (2,040 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Williams FJ44-3A"
+      ]
+    ]
+  }
+}

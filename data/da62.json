@@ -1,0 +1,41 @@
+{
+  "title": "Diamond DA62",
+  "sub": {
+    "zh": "可載七人的大型複合材料雙發活塞旅行機。",
+    "en": "A large composite twin-piston touring aircraft seating up to seven.",
+    "ja": "最大7人を収容する大型複合材双発ピストン旅行機です。"
+  },
+  "sources": [
+    "https://www.diamondaircraft.com/en/private-owners/aircraft/da62/overview/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 7"
+      ],
+      [
+        "首飛年份",
+        "2012"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "14.6 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,385 km (1,288 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Austro AE330"
+      ]
+    ]
+  }
+}

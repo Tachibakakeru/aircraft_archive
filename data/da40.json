@@ -1,0 +1,41 @@
+{
+  "title": "Diamond DA40 Series",
+  "sub": {
+    "zh": "四座複合材料旅行與訓練機，可選 Jet A 或 AVGAS 動力。",
+    "en": "A four-seat composite tourer and trainer offered with Jet-A or avgas power.",
+    "ja": "Jet AまたはAVGAS動力を選べる4座複合材旅行・練習機です。"
+  },
+  "sources": [
+    "https://www.diamondaircraft.com/en/private-owners/aircraft/da40/overview/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 4"
+      ],
+      [
+        "首飛年份",
+        "1997"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,730 km (934 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Austro AE300 / Lycoming IO-360"
+      ]
+    ]
+  }
+}

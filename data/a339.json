@@ -1,0 +1,41 @@
+{
+  "title": "Airbus A330-900",
+  "sub": {
+    "zh": "A330neo 家族主力型，在 A330-300 尺寸上導入新翼與新引擎。",
+    "en": "The principal A330neo variant, adding a new wing and engines to the A330-300-sized airframe.",
+    "ja": "A330-300級の機体に新主翼と新エンジンを導入したA330neoの主力型です。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/commercial-aircraft/passenger-aircraft/a330-family"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "260–300"
+      ],
+      [
+        "首飛年份",
+        "2017"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "64.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "13,600 km (7,350 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Trent 7000"
+      ]
+    ]
+  }
+}

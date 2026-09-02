@@ -1,0 +1,41 @@
+{
+  "title": "Cessna 182 Skylane",
+  "sub": {
+    "zh": "具固定起落架與較高酬載能力的四座高翼旅行機。",
+    "en": "A four-seat high-wing touring aircraft with fixed gear and greater payload capability.",
+    "ja": "固定脚と高い搭載力を持つ4座高翼旅行機です。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/piston/skylane"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 4"
+      ],
+      [
+        "首飛年份",
+        "1956"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "11.2 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,695 km (915 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming IO-540-AB1A5"
+      ]
+    ]
+  }
+}

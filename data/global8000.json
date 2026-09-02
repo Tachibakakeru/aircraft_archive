@@ -1,0 +1,41 @@
+{
+  "title": "Bombardier Global 8000",
+  "sub": {
+    "zh": "由 Global 7500 發展、提高航程與速度性能的超長程型。",
+    "en": "An ultra-long-range evolution of the Global 7500 with greater range and speed.",
+    "ja": "Global 7500から航続距離と速度を高めた超長距離型です。"
+  },
+  "sources": [
+    "https://bombardier.com/en/aircraft/global-8000"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "31.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "14,816 km (8,000 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric Passport"
+      ]
+    ]
+  }
+}

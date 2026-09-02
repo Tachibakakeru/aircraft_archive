@@ -1,0 +1,41 @@
+{
+  "title": "Cessna Citation XLS Gen2",
+  "sub": {
+    "zh": "以短場性能和直立客艙見長的中型 Citation 最新升級。",
+    "en": "The latest midsize Citation evolution, known for short-field performance and a stand-up cabin.",
+    "ja": "短距離性能と立って移動できる客室を特徴とする中型Citationの最新型です。"
+  },
+  "sources": [
+    "https://cessna.txtav.com/en/citation/xls-gen2"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 12"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "17.2 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,889 km (2,100 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW545C"
+      ]
+    ]
+  }
+}

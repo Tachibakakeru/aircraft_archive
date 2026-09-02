@@ -1,0 +1,41 @@
+{
+  "title": "Boeing 777 Freighter",
+  "sub": {
+    "zh": "以 777-200LR 為基礎的長程大型雙發貨機。",
+    "en": "A long-range large twin-engine freighter derived from the 777-200LR.",
+    "ja": "777-200LRを基礎とする長距離大型双発貨物機です。"
+  },
+  "sources": [
+    "https://www.boeing.com/commercial/freighters"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最大酬載約 102 t"
+      ],
+      [
+        "首飛年份",
+        "2008"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "64.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "9,200 km (4,970 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric GE90-110B1L"
+      ]
+    ]
+  }
+}

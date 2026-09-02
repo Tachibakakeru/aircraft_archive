@@ -1,0 +1,41 @@
+{
+  "title": "Gulfstream G800",
+  "sub": {
+    "zh": "以 8,200 海里級航程為主軸的 Gulfstream 最長程機型。",
+    "en": "Gulfstream's longest-range model, centered on an 8,200-nautical-mile mission.",
+    "ja": "8,200海里級の航続距離を持つガルフストリーム最長距離型です。"
+  },
+  "sources": [
+    "https://www.gulfstream.com/en/aircraft/gulfstream-g800/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "2022"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "31.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "15,186 km (8,200 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Rolls-Royce Pearl 700"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Leonardo AW119Kx",
+  "sub": {
+    "zh": "具寬客艙、IFR 航電與高功率的輕型單發直升機。",
+    "en": "A light single combining a spacious cabin, IFR avionics, and strong power.",
+    "ja": "広い客室、IFRアビオニクス、高出力を備える軽単発ヘリコプターです。"
+  },
+  "sources": [
+    "https://helicopters.leonardo.com/en/products/aw119kx"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1 + 最多 7"
+      ],
+      [
+        "首飛年份",
+        "1995"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.8 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 954 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pratt & Whitney Canada PT6B-37A"
+      ]
+    ]
+  }
+}

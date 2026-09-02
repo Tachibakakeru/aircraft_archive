@@ -1,0 +1,41 @@
+{
+  "title": "Embraer Praetor 500E",
+  "sub": {
+    "zh": "具線傳飛控與主動亂流抑制的中型公務機。",
+    "en": "A midsize business jet with fly-by-wire controls and active turbulence reduction.",
+    "ja": "フライ・バイ・ワイヤと能動乱気流低減を備える中型ビジネスジェットです。"
+  },
+  "sources": [
+    "https://embraer.com/executive-jets/praetor-500e/en/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 9"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "20.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "6,186 km (3,340 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Honeywell HTF7500E"
+      ]
+    ]
+  }
+}

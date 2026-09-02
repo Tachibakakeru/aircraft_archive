@@ -1,0 +1,41 @@
+{
+  "title": "Gulfstream G400",
+  "sub": {
+    "zh": "新世代大型客艙公務機，採主動式側桿與 Symmetry Flight Deck。",
+    "en": "A new-generation large-cabin jet with active-control sidesticks and the Symmetry Flight Deck.",
+    "ja": "アクティブ・サイドスティックとSymmetry Flight Deckを備える新世代大型客室機です。"
+  },
+  "sources": [
+    "https://www.gulfstream.com/en/aircraft/gulfstream-g400"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 12"
+      ],
+      [
+        "首飛年份",
+        "2024"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "26.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "7,778 km (4,200 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney PW812GA"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Aircraft Industries L 410 NG",
+  "sub": {
+    "zh": "L 410 家族的現代化短場通勤機，採新翼、玻璃座艙與 H85 引擎。",
+    "en": "The modernized short-field L 410 with a new wing, glass cockpit, and H85 engines.",
+    "ja": "新主翼、グラスコックピット、H85エンジンを備えるL 410の近代化型です。"
+  },
+  "sources": [
+    "https://www.let.cz/en/l410ng"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 19"
+      ],
+      [
+        "首飛年份",
+        "2015"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "20.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,570 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × GE Aerospace H85-200"
+      ]
+    ]
+  }
+}

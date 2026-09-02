@@ -1,0 +1,41 @@
+{
+  "title": "Diamond DA42-VI",
+  "sub": {
+    "zh": "使用 Jet A 柴油循環引擎的四座複合材料雙發機。",
+    "en": "A four-seat composite twin powered by Jet-A compression-ignition engines.",
+    "ja": "Jet A対応ディーゼルサイクルエンジンを搭載する4座複合材双発機です。"
+  },
+  "sources": [
+    "https://www.diamondaircraft.com/en/private-owners/aircraft/da42/overview/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 4"
+      ],
+      [
+        "首飛年份",
+        "2002"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "13.6 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,269 km (1,225 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Austro AE300"
+      ]
+    ]
+  }
+}

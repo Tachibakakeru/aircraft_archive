@@ -1,0 +1,41 @@
+{
+  "title": "Boeing 767-300F",
+  "sub": {
+    "zh": "目前仍列於 Boeing 貨機產品線的中型雙發貨機。",
+    "en": "A medium twin-engine freighter that remains in Boeing's commercial product lineup.",
+    "ja": "ボーイングの製品群に残る中型双発貨物機です。"
+  },
+  "sources": [
+    "https://www.boeing.com/commercial/freighters"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最大酬載約 52.5 t"
+      ],
+      [
+        "首飛年份",
+        "1995"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "47.6 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "6,025 km (3,255 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric CF6-80C2"
+      ]
+    ]
+  }
+}

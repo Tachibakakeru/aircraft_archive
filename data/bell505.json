@@ -1,0 +1,41 @@
+{
+  "title": "Bell 505 Jet Ranger X",
+  "sub": {
+    "zh": "採 G1000H 航電與開放式客艙的輕型單發直升機。",
+    "en": "A light single with G1000H avionics and an open, flexible cabin.",
+    "ja": "G1000Hアビオニクスと開放的で柔軟な客室を持つ軽単発機です。"
+  },
+  "sources": [
+    "https://www.bellflight.com/products/bell-505"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1 + 4"
+      ],
+      [
+        "首飛年份",
+        "2014"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "11.3 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "566 km (306 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Safran Arrius 2R"
+      ]
+    ]
+  }
+}

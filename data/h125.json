@@ -1,0 +1,41 @@
+{
+  "title": "Airbus H125",
+  "sub": {
+    "zh": "高溫高原性能突出的輕型單發多用途直升機。",
+    "en": "A light single-engine utility helicopter noted for hot-and-high performance.",
+    "ja": "高温・高高度性能に優れる軽単発多用途ヘリコプターです。"
+  },
+  "sources": [
+    "https://www.airbus.com/en/products-services/helicopters/civil-helicopters/h125"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "1 + 6"
+      ],
+      [
+        "首飛年份",
+        "1974"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.7 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 630 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Safran Arriel 2D"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "ATR 72-600",
+  "sub": {
+    "zh": "ATR 家族的高容量渦輪螺旋槳支線客機。",
+    "en": "The higher-capacity turboprop regional airliner in the ATR family.",
+    "ja": "ATRファミリーの大容量ターボプロップ・リージョナル機です。"
+  },
+  "sources": [
+    "https://www.atr-aircraft.com/our-aircraft/atr-72-600/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "68–78"
+      ],
+      [
+        "首飛年份",
+        "2009"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "27.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "1,370 km (740 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW127XT-M"
+      ]
+    ]
+  }
+}

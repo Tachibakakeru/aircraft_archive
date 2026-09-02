@@ -1,0 +1,41 @@
+{
+  "title": "Leonardo AW189",
+  "sub": {
+    "zh": "面向海上能源與搜救的超中型雙發直升機。",
+    "en": "A super-medium twin designed for offshore energy and search-and-rescue missions.",
+    "ja": "洋上エネルギーと捜索救難向けのスーパー・ミディアム双発ヘリコプターです。"
+  },
+  "sources": [
+    "https://helicopters.leonardo.com/en/products/aw189"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "2 + 最多 16"
+      ],
+      [
+        "首飛年份",
+        "2011"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "14.6 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 907 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × General Electric CT7-2E1"
+      ]
+    ]
+  }
+}

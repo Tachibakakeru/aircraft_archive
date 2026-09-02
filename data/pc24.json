@@ -1,0 +1,41 @@
+{
+  "title": "Pilatus PC-24",
+  "sub": {
+    "zh": "可使用短小、甚至部分非鋪裝跑道的雙發公務噴射機。",
+    "en": "A twin-engine business jet designed for short and selected unpaved runways.",
+    "ja": "短距離および一部未舗装滑走路に対応する双発ビジネスジェットです。"
+  },
+  "sources": [
+    "https://www.pilatus-aircraft.com/en/fly/pc-24"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 11"
+      ],
+      [
+        "首飛年份",
+        "2015"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "17.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "3,704 km (2,000 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Williams FJ44-4A"
+      ]
+    ]
+  }
+}

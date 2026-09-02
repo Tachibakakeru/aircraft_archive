@@ -1,0 +1,41 @@
+{
+  "title": "Dassault Falcon 6X",
+  "sub": {
+    "zh": "具有超寬客艙與數位飛控的新世代雙發 Falcon。",
+    "en": "A new-generation twin-engine Falcon with an extra-wide cabin and digital flight controls.",
+    "ja": "超広幅客室とデジタル飛行制御を備える新世代双発Falconです。"
+  },
+  "sources": [
+    "https://www.dassaultfalcon.com/aircraft/falcon-6x/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 16"
+      ],
+      [
+        "首飛年份",
+        "2017"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "25.9 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "10,186 km (5,500 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW812D"
+      ]
+    ]
+  }
+}

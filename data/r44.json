@@ -1,0 +1,41 @@
+{
+  "title": "Robinson R44 Raven II",
+  "sub": {
+    "zh": "四座活塞直升機，廣泛用於私人、訓練與巡查任務。",
+    "en": "A four-seat piston helicopter widely used for private, training, and patrol work.",
+    "ja": "個人、訓練、巡視に広く使われる4座ピストンヘリコプターです。"
+  },
+  "sources": [
+    "https://www.robinsonheli.com/r44-raven-ii"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "4"
+      ],
+      [
+        "首飛年份",
+        "1990"
+      ]
+    ],
+    "尺寸": [
+      [
+        "主旋翼直徑",
+        "10.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "約 563 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming IO-540-AE1A5"
+      ]
+    ]
+  }
+}

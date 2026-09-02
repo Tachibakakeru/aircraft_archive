@@ -1,0 +1,41 @@
+{
+  "title": "Piper M350",
+  "sub": {
+    "zh": "少數仍提供加壓客艙的單發活塞旅行機之一。",
+    "en": "One of the few current single-engine piston touring aircraft with a pressurized cabin.",
+    "ja": "現行機では数少ない加圧客室付き単発ピストン旅行機です。"
+  },
+  "sources": [
+    "https://www.piper.com/model/m350/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "典型載客量",
+        "最多 6"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "13.1 m"
+      ]
+    ],
+    "性能": [
+      [
+        "飛行距離（滿載）",
+        "2,487 km (1,343 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming TIO-540-AE2A"
+      ]
+    ]
+  }
+}
