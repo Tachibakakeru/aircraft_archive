@@ -2,112 +2,569 @@
   "title": "Boeing 727-200",
   "sub": "727-200 — 點選機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "727 機身截面與 707 同寬，波音刻意沿用既有截面降低開發成本，這也讓機場地勤設備、空橋能沿用同一套規格服務兩種機型。",
+      "summary": {
+        "zh": "727-200全長46.69公尺、機身寬3.76公尺，沿用707六人並排截面；後機腹可見內建登機梯，讓飛機在缺乏地勤設備時自主上下客。",
+        "en": "The 727-200 is 46.69 m long and 3.76 m wide, retaining the 707 six-abreast cross-section. An integral aft ventral stair allowed boarding without ground equipment.",
+        "ja": "727-200は全長46.69 m、胴体幅3.76 mで707の横6席断面を継承し、後部腹面の内蔵階段で地上設備なしでも搭乗できました。"
+      },
       "specs": [
-        ["全長", "46.68 m"],
-        ["機身直徑", "3.76 m"],
-        ["結構形式", "半硬殼式鋁合金"],
-        ["典型座位數", "134–189 席"]
+        [
+          "全長",
+          "46.69 m"
+        ],
+        [
+          "機身寬度",
+          "3.76 m"
+        ]
       ],
-      "fact": "727 沿用 707 的機身截面，是波音「衍生設計」策略的早期範例——同一套機身截面後來也影響了 737 的基本尺寸設定。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "照片為改裝貨機，客艙窗已封閉並增設大型貨門；判讀客機門窗時須另查原始配置。",
+        "en": "The photograph shows a converted freighter with blanked passenger windows and a large cargo door; consult original passenger layouts for door and window details.",
+        "ja": "写真は改造貨物機で客室窓が閉鎖され大型貨物扉を追加しています。旅客型の扉・窓は原配置を別途確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "機身寬3.76公尺。",
+          "en": "3.76 m fuselage width.",
+          "ja": "胴体幅3.76 m。"
+        },
+        {
+          "zh": "典型六人並排。",
+          "en": "Typical six-abreast cabin.",
+          "ja": "通常横6席。"
+        },
+        {
+          "zh": "後機腹內建登機梯。",
+          "en": "Integral aft ventral stair.",
+          "ja": "後部腹面内蔵階段。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b727/fuselage.jpg?v=79ff02ae43aa",
+          "caption": {
+            "zh": "Vensecar 727-223 Advanced改裝貨機YV155T；客窗已封閉",
+            "en": "Vensecar converted 727-223 Advanced freighter YV155T; passenger windows blanked",
+            "ja": "Vensecar改造727-223 Advanced貨物機YV155T；客室窓閉鎖"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:DHL_Boeing_727-200(F)_at_Sim%C3%B3n_Bol%C3%ADvar_International_Airport,_Caracas.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "727 服役於類比儀表年代，需 3 名機組員：機長、副機長與飛航工程師，飛航工程師專責監控三具引擎與尾置引擎特有的 S 型進氣道系統。",
+      "summary": {
+        "zh": "727採三人類比座艙，機長與副機長使用操縱盤，飛航工程師在後方系統台管理三具JT8D、燃油、電力、液壓與增壓。",
+        "en": "The 727 has a three-person analog cockpit: captain and first officer use yokes while a flight engineer manages three JT8Ds, fuel, electrical, hydraulic and pressurization systems from the aft panel.",
+        "ja": "727は3名用アナログ操縦席で、機長・副操縦士が操縦輪を使い、後方卓の航空機関士が3基JT8D、燃料、電気、油圧、与圧を管理します。"
+      },
       "specs": [
-        ["機組員", "3 名（含飛航工程師）"],
-        ["儀表", "傳統類比儀表"],
-        ["操縱", "傳統機械／液壓操縱"],
-        ["特殊系統", "中央引擎 S 型進氣道監控"]
+        [
+          "機組員",
+          "3 名（含飛航工程師）"
+        ],
+        [
+          "儀表",
+          "傳統類比儀表"
+        ],
+        [
+          "操縱",
+          "傳統機械／液壓操縱"
+        ],
+        [
+          "特殊系統",
+          "中央引擎 S 型進氣道監控"
+        ]
       ],
-      "fact": "727 是第一款完全針對中小型機場設計的幹線噴射機，配備輔助動力系統與客艙尾梯，讓它能在缺乏空橋與地面電源車的機場獨立運作。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "照片為航空博物館保存座艙，確切次型未確認；適合家族配置參考，不代表每架-200後期改裝。",
+        "en": "The photograph is a preserved aviation-museum cockpit whose exact subtype is unconfirmed; it is a family-layout reference, not the precise later fit of every -200.",
+        "ja": "写真は航空博物館の保存操縦席で正確な型式は未確認です。系列配置の参考で、全-200の後期改修を示しません。"
+      },
+      "bullets": [
+        {
+          "zh": "三名飛航組員。",
+          "en": "Three flightcrew.",
+          "ja": "乗務員3名。"
+        },
+        {
+          "zh": "傳統操縱盤。",
+          "en": "Traditional control yokes.",
+          "ja": "伝統的操縦輪。"
+        },
+        {
+          "zh": "獨立飛航工程師台。",
+          "en": "Dedicated flight-engineer panel.",
+          "ja": "独立航空機関士卓。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b727/cockpit.jpg?v=46175395d93a",
+          "caption": {
+            "zh": "航空博物館保存727座艙；確切次型未確認",
+            "en": "Preserved 727 museum cockpit; exact subtype unconfirmed",
+            "ja": "航空博物館保存727操縦席；正確な型式は未確認"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_727_cockpit_Aviation_museum_(29097199906).jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "727 的機翼配備當年最複雜的高升力系統之一：前緣縫翼加上三段式後緣富勒襟翼，讓這款後掠翼機型也能在較短跑道起降。",
+      "summary": {
+        "zh": "727-200低置主翼翼展32.92公尺，具前緣克魯格襟翼／縫翼與三縫後緣襟翼等複雜高升力裝置，可在較短跑道運作。",
+        "en": "The 727-200 low wing spans 32.92 m and uses leading-edge Krueger flaps/slats plus triple-slotted trailing-edge flaps, enabling operation from comparatively short runways.",
+        "ja": "727-200低翼は翼幅32.92 mで、前縁Krueger flap／slatと三重隙間後縁flapなど複雑な高揚力装置を備え、比較的短い滑走路で運用できます。"
+      },
       "specs": [
-        ["翼展", "32.92 m"],
-        ["翼面積", "157.9 m²"],
-        ["後掠角", "32°"],
-        ["高升力裝置", "前緣縫翼＋三段式富勒襟翼"]
+        [
+          "翼展",
+          "32.92 m"
+        ],
+        [
+          "高升力裝置",
+          "前緣裝置＋三縫襟翼"
+        ]
       ],
-      "fact": "727 的高升力機翼系統複雜度在當年數一數二，讓它能用短跑道起降，也因此獲得航空公司青睞用於缺乏長跑道的中小型機場航線。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "照片是起落架與襟翼放下的進場構型，不能當乾淨巡航翼型；可用來辨識展開後的前後緣裝置。",
+        "en": "The photograph shows approach configuration with gear and flaps down, not the clean cruise wing; it is useful for recognizing deployed leading- and trailing-edge devices.",
+        "ja": "写真は脚・flap展開の進入構成で巡航時のclean wingではなく、展開した前後縁装置の識別に適します。"
+      },
+      "bullets": [
+        {
+          "zh": "翼展32.92公尺。",
+          "en": "32.92 m span.",
+          "ja": "翼幅32.92 m。"
+        },
+        {
+          "zh": "前緣克魯格襟翼／縫翼。",
+          "en": "Leading-edge Krueger flaps/slats.",
+          "ja": "前縁Krueger flap／slat。"
+        },
+        {
+          "zh": "三縫後緣襟翼。",
+          "en": "Triple-slotted trailing flaps.",
+          "ja": "三重隙間後縁flap。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b727/wing.jpg?v=b2363596516c",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "TURBOFAN ENGINE",
-      "summary": "727 採三發尾置配置，兩具吊掛於機身兩側，第三具嵌入垂尾根部並以 S 型管道將進氣導向機身中軸線上的引擎，是這個機型最鮮明的識別特徵。",
+      "summary": {
+        "zh": "727以三具Pratt & Whitney JT8D低旁通比渦輪扇為標誌：兩具在後機身兩側，中央引擎透過垂尾根部進氣口與S形管道供氣。",
+        "en": "The 727 is marked by three Pratt & Whitney JT8D low-bypass turbofans: two on the aft fuselage sides and a center engine fed through a fin-root intake and S-duct.",
+        "ja": "727はPratt & Whitney JT8D低バイパスターボファン3基が特徴で、2基は後部胴体側面、中央機は垂尾根部吸気口とS字ダクトから給気されます。"
+      },
       "specs": [
-        ["型號", "Pratt & Whitney JT8D"],
-        ["型式", "低旁通比渦輪扇"],
-        ["配置", "機身兩側 2 具＋垂尾根部 1 具（S 型進氣道）"],
-        ["單具推力", "約 62–71 kN"]
+        [
+          "型號",
+          "JT8D ×3"
+        ],
+        [
+          "中央引擎進氣",
+          "S 型管道"
+        ]
       ],
-      "fact": "中央引擎的 S 型進氣道要把氣流從垂尾前緣導彎近 90 度才能送進引擎核心，這種彎管設計會犧牲一些進氣效率，卻讓三發配置得以緊湊安裝在機尾。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "近照機裝有Stage Three消音套件，尾噴管外形不同於原始JT8D短艙；辨識三發布局可用，但不能當原廠噴口標準。",
+        "en": "The photographed aircraft carries Stage Three hush kits, so its exhaust profile differs from the original JT8D installation; use it for the three-engine arrangement, not as a factory nozzle standard.",
+        "ja": "写真機はStage Three消音キット装備で排気形状が原型JT8Dと異なります。3発配置の参考にはなりますが原厂噴口標準ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "三具JT8D。",
+          "en": "Three JT8Ds.",
+          "ja": "JT8D 3基。"
+        },
+        {
+          "zh": "兩側短艙加中央S管。",
+          "en": "Two side nacelles plus center S-duct.",
+          "ja": "側面2基と中央S字ダクト。"
+        },
+        {
+          "zh": "照片有消音套件。",
+          "en": "Photo shows hush kits.",
+          "ja": "写真は消音キット装備。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b727/engine.jpg?v=579cd3e1a39b",
+          "caption": {
+            "zh": "727後機身JT8D短艙與Stage Three消音套件；非原廠噴口外形",
+            "en": "727 aft JT8D nacelles with Stage Three hush kits; not the original nozzle profile",
+            "ja": "727後部JT8DナセルとStage Three消音キット；原型噴口形状ではありません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B727_(4764445359).jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼除了提供方向穩定性，內部還兼作中央引擎的 S 型進氣風道，前緣開口直通引擎，結構設計必須同時滿足氣動與進氣雙重需求。",
+      "summary": {
+        "zh": "高大的後掠垂尾承載T型水平尾翼，根部前緣同時形成中央引擎進氣口；方向舵位於後緣。",
+        "en": "The tall swept fin supports the T-tail while its leading-edge root forms the center-engine intake; the rudder occupies the trailing edge.",
+        "ja": "高い後退垂尾がT尾水平安定板を支え、前縁根部は中央エンジン吸気口を形成し、後縁に方向舵があります。"
+      },
       "specs": [
-        ["操縱面", "方向舵"],
-        ["結構", "鋁合金，內含 S 型進氣風道"],
-        ["功能", "偏航穩定＋中央引擎進氣"],
-        ["機高", "10.4 m"]
+        [
+          "構型",
+          "T 型尾翼"
+        ],
+        [
+          "根部",
+          "中央引擎進氣口"
+        ]
       ],
-      "fact": "727 與同時代的 DC-10、L-1011 都不約而同採用垂尾兼進氣風道的設計，是三發機型解決「引擎往哪裝」問題的共同答案。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "近照包含DHL塗裝與消音套件；塗色不是結構邊界，辨識應看T尾、進氣口與方向舵鉸鏈。",
+        "en": "The close-up includes DHL paint and hush kits; color is not a structural boundary, so use the T-tail, intake and rudder hinge for identification.",
+        "ja": "近接写真にはDHL塗装と消音キットがあり、色は構造境界ではありません。T尾、吸気口、方向舵ヒンジを確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "承載T型尾翼。",
+          "en": "Supports the T-tail.",
+          "ja": "T尾翼を支持。"
+        },
+        {
+          "zh": "根部中央引擎進氣口。",
+          "en": "Center-engine intake at the root.",
+          "ja": "根部に中央エンジン吸気口。"
+        },
+        {
+          "zh": "高大後掠垂尾。",
+          "en": "Tall swept fin.",
+          "ja": "高い後退垂尾。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b727/vstab.jpg?v=df49009e4dc9",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B727_(4764445359).jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼安裝位置較高、接近垂尾頂端，讓其遠離機身與引擎尾流干擾，配備升降舵與配平調整片。",
+      "summary": {
+        "zh": "水平安定面安裝在垂尾頂端，形成真正的T型尾翼；兩側升降舵控制俯仰，使尾翼遠離主翼大部分低速尾流。",
+        "en": "The horizontal stabilizer mounts at the top of the fin to form a true T-tail; elevators control pitch and keep the surface away from much of the wing's low-speed wake.",
+        "ja": "水平安定板は垂尾頂部に付き真のT尾を形成し、左右昇降舵がピッチを制御して主翼低速後流の多くから離れます。"
+      },
       "specs": [
-        ["操縱面", "升降舵＋配平調整片"],
-        ["構型", "高置尾翼（近似 T 尾）"],
-        ["尾翼翼展", "約 12.9 m"],
-        ["材料", "鋁合金"]
+        [
+          "位置",
+          "垂尾頂端"
+        ],
+        [
+          "操縱面",
+          "升降舵"
+        ]
       ],
-      "fact": "高置水平尾翼讓 727 的尾翼組看起來與純正 T 尾機型相似，但實際安裝位置略低於垂尾頂端，是介於傳統低置尾翼與 T 尾之間的折衷設計。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "T尾並非所有迎角都不受主翼流場影響；高迎角仍須考慮深失速風險，不能把高置位置等同完全無干擾。",
+        "en": "A T-tail is not free of wing-flow effects at every angle of attack; deep-stall risk remains at high angle of attack, so high mounting does not mean zero interference.",
+        "ja": "T尾も全迎角で主翼流れの影響がないわけではなく、高迎角ではdeep stall riskがあるため、高位置を完全無干渉と解釈できません。"
+      },
+      "bullets": [
+        {
+          "zh": "垂尾頂端安裝。",
+          "en": "Mounted atop the fin.",
+          "ja": "垂尾頂部に装備。"
+        },
+        {
+          "zh": "真正T型尾翼。",
+          "en": "True T-tail.",
+          "ja": "真のT尾翼。"
+        },
+        {
+          "zh": "後緣升降舵。",
+          "en": "Trailing-edge elevators.",
+          "ja": "後縁昇降舵。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b727/hstab.jpg?v=2584c411a8e1",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:B727_(4764445359).jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "727 採前三點式起落架，主起落架收於機翼與機身連接處的整流罩內，搭配當年先進的多盤式煞車系統因應短跑道起降需求。",
+      "summary": {
+        "zh": "727採前三點式六輪起落架：鼻腳雙輪，左右主腳各雙輪；主腳收入翼根附近整流區。",
+        "en": "The 727 uses six-wheel tricycle gear: twin nose wheels and twin wheels on each main leg, with the mains retracting near the wing root fairing.",
+        "ja": "727は前脚2輪、左右主脚各2輪の計6輪前三点式で、主脚は翼根付近の整流部へ格納されます。"
+      },
       "specs": [
-        ["配置", "前三點式"],
-        ["主起落架", "2 具 × 2 輪"],
-        ["收納位置", "翼身連接整流罩"],
-        ["煞車", "多盤式"]
+        [
+          "配置",
+          "前三點式"
+        ],
+        [
+          "總輪數",
+          "6 輪"
+        ]
       ],
-      "fact": "727 的起落架與高升力機翼設計搭配，讓它締造了當年幹線噴射機少見的短場起降能力，甚至能在部分僅 1,500 公尺左右的跑道運作。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "進場照片可見展開的鼻腳與主腳，但遠側輪組會重疊；總輪數應依支柱配置確認。",
+        "en": "The approach photograph shows deployed nose and main gear, but far-side wheel pairs overlap; confirm the total from the gear-leg arrangement.",
+        "ja": "進入写真では展開前脚・主脚が見えますが遠側輪組が重なるため、総輪数は脚配置で確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "鼻腳雙輪。",
+          "en": "Twin nose wheels.",
+          "ja": "前脚2輪。"
+        },
+        {
+          "zh": "每側主腳雙輪。",
+          "en": "Twin wheels per main leg.",
+          "ja": "主脚片側2輪。"
+        },
+        {
+          "zh": "全機共六輪。",
+          "en": "Six wheels total.",
+          "ja": "全機計6輪。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b727/gear.jpg?v=c1b042d5064d",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "Boeing 727-200以三具機尾引擎、T型尾翼、低置後掠翼與加長窄體機身為主要輪廓，專為中短程與當時設備較少的機場設計。",
+        "en": "The Boeing 727-200 is defined by three tail-mounted engines, a T-tail, low swept wing and stretched narrowbody fuselage, designed for short- to medium-haul service from less-equipped airports.",
+        "ja": "Boeing 727-200は尾部3発、T尾翼、低位置後退翼、延長ナローボディが特徴で、設備の少ない空港からの中短距離運航向けに設計されました。"
+      },
+      "fact": {
+        "zh": "照片為USA Jet 727-223 Advanced貨機；它適合辨識-200外形，但貨門、封窗與後期改裝不代表原始客機。",
+        "en": "The photograph shows a USA Jet 727-223 Advanced freighter. It identifies the -200 outline, but cargo doors, blanked windows and later modifications do not represent an original passenger aircraft.",
+        "ja": "写真はUSA Jet 727-223 Advanced貨物機で-200外形の参考ですが、貨物扉、閉鎖窓、後年改修は原型旅客機を示しません。"
+      },
+      "bullets": [
+        {
+          "zh": "機尾三具引擎。",
+          "en": "Three tail-mounted engines.",
+          "ja": "尾部3発。"
+        },
+        {
+          "zh": "T型尾翼。",
+          "en": "T-tail.",
+          "ja": "T尾翼。"
+        },
+        {
+          "zh": "加長窄體機身。",
+          "en": "Stretched narrowbody fuselage.",
+          "ja": "延長ナローボディ。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b727/overview.jpg?v=a506ffeacb79",
+          "caption": {
+            "zh": "USA Jet 727-223 Advanced貨機N727US進場",
+            "en": "USA Jet 727-223 Advanced freighter N727US on approach",
+            "ja": "USA Jet 727-223 Advanced貨物機N727US進入"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "727沿用早期波音多片稜角風擋語彙，中央窗寬、外側窗後折並帶眉窗；短而圓的機鼻與707／737 Classic相近。",
+        "en": "The 727 uses early Boeing angular multi-pane glazing with broad center panes, aft-canted outer panes and eyebrow windows; its short rounded nose resembles the 707 and 737 Classic.",
+        "ja": "727は幅広い中央窓、後方へ折れる外側窓、眉窓を持つ初期Boeingの多面風防で、短い丸形機首は707や737 Classicに似ます。"
+      },
+      "fact": {
+        "zh": "照片為進場中的727-223 Advanced前斜角，不是正投影；先看固定窗框，不要受反光、雨刷與透視變形影響。",
+        "en": "The photograph is a front-oblique view of an approaching 727-223 Advanced, not an orthographic view; follow fixed frames rather than reflections, wipers or perspective distortion.",
+        "ja": "写真は進入中727-223 Advancedの斜め前方で正投影ではありません。反射、ワイパー、遠近変形でなく固定窓枠を見ます。"
+      },
+      "bullets": [
+        {
+          "zh": "多片稜角風擋。",
+          "en": "Angular multi-pane glazing.",
+          "ja": "角張った多面風防。"
+        },
+        {
+          "zh": "上方眉窗。",
+          "en": "Upper eyebrow windows.",
+          "ja": "上部眉窓。"
+        },
+        {
+          "zh": "短圓機鼻。",
+          "en": "Short rounded nose.",
+          "ja": "短い丸形機首。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b727/window-front.jpg?v=dbe60ddbae12",
+          "caption": {
+            "zh": "727-223 Advanced N727US前斜角窗型（非正投影）",
+            "en": "727-223 Advanced N727US front-quarter glazing (not orthographic)",
+            "ja": "727-223 Advanced N727US斜め前方窓（正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg"
+        },
+        {
+          "src": "assets/reference/b727/window-side.jpg?v=8f20e713b6b6",
+          "caption": {
+            "zh": "727-223 Advanced N727US側窗（進場實照裁切）",
+            "en": "727-223 Advanced N727US side glazing (approach-photo crop)",
+            "ja": "727-223 Advanced N727US側窓（進入写真切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "727外翼以普通後掠翼尖收束，沒有現代直立翼尖小翼；低速能力主要來自複雜高升力裝置而非翼尖改裝。",
+        "en": "The 727 outer wing ends in a conventional swept tip without a modern upright winglet; its low-speed capability comes chiefly from complex high-lift devices rather than tip modifications.",
+        "ja": "727外翼は通常の後退翼端で終わり現代的直立ウイングレットはなく、低速性能は主に複雑な高揚力装置によります。"
+      },
+      "fact": {
+        "zh": "進場照片中的外翼受透視與襟翼放下影響；沿前緣追到最外端，勿把水平尾翼當翼尖。",
+        "en": "Perspective and deployed flaps affect the approach photograph; trace the leading edge to the tip and do not confuse the T-tail with the wingtip.",
+        "ja": "進入写真は遠近とフラップ展開の影響があるため、前縁を外端まで追い、T尾を翼端と混同しません。"
+      },
+      "bullets": [
+        {
+          "zh": "無直立翼尖小翼。",
+          "en": "No upright winglet.",
+          "ja": "直立ウイングレットなし。"
+        },
+        {
+          "zh": "普通後掠收尖。",
+          "en": "Conventional swept tip.",
+          "ja": "通常の後退翼端。"
+        },
+        {
+          "zh": "翼端航行燈。",
+          "en": "Tip navigation light.",
+          "ja": "翼端航法灯。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [
+        [
+          "構型",
+          "普通收尖，無翼尖小翼"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b727/wingtip.jpg?v=ae794cc41167",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg"
+        }
+      ]
     }
   },
   "specifications": {

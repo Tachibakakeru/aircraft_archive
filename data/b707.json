@@ -2,112 +2,569 @@
   "title": "Boeing 707-320",
   "sub": "707-320 — 點選機體部位查看解說",
   "partOrder": [
-    "fuselage",
+    "overview",
     "cockpit",
-    "wing",
+    "windshield",
+    "fuselage",
     "engine",
+    "wingtip",
+    "wing",
     "vstab",
     "hstab",
     "gear"
   ],
   "parts": {
     "fuselage": {
-      "name": "機身",
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
       "en": "FUSELAGE",
-      "summary": "707 的機身截面直徑 3.76 公尺，是波音依 KC-135 加油機衍生、再放寬的窄體鋁合金半硬殼結構，這個截面尺寸日後成為 727／737／757 家族沿用數十年的基準。",
+      "summary": {
+        "zh": "707-320全長46.61公尺、機身寬3.76公尺，典型六人並排；橢圓舷窗、分離式客艙門與細長尾錐延續到後來的727與737。",
+        "en": "The 707-320 is 46.61 m long and 3.76 m wide with typical six-abreast seating. Oval windows, separate passenger doors and a slim tailcone influenced the later 727 and 737.",
+        "ja": "707-320は全長46.61 m、胴体幅3.76 mで通常横6席です。楕円窓、独立客室扉、細い尾錐は後の727・737へ影響しました。"
+      },
       "specs": [
-        ["全長", "46.61 m"],
-        ["機身直徑", "3.76 m"],
-        ["結構形式", "半硬殼式鋁合金"],
-        ["典型座位數", "141–189 席"]
+        [
+          "全長",
+          "46.61 m"
+        ],
+        [
+          "機身寬度",
+          "3.76 m"
+        ]
       ],
-      "fact": "707 的機身截面直接沿用給後繼的 727、737，甚至現代 737 MAX 座艙的「窄」，根源都能追溯到 1950 年代這具機身的原始放樣。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "照片是707-387B；窗數、艙門與貨門會依次型及營運者改裝不同，辨識要結合機身長度與翼／引擎配置。",
+        "en": "The photograph is a 707-387B; window, passenger-door and cargo-door arrangements vary by subtype and operator modification, so combine them with fuselage length, wing and engine layout.",
+        "ja": "写真は707-387Bで、窓、客室扉、貨物扉は型式・運航者改修で異なるため、胴体長、翼、エンジン配置も併用します。"
+      },
+      "bullets": [
+        {
+          "zh": "機身寬3.76公尺。",
+          "en": "3.76 m fuselage width.",
+          "ja": "胴体幅3.76 m。"
+        },
+        {
+          "zh": "典型六人並排。",
+          "en": "Typical six-abreast cabin.",
+          "ja": "通常横6席。"
+        },
+        {
+          "zh": "橢圓舷窗列。",
+          "en": "Row of oval windows.",
+          "ja": "楕円客室窓列。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b707/fuselage.jpg?v=2a5f6f5cefd7",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg"
+        }
+      ]
     },
     "cockpit": {
-      "name": "駕駛艙",
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
       "en": "COCKPIT",
-      "summary": "707 服役於類比儀表年代，需要 3 名機組員：機長、副機長與專責監控引擎、油量與系統的飛航工程師，直到後期玻璃座艙機種才把這個職位裁撤。",
+      "summary": {
+        "zh": "707採三人類比座艙：機長與副機長使用操縱盤，飛航工程師在後方側台監控四具引擎、燃油、電力與增壓系統。",
+        "en": "The 707 uses a three-person analog flight deck: captain and first officer use control yokes while a flight engineer monitors four engines, fuel, electrical and pressurization systems from the aft side console.",
+        "ja": "707は3名用アナログ操縦席で、機長・副操縦士が操縦輪を使い、後方側面卓の航空機関士が4発、燃料、電気、与圧を監視します。"
+      },
       "specs": [
-        ["機組員", "3 名（含飛航工程師）"],
-        ["儀表", "傳統類比儀表"],
-        ["操縱", "傳統機械／液壓操縱桿"],
-        ["導航", "慣性導航系統（後期型）"]
+        [
+          "機組員",
+          "3 名（含飛航工程師）"
+        ],
+        [
+          "儀表",
+          "傳統類比儀表"
+        ],
+        [
+          "操縱",
+          "傳統機械／液壓操縱桿"
+        ],
+        [
+          "導航",
+          "慣性導航系統（後期型）"
+        ]
       ],
-      "fact": "飛航工程師這個職位曾是長程航班的第三雙眼睛，隨著電腦監控系統成熟，1980 年代後的新機型幾乎全數裁撤，707 見證了這個職業的黃金時代。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "照片是保存的707-436 G-APFJ座艙，僅作707家族配置參考，不代表每架-320的儀表與後期改裝。",
+        "en": "The photograph is the preserved 707-436 G-APFJ cockpit, a family-layout reference rather than an exact instrument fit for every -320 or later modification.",
+        "ja": "写真は保存707-436 G-APFJの操縦席で、707系列配置の参考に限り、全-320や後年改修の正確な計器構成ではありません。"
+      },
+      "bullets": [
+        {
+          "zh": "三名飛航組員。",
+          "en": "Three flightcrew.",
+          "ja": "乗務員3名。"
+        },
+        {
+          "zh": "傳統操縱盤。",
+          "en": "Traditional control yokes.",
+          "ja": "伝統的操縦輪。"
+        },
+        {
+          "zh": "獨立飛航工程師台。",
+          "en": "Dedicated flight-engineer station.",
+          "ja": "独立航空機関士席。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b707/cockpit.jpg?v=8a12b5019e4e",
+          "caption": {
+            "zh": "保存707-436 G-APFJ座艙；家族參考，非-320機籍",
+            "en": "Preserved 707-436 G-APFJ cockpit; family reference, not a -320 airframe",
+            "ja": "保存707-436 G-APFJ操縦席；系列参考、-320実機ではありません"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Museum_of_Flight_Boeing_707_cockpit.jpg"
+        }
+      ]
     },
     "wing": {
-      "name": "主翼",
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
       "en": "WING",
-      "summary": "35 度後掠角的主翼是707能以噴射速度巡航的關鍵，設計參考了 B-47／B-52 轟炸機的後掠翼研究成果，將軍用氣動技術首次大規模帶入民航客機。",
+      "summary": {
+        "zh": "707-320低置主翼翼展44.42公尺、後掠約35度，四具引擎由翼下吊架承載，前後緣高升力裝置支援起降。",
+        "en": "The 707-320 low wing spans 44.42 m and sweeps about 35 degrees, carrying four engines on underwing pylons and high-lift devices along its leading and trailing edges.",
+        "ja": "707-320低翼は翼幅44.42 m、後退約35度で、翼下パイロンに4発を搭載し、前後縁高揚力装置が離着陸を支えます。"
+      },
       "specs": [
-        ["翼展", "44.42 m"],
-        ["後掠角", "35°"],
-        ["翼面積", "283.4 m²"],
-        ["翼型來源", "衍生自 B-47/B-52 後掠翼研究"]
+        [
+          "翼展",
+          "44.42 m"
+        ],
+        [
+          "後掠角",
+          "約 35°"
+        ]
       ],
-      "fact": "707 的後掠翼加上吊掛式引擎的佈局，成為此後幾乎所有噴射幹線客機沿用至今的標準構型範本。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "照片從後上方斜視，不能直接以像素量測後掠角；辨識重點是四吊架、細長後掠外翼與無翼尖小翼。",
+        "en": "The rear-oblique photograph cannot be used to measure sweep from pixels; identify the four pylons, slender swept outer wing and absence of winglets.",
+        "ja": "写真は後上方斜視で画素から後退角を測れません。4本パイロン、細長い後退外翼、ウイングレットなしを確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "翼展44.42公尺。",
+          "en": "44.42 m span.",
+          "ja": "翼幅44.42 m。"
+        },
+        {
+          "zh": "約35度後掠。",
+          "en": "About 35° sweep.",
+          "ja": "後退約35度。"
+        },
+        {
+          "zh": "四具翼下吊架。",
+          "en": "Four underwing pylons.",
+          "ja": "翼下パイロン4本。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b707/wing.jpg?v=7bc22b10fe78",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:TWA_Starstream_Boeing_707-331_wing_over_the_Bay_of_Bengal,_Summer_1969_(1).jpg"
+        }
+      ]
     },
     "engine": {
-      "name": "引擎",
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
       "en": "TURBOFAN ENGINE",
-      "summary": "早期 707 使用純渦輪噴射引擎，後期型號換裝 Pratt & Whitney JT3D 渦輪扇引擎，旁通比雖僅約 1.4:1（遠低於現代引擎），但已比純噴射省油、降噪不少。",
+      "summary": {
+        "zh": "707-320B／C以四具Pratt & Whitney JT3D低旁通比渦輪扇為典型配置，短艙透過吊架懸掛翼下；部分早期707則用JT4A渦噴或Conway。",
+        "en": "The 707-320B/C typically uses four Pratt & Whitney JT3D low-bypass turbofans suspended beneath the wing; some earlier 707s used JT4A turbojets or Conway engines.",
+        "ja": "707-320B／Cは通常Pratt & Whitney JT3D低バイパスターボファン4基を翼下パイロンに装備し、初期707にはJT4AターボジェットやConway搭載型もあります。"
+      },
       "specs": [
-        ["型號", "Pratt & Whitney JT3D-3 ×4"],
-        ["型式", "低旁通比渦輪扇"],
-        ["單具推力", "80 kN"],
-        ["旁通比", "約 1.4 : 1"]
+        [
+          "典型型號",
+          "JT3D ×4"
+        ],
+        [
+          "型式",
+          "低旁通比渦輪扇"
+        ]
       ],
-      "fact": "四具引擎吊掛在機翼下方的佈局在當年是一場賭注——707 之前的噴射客機（如彗星型）多把引擎埋入翼根，707 證明外掛引擎維修更容易、也更安全。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "照片為RAAF 707-338C的JT3D-3B短艙；它是-300家族細節參考，不能用來證明所有707使用同一型引擎。",
+        "en": "The photograph shows JT3D-3B nacelles on an RAAF 707-338C; it is a -300-family detail reference and does not prove every 707 used the same engine.",
+        "ja": "写真はRAAF 707-338CのJT3D-3Bナセルで、-300系列細部参考であり、全707が同一エンジンとは限りません。"
+      },
+      "bullets": [
+        {
+          "zh": "四具翼下短艙。",
+          "en": "Four underwing nacelles.",
+          "ja": "翼下ナセル4基。"
+        },
+        {
+          "zh": "典型JT3D低旁通比。",
+          "en": "Typical low-bypass JT3D.",
+          "ja": "代表的な低バイパスJT3D。"
+        },
+        {
+          "zh": "早期型動力不同。",
+          "en": "Earlier variants differ.",
+          "ja": "初期型は動力が異なる。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b707/engine.jpg?v=810f7ccaeebe",
+          "caption": {
+            "zh": "RAAF 707-338C翼下JT3D-3B短艙",
+            "en": "Underwing JT3D-3B nacelles on RAAF 707-338C",
+            "ja": "RAAF 707-338C翼下JT3D-3Bナセル"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:P%26W_JT3D-3B_engines_on_a_RAAF_Boeing_707.jpg"
+        }
+      ]
     },
     "vstab": {
-      "name": "垂直尾翼",
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
       "en": "VERTICAL STABILIZER",
-      "summary": "垂直尾翼提供方向穩定性與偏航操縱，707 的尾翼根部與機身背脊以長條背鰭（dorsal fin）平順融合，是這個年代噴射客機常見的氣動修形手法。",
+      "summary": {
+        "zh": "707採單片後掠垂直尾翼與方向舵，根部背鰭平順銜接機身，尾翼上方沒有水平安定面。",
+        "en": "The 707 has a single swept fin and rudder with a dorsal fillet blending into the fuselage; no horizontal stabilizer is mounted at the fin tip.",
+        "ja": "707は単一後退垂尾と方向舵を持ち、根部背びれが胴体へ滑らかにつながり、垂尾頂部に水平安定板はありません。"
+      },
       "specs": [
-        ["操縱面", "方向舵"],
-        ["結構", "鋁合金雙梁"],
-        ["功能", "偏航穩定與操縱"],
-        ["機高", "12.65 m"]
+        [
+          "構型",
+          "單片後掠垂尾"
+        ],
+        [
+          "操縱面",
+          "方向舵"
+        ]
       ],
-      "fact": "707 原型機曾在試飛展示中做出橫滾特技（Tex Johnston 的著名「707 橫滾」），震驚全場之餘也證明了這具尾翼與機身結構的堅固程度。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "航空公司塗裝會掩蓋結構分界；沿方向舵鉸鏈與背鰭輪廓辨識，不用色塊判斷尾翼尺寸。",
+        "en": "Airline paint can hide structural boundaries; use the rudder hinge and dorsal-fin outline rather than color blocks to judge the tail.",
+        "ja": "航空会社塗装は構造境界を隠すため、色面ではなく方向舵ヒンジと背びれ輪郭で判断します。"
+      },
+      "bullets": [
+        {
+          "zh": "單片後掠垂尾。",
+          "en": "Single swept fin.",
+          "ja": "単一後退垂尾。"
+        },
+        {
+          "zh": "根部背鰭。",
+          "en": "Dorsal root fillet.",
+          "ja": "根部背びれ。"
+        },
+        {
+          "zh": "普通尾翼配置。",
+          "en": "Conventional tail arrangement.",
+          "ja": "通常尾翼配置。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b707/vstab.jpg?v=ba23e9eb8ed1",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg"
+        }
+      ]
     },
     "hstab": {
-      "name": "水平尾翼",
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
       "en": "HORIZONTAL STABILIZER",
-      "summary": "水平尾翼提供俯仰穩定性，707 採傳統低置構型（非 T 尾），安定面固定角度配平主要靠機械式配平系統調整，操作邏輯比後繼機種更「原始」但也更直接可靠。",
+      "summary": {
+        "zh": "水平安定面裝在後機身低位、低於垂尾頂端，形成普通尾翼；後緣升降舵負責俯仰控制。",
+        "en": "The horizontal stabilizer mounts low on the aft fuselage below the fin tip, forming a conventional tail; trailing-edge elevators control pitch.",
+        "ja": "水平安定板は垂尾頂端より低い後部胴体に付き通常尾翼を形成し、後縁昇降舵がピッチを制御します。"
+      },
       "specs": [
-        ["操縱面", "升降舵"],
-        ["構型", "低置傳統尾翼（非 T 尾）"],
-        ["配平", "機械式安定面配平"],
-        ["材料", "鋁合金"]
+        [
+          "位置",
+          "後機身低位"
+        ],
+        [
+          "構型",
+          "普通尾翼"
+        ]
       ],
-      "fact": "低置尾翼讓 707 的尾翼不易受主翼失速尾流遮蔽（深失速風險低於 T 尾機型），是當年相對保守但可靠的工程選擇。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "斜側照片中尾翼可能與遠側主翼重疊；先確認位於引擎後方、機尾兩側的較小翼面。",
+        "en": "In oblique photographs the tailplane may overlap the far wing; identify the smaller surface behind the engines on either side of the tail.",
+        "ja": "斜側写真では遠側主翼と重なるため、エンジン後方の尾部左右にある小さい翼面を確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "後機身低位安裝。",
+          "en": "Low aft-fuselage mounting.",
+          "ja": "後部胴体低位置。"
+        },
+        {
+          "zh": "不是T型尾翼。",
+          "en": "Not a T-tail.",
+          "ja": "T尾翼ではない。"
+        },
+        {
+          "zh": "後緣升降舵。",
+          "en": "Trailing-edge elevators.",
+          "ja": "後縁昇降舵。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b707/hstab.jpg?v=d3bd553380df",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg"
+        }
+      ]
     },
     "gear": {
-      "name": "起落架",
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
       "en": "LANDING GEAR",
-      "summary": "707 採前三點式起落架：雙輪鼻輪負責地面轉向，兩具主起落架各為四輪轉向架，以應付這款當年最重的民航客機在跑道上的荷重分布。",
+      "summary": {
+        "zh": "707採前三點式十輪起落架：鼻腳雙輪，左右主腳各為四輪轉向架，以分散151噸級最大起飛重量。",
+        "en": "The 707 uses ten-wheel tricycle gear: twin nose wheels and a four-wheel bogie on each main leg, distributing a maximum takeoff mass around 151 tonnes.",
+        "ja": "707は前脚2輪、左右主脚各4輪ボギーの計10輪前三点式で、約151トン級最大離陸重量を分散します。"
+      },
       "specs": [
-        ["配置", "前三點式"],
-        ["鼻起落架", "雙輪"],
-        ["主起落架", "2 具 × 4 輪轉向架"],
-        ["最大起飛重量", "151,315 kg"]
+        [
+          "配置",
+          "前三點式"
+        ],
+        [
+          "總輪數",
+          "10 輪"
+        ]
       ],
-      "fact": "707 的主起落架四輪轉向架設計後來也用在 747 上放大延伸——747 每具主腳再加一組轉向架，成為業界熟知的「十八輪」起落架。",
-      "bullets": [],
-      "images": []
+      "fact": {
+        "zh": "近照只呈現局部主腳；總輪數應依型式資料與兩側對稱配置確認，不以單張照片可見輪胎數推斷。",
+        "en": "The close-up shows only part of a main unit; confirm total wheel count from type data and symmetric gear layout rather than visible tires in one photograph.",
+        "ja": "近接写真は主脚の一部だけなので、総輪数は一枚の可視タイヤ数ではなく型式資料と左右対称配置で確認します。"
+      },
+      "bullets": [
+        {
+          "zh": "鼻腳雙輪。",
+          "en": "Twin nose wheels.",
+          "ja": "前脚2輪。"
+        },
+        {
+          "zh": "每側主腳四輪。",
+          "en": "Four wheels per main bogie.",
+          "ja": "主脚片側4輪。"
+        },
+        {
+          "zh": "全機共十輪。",
+          "en": "Ten wheels total.",
+          "ja": "全機計10輪。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b707/gear.jpg?v=839b9c221a61",
+          "caption": {
+            "zh": "707主起落架近照；畫面僅呈現局部輪組",
+            "en": "707 main-gear close-up; only part of the wheel group is visible",
+            "ja": "707主脚近接写真；輪組の一部のみ表示"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Boeing_707_landing_gear.JPG"
+        }
+      ]
+    },
+    "overview": {
+      "summary": {
+        "zh": "本頁以Boeing 707-320為代表：四具翼下引擎、35度後掠低翼、修長窄體機身與普通尾翼，奠定早期長程噴射客機的典型輪廓。",
+        "en": "This page uses the Boeing 707-320 as its reference: four underwing engines, a 35-degree swept low wing, a slim narrowbody fuselage and conventional tail define the early long-range jetliner silhouette.",
+        "ja": "本ページはBoeing 707-320を基準とし、翼下4発、35度後退低翼、細長いナローボディ、通常尾翼が初期長距離ジェット旅客機の典型を作ります。"
+      },
+      "fact": {
+        "zh": "整體照片為707-387B，適合辨識707-300家族比例；不同客戶尾碼、貨客型與早期渦噴型不能只靠塗裝判斷。",
+        "en": "The overall photograph shows a 707-387B and is suitable for 707-300-family proportions; customer suffixes, passenger/freighter fits and early turbojet variants require more than livery for identification.",
+        "ja": "全体写真は707-387Bで707-300系列の比率確認に適しますが、顧客サフィックス、貨客型、初期ターボジェット型は塗装だけで判別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "四具翼下引擎。",
+          "en": "Four underwing engines.",
+          "ja": "翼下4発。"
+        },
+        {
+          "zh": "修長窄體機身。",
+          "en": "Long narrowbody fuselage.",
+          "ja": "細長いナローボディ。"
+        },
+        {
+          "zh": "普通低置尾翼。",
+          "en": "Conventional low tailplane.",
+          "ja": "通常の低位置尾翼。"
+        }
+      ],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b707/overview.jpg?v=9da574209cfb",
+          "caption": {
+            "zh": "Aerolíneas Argentinas 707-387B LV-ISA；707-300家族外形參考",
+            "en": "Aerolíneas Argentinas 707-387B LV-ISA; 707-300-family profile reference",
+            "ja": "Aerolíneas Argentinas 707-387B LV-ISA；707-300系列外形参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg"
+        }
+      ]
+    },
+    "windshield": {
+      "summary": {
+        "zh": "707機首具有多片稜角分明的風擋，中央窗較寬、外側窗向後收折，頂部另保留眉窗，形成早期波音噴射機家族特徵。",
+        "en": "The 707 nose has angular multi-pane glazing with broad center panes, aft-canted outer panes and eyebrow windows above, a hallmark of early Boeing jets.",
+        "ja": "707機首は幅広い中央窓、後方へ折れる外側窓、上部眉窓からなる角張った多面風防で、初期Boeingジェットの特徴です。"
+      },
+      "fact": {
+        "zh": "照片是保存的707-329A OO-SJA機鼻，非運航中的-320正投影；比較窗框角度時應避開透視與反光。",
+        "en": "The photograph shows the preserved nose of 707-329A OO-SJA, not an orthographic view of an operating -320; allow for perspective and reflections when comparing frame angles.",
+        "ja": "写真は保存707-329A OO-SJA機首で、運航中-320の正投影ではありません。窓枠角度は遠近と反射を考慮します。"
+      },
+      "bullets": [
+        {
+          "zh": "多片稜角風擋。",
+          "en": "Angular multi-pane glazing.",
+          "ja": "角張った多面風防。"
+        },
+        {
+          "zh": "上方眉窗。",
+          "en": "Upper eyebrow windows.",
+          "ja": "上部眉窓。"
+        },
+        {
+          "zh": "外側窗向後收折。",
+          "en": "Outer panes cant aft.",
+          "ja": "外側窓は後方へ傾く。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": [
+        {
+          "src": "assets/reference/b707/window-front.jpg?v=9d746598c57c",
+          "caption": {
+            "zh": "保存707-329A OO-SJA前斜角窗型（非正投影）",
+            "en": "Preserved 707-329A OO-SJA front-quarter glazing (not orthographic)",
+            "ja": "保存707-329A OO-SJA斜め前方窓（正投影ではありません）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Nose_of_Boeing_707-329_%E2%80%98A%E2%80%99_(OO-SJA)_(34664176366).jpg"
+        },
+        {
+          "src": "assets/reference/b707/window-side.jpg?v=f6dd90a2088f",
+          "caption": {
+            "zh": "保存707-329A OO-SJA側窗；707家族參考",
+            "en": "Preserved 707-329A OO-SJA side glazing; 707-family reference",
+            "ja": "保存707-329A OO-SJA側窓；707系列参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Nose_of_Boeing_707-329_%E2%80%98A%E2%80%99_(OO-SJA)_(34664176366).jpg"
+        }
+      ]
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "707-320外翼以普通後掠翼尖收束，沒有現代直立翼尖小翼；翼端航行燈位於最外端。",
+        "en": "The 707-320 outer wing ends in a conventional swept tip without a modern upright winglet, with navigation lights at the extremity.",
+        "ja": "707-320外翼は通常の後退翼端で終わり、現代的な直立ウイングレットはなく、最外端に航法灯があります。"
+      },
+      "fact": {
+        "zh": "歷史照片透視較強；沿主翼前後緣追到外端，不要把後方水平尾翼或掃描雜訊當翼尖裝置。",
+        "en": "The historical photograph has strong perspective; trace the wing edges to the tip and do not mistake the tailplane or scan artifacts for a wingtip device.",
+        "ja": "歴史写真は遠近が強いため、主翼前後縁を外端まで追い、水平尾翼や走査ノイズを翼端装置と誤認しません。"
+      },
+      "bullets": [
+        {
+          "zh": "無直立翼尖小翼。",
+          "en": "No upright winglet.",
+          "ja": "直立ウイングレットなし。"
+        },
+        {
+          "zh": "普通後掠收尖。",
+          "en": "Conventional swept tip.",
+          "ja": "通常の後退翼端。"
+        },
+        {
+          "zh": "外端航行燈。",
+          "en": "Tip navigation light.",
+          "ja": "翼端航法灯。"
+        }
+      ],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [
+        [
+          "構型",
+          "普通收尖，無翼尖小翼"
+        ]
+      ],
+      "images": [
+        {
+          "src": "assets/reference/b707/wingtip.jpg?v=a24086efe322",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:TWA_Starstream_Boeing_707-331_wing_over_the_Bay_of_Bengal,_Summer_1969_(1).jpg"
+        }
+      ]
     }
   },
   "specifications": {

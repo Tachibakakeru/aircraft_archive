@@ -2963,6 +2963,142 @@ CONTENT.update({
     },
 })
 
+SOURCES.update({
+    "b707": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Museum_of_Flight_Boeing_707_cockpit.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Nose_of_Boeing_707-329_%E2%80%98A%E2%80%99_(OO-SJA)_(34664176366).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Nose_of_Boeing_707-329_%E2%80%98A%E2%80%99_(OO-SJA)_(34664176366).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:P%26W_JT3D-3B_engines_on_a_RAAF_Boeing_707.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:TWA_Starstream_Boeing_707-331_wing_over_the_Bay_of_Bengal,_Summer_1969_(1).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:TWA_Starstream_Boeing_707-331_wing_over_the_Bay_of_Bengal,_Summer_1969_(1).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Boeing_707_landing_gear.JPG",
+    },
+    "b727": {
+        "overview": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_727_cockpit_Aviation_museum_(29097199906).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:DHL_Boeing_727-200(F)_at_Sim%C3%B3n_Bol%C3%ADvar_International_Airport,_Caracas.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:B727_(4764445359).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:B727_(4764445359).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:B727_(4764445359).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg",
+    },
+})
+
+CONTENT.update({
+    "b707": {
+        "overview": identify(
+            ("本頁以Boeing 707-320為代表：四具翼下引擎、35度後掠低翼、修長窄體機身與普通尾翼，奠定早期長程噴射客機的典型輪廓。", "This page uses the Boeing 707-320 as its reference: four underwing engines, a 35-degree swept low wing, a slim narrowbody fuselage and conventional tail define the early long-range jetliner silhouette.", "本ページはBoeing 707-320を基準とし、翼下4発、35度後退低翼、細長いナローボディ、通常尾翼が初期長距離ジェット旅客機の典型を作ります。"),
+            ("整體照片為707-387B，適合辨識707-300家族比例；不同客戶尾碼、貨客型與早期渦噴型不能只靠塗裝判斷。", "The overall photograph shows a 707-387B and is suitable for 707-300-family proportions; customer suffixes, passenger/freighter fits and early turbojet variants require more than livery for identification.", "全体写真は707-387Bで707-300系列の比率確認に適しますが、顧客サフィックス、貨客型、初期ターボジェット型は塗装だけで判別できません。"),
+            [("四具翼下引擎。", "Four underwing engines.", "翼下4発。"), ("修長窄體機身。", "Long narrowbody fuselage.", "細長いナローボディ。"), ("普通低置尾翼。", "Conventional low tailplane.", "通常の低位置尾翼。")],
+        ),
+        "cockpit": identify(
+            ("707採三人類比座艙：機長與副機長使用操縱盤，飛航工程師在後方側台監控四具引擎、燃油、電力與增壓系統。", "The 707 uses a three-person analog flight deck: captain and first officer use control yokes while a flight engineer monitors four engines, fuel, electrical and pressurization systems from the aft side console.", "707は3名用アナログ操縦席で、機長・副操縦士が操縦輪を使い、後方側面卓の航空機関士が4発、燃料、電気、与圧を監視します。"),
+            ("照片是保存的707-436 G-APFJ座艙，僅作707家族配置參考，不代表每架-320的儀表與後期改裝。", "The photograph is the preserved 707-436 G-APFJ cockpit, a family-layout reference rather than an exact instrument fit for every -320 or later modification.", "写真は保存707-436 G-APFJの操縦席で、707系列配置の参考に限り、全-320や後年改修の正確な計器構成ではありません。"),
+            [("三名飛航組員。", "Three flightcrew.", "乗務員3名。"), ("傳統操縱盤。", "Traditional control yokes.", "伝統的操縦輪。"), ("獨立飛航工程師台。", "Dedicated flight-engineer station.", "独立航空機関士席。")],
+        ),
+        "windshield": identify(
+            ("707機首具有多片稜角分明的風擋，中央窗較寬、外側窗向後收折，頂部另保留眉窗，形成早期波音噴射機家族特徵。", "The 707 nose has angular multi-pane glazing with broad center panes, aft-canted outer panes and eyebrow windows above, a hallmark of early Boeing jets.", "707機首は幅広い中央窓、後方へ折れる外側窓、上部眉窓からなる角張った多面風防で、初期Boeingジェットの特徴です。"),
+            ("照片是保存的707-329A OO-SJA機鼻，非運航中的-320正投影；比較窗框角度時應避開透視與反光。", "The photograph shows the preserved nose of 707-329A OO-SJA, not an orthographic view of an operating -320; allow for perspective and reflections when comparing frame angles.", "写真は保存707-329A OO-SJA機首で、運航中-320の正投影ではありません。窓枠角度は遠近と反射を考慮します。"),
+            [("多片稜角風擋。", "Angular multi-pane glazing.", "角張った多面風防。"), ("上方眉窗。", "Upper eyebrow windows.", "上部眉窓。"), ("外側窗向後收折。", "Outer panes cant aft.", "外側窓は後方へ傾く。")],
+        ),
+        "fuselage": identify(
+            ("707-320全長46.61公尺、機身寬3.76公尺，典型六人並排；橢圓舷窗、分離式客艙門與細長尾錐延續到後來的727與737。", "The 707-320 is 46.61 m long and 3.76 m wide with typical six-abreast seating. Oval windows, separate passenger doors and a slim tailcone influenced the later 727 and 737.", "707-320は全長46.61 m、胴体幅3.76 mで通常横6席です。楕円窓、独立客室扉、細い尾錐は後の727・737へ影響しました。"),
+            ("照片是707-387B；窗數、艙門與貨門會依次型及營運者改裝不同，辨識要結合機身長度與翼／引擎配置。", "The photograph is a 707-387B; window, passenger-door and cargo-door arrangements vary by subtype and operator modification, so combine them with fuselage length, wing and engine layout.", "写真は707-387Bで、窓、客室扉、貨物扉は型式・運航者改修で異なるため、胴体長、翼、エンジン配置も併用します。"),
+            [("機身寬3.76公尺。", "3.76 m fuselage width.", "胴体幅3.76 m。"), ("典型六人並排。", "Typical six-abreast cabin.", "通常横6席。"), ("橢圓舷窗列。", "Row of oval windows.", "楕円客室窓列。")],
+        ),
+        "engine": identify(
+            ("707-320B／C以四具Pratt & Whitney JT3D低旁通比渦輪扇為典型配置，短艙透過吊架懸掛翼下；部分早期707則用JT4A渦噴或Conway。", "The 707-320B/C typically uses four Pratt & Whitney JT3D low-bypass turbofans suspended beneath the wing; some earlier 707s used JT4A turbojets or Conway engines.", "707-320B／Cは通常Pratt & Whitney JT3D低バイパスターボファン4基を翼下パイロンに装備し、初期707にはJT4AターボジェットやConway搭載型もあります。"),
+            ("照片為RAAF 707-338C的JT3D-3B短艙；它是-300家族細節參考，不能用來證明所有707使用同一型引擎。", "The photograph shows JT3D-3B nacelles on an RAAF 707-338C; it is a -300-family detail reference and does not prove every 707 used the same engine.", "写真はRAAF 707-338CのJT3D-3Bナセルで、-300系列細部参考であり、全707が同一エンジンとは限りません。"),
+            [("四具翼下短艙。", "Four underwing nacelles.", "翼下ナセル4基。"), ("典型JT3D低旁通比。", "Typical low-bypass JT3D.", "代表的な低バイパスJT3D。"), ("早期型動力不同。", "Earlier variants differ.", "初期型は動力が異なる。")],
+        ),
+        "wingtip": identify(
+            ("707-320外翼以普通後掠翼尖收束，沒有現代直立翼尖小翼；翼端航行燈位於最外端。", "The 707-320 outer wing ends in a conventional swept tip without a modern upright winglet, with navigation lights at the extremity.", "707-320外翼は通常の後退翼端で終わり、現代的な直立ウイングレットはなく、最外端に航法灯があります。"),
+            ("歷史照片透視較強；沿主翼前後緣追到外端，不要把後方水平尾翼或掃描雜訊當翼尖裝置。", "The historical photograph has strong perspective; trace the wing edges to the tip and do not mistake the tailplane or scan artifacts for a wingtip device.", "歴史写真は遠近が強いため、主翼前後縁を外端まで追い、水平尾翼や走査ノイズを翼端装置と誤認しません。"),
+            [("無直立翼尖小翼。", "No upright winglet.", "直立ウイングレットなし。"), ("普通後掠收尖。", "Conventional swept tip.", "通常の後退翼端。"), ("外端航行燈。", "Tip navigation light.", "翼端航法灯。")],
+        ),
+        "wing": identify(
+            ("707-320低置主翼翼展44.42公尺、後掠約35度，四具引擎由翼下吊架承載，前後緣高升力裝置支援起降。", "The 707-320 low wing spans 44.42 m and sweeps about 35 degrees, carrying four engines on underwing pylons and high-lift devices along its leading and trailing edges.", "707-320低翼は翼幅44.42 m、後退約35度で、翼下パイロンに4発を搭載し、前後縁高揚力装置が離着陸を支えます。"),
+            ("照片從後上方斜視，不能直接以像素量測後掠角；辨識重點是四吊架、細長後掠外翼與無翼尖小翼。", "The rear-oblique photograph cannot be used to measure sweep from pixels; identify the four pylons, slender swept outer wing and absence of winglets.", "写真は後上方斜視で画素から後退角を測れません。4本パイロン、細長い後退外翼、ウイングレットなしを確認します。"),
+            [("翼展44.42公尺。", "44.42 m span.", "翼幅44.42 m。"), ("約35度後掠。", "About 35° sweep.", "後退約35度。"), ("四具翼下吊架。", "Four underwing pylons.", "翼下パイロン4本。")],
+        ),
+        "vstab": identify(
+            ("707採單片後掠垂直尾翼與方向舵，根部背鰭平順銜接機身，尾翼上方沒有水平安定面。", "The 707 has a single swept fin and rudder with a dorsal fillet blending into the fuselage; no horizontal stabilizer is mounted at the fin tip.", "707は単一後退垂尾と方向舵を持ち、根部背びれが胴体へ滑らかにつながり、垂尾頂部に水平安定板はありません。"),
+            ("航空公司塗裝會掩蓋結構分界；沿方向舵鉸鏈與背鰭輪廓辨識，不用色塊判斷尾翼尺寸。", "Airline paint can hide structural boundaries; use the rudder hinge and dorsal-fin outline rather than color blocks to judge the tail.", "航空会社塗装は構造境界を隠すため、色面ではなく方向舵ヒンジと背びれ輪郭で判断します。"),
+            [("單片後掠垂尾。", "Single swept fin.", "単一後退垂尾。"), ("根部背鰭。", "Dorsal root fillet.", "根部背びれ。"), ("普通尾翼配置。", "Conventional tail arrangement.", "通常尾翼配置。")],
+        ),
+        "hstab": identify(
+            ("水平安定面裝在後機身低位、低於垂尾頂端，形成普通尾翼；後緣升降舵負責俯仰控制。", "The horizontal stabilizer mounts low on the aft fuselage below the fin tip, forming a conventional tail; trailing-edge elevators control pitch.", "水平安定板は垂尾頂端より低い後部胴体に付き通常尾翼を形成し、後縁昇降舵がピッチを制御します。"),
+            ("斜側照片中尾翼可能與遠側主翼重疊；先確認位於引擎後方、機尾兩側的較小翼面。", "In oblique photographs the tailplane may overlap the far wing; identify the smaller surface behind the engines on either side of the tail.", "斜側写真では遠側主翼と重なるため、エンジン後方の尾部左右にある小さい翼面を確認します。"),
+            [("後機身低位安裝。", "Low aft-fuselage mounting.", "後部胴体低位置。"), ("不是T型尾翼。", "Not a T-tail.", "T尾翼ではない。"), ("後緣升降舵。", "Trailing-edge elevators.", "後縁昇降舵。")],
+        ),
+        "gear": identify(
+            ("707採前三點式十輪起落架：鼻腳雙輪，左右主腳各為四輪轉向架，以分散151噸級最大起飛重量。", "The 707 uses ten-wheel tricycle gear: twin nose wheels and a four-wheel bogie on each main leg, distributing a maximum takeoff mass around 151 tonnes.", "707は前脚2輪、左右主脚各4輪ボギーの計10輪前三点式で、約151トン級最大離陸重量を分散します。"),
+            ("近照只呈現局部主腳；總輪數應依型式資料與兩側對稱配置確認，不以單張照片可見輪胎數推斷。", "The close-up shows only part of a main unit; confirm total wheel count from type data and symmetric gear layout rather than visible tires in one photograph.", "近接写真は主脚の一部だけなので、総輪数は一枚の可視タイヤ数ではなく型式資料と左右対称配置で確認します。"),
+            [("鼻腳雙輪。", "Twin nose wheels.", "前脚2輪。"), ("每側主腳四輪。", "Four wheels per main bogie.", "主脚片側4輪。"), ("全機共十輪。", "Ten wheels total.", "全機計10輪。")],
+        ),
+    },
+    "b727": {
+        "overview": identify(
+            ("Boeing 727-200以三具機尾引擎、T型尾翼、低置後掠翼與加長窄體機身為主要輪廓，專為中短程與當時設備較少的機場設計。", "The Boeing 727-200 is defined by three tail-mounted engines, a T-tail, low swept wing and stretched narrowbody fuselage, designed for short- to medium-haul service from less-equipped airports.", "Boeing 727-200は尾部3発、T尾翼、低位置後退翼、延長ナローボディが特徴で、設備の少ない空港からの中短距離運航向けに設計されました。"),
+            ("照片為USA Jet 727-223 Advanced貨機；它適合辨識-200外形，但貨門、封窗與後期改裝不代表原始客機。", "The photograph shows a USA Jet 727-223 Advanced freighter. It identifies the -200 outline, but cargo doors, blanked windows and later modifications do not represent an original passenger aircraft.", "写真はUSA Jet 727-223 Advanced貨物機で-200外形の参考ですが、貨物扉、閉鎖窓、後年改修は原型旅客機を示しません。"),
+            [("機尾三具引擎。", "Three tail-mounted engines.", "尾部3発。"), ("T型尾翼。", "T-tail.", "T尾翼。"), ("加長窄體機身。", "Stretched narrowbody fuselage.", "延長ナローボディ。")],
+        ),
+        "cockpit": identify(
+            ("727採三人類比座艙，機長與副機長使用操縱盤，飛航工程師在後方系統台管理三具JT8D、燃油、電力、液壓與增壓。", "The 727 has a three-person analog cockpit: captain and first officer use yokes while a flight engineer manages three JT8Ds, fuel, electrical, hydraulic and pressurization systems from the aft panel.", "727は3名用アナログ操縦席で、機長・副操縦士が操縦輪を使い、後方卓の航空機関士が3基JT8D、燃料、電気、油圧、与圧を管理します。"),
+            ("照片為航空博物館保存座艙，確切次型未確認；適合家族配置參考，不代表每架-200後期改裝。", "The photograph is a preserved aviation-museum cockpit whose exact subtype is unconfirmed; it is a family-layout reference, not the precise later fit of every -200.", "写真は航空博物館の保存操縦席で正確な型式は未確認です。系列配置の参考で、全-200の後期改修を示しません。"),
+            [("三名飛航組員。", "Three flightcrew.", "乗務員3名。"), ("傳統操縱盤。", "Traditional control yokes.", "伝統的操縦輪。"), ("獨立飛航工程師台。", "Dedicated flight-engineer panel.", "独立航空機関士卓。")],
+        ),
+        "windshield": identify(
+            ("727沿用早期波音多片稜角風擋語彙，中央窗寬、外側窗後折並帶眉窗；短而圓的機鼻與707／737 Classic相近。", "The 727 uses early Boeing angular multi-pane glazing with broad center panes, aft-canted outer panes and eyebrow windows; its short rounded nose resembles the 707 and 737 Classic.", "727は幅広い中央窓、後方へ折れる外側窓、眉窓を持つ初期Boeingの多面風防で、短い丸形機首は707や737 Classicに似ます。"),
+            ("照片為進場中的727-223 Advanced前斜角，不是正投影；先看固定窗框，不要受反光、雨刷與透視變形影響。", "The photograph is a front-oblique view of an approaching 727-223 Advanced, not an orthographic view; follow fixed frames rather than reflections, wipers or perspective distortion.", "写真は進入中727-223 Advancedの斜め前方で正投影ではありません。反射、ワイパー、遠近変形でなく固定窓枠を見ます。"),
+            [("多片稜角風擋。", "Angular multi-pane glazing.", "角張った多面風防。"), ("上方眉窗。", "Upper eyebrow windows.", "上部眉窓。"), ("短圓機鼻。", "Short rounded nose.", "短い丸形機首。")],
+        ),
+        "fuselage": identify(
+            ("727-200全長46.69公尺、機身寬3.76公尺，沿用707六人並排截面；後機腹可見內建登機梯，讓飛機在缺乏地勤設備時自主上下客。", "The 727-200 is 46.69 m long and 3.76 m wide, retaining the 707 six-abreast cross-section. An integral aft ventral stair allowed boarding without ground equipment.", "727-200は全長46.69 m、胴体幅3.76 mで707の横6席断面を継承し、後部腹面の内蔵階段で地上設備なしでも搭乗できました。"),
+            ("照片為改裝貨機，客艙窗已封閉並增設大型貨門；判讀客機門窗時須另查原始配置。", "The photograph shows a converted freighter with blanked passenger windows and a large cargo door; consult original passenger layouts for door and window details.", "写真は改造貨物機で客室窓が閉鎖され大型貨物扉を追加しています。旅客型の扉・窓は原配置を別途確認します。"),
+            [("機身寬3.76公尺。", "3.76 m fuselage width.", "胴体幅3.76 m。"), ("典型六人並排。", "Typical six-abreast cabin.", "通常横6席。"), ("後機腹內建登機梯。", "Integral aft ventral stair.", "後部腹面内蔵階段。")],
+        ),
+        "engine": identify(
+            ("727以三具Pratt & Whitney JT8D低旁通比渦輪扇為標誌：兩具在後機身兩側，中央引擎透過垂尾根部進氣口與S形管道供氣。", "The 727 is marked by three Pratt & Whitney JT8D low-bypass turbofans: two on the aft fuselage sides and a center engine fed through a fin-root intake and S-duct.", "727はPratt & Whitney JT8D低バイパスターボファン3基が特徴で、2基は後部胴体側面、中央機は垂尾根部吸気口とS字ダクトから給気されます。"),
+            ("近照機裝有Stage Three消音套件，尾噴管外形不同於原始JT8D短艙；辨識三發布局可用，但不能當原廠噴口標準。", "The photographed aircraft carries Stage Three hush kits, so its exhaust profile differs from the original JT8D installation; use it for the three-engine arrangement, not as a factory nozzle standard.", "写真機はStage Three消音キット装備で排気形状が原型JT8Dと異なります。3発配置の参考にはなりますが原厂噴口標準ではありません。"),
+            [("三具JT8D。", "Three JT8Ds.", "JT8D 3基。"), ("兩側短艙加中央S管。", "Two side nacelles plus center S-duct.", "側面2基と中央S字ダクト。"), ("照片有消音套件。", "Photo shows hush kits.", "写真は消音キット装備。")],
+        ),
+        "wingtip": identify(
+            ("727外翼以普通後掠翼尖收束，沒有現代直立翼尖小翼；低速能力主要來自複雜高升力裝置而非翼尖改裝。", "The 727 outer wing ends in a conventional swept tip without a modern upright winglet; its low-speed capability comes chiefly from complex high-lift devices rather than tip modifications.", "727外翼は通常の後退翼端で終わり現代的直立ウイングレットはなく、低速性能は主に複雑な高揚力装置によります。"),
+            ("進場照片中的外翼受透視與襟翼放下影響；沿前緣追到最外端，勿把水平尾翼當翼尖。", "Perspective and deployed flaps affect the approach photograph; trace the leading edge to the tip and do not confuse the T-tail with the wingtip.", "進入写真は遠近とフラップ展開の影響があるため、前縁を外端まで追い、T尾を翼端と混同しません。"),
+            [("無直立翼尖小翼。", "No upright winglet.", "直立ウイングレットなし。"), ("普通後掠收尖。", "Conventional swept tip.", "通常の後退翼端。"), ("翼端航行燈。", "Tip navigation light.", "翼端航法灯。")],
+        ),
+        "wing": identify(
+            ("727-200低置主翼翼展32.92公尺，具前緣克魯格襟翼／縫翼與三縫後緣襟翼等複雜高升力裝置，可在較短跑道運作。", "The 727-200 low wing spans 32.92 m and uses leading-edge Krueger flaps/slats plus triple-slotted trailing-edge flaps, enabling operation from comparatively short runways.", "727-200低翼は翼幅32.92 mで、前縁Krueger flap／slatと三重隙間後縁flapなど複雑な高揚力装置を備え、比較的短い滑走路で運用できます。"),
+            ("照片是起落架與襟翼放下的進場構型，不能當乾淨巡航翼型；可用來辨識展開後的前後緣裝置。", "The photograph shows approach configuration with gear and flaps down, not the clean cruise wing; it is useful for recognizing deployed leading- and trailing-edge devices.", "写真は脚・flap展開の進入構成で巡航時のclean wingではなく、展開した前後縁装置の識別に適します。"),
+            [("翼展32.92公尺。", "32.92 m span.", "翼幅32.92 m。"), ("前緣克魯格襟翼／縫翼。", "Leading-edge Krueger flaps/slats.", "前縁Krueger flap／slat。"), ("三縫後緣襟翼。", "Triple-slotted trailing flaps.", "三重隙間後縁flap。")],
+        ),
+        "vstab": identify(
+            ("高大的後掠垂尾承載T型水平尾翼，根部前緣同時形成中央引擎進氣口；方向舵位於後緣。", "The tall swept fin supports the T-tail while its leading-edge root forms the center-engine intake; the rudder occupies the trailing edge.", "高い後退垂尾がT尾水平安定板を支え、前縁根部は中央エンジン吸気口を形成し、後縁に方向舵があります。"),
+            ("近照包含DHL塗裝與消音套件；塗色不是結構邊界，辨識應看T尾、進氣口與方向舵鉸鏈。", "The close-up includes DHL paint and hush kits; color is not a structural boundary, so use the T-tail, intake and rudder hinge for identification.", "近接写真にはDHL塗装と消音キットがあり、色は構造境界ではありません。T尾、吸気口、方向舵ヒンジを確認します。"),
+            [("承載T型尾翼。", "Supports the T-tail.", "T尾翼を支持。"), ("根部中央引擎進氣口。", "Center-engine intake at the root.", "根部に中央エンジン吸気口。"), ("高大後掠垂尾。", "Tall swept fin.", "高い後退垂尾。")],
+        ),
+        "hstab": identify(
+            ("水平安定面安裝在垂尾頂端，形成真正的T型尾翼；兩側升降舵控制俯仰，使尾翼遠離主翼大部分低速尾流。", "The horizontal stabilizer mounts at the top of the fin to form a true T-tail; elevators control pitch and keep the surface away from much of the wing's low-speed wake.", "水平安定板は垂尾頂部に付き真のT尾を形成し、左右昇降舵がピッチを制御して主翼低速後流の多くから離れます。"),
+            ("T尾並非所有迎角都不受主翼流場影響；高迎角仍須考慮深失速風險，不能把高置位置等同完全無干擾。", "A T-tail is not free of wing-flow effects at every angle of attack; deep-stall risk remains at high angle of attack, so high mounting does not mean zero interference.", "T尾も全迎角で主翼流れの影響がないわけではなく、高迎角ではdeep stall riskがあるため、高位置を完全無干渉と解釈できません。"),
+            [("垂尾頂端安裝。", "Mounted atop the fin.", "垂尾頂部に装備。"), ("真正T型尾翼。", "True T-tail.", "真のT尾翼。"), ("後緣升降舵。", "Trailing-edge elevators.", "後縁昇降舵。")],
+        ),
+        "gear": identify(
+            ("727採前三點式六輪起落架：鼻腳雙輪，左右主腳各雙輪；主腳收入翼根附近整流區。", "The 727 uses six-wheel tricycle gear: twin nose wheels and twin wheels on each main leg, with the mains retracting near the wing root fairing.", "727は前脚2輪、左右主脚各2輪の計6輪前三点式で、主脚は翼根付近の整流部へ格納されます。"),
+            ("進場照片可見展開的鼻腳與主腳，但遠側輪組會重疊；總輪數應依支柱配置確認。", "The approach photograph shows deployed nose and main gear, but far-side wheel pairs overlap; confirm the total from the gear-leg arrangement.", "進入写真では展開前脚・主脚が見えますが遠側輪組が重なるため、総輪数は脚配置で確認します。"),
+            [("鼻腳雙輪。", "Twin nose wheels.", "前脚2輪。"), ("每側主腳雙輪。", "Twin wheels per main leg.", "主脚片側2輪。"), ("全機共六輪。", "Six wheels total.", "全機計6輪。")],
+        ),
+    },
+})
+
 CAPTIONS = {
     "overview": tr("實機整體外型參考", "Real-aircraft overall-profile reference", "実機全体外観の参考"),
     "cockpit": tr("實機駕駛艙布局", "Real cockpit layout", "実機コックピット配置"),
@@ -3226,6 +3362,34 @@ def update(model: str) -> None:
             if row[0] == "飛行距離（滿載）": row[1] = "最遠 1,187 km（641 nmi，輔助油箱、無預備油）"
             if row[0] == "最大操作速度（VMO）": row[:] = ["最大允許速度（VNE）", "309 km/h（167 kt）"]
         specs["發動機"] = [["型號", "P&WC PT6C-67C 渦輪軸 ×2"], ["型式", "FADEC 渦輪軸發動機"], ["起飛功率（5分鐘）", "單具 1,252 kW（1,679 shp）"], ["最大連續功率", "單具 1,142 kW（1,531 shp）"], ["主旋翼", "5 葉全鉸接，直徑 13.80 m"], ["尾旋翼", "4 葉"]]
+    if model == "b707":
+        parts["overview"]["images"][0]["caption"] = tr("Aerolíneas Argentinas 707-387B LV-ISA；707-300家族外形參考", "Aerolíneas Argentinas 707-387B LV-ISA; 707-300-family profile reference", "Aerolíneas Argentinas 707-387B LV-ISA；707-300系列外形参考")
+        parts["cockpit"]["images"][0]["caption"] = tr("保存707-436 G-APFJ座艙；家族參考，非-320機籍", "Preserved 707-436 G-APFJ cockpit; family reference, not a -320 airframe", "保存707-436 G-APFJ操縦席；系列参考、-320実機ではありません")
+        parts["windshield"]["images"][0]["caption"] = tr("保存707-329A OO-SJA前斜角窗型（非正投影）", "Preserved 707-329A OO-SJA front-quarter glazing (not orthographic)", "保存707-329A OO-SJA斜め前方窓（正投影ではありません）")
+        parts["windshield"]["images"][1]["caption"] = tr("保存707-329A OO-SJA側窗；707家族參考", "Preserved 707-329A OO-SJA side glazing; 707-family reference", "保存707-329A OO-SJA側窓；707系列参考")
+        parts["engine"]["images"][0]["caption"] = tr("RAAF 707-338C翼下JT3D-3B短艙", "Underwing JT3D-3B nacelles on RAAF 707-338C", "RAAF 707-338C翼下JT3D-3Bナセル")
+        parts["gear"]["images"][0]["caption"] = tr("707主起落架近照；畫面僅呈現局部輪組", "707 main-gear close-up; only part of the wheel group is visible", "707主脚近接写真；輪組の一部のみ表示")
+        parts["fuselage"]["specs"] = [["全長", "46.61 m"], ["機身寬度", "3.76 m"]]
+        parts["engine"]["specs"] = [["典型型號", "JT3D ×4"], ["型式", "低旁通比渦輪扇"]]
+        parts["wingtip"]["specs"] = [["構型", "普通收尖，無翼尖小翼"]]
+        parts["wing"]["specs"] = [["翼展", "44.42 m"], ["後掠角", "約 35°"]]
+        parts["vstab"]["specs"] = [["構型", "單片後掠垂尾"], ["操縱面", "方向舵"]]
+        parts["hstab"]["specs"] = [["位置", "後機身低位"], ["構型", "普通尾翼"]]
+        parts["gear"]["specs"] = [["配置", "前三點式"], ["總輪數", "10 輪"]]
+    if model == "b727":
+        parts["overview"]["images"][0]["caption"] = tr("USA Jet 727-223 Advanced貨機N727US進場", "USA Jet 727-223 Advanced freighter N727US on approach", "USA Jet 727-223 Advanced貨物機N727US進入")
+        parts["cockpit"]["images"][0]["caption"] = tr("航空博物館保存727座艙；確切次型未確認", "Preserved 727 museum cockpit; exact subtype unconfirmed", "航空博物館保存727操縦席；正確な型式は未確認")
+        parts["windshield"]["images"][0]["caption"] = tr("727-223 Advanced N727US前斜角窗型（非正投影）", "727-223 Advanced N727US front-quarter glazing (not orthographic)", "727-223 Advanced N727US斜め前方窓（正投影ではありません）")
+        parts["windshield"]["images"][1]["caption"] = tr("727-223 Advanced N727US側窗（進場實照裁切）", "727-223 Advanced N727US side glazing (approach-photo crop)", "727-223 Advanced N727US側窓（進入写真切り出し）")
+        parts["fuselage"]["images"][0]["caption"] = tr("Vensecar 727-223 Advanced改裝貨機YV155T；客窗已封閉", "Vensecar converted 727-223 Advanced freighter YV155T; passenger windows blanked", "Vensecar改造727-223 Advanced貨物機YV155T；客室窓閉鎖")
+        parts["engine"]["images"][0]["caption"] = tr("727後機身JT8D短艙與Stage Three消音套件；非原廠噴口外形", "727 aft JT8D nacelles with Stage Three hush kits; not the original nozzle profile", "727後部JT8DナセルとStage Three消音キット；原型噴口形状ではありません")
+        parts["fuselage"]["specs"] = [["全長", "46.69 m"], ["機身寬度", "3.76 m"]]
+        parts["engine"]["specs"] = [["型號", "JT8D ×3"], ["中央引擎進氣", "S 型管道"]]
+        parts["wingtip"]["specs"] = [["構型", "普通收尖，無翼尖小翼"]]
+        parts["wing"]["specs"] = [["翼展", "32.92 m"], ["高升力裝置", "前緣裝置＋三縫襟翼"]]
+        parts["vstab"]["specs"] = [["構型", "T 型尾翼"], ["根部", "中央引擎進氣口"]]
+        parts["hstab"]["specs"] = [["位置", "垂尾頂端"], ["操縱面", "升降舵"]]
+        parts["gear"]["specs"] = [["配置", "前三點式"], ["總輪數", "6 輪"]]
     if model == "cs300":
         parts["cockpit"]["images"][0]["caption"] = tr(
             "JetBlue A220-300 實機座艙；右側座椅遮擋部分設備",

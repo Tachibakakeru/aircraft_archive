@@ -727,3 +727,29 @@ The -200 overview and passenger fuselage show retired Air Canada C-GAUN. ATI N76
 `b764/cockpit.jpg` is an unchanged copy of the Commons photograph of Continental N67052, copyright © Ken Iwelumo, with levels adjusted by Altair78. It is licensed under the **GNU Free Documentation License, Version 1.2 only**, with **no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts**. A complete copy of the license accompanies it as [GFDL-1.2.txt](GFDL-1.2.txt), obtained verbatim from [GNU's license archive](https://ftp.gnu.org/gnu/Licenses/fdl-1.2.txt). Keep this copyright/attribution notice and the full license with redistributed copies. The image's SHA-1 is `6e19a97ec8b693f40d5915ab40b1108be49ae07a`. This license applies to this photograph, not to the independently authored website or the other individually licensed photos. Source and full-license links are displayed with the image in both viewer and comparison pages.
 
 Technical checks: [Boeing 767 airport-planning manual Rev K, sections 1.3, 2.2 and 7.2](https://www.boeing.com/content/dam/boeing/v2/airports/acaps/767_REV_K.pdf), [Boeing's 767-400ER design announcement](https://boeing.mediaroom.com/1998-12-17-Boeing-Nears-Completion-of-Newest-767-Design), [Boeing AERO flight-deck upgrade article, reprinted with permission](https://www.aerospaceonline.com/doc/767-400er-flight-deck-upgrade-0001). Shape descriptions are observations of the credited photographs. The planning manual includes offered engine configurations, not proof of installation on every photographed aircraft.
+
+## Boeing 707-320 (`b707`)
+
+| Local file(s) | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b707/overview.jpg`, `fuselage.jpg`, `vstab.jpg`, `hstab.jpg` | [Aerolíneas Argentinas 707 LV-ISA](https://commons.wikimedia.org/wiki/File:Aerolineas_Argentinas_Boeing_707_LV-ISA_01.jpg), Piergiuliano Chesi; resized/cropped | CC BY 3.0 |
+| `b707/cockpit.jpg` | [Museum of Flight 707-436 G-APFJ cockpit](https://commons.wikimedia.org/wiki/File:Museum_of_Flight_Boeing_707_cockpit.jpg), Ad Meskens; resized | CC BY-SA 3.0 |
+| `b707/window-front.jpg`, `window-side.jpg` | [Preserved 707-329A OO-SJA nose](https://commons.wikimedia.org/wiki/File:Nose_of_Boeing_707-329_%E2%80%98A%E2%80%99_(OO-SJA)_(34664176366).jpg), Alan Wilson; cropped | CC BY-SA 2.0 |
+| `b707/engine.jpg` | [RAAF 707 JT3D-3B engines](https://commons.wikimedia.org/wiki/File:P%26W_JT3D-3B_engines_on_a_RAAF_Boeing_707.jpg), Wal Nelowkin; cropped | CC BY-SA 4.0 |
+| `b707/wingtip.jpg`, `wing.jpg` | [TWA 707-331 wing over the Bay of Bengal](https://commons.wikimedia.org/wiki/File:TWA_Starstream_Boeing_707-331_wing_over_the_Bay_of_Bengal,_Summer_1969_(1).jpg), Barry Lewis; cropped | CC BY 2.0 |
+| `b707/gear.jpg` | [Boeing 707 landing gear](https://commons.wikimedia.org/wiki/File:Boeing_707_landing_gear.JPG), Mgw89; cropped | CC BY-SA 3.0 |
+
+The page describes the 707-320. Exterior references are 707-300-family aircraft: the overview is a 707-387B, the engine photograph a 707-338C and the preserved nose a 707-329A. The cockpit is a preserved 707-436 family-layout reference. These subtype limits are stated in the trilingual captions; no image is presented as proof of every -320 configuration.
+
+## Boeing 727-200 (`b727`)
+
+| Local file(s) | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `b727/overview.jpg`, `window-front.jpg`, `window-side.jpg`, `wingtip.jpg`, `wing.jpg`, `gear.jpg` | [USA Jet 727-223 Advanced N727US](https://commons.wikimedia.org/wiki/File:N727US_Boeing_727-223_Advanced_of_USAJet.jpg), ChaosInABottle; resized/cropped | CC BY-SA 4.0 |
+| `b727/cockpit.jpg` | [Preserved Boeing 727 museum cockpit](https://commons.wikimedia.org/wiki/File:Boeing_727_cockpit_Aviation_museum_(29097199906).jpg), James Petts; resized | CC BY-SA 2.0 |
+| `b727/fuselage.jpg` | [Vensecar 727-223 Advanced freighter YV155T](https://commons.wikimedia.org/wiki/File:DHL_Boeing_727-200(F)_at_Sim%C3%B3n_Bol%C3%ADvar_International_Airport,_Caracas.jpg), Maor X; cropped | CC BY-SA 4.0 |
+| `b727/engine.jpg`, `vstab.jpg`, `hstab.jpg` | [DHL Boeing 727 tail and Stage Three hush kit](https://commons.wikimedia.org/wiki/File:B727_(4764445359).jpg), Bernal Saborio; cropped | CC BY-SA 2.0 |
+
+The main exterior reference is a real 727-223 Advanced freighter. Cargo conversion details do not represent the original passenger window and door arrangement. The engine/tail photograph shows a Stage Three hush kit, not the original JT8D exhaust shape. The museum cockpit's exact subtype is not established. These limitations are stated in captions and descriptions.
+
+Technical cross-checks for both aircraft: [Boeing airport planning manuals](https://www.boeing.com/commercial/airports/plan-manuals) (707 D6-58322 and 727 D6-58324) and [Boeing three-view drawings](https://www.boeing.com/commercial/airports/3-view). No AI-generated or AI-enhanced aircraft imagery is used; crops are produced from credited real photographs without intentional upscaling.

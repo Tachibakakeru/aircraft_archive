@@ -240,6 +240,10 @@ $photos = [ordered]@{
   "ask21/cockpit.jpg" = "Nicht serienmässiges Instrumentenbrett für grössere Personen mit Vario, E-Vario, Fahrtenmesser, Höhenmesser, Funkgerät, G-Kraft-Messer und Kompass 2014-05-04 19-23.jpg"
   "heli/overview.jpg" = "EGLK - AgustaWestland AW139 - Irish Air Corps - 277 - Flickr - lynothehammer1978.jpg"
   "heli/cockpit.jpg" = "AgustaWestland AW 139 helicopter cockpit.jpg"
+  "b707/overview.jpg" = "Aerolineas Argentinas Boeing 707 LV-ISA 01.jpg"
+  "b707/cockpit.jpg" = "Museum of Flight Boeing 707 cockpit.jpg"
+  "b727/overview.jpg" = "N727US Boeing 727-223 Advanced of USAJet.jpg"
+  "b727/cockpit.jpg" = "Boeing 727 cockpit Aviation museum (29097199906).jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -608,6 +612,24 @@ $windowPhotos += @(
   @{ Dest="heli/vstab.jpg"; Title="EGLK - AgustaWestland AW139 - Irish Air Corps - 277 - Flickr - lynothehammer1978.jpg"; Crop=@(.78,.18,.18) }
   @{ Dest="heli/hstab.jpg"; Title="EGLK - AgustaWestland AW139 - Irish Air Corps - 277 - Flickr - lynothehammer1978.jpg"; Crop=@(.68,.28,.28) }
   @{ Dest="heli/gear.jpg"; Title="RAF Northolt IMG 8100 (48859947286).jpg"; Crop=@(.27,.50,.46) }
+  @{ Dest="b707/window-front.jpg"; Title="Nose of Boeing 707-329 A OO-SJA.jpg"; Crop=@(.50,.15,.45) }
+  @{ Dest="b707/window-side.jpg"; Title="Nose of Boeing 707-329 A OO-SJA.jpg"; Crop=@(.38,.16,.38) }
+  @{ Dest="b707/fuselage.jpg"; Title="Aerolineas Argentinas Boeing 707 LV-ISA 01.jpg"; Crop=@(.08,.33,.78) }
+  @{ Dest="b707/engine.jpg"; Title="P&W JT3D-3B engines on a RAAF Boeing 707.jpg"; Crop=@(.00,.05,1.00) }
+  @{ Dest="b707/wingtip.jpg"; Title="TWA Starstream Boeing 707-331 wing over Bay of Bengal.jpg"; Crop=@(.55,.25,.43); Force=$true }
+  @{ Dest="b707/wing.jpg"; Title="TWA Starstream Boeing 707-331 wing over Bay of Bengal.jpg"; Crop=@(.05,.22,.90); Force=$true }
+  @{ Dest="b707/vstab.jpg"; Title="Aerolineas Argentinas Boeing 707 LV-ISA 01.jpg"; Crop=@(.65,.25,.30); Force=$true }
+  @{ Dest="b707/hstab.jpg"; Title="Aerolineas Argentinas Boeing 707 LV-ISA 01.jpg"; Crop=@(.70,.40,.28) }
+  @{ Dest="b707/gear.jpg"; Title="Boeing 707 landing gear.JPG"; Crop=@(.05,.30,.90) }
+  @{ Dest="b727/window-front.jpg"; Title="N727US Boeing 727-223 Advanced of USAJet.jpg"; Crop=@(.10,.34,.27) }
+  @{ Dest="b727/window-side.jpg"; Title="N727US Boeing 727-223 Advanced of USAJet.jpg"; Crop=@(.11,.35,.25) }
+  @{ Dest="b727/fuselage.jpg"; Title="DHL Boeing 727-200(F) at Simón Bolívar International Airport, Caracas.jpg"; Crop=@(.14,.31,.72) }
+  @{ Dest="b727/engine.jpg"; Title="B727 (4764445359).jpg"; Crop=@(.39,.50,.58) }
+  @{ Dest="b727/wingtip.jpg"; Title="N727US Boeing 727-223 Advanced of USAJet.jpg"; Crop=@(.62,.42,.34) }
+  @{ Dest="b727/wing.jpg"; Title="N727US Boeing 727-223 Advanced of USAJet.jpg"; Crop=@(.42,.42,.52) }
+  @{ Dest="b727/vstab.jpg"; Title="B727 (4764445359).jpg"; Crop=@(.30,.05,.45) }
+  @{ Dest="b727/hstab.jpg"; Title="B727 (4764445359).jpg"; Crop=@(.00,.10,.54) }
+  @{ Dest="b727/gear.jpg"; Title="N727US Boeing 727-223 Advanced of USAJet.jpg"; Crop=@(.20,.47,.52) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0
