@@ -122,8 +122,15 @@ def main() -> None:
     for row in AIRCRAFT:
         ident = row[0]
         by_id[ident] = fleet_entry(row)
-        (ROOT / "data" / f"{ident}.json").write_text(
-            json.dumps(detail(row), ensure_ascii=False, indent=2) + "\n",
+        path = ROOT / "data" / f"{ident}.json"
+        updated = detail(row)
+        if path.exists():
+            existing = json.loads(path.read_text(encoding="utf-8"))
+            if existing.get("parts"):
+                updated["partOrder"] = existing.get("partOrder", list(existing["parts"]))
+                updated["parts"] = existing["parts"]
+        path.write_text(
+            json.dumps(updated, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
 

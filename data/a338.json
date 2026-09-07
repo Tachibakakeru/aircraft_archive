@@ -37,5 +37,345 @@
         "2 × Rolls-Royce Trent 7000"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "A330-800 沿用 A330-200 級的短廣體機身與每排八座客艙寬度。相較 A330-900，主翼前後的圓筒段更短，整體比例較緊湊。",
+        "en": "The A330-800 retains the shorter A330-200-class wide body and typical eight-abreast cabin width. Compared with the A330-900, its cylindrical sections ahead of and behind the wing are shorter, giving more compact proportions.",
+        "ja": "A330-800はA330-200級の短いワイドボディと標準8席横の客室幅を引き継ぎます。A330-900より主翼前後の円筒部が短く、全体に引き締まった比率です。"
+      },
+      "specs": [
+        [
+          "全長",
+          "58.82 m"
+        ],
+        [
+          "典型載客量",
+          "220–260"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "A330-200 駕駛艙採 Airbus 側桿、正面桌板、六具顯示器與中央上下排列 ECAM；正副駕駛前方沒有駕駛盤與操縱柱。",
+        "en": "The A330-200 flight deck uses Airbus sidesticks, forward tray tables, six displays and vertically stacked central ECAM screens, with no yokes or control columns ahead of the pilots.",
+        "ja": "A330-200の操縦席はAirbus式サイドスティック、正面テーブル、6面表示器、上下配置ECAMを備え、正面に操縦輪や柱はありません。"
+      },
+      "specs": [
+        [
+          "機組",
+          "2 名飛行員"
+        ]
+      ],
+      "fact": {
+        "zh": "與 767 相比，側桿對駕駛盤是最直觀差異；螢幕可能因改裝而更新，但基本操縱哲學不變。",
+        "en": "Against the 767, sidesticks versus yokes are the clearest cue. Screens may be upgraded, but the control philosophy remains.",
+        "ja": "767との最明確な差はサイドスティック対操縦輪です。画面は改修されても操縦思想は変わりません。"
+      },
+      "bullets": [
+        {
+          "zh": "側桿位於左右側壁。",
+          "en": "Sidesticks are mounted on the sidewalls.",
+          "ja": "サイドスティックは左右側壁にあります。"
+        },
+        {
+          "zh": "飛行員正前方可使用折疊桌板。",
+          "en": "Tray tables occupy the unobstructed space ahead of the pilots.",
+          "ja": "操縦席正面の空間に折り畳みテーブルがあります。"
+        },
+        {
+          "zh": "中央 ECAM 顯示引擎與系統狀態。",
+          "en": "Central ECAM screens show engine and system status.",
+          "ja": "中央ECAMがエンジンとシステム状態を表示します。"
+        }
+      ],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "A330neo 的主翼保留 A330 基本結構位置，但翼展增至約 64 公尺，並更新翼型、整流罩與控制面。更長翼展配合新翼尖改善巡航效率。",
+        "en": "The A330neo wing retains the A330's basic location but grows to roughly 64 metres span with revised aerofoil, fairings and controls. The greater span and new tips improve cruise efficiency.",
+        "ja": "A330neoの主翼はA330の基本位置を保ちながら翼幅を約64 mへ拡大し、翼型、フェアリング、操縦面を更新しています。長い翼幅と新翼端が巡航効率を改善します。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "64.0 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "A330neo 僅使用 Rolls-Royce Trent 7000 高旁通比渦輪扇。大型風扇、光滑圓形進氣口與較長短艙明顯不同於 A330ceo 的 Trent 700、CF6 或 PW4000。",
+        "en": "The A330neo exclusively uses Rolls-Royce Trent 7000 high-bypass turbofans. Their large fans, smooth round inlets and longer nacelles differ visibly from the Trent 700, CF6 or PW4000 installations on the A330ceo.",
+        "ja": "A330neoはRolls-Royce Trent 7000高バイパス比ターボファンのみを使用します。大型ファン、滑らかな円形吸気口、長いナセルはA330ceoのTrent 700、CF6、PW4000と明確に異なります。"
+      },
+      "specs": [
+        [
+          "型號",
+          "Rolls-Royce Trent 7000"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "A330-200 因機身較短、尾力臂較小，使用比 A330-300 更大的垂直尾翼；高大後掠尾翼與厚實根部是辨認 -200 的重要家族內線索。",
+        "en": "Because its shorter fuselage gives less tail moment arm, the A330-200 uses a larger vertical fin than the A330-300. The tall swept fin and substantial root are useful within-family cues.",
+        "ja": "A330-200は短い胴体で尾部モーメントアームが小さいため、A330-300より大型の垂直尾翼を使い、高い後退尾翼と厚い根元が子型識別に役立ちます。"
+      },
+      "specs": [
+        [
+          "操縱面",
+          "方向舵"
+        ]
+      ],
+      "fact": {
+        "zh": "對比 767，A330 尾部建立在更粗的機身與更寬的背鰭過渡上；尾翼塗裝仍不能取代形狀判讀。",
+        "en": "Against the 767, the A330 tail rises from a fuller fuselage and broader dorsal transition; livery still cannot replace shape cues.",
+        "ja": "767に比べ太い胴体と広い背びれ移行部から尾翼が立ち上がります。塗装だけでは判別できません。"
+      },
+      "bullets": [
+        {
+          "zh": "-200 垂尾比例高大，面積大於 -300。",
+          "en": "The -200 fin is proportionally tall and larger than the -300's.",
+          "ja": "-200の垂尾は相対的に高く、-300より大きいです。"
+        },
+        {
+          "zh": "根部過渡寬厚，連接較粗後機身。",
+          "en": "A broad thick root blends into the fuller aft fuselage.",
+          "ja": "幅広く厚い根元が太い後部胴体へつながります。"
+        },
+        {
+          "zh": "尾錐末端為 APU 排氣口。",
+          "en": "The tailcone ends at the APU exhaust.",
+          "ja": "尾部先端にAPU排気口があります。"
+        }
+      ],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "A330-200 的低置水平尾翼面積與展幅都大於 767，後掠翼面從厚翼根向外收尖；全機下方照片可直接比較尾翼與寬機身比例。",
+        "en": "The A330-200's low-mounted tailplane is larger in area and span than the 767's, tapering from a thick swept root. An underside view shows its scale against the wide fuselage.",
+        "ja": "A330-200の低位置水平尾翼は767より面積・幅が大きく、厚い後退翼根から細くなります。下面写真で太い胴体との比率を確認できます。"
+      },
+      "specs": [
+        [
+          "操縱面",
+          "升降舵"
+        ]
+      ],
+      "fact": {
+        "zh": "水平尾翼本身不是主要判據；兩型布局相同，應配合翼尖、機身寬度與垂尾比例。",
+        "en": "Tailplane shape alone is secondary because both types share the layout; combine it with wingtips, fuselage width and fin proportion.",
+        "ja": "両型とも同配置のため水平尾翼単独は補助的で、翼端、胴体幅、垂尾比率と組み合わせます。"
+      },
+      "bullets": [
+        {
+          "zh": "水平尾翼從粗壯尾錐兩側伸出。",
+          "en": "The tailplanes project from either side of a broad tailcone.",
+          "ja": "太い尾部の両側から水平尾翼が伸びます。"
+        },
+        {
+          "zh": "翼根厚、外段後掠並收尖。",
+          "en": "The root is thick and the swept outer panel tapers.",
+          "ja": "翼根が厚く、外側は後退して細くなります。"
+        },
+        {
+          "zh": "與大垂尾組成較厚重的尾部輪廓。",
+          "en": "Together with the large fin it forms a fuller empennage.",
+          "ja": "大型垂尾とともに厚みある尾部輪郭を作ります。"
+        }
+      ],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "A330-200 每側主起落架為兩軸四輪轉向架，前起落架雙輪；主腳向內收進寬大的翼身整流罩。",
+        "en": "Each A330-200 main gear has a two-axle four-wheel bogie and the nose gear has two wheels; the main units retract inward into the broad wing-body fairing.",
+        "ja": "A330-200の各主脚は2軸4輪、前脚は2輪で、主脚は内側へ大型翼胴フェアリング内に格納されます。"
+      },
+      "specs": [
+        [
+          "配置",
+          "前三點式"
+        ]
+      ],
+      "fact": {
+        "zh": "輪數與 767-300 完全相同；應比較 A330 較寬輪距、粗機身、較大型主翼與不同的支柱／艙門形狀。",
+        "en": "Wheel counts exactly match the 767-300. Use the A330's wider track, fuller body, larger wing and different strut/door geometry.",
+        "ja": "輪数は767-300と同じため、A330の広い脚間隔、太い胴体、大型主翼、脚柱・扉形状を比較します。"
+      },
+      "bullets": [
+        {
+          "zh": "每側主腳四輪，前腳雙輪。",
+          "en": "Four tyres sit on each main bogie with twin nose wheels.",
+          "ja": "各主脚4輪、前脚2輪です。"
+        },
+        {
+          "zh": "主腳輪距與支柱尺度大於 767。",
+          "en": "Main-gear track and strut scale are greater than the 767's.",
+          "ja": "主脚間隔と脚柱寸法は767より大きいです。"
+        },
+        {
+          "zh": "輪艙位於寬大的翼身整流罩內。",
+          "en": "The gear bays sit within the broad wing-body fairing.",
+          "ja": "脚格納庫は大型翼胴フェアリング内にあります。"
+        }
+      ],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "A330-800 是較短的 A330neo，結合 A330-200 級機身、重新設計的長翼與 Rolls-Royce Trent 7000。它以較少座位提供長航程，與 -900 最容易由機身長度區分。",
+        "en": "The A330-800 is the shorter A330neo, combining an A330-200-class fuselage with a redesigned long wing and Rolls-Royce Trent 7000 engines. It trades capacity for range and is most easily distinguished from the -900 by fuselage length.",
+        "ja": "A330-800は短胴型A330neoで、A330-200級胴体に再設計された長い主翼とRolls-Royce Trent 7000を組み合わせます。座席数を抑えて航続距離を伸ばし、-900とは胴体長で見分けやすい型です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A330 使用經典 Airbus 六片式窗帶：正面兩片風擋呈斜邊梯形，外側窗沿圓鈍機鼻向後包覆，正面輪廓比 767 更寬。",
+        "en": "The A330 uses the classic six-pane Airbus belt: two trapezoidal front windscreens and outer panes wrapping around a rounded nose, producing a wider frontal outline than the 767.",
+        "ja": "A330は古典的なAirbus六枚窓で、台形の前面2枚と丸い機首へ回り込む外側窓により、767より正面輪郭が広く見えます。"
+      },
+      "fact": {
+        "zh": "A330-200 與 -300 的窗型幾乎相同，需用機身長度與垂尾比例判子型；窗片數也不能單獨排除 767。",
+        "en": "A330-200 and -300 glazing is nearly identical; use fuselage length and fin proportions for the variant. Pane count alone also does not exclude a 767.",
+        "ja": "A330-200と-300の窓形状はほぼ同じで、胴体長と垂尾比率で子型を判断します。窓枚数だけでは767も除外できません。"
+      },
+      "bullets": [
+        {
+          "zh": "圓鼻使窗帶向兩側平滑展開。",
+          "en": "The rounded nose lets the window belt spread smoothly sideways.",
+          "ja": "丸い機首に沿って窓帯が両側へ滑らかに広がります。"
+        },
+        {
+          "zh": "主風擋斜邊明顯，中央接縫較短。",
+          "en": "The front panes have obvious slanted edges and a shorter centre seam.",
+          "ja": "前面窓の斜辺が明瞭で中央継ぎ目は短めです。"
+        },
+        {
+          "zh": "整組玻璃相對機身看起來更寬低。",
+          "en": "The glazing appears wider and lower relative to the fuselage.",
+          "ja": "窓全体は胴体に対して幅広く低く見えます。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "長而向上彎曲的複合材料翼尖取代 A330ceo 的小型上下翼尖柵，外形受 A350 設計經驗影響。它增加有效展弦比並降低誘導阻力。",
+        "en": "Long, upward-curving composite tips replace the A330ceo's small upper-and-lower fences. Influenced by A350 design experience, they increase effective aspect ratio and reduce induced drag.",
+        "ja": "長く上方へ湾曲する複合材翼端がA330ceoの小型上下フェンスを置き換えます。A350の設計経験を取り入れ、有効アスペクト比を高めて誘導抵抗を減らします。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

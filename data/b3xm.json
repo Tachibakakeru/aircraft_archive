@@ -37,5 +37,258 @@
         "2 × CFM LEAP-1B"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "MAX 10 擁有全系列最長的 737 機身，翼前後圓筒段都更長。艙門與出口配置服務較高載客量，側面比例最為修長。",
+        "en": "The MAX 10 has the longest 737 fuselage, with extended cylindrical sections around the wing. Door and exit arrangements support its higher capacity, giving the most elongated MAX profile.",
+        "ja": "MAX 10は737系列最長の胴体を持ち、主翼前後の円筒部が伸びています。高い座席数に対応する扉・非常口配置を持ち、MAXで最も細長い側面比率です。"
+      },
+      "specs": [
+        [
+          "全長",
+          "43.80 m"
+        ],
+        [
+          "典型載客量",
+          "188–204"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "737 MAX 延續 737 的傳統操縱盤與共同型別設計，同時採用四具大型彩色顯示器。這種配置讓已具 737 資格的機組能以差異訓練轉換。",
+        "en": "The 737 MAX retains the 737's conventional control yokes and common type philosophy while introducing four large colour displays. The continuity supports transition by already-qualified 737 crews through differences training.",
+        "ja": "737 MAXは従来型操縦輪と737共通型式の考え方を維持しながら、4面の大型カラー表示器を採用します。既存737乗員は差異訓練で移行できる設計です。"
+      },
+      "specs": [
+        [
+          "主要顯示器",
+          "4 具大型彩色顯示器"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "MAX 的後掠低翼沿用 737 基本布局，但重新設計翼面、擾流板控制與翼尖區域，以配合新發動機並降低巡航阻力。前緣裝置和後緣襟翼負責起降低速性能。",
+        "en": "The MAX keeps the basic 737 low swept-wing arrangement but revises the wing surface, spoiler control and tip region for the new engines and lower cruise drag. Leading-edge devices and trailing-edge flaps provide take-off and landing performance.",
+        "ja": "MAXは737の低翼後退翼配置を維持しながら、新エンジンと巡航抵抗低減に合わせて翼面、スポイラー制御、翼端部を改設計しています。前縁装置と後縁フラップが離着陸性能を担います。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "35.9 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "TURBOFAN ENGINE",
+      "summary": {
+        "zh": "MAX 專用 CFM LEAP-1B 的風扇直徑大於 737NG 的 CFM56，短起落架限制使其仍緊貼翼下前方。鋸齒狀尾緣整流罩（chevron）與較圓的進氣口是主要辨識點。",
+        "en": "The MAX-specific CFM LEAP-1B has a larger fan than the 737NG's CFM56 and remains mounted close and forward beneath the wing because of limited ground clearance. Chevron nacelle trailing edges and a rounder inlet are key cues.",
+        "ja": "MAX専用CFM LEAP-1Bは737NGのCFM56より大径で、地上高の制約から主翼下前方に密接して装着されます。ナセル後縁のシェブロンと丸みのある吸気口が主な識別点です。"
+      },
+      "specs": [
+        [
+          "型號",
+          "CFM LEAP-1B"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "垂直尾翼沿用 737 家族高聳後掠的基本輪廓，根部背鰭平順連接機身。方向舵負責偏航控制；各 MAX 子型尾部外觀大致相同。",
+        "en": "The vertical tail retains the tall swept 737-family outline and a dorsal root blending into the fuselage. The rudder controls yaw; tail appearance is broadly shared across MAX variants.",
+        "ja": "垂直尾翼は737系の高い後退形状と胴体へつながるドーサル基部を維持します。方向舵がヨーを制御し、尾部外観はMAX各型で概ね共通です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "低置水平尾翼與可調安定面延續 737 傳統布局，控制俯仰與配平。它不是 MAX 子型間的主要辨識點，應搭配機身長度、出口與起落架判斷。",
+        "en": "The low-mounted horizontal tail and trimmable stabilizer continue the traditional 737 arrangement for pitch and trim. It is not a primary MAX-variant cue; use fuselage length, exits and landing gear instead.",
+        "ja": "低位置水平尾翼と可動安定板は737伝統配置を継承し、ピッチとトリムを制御します。MAX各型の主要識別点ではなく、胴体長、非常口、降着装置を併用します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "為容納較大的 LEAP-1B，MAX 的前起落架比 737NG 加高。主起落架仍向內收進機腹且輪胎外側可見；MAX 10 另採可伸縮連桿式主起落架，以維持較長機身的尾部離地間隙。",
+        "en": "To clear the larger LEAP-1B, the MAX nose gear is taller than the 737NG's. The main gear still retracts inward with the tyre sides exposed; the MAX 10 uniquely adds a levered main-gear mechanism to preserve tail clearance for its longer fuselage.",
+        "ja": "大型LEAP-1Bの地上高確保のため、MAXの前脚は737NGより長くなっています。主脚はタイヤ側面を露出したまま胴体へ格納され、MAX 10のみ長い胴体の尾部クリアランスを守るレバー式主脚機構を備えます。"
+      },
+      "specs": [
+        [
+          "主起落架",
+          "每側雙輪、可伸縮連桿式"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "737 MAX 10 是 MAX 家族最長、容量最大的型號。它在 MAX 9 基礎上再加長，並使用獨特的可伸縮連桿式主起落架維持起飛仰角與尾部間隙。",
+        "en": "The 737 MAX 10 is the longest and highest-capacity MAX. It stretches the MAX 9 further and uniquely uses levered main landing gear to preserve take-off rotation angle and tail clearance.",
+        "ja": "737 MAX 10はMAXファミリー最長・最大容量型です。MAX 9をさらに延長し、離陸引き起こし角と尾部間隔を守る独自のレバー式主脚を採用します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "en": "WINGTIP DEVICE",
+      "summary": {
+        "zh": "Advanced Technology 翼尖小翼由一片向上、另一片向下延伸，形成 MAX 最具代表性的分叉外型。它利用翼尖上下兩側氣流改善效率，不同於 737NG 的單片 blended winglet。",
+        "en": "The Advanced Technology winglet splits into an upward and a downward blade, creating the MAX's signature tip. It uses flow on both sides of the tip for efficiency and differs clearly from the 737NG's single blended winglet.",
+        "ja": "Advanced Technologyウイングレットは上向き・下向きの2枚に分かれ、MAXを象徴する翼端形状を作ります。翼端上下の流れを利用し、737NGの単板ブレンデッド・ウイングレットと明確に異なります。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "駕駛艙外窗維持 737 家族稜角分明、由中央向側面分段排列的輪廓。相較 A320 家族較圓順的窗框，它仍是辨認 Boeing 737 系列的重要正面特徵。",
+        "en": "The flight-deck glazing keeps the angular, segmented 737-family outline from the centre panes around to the side windows. Compared with the smoother A320-family framing, it remains a strong frontal Boeing 737 cue.",
+        "ja": "操縦室窓は中央から側面へ角張った分割配置となる737ファミリーの輪郭を保ちます。より滑らかなA320系の窓枠に対し、正面から737を見分ける重要な特徴です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "specs": [],
+      "images": []
+    }
   }
 }

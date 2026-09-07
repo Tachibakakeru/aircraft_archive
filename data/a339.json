@@ -37,5 +37,339 @@
         "2 × Rolls-Royce Trent 7000"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "A330-900 使用約 63.7 公尺長的 A330-300 級廣體機身，典型每排八座。長直的客艙圓筒段讓它明顯長於 A330-800。",
+        "en": "The A330-900 uses an approximately 63.7-metre A330-300-class wide body, normally seating eight abreast. Its long straight cabin barrel makes it visibly longer than the A330-800.",
+        "ja": "A330-900は全長約63.7 mのA330-300級ワイドボディを使用し、通常は8席横です。長い客室円筒部によりA330-800より明らかに長く見えます。"
+      },
+      "specs": [
+        [
+          "全長",
+          "63.66 m"
+        ],
+        [
+          "典型載客量",
+          "260–300"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "A330neo 的主翼保留 A330 基本結構位置，但翼展增至約 64 公尺，並更新翼型、整流罩與控制面。更長翼展配合新翼尖改善巡航效率。",
+        "en": "The A330neo wing retains the A330's basic location but grows to roughly 64 metres span with revised aerofoil, fairings and controls. The greater span and new tips improve cruise efficiency.",
+        "ja": "A330neoの主翼はA330の基本位置を保ちながら翼幅を約64 mへ拡大し、翼型、フェアリング、操縦面を更新しています。長い翼幅と新翼端が巡航効率を改善します。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "64.0 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "A330neo 僅使用 Rolls-Royce Trent 7000 高旁通比渦輪扇。大型風扇、光滑圓形進氣口與較長短艙明顯不同於 A330ceo 的 Trent 700、CF6 或 PW4000。",
+        "en": "The A330neo exclusively uses Rolls-Royce Trent 7000 high-bypass turbofans. Their large fans, smooth round inlets and longer nacelles differ visibly from the Trent 700, CF6 or PW4000 installations on the A330ceo.",
+        "ja": "A330neoはRolls-Royce Trent 7000高バイパス比ターボファンのみを使用します。大型ファン、滑らかな円形吸気口、長いナセルはA330ceoのTrent 700、CF6、PW4000と明確に異なります。"
+      },
+      "specs": [
+        [
+          "型號",
+          "Rolls-Royce Trent 7000"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "A330-300 垂直尾翼高大、前緣後掠，根部以長背鰭連接機身；整體比例與 A340 家族相近。",
+        "en": "The A330-300 has a tall swept fin with a long dorsal root fairing, sharing broad proportions with the A340 family.",
+        "ja": "A330-300は高い後退垂直尾翼と長いドーサル根元を持ち、A340ファミリーと近い比率です。"
+      },
+      "specs": [
+        [
+          "操縱面",
+          "方向舵"
+        ]
+      ],
+      "fact": {
+        "zh": "垂尾塗裝只能辨識航空公司；區分 787 時仍應優先看翼尖與引擎後緣。",
+        "en": "Tail livery identifies the airline; wingtips and nacelle trailing edges remain stronger cues against a 787.",
+        "ja": "尾翼塗装は航空会社を示すだけで、787との区別には翼端とナセル後縁を優先します。"
+      },
+      "bullets": [
+        {
+          "zh": "高大尾翼前緣後掠，頂端較平直。",
+          "en": "The tall fin has a swept leading edge and a relatively squared tip.",
+          "ja": "高い尾翼は後退前縁と比較的平らな上端を持ちます。"
+        },
+        {
+          "zh": "根部背鰭長，與機背過渡明顯。",
+          "en": "A long dorsal fillet creates a clear transition into the upper fuselage.",
+          "ja": "長いドーサルフィレットが機背へ明確につながります。"
+        },
+        {
+          "zh": "照片為 A330-300 尾部，可直接觀察垂尾比例。",
+          "en": "The reference shows an A330-300 tail and its fin proportions directly.",
+          "ja": "参考写真はA330-300尾部で垂直尾翼比率を直接確認できます。"
+        }
+      ],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "A330／A340 家族的水平尾翼低置、後掠且翼根厚，後緣升降舵分段清楚；外形比 787 的複合材料尾翼更接近傳統 Airbus 設計。",
+        "en": "The A330/A340 family uses a low-mounted swept tailplane with a thick root and clearly segmented elevators, following a more conventional Airbus form than the 787.",
+        "ja": "A330／A340ファミリーの水平尾翼は低位置・後退・厚い翼根を持ち、分割昇降舵が明瞭で、787より従来型Airbus形状です。"
+      },
+      "specs": [
+        [
+          "操縱面",
+          "升降舵"
+        ]
+      ],
+      "fact": {
+        "zh": "後方實機照片可觀察左右水平尾翼的安裝高度與後掠角；但水平尾翼仍只是輔助線索，不能單獨定型。",
+        "en": "The rear aircraft view shows tailplane height and sweep, but tailplane shape remains only a supporting identification cue.",
+        "ja": "実機後方写真では水平尾翼の取付高さと後退角を確認できますが、形状は補助的手掛かりに限られます。"
+      },
+      "bullets": [
+        {
+          "zh": "後掠平面形由厚翼根向外逐漸收尖。",
+          "en": "The swept planform tapers from a thick root toward the tip.",
+          "ja": "厚い翼根から翼端へ細くなる後退平面形です。"
+        },
+        {
+          "zh": "升降舵沿後緣分段配置。",
+          "en": "Segmented elevators run along the trailing edge.",
+          "ja": "後縁に分割昇降舵があります。"
+        },
+        {
+          "zh": "應搭配直立翼尖擋板與平滑短艙確認 A330。",
+          "en": "Confirm an A330 using upright tip fences and smooth nacelles.",
+          "ja": "直立翼端フェンスと滑らかなナセルでA330を確認します。"
+        }
+      ],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "A330-300 每組主起落架為兩軸四輪，前起落架雙輪；主腳向內收入翼身整流區，配置與 787-9 的輪數相同。",
+        "en": "Each A330-300 main bogie has two axles and four tyres, retracting inward into the wing-body fairing; its wheel count matches the 787-9.",
+        "ja": "A330-300の各主脚は2軸4輪で翼胴フェアリングへ内側格納され、輪数は787-9と同じです。"
+      },
+      "specs": [
+        [
+          "配置",
+          "前三點式"
+        ]
+      ],
+      "fact": {
+        "zh": "四輪主腳無法區分 A330 與 787；照片應用來理解結構，判型仍回到翼尖、窗型與引擎後緣。",
+        "en": "Four-wheel bogies do not separate A330 and 787. Use the photograph for structure, then identify by wingtips, glazing and nacelle trailing edges.",
+        "ja": "4輪主脚ではA330と787を区別できません。構造理解に使い、翼端、窓、ナセル後縁で判別します。"
+      },
+      "bullets": [
+        {
+          "zh": "每側兩軸四輪，前腳雙輪。",
+          "en": "Two axles and four tyres per main bogie, with twin nose wheels.",
+          "ja": "各主脚は2軸4輪、前脚は2輪です。"
+        },
+        {
+          "zh": "主腳柱與轉向架適合廣體機高重量起降。",
+          "en": "The strut and bogie support wide-body operating weights.",
+          "ja": "主脚柱とボギーがワイドボディ機の重量を支えます。"
+        },
+        {
+          "zh": "輪數與 787 相同，不能單獨作辨識點。",
+          "en": "Wheel count matches the 787 and cannot identify the type alone.",
+          "ja": "輪数は787と同じで単独識別には使えません。"
+        }
+      ],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "A330-900 是 A330neo 的長機身主力型，以 A330-300 級容量搭配 Trent 7000、新翼與弧形複合材料翼尖。它保留 A330 機身截面並提升航程與效率。",
+        "en": "The A330-900 is the longer, principal A330neo variant, pairing A330-300-class capacity with Trent 7000 engines, a new wing and curved composite tips. It retains the A330 cross-section while improving range and efficiency.",
+        "ja": "A330-900はA330neoの長胴主力型で、A330-300級の容量にTrent 7000、新主翼、曲線的な複合材翼端を組み合わせます。A330の胴体断面を維持しつつ航続距離と効率を向上します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "A330ceo 駕駛艙採 Airbus 側桿、飛行員正前方桌板與六具較傳統的顯示器；中央 ECAM 顯示引擎與系統狀態。",
+        "en": "The A330ceo flight deck uses Airbus sidesticks, tray tables ahead of the pilots and six earlier-generation displays, with central ECAM screens for engines and systems.",
+        "ja": "A330ceoの操縦席はAirbus式サイドスティック、正面テーブル、6面の従来型表示器を備え、中央ECAMがエンジンとシステムを表示します。"
+      },
+      "fact": {
+        "zh": "與 787 相比，最直觀差異是沒有駕駛盤；A330neo 可換裝更新顯示器，因此螢幕外觀需視子型與改裝狀態判讀。",
+        "en": "The clearest difference from a 787 is the absence of yokes. A330neo and upgrades may use newer displays, so screen appearance depends on variant and retrofit.",
+        "ja": "787との最明確な差は操縦輪がないことです。A330neoや改修機は新型画面を使うため表示器外観は仕様で変わります。"
+      },
+      "bullets": [
+        {
+          "zh": "側桿位於左右側壁，正面沒有駕駛盤。",
+          "en": "Sidesticks sit at the sidewalls, leaving no yoke ahead of either pilot.",
+          "ja": "サイドスティックは側壁にあり、正面に操縦輪がありません。"
+        },
+        {
+          "zh": "正副駕駛前方設有可拉出桌板。",
+          "en": "Pull-out tray tables sit in front of both pilots.",
+          "ja": "両席正面に引き出し式テーブルがあります。"
+        },
+        {
+          "zh": "中央兩具 ECAM 顯示器呈上下排列。",
+          "en": "Two central ECAM displays are arranged vertically.",
+          "ja": "中央2面のECAM表示器は上下配置です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "A330 的駕駛艙窗保留經典 Airbus 六片式輪廓：正面主風擋較窄高，外側窗沿圓鈍機鼻向後延伸，窗框彼此分開且沒有 787 那種更大面積的玻璃感。",
+        "en": "The A330 retains the classic six-pane Airbus outline: relatively tall narrow front panes and separate outer panes wrapping around the rounded nose, with less glass area than the 787.",
+        "ja": "A330は古典的なAirbus六枚窓で、比較的縦長の前面窓と丸い機首へ回り込む独立側窓を持ち、787ほど大きなガラス面には見えません。"
+      },
+      "fact": {
+        "zh": "A330 與 A340 共用相近機鼻與窗型；引擎數可立即排除四發 A340，再用翼尖與短艙區分 787。",
+        "en": "A330 and A340 share similar nose glazing. Engine count excludes the four-engine A340, then wingtips and nacelles separate a 787.",
+        "ja": "A330とA340は似た機首窓を共有します。4発のA340をエンジン数で除外し、翼端とナセルで787と区別します。"
+      },
+      "bullets": [
+        {
+          "zh": "正面主風擋較縱長，中央接縫清楚。",
+          "en": "Forward panes look relatively tall with a clear centre seam.",
+          "ja": "前面窓は比較的縦長で中央継ぎ目が明瞭です。"
+        },
+        {
+          "zh": "外側窗框沿機鼻側面形成明顯折線。",
+          "en": "Outer frames form a clear angular line along the nose side.",
+          "ja": "外側窓枠が機首側面に明確な折れ線を作ります。"
+        },
+        {
+          "zh": "窗面積通常比 787 小，機鼻下緣更接近傳統 Airbus 曲線。",
+          "en": "The glass area is smaller than the 787's and the lower nose follows a classic Airbus curve.",
+          "ja": "窓面積は787より小さく、機首下面は従来のAirbus曲線です。"
+        }
+      ],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "長而向上彎曲的複合材料翼尖取代 A330ceo 的小型上下翼尖柵，外形受 A350 設計經驗影響。它增加有效展弦比並降低誘導阻力。",
+        "en": "Long, upward-curving composite tips replace the A330ceo's small upper-and-lower fences. Influenced by A350 design experience, they increase effective aspect ratio and reduce induced drag.",
+        "ja": "長く上方へ湾曲する複合材翼端がA330ceoの小型上下フェンスを置き換えます。A350の設計経験を取り入れ、有効アスペクト比を高めて誘導抵抗を減らします。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

@@ -37,5 +37,254 @@
         "2 × Rolls-Royce Trent 700"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "加大的上部貨艙提供約 2,209 立方公尺容積，前端以大型上掀式貨門裝卸飛機翼段與機身段。下半部仍可看出 A330-200F 的機身基礎。",
+        "en": "The enlarged upper hold provides about 2,209 cubic metres of volume, loaded through a huge upward-opening forward door for wings and fuselage sections. The lower fuselage still reveals its A330-200F foundation.",
+        "ja": "拡大上部貨物室は約2,209立方メートルの容積を持ち、翼や胴体区画を大型上開き前方扉から搭載します。下部胴体にはA330-200Fの基礎が残ります。"
+      },
+      "specs": [
+        [
+          "全長",
+          "63.1 m"
+        ],
+        [
+          "貨艙容積",
+          "約 2,209 m³"
+        ],
+        [
+          "最大酬載",
+          "51 t"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "駕駛艙位於巨大貨艙地板下方，使機組區不必隨前方貨門一起開啟。主要飛行控制與顯示承襲 A330 家族，有利於訓練與維修共通性。",
+        "en": "The flight deck sits below the oversized cargo floor, so the crew area does not move with the forward cargo door. Principal controls and displays retain A330-family commonality for training and maintenance.",
+        "ja": "操縦室は巨大貨物床の下にあり、前方貨物扉とともに動きません。主要な操縦・表示系はA330ファミリーとの共通性を保ち、訓練と整備を容易にします。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "低置後掠翼源自 A330-200F，承受巨大機身增加的側面積與任務載荷。前緣縫翼、後緣襟翼及擾流板維持大型運輸機的起降與操縱需求。",
+        "en": "The low swept wing derives from the A330-200F and carries the mission loads beneath the much larger side area. Slats, flaps and spoilers provide the required low-speed and control performance.",
+        "ja": "低翼後退翼はA330-200F由来で、巨大な側面積と任務荷重を支えます。前縁スラット、後縁フラップ、スポイラーが低速性能と操縦性を担います。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "60.3 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "BelugaXL 使用兩具 Rolls-Royce Trent 700 渦輪扇，安裝於 A330 型主翼下。它沒有採用 A330neo 的 Trent 7000，因此不能只因 BelugaXL 較新就視為 neo 動力。",
+        "en": "The BelugaXL uses two Rolls-Royce Trent 700 turbofans beneath its A330 wing. It does not use the A330neo's Trent 7000, so its newer service date must not be mistaken for neo propulsion.",
+        "ja": "BelugaXLはA330型主翼下に2基のRolls-Royce Trent 700を装備します。A330neoのTrent 7000ではなく、新しい就航時期だけでneo系動力と判断できません。"
+      },
+      "specs": [
+        [
+          "型號",
+          "Rolls-Royce Trent 700"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "垂直尾翼加大以補償巨大貨艙造成的方向安定影響，並保留 Airbus 鯨魚塗裝的尾部輪廓。尾翼面積與高聳比例明顯大於一般 A330。",
+        "en": "The vertical tail is enlarged to offset the directional-stability effects of the enormous cargo body and forms the aft outline of the whale livery. Its area and height are conspicuously greater than on a standard A330.",
+        "ja": "巨大貨物胴体による方向安定への影響を補うため垂直尾翼は拡大され、クジラ塗装の後部輪郭を構成します。通常のA330より面積と高さが目立ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼外端增設垂直端板，協助巨大機身在偏航時維持穩定。這對端板是 BelugaXL 尾部最容易辨認的細節之一。",
+        "en": "Vertical endplates are added at the horizontal-tail tips to help stabilise the huge fuselage in yaw. These fins are among the easiest BelugaXL tail identifiers.",
+        "ja": "水平尾翼端には垂直エンドプレートが追加され、巨大胴体のヨー安定を助けます。このフィンはBelugaXL尾部の分かりやすい識別点です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "前三點式起落架沿用 A330 貨機基礎：雙輪前架與每側四輪主架。寬輪距支撐大型機體，外形不像 A350-1000 的六輪主架。",
+        "en": "The tricycle gear follows the A330 freighter basis: twin nose wheels and four-wheel main bogies on each side. Its wide track supports the large airframe and differs from the A350-1000's six-wheel bogies.",
+        "ja": "前輪式降着装置はA330貨物型を基礎とし、前脚2輪、左右各4輪の主脚台車です。広い輪距で大型機体を支え、A350-1000の6輪台車とは異なります。"
+      },
+      "specs": [
+        [
+          "主起落架",
+          "每側 4 輪"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "BelugaXL 是以 A330-200F 為基礎打造的超大型零組件運輸機，用於 Airbus 生產網路。巨大的上部貨艙、低置駕駛艙與鯨魚造型使它無法與普通客機混淆。",
+        "en": "The BelugaXL is an outsized component transport derived from the A330-200F for Airbus's production network. Its enormous upper hold, lowered flight deck and whale-like profile make it unmistakable.",
+        "ja": "BelugaXLはA330-200Fを基にAirbus生産網向けに開発された超大型部品輸送機です。巨大な上部貨物室、低い操縦室、クジラ状の外形で通常の旅客機とは容易に区別できます。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "外窗仍呈 A330 家族的六片分段輪廓，但位置被壓低在巨大貨艙鼻部下方。正面看來，窗帶與機鼻頂部之間的高度差極大。",
+        "en": "The glazing retains the A330 family's segmented six-pane outline but is positioned low beneath the huge cargo nose. Head-on, the large vertical gap between the window belt and crown is distinctive.",
+        "ja": "外窓はA330系の分割6枚形状を保ちますが、巨大な貨物ノーズ下に低く配置されます。正面では窓帯と機体頂部の大きな高低差が特徴です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "翼尖採 A330ceo 家族的小型上下翼尖柵，而非 A330neo 的長弧形翼尖。這是辨認其 A330-200F 基礎的重要細節。",
+        "en": "The tips use the A330ceo family's small upper-and-lower wingtip fences rather than the A330neo's long curved tips. This is a useful clue to its A330-200F basis.",
+        "ja": "翼端はA330neoの長い曲線翼端ではなく、A330ceo系の小型上下ウイングチップフェンスです。A330-200Fを基礎とする重要な識別点です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

@@ -37,5 +37,245 @@
         "2 × CFM LEAP-1A / Pratt & Whitney PW1100G-JM"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "A319neo 的窄體機身比 A320neo 短，通常每側配置三個主要客艙門與翼上逃生出口。短胴比例是與 A320／A321neo 最直接的辨識方式。",
+        "en": "The A319neo narrow body is shorter than the A320neo and normally has three principal cabin doors per side plus overwing exits. Its short proportions are the quickest cue against the A320 and A321neo.",
+        "ja": "A319neoの単通路胴体はA320neoより短く、通常は片側3か所の主要客室扉と主翼上非常口を備えます。短い胴体比率がA320／A321neoとの最も直接的な識別点です。"
+      },
+      "specs": [
+        [
+          "全長",
+          "33.84 m"
+        ],
+        [
+          "典型載客量",
+          "120–150"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "neo 延續 A320 家族的雙人玻璃座艙、側置操縱桿與 fly-by-wire 控制邏輯。顯示與航電可隨批次升級，但基本操作哲學維持家族共通。",
+        "en": "The neo retains the A320 family's two-crew glass cockpit, sidesticks and fly-by-wire control philosophy. Displays and avionics evolve by production standard, while the basic operating concept remains common across the family.",
+        "ja": "neoはA320ファミリーの2名乗務ガラスコックピット、サイドスティック、フライ・バイ・ワイヤの思想を継承します。表示器と電子機器は製造時期で更新されても、基本操作概念は共通です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "neo 保留 A320 家族的低翼、後掠翼基本平面形，但針對較重的發動機、Sharklet 與較高操作重量進行局部結構和氣動改良。前緣縫翼與後緣襟翼提供低速升力。",
+        "en": "The neo retains the A320 family's low-mounted swept-wing planform, with local structural and aerodynamic changes for heavier engines, Sharklets and higher operating weights. Leading-edge slats and trailing-edge flaps provide low-speed lift.",
+        "ja": "neoはA320ファミリーの低翼・後退翼平面形を維持しつつ、重いエンジン、Sharklet、高い運用重量に対応する局部構造・空力改良を受けています。前縁スラットと後縁フラップが低速揚力を担います。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "35.8 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "A320neo 家族可選 CFM LEAP-1A 或 Pratt & Whitney PW1100G-JM 高旁通比渦輪扇。較大的風扇、改良核心與齒輪傳動等技術降低耗油、噪音及排放；這也是與 ceo 世代最醒目的外觀差異。",
+        "en": "The A320neo family uses either CFM LEAP-1A or Pratt & Whitney PW1100G-JM high-bypass turbofans. Larger fans and newer cores—plus a geared fan on the PW1100G—reduce fuel burn, noise and emissions, and make the nacelles an obvious cue versus the ceo generation.",
+        "ja": "A320neoファミリーはCFM LEAP-1AまたはPratt & Whitney PW1100G-JM高バイパス比ターボファンを採用します。大型ファン、新世代コア、PW1100Gの減速機構により燃費・騒音・排出を低減し、ceo世代より大きなナセルが識別点です。"
+      },
+      "specs": [
+        [
+          "型號",
+          "LEAP-1A / PW1100G-JM"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "垂直尾翼與方向舵維持 A320 家族的典型輪廓，前緣根部有明顯背鰭過渡。它提供方向穩定與偏航控制，本身通常無法區分各 neo 子型。",
+        "en": "The vertical tail and rudder retain the familiar A320-family outline with a noticeable dorsal-root transition. They provide directional stability and yaw control but normally do not distinguish individual neo variants.",
+        "ja": "垂直尾翼と方向舵は前縁基部のドーサル部を含むA320系の輪郭を維持します。方向安定とヨー制御を担いますが、neo各型の識別には通常使えません。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "低置水平尾翼裝在機身尾段兩側，配合升降舵與可調安定面控制俯仰及配平。外形沿用 A320 家族設計，各 neo 型主要差異仍在機身長度。",
+        "en": "The low-mounted horizontal tail sits on either side of the aft fuselage; elevators and the trimmable stabilizer control pitch and trim. Its A320-family form is shared, leaving fuselage length as the stronger neo-variant cue.",
+        "ja": "低位置の水平尾翼は後部胴体両側に付き、昇降舵と可動安定板でピッチとトリムを制御します。形状はA320系で共通し、neo各型は胴体長の方が識別しやすい特徴です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "標準前三點式起落架由雙輪前架與左右雙輪主架構成，向機身內收。A321XLR 等較高重量衍生型會強化結構，但基本輪組仍維持家族共通外觀。",
+        "en": "The standard tricycle gear has twin nose wheels and twin-wheel main units that retract inward. Higher-weight derivatives such as the A321XLR receive structural changes, while the basic wheel arrangement remains familiar.",
+        "ja": "標準前輪式降着装置は前脚2輪と左右各2輪の主脚で、機体内側へ格納されます。A321XLRなど高重量派生型は強化されますが、基本輪構成は共通です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "A319neo 是 A320neo 家族的短機身型，結合約 34 公尺機身、兩種新世代引擎與 Sharklet。較少座位配合良好航程，適合需求較薄但航段較長的市場。",
+        "en": "The A319neo is the short-fuselage A320neo-family member, combining an approximately 34-metre body with new-generation engines and Sharklets. Lower capacity and useful range suit thinner, longer sectors.",
+        "ja": "A319neoはA320neoファミリーの短胴型で、約34 mの胴体に新世代エンジンとSharkletを組み合わせます。少ない座席数と良好な航続性能により、需要の薄い長距離区間に適します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "六片式駕駛艙外窗由中央向側面平順展開，側窗下緣斜切，是 A320 家族正面輪廓的重要特徵。neo 的窗型與 ceo 基本相同。",
+        "en": "Six flight-deck panes flow smoothly from the centre to the sides, with a slanted lower edge on the side windows. This is a key A320-family frontal cue and is essentially unchanged from ceo to neo.",
+        "ja": "6枚の操縦室窓は中央から側面へ滑らかにつながり、側窓下縁が斜めになるA320系の重要な正面特徴です。neoとceoで窓形状は基本的に共通です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "高聳後掠的 Sharklet 為 neo 的標準翼尖裝置，可降低翼尖渦與誘導阻力。它和早期 A320 家族常見的小型三角翼尖柵外型明顯不同。",
+        "en": "Tall swept Sharklets are standard on the neo family. They weaken wingtip vortices and induced drag and are visually distinct from the small triangular wingtip fences common on early A320-family aircraft.",
+        "ja": "背の高い後退角付きSharkletはneoの標準翼端装置で、翼端渦と誘導抵抗を低減します。初期A320ファミリーの小型三角形ウイングチップフェンスとは明確に異なります。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }
