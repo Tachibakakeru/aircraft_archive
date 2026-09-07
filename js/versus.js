@@ -12,9 +12,11 @@ const F = v => I18N.field(v);
 let fleet = null;
 const dataCache = {};
 let idA = "b738", idB = "a320";
+let pickerA = null, pickerB = null;
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=170")).json();
+  fleet = await (await fetch("data/fleet.json?v=172")).json();
+  fleet.aircraft.sort((a, b) => a.name.localeCompare(b.name, "en", { numeric: true, sensitivity: "base" }));
 
   const params = new URLSearchParams(location.search);
   const pa = params.get("a"), pb = params.get("b");
@@ -35,7 +37,7 @@ let idA = "b738", idB = "a320";
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=170`)).json();
+  const d = await (await fetch(`data/${id}.json?v=172`)).json();
   dataCache[id] = d;
   return d;
 }
@@ -47,18 +49,14 @@ function syncUrl(){
 }
 
 function renderPickers(){
-  for (const [selId, current] of [["vs-pick-a", idA], ["vs-pick-b", idB]]){
-    const sel = $(selId);
-    sel.innerHTML = "";
-    fleet.aircraft.forEach(a => {
-      const o = document.createElement("option");
-      o.value = a.id; o.textContent = a.name;
-      if (a.id === current) o.selected = true;
-      sel.appendChild(o);
-    });
-  }
-  $("vs-pick-a").onchange = async e => { idA = e.target.value; await loadData(idA); syncUrl(); render(); };
-  $("vs-pick-b").onchange = async e => { idB = e.target.value; await loadData(idB); syncUrl(); render(); };
+  if (!pickerA) pickerA = AircraftPicker.mount($("vs-pick-a"), fleet.aircraft, idA, async id => {
+    idA = id; await loadData(id); syncUrl(); render();
+  });
+  if (!pickerB) pickerB = AircraftPicker.mount($("vs-pick-b"), fleet.aircraft, idB, async id => {
+    idB = id; await loadData(id); syncUrl(); render();
+  });
+  pickerA.set(idA);
+  pickerB.set(idB);
 }
 
 function craftHeadHtml(id){

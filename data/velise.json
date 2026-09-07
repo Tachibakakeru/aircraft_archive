@@ -1,0 +1,265 @@
+{
+  "title": "Pipistrel Velis Electro",
+  "sub": {
+    "zh": "全球首款取得型別認證的電動飛機，主要用於安靜、低營運成本的日間目視飛行訓練。",
+    "en": "The world's first type-certified electric aircraft, aimed primarily at quiet, low-operating-cost day-VFR training.",
+    "ja": "世界初の型式証明を取得した電動航空機で、静かで低運航費の日中VFR訓練を主用途とします。"
+  },
+  "sources": [
+    "https://www.pipistrel-aircraft.com/products/velis-electro/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "全球首款取得型別認證的電動飛機，主要用於安靜、低營運成本的日間目視飛行訓練。",
+        "en": "The world's first type-certified electric aircraft, aimed primarily at quiet, low-operating-cost day-VFR training.",
+        "ja": "世界初の型式証明を取得した電動航空機で、静かで低運航費の日中VFR訓練を主用途とします。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "並排雙座訓練座艙沿用 Virus SW 121 架構，以數位顯示器監控電池、馬達與剩餘能量。",
+        "en": "The side-by-side training cockpit derives from the Virus SW 121 and digitally monitors battery, motor and remaining energy.",
+        "ja": "並列2座訓練操縦室はVirus SW 121を基に、電池、モーター、残存エネルギーをデジタル監視します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大型前風擋與透明側門提供教練和學員良好視野，高翼不遮擋下方觀察。",
+        "en": "A large windshield and glazed side doors give instructor and student broad visibility, with the high wing aiding downward views.",
+        "ja": "大型前面窓と透明側ドアが教官・訓練生に広い視界を与え、高翼が下方視界を助けます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "輕量複合材料雙座機身將電池分布於機鼻與座艙後方，維持重心並降低阻力。",
+        "en": "The lightweight composite fuselage distributes battery mass ahead of and behind the cabin to manage center of gravity and drag.",
+        "ja": "軽量複合材胴体は電池を機首と客室後方に分散し、重心と抵抗を管理します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "液冷 E-811 電動馬達驅動機鼻螺旋槳；低噪音、即時扭力與較少活動零件適合反覆訓練架次。",
+        "en": "A liquid-cooled E-811 electric motor drives the nose propeller; low noise, instant torque and fewer moving parts suit repetitive training sorties.",
+        "ja": "液冷E-811電動モーターが機首プロペラを駆動し、低騒音、即時トルク、少ない可動部が反復訓練に適します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖外形配合該機的速度範圍與誘導阻力需求；部分滑翔機使用可更換翼尖或翼端小翼。",
+        "en": "The tip geometry suits the aircraft's speed range and induced-drag goals; some sailplanes use interchangeable tips or winglets.",
+        "ja": "翼端形状は速度域と誘導抵抗に合わせ、一部グライダーは交換翼端やウイングレットを使います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "長展弦比懸臂高翼配襟翼與擾流板，承襲 Pipistrel 高效率滑翔特性並降低能量消耗。",
+        "en": "The high-aspect-ratio cantilever wing uses flaps and spoilers, retaining Pipistrel's glider-like efficiency to reduce energy use.",
+        "ja": "高アスペクト比片持ち高翼はフラップとスポイラーを備え、Pipistrelの滑空的効率で消費電力を抑えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "T 型水平尾翼位於垂尾頂端，遠離主翼尾流，是 Velis／Virus 家族醒目的外觀線索。",
+        "en": "The T-tail places the tailplane atop the fin, away from wing wake, and is a strong Velis/Virus family cue.",
+        "ja": "T字尾翼は水平尾翼を垂直尾翼頂部に置き、主翼後流を避けるVelis／Virus系の特徴です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定前三點式起落架與輪罩結構簡單，適合飛行學校高頻率起降與低維護需求。",
+        "en": "Fixed faired tricycle gear is simple and suited to frequent flight-school takeoffs and landings.",
+        "ja": "固定前輪式脚とホイールカバーは簡潔で、飛行学校の高頻度離着陸に適します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.70 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "最長 56 min"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Pipistrel E-811 electric motor"
+      ]
+    ]
+  }
+}

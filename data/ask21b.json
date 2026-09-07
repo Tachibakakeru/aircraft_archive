@@ -1,0 +1,265 @@
+{
+  "title": "Alexander Schleicher ASK 21 B",
+  "sub": {
+    "zh": "經典 ASK 21 的現行改良雙座型，持續用於初級、越野與特技滑翔訓練。",
+    "en": "The current improved two-seat ASK 21, used for primary, cross-country, and aerobatic glider training.",
+    "ja": "初等・クロスカントリー・曲技滑翔訓練に使われる、現行改良型の2座ASK 21です。"
+  },
+  "sources": [
+    "https://www.alexander-schleicher.de/en/flugzeuge/ask-21-b/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "經典 ASK 21 的現行改良雙座型，持續用於初級、越野與特技滑翔訓練。",
+        "en": "The current improved two-seat ASK 21, used for primary, cross-country, and aerobatic glider training.",
+        "ja": "初等・クロスカントリー・曲技滑翔訓練に使われる、現行改良型の2座ASK 21です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "寬敞串列雙座配完整雙操縱系統，前席供學員、後席供教練，透明罩提供良好示範視野。",
+        "en": "A roomy tandem cockpit has full dual controls, with student forward and instructor aft beneath a broad training canopy.",
+        "ja": "広いタンデム2座は完全複操縦で、前席訓練生・後席教官を大型キャノピーが覆います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大面積透明罩／風擋提供前方與側向視野，其窗框與座艙罩輪廓也是辨識該機型的重要線索。",
+        "en": "Large windshield or canopy glazing provides forward and side visibility; its framing is also a useful identification cue.",
+        "ja": "大型風防／キャノピーが前方・側方視界を提供し、窓枠形状も機種識別の手掛かりです。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "堅固玻璃纖維機身著重訓練耐用性與易修復性，較寬座艙後平順收束至 T 型尾翼。",
+        "en": "The robust glass-fiber fuselage prioritizes training durability and repairability, tapering from a broad cabin to the T-tail.",
+        "ja": "丈夫なガラス繊維胴体は訓練耐久性と修理性を重視し、広い客室からT字尾翼へ絞ります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "ASK 21 B 是純滑翔機，沒有引擎；由拖曳機或絞盤起飛，能量管理完全依靠高度與氣流。",
+        "en": "ASK 21 B is unpowered, launching by aerotow or winch and relying entirely on altitude and atmospheric lift for energy.",
+        "ja": "ASK 21 Bは無動力で、曳航またはウインチ発航し、高度と上昇気流だけでエネルギーを管理します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "圓滑翼尖沒有獨立翼端小翼，耐用且失速特性溫和，符合初級訓練需求。",
+        "en": "Rounded tips omit separate winglets, favoring durability and benign stall behavior for primary training.",
+        "ja": "丸い翼端は独立ウイングレットを持たず、初等訓練向けの耐久性と穏やかな失速特性を重視します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "17 m 中置翼沒有襟翼，使用副翼與上翼面擾流板；簡化操控有利於基礎及特技訓練。",
+        "en": "The 17 m mid-wing has no flaps, using ailerons and upper-surface airbrakes for simple primary and aerobatic training.",
+        "ja": "17m中翼はフラップを持たず、補助翼と上面エアブレーキで初等・曲技訓練を簡潔にします。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "T 型水平尾翼高置於垂尾頂端，避開主翼尾流與地面碰撞，也是 ASK 21 家族辨識點。",
+        "en": "The high T-tail clears wing wake and ground contact and is a defining ASK 21 family feature.",
+        "ja": "高いT字水平尾翼は主翼後流と地面接触を避け、ASK 21系の特徴です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定主輪、機鼻輪與尾輪讓訓練起降更穩定；翼尖仍設滑橇以承受停止時的接地。",
+        "en": "Fixed main, nose and tail wheels improve training stability, while tip skids protect the wing when it settles after stopping.",
+        "ja": "固定主輪、前輪、尾輪が訓練着陸を安定させ、停止時は翼端スキッドが翼を保護します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "2018"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "17.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "無動力"
+      ]
+    ]
+  }
+}

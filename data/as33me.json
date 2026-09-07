@@ -1,0 +1,265 @@
+{
+  "title": "Alexander Schleicher AS 33 Me",
+  "sub": {
+    "zh": "AS 33 高性能滑翔機的電動自力起飛型，可使用 15 或 18 公尺翼尖。",
+    "en": "The electric self-launching AS 33 high-performance glider with interchangeable 15- and 18-metre tips.",
+    "ja": "15m／18m翼端を交換できるAS 33高性能グライダーの電動自力発航型です。"
+  },
+  "sources": [
+    "https://www.alexander-schleicher.de/flugzeuge/as-33/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "AS 33 高性能滑翔機的電動自力起飛型，可使用 15 或 18 公尺翼尖。",
+        "en": "The electric self-launching AS 33 high-performance glider with interchangeable 15- and 18-metre tips.",
+        "ja": "15m／18m翼端を交換できるAS 33高性能グライダーの電動自力発航型です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "單座半躺座艙採一體式透明罩與競賽級儀表配置，窄機鼻把迎風面積降到最低。",
+        "en": "The reclined single-seat cockpit uses a one-piece canopy and competition instruments, with a very narrow nose to minimize frontal area.",
+        "ja": "半仰臥単座操縦室は一体キャノピーと競技計器を備え、極細機首で前面面積を抑えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大面積透明罩／風擋提供前方與側向視野，其窗框與座艙罩輪廓也是辨識該機型的重要線索。",
+        "en": "Large windshield or canopy glazing provides forward and side visibility; its framing is also a useful identification cue.",
+        "ja": "大型風防／キャノピーが前方・側方視界を提供し、窓枠形状も機種識別の手掛かりです。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "高剛性碳纖維殼體由短而圓滑的座艙段迅速收束成細尾樑，以降低高速滑翔阻力。",
+        "en": "The stiff carbon shell tapers rapidly from the compact cockpit into a fine tailboom to reduce drag in fast glide.",
+        "ja": "高剛性炭素殻は短い操縦室から細い尾部へ急速に絞り、高速滑空抵抗を減らします。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "Me 型的電動自力起飛裝置可由機身伸出螺旋槳與支架；不用時完全收納以避免持續阻力。",
+        "en": "The Me electric self-launch unit raises a propeller and mast from the fuselage, retracting fully when unused to avoid continuous drag.",
+        "ja": "Me型電動自力発航装置は胴体からプロペラ支柱を展開し、不使用時は完全格納して抵抗を避けます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "15 m 與 18 m 可交換翼尖配不同翼端小翼，使同一機體能在競賽級別與滑翔性能間切換。",
+        "en": "Interchangeable 15 m and 18 m tips with tailored winglets let one airframe switch competition classes and performance emphasis.",
+        "ja": "専用ウイングレット付き15m／18m交換翼端により、競技クラスと性能重点を切り替えられます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "細長複合材料翼採多段操縱面與可變彎度襟翼，針對寬廣速度範圍維持高升阻比。",
+        "en": "Slender composite wings use segmented controls and camber-changing flaps to retain high lift-to-drag ratio across a wide speed range.",
+        "ja": "細長い複合材翼は分割操縦面と可変キャンバーフラップで広い速度域の高揚抗比を保ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "小型 T 型水平尾翼位於垂尾頂端，減少主翼後流影響並保持尾部整潔。",
+        "en": "A small T-tail clears wing wake and keeps the aft profile aerodynamically clean.",
+        "ja": "小型T字水平尾翼が主翼後流を避け、尾部外形を空力的に整えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "可收放單主輪與尾輪支撐機身，翼尖著地由保護滑橇承受；起飛時常由翼輪輔助平衡。",
+        "en": "A retractable monowheel and tailwheel support the fuselage, with tip skids and a detachable wing dolly for takeoff balance.",
+        "ja": "引込単輪と尾輪が胴体を支え、翼端スキッドと着脱式翼輪で離陸時の平衡を補助します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "1"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "15 / 18 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "Electric self-launch system"
+      ]
+    ]
+  }
+}

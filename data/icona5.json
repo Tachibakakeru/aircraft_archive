@@ -1,0 +1,265 @@
+{
+  "title": "ICON A5",
+  "sub": {
+    "zh": "可折疊機翼、具整機降落傘與抗尾旋機體的雙座輕型水陸兩用機。",
+    "en": "A two-seat light amphibian with folding wings, a whole-aircraft parachute, and a spin-resistant airframe.",
+    "ja": "折り畳み翼、機体パラシュート、耐スピン機体を備える2座軽量水陸両用機です。"
+  },
+  "sources": [
+    "https://www.iconaircraft.com/a5/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "A5 是雙座高翼水陸兩用機，以船形機身、翼尖浮筒、折疊翼與後置推進螺旋槳辨識。",
+        "en": "The A5 is a two-seat high-wing amphibian identified by its boat hull, tip floats, folding wings and pusher propeller.",
+        "ja": "A5は船形胴体、翼端フロート、折り畳み高翼、後置推進プロペラで識別できる2座水陸両用機です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "並排雙座座艙採接近汽車的簡潔介面，降低休閒飛行員進入門檻，並整合 Angle of Attack 顯示。",
+        "en": "The side-by-side cockpit uses an automotive-style simplified interface and a prominent angle-of-attack display.",
+        "ja": "並列2座の操縦室は自動車的で簡潔な操作系と目立つ迎角表示を採用します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大面積曲面透明罩提供前方與側向視野；前方窗框較少，適合水面進場與休閒觀景。",
+        "en": "A broad curved canopy provides generous forward and side visibility with minimal framing for water operations and touring.",
+        "ja": "大型曲面キャノピーは枠が少なく、水上進入や遊覧に広い前方・側方視界を提供します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "複合材料機身下半部形成船底與滑水面，左右翼根附近的突出結構協助水上穩定。",
+        "en": "The composite lower fuselage forms a planing boat hull, while lateral sponson-like forms help stability on water.",
+        "ja": "複合材胴体下部が滑走艇形状を作り、左右の張り出しが水上安定性を助けます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "Rotax 912 iS 安裝在座艙後上方，以三葉螺旋槳向後推進，讓機鼻保持開闊並遠離浪花。",
+        "en": "A Rotax 912 iS drives a rear-facing three-blade pusher propeller above and behind the cabin, clear of spray.",
+        "ja": "Rotax 912 iSが客室後上方の3翅プッシャープロペラを駆動し、飛沫から離して機首視界を確保します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖向下整合小型浮筒，水上時支撐機翼；翼面可向後折疊以縮小停放寬度。",
+        "en": "Downturned tip floats support the wings on water, and the wings fold aft to reduce storage width.",
+        "ja": "下向き翼端フロートが水上で翼を支え、主翼は後方へ折り畳めます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "高翼採無支柱懸臂布局並以抗尾旋設計為核心，兼顧低速操控、視野與水面淨空。",
+        "en": "The strutless high wing emphasizes spin resistance, low-speed handling, visibility and water clearance.",
+        "ja": "支柱なし高翼は耐スピン性、低速操縦、視界、水面クリアランスを重視します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂尾位於推進螺旋槳後方，能直接利用螺旋槳滑流維持低速方向控制。",
+        "en": "The single fin sits behind the pusher propeller and benefits from propwash for low-speed directional control.",
+        "ja": "単一垂直尾翼はプッシャープロペラ後方にあり、低速時に後流を利用できます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "低置水平尾翼安裝於尾端，避開高置螺旋槳並形成傳統尾翼布局。",
+        "en": "A low-mounted tailplane clears the elevated propeller and forms a conventional tail arrangement.",
+        "ja": "低位置の水平尾翼は高いプロペラを避け、通常尾翼配置を構成します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "可收放前三點式起落架讓 A5 能在陸地與水面操作；收起後輪組貼合船形機身。",
+        "en": "Retractable tricycle gear permits land and water operations, stowing closely against the boat hull.",
+        "ja": "引込式前輪脚により陸上と水上の両方で運用でき、格納時は船形胴体に沿います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "2008"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.61 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "791 km (427 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Rotax 912 iS Sport"
+      ]
+    ]
+  }
+}

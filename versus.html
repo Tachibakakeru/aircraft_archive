@@ -7,8 +7,8 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b1220">
-<link rel="stylesheet" href="css/style.css?v=159">
-<link rel="stylesheet" href="css/versus.css?v=159">
+<link rel="stylesheet" href="css/style.css?v=174">
+<link rel="stylesheet" href="css/versus.css?v=174">
 <script src="js/theme.js?v=134"></script>
 <script src="js/i18n.js?v=153"></script>
 </head>
@@ -29,12 +29,12 @@
 <div class="vs-pickers">
   <div class="vs-picker-col">
     <label data-i18n="versus.pickA">機型 A</label>
-    <select id="vs-pick-a"></select>
+    <input id="vs-pick-a" type="text" autocomplete="off" data-i18n-placeholder="fleet.search" placeholder="搜尋機型 / 廠商 / 代號…">
   </div>
   <div class="vs-vs">VS</div>
   <div class="vs-picker-col">
     <label data-i18n="versus.pickB">機型 B</label>
-    <select id="vs-pick-b"></select>
+    <input id="vs-pick-b" type="text" autocomplete="off" data-i18n-placeholder="fleet.search" placeholder="搜尋機型 / 廠商 / 代號…">
   </div>
 </div>
 
@@ -42,7 +42,7 @@
 
 <div class="vs-rows" id="vs-rows"></div>
 
-<script src="js/versus.js?v=170"></script>
-<script src="js/ui.js?v=137"></script>
+<script src="js/ui.js?v=174"></script>
+<script src="js/versus.js?v=174"></script>
 </body>
 </html>

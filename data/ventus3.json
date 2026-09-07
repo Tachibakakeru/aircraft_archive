@@ -1,0 +1,265 @@
+{
+  "title": "Schempp-Hirth Ventus 3",
+  "sub": {
+    "zh": "可選 15 或 18 公尺翼展，以及純滑翔、續航或自力起飛動力的高性能單座滑翔機。",
+    "en": "A high-performance single-seat glider with 15- or 18-metre wings and pure, sustainer, or self-launching options.",
+    "ja": "15m／18m翼と、純滑空・サステナー・自力発航仕様を選べる高性能単座グライダーです。"
+  },
+  "sources": [
+    "https://www.schempp-hirth.com/en/sailplanes/ventus/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "可選 15 或 18 公尺翼展，以及純滑翔、續航或自力起飛動力的高性能單座滑翔機。",
+        "en": "A high-performance single-seat glider with 15- or 18-metre wings and pure, sustainer, or self-launching options.",
+        "ja": "15m／18m翼と、純滑空・サステナー・自力発航仕様を選べる高性能単座グライダーです。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "單座座艙採半躺姿勢與窄機身，大型一體式透明罩降低迎風面並提供良好上方視野。",
+        "en": "The single pilot reclines in a narrow fuselage beneath a large one-piece canopy, reducing frontal area while preserving upward visibility.",
+        "ja": "単座操縦者は細い胴体内で半仰臥し、大型一体キャノピーが前面面積を減らしつつ上方視界を確保します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大面積透明罩／風擋提供前方與側向視野，其窗框與座艙罩輪廓也是辨識該機型的重要線索。",
+        "en": "Large windshield or canopy glazing provides forward and side visibility; its framing is also a useful identification cue.",
+        "ja": "大型風防／キャノピーが前方・側方視界を提供し、窓枠形状も機種識別の手掛かりです。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "碳纖維機身前段容納座艙與收放主輪，細長尾樑將阻力與濕面積降至最低。",
+        "en": "The carbon fuselage houses cockpit and retractable main wheel forward, then tapers into a very low-drag tailboom.",
+        "ja": "炭素胴体前部に操縦室と引込主輪を収め、細い尾部で抵抗と濡れ面積を最小化します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "依版本可為純滑翔、Turbo 返航輔助、FES 前緣電動螺旋槳或 Solo 自力起飛系統。",
+        "en": "Versions include pure sailplane, Turbo sustainer, FES nose-mounted electric propeller, or Solo self-launch systems.",
+        "ja": "純滑空、Turboサステナー、FES機首電動プロペラ、Solo自力発航仕様があります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "可交換 15 m 與 18 m 翼尖，均以向上彎曲翼端小翼控制翼尖渦與跨距效率。",
+        "en": "Interchangeable 15 m and 18 m tips use upturned winglets to manage tip vortices and span efficiency.",
+        "ja": "交換可能な15m／18m翼端は上向きウイングレットで翼端渦とスパン効率を管理します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "超高展弦比複合材料翼配全翼展襟副翼，可隨速度調整翼型彎度並兼顧熱氣流與高速滑翔。",
+        "en": "Very high-aspect-ratio composite wings use full-span flaperons to vary camber for thermalling and fast cruise.",
+        "ja": "超高アスペクト比複合材翼は全幅フラッペロンでキャンバーを変え、サーマルと高速滑空を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "小型 T 型水平尾翼位於垂尾頂端，遠離主翼尾流並降低尾翼與地面碰撞風險。",
+        "en": "A small T-tail sits atop the fin, clear of wing wake and less exposed to ground contact.",
+        "ja": "小型T字水平尾翼は垂直尾翼頂部にあり、主翼後流と地面接触を避けます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "可收放單主輪降低飛行阻力，翼尖靠小滑橇保護；地面移動通常另接翼輪。",
+        "en": "A retractable monowheel cuts drag, with small tip skids for protection and detachable dollies for ground handling.",
+        "ja": "引込単輪が抵抗を減らし、翼端スキッドで保護し、地上移動には着脱式翼輪を使います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "1"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "15 / 18 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "無動力／Turbo／FES／Solo self-launch"
+      ]
+    ]
+  }
+}

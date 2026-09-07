@@ -4,7 +4,7 @@
 
 「天空檔案 / SKY ARCHIVE」是部署在 Cloudflare Pages 的純靜態航空資料網站與 PWA。它有四個可獨立瀏覽、可經驗證後編輯並發布的資料庫：
 
-1. **飛行器圖鑑**：169 個機型的資料、規格、家族、比較與可互動的 Three.js 3D 檢視器；其中 47 型已有 3D，122 型待補。
+1. **飛行器圖鑑**：184 個機型的資料、規格、家族、比較與可互動的 Three.js 3D 檢視器；其中 47 型已有 3D，137 型待補。
 2. **機場與跑道**：85,587 座機場的搜尋、跑道、衛星圖、比較、收藏與資料編輯。
 3. **全球航空公司**：目前 594 家航空公司的公司資料、呼號、機隊、樞紐、航線、收藏與航線地圖。
 4. **航空小知識**：46 個三語航空知識條目，以座艙／飛航場景的可滑動互動 UI 呈現。
@@ -75,6 +75,7 @@
 - `js/i18n.js`：全站 UI 字典與內容欄位回退。新增介面字串時三種語言都必須新增。
 - `js/theme.js`：深淺色主題、Service Worker 註冊，以及回機隊時保留搜尋條件。
 - `js/ui.js`：共用 UI 行為，例如最近瀏覽列的拖曳捲動，以及所有自動完成下拉選單的方向鍵／Enter／Esc 操作。
+- 介面中所有可捲動區域與下拉選單都必須隱藏原生滾輪軸；保留滑鼠滾輪、拖曳、觸控與鍵盤操作。瀏覽器原生選單若無法隱藏捲軸，改用站內自訂選單，不需再向使用者確認。
 - `js/auth.js`：編輯鎖。正式站優先用 `/api/verify` 與 Cloudflare 的 `EDITOR_PASSWORD`；本機才退回瀏覽器 SHA-256 雜湊。
 - `js/storage.js`：所有編輯發布均透過 `Storage.save(id, data)`；優先 `/api/gh-save`，再退回使用者瀏覽器內的 GitHub Token，最後下載 JSON。
 - `functions/api/verify.js`、`functions/api/gh-save.js`：Cloudflare Pages Functions。Cloudflare 環境變數需有 `EDITOR_PASSWORD`、`GH_OWNER`、`GH_REPO`、`GH_TOKEN`；`GH_BRANCH` 可選（預設 `main`）。

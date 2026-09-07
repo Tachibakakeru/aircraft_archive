@@ -1,0 +1,265 @@
+{
+  "title": "Schempp-Hirth Arcus",
+  "sub": {
+    "zh": "二十公尺級雙座高性能滑翔機，可選純滑翔、返航輔助或自力起飛版本。",
+    "en": "A 20-metre-class two-seat high-performance glider offered in pure, sustainer, and self-launching versions.",
+    "ja": "純滑空、サステナー、自力発航仕様がある20m級2座高性能グライダーです。"
+  },
+  "sources": [
+    "https://www.schempp-hirth.com/flugzeuge/arcus/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "二十公尺級雙座高性能滑翔機，可選純滑翔、返航輔助或自力起飛版本。",
+        "en": "A 20-metre-class two-seat high-performance glider offered in pure, sustainer, and self-launching versions.",
+        "ja": "純滑空、サステナー、自力発航仕様がある20m級2座高性能グライダーです。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "前後串列雙座位於長透明罩下，前後席都具完整操縱，供訓練、競賽與長途雙人飛行。",
+        "en": "Tandem seats beneath a long canopy provide full dual controls for training, competition and two-person cross-country flight.",
+        "ja": "長いキャノピー下のタンデム2座は複操縦装置を備え、訓練、競技、2人長距離飛行に対応します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大面積透明罩／風擋提供前方與側向視野，其窗框與座艙罩輪廓也是辨識該機型的重要線索。",
+        "en": "Large windshield or canopy glazing provides forward and side visibility; its framing is also a useful identification cue.",
+        "ja": "大型風防／キャノピーが前方・側方視界を提供し、窓枠形状も機種識別の手掛かりです。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "較深的雙座複合材料前機身後接細長尾樑，在容納兩人與動力選項的同時維持低阻力。",
+        "en": "A deeper two-seat composite nose tapers into a slender boom, accommodating two occupants and power options while limiting drag.",
+        "ja": "深い2座複合材前胴体から細い尾部へ絞り、2人と動力装置を収めながら抵抗を抑えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "可選純滑翔、Solo 返航輔助或可收放螺旋槳的自力起飛版本；動力關閉後收回機身以恢復滑翔效率。",
+        "en": "Pure, Solo sustainer and retractable-propeller self-launch variants are offered; the power unit retracts to restore glide efficiency.",
+        "ja": "純滑空、Soloサステナー、格納式プロペラ自力発航型があり、停止後は胴体へ収納して滑空効率を戻します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "20 m 翼端以明顯上彎翼端小翼收尾，減少誘導阻力並改善低速盤旋效率。",
+        "en": "The 20 m span ends in pronounced upturned winglets that reduce induced drag and improve low-speed circling.",
+        "ja": "20m翼は明確な上向きウイングレットで終わり、誘導抵抗を減らし低速旋回効率を高めます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "長翼展複合材料翼配襟副翼，可改變翼型彎度，讓雙座機兼顧熱氣流爬升與高速越野。",
+        "en": "Long composite wings use flaperons to vary camber, balancing thermal climb and fast cross-country performance with two occupants.",
+        "ja": "長い複合材翼はフラッペロンでキャンバーを変え、2座でのサーマル上昇と高速長距離を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "T 型水平尾翼置於垂尾頂端，輪廓修長，能避開主翼後流並保持精確俯仰控制。",
+        "en": "The slender T-tail clears wing wake and preserves precise pitch control.",
+        "ja": "細いT字水平尾翼は主翼後流を避け、精密なピッチ制御を保ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "可收放單主輪設於雙座座艙下方，尾部與翼尖設保護滑橇；地面需以翼輪輔助。",
+        "en": "A retractable monowheel sits below the tandem cabin, with tail and tip protection and detachable wing dollies for ground handling.",
+        "ja": "引込単輪はタンデム客室下にあり、尾部・翼端保護と着脱式翼輪を使います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "2009"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "20.0 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "無動力／Solo sustainer／Solo self-launch"
+      ]
+    ]
+  }
+}

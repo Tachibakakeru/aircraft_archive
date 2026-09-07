@@ -3592,6 +3592,336 @@
       "icao": "S92",
       "iata": "",
       "has3d": false
+    },
+    {
+      "id": "concorde",
+      "name": "Aérospatiale / BAC Concorde",
+      "manufacturer": "Aérospatiale / BAC",
+      "category": {
+        "zh": "超音速客機",
+        "en": "Supersonic airliner",
+        "ja": "超音速旅客機"
+      },
+      "firstFlight": "1969",
+      "span": "25.6 m",
+      "seats": "100",
+      "tagline": {
+        "zh": "唯一投入定期跨大西洋客運的超音速客機，以三角翼、可下垂機鼻與約 Mach 2 巡航聞名。",
+        "en": "The supersonic airliner that operated scheduled transatlantic service, recognizable by its delta wing, droop nose, and roughly Mach 2 cruise.",
+        "ja": "定期大西洋横断便に就航した超音速旅客機で、デルタ翼、可動式機首、約マッハ2の巡航で知られます。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "CONC",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "icona5",
+      "name": "ICON A5",
+      "manufacturer": "ICON Aircraft",
+      "category": {
+        "zh": "水陸兩用機",
+        "en": "Amphibious aircraft",
+        "ja": "水陸両用機"
+      },
+      "firstFlight": "2008",
+      "span": "10.61 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "可折疊機翼、具整機降落傘與抗尾旋機體的雙座輕型水陸兩用機。",
+        "en": "A two-seat light amphibian with folding wings, a whole-aircraft parachute, and a spin-resistant airframe.",
+        "ja": "折り畳み翼、機体パラシュート、耐スピン機体を備える2座軽量水陸両用機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "xcub",
+      "name": "CubCrafters XCub / NXCub",
+      "manufacturer": "CubCrafters",
+      "category": {
+        "zh": "輕型運動機",
+        "en": "Light sport aircraft",
+        "ja": "軽量スポーツ機"
+      },
+      "firstFlight": "2016",
+      "span": "10.46 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "具短場性能、高有效載重與尾輪／前三點起落架選項的現代越野機。",
+        "en": "A modern backcountry aircraft combining STOL performance, useful load, and tailwheel or nosewheel configurations.",
+        "ja": "STOL性能と高い有効搭載量を備え、尾輪式または前輪式を選べる現代的なブッシュプレーンです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "CC19",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "carboncub",
+      "name": "CubCrafters Carbon Cub SS",
+      "manufacturer": "CubCrafters",
+      "category": {
+        "zh": "輕型運動機",
+        "en": "Light sport aircraft",
+        "ja": "軽量スポーツ機"
+      },
+      "firstFlight": "—",
+      "span": "10.46 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "以低重量、高功率與極短場起降能力為核心的現代化 Cub 系列輕型運動機。",
+        "en": "A modern Cub-family light sport aircraft centered on low weight, high power, and very short-field performance.",
+        "ja": "軽量、高出力、極めて短い離着陸性能を特徴とする現代的なCub系軽量スポーツ機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "CC11",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "rv10",
+      "name": "Van's Aircraft RV-10",
+      "manufacturer": "Van's Aircraft",
+      "category": {
+        "zh": "套件機",
+        "en": "Kit aircraft",
+        "ja": "キット機"
+      },
+      "firstFlight": "2003",
+      "span": "9.68 m",
+      "seats": "4",
+      "tagline": {
+        "zh": "可載四名成人、採低翼與前三點起落架的高速旅行套件機。",
+        "en": "A fast four-adult touring kit aircraft with a low wing and tricycle landing gear.",
+        "ja": "大人4名を搭載できる低翼・前輪式の高速旅行用キット機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "RV10",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "rv14",
+      "name": "Van's Aircraft RV-14 / 14A",
+      "manufacturer": "Van's Aircraft",
+      "category": {
+        "zh": "套件機",
+        "en": "Kit aircraft",
+        "ja": "キット機"
+      },
+      "firstFlight": "2012",
+      "span": "8.23 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "寬敞雙座、可執行基礎特技飛行的現代低翼旅行套件機。",
+        "en": "A roomy modern two-seat low-wing touring kit aircraft capable of basic aerobatics.",
+        "ja": "広い2座キャビンを持ち、基本曲技飛行にも対応する現代的な低翼旅行用キット機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "RV14",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "sling2",
+      "name": "Sling 2",
+      "manufacturer": "Sling Aircraft",
+      "category": {
+        "zh": "套件機",
+        "en": "Kit aircraft",
+        "ja": "キット機"
+      },
+      "firstFlight": "2008",
+      "span": "9.17 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "全金屬雙座旅行與訓練機，可採套件或工廠協助建造。",
+        "en": "An all-metal two-seat touring and training aircraft offered as a kit or factory-assisted build.",
+        "ja": "キットまたは工場支援製作で提供される全金属製2座旅行・訓練機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "SLG2",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "slingtsi",
+      "name": "Sling TSi",
+      "manufacturer": "Sling Aircraft",
+      "category": {
+        "zh": "套件機",
+        "en": "Kit aircraft",
+        "ja": "キット機"
+      },
+      "firstFlight": "2018",
+      "span": "9.54 m",
+      "seats": "4",
+      "tagline": {
+        "zh": "具四座、渦輪增壓動力與長航程的高性能全金屬套件機。",
+        "en": "A high-performance all-metal four-seat kit aircraft with turbocharged power and long range.",
+        "ja": "4座、ターボ過給動力、長航続距離を備える高性能全金属キット機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "velise",
+      "name": "Pipistrel Velis Electro",
+      "manufacturer": "Pipistrel",
+      "category": {
+        "zh": "輕型運動機",
+        "en": "Light sport aircraft",
+        "ja": "軽量スポーツ機"
+      },
+      "firstFlight": "—",
+      "span": "10.70 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "全球首款取得型別認證的電動飛機，主要用於安靜、低營運成本的日間目視飛行訓練。",
+        "en": "The world's first type-certified electric aircraft, aimed primarily at quiet, low-operating-cost day-VFR training.",
+        "ja": "世界初の型式証明を取得した電動航空機で、静かで低運航費の日中VFR訓練を主用途とします。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "explorer",
+      "name": "Pipistrel Explorer",
+      "manufacturer": "Pipistrel",
+      "category": {
+        "zh": "輕型運動機",
+        "en": "Light sport aircraft",
+        "ja": "軽量スポーツ機"
+      },
+      "firstFlight": "—",
+      "span": "10.70 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "具碳纖維機體、整機降落傘與 IFR-ready 航電的雙座認證訓練／旅行機。",
+        "en": "A certified two-seat trainer and tourer with a carbon airframe, whole-aircraft parachute, and IFR-ready avionics.",
+        "ja": "炭素繊維機体、機体パラシュート、IFR対応準備済みアビオニクスを備える認証2座練習・旅行機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "extrang",
+      "name": "Extra NG",
+      "manufacturer": "Extra Aircraft",
+      "category": {
+        "zh": "特技機",
+        "en": "Aerobatic aircraft",
+        "ja": "曲技飛行機"
+      },
+      "firstFlight": "2019",
+      "span": "8.30 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "採全碳纖維硬殼機身、可承受正負 10 g 的雙座無限制級特技機。",
+        "en": "A two-seat unlimited-class aerobatic aircraft with a carbon monocoque airframe and ±10 g certification.",
+        "ja": "全炭素モノコック機体を採用し、±10 g認証を持つ2座アンリミテッド級曲技機です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "ventus3",
+      "name": "Schempp-Hirth Ventus 3",
+      "manufacturer": "Schempp-Hirth",
+      "category": {
+        "zh": "滑翔機",
+        "en": "Glider",
+        "ja": "グライダー"
+      },
+      "firstFlight": "2016",
+      "span": "15 / 18 m",
+      "seats": "1",
+      "tagline": {
+        "zh": "可選 15 或 18 公尺翼展，以及純滑翔、續航或自力起飛動力的高性能單座滑翔機。",
+        "en": "A high-performance single-seat glider with 15- or 18-metre wings and pure, sustainer, or self-launching options.",
+        "ja": "15m／18m翼と、純滑空・サステナー・自力発航仕様を選べる高性能単座グライダーです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "arcus",
+      "name": "Schempp-Hirth Arcus",
+      "manufacturer": "Schempp-Hirth",
+      "category": {
+        "zh": "滑翔機",
+        "en": "Glider",
+        "ja": "グライダー"
+      },
+      "firstFlight": "2009",
+      "span": "20.0 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "二十公尺級雙座高性能滑翔機，可選純滑翔、返航輔助或自力起飛版本。",
+        "en": "A 20-metre-class two-seat high-performance glider offered in pure, sustainer, and self-launching versions.",
+        "ja": "純滑空、サステナー、自力発航仕様がある20m級2座高性能グライダーです。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "as33me",
+      "name": "Alexander Schleicher AS 33 Me",
+      "manufacturer": "Alexander Schleicher",
+      "category": {
+        "zh": "滑翔機",
+        "en": "Glider",
+        "ja": "グライダー"
+      },
+      "firstFlight": "—",
+      "span": "15 / 18 m",
+      "seats": "1",
+      "tagline": {
+        "zh": "AS 33 高性能滑翔機的電動自力起飛型，可使用 15 或 18 公尺翼尖。",
+        "en": "The electric self-launching AS 33 high-performance glider with interchangeable 15- and 18-metre tips.",
+        "ja": "15m／18m翼端を交換できるAS 33高性能グライダーの電動自力発航型です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "",
+      "iata": "",
+      "has3d": false
+    },
+    {
+      "id": "ask21b",
+      "name": "Alexander Schleicher ASK 21 B",
+      "manufacturer": "Alexander Schleicher",
+      "category": {
+        "zh": "滑翔機",
+        "en": "Glider",
+        "ja": "グライダー"
+      },
+      "firstFlight": "2018",
+      "span": "17.0 m",
+      "seats": "2",
+      "tagline": {
+        "zh": "經典 ASK 21 的現行改良雙座型，持續用於初級、越野與特技滑翔訓練。",
+        "en": "The current improved two-seat ASK 21, used for primary, cross-country, and aerobatic glider training.",
+        "ja": "初等・クロスカントリー・曲技滑翔訓練に使われる、現行改良型の2座ASK 21です。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AS21",
+      "iata": "",
+      "has3d": false
     }
   ]
 }

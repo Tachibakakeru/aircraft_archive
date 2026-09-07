@@ -1,0 +1,265 @@
+{
+  "title": "Van's Aircraft RV-14 / 14A",
+  "sub": {
+    "zh": "寬敞雙座、可執行基礎特技飛行的現代低翼旅行套件機。",
+    "en": "A roomy modern two-seat low-wing touring kit aircraft capable of basic aerobatics.",
+    "ja": "広い2座キャビンを持ち、基本曲技飛行にも対応する現代的な低翼旅行用キット機です。"
+  },
+  "sources": [
+    "https://www.vansaircraft.com/rv-14/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "寬敞雙座、可執行基礎特技飛行的現代低翼旅行套件機。",
+        "en": "A roomy modern two-seat low-wing touring kit aircraft capable of basic aerobatics.",
+        "ja": "広い2座キャビンを持ち、基本曲技飛行にも対応する現代的な低翼旅行用キット機です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "寬敞並排雙座採雙操縱桿，座艙尺寸與進出便利性比早期雙座 RV 更佳。",
+        "en": "A roomy side-by-side cockpit with dual sticks improves space and access over earlier two-seat RV designs.",
+        "ja": "広い並列2座と複操縦桿を備え、初期2座RVより空間と乗降性を改善しています。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大型一體式透明座艙罩提供良好全向視野；RV-14 常見向上翻起式罩，RV-14A 外觀相近。",
+        "en": "A large one-piece canopy gives broad visibility; the tip-up canopy is a prominent RV-14/14A feature.",
+        "ja": "大型一体キャノピーが広い視界を提供し、上方へ開く構造がRV-14／14Aの特徴です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "雙座機身在座艙後保留行李空間，金屬蒙皮與圓滑上機身兼顧套件製造與低阻力。",
+        "en": "The two-seat metal fuselage includes aft baggage space and a rounded upper deck for practical kit construction and low drag.",
+        "ja": "2座金属胴体は後部荷物室と丸い上部胴体を備え、組立性と低抵抗を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "動力為 1 × Lycoming IO-390；安裝方式依機型用途在效率、冷卻、噪音與維護性之間取捨。",
+        "en": "Power comes from 1 × Lycoming IO-390; its installation balances efficiency, cooling, noise and maintainability.",
+        "ja": "動力は1 × Lycoming IO-390で、搭載方式は効率、冷却、騒音、整備性を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖外形配合該機的速度範圍與誘導阻力需求；部分滑翔機使用可更換翼尖或翼端小翼。",
+        "en": "The tip geometry suits the aircraft's speed range and induced-drag goals; some sailplanes use interchangeable tips or winglets.",
+        "ja": "翼端形状は速度域と誘導抵抗に合わせ、一部グライダーは交換翼端やウイングレットを使います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "低翼採對稱性較高的翼型與全翼展操縱面配置，可兼顧旅行效率與核准範圍內的基礎特技。",
+        "en": "The low wing and control layout support efficient touring and approved basic aerobatics.",
+        "ja": "低翼と操縦面配置が効率的な旅行飛行と承認範囲内の基本曲技を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼與升降舵負責俯仰穩定；其安裝高度與翼面形狀用來避開主翼或螺旋槳擾流。",
+        "en": "The tailplane and elevators provide pitch stability, positioned to manage wing or propeller wake.",
+        "ja": "水平尾翼と昇降舵がピッチ安定を担い、主翼やプロペラ後流を考慮して配置されます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "RV-14 為固定尾輪式，RV-14A 為固定前三點式；兩者常配流線輪罩降低巡航阻力。",
+        "en": "RV-14 uses fixed tailwheel gear and RV-14A fixed tricycle gear; streamlined wheel pants reduce cruise drag.",
+        "ja": "RV-14は固定尾輪式、RV-14Aは固定前輪式で、流線形ホイールパンツが巡航抵抗を減らします。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "2012"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "8.23 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming IO-390"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "title": "CubCrafters XCub / NXCub",
+  "sub": {
+    "zh": "具短場性能、高有效載重與尾輪／前三點起落架選項的現代越野機。",
+    "en": "A modern backcountry aircraft combining STOL performance, useful load, and tailwheel or nosewheel configurations.",
+    "ja": "STOL性能と高い有効搭載量を備え、尾輪式または前輪式を選べる現代的なブッシュプレーンです。"
+  },
+  "sources": [
+    "https://cubcrafters.com/xcub"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "XCub／NXCub 是現代高翼越野機，保留 Cub 的串列雙座、翼支柱與大輪胎比例，但採用更流線的複合材料整流。",
+        "en": "XCub/NXCub modernizes the classic Cub formula with tandem seating, braced high wings, large tyres and cleaner composite fairings.",
+        "ja": "XCub／NXCubはタンデム座席、支柱付き高翼、大径タイヤというCub様式を現代的な複合材整流で更新しています。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "串列雙座讓機身保持狹窄，前後席以中央操縱桿飛行；大面積側窗利於低空與野外觀察。",
+        "en": "Tandem seating keeps the fuselage narrow, with center sticks and broad side glazing for low-level and backcountry visibility.",
+        "ja": "タンデム2座で胴体を細く保ち、中央操縦桿と大きな側窓で低空・野外視界を確保します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "前風擋近乎直立並與透明側門相連，形成典型 Cub 的高翼下全景視野。",
+        "en": "A nearly upright windshield joins transparent side doors to create the panoramic under-wing view typical of Cubs.",
+        "ja": "ほぼ直立した前面窓と透明側ドアがつながり、Cubらしい高翼下の広い視界を作ります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "鋼管骨架與整流外皮形成狹長機身，寬大的側門方便在未鋪面場地裝卸人員與裝備。",
+        "en": "A streamlined skin surrounds a steel-tube structure, with broad side access for people and equipment in remote operations.",
+        "ja": "鋼管構造を流線形外皮で覆い、大型側ドアが辺地での人員・装備積載を容易にします。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "機鼻活塞引擎驅動大型兩葉或三葉螺旋槳，以低速大推力配合短場起降。",
+        "en": "A nose-mounted piston engine turns a large two- or three-blade propeller for strong low-speed thrust and short-field work.",
+        "ja": "機首ピストンエンジンが大型2翅または3翅プロペラを回し、短距離運用向けの低速推力を生みます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖接近方形且沒有翼尖小翼，重點是可預測的低速失速特性與易修復性。",
+        "en": "Near-square tips omit winglets, favoring predictable low-speed behavior and field simplicity.",
+        "ja": "ほぼ角形の翼端はウイングレットを持たず、予測しやすい低速特性と現場整備性を重視します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "長弦高翼以 V 型支柱支撐，搭配大型襟翼，提供低速升力與地面障礙物淨空。",
+        "en": "A long-chord braced high wing and large flaps provide low-speed lift and clearance from ground obstacles.",
+        "ja": "長い翼弦の支柱付き高翼と大型フラップが低速揚力と地上障害物クリアランスを提供します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "圓弧前緣垂尾與大型方向舵延續 Cub 家族輪廓，低速時仍保有方向控制。",
+        "en": "The rounded fin and large rudder retain the Cub-family silhouette and directional authority at low speed.",
+        "ja": "丸い前縁の垂直尾翼と大型方向舵がCub系の外形と低速方向制御を保ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "傳統低置水平尾翼以支索／支柱強化，升降舵面積大，適合短場高迎角操作。",
+        "en": "The conventional low tailplane is externally braced and carries large elevators for high-angle short-field operations.",
+        "ja": "低位置の水平尾翼は外部支持され、大型昇降舵が短距離・高迎角操作を支えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "XCub 採尾輪式，NXCub 改為前三點式；兩者都可配大尺寸 tundra tire 或浮筒。",
+        "en": "XCub uses tailwheel gear while NXCub uses tricycle gear; both can accept large tundra tyres or floats.",
+        "ja": "XCubは尾輪式、NXCubは前輪式で、どちらも大型ツンドラタイヤやフロートに対応します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "2016"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.46 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "1,287 km (800 mi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming O-360-C1G / CubCrafters CC393i"
+      ]
+    ]
+  }
+}

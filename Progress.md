@@ -5,7 +5,7 @@
 ## 目前狀態（2026-08-24）
 
 - 專案：Cloudflare Pages 靜態/PWA 航空資料庫，正式分支為 `main`。
-- 資料庫現況：169 機型、47 個 3D 模型 JSON、85,587 座機場、594 家航空公司、46 筆航空小知識。
+- 資料庫現況：184 機型、47 個 3D 模型 JSON、85,587 座機場、594 家航空公司、46 筆航空小知識。
 - 最近已推送 commit：`b87532f`（新增貨運航空分類與航空知識搜尋功能）。
 - 工作目錄發現未追蹤檔案：`data/korean_airlines_debug.json`。它是除錯輸出，暫不刪除、不提交，待確認是否仍需保留。
 
@@ -454,4 +454,19 @@
 - 本地瀏覽器已以繁中確認首頁統計、機隊 169 筆渲染、新機型「無 3D 模型」標記及 G800 三語規格頁；最終預覽停在 `http://localhost:8000/fleet.html`。
 - 本批已以 commit `d89ef77` 推送至 `origin/main`。下一階段仍需評估主要製造商之外的特技機、輕型運動機、套件機、滑翔機與水陸兩用機，不能把「主要認證 OEM 基線」誤稱為全球所有在售機型。
 - 下次優先待辦：補入 Aérospatiale／BAC Concorde（協和號）。目前 `data/fleet.json` 與各機型資料檔均沒有 Concorde 條目；它雖已停產，仍應作為重要歷史超音速客機納入圖鑑。
+- `data/korean_airlines_debug.json` 維持未追蹤且未修改；未讀取或提交 Token 備份。
+
+### 特殊／小眾實體機型擴充（2026-09-08，本地製作中）
+
+- 依上一輪待辦補入 Aérospatiale／BAC Concorde，並新增 ICON A5、XCub／NXCub、Carbon Cub SS、RV-10、RV-14／14A、Sling 2、Sling TSi、Velis Electro、Explorer、Extra NG、Ventus 3、Arcus、AS 33 Me、ASK 21 B，共 15 型。
+- 分類新增超音速客機、水陸兩用機、輕型運動機、套件機與特技機，滑翔機沿用既有分類；每型具三語簡介、首飛（未能由產品資料確認者標示「—」）、翼展、座位、航程／續航、動力與原廠來源。
+- 書庫由 169 增至 184 型；3D 模型仍為 47 型，缺模增至 137 型，已重建 `data/model_inventory.json`。圖片與 3D 均留待後續。
+- 新增可重跑且具 ID／來源自我檢查的 `tools/update_special_aircraft.py`；15 型現均補齊既有標準的 10 類部位資料（整體、座艙、外窗、機身、動力、翼尖、主翼、垂尾、平尾、起落架），每一類都有中／英／日說明與後續圖片欄位。圖片仍留待後續實機照片批次。
+- 「並排比較規格」與「機型與部位設計對比」兩頁的機型選單改為可輸入搜尋的原生 combo box，支援機型名稱、製造商與 ICAO 提示；清單依機型名稱做不分大小寫、數字友善排序。
+- 相關資料與程式引用升至 v=172，Service Worker cache 升為 `hangar-v33`。本批先留本地驗收，未 commit／push。
+- 本地瀏覽器已確認首頁動態顯示 `184 AIRCRAFT`、新分類可篩選、15 型卡片均標示「無 3D 模型」；另實測 Concorde 顯示 10 個部位按鈕及說明。兩個比較頁都已用鍵盤輸入並選取其他機型，網址與比較內容會同步更新；目前預覽停在 `http://localhost:8000/versus.html?a=slingtsi&b=icona5`。
+- 最終檢查通過：184 個 fleet ID 無重複、15 份新資料均為 10 部位且三語非空、模型盤點為 47／184、5 份相關 JavaScript 語法正確、4 個本機 HTTP 入口回應 200、`git diff --check` 無錯誤。
+- 依本機畫面回饋，移除機型搜尋框的原生清除叉號，並將兩個比較頁的原生 `datalist` 改為站內自訂搜尋選單；選單維持名稱排序、製造商／ICAO 搜尋、方向鍵／Enter／Esc 與滑鼠操作，同時隱藏原生捲軸。共用 UI 與樣式升至 v=174，Service Worker cache 升為 `hangar-v35`，仍未推送。
+- 已將「所有可捲動區域與下拉選單隱藏原生滾輪軸」寫入 `AGENTS.md`，後續視為固定介面規則，不再另行提醒或確認。
+- 本地瀏覽器已確認自訂選單無清除叉號、開啟時依名稱排序；輸入 `B738` 僅保留 Boeing 737-800，並可用方向鍵＋Enter 完成切換。三份相關 JavaScript 語法與 `git diff --check` 均通過。
 - `data/korean_airlines_debug.json` 維持未追蹤且未修改；未讀取或提交 Token 備份。

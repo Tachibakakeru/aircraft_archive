@@ -1,0 +1,265 @@
+{
+  "title": "Extra NG",
+  "sub": {
+    "zh": "採全碳纖維硬殼機身、可承受正負 10 g 的雙座無限制級特技機。",
+    "en": "A two-seat unlimited-class aerobatic aircraft with a carbon monocoque airframe and ±10 g certification.",
+    "ja": "全炭素モノコック機体を採用し、±10 g認証を持つ2座アンリミテッド級曲技機です。"
+  },
+  "sources": [
+    "https://extraaircraft.com/ng/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "採全碳纖維硬殼機身、可承受正負 10 g 的雙座無限制級特技機。",
+        "en": "A two-seat unlimited-class aerobatic aircraft with a carbon monocoque airframe and ±10 g certification.",
+        "ja": "全炭素モノコック機体を採用し、±10 g認証を持つ2座アンリミテッド級曲技機です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "前後串列雙座位於機翼附近，飛行員以中央操縱桿與大型方向舵踏板進行精確特技操控。",
+        "en": "Tandem seats near the wing use center sticks and large rudder pedals for precise aerobatic control.",
+        "ja": "翼付近のタンデム2座は中央操縦桿と大型ラダーペダルで精密な曲技操縦を行います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大型泡形座艙罩幾乎無遮蔽地包覆兩席，提供編隊、倒飛與垂直機動所需的全向視野。",
+        "en": "A large bubble canopy surrounds both seats with near-unobstructed visibility for formation, inverted and vertical maneuvers.",
+        "ja": "大型バブルキャノピーが両席を包み、編隊、背面、垂直機動に必要な全周視界を提供します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "全碳纖維硬殼機身以低重量與高剛性承受正負高 g 載荷，短機身也降低旋轉慣性。",
+        "en": "The carbon monocoque fuselage combines low mass and high stiffness for positive and negative g, while its compact length reduces rotational inertia.",
+        "ja": "全炭素モノコック胴体は軽量・高剛性で正負高gに耐え、短い機体が回転慣性を抑えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "動力為 1 × Lycoming AEIO-580-B1A；安裝方式依機型用途在效率、冷卻、噪音與維護性之間取捨。",
+        "en": "Power comes from 1 × Lycoming AEIO-580-B1A; its installation balances efficiency, cooling, noise and maintainability.",
+        "ja": "動力は1 × Lycoming AEIO-580-B1Aで、搭載方式は効率、冷却、騒音、整備性を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖外形配合該機的速度範圍與誘導阻力需求；部分滑翔機使用可更換翼尖或翼端小翼。",
+        "en": "The tip geometry suits the aircraft's speed range and induced-drag goals; some sailplanes use interchangeable tips or winglets.",
+        "ja": "翼端形状は速度域と誘導抵抗に合わせ、一部グライダーは交換翼端やウイングレットを使います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "低翼採近對稱翼型與大型副翼，使正飛、倒飛的操控反應接近並提高滾轉率。",
+        "en": "The low wing uses a near-symmetrical section and large ailerons for similar upright/inverted response and high roll rate.",
+        "ja": "低翼はほぼ対称翼型と大型補助翼を使い、正立・背面で似た応答と高ロール率を得ます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "高大的垂尾與寬方向舵在低前進速度、側滑及旋轉動作中仍維持強大偏航控制。",
+        "en": "A tall fin and broad rudder preserve strong yaw control at low forward speed, in sideslip and during rotation maneuvers.",
+        "ja": "高い垂直尾翼と幅広い方向舵が低速、横滑り、回転演技中も強いヨー制御を保ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼與升降舵負責俯仰穩定；其安裝高度與翼面形狀用來避開主翼或螺旋槳擾流。",
+        "en": "The tailplane and elevators provide pitch stability, positioned to manage wing or propeller wake.",
+        "ja": "水平尾翼と昇降舵がピッチ安定を担い、主翼やプロペラ後流を考慮して配置されます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定式尾輪起落架短而堅固，主輪常加流線罩；配置也替大型螺旋槳保留地面淨空。",
+        "en": "Short robust fixed tailwheel gear often carries wheel pants and provides clearance for the large propeller.",
+        "ja": "短く強固な固定尾輪脚はホイールパンツを備え、大型プロペラの地上間隔も確保します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "2019"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "8.30 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming AEIO-580-B1A"
+      ]
+    ]
+  }
+}

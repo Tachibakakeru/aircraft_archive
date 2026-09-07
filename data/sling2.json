@@ -1,0 +1,265 @@
+{
+  "title": "Sling 2",
+  "sub": {
+    "zh": "全金屬雙座旅行與訓練機，可採套件或工廠協助建造。",
+    "en": "An all-metal two-seat touring and training aircraft offered as a kit or factory-assisted build.",
+    "ja": "キットまたは工場支援製作で提供される全金属製2座旅行・訓練機です。"
+  },
+  "sources": [
+    "https://slingaircraft.com/aircraft/sling-2/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "全金屬雙座旅行與訓練機，可採套件或工廠協助建造。",
+        "en": "An all-metal two-seat touring and training aircraft offered as a kit or factory-assisted build.",
+        "ja": "キットまたは工場支援製作で提供される全金属製2座旅行・訓練機です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "並排雙座採中央或雙側操縱裝置與現代玻璃座艙，設計兼顧飛行訓練及長途旅行。",
+        "en": "The side-by-side two-seat cockpit uses modern glass avionics and controls suited to both training and touring.",
+        "ja": "並列2座の操縦室は現代的グラスアビオニクスを備え、訓練と旅行の両方に適します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "大型泡形座艙罩向兩側延伸，前方窗框少，形成 Sling 系列流線、開闊的座艙輪廓。",
+        "en": "A broad bubble canopy with minimal forward framing creates the Sling family's open, streamlined cabin profile.",
+        "ja": "前枠の少ない大型バブルキャノピーがSling系の開放的で流線形の客室外観を作ります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "鉚接鋁合金半硬殼機身採修長尾錐，座艙後方設行李空間，適合套件製造與維修。",
+        "en": "A riveted aluminum semi-monocoque fuselage, tapered tailcone and aft baggage bay suit kit construction and maintenance.",
+        "ja": "リベット接合アルミ半モノコック胴体、細い尾部、後部荷物室がキット製作と整備に適します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "動力為 1 × Rotax 912 iS；安裝方式依機型用途在效率、冷卻、噪音與維護性之間取捨。",
+        "en": "Power comes from 1 × Rotax 912 iS; its installation balances efficiency, cooling, noise and maintainability.",
+        "ja": "動力は1 × Rotax 912 iSで、搭載方式は効率、冷却、騒音、整備性を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖外形配合該機的速度範圍與誘導阻力需求；部分滑翔機使用可更換翼尖或翼端小翼。",
+        "en": "The tip geometry suits the aircraft's speed range and induced-drag goals; some sailplanes use interchangeable tips or winglets.",
+        "ja": "翼端形状は速度域と誘導抵抗に合わせ、一部グライダーは交換翼端やウイングレットを使います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "直線形懸臂低翼配襟翼與副翼，以溫和失速、訓練操控和巡航效率為主要取捨。",
+        "en": "The straight cantilever low wing uses flaps and ailerons, balancing benign stall behavior, training handling and cruise efficiency.",
+        "ja": "直線的片持ち低翼はフラップと補助翼を備え、穏やかな失速、訓練操縦、巡航効率を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼與升降舵負責俯仰穩定；其安裝高度與翼面形狀用來避開主翼或螺旋槳擾流。",
+        "en": "The tailplane and elevators provide pitch stability, positioned to manage wing or propeller wake.",
+        "ja": "水平尾翼と昇降舵がピッチ安定を担い、主翼やプロペラ後流を考慮して配置されます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定式前三點起落架配輪罩，結構簡單、維護成本低，符合訓練與私人飛行需求。",
+        "en": "Fixed tricycle gear with wheel fairings keeps operation simple and economical for training and private flying.",
+        "ja": "ホイールフェアリング付き固定前輪式脚が訓練・個人飛行向けの簡潔さと低費用を実現します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "2008"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "9.17 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "1,537 km (830 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Rotax 912 iS"
+      ]
+    ]
+  }
+}

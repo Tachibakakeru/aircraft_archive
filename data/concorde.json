@@ -1,0 +1,265 @@
+{
+  "title": "Aérospatiale / BAC Concorde",
+  "sub": {
+    "zh": "唯一投入定期跨大西洋客運的超音速客機，以三角翼、可下垂機鼻與約 Mach 2 巡航聞名。",
+    "en": "The supersonic airliner that operated scheduled transatlantic service, recognizable by its delta wing, droop nose, and roughly Mach 2 cruise.",
+    "ja": "定期大西洋横断便に就航した超音速旅客機で、デルタ翼、可動式機首、約マッハ2の巡航で知られます。"
+  },
+  "sources": [
+    "https://heritage.baesystems.com/page/bac-concorde"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "細長機身、可下垂機鼻、四發與無尾式哥德三角翼，組成協和號獨一無二的超音速輪廓。",
+        "en": "A slender fuselage, droop nose, four engines and tailless ogival delta wing form Concorde's unmistakable supersonic profile.",
+        "ja": "細長い胴体、可動機首、4発、無尾翼のオージー型デルタ翼がコンコルド特有の超音速外形を作ります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "三人制駕駛艙保留大量類比儀表；正副駕駛之外另設飛航工程師席，負責複雜的燃油、進氣與電力系統。",
+        "en": "The three-crew flight deck is dominated by analogue instruments, with a flight engineer managing fuel, intake and electrical systems.",
+        "ja": "3名乗務の操縦室はアナログ計器が中心で、航空機関士が燃料、吸気、電気系統を管理します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "狹窄多片風擋配合可升降整流罩；起降時機鼻下垂以改善視野，高速巡航時復位形成流線外形。",
+        "en": "Narrow multi-pane glazing works with a movable visor; the nose droops for takeoff and landing, then streamlines for supersonic cruise.",
+        "ja": "細い多面窓と可動バイザーを備え、離着陸時は機首を下げ、超音速巡航時は流線形へ戻します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "加壓機身極為細長，客艙通常採 2+2 座位與小型窗；機體會因氣動加熱在巡航時伸長。",
+        "en": "The very slender pressure fuselage uses a 2+2 cabin and small windows, and expands measurably from aerodynamic heating in cruise.",
+        "ja": "非常に細長い与圧胴体は2+2配列と小窓を採用し、巡航中の空力加熱で機体が伸びます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "四具 Olympus 593 渦噴成對置於翼下，具可變進氣道與加力燃燒器，以支援起飛及約 Mach 2 巡航。",
+        "en": "Four paired Olympus 593 turbojets use variable intakes and reheat for takeoff and roughly Mach 2 cruise.",
+        "ja": "翼下に2基ずつ配置したOlympus 593ターボジェットは可変吸気口と再燃焼装置を使い、離陸と約マッハ2巡航を支えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖是三角翼本體的尖細延伸，沒有獨立翼尖小翼；平面形由寬大的翼根逐漸收束。",
+        "en": "The tip is the tapered end of the delta wing rather than a separate winglet, narrowing from an exceptionally broad root.",
+        "ja": "翼端は独立したウイングレットではなく、非常に広い翼根から細くなるデルタ翼そのものです。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "哥德式三角翼利用渦升力改善低速升力，沒有傳統襟翼；後緣升降副翼同時控制俯仰與滾轉。",
+        "en": "The ogival delta uses vortex lift at low speed and has no conventional flaps; trailing-edge elevons control pitch and roll.",
+        "ja": "オージー型デルタ翼は低速で渦揚力を利用し、通常のフラップを持たず、後縁エレボンでピッチとロールを制御します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一後掠垂尾位於細長機身末端，方向舵分段以兼顧高速控制與系統冗餘。",
+        "en": "A single swept fin caps the slender aft fuselage, with a segmented rudder for high-speed control and redundancy.",
+        "ja": "細長い後部胴体に単一後退垂直尾翼を置き、分割方向舵で高速操縦と冗長性を確保します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "協和號沒有獨立水平尾翼，俯仰控制由三角翼後緣的升降副翼完成。",
+        "en": "Concorde has no separate horizontal tail; pitch control comes from elevons along the delta wing's trailing edge.",
+        "ja": "独立した水平尾翼はなく、デルタ翼後縁のエレボンがピッチを制御します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "高迎角起降需要特別修長的前三點式起落架；主腳使用四輪轉向架，尾部另有防擦尾小輪。",
+        "en": "Its high takeoff attitude requires tall tricycle gear, with four-wheel main bogies and a small tail bumper wheel.",
+        "ja": "高い離陸姿勢に対応する長い前輪式脚、4輪主脚ボギー、尾部のテールバンパーを備えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "100"
+      ],
+      [
+        "首飛年份",
+        "1969"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "25.6 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "7,223 km (3,900 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "4 × Rolls-Royce/Snecma Olympus 593"
+      ]
+    ]
+  }
+}

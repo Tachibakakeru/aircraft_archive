@@ -1,0 +1,265 @@
+{
+  "title": "CubCrafters Carbon Cub SS",
+  "sub": {
+    "zh": "以低重量、高功率與極短場起降能力為核心的現代化 Cub 系列輕型運動機。",
+    "en": "A modern Cub-family light sport aircraft centered on low weight, high power, and very short-field performance.",
+    "ja": "軽量、高出力、極めて短い離着陸性能を特徴とする現代的なCub系軽量スポーツ機です。"
+  },
+  "sources": [
+    "https://cubcrafters.com/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "Carbon Cub SS 將經典 Cub 外型與輕量化、高功率結合，是以極短場操作為核心的雙座高翼機。",
+        "en": "Carbon Cub SS combines classic Cub proportions with low weight and high power for extreme short-field performance.",
+        "ja": "Carbon Cub SSは古典的Cub外形に軽量・高出力を組み合わせ、極短距離運用を重視します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "串列雙座與中央操縱桿維持窄機身，透明側門可向上開啟，便於觀察地面與野外降落點。",
+        "en": "Tandem seats, center sticks and upward-opening transparent doors preserve a narrow cabin and excellent ground visibility.",
+        "ja": "タンデム座席、中央操縦桿、上開き透明側ドアが細い客室と良好な地上視界を実現します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "近直立風擋配大側窗，窗框輪廓比現代流線旅行機更方正，是 Cub 家族的重要辨識點。",
+        "en": "The upright windshield and large side windows look squarer than modern tourers and strongly identify the Cub family.",
+        "ja": "直立気味の前面窓と大きな側窓は現代旅行機より角張り、Cub系の重要な識別点です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "輕量鋼管機身搭配複合材料部件，寬側門與後方行李空間服務野外飛行用途。",
+        "en": "A lightweight tube fuselage with composite components, broad side access and aft baggage space supports backcountry use.",
+        "ja": "軽量鋼管胴体と複合材部品、大型側ドア、後部荷物室が野外飛行を支えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "高功率 CC340 活塞引擎驅動大型螺旋槳，以高推重比縮短起飛滑跑並改善爬升。",
+        "en": "The high-output CC340 piston engine drives a large propeller, giving strong power-to-weight ratio for short takeoff and climb.",
+        "ja": "高出力CC340が大型プロペラを駆動し、高い出力重量比で短い離陸滑走と上昇を実現します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "方形翼尖沒有翼尖小翼，簡單耐用的外形配合低速飛行與野外維修需求。",
+        "en": "Square tips omit winglets, using a simple durable form suited to low-speed flight and field maintenance.",
+        "ja": "角形翼端はウイングレットを持たず、低速飛行と野外整備に適した簡潔で丈夫な形です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "支柱高翼與大型襟翼產生強大低速升力；較高翼位也讓翼面遠離灌木與碎石。",
+        "en": "Braced high wings and large flaps generate strong low-speed lift while keeping the wing clear of brush and debris.",
+        "ja": "支柱付き高翼と大型フラップが強い低速揚力を生み、翼を草木や石から離します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "圓形垂尾前緣與寬大方向舵提供短場進場時所需的低速偏航控制。",
+        "en": "A rounded fin and broad rudder provide the low-speed yaw authority required during short-field approaches.",
+        "ja": "丸い垂直尾翼と幅広い方向舵が短距離進入に必要な低速ヨー制御を提供します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "低置支撐式水平尾翼與大升降舵可在低速、高迎角狀態維持俯仰控制。",
+        "en": "A braced low tailplane and large elevators retain pitch authority at low speed and high angle of attack.",
+        "ja": "支持付き低位置水平尾翼と大型昇降舵が低速・高迎角でのピッチ制御を保ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定式尾輪起落架通常配大型低壓輪胎，能吸收崎嶇地面衝擊並降低陷入鬆土的風險。",
+        "en": "Fixed tailwheel gear commonly carries large low-pressure tyres to absorb rough terrain and resist sinking into soft ground.",
+        "ja": "固定尾輪脚は大型低圧タイヤを装備し、荒地の衝撃を吸収して軟地への沈み込みを抑えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.46 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × CubCrafters CC340"
+      ]
+    ]
+  }
+}

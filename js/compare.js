@@ -11,7 +11,8 @@ let selected = [];      // 目前比較的機型 id 陣列
 const $ = id => document.getElementById(id);
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=170")).json();
+  fleet = await (await fetch("data/fleet.json?v=172")).json();
+  fleet.aircraft.sort((a, b) => a.name.localeCompare(b.name, "en", { numeric: true, sensitivity: "base" }));
 
   // 初始：網址帶 ?ids=a320,b738 或預設兩架
   const urlIds = (new URLSearchParams(location.search).get("ids") || "").split(",").filter(Boolean);
@@ -44,7 +45,7 @@ let diffOnly = false;
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=170`)).json();
+  const d = await (await fetch(`data/${id}.json?v=172`)).json();
   dataCache[id] = d;
   return d;
 }
@@ -111,19 +112,14 @@ function renderPickers(){
   const wrap = $("cmp-pickers");
   wrap.innerHTML = "";
   selected.forEach((id, i) => {
-    const sel = document.createElement("select");
-    fleet.aircraft.forEach(a => {
-      const o = document.createElement("option");
-      o.value = a.id; o.textContent = a.name;
-      if (a.id === id) o.selected = true;
-      sel.appendChild(o);
-    });
-    sel.addEventListener("change", async () => {
-      selected[i] = sel.value;
-      await loadData(sel.value);
+    const input = document.createElement("input");
+    input.placeholder = I18N.t("fleet.search");
+    wrap.appendChild(input);
+    AircraftPicker.mount(input, fleet.aircraft, id, async nextId => {
+      selected[i] = nextId;
+      await loadData(nextId);
       syncUrl(); renderTable();
     });
-    wrap.appendChild(sel);
   });
   if (selected.length < 4){
     const add = document.createElement("button");

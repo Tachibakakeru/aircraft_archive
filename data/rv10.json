@@ -1,0 +1,265 @@
+{
+  "title": "Van's Aircraft RV-10",
+  "sub": {
+    "zh": "可載四名成人、採低翼與前三點起落架的高速旅行套件機。",
+    "en": "A fast four-adult touring kit aircraft with a low wing and tricycle landing gear.",
+    "ja": "大人4名を搭載できる低翼・前輪式の高速旅行用キット機です。"
+  },
+  "sources": [
+    "https://www.vansaircraft.com/rv-10/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "可載四名成人、採低翼與前三點起落架的高速旅行套件機。",
+        "en": "A fast four-adult touring kit aircraft with a low wing and tricycle landing gear.",
+        "ja": "大人4名を搭載できる低翼・前輪式の高速旅行用キット機です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "前排並排雙座、後排再容納兩名成人，採雙操縱桿與旅行機航電配置。",
+        "en": "Two side-by-side front seats and two adult rear seats use dual sticks and a touring-oriented avionics panel.",
+        "ja": "前席並列2座と成人用後席2座を備え、複操縦桿と旅行向け計器盤を採用します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "前風擋與側窗形成寬廣四座座艙視野，左右大型鷗翼門是 RV-10 的明顯特徵。",
+        "en": "Broad windshield and side glazing surround the four-seat cabin; large gull-wing doors are a clear RV-10 cue.",
+        "ja": "広い前面・側面窓が4座客室を囲み、大型ガルウイングドアがRV-10の特徴です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "RV-10 的機身比雙座 RV 系列更深更長，提供四個成人座位與後方行李空間。",
+        "en": "The RV-10 fuselage is deeper and longer than two-seat RVs, providing four adult seats and aft baggage space.",
+        "ja": "RV-10の胴体は2座RVより深く長く、成人4席と後部荷物室を備えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "動力為 1 × Lycoming IO-540；安裝方式依機型用途在效率、冷卻、噪音與維護性之間取捨。",
+        "en": "Power comes from 1 × Lycoming IO-540; its installation balances efficiency, cooling, noise and maintainability.",
+        "ja": "動力は1 × Lycoming IO-540で、搭載方式は効率、冷却、騒音、整備性を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖外形配合該機的速度範圍與誘導阻力需求；部分滑翔機使用可更換翼尖或翼端小翼。",
+        "en": "The tip geometry suits the aircraft's speed range and induced-drag goals; some sailplanes use interchangeable tips or winglets.",
+        "ja": "翼端形状は速度域と誘導抵抗に合わせ、一部グライダーは交換翼端やウイングレットを使います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "懸臂低翼採無支柱全金屬結構與大型襟翼，重點是高速巡航、穩定進場及旅行載重。",
+        "en": "The all-metal cantilever low wing and large flaps balance fast cruise, stable approaches and touring payload.",
+        "ja": "全金属片持ち低翼と大型フラップが高速巡航、安定進入、旅行搭載量を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼與升降舵負責俯仰穩定；其安裝高度與翼面形狀用來避開主翼或螺旋槳擾流。",
+        "en": "The tailplane and elevators provide pitch stability, positioned to manage wing or propeller wake.",
+        "ja": "水平尾翼と昇降舵がピッチ安定を担い、主翼やプロペラ後流を考慮して配置されます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定式前三點起落架配流線輪罩；它不像多數雙座 RV 提供尾輪版本。",
+        "en": "Fixed tricycle gear carries streamlined wheel fairings; unlike many two-seat RVs, the RV-10 is not offered as a taildragger.",
+        "ja": "固定前輪式脚に流線形ホイールフェアリングを備え、RV-10には多くの2座RVのような尾輪型はありません。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "4"
+      ],
+      [
+        "首飛年份",
+        "2003"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "9.68 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "—"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Lycoming IO-540"
+      ]
+    ]
+  }
+}

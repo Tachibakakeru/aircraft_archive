@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-02",
-  "fleetCount": 169,
+  "updated": "2026-09-08",
+  "fleetCount": 184,
   "modelCount": 47,
-  "missingCount": 122,
+  "missingCount": 137,
   "missing": [
     {
       "id": "dreamlifter",
@@ -613,6 +613,81 @@
       "id": "s92",
       "name": "Sikorsky S-92A+",
       "manufacturer": "Sikorsky"
+    },
+    {
+      "id": "concorde",
+      "name": "Aérospatiale / BAC Concorde",
+      "manufacturer": "Aérospatiale / BAC"
+    },
+    {
+      "id": "icona5",
+      "name": "ICON A5",
+      "manufacturer": "ICON Aircraft"
+    },
+    {
+      "id": "xcub",
+      "name": "CubCrafters XCub / NXCub",
+      "manufacturer": "CubCrafters"
+    },
+    {
+      "id": "carboncub",
+      "name": "CubCrafters Carbon Cub SS",
+      "manufacturer": "CubCrafters"
+    },
+    {
+      "id": "rv10",
+      "name": "Van's Aircraft RV-10",
+      "manufacturer": "Van's Aircraft"
+    },
+    {
+      "id": "rv14",
+      "name": "Van's Aircraft RV-14 / 14A",
+      "manufacturer": "Van's Aircraft"
+    },
+    {
+      "id": "sling2",
+      "name": "Sling 2",
+      "manufacturer": "Sling Aircraft"
+    },
+    {
+      "id": "slingtsi",
+      "name": "Sling TSi",
+      "manufacturer": "Sling Aircraft"
+    },
+    {
+      "id": "velise",
+      "name": "Pipistrel Velis Electro",
+      "manufacturer": "Pipistrel"
+    },
+    {
+      "id": "explorer",
+      "name": "Pipistrel Explorer",
+      "manufacturer": "Pipistrel"
+    },
+    {
+      "id": "extrang",
+      "name": "Extra NG",
+      "manufacturer": "Extra Aircraft"
+    },
+    {
+      "id": "ventus3",
+      "name": "Schempp-Hirth Ventus 3",
+      "manufacturer": "Schempp-Hirth"
+    },
+    {
+      "id": "arcus",
+      "name": "Schempp-Hirth Arcus",
+      "manufacturer": "Schempp-Hirth"
+    },
+    {
+      "id": "as33me",
+      "name": "Alexander Schleicher AS 33 Me",
+      "manufacturer": "Alexander Schleicher"
+    },
+    {
+      "id": "ask21b",
+      "name": "Alexander Schleicher ASK 21 B",
+      "manufacturer": "Alexander Schleicher"
     }
   ]
 }

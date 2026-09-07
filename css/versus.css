@@ -34,13 +34,13 @@ body{min-height:100vh}
 .vs-picker-col label{
   font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted);
 }
-.vs-picker-col select{
+.vs-picker-col .aircraft-picker-input{
   font-family:var(--sans);font-size:14px;
   color:var(--text);background:var(--panel);
   border:1px solid var(--stroke);border-radius:8px;
   padding:9px 12px;min-width:220px;
 }
-.vs-picker-col select:focus{outline:none;border-color:var(--amber)}
+.vs-picker-col .aircraft-picker-input:focus{outline:none;border-color:var(--amber)}
 .vs-vs{
   font-family:var(--mono);font-size:13px;font-weight:700;
   color:var(--amber);letter-spacing:.1em;

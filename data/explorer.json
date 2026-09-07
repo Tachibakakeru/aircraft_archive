@@ -1,0 +1,265 @@
+{
+  "title": "Pipistrel Explorer",
+  "sub": {
+    "zh": "具碳纖維機體、整機降落傘與 IFR-ready 航電的雙座認證訓練／旅行機。",
+    "en": "A certified two-seat trainer and tourer with a carbon airframe, whole-aircraft parachute, and IFR-ready avionics.",
+    "ja": "炭素繊維機体、機体パラシュート、IFR対応準備済みアビオニクスを備える認証2座練習・旅行機です。"
+  },
+  "sources": [
+    "https://www.pipistrel-aircraft.com/products/explorer/"
+  ],
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "en": "OVERALL PROFILE",
+      "summary": {
+        "zh": "具碳纖維機體、整機降落傘與 IFR-ready 航電的雙座認證訓練／旅行機。",
+        "en": "A certified two-seat trainer and tourer with a carbon airframe, whole-aircraft parachute, and IFR-ready avionics.",
+        "ja": "炭素繊維機体、機体パラシュート、IFR対応準備済みアビオニクスを備える認証2座練習・旅行機です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "並排雙座認證訓練座艙可配置 IFR 航電，操縱與顯示兼顧初學訓練及進階程序。",
+        "en": "The certified side-by-side trainer can carry IFR-ready avionics for both primary training and advanced procedures.",
+        "ja": "認証並列2座練習機はIFR対応アビオニクスを搭載でき、初等から高度手順訓練まで対応します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "en": "COCKPIT WINDOWS",
+      "summary": {
+        "zh": "寬大前風擋與透明側門提供廣角視野，適合目視訓練、航行與地面參考。",
+        "en": "Broad windshield and glazed side doors provide wide-angle visibility for visual training, navigation and ground reference.",
+        "ja": "広い前面窓と透明側ドアが目視訓練、航法、地上目標確認に広い視界を提供します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身與艙門",
+        "en": "Fuselage and doors",
+        "ja": "胴体とドア"
+      },
+      "en": "FUSELAGE AND DOORS",
+      "summary": {
+        "zh": "碳纖維雙座機身整合整機降落傘，外形修長低阻，座艙後方保留行李空間。",
+        "en": "The carbon-fiber two-seat fuselage integrates a whole-aircraft parachute, low-drag contours and aft baggage capacity.",
+        "ja": "炭素繊維2座胴体は機体パラシュート、低抵抗外形、後部荷物室を統合します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "動力系統",
+        "en": "Powerplant",
+        "ja": "動力系統"
+      },
+      "en": "POWERPLANT",
+      "summary": {
+        "zh": "動力為 1 × Rotax 912 S3；安裝方式依機型用途在效率、冷卻、噪音與維護性之間取捨。",
+        "en": "Power comes from 1 × Rotax 912 S3; its installation balances efficiency, cooling, noise and maintainability.",
+        "ja": "動力は1 × Rotax 912 S3で、搭載方式は効率、冷却、騒音、整備性を両立します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wingtip": {
+      "name": {
+        "zh": "翼尖",
+        "en": "Wingtip",
+        "ja": "翼端"
+      },
+      "en": "WINGTIP",
+      "summary": {
+        "zh": "翼尖外形配合該機的速度範圍與誘導阻力需求；部分滑翔機使用可更換翼尖或翼端小翼。",
+        "en": "The tip geometry suits the aircraft's speed range and induced-drag goals; some sailplanes use interchangeable tips or winglets.",
+        "ja": "翼端形状は速度域と誘導抵抗に合わせ、一部グライダーは交換翼端やウイングレットを使います。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Main wing",
+        "ja": "主翼"
+      },
+      "en": "MAIN WING",
+      "summary": {
+        "zh": "長展弦比高翼配襟翼與擾流板，可用於陡降控制並提供接近滑翔機的高效率。",
+        "en": "The high-aspect-ratio high wing uses flaps and spoilers for descent control and glider-like efficiency.",
+        "ja": "高アスペクト比高翼はフラップとスポイラーで降下を制御し、グライダーに近い効率を得ます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單一垂直尾翼與方向舵提供航向穩定及側滑修正，尺寸配合低速控制需求。",
+        "en": "A single fin and rudder provide directional stability and sideslip correction, sized for low-speed authority.",
+        "ja": "単一垂直尾翼と方向舵が方向安定と横滑り修正を担い、低速操縦に合わせた面積を持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "T 型尾翼使水平尾翼遠離主翼擾流，輪廓與同家族 Velis Electro 十分相近。",
+        "en": "A T-tail keeps the tailplane clear of wing wake and closely resembles the related Velis Electro profile.",
+        "ja": "T字尾翼が水平尾翼を主翼後流から離し、同系Velis Electroに近い外形です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定前三點式起落架配整流罩，維持訓練機可靠性並減少巡航阻力。",
+        "en": "Fixed faired tricycle gear preserves trainer reliability while reducing cruise drag.",
+        "ja": "整流カバー付き固定前輪式脚が練習機の信頼性を保ち、巡航抵抗を減らします。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    }
+  },
+  "specifications": {
+    "機組員與載客": [
+      [
+        "座位數",
+        "2"
+      ],
+      [
+        "首飛年份",
+        "—"
+      ]
+    ],
+    "尺寸": [
+      [
+        "翼展",
+        "10.70 m"
+      ]
+    ],
+    "性能": [
+      [
+        "航程／續航",
+        "1,196 km (646 nmi)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Rotax 912 S3"
+      ]
+    ]
+  }
+}
