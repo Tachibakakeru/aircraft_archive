@@ -37,5 +37,245 @@
         "2 × Pratt & Whitney Canada PT6A-65SC"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "方正非加壓機身提供平整貨艙截面，貨運型左側大型門可直接裝卸 LD3；客運型可設 19 席與大型側門。高機頂與垂直側壁強調實用性。",
+        "en": "The boxy unpressurised fuselage provides a regular cargo section. A large left door accepts LD3 containers on freighters, while passenger layouts carry 19 seats with a large side door. Tall, vertical sidewalls emphasise utility.",
+        "ja": "箱形非与圧胴体は規則的な貨物断面を持ち、貨物型左側大型扉からLD3を直接搭載できます。旅客型は19席と大型側扉を備え、高い機体と垂直側壁が実用性を示します。"
+      },
+      "specs": [
+        [
+          "容量",
+          "19 人／3 個 LD3"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "約 22 公尺的懸臂高翼讓發動機與螺旋槳遠離地面，並提供大型襟翼以支援短場操作。無支柱設計使貨門與機身側面保持暢通。",
+        "en": "The roughly 22-metre cantilever high wing keeps engines and propellers clear of the ground and uses large flaps for short-field performance. Its strutless design leaves the cargo door and fuselage sides unobstructed.",
+        "ja": "約22 mの片持ち高翼はエンジンとプロペラの地上高を確保し、大型フラップで短距離性能を得ます。支柱がなく貨物扉と胴体側面を妨げません。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "22.02 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "兩具 PT6A-65SC 驅動四葉 McCauley 螺旋槳，短艙位於高翼前緣。反推與低速推力協助縮短落地滑跑並提升貨運機場適應性。",
+        "en": "Two PT6A-65SC engines drive four-blade McCauley propellers from nacelles on the high wing. Reverse thrust and low-speed pull shorten landing roll and support cargo-airfield operations.",
+        "ja": "高翼ナセルの2基のPT6A-65SCが4枚McCauleyプロペラを駆動します。逆推力と低速推力が着陸滑走を短縮し貨物空港への適応性を高めます。"
+      },
+      "specs": [
+        [
+          "型號",
+          "PT6A-65SC"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "高大的單垂尾與方向舵控制雙發不對稱推力，前緣以圓滑背鰭連接機身。尾翼位於水平尾翼中央上方，但並非 T 尾。",
+        "en": "A tall single fin and rudder control asymmetric twin-engine thrust, with a smooth dorsal transition into the fuselage. The fin rises above the centrally mounted tailplane but does not form a T-tail.",
+        "ja": "高い単一垂直尾翼と方向舵が双発の非対称推力を制御し、前縁は滑らかなドーサル部で胴体へつながります。水平尾翼上に伸びますがT尾翼ではありません。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼裝在後機身中段，位置高於 Twin Otter 的低置尾翼但低於 T 尾頂端。傳統升降舵提供俯仰控制。",
+        "en": "The horizontal tail mounts midway up the aft fuselage, higher than the Twin Otter's low tailplane but below a T-tail position. Conventional elevators provide pitch control.",
+        "ja": "水平尾翼は後部胴体中段に付き、Twin Otterの低位置尾翼より高くT尾翼頂部より低い位置です。通常の昇降舵でピッチを制御します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定前三點式起落架採低壓輪胎與堅固支柱，不設收納艙門。這降低重量與維護複雜度，適合高頻貨運和條件較差跑道。",
+        "en": "Fixed tricycle landing gear uses robust struts and tyres without retraction doors. This reduces weight and maintenance complexity for frequent freight work and less-prepared runways.",
+        "ja": "固定前輪式降着装置は頑丈な支柱とタイヤを使い格納扉を持ちません。重量と整備複雑性を抑え、高頻度貨物運航と条件の悪い滑走路に適します。"
+      },
+      "specs": [
+        [
+          "配置",
+          "固定前三點式"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "Cessna 408 SkyCourier 是 19 席或三個 LD3 貨櫃級的高翼雙發通勤運輸機，從設計初期即兼顧客運與貨運。固定起落架、巨大貨門與無翼支柱高翼是外觀重點。",
+        "en": "The Cessna 408 SkyCourier is a high-wing twin commuter for 19 passengers or three LD3 containers, designed from the outset for passenger and freight work. Fixed gear, a huge cargo door and an unbraced high wing define it.",
+        "ja": "Cessna 408 SkyCourierは19名またはLD3コンテナ3個を運ぶ高翼双発コミューターで、当初から旅客・貨物双方を想定しています。固定脚、大型貨物扉、支柱なし高翼が特徴です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "雙人座艙以短場與通勤任務為核心，配置現代化顯示器、導航與發動機監控。大型前窗提供進場、未鋪設跑道與地面操作所需視野。",
+        "en": "The two-crew cockpit is arranged around commuter and short-field work, with modern displays, navigation and engine monitoring. Large forward windows support approaches, unpaved-strip and ground operations.",
+        "ja": "2名乗務の操縦室は通勤・短距離滑走路任務を中心に、現代的表示、航法、エンジン監視を備えます。大型前窓が進入、未舗装滑走路、地上運用の視界を確保します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "寬大的多片式駕駛艙外窗兼顧前下方與側向視野，適合低高度、短場及偏遠地區操作。各型窗柱與機鼻比例不同，可配合發動機與起落架辨認。",
+        "en": "Large multi-pane flight-deck glazing provides forward-downward and side visibility for low-level, short-field and remote operations. Pillar and nose proportions vary by type and should be read with engines and landing gear.",
+        "ja": "大型の分割操縦室窓は前下方と側方視界を確保し、低高度・短距離・遠隔地運用に適します。窓柱と機首比率は型式ごとに異なり、エンジンや脚と併せて識別します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "懸臂高翼末端略為上翹且無獨立翼尖小翼，燈具整合於翼尖。與 Twin Otter 相比，SkyCourier 沒有外部翼支柱。",
+        "en": "The cantilever high wing ends in a mildly swept/upturned tip without a separate winglet, with lights integrated at the end. Unlike the Twin Otter, the SkyCourier has no external wing struts.",
+        "ja": "片持ち高翼は独立ウイングレットなしの緩い後退・上反翼端で灯火を統合します。Twin Otterと異なり外部翼支柱がありません。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

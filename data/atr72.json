@@ -37,5 +37,245 @@
         "2 × Pratt & Whitney Canada PW127XT-M"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "約 27.2 公尺的加長機身通常容納 68 至 78 名乘客，截面維持每排四座。前後艙門位置與長窗列可協助區分較短的 ATR 42。",
+        "en": "The approximately 27.2-metre stretched fuselage normally carries 68 to 78 passengers in a four-abreast cabin. Door positions and the longer window run help distinguish it from the shorter ATR 42.",
+        "ja": "全長約27.2 mの長胴は通常68～78名を4席横で収容します。扉位置と長い窓列が短いATR 42との識別に役立ちます。"
+      },
+      "specs": [
+        [
+          "全長",
+          "27.17 m"
+        ],
+        [
+          "典型載客量",
+          "68–78"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "ATR 72-600 採雙人玻璃座艙，Thales 航電以五具大型液晶顯示器整合飛行、導航與系統資訊。傳統駕駛盤和中央動力桿保留渦槳機操作布局。",
+        "en": "The ATR 72-600 has a two-crew glass cockpit whose Thales avionics combine flight, navigation and systems information on five large LCDs. Conventional yokes and central power levers retain a familiar turboprop layout.",
+        "ja": "ATR 72-600は2名乗務グラスコックピットで、Thales電子機器が5面の大型LCDに飛行・航法・システム情報を統合します。通常操縦輪と中央出力レバーはターボプロップらしい配置です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "約 27.1 公尺的高翼跨越機身上方，讓螺旋槳與發動機保持良好離地高度；大型襟翼支援支線機場低速操作。翼展大於 ATR 42。",
+        "en": "The roughly 27.1-metre high wing crosses above the fuselage, keeping engines and propellers clear of the ground. Large flaps support low-speed regional-airport work, and span exceeds the ATR 42's.",
+        "ja": "約27.1 mの高翼は胴体上を通り、エンジンとプロペラの地上高を確保します。大型フラップが地方空港の低速運用を支え、翼幅はATR 42より長くなります。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "27.05 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "兩具 Pratt & Whitney Canada PW127XT-M 驅動六葉低噪音螺旋槳。渦槳在較短航段以較低速度換取良好燃油效率與短場性能。",
+        "en": "Two Pratt & Whitney Canada PW127XT-M engines drive six-blade low-noise propellers. Turboprop propulsion trades speed for fuel efficiency and short-field performance on shorter sectors.",
+        "ja": "2基のPratt & Whitney Canada PW127XT-Mが6枚低騒音プロペラを駆動します。ターボプロップは短距離区間で速度と引き換えに燃費と短距離性能を得ます。"
+      },
+      "specs": [
+        [
+          "型號",
+          "PW127XT-M"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "後掠單垂尾由短尾錐上方升起，頂端承載水平尾翼；大型方向舵在單發狀況下提供偏航控制。高垂尾是 ATR 的鮮明側面特徵。",
+        "en": "A swept single fin rises above the short tail cone and carries the horizontal tail at its tip. A large rudder provides yaw authority after an engine failure, making the tall fin a strong ATR side-view cue.",
+        "ja": "後退した単一垂直尾翼が短い尾部から立ち上がり、頂部に水平尾翼を載せます。大型方向舵が片発時のヨーを制御し、高い垂尾はATRの明確な側面特徴です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼位於垂尾頂端形成真正 T 尾，讓尾翼遠離高翼與螺旋槳尾流。左右升降舵控制俯仰，外形與低置尾翼支線機明顯不同。",
+        "en": "The horizontal tail sits atop the fin as a true T-tail, keeping it away from high-wing and propeller wake. Elevators control pitch, and the silhouette differs clearly from regional aircraft with low tailplanes.",
+        "ja": "水平尾翼は垂尾頂部の真正T尾翼で、高翼とプロペラ後流から離れます。左右昇降舵がピッチを制御し、低位置尾翼の地域機と明確に異なります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "可收放前三點式起落架由雙輪前架與左右雙輪主架組成；主架收進機腹兩側突出整流罩，而非發動機短艙。此輪艙位置是 ATR 的重要正面辨識點。",
+        "en": "Retractable tricycle gear uses twin nose wheels and twin-wheel main units. The mains stow in projecting fuselage-side fairings rather than the engine nacelles, an important head-on ATR cue.",
+        "ja": "格納式前輪脚は前脚2輪と左右各2輪主脚で、主脚はエンジンナセルではなく胴体側面の張り出しフェアリングへ収まります。正面からの重要なATR識別点です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "ATR 72-600 是 ATR 家族的加長高容量渦槳支線機，以高翼、雙 PW127XT-M、六葉螺旋槳與 T 尾為特徵。與 ATR 42 相比，機身及翼展更長。",
+        "en": "The ATR 72-600 is the stretched, higher-capacity ATR turboprop, identified by its high wing, two PW127XT-M engines, six-blade propellers and T-tail. It is longer and wider-spanned than the ATR 42.",
+        "ja": "ATR 72-600はATR系の長胴・大容量ターボプロップで、高翼、2基のPW127XT-M、6枚プロペラ、T尾翼が特徴です。ATR 42より胴体と翼幅が長い型です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "多片式駕駛艙外窗包覆短而圓潤的機鼻，中央風擋較寬、側窗逐步收窄。窗框比例與高翼、T 尾共同構成 ATR 家族輪廓。",
+        "en": "Multi-pane flight-deck glazing wraps around a short rounded nose, with broad centre panes narrowing toward the sides. Its framing works with the high wing and T-tail to form the ATR-family silhouette.",
+        "ja": "分割操縦室窓は短く丸い機首を包み、広い中央窓から側面へ細くなります。窓枠、高翼、T尾翼の組合せがATR系シルエットを作ります。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "高翼末端平緩收尖，標準型沒有高大的直立翼尖小翼；航行燈整合在翼尖。ATR 72 的辨識重點是長直高翼，而非獨立 winglet。",
+        "en": "The high wing tapers to simple tips without tall upright winglets in the standard configuration, with navigation lights at the ends. The long straight high wing, not a separate winglet, is the main ATR 72 cue.",
+        "ja": "高翼は単純に細くなる翼端を持ち、標準仕様に大型直立ウイングレットはありません。航法灯を端部に備え、独立翼端板より長い直線高翼がATR 72の特徴です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

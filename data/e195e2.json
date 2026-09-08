@@ -37,5 +37,241 @@
         "2 × Pratt & Whitney PW1900G"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "約 41.5 公尺機身明顯長於 E190-E2，仍採四人並排、無中間座位配置。主翼前後的長窗列與修長比例是兩型最直接差異。",
+        "en": "The approximately 41.5-metre fuselage is visibly longer than the E190-E2 while retaining four-abreast seating without middle seats. Long window runs around the wing provide the clearest distinction.",
+        "ja": "全長約41.5 mでE190-E2より明らかに長く、中央席のない4席横を維持します。主翼前後の長い窓列と細長い比率が最も直接的な違いです。"
+      },
+      "specs": [
+        [
+          "全長",
+          "41.50 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "E2 採雙人玻璃座艙與 fly-by-wire 飛控，更新的大尺寸顯示器與航電延續 E-Jet 操作邏輯。駕駛艙外觀與第一代相近，但系統與人機介面已現代化。",
+        "en": "The E2 uses a two-crew glass cockpit and fly-by-wire controls. Larger displays and updated avionics retain the E-Jet operating philosophy while modernising the systems and interface.",
+        "ja": "E2は2名乗務のグラスコックピットとフライ・バイ・ワイヤを採用します。大型表示器と更新された電子機器はE-Jetの操作思想を保ちながらシステムを近代化しています。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "E2 使用重新設計的高展弦比後掠翼，而非單純沿用第一代翼面。翼型、控制面與翼身整流針對較低阻力和新發動機整合最佳化。",
+        "en": "The E2 uses a redesigned high-aspect-ratio swept wing rather than simply retaining the first-generation surface. Aerofoil, controls and fairings are optimised for lower drag and the new engines.",
+        "ja": "E2は初代翼をそのまま使わず、再設計した高アスペクト比後退翼を採用します。翼型、操縦面、フェアリングは低抵抗と新エンジン統合に最適化されています。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "35.12 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "兩具 Pratt & Whitney PW1900G 齒輪傳動渦輪扇安裝於翼下。大型圓形風扇與較長短艙，是 E2 與使用 CF34 的第一代 E-Jet 最明顯差異。",
+        "en": "Two Pratt & Whitney PW1900G geared turbofans are mounted beneath the wing. Their large round fans and longer nacelles are the clearest cues against first-generation E-Jets with CF34 engines.",
+        "ja": "2基のPratt & Whitney PW1900Gギヤードターボファンを翼下に装備します。大径の丸いファンと長いナセルが、CF34搭載の初代E-Jetとの最も明確な違いです。"
+      },
+      "specs": [
+        [
+          "型號",
+          "PW1900G"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "E195-E2 垂直尾翼高而後掠，根部以寬背鰭平順接入後機身；頂端沒有水平尾翼，輪廓保持單一三角形。",
+        "en": "The E195-E2 has a tall swept fin with a broad dorsal blend into the aft fuselage. Its tip is clear of the tailplane, preserving a simple triangular outline.",
+        "ja": "E195-E2の垂尾は高く後退し幅広い背びれで後部胴体へつながり、頂部に水平尾翼がない単純な三角形です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "E195-E2 水平尾翼低置在後機身兩側，後掠並向外收尖；其高度約與主翼同屬機身中下部，而非架在垂尾頂端。",
+        "en": "The E195-E2's swept tapered tailplanes mount low on either side of the aft fuselage rather than atop the fin.",
+        "ja": "E195-E2の後退・先細水平尾翼は後部胴体両側の低位置にあり、垂尾頂部ではありません。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "前三點式起落架針對 E2 較高重量與大型發動機重新配置，主架向翼根／機身區收納。輪組外觀仍維持支線噴射機常見的雙輪配置。",
+        "en": "The tricycle landing gear is revised for the E2's higher weights and larger engines, with the main units retracting around the wing-root/fuselage area. Twin-wheel units retain a familiar regional-jet appearance.",
+        "ja": "前輪式降着装置はE2の高重量と大型エンジンに合わせて改良され、主脚は翼根・胴体付近へ格納されます。各脚2輪の外観はリージョナルジェットらしい構成です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "E195-E2 是 E2 家族最長、容量最大的型號，使用 PW1900G 與專屬較長翼展。它的載客量接近小型主線窄體機，但仍保留四人並排客艙。",
+        "en": "The E195-E2 is the longest and highest-capacity E2, using PW1900G engines and its own longer-span wing. Capacity approaches small mainline narrow-bodies while retaining a four-abreast cabin.",
+        "ja": "E195-E2はE2最長・最大容量型で、PW1900Gと専用の長い主翼を採用します。小型幹線単通路機に近い容量ながら4席横客室を維持します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "E195-E2 主風擋較寬，中央接縫下方配合圓鈍機鼻形成柔和 V 形；外側窗向後收尖，整組窗帶比 CRJ900 更寬。",
+        "en": "The E195-E2 has broad main windscreens forming a soft V over a rounded nose, with outer panes tapering aft into a wider glazing band.",
+        "ja": "E195-E2は丸い機首上に柔らかなV字を作る広い主風防と、後方へ細る外側窓を持ち、窓帯はCRJ900より幅広いです。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "翼尖平順上彎並與新翼融合，沒有獨立直立翼尖小翼。從遠處看，細長翼展和連續曲線有別於第一代 E-Jet 常見的翼尖形式。",
+        "en": "The tip curves upward as an integrated continuation of the new wing rather than a separate upright winglet. Its long span and continuous curve differ from typical first-generation E-Jet tips.",
+        "ja": "翼端は独立した直立ウイングレットではなく、新主翼から連続して上方へ湾曲します。長い翼幅と連続曲線が初代E-Jetの翼端と異なります。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

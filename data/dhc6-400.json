@@ -37,5 +37,245 @@
         "2 × Pratt & Whitney Canada PT6A-34"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "近矩形截面的非加壓機身便於載客、貨運、跳傘與醫療任務快速改裝，右側大型雙扇門提供寬敞裝卸口。Series 400 最多搭載 19 名乘客。",
+        "en": "The near-rectangular unpressurised fuselage converts readily among passenger, cargo, parachute and medical missions. A large double door on the right eases loading, and Series 400 seats up to 19 passengers.",
+        "ja": "矩形に近い非与圧胴体は旅客、貨物、降下、医療任務へ容易に転換でき、右側大型二枚扉が積み降ろしを助けます。Series 400は最大19名です。"
+      },
+      "specs": [
+        [
+          "最大載客量",
+          "19"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "長直高翼以支柱連接下機身，提供低翼載與良好低速升力。全翼展約 19.8 公尺，搭配襟翼讓飛機能在偏遠短跑道操作。",
+        "en": "A long straight high wing is braced to the lower fuselage, providing low wing loading and strong low-speed lift. Its roughly 19.8-metre span and flaps support remote short-strip operation.",
+        "ja": "長い直線高翼は下部胴体へ支柱で結ばれ、低翼面荷重と良好な低速揚力を生みます。約19.8 mの翼幅とフラップが遠隔短滑走路運用を支えます。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "19.81 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "兩具 PT6A-34 渦槳裝於高翼，採三葉可逆槳距螺旋槳。大直徑螺旋槳與低速推力是 Twin Otter 短距起降能力的重要來源。",
+        "en": "Two PT6A-34 turboprops on the high wing drive three-blade reversible-pitch propellers. Large propellers and strong low-speed thrust are central to Twin Otter STOL performance.",
+        "ja": "高翼の2基のPT6A-34が3枚可逆ピッチプロペラを駆動します。大径プロペラと強い低速推力がTwin OtterのSTOL性能を支えます。"
+      },
+      "specs": [
+        [
+          "型號",
+          "PT6A-34"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單片垂直尾翼與大型方向舵位於傳統尾段，面積充足以應對單發失效時的不對稱推力。外形不像 ATR／Q400 的 T 尾。",
+        "en": "A single vertical fin and large rudder sit in a conventional tail and provide authority against asymmetric thrust after an engine failure. The arrangement is not a T-tail like the ATR or Q400.",
+        "ja": "単一垂直尾翼と大型方向舵を通常尾部に置き、片発停止時の非対称推力へ対応します。ATRやQ400のT尾翼とは異なります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼裝在後機身低處，並以小支柱加固。低置尾翼與高翼形成 Twin Otter 很容易辨認的傳統布局。",
+        "en": "The horizontal tail is mounted low on the aft fuselage and supported by small braces. Its low tailplane and high wing create the Twin Otter's recognisable conventional arrangement.",
+        "ja": "水平尾翼は後部胴体低位置に付き、小支柱で補強されます。低い尾翼と高翼の組合せがTwin Otterらしい通常配置です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "起落架不收納；陸基型使用固定前三點式輪架，也可更換大型浮筒、兩棲浮筒或雪橇。外露輪架簡化維修並適合粗糙場地。",
+        "en": "The gear does not retract. Landplanes use fixed tricycle wheels, while large floats, amphibious floats or skis can be fitted. Exposed gear simplifies maintenance and suits rough fields.",
+        "ja": "脚は格納されず、陸上型は固定前輪式、ほかに大型フロート、水陸両用フロート、スキーを装着できます。露出脚は整備を簡略化し荒地に適します。"
+      },
+      "specs": [
+        [
+          "配置",
+          "固定輪式／浮筒／雪橇"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "DHC-6 Twin Otter Series 400 是 19 席級高翼雙發短場多用途機，可換裝輪式、浮筒或雪橇。固定起落架、翼支柱與方正機身是代表特徵。",
+        "en": "The DHC-6 Twin Otter Series 400 is a 19-seat high-wing twin-engine STOL utility aircraft available on wheels, floats or skis. Fixed gear, wing struts and a boxy fuselage define it.",
+        "ja": "DHC-6 Twin Otter Series 400は19席級高翼双発STOL多用途機で、車輪、フロート、スキーに対応します。固定脚、翼支柱、箱形胴体が代表的特徴です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "雙人座艙以短場與通勤任務為核心，配置現代化顯示器、導航與發動機監控。大型前窗提供進場、未鋪設跑道與地面操作所需視野。",
+        "en": "The two-crew cockpit is arranged around commuter and short-field work, with modern displays, navigation and engine monitoring. Large forward windows support approaches, unpaved-strip and ground operations.",
+        "ja": "2名乗務の操縦室は通勤・短距離滑走路任務を中心に、現代的表示、航法、エンジン監視を備えます。大型前窓が進入、未舗装滑走路、地上運用の視界を確保します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "寬大的多片式駕駛艙外窗兼顧前下方與側向視野，適合低高度、短場及偏遠地區操作。各型窗柱與機鼻比例不同，可配合發動機與起落架辨認。",
+        "en": "Large multi-pane flight-deck glazing provides forward-downward and side visibility for low-level, short-field and remote operations. Pillar and nose proportions vary by type and should be read with engines and landing gear.",
+        "ja": "大型の分割操縦室窓は前下方と側方視界を確保し、低高度・短距離・遠隔地運用に適します。窓柱と機首比率は型式ごとに異なり、エンジンや脚と併せて識別します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "翼尖簡潔圓鈍，沒有民航噴射機式翼尖小翼；Series 400 可見航行燈與燈罩。辨識重點應放在長直高翼和翼支柱。",
+        "en": "The tips are simple and rounded without airliner-style winglets; navigation-light fairings may be visible. Identification relies more on the long straight high wing and its struts.",
+        "ja": "翼端は簡潔な丸形で旅客ジェット式ウイングレットはなく、航法灯カバーが見られます。長い直線高翼と支柱の方が主要識別点です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

@@ -37,5 +37,245 @@
         "2 × GE Aerospace H85-200"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "非加壓機身容納最多 19 名乘客，可快速改為貨運、救護或特殊任務；後段大型側門便於裝卸。NG 延長機鼻行李艙並更新內裝與系統。",
+        "en": "The unpressurised fuselage carries up to 19 passengers and converts to freight, medical or special missions through a large aft side door. The NG adds an extended nose baggage compartment and updated systems.",
+        "ja": "非与圧胴体は最大19名を収容し、後部大型側扉から貨物、医療、特殊任務へ転換できます。NGは延長機首手荷物室と更新された内装・システムを備えます。"
+      },
+      "specs": [
+        [
+          "最大載客量",
+          "19"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "約 20 公尺的新高翼增加燃油容量並改善巡航效率，同時保留大型高升力裝置和良好螺旋槳離地間隙。機翼無 Twin Otter 式外部支柱。",
+        "en": "The roughly 20-metre new high wing increases fuel capacity and cruise efficiency while retaining strong high-lift devices and propeller clearance. It lacks Twin Otter-style external bracing.",
+        "ja": "約20 mの新高翼は燃料容量と巡航効率を高め、大型高揚力装置とプロペラ地上高を維持します。Twin Otter式外部支柱はありません。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "20.0 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "兩具 GE Aerospace H85-200 渦槳驅動五葉 AV 725 螺旋槳，具電子控制與反推能力。五葉槳和較流線短艙是 NG 相較舊型 L 410 的辨識點。",
+        "en": "Two GE Aerospace H85-200 turboprops drive five-blade AV 725 propellers with electronic control and reverse. Five blades and streamlined nacelles distinguish the NG from older L 410 variants.",
+        "ja": "2基のGE Aerospace H85-200が電子制御・逆推力付き5枚AV 725プロペラを駆動します。5枚プロペラと流線形ナセルが旧L 410との識別点です。"
+      },
+      "specs": [
+        [
+          "型號",
+          "H85-200"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "單垂尾與大方向舵提供短場低速及單發狀況所需方向控制，前緣以背鰭連接機身。尾翼是傳統配置而非 T 尾。",
+        "en": "A single fin and large rudder provide directional authority at short-field speeds and after an engine failure, with a dorsal transition into the fuselage. The tail is conventional rather than T-shaped.",
+        "ja": "単一垂直尾翼と大型方向舵が短距離低速時と片発時の方向制御を担い、ドーサル部で胴体へつながります。T尾翼ではなく通常配置です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼安裝於後機身中低位置，配合傳統升降舵控制俯仰。相較 ATR 72 的 T 尾，L 410 NG 尾翼位置明顯較低。",
+        "en": "The horizontal tail mounts low-to-mid on the aft fuselage with conventional elevators. It sits visibly lower than the ATR 72's T-tail and is a useful silhouette cue.",
+        "ja": "水平尾翼は後部胴体の中低位置に付き通常昇降舵を備えます。ATR 72のT尾翼より明らかに低く、シルエット識別に有効です。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "可收放前三點式起落架適合未鋪裝跑道，主輪向發動機短艙／翼根區收納。相較固定腳 Twin Otter 與 SkyCourier，這是重要辨識差異。",
+        "en": "Retractable tricycle gear is designed for unpaved strips, with the main wheels stowing around the nacelle/wing-root area. Retraction distinguishes it from fixed-gear Twin Otter and SkyCourier aircraft.",
+        "ja": "格納式前輪脚は未舗装滑走路向けで、主輪をナセル・翼根付近へ収めます。固定脚のTwin OtterやSkyCourierとの重要な違いです。"
+      },
+      "specs": [
+        [
+          "配置",
+          "可收放前三點式"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "L 410 NG 是 L 410 家族的現代化 19 席高翼雙發通勤機，換裝 H85-200、五葉螺旋槳、新翼與玻璃座艙。短場、非鋪裝跑道能力仍是設計核心。",
+        "en": "The L 410 NG is the modernised 19-seat high-wing twin commuter, adding H85-200 engines, five-blade propellers, a new wing and glass cockpit while retaining short and unpaved-strip capability.",
+        "ja": "L 410 NGはL 410系を近代化した19席高翼双発コミューターで、H85-200、5枚プロペラ、新主翼、グラスコックピットを採用し短距離・未舗装滑走路能力を維持します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "雙人座艙以短場與通勤任務為核心，配置現代化顯示器、導航與發動機監控。大型前窗提供進場、未鋪設跑道與地面操作所需視野。",
+        "en": "The two-crew cockpit is arranged around commuter and short-field work, with modern displays, navigation and engine monitoring. Large forward windows support approaches, unpaved-strip and ground operations.",
+        "ja": "2名乗務の操縦室は通勤・短距離滑走路任務を中心に、現代的表示、航法、エンジン監視を備えます。大型前窓が進入、未舗装滑走路、地上運用の視界を確保します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "寬大的多片式駕駛艙外窗兼顧前下方與側向視野，適合低高度、短場及偏遠地區操作。各型窗柱與機鼻比例不同，可配合發動機與起落架辨認。",
+        "en": "Large multi-pane flight-deck glazing provides forward-downward and side visibility for low-level, short-field and remote operations. Pillar and nose proportions vary by type and should be read with engines and landing gear.",
+        "ja": "大型の分割操縦室窓は前下方と側方視界を確保し、低高度・短距離・遠隔地運用に適します。窓柱と機首比率は型式ごとに異なり、エンジンや脚と併せて識別します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "新設計高翼採乾淨圓順翼尖，燃油整合於翼內，不再依賴舊型常見的大型翼尖油箱。翼尖燈具形成小型整流外殼。",
+        "en": "The redesigned high wing has clean rounded tips and carries fuel internally rather than relying on the prominent tip tanks seen on many older L 410s. Tip lights form small fairings.",
+        "ja": "再設計高翼は滑らかな丸形翼端と翼内燃料を採用し、旧L 410で目立つ大型翼端タンクに依存しません。翼端灯が小型フェアリングを形成します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

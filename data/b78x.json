@@ -37,5 +37,234 @@
         "2 × GEnx-1B / Rolls-Royce Trent 1000"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "約 68.3 公尺長的複合材料機身比 787-9 再延長約 5.5 公尺，仍保留大型電致變色客艙窗與每側四扇主要客艙門。較長翼後機身段最易辨認。",
+        "en": "The approximately 68.3-metre composite fuselage is about 5.5 metres longer than the 787-9, retaining large electrochromic windows and four principal cabin doors per side. The extended aft body is the clearest cue.",
+        "ja": "全長約68.3 mの複合材胴体は787-9より約5.5 m長く、大型電子調光窓と片側4枚の主要扉を維持します。長い主翼後方胴体が最も分かりやすい特徴です。"
+      },
+      "specs": [
+        [
+          "全長",
+          "68.28 m"
+        ],
+        [
+          "典型載客量",
+          "約 336"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "787 的複合材料主翼展弦比高、翼尖細長，飛行中可見顯著彈性上彎；後緣採先進襟翼與擾流板配置。",
+        "en": "The 787's composite high-aspect-ratio wing is slender and visibly flexes upward in flight, with advanced flaps and spoilers along the trailing edge.",
+        "ja": "787の複合材高アスペクト比翼は細長く、飛行中に大きく上へしなります。後縁には先進的なフラップとスポイラーがあります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "787-10 可使用 General Electric GEnx-1B 或 Rolls-Royce Trent 1000；兩者短艙後緣都有鋸齒狀 chevrons，用來混合噴流並降低噪音。",
+        "en": "The 787-10 can use GEnx-1B or Trent 1000 engines; both installations feature serrated nacelle chevrons that mix the jet flow and reduce noise.",
+        "ja": "787-10はGEnx-1BまたはTrent 1000を使用し、どちらも噴流混合と騒音低減のためナセル後縁にシェブロンを備えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "787 垂直尾翼以複合材料製成，前緣後掠、頂端向後收尖，根部整流罩平順連接機背。",
+        "en": "The composite 787 fin has a swept leading edge, aft-tapered tip and smooth dorsal fairing into the upper fuselage.",
+        "ja": "787の複合材垂直尾翼は後退前縁、後方へ細くなる上端、滑らかなドーサルフェアリングを持ちます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "787 的水平尾翼低置且後掠，複合材料表面與細長後機身平順融合；外形簡潔、翼尖收束較尖。",
+        "en": "The low-mounted swept composite tailplane blends into the slender aft fuselage and tapers cleanly toward pointed tips.",
+        "ja": "787の低位置後退複合材水平尾翼は細い後部胴体へ滑らかにつながり、翼端へきれいに細くなります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "787-10 每組主起落架為兩軸四輪、前起落架雙輪；主腳轉向架落地時帶有傾角，收入翼身整流區。",
+        "en": "Each 787-10 main bogie has two axles and four tyres. The truck tilts for touchdown and retracts into the wing-body fairing.",
+        "ja": "787-10の各主脚は2軸4輪で、接地用の傾きを持ち、翼胴フェアリング内へ格納されます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "787-10 是 Dreamliner 家族最長、容量最大的型號，與 787-9 共享複合材料機身、彎曲翼尖和兩種高旁通比引擎。主要辨識點是主翼前後更長的機身，而非新的翼形。",
+        "en": "The 787-10 is the longest and highest-capacity Dreamliner, sharing the composite fuselage, curved tips and two engine choices with the 787-9. Its principal cue is the longer body around the same wing.",
+        "ja": "787-10はDreamliner最長・最大容量型で、787-9と複合材胴体、曲線翼端、2種のエンジンを共有します。主な識別点は新しい翼ではなく、同じ翼の前後に伸びた胴体です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "787 駕駛艙保留 Boeing 傳統駕駛盤，但採大型橫向液晶螢幕、雙 HUD 與高度整合的 EICAS／飛行管理顯示，視覺上比 A330ceo 的上一代面板更開闊。",
+        "en": "The 787 retains Boeing yokes but uses large landscape displays, dual HUDs and integrated EICAS/flight-management pages, giving a more open appearance than the earlier A330ceo panel.",
+        "ja": "787はBoeing式操縦輪を残しつつ、大型横長画面、デュアルHUD、統合EICAS／飛行管理表示を採用し、A330ceoより開放的に見えます。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "787 的駕駛艙窗面積大，兩片正面風擋寬而較直立，外側窗向後下方收尖；窗帶與圓滑機鼻融合，但沒有 A350 式整片黑色面罩。",
+        "en": "The 787 has large, upright forward panes and outer panes tapering aft and down. The glazing blends into the smooth nose without an A350-style full black mask.",
+        "ja": "787は大型で直立気味の前面窓と、後下方へ細くなる側面窓を持ちます。滑らかな機首に馴染みますがA350の全面黒マスクはありません。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "787 沒有直立翼尖小翼；高展弦比主翼在外翼連續上彎後，末端向後拉長形成水平為主的 raked tip。",
+        "en": "The 787 has no upright winglet. Its high-aspect-ratio wing flexes upward and finishes in an aft-stretched, primarily horizontal raked tip.",
+        "ja": "787には直立ウイングレットがなく、高アスペクト比翼が上へしなり、後方へ長い水平レイクド翼端になります。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

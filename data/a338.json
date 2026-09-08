@@ -225,38 +225,17 @@
       },
       "en": "HORIZONTAL STABILIZER",
       "summary": {
-        "zh": "A330-200 的低置水平尾翼面積與展幅都大於 767，後掠翼面從厚翼根向外收尖；全機下方照片可直接比較尾翼與寬機身比例。",
-        "en": "The A330-200's low-mounted tailplane is larger in area and span than the 767's, tapering from a thick swept root. An underside view shows its scale against the wide fuselage.",
-        "ja": "A330-200の低位置水平尾翼は767より面積・幅が大きく、厚い後退翼根から細くなります。下面写真で太い胴体との比率を確認できます。"
+        "zh": "低置後掠水平尾翼與 A330 家族共通，安裝在後機身兩側並以升降舵和可調安定面控制俯仰。它本身無法可靠區分 -800 與 -900。",
+        "en": "The low swept horizontal tail is common to the A330 family, mounted on either side of the aft fuselage with elevators and a trimmable stabilizer for pitch control. It does not reliably distinguish the -800 from the -900.",
+        "ja": "低位置後退水平尾翼はA330ファミリー共通で、後部胴体両側に付き昇降舵と可動安定板でピッチを制御します。これだけでは-800と-900を確実に区別できません。"
       },
-      "specs": [
-        [
-          "操縱面",
-          "升降舵"
-        ]
-      ],
+      "specs": [],
       "fact": {
-        "zh": "水平尾翼本身不是主要判據；兩型布局相同，應配合翼尖、機身寬度與垂尾比例。",
-        "en": "Tailplane shape alone is secondary because both types share the layout; combine it with wingtips, fuselage width and fin proportion.",
-        "ja": "両型とも同配置のため水平尾翼単独は補助的で、翼端、胴体幅、垂尾比率と組み合わせます。"
+        "zh": "",
+        "en": "",
+        "ja": ""
       },
-      "bullets": [
-        {
-          "zh": "水平尾翼從粗壯尾錐兩側伸出。",
-          "en": "The tailplanes project from either side of a broad tailcone.",
-          "ja": "太い尾部の両側から水平尾翼が伸びます。"
-        },
-        {
-          "zh": "翼根厚、外段後掠並收尖。",
-          "en": "The root is thick and the swept outer panel tapers.",
-          "ja": "翼根が厚く、外側は後退して細くなります。"
-        },
-        {
-          "zh": "與大垂尾組成較厚重的尾部輪廓。",
-          "en": "Together with the large fin it forms a fuller empennage.",
-          "ja": "大型垂尾とともに厚みある尾部輪郭を作ります。"
-        }
-      ],
+      "bullets": [],
       "images": []
     },
     "gear": {

@@ -37,5 +37,235 @@
         "2 × General Electric CF34-8E"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "約 31.7 公尺長的窄體機身比 E170 稍長，客艙維持每排四座、無中間座位。每側前後主要艙門與翼上出口形成 E-Jet 典型配置。",
+        "en": "The approximately 31.7-metre narrow body is slightly longer than the E170 while keeping four-abreast seating without middle seats. Forward and aft doors plus overwing exits form the familiar E-Jet arrangement.",
+        "ja": "全長約31.7 mの単通路胴体はE170より少し長く、中央席のない4席横を維持します。前後扉と主翼上非常口がE-Jetの典型配置です。"
+      },
+      "specs": [
+        [
+          "全長",
+          "31.68 m"
+        ],
+        [
+          "典型載客量",
+          "76–88"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "E175 使用 Honeywell Primus Epic 玻璃座艙，五具大型顯示器與兩側駕駛盤是主要特徵。為 E175 實機，用於示範第一代 E175／175 共通基本布局。",
+        "en": "The E175 uses a Honeywell Primus Epic glass cockpit with five large displays and yokes at both seats. The E175 viewgraph illustrates the shared basic first-generation E175/175 layout.",
+        "ja": "E175はHoneywell Primus Epic、主要大型画面5面、両席操縦輪が特徴です。E175で、初代E175／175共通の基本配置を示します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "E175 翼展 26.00 m，低置後掠主翼下承載引擎，後緣有襟翼及滑軌整流罩；從正面可同時比較主翼、引擎和小翼的位置。",
+        "en": "The E175's 26.00 m low swept wing carries the engines and has trailing-edge flaps and track fairings. A front view shows the relationship between wing, nacelles and tips.",
+        "ja": "E175の翼幅26.00 mの低翼後退翼はエンジンを搭載し、後縁にフラップとトラック整流部があります。正面で主翼・ナセル・小翼の位置を比較できます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "E175 使用 GE CF34-8E 系列渦扇，兩具短艙由吊架懸掛在主翼下方；進氣口近圓形，側面可見短艙與機翼的明顯間隙。",
+        "en": "GE CF34-8E-series turbofans hang beneath the E175's wings on pylons. The inlets are nearly circular and a clear nacelle-to-wing gap is visible from the side.",
+        "ja": "E175はGE CF34-8E系ターボファンを主翼下パイロンに搭載。吸気口はほぼ円形で、側面からナセルと翼の間隔が見えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "E175 垂尾是高而後掠的單一翼面，根部以背鰭平順連接後機身；垂尾頂端沒有水平尾翼，與 CRJ700 的 T 尾相反。",
+        "en": "The E175 fin is a tall swept surface with a dorsal blend into the aft body. No tailplane crosses its tip, unlike the CRJ700 T-tail.",
+        "ja": "E175垂尾は高い後退面で根元背びれが胴体へ滑らかにつながり、CRJ700と違い頂部に水平尾翼がありません。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "E175 水平尾翼從後機身兩側低位伸出，後掠且向外收尖；從側面可看到翼根遠低於垂尾頂端。",
+        "en": "The E175's swept tapered tailplanes extend from low on each side of the aft fuselage. Their roots sit well below the fin tip.",
+        "ja": "E175の後退・先細水平尾翼は後部胴体両側の低位置から伸び、根元は垂尾頂端より大幅に低くなります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "E175 前腳雙輪、左右主腳各雙輪，共六輪；主腳位於翼根附近，可觀察輪距以及翼下引擎的離地間隙。",
+        "en": "The E175 uses twin nose wheels and twin wheels on each main leg, six total. The mains sit near the wing roots;  their track and underwing engine clearance.",
+        "ja": "E175は前脚2輪、左右主脚各2輪の計6輪。主脚は翼根付近にあり、実機では輪距と翼下エンジンの地上間隔を確認できます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "E175 是第一代 E-Jet 的 70 至 80 席級主力型，較 E170 加長但保留四人並排客艙、翼下 CF34 與低置尾翼。它常見於北美支線航空市場。",
+        "en": "The E175 is the principal 70-to-80-seat first-generation E-Jet, stretched from the E170 while retaining the four-abreast cabin, underwing CF34 engines and low tail. It is especially common in North American regional service.",
+        "ja": "E175は初代E-Jetの70～80席級主力型で、E170を延長しながら4席横客室、翼下CF34、低位置尾翼を維持します。北米リージョナル運航で特に一般的です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "E175 正面窗由中央窗柱分開，側面窗較短，配合寬圓機鼻與平順下收的鼻部輪廓；從正面和側面可對照窗框角度。",
+        "en": "The E175 has a centre-divided windshield and short side panes above a broad rounded nose that tapers smoothly downward. Compare frame angles in front and side views.",
+        "ja": "E175は中央で分かれた前窓と短い側窓を持ち、その下に太く丸く下へ絞られる機首があります。正面・側面で窓枠角度を比較します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "E175 的翼尖向上彎起，與主翼平順銜接；從正面可看出小翼的傾斜與後掠，不是完全垂直的端板。",
+        "en": "The E175 wingtip curves upward with a smooth transition from the wing. Front views show its cant and sweep rather than a purely vertical end plate.",
+        "ja": "E175の翼端は滑らかにつながって上向きに曲がり、正面で傾きと後退が分かる、単なる垂直板ではない形です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

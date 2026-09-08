@@ -37,5 +37,239 @@
         "2 × General Electric CF6-80C2"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "約 54.9 公尺長的廣體機身具有平整強化貨艙地板，主甲板左前方設大型貨門，可裝載標準貨盤與貨櫃。封閉窗列與貨門輪廓可區分客機。",
+        "en": "The approximately 54.9-metre wide body has a reinforced flat main deck and a large forward-left cargo door for standard pallets and containers. Blank window rows and the cargo-door outline distinguish it from passenger aircraft.",
+        "ja": "全長約54.9 mのワイドボディは強化された平坦主甲板と左前方大型貨物扉を持ち、標準パレットとコンテナを搭載します。閉じた窓列と貨物扉輪郭が旅客型との識別点です。"
+      },
+      "specs": [
+        [
+          "全長",
+          "54.94 m"
+        ],
+        [
+          "最大酬載",
+          "約 52.5 t"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "767-300F 原始翼展約 47.57 m，主翼後掠且面積小於 A330；翼根與翼身整流罩較緊湊，後裝小翼機翼展會增加。",
+        "en": "The original 767-300F spans about 47.57 m. Its swept wing is smaller than the A330's, with a more compact root and fairing; retrofit winglets increase span.",
+        "ja": "767-300Fの原型翼幅は約47.57 mで、A330より小さく、翼根とフェアリングも小型です。後付け小翼で翼幅は増えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "原廠 767-300F 使用兩具 General Electric CF6-80C2 高旁通比渦輪扇。短艙位於低翼下方，圓形進氣口與傳統尾噴口不同於新世代鋸齒短艙。",
+        "en": "Factory 767-300Fs use two General Electric CF6-80C2 high-bypass turbofans beneath the low wing. Round inlets and conventional exhaust nacelles differ from newer chevron-edged designs.",
+        "ja": "新造767-300Fは低翼下に2基のGeneral Electric CF6-80C2高バイパス比ターボファンを装備します。丸い吸気口と通常排気ナセルは新世代シェブロン型と異なります。"
+      },
+      "specs": [
+        [
+          "型號",
+          "CF6-80C2"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "767 垂直尾翼前緣大幅後掠、頂端略方，根部背鰭不長；尾錐細長，整體尾部比 A330-200 更纖細。",
+        "en": "The 767 fin has a strongly swept leading edge, a slightly squared tip and a modest dorsal fillet. Its long narrow tailcone makes the empennage look slimmer than the A330-200's.",
+        "ja": "767の垂直尾翼は強い後退前縁、やや角形の上端、小さめの背びれを持ち、細長い尾部でA330-200より軽快に見えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "767 的低置水平尾翼後掠且向外收尖；從下方平面可同時比較其展幅、升降舵分段與細長尾錐。",
+        "en": "The 767's low-mounted tailplane is swept and tapered. An underside planform view reveals its span, segmented elevators and slender tailcone together.",
+        "ja": "767の低位置水平尾翼は後退して翼端へ細くなり、下面から翼幅、分割昇降舵、細い尾部を同時に確認できます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "767-300F 每側主起落架為兩軸四輪轉向架，前起落架雙輪；這與 A330-200 相同，因此輪胎數不能區分兩型。",
+        "en": "Each 767-300F main gear has a two-axle four-wheel bogie and the nose gear has two wheels. The A330-200 uses the same counts, so wheel number does not separate them.",
+        "ja": "767-300Fの各主脚は2軸4輪、前脚は2輪で、A330-200も同じため輪数では区別できません。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "767-300F 是原廠生產的中型雙發廣體貨機，以 767-300ER 尺寸為基礎並設大型主甲板貨門。無客艙窗的長直機身、CF6 引擎與傳統翼尖形成典型外觀。",
+        "en": "The 767-300F is a factory-built medium twin-engine wide-body freighter based on 767-300ER dimensions, with a large main-deck cargo door. Its windowless body, CF6 engines and conventional tips form the classic profile.",
+        "ja": "767-300Fは767-300ER寸法を基礎に大型主甲板貨物扉を備える新造中型双発貨物機です。窓のない長い胴体、CF6、通常翼端が典型的外観です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "767 駕駛艙採 Boeing 駕駛盤與中央操縱柱，典型布局有六具 CRT／液晶顯示器、中央 EICAS 與傳統模式控制面板；後期改裝機的螢幕可能更現代。",
+        "en": "The 767 flight deck uses Boeing yokes and control columns, typically with six CRT/LCD displays, central EICAS and a conventional mode-control panel; retrofit aircraft may have newer screens.",
+        "ja": "767の操縦席はBoeing式操縦輪とコントロールコラム、通常6面のCRT／LCD、中央EICAS、従来型モード制御盤を備え、改修機は新型画面の場合があります。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "767 使用六片式駕駛艙窗，正面兩片風擋較直立，外側窗帶形成明顯折角；配合較尖且略下垂的機鼻，正面輪廓比 A330 更窄。",
+        "en": "The 767 uses six cockpit panes with upright front windscreens and an angular outer belt. Combined with its pointed, slightly drooped nose, the frontal outline is narrower than the A330's.",
+        "ja": "767は6枚窓で、直立気味の前面窓と角張った外側窓帯を持ちます。尖ってやや下がる機首と組み合わさり、A330より正面輪郭が狭く見えます。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "原廠貨機以傳統尖細翼尖交付，沒有 767 客機改裝常見的高大 blended winglet；部分營運商改裝狀態應依個別飛機確認。",
+        "en": "Factory freighters were delivered with conventional tapered tips rather than the tall blended winglets seen on some passenger 767 retrofits; individual aftermarket fits must be checked aircraft by aircraft.",
+        "ja": "新造貨物型は通常の細い翼端で納入され、旅客767改修機で見られる大型ブレンデッド・ウイングレットは標準ではありません。後付け状態は個体ごとに確認します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

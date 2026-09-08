@@ -37,5 +37,245 @@
         "2 × General Electric GE9X"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "約 76.7 公尺的機身使 777-9 成為 777 家族最長型之一，維持寬大的雙走道截面與每側四扇主要客艙門。細長比例和長翼共同形成外觀。",
+        "en": "At about 76.7 metres, the 777-9 has one of the longest 777 fuselages, retaining the broad twin-aisle cross-section and four principal cabin doors per side. Its elongated body works visually with the long wing.",
+        "ja": "全長約76.7 mで777系列最長級の胴体を持ち、幅広い双通路断面と片側4枚の主要客室扉を維持します。長い胴体と主翼が独特の比率を作ります。"
+      },
+      "specs": [
+        [
+          "全長",
+          "76.72 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "全新高展弦比複合材料機翼具有更長翼展與明顯上反／彎曲，並整合折疊翼尖。它不是 777-300ER 金屬翼的簡單延長，而是 777X 效率提升核心。",
+        "en": "The new high-aspect-ratio composite wing has greater span, visible flex and integrated folding tips. It is not a simple extension of the 777-300ER metal wing but a core source of 777X efficiency.",
+        "ja": "新しい高アスペクト比複合材主翼は長い翼幅、目立つたわみ、折り畳み翼端を統合します。777-300ER金属翼の単純延長ではなく、777X効率向上の核心です。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "71.8 m（展開）"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "兩具 GE9X 是目前最大級民航渦輪扇之一，具有巨大風扇、複合材料葉片與鋸齒狀短艙尾緣。其直徑和圓潤進氣口遠大於早期 777 的 GE90。",
+        "en": "Two GE9X engines rank among the largest civil turbofans, with huge fans, composite blades and chevron nacelle trailing edges. Their diameter and rounded inlets exceed those of earlier 777 GE90 installations.",
+        "ja": "2基のGE9Xは最大級の民間ターボファンで、巨大ファン、複合材ブレード、シェブロン付きナセル後縁を備えます。直径と丸い吸気口は従来777のGE90を上回ります。"
+      },
+      "specs": [
+        [
+          "型號",
+          "GE9X"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "777 的垂直尾翼高大、後掠，根部以長背鰭連接後機身；方向舵面積大，以應付大型雙發機單發失效時的偏航力矩。",
+        "en": "The 777's tall swept fin blends into the aft fuselage through a long dorsal fillet and carries a large rudder for engine-out control.",
+        "ja": "777の高い後退垂直尾翼は長いドーサルフィンで後部胴体へつながり、大型方向舵を備えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "777 的水平尾翼低置、尺寸大且後掠，與長後機身和高垂尾共同形成寬大的尾部輪廓。",
+        "en": "The 777 uses a large low-mounted swept tailplane, producing a broad tail silhouette with the long aft fuselage and tall fin.",
+        "ja": "777は大型の低位置後退水平尾翼を備え、長い後部胴体と高い垂直尾翼で幅広い尾部輪郭になります。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "大型前三點式起落架使用雙輪前架與每側六輪主架，輪組布局延續 777 家族以分散高重量。777-9 的主架另配合加長機身與起飛姿態控制。",
+        "en": "The large tricycle gear uses twin nose wheels and six-wheel main bogies on each side, continuing the 777 approach to distributing high weight. The 777-9 gear also supports rotation management for its long fuselage.",
+        "ja": "大型前輪式降着装置は前脚2輪、左右各6輪主脚台車で高重量を分散する777方式を継承します。777-9では長胴の離陸姿勢管理にも対応します。"
+      },
+      "specs": [
+        [
+          "主起落架",
+          "每側 6 輪"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "777-9 是 777X 家族的大型客機，以加長機身、全新複合材料機翼、可折疊翼尖與 GE9X 為核心。它保留 777 雙發寬體布局，但翼尖與發動機能立即區別於 777-300ER。",
+        "en": "The 777-9 is the large 777X passenger model, built around a stretched fuselage, new composite wing, folding tips and GE9X engines. It retains the twin-engine 777 layout but is readily separated from the 777-300ER by its tips and engines.",
+        "ja": "777-9は長胴、全新複合材主翼、折り畳み翼端、GE9Xを核とする大型777X旅客型です。777の双発ワイドボディ配置を保ちつつ、翼端とエンジンで777-300ERと容易に区別できます。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "777 駕駛艙採傳統駕駛盤與中央操縱柱，六具大型顯示器橫向排列；中央 EICAS 顯示引擎與系統資訊，控制邏輯仍保留典型 Boeing 操作習慣。",
+        "en": "The 777 flight deck uses conventional yokes and control columns with six large displays. Central EICAS screens carry engine and system information in a recognizably Boeing layout.",
+        "ja": "777の操縦席は操縦輪とコントロールコラムを備え、6面の大型表示器を横一列に配置します。中央EICASがエンジンとシステム情報を表示します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "777 的駕駛艙窗沒有 A350 的黑色面罩。兩片正面主風擋寬大而接近梯形，外側窗以明顯折角向後收窄，窗框與白色機鼻蒙皮清楚分離。",
+        "en": "The 777 has no A350-style black mask. Large trapezoidal front panes transition through angular outer panes, with each frame clearly separated from the painted nose skin.",
+        "ja": "777にはA350の黒いマスクがありません。大きな台形前面窓から角張った外側窓へつながり、各窓枠が白い機首外板から明確に分かれます。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "地面滑行時翼尖可向上折疊，使展開約 71.8 公尺的長翼能使用既有 777 等級登機門；起飛前必須展平並鎖定。折疊鉸鏈是 777X 的關鍵辨識點。",
+        "en": "The tips fold upward on the ground so the roughly 71.8-metre-span wing can use existing 777-class gates; they must extend and lock before take-off. The hinge is a defining 777X cue.",
+        "ja": "地上では翼端を上方へ折り畳み、展開時約71.8 mの主翼を既存777級ゲートへ収めます。離陸前に展開・固定し、ヒンジ部が777Xの決定的識別点です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }

@@ -37,5 +37,244 @@
         "2 × General Electric GE90-110B1L"
       ]
     ]
+  },
+  "partOrder": [
+    "overview",
+    "cockpit",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wingtip",
+    "wing",
+    "vstab",
+    "hstab",
+    "gear"
+  ],
+  "parts": {
+    "fuselage": {
+      "name": {
+        "zh": "機身",
+        "en": "Fuselage",
+        "ja": "胴体"
+      },
+      "en": "FUSELAGE",
+      "summary": {
+        "zh": "約 63.7 公尺的機身沒有客艙窗列，主甲板左後方設大型貨門，強化地板可承載約 102 噸最大酬載。機身長度接近 777-200，而非較長的 -300。",
+        "en": "The approximately 63.7-metre fuselage lacks passenger-window rows and carries a large aft-left main-deck cargo door. A reinforced floor supports roughly 102 tonnes maximum payload; body length is 777-200-like, not -300-like.",
+        "ja": "全長約63.7 mの胴体には客室窓列がなく、左後方に大型主甲板貨物扉があります。強化床は最大約102 tを支え、胴体長は長い-300ではなく777-200系です。"
+      },
+      "specs": [
+        [
+          "全長",
+          "63.73 m"
+        ],
+        [
+          "最大酬載",
+          "約 102 t"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "777F 使用 777-200LR／-300ER 級長展弦翼，翼展約 64.8 公尺，具前緣縫翼、後緣多縫襟翼與大型擾流板，以支撐高重量貨運起降。",
+        "en": "The 777F uses the long 777-200LR/-300ER-standard wing, spanning about 64.8 metres with slats, multi-element flaps and large spoilers for heavy freighter operation.",
+        "ja": "777Fは777-200LR／-300ER級の長い主翼を使用し、翼幅約64.8 m、前縁スラット、多要素フラップ、大型スポイラーで重量貨物運航を支えます。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "64.8 m"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "777F 由兩具 GE90-110B1L 提供動力，尺寸與推力屬大型 GE90 後期型。寬大進氣口和扭曲複合材料風扇葉片是近看辨識特徵。",
+        "en": "The 777F is powered by two GE90-110B1L engines from the large later GE90 family. Their huge inlets and swept composite fan blades are close-range identifiers.",
+        "ja": "777Fは大型後期GE90系列のGE90-110B1Lを2基搭載します。巨大な吸気口と後退した複合材ファンブレードが近距離識別点です。"
+      },
+      "specs": [
+        [
+          "型號",
+          "GE90-110B1L"
+        ]
+      ],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "777 的垂直尾翼高大後掠，以長背鰭接入粗壯後機身，方向舵面積也很大。",
+        "en": "The 777's tall swept fin blends into its broad aft body through a long dorsal fillet and carries a large rudder.",
+        "ja": "777の高い後退垂尾は長い背びれで太い後部胴体へつながり、大型方向舵を備えます。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "777 使用大型低置後掠水平尾翼，厚實翼根與寬機身相接，形成寬大的尾部輪廓。",
+        "en": "The 777 uses large low-mounted swept tailplanes with thick roots joining the wide aft body.",
+        "ja": "777は大型の低位置後退水平尾翼を持ち、厚い翼根が太い後部胴体へ接続します。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "着陸装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "777 Freighter 前腳雙輪，左右主腳各有三根輪軸、六個輪胎，總輪數 14；主腳轉向架修長，機腹沒有中置主腳。",
+        "en": "The 777 Freighter has twin nose wheels and two three-axle, six-tyre main bogies: 14 wheels total, with no centre main gear.",
+        "ja": "777 Freighterは前脚2輪、左右主脚各3軸6輪の計14輪で、中央主脚はありません。"
+      },
+      "specs": [],
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "images": []
+    },
+    "overview": {
+      "summary": {
+        "zh": "777 Freighter 以 777-200LR 機體與 777-300ER 級機翼、起落架為基礎，是長程大型雙發貨機。無窗貨艙、左側主甲板貨門與 GE90-110B1L 是主要特徵。",
+        "en": "The 777 Freighter combines a 777-200LR-based body with 777-300ER-class wing and landing gear as a long-range heavy twin freighter. A windowless hold, left main-deck cargo door and GE90-110B1L define it.",
+        "ja": "777 Freighterは777-200LR系胴体に777-300ER級の翼と脚を組み合わせる長距離大型双発貨物機です。無窓貨物室、左主甲板貨物扉、GE90-110B1Lが特徴です。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall profile",
+        "ja": "全体外観"
+      },
+      "specs": [],
+      "images": []
+    },
+    "cockpit": {
+      "summary": {
+        "zh": "777 駕駛艙以傳統駕駛盤、六具大型顯示器與中央 EICAS 為核心，油門與控制台集中在兩席之間。",
+        "en": "The 777 flight deck centres on conventional yokes, six large displays and central EICAS screens, with throttles and controls on the centre pedestal.",
+        "ja": "777操縦席は操縦輪、6面大型表示器、中央EICASを中心に、スロットル類を中央ペデスタルへ配置します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "コックピット"
+      },
+      "specs": [],
+      "images": []
+    },
+    "windshield": {
+      "summary": {
+        "zh": "777 的兩片正面風擋寬大，外側窗以明顯折角向後收窄，窗框輪廓較粗且多邊形感強。",
+        "en": "The 777 has broad forward panes and clearly angular outer panes that taper aft, producing a heavy polygonal frame.",
+        "ja": "777は幅広い前面窓と、後方へ絞られる角張った外側窓を持ち、太い多角形枠に見えます。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "駕駛艙外窗",
+        "en": "Cockpit windows",
+        "ja": "コックピット窓"
+      },
+      "specs": [],
+      "images": []
+    },
+    "wingtip": {
+      "summary": {
+        "zh": "翼尖採平順向後延伸的 raked tip，而非直立翼尖小翼。這套 64.8 公尺翼展的長翼源自 777-200LR／-300ER 級設計。",
+        "en": "The wing ends in smoothly swept raked tips rather than upright winglets. This 64.8-metre-span wing comes from the 777-200LR/-300ER design standard.",
+        "ja": "翼端は直立ウイングレットではなく滑らかに後退するレイクド・チップです。翼幅64.8 mの翼は777-200LR／-300ER級設計に由来します。"
+      },
+      "fact": {
+        "zh": "",
+        "en": "",
+        "ja": ""
+      },
+      "bullets": [],
+      "name": {
+        "zh": "翼尖小翼",
+        "en": "Wingtip device",
+        "ja": "翼端装置"
+      },
+      "specs": [],
+      "images": []
+    }
   }
 }
