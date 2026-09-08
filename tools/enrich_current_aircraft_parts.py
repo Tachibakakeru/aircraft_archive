@@ -169,25 +169,35 @@ def main():
         target_path = ROOT / "data" / f"{ident}.json"
         base = json.loads((ROOT / "data" / f"{base_id}.json").read_text(encoding="utf-8"))
         target = json.loads(target_path.read_text(encoding="utf-8"))
+        existing = {part_id: deepcopy(part) for part_id, part in target.get("parts", {}).items()}
         target["partOrder"] = ORDER
         target["parts"] = deepcopy(base["parts"])
-        for part in target["parts"].values():
-            part["images"] = []
+        for part_id, part in target["parts"].items():
+            old = existing.get(part_id, {})
+            part["images"] = old.get("images", [])
+            if old.get("fact") and any(old["fact"].values()):
+                part["fact"] = old["fact"]
+            for field in ("bullets", "specs"):
+                if old.get(field):
+                    part[field] = old[field]
         shared = (COMMON_MAX if ident in MAX_VARIANTS else
                   COMMON_A320NEO if ident in {"a319n", "a320n", "a321n", "a321xlr"} else
                   COMMON_A330NEO if ident in {"a338", "a339"} else {})
         for part_id, summary in {**shared, **OVERRIDES.get(ident, {})}.items():
             target["parts"][part_id]["summary"] = summary
             target["parts"][part_id]["specs"] = PART_SPECS.get(ident, {}).get(part_id, [])
-            target["parts"][part_id]["fact"] = {"zh": "", "en": "", "ja": ""}
-            target["parts"][part_id]["bullets"] = []
+            old = existing.get(part_id, {})
+            if not old.get("fact") or not any(old["fact"].values()):
+                target["parts"][part_id]["fact"] = {"zh": "", "en": "", "ja": ""}
+            if not old.get("bullets"):
+                target["parts"][part_id]["bullets"] = []
         target_path.write_text(json.dumps(target, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     for ident in BASES:
         record = json.loads((ROOT / "data" / f"{ident}.json").read_text(encoding="utf-8"))
         assert record["partOrder"] == ORDER and set(record["parts"]) == set(ORDER)
         assert all(set(part["summary"]) == {"zh", "en", "ja"} and all(part["summary"].values()) for part in record["parts"].values())
-        assert all(not part["images"] for part in record["parts"].values())
+        assert all(isinstance(part["images"], list) for part in record["parts"].values())
     print(f"Enriched {len(BASES)} aircraft with {len(ORDER)} parts each")
 
 

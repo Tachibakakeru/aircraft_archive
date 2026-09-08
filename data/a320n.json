@@ -74,12 +74,38 @@
         ]
       ],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A320neo 保留 A320 的 3.95 公尺機身外徑與典型每側兩扇翼上逃生窗；艙門配置仍會隨特定客艙認證而異。",
+        "en": "The A320neo retains the A320's 3.95 m fuselage diameter and typical two overwing exits per side; door layouts can still vary with certified cabin configuration.",
+        "ja": "A320neoは外径3.95 mと片側2枚の典型的な翼上非常口を継承しますが、扉配置は認証客室仕様で変わる場合があります。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "機身外徑約 3.95 m，比 737 寬約 19 cm。",
+          "en": "The 3.95 m fuselage is about 19 cm wider than the 737's.",
+          "ja": "胴体外径は約3.95 mで、737より約19 cm太いです。"
+        },
+        {
+          "zh": "典型 A320 每側有前後主艙門與兩個機翼上方逃生窗。",
+          "en": "A typical A320 has forward/aft main doors and two overwing exits per side.",
+          "ja": "標準的なA320は各側に前後ドアと主翼上2か所の非常口があります。"
+        },
+        {
+          "zh": "艙門外形與圓鈍機鼻要搭配引擎、翼尖一起辨識。",
+          "en": "Use door layout and the rounded nose together with engines and wingtips.",
+          "ja": "ドア配置と丸い機首を、エンジン・翼端と合わせて判別します。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a320n/fuselage.jpg?v=eebdb1481b7d",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:CC-AWR_JetSMART_Airbus_A320neo_in_GIG.jpg"
+        }
+      ]
     },
     "cockpit": {
       "name": {
@@ -95,12 +121,38 @@
       },
       "specs": [],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A320neo 延續 A320 家族側桿與 ECAM 架構；不同營運者的顯示軟體、通訊與選裝設備會讓面板細節不同。",
+        "en": "The A320neo retains the A320-family sidestick and ECAM architecture; display software, communications and optional equipment vary by operator.",
+        "ja": "A320neoはA320系列のサイドスティックとECAM構成を継承し、表示ソフト、通信、選択装備は運航者により異なります。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "使用左右側桿，飛行員正前方沒有傳統駕駛盤。",
+          "en": "Sidesticks replace yokes, leaving the area directly in front of each pilot clear.",
+          "ja": "操縦輪ではなく左右のサイドスティックを使用します。"
+        },
+        {
+          "zh": "正副駕駛前方可拉出桌板，是 A320 家族顯著座艙特徵。",
+          "en": "Pull-out tray tables sit in front of both pilots, a signature A320-family feature.",
+          "ja": "両席正面に引き出し式テーブルがあるのがA320ファミリーの特徴です。"
+        },
+        {
+          "zh": "中央 ECAM 顯示器整合引擎與系統警告資訊。",
+          "en": "Central ECAM displays integrate engine and system warnings.",
+          "ja": "中央のECAM表示器がエンジンとシステム警報を統合します。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a320n/cockpit.jpg?v=b79579bd2354",
+          "caption": {
+            "zh": "A320ceo 實機座艙；A319neo／A320neo 家族布局參考，航電軟體與選裝設備可能不同",
+            "en": "Real A320ceo cockpit; A319neo/A320neo family-layout reference, with avionics software and options subject to variation",
+            "ja": "A320ceo実機操縦席：A319neo／A320neo系列配置の参考で、航空電子ソフトや選択装備は異なる場合があります"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg"
+        }
+      ]
     },
     "wing": {
       "name": {
@@ -121,12 +173,38 @@
         ]
       ],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "neo 沿用 A320 基本翼盒與 35.8 公尺 Sharklet 翼展，並配合較重引擎及氣動改良調整局部結構。",
+        "en": "The neo retains the A320's basic wing box and 35.8 m Sharklet span, with local structural changes for heavier engines and aerodynamic refinements.",
+        "ja": "neoはA320の基本翼箱とシャークレット装備時35.8 m翼幅を継承し、重いエンジンと空力改良に合わせ局部構造を変更しています。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "後掠約 25°，早期型翼尖可見上下箭形擋板。",
+          "en": "The wing is swept about 25 degrees; early versions show upper/lower tip fences.",
+          "ja": "後退角は約25度で、初期型は上下の翼端フェンスが見えます。"
+        },
+        {
+          "zh": "新型 Sharklet 自翼端向上延伸，不能只靠它區分 737。",
+          "en": "Later Sharklets extend upward but cannot alone distinguish an A320 from a 737.",
+          "ja": "後期型シャークレットだけでは737との判別はできません。"
+        },
+        {
+          "zh": "從客艙向外看可用圓形引擎短艙與翼尖構型交叉確認。",
+          "en": "From the cabin, cross-check the circular nacelle with the tip device.",
+          "ja": "客室からは円形ナセルと翼端装置を組み合わせて確認します。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a320n/wing.jpg?v=a3158660ee1a",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Spirit_Airbus_A320neo_N923NK_planform.jpg"
+        }
+      ]
     },
     "engine": {
       "name": {
@@ -147,12 +225,38 @@
         ]
       ],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A320neo 可選 CFM LEAP-1A 或 Pratt & Whitney PW1100G-JM；兩者大直徑風扇是與 A320ceo 最醒目的差異之一。",
+        "en": "The A320neo offers CFM LEAP-1A or Pratt & Whitney PW1100G-JM engines; their large fans are among the clearest differences from an A320ceo.",
+        "ja": "A320neoはCFM LEAP-1AまたはPratt & Whitney PW1100G-JMを選択でき、大径ファンはA320ceoとの最も明瞭な差の一つです。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "可選 LEAP-1A 或 PW1100G-JM。",
+          "en": "Choice of LEAP-1A or PW1100G-JM.",
+          "ja": "LEAP-1AまたはPW1100G-JM。"
+        },
+        {
+          "zh": "風扇直徑大於 ceo 引擎。",
+          "en": "Fan diameter exceeds ceo engines.",
+          "ja": "ファン径はceoエンジンより大きい。"
+        },
+        {
+          "zh": "照片為 PW1100G 短艙。",
+          "en": "Photograph shows a PW1100G nacelle.",
+          "ja": "写真はPW1100Gナセル。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a320n/engine.jpg?v=3be83e9e4a70",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:D-AINU_A320neo_Lufthansa_PW1100G_SCQ.jpg"
+        }
+      ]
     },
     "vstab": {
       "name": {
@@ -168,12 +272,38 @@
       },
       "specs": [],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "垂直尾翼外形與 A320ceo 幾乎相同，通常只能辨識 A320 家族，不能單靠它確認 neo。",
+        "en": "The vertical-tail outline is nearly identical to the A320ceo and normally identifies only the A320 family, not the neo by itself.",
+        "ja": "垂直尾翼形状はA320ceoとほぼ同じで、通常はA320系列の識別に留まり、neo単独判定には使えません。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "複合材料垂直尾翼根部以背鰭平順連接機身。",
+          "en": "The composite fin blends into the fuselage through a dorsal fairing.",
+          "ja": "複合材の垂直尾翼はドーサルフェアリングで胴体へ滑らかにつながります。"
+        },
+        {
+          "zh": "垂尾外形本身與其他窄體機相近，需搭配機鼻與引擎。",
+          "en": "Fin shape resembles other narrow-bodies, so pair it with nose and engine cues.",
+          "ja": "尾翼形状は他のナローボディ機に似るため、機首とエンジンも確認します。"
+        },
+        {
+          "zh": "尾翼塗裝主要辨識航空公司，不代表機型。",
+          "en": "Tail livery primarily identifies the operator, not the type.",
+          "ja": "尾翼塗装は主に運航会社を示し、機種を確定しません。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a320n/vstab.jpg?v=824b43e485ff",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:D-AINU_A320neo_Lufthansa_tailfin_SCQ.jpg"
+        }
+      ]
     },
     "hstab": {
       "name": {
@@ -189,12 +319,38 @@
       },
       "specs": [],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "低置後掠水平尾翼屬家族共通設計；俯視照片適合觀察梯形平面形，但不是 ceo／neo 的主要差異。",
+        "en": "The low-mounted swept tailplane is common across the family; a planform view shows its trapezoidal shape but does not distinguish ceo from neo.",
+        "ja": "低位置後退水平尾翼は系列共通で、俯視では台形平面形を確認できますがceo／neoの主要差ではありません。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "水平尾翼低置於機尾，升降舵與安定面皆大量使用複合材料。",
+          "en": "The low-mounted tailplane and elevators make extensive use of composites.",
+          "ja": "低位置の水平尾翼と昇降舵には複合材が多用されています。"
+        },
+        {
+          "zh": "翼根整流罩與後機身線條較圓順。",
+          "en": "The tailplane root fairing blends smoothly into the rounded aft fuselage.",
+          "ja": "水平尾翼付け根は丸みのある後部胴体へ滑らかにつながります。"
+        },
+        {
+          "zh": "水平尾翼仍屬輔助辨識特徵，不能單獨定型。",
+          "en": "The tailplane is only a supporting cue, not a standalone identifier.",
+          "ja": "水平尾翼は補助的な手掛かりで、単独では機種を確定できません。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a320n/hstab.jpg?v=ba6910c5ad1e",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Spirit_Airbus_A320neo_N923NK_planform.jpg"
+        }
+      ]
     },
     "gear": {
       "name": {
@@ -210,12 +366,38 @@
       },
       "specs": [],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A320neo 維持可收放前三點式、鼻腳雙輪與每側雙輪主腳；照片是 neo 鼻輪細節，但輪式本身與 ceo 相同。",
+        "en": "The A320neo retains retractable tricycle gear with twin nose wheels and twin wheels on each main leg; the photograph shows neo nose-gear detail, but the arrangement is shared with ceo.",
+        "ja": "A320neoは引込前三点式、前脚2輪、左右主脚各2輪を継承します。写真はneo前脚ですが、配置自体はceoと共通です。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "主起落架收入翼根／機身輪艙後由艙門遮蔽，不留兩塊外露胎面。",
+          "en": "Main gear retracts into covered wing-root/fuselage bays without exposed tyre faces.",
+          "ja": "主脚は翼根・胴体の覆われた格納庫へ入り、タイヤ面は露出しません。"
+        },
+        {
+          "zh": "A320 的機身離地與引擎離地間隙通常高於 737NG。",
+          "en": "Fuselage and engine ground clearance are normally greater than on a 737NG.",
+          "ja": "胴体とエンジンの地上高は通常737NGより大きいです。"
+        },
+        {
+          "zh": "照片為 A320neo 前起落架，腳架基本布局可作家族參考，不能用於分辨 ceo／neo。",
+          "en": "The photo shows A320neo nose gear; the family layout is useful, but it does not distinguish ceo from neo.",
+          "ja": "写真はA320neoの前脚です。ファミリー共通配置の参考にはなりますが、ceo／neo判別には使えません。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a320n/gear.jpg?v=38fd19363ab2",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:A320neo_Nose_Landing_Gear.jpg"
+        }
+      ]
     },
     "overview": {
       "name": {
@@ -230,13 +412,39 @@
         "ja": "A320neoはneoファミリーの基準型で、A320の6席横単通路客室を維持しながら新世代エンジンとSharkletを採用します。同等の外形で燃費、騒音、運航費を低減します。"
       },
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A320neo 與 A320ceo 的機身基本輪廓相同；最快的外觀判據通常是更大的 LEAP-1A／PW1100G 短艙與標準 Sharklet。",
+        "en": "The A320neo retains the A320ceo fuselage outline; its larger LEAP-1A/PW1100G nacelles and standard Sharklets are usually the quickest external cues.",
+        "ja": "A320neoの胴体輪郭はA320ceoと共通で、より大きいLEAP-1A／PW1100Gナセルと標準シャークレットが最も速い外観識別点です。"
       },
-      "bullets": [],
+      "bullets": [
+        {
+          "zh": "機身截面較寬，整體姿態比 737 高。",
+          "en": "Wider fuselage and a visibly taller stance than the 737.",
+          "ja": "737より胴体が太く、全体の姿勢も高めです。"
+        },
+        {
+          "zh": "機鼻較圓，駕駛艙窗下緣線條較平順。",
+          "en": "Rounder nose with smoother cockpit-window lower contours.",
+          "ja": "機首が丸く、操縦席窓下端の輪郭が滑らかです。"
+        },
+        {
+          "zh": "引擎短艙接近圓形，收起的主輪不會像 737 明顯外露。",
+          "en": "Nacelles are close to circular and the retracted main wheels are not exposed like a 737's.",
+          "ja": "ナセルは円形に近く、格納主輪は737のように露出しません。"
+        }
+      ],
       "specs": [],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a320n/overview.jpg?v=eafa274883ff",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:CC-AWR_JetSMART_Airbus_A320neo_in_GIG.jpg"
+        }
+      ]
     },
     "wingtip": {
       "name": {
@@ -251,13 +459,39 @@
         "ja": "背の高い後退角付きSharkletはneoの標準翼端装置で、翼端渦と誘導抵抗を低減します。初期A320ファミリーの小型三角形ウイングチップフェンスとは明確に異なります。"
       },
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A320neo 出廠即採 2.4 公尺級 Sharklet；早期 A320ceo 的上下小型翼尖擋板不是 neo 的標準外觀。",
+        "en": "The A320neo is delivered with roughly 2.4 m Sharklets; the small upper-and-lower fences of early A320ceos are not the standard neo appearance.",
+        "ja": "A320neoは約2.4 m級のシャークレットを標準装備し、初期A320ceoの小型上下フェンスはneoの標準外観ではありません。"
       },
-      "bullets": [],
+      "bullets": [
+        {
+          "zh": "高而後掠的融合式 Sharklet。",
+          "en": "Tall swept blended Sharklet.",
+          "ja": "高く後退した一体型シャークレット。"
+        },
+        {
+          "zh": "由翼端平順向上延伸。",
+          "en": "Rises smoothly from the wingtip.",
+          "ja": "翼端から滑らかに上方へ伸びる。"
+        },
+        {
+          "zh": "仍需搭配引擎大小辨別 ceo／neo。",
+          "en": "Use engine size as a second ceo/neo cue.",
+          "ja": "ceo／neo判別にはエンジン径も併用。"
+        }
+      ],
       "specs": [],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a320n/wingtip.jpg?v=99237718b3c8",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:EC-NER_A320neo_Iberia_winglet.jpg"
+        }
+      ]
     },
     "windshield": {
       "name": {
@@ -272,13 +506,48 @@
         "ja": "6枚の操縦室窓は中央から側面へ滑らかにつながり、側窓下縁が斜めになるA320系の重要な正面特徴です。neoとceoで窓形状は基本的に共通です。"
       },
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "neo 並未因換裝引擎而改變 A320 家族的駕駛艙窗幾何，因此外窗本身不能區分 ceo 與 neo。",
+        "en": "The neo engine change did not alter A320-family cockpit-window geometry, so the windows alone cannot separate ceo from neo.",
+        "ja": "neoのエンジン変更でA320系列の操縦席窓形状は変わらず、窓だけではceoとneoを区別できません。"
       },
-      "bullets": [],
+      "bullets": [
+        {
+          "zh": "正面主風擋較高，整組窗帶在圓鼻上顯得更寬。",
+          "en": "Main forward panes appear taller and the complete belt looks broader on the rounded nose.",
+          "ja": "正面主風防は高く、丸い機首上で窓帯全体が幅広く見えます。"
+        },
+        {
+          "zh": "外側窗向後收尖，窗框上下輪廓比 737 平順。",
+          "en": "Outer panes taper aft with smoother top and bottom contours than on the 737.",
+          "ja": "外側窓は後方へ細くなり、上下輪郭は737より滑らかです。"
+        },
+        {
+          "zh": "搭配圓形短艙、較高離地姿態與翼尖構型交叉確認。",
+          "en": "Cross-check with circular nacelles, taller ground stance and the wingtip device.",
+          "ja": "円形ナセル、高い地上姿勢、翼端装置も合わせて確認します。"
+        }
+      ],
       "specs": [],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a320n/window-front.jpg?v=cf767866ccda",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320neo_front_view.jpg"
+        },
+        {
+          "src": "assets/reference/a320n/window-side.jpg?v=7361b5085dd3",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:CC-AWR_JetSMART_Airbus_A320neo_in_GIG.jpg"
+        }
+      ]
     }
   }
 }

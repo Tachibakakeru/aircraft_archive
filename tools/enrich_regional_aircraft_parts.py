@@ -188,29 +188,39 @@ def main():
         path = ROOT / "data" / f"{ident}.json"
         data = json.loads(path.read_text(encoding="utf-8"))
         base = json.loads((ROOT / "data" / f"{base_id}.json").read_text(encoding="utf-8"))
+        existing = {part_id: deepcopy(part) for part_id, part in data.get("parts", {}).items()}
         data["partOrder"] = ORDER
         data["parts"] = deepcopy(base["parts"])
         if ident in RENAME_BASE:
             data["parts"] = renamed(data["parts"], *RENAME_BASE[ident])
-        for part in data["parts"].values():
+        for part_id, part in data["parts"].items():
             part["summary"] = without_media_refs(part["summary"])
-            part["images"] = []
+            old = existing.get(part_id, {})
+            part["images"] = old.get("images", [])
             part["specs"] = []
             part["fact"] = {"zh": "", "en": "", "ja": ""}
             part["bullets"] = []
+            if old.get("fact") and any(old["fact"].values()):
+                part["fact"] = old["fact"]
+            for field in ("bullets", "specs"):
+                if old.get(field):
+                    part[field] = old[field]
         for part_id, summary in OVERRIDES[ident].items():
             part = data["parts"][part_id]
             part["summary"] = summary
             part["specs"] = SPECS.get(ident, {}).get(part_id, [])
-            part["fact"] = {"zh": "", "en": "", "ja": ""}
-            part["bullets"] = []
+            old = existing.get(part_id, {})
+            if not old.get("fact") or not any(old["fact"].values()):
+                part["fact"] = {"zh": "", "en": "", "ja": ""}
+            if not old.get("bullets"):
+                part["bullets"] = []
         path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     for ident in BASES:
         data = json.loads((ROOT / "data" / f"{ident}.json").read_text(encoding="utf-8"))
         assert data["partOrder"] == ORDER and set(data["parts"]) == set(ORDER)
         assert all(isinstance(p["summary"], dict) and all(p["summary"].get(lang) for lang in ("zh", "en", "ja")) for p in data["parts"].values())
-        assert all(not p["images"] for p in data["parts"].values())
+        assert all(isinstance(p["images"], list) for p in data["parts"].values())
     print(f"Enriched {len(BASES)} aircraft with {len(ORDER)} parts each")
 
 

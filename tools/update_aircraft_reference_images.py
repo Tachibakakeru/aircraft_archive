@@ -59,6 +59,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:Airbus-H%C3%B6henruder.jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:A320neo_Nose_Landing_Gear.jpg",
     },
+    "a319n": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09591).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09591).jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09609).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09609).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09591).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09609).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg",
+    },
+    "a320n": {
+        "overview": "https://commons.wikimedia.org/wiki/File:CC-AWR_JetSMART_Airbus_A320neo_in_GIG.jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Airbus_A320neo_front_view.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:CC-AWR_JetSMART_Airbus_A320neo_in_GIG.jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:CC-AWR_JetSMART_Airbus_A320neo_in_GIG.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:D-AINU_A320neo_Lufthansa_PW1100G_SCQ.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:EC-NER_A320neo_Iberia_winglet.jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Spirit_Airbus_A320neo_N923NK_planform.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:D-AINU_A320neo_Lufthansa_tailfin_SCQ.jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Spirit_Airbus_A320neo_N923NK_planform.jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:A320neo_Nose_Landing_Gear.jpg",
+    },
     "b773": {
         "overview": "https://commons.wikimedia.org/wiki/File:Boeing_777-300ER,_Geneva_Airport,_Le_Grand-Saconnex_(BL7C0540).jpg",
         "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_777-200ER_cockpit.jpg",
@@ -3261,15 +3287,59 @@ NAMES = {
     "gear": tr("起落架", "Landing gear", "着陸装置"),
 }
 
+PHOTO_BASES = {"a319n": "a319", "a320n": "a320"}
+
+NEO_DETAILS = {
+    "a319n": {
+        "engine": {
+            "fact": tr("A319neo 可選 LEAP-1A 或 PW1100G；兩者風扇都比 ceo 動力更大，照片中的機體採 LEAP-1A。", "The A319neo offers LEAP-1A or PW1100G engines, both with larger fans than ceo powerplants; the photographed aircraft uses LEAP-1A.", "A319neoはLEAP-1AまたはPW1100Gを選択でき、いずれもceoより大径です。写真の機体はLEAP-1Aです。"),
+            "bullets": [tr("大直徑高旁通比風扇。", "Large high-bypass fan.", "大径高バイパスファン。"), tr("短艙下緣仍接近圓形。", "Nacelle lower edge remains nearly round.", "ナセル下面はほぼ円形。"), tr("照片機體採 LEAP-1A。", "Photographed aircraft uses LEAP-1A.", "写真機はLEAP-1A装備。")],
+        },
+        "wingtip": {
+            "fact": tr("A319neo 生產型標準搭配高而後掠的 Sharklet；這是與多數早期 A319ceo 上下翼尖擋板的重要差異。", "Production A319neo aircraft use tall swept Sharklets, an important contrast with the upper-and-lower fences on many early A319ceos.", "量産A319neoは高く後退したシャークレットを備え、初期A319ceoに多い上下フェンスとの重要な相違点です。"),
+            "bullets": [tr("高而向外彎的 Sharklet。", "Tall outward-curved Sharklet.", "高く外向きに湾曲したシャークレット。"), tr("翼尖與翼面平順融合。", "Smoothly blended into the wing.", "主翼へ滑らかに一体化。"), tr("不可與早期上下翼尖擋板混淆。", "Do not confuse it with early twin fences.", "初期の上下翼端フェンスと混同しません。")],
+        },
+    },
+    "a320n": {
+        "overview": {"fact": tr("A320neo 與 A320ceo 的機身基本輪廓相同；最快的外觀判據通常是更大的 LEAP-1A／PW1100G 短艙與標準 Sharklet。", "The A320neo retains the A320ceo fuselage outline; its larger LEAP-1A/PW1100G nacelles and standard Sharklets are usually the quickest external cues.", "A320neoの胴体輪郭はA320ceoと共通で、より大きいLEAP-1A／PW1100Gナセルと標準シャークレットが最も速い外観識別点です。")},
+        "cockpit": {"fact": tr("A320neo 延續 A320 家族側桿與 ECAM 架構；不同營運者的顯示軟體、通訊與選裝設備會讓面板細節不同。", "The A320neo retains the A320-family sidestick and ECAM architecture; display software, communications and optional equipment vary by operator.", "A320neoはA320系列のサイドスティックとECAM構成を継承し、表示ソフト、通信、選択装備は運航者により異なります。")},
+        "windshield": {"fact": tr("neo 並未因換裝引擎而改變 A320 家族的駕駛艙窗幾何，因此外窗本身不能區分 ceo 與 neo。", "The neo engine change did not alter A320-family cockpit-window geometry, so the windows alone cannot separate ceo from neo.", "neoのエンジン変更でA320系列の操縦席窓形状は変わらず、窓だけではceoとneoを区別できません。")},
+        "fuselage": {"fact": tr("A320neo 保留 A320 的 3.95 公尺機身外徑與典型每側兩扇翼上逃生窗；艙門配置仍會隨特定客艙認證而異。", "The A320neo retains the A320's 3.95 m fuselage diameter and typical two overwing exits per side; door layouts can still vary with certified cabin configuration.", "A320neoは外径3.95 mと片側2枚の典型的な翼上非常口を継承しますが、扉配置は認証客室仕様で変わる場合があります。")},
+        "engine": {
+            "fact": tr("A320neo 可選 CFM LEAP-1A 或 Pratt & Whitney PW1100G-JM；兩者大直徑風扇是與 A320ceo 最醒目的差異之一。", "The A320neo offers CFM LEAP-1A or Pratt & Whitney PW1100G-JM engines; their large fans are among the clearest differences from an A320ceo.", "A320neoはCFM LEAP-1AまたはPratt & Whitney PW1100G-JMを選択でき、大径ファンはA320ceoとの最も明瞭な差の一つです。"),
+            "bullets": [tr("可選 LEAP-1A 或 PW1100G-JM。", "Choice of LEAP-1A or PW1100G-JM.", "LEAP-1AまたはPW1100G-JM。"), tr("風扇直徑大於 ceo 引擎。", "Fan diameter exceeds ceo engines.", "ファン径はceoエンジンより大きい。"), tr("照片為 PW1100G 短艙。", "Photograph shows a PW1100G nacelle.", "写真はPW1100Gナセル。")],
+        },
+        "wingtip": {
+            "fact": tr("A320neo 出廠即採 2.4 公尺級 Sharklet；早期 A320ceo 的上下小型翼尖擋板不是 neo 的標準外觀。", "The A320neo is delivered with roughly 2.4 m Sharklets; the small upper-and-lower fences of early A320ceos are not the standard neo appearance.", "A320neoは約2.4 m級のシャークレットを標準装備し、初期A320ceoの小型上下フェンスはneoの標準外観ではありません。"),
+            "bullets": [tr("高而後掠的融合式 Sharklet。", "Tall swept blended Sharklet.", "高く後退した一体型シャークレット。"), tr("由翼端平順向上延伸。", "Rises smoothly from the wingtip.", "翼端から滑らかに上方へ伸びる。"), tr("仍需搭配引擎大小辨別 ceo／neo。", "Use engine size as a second ceo/neo cue.", "ceo／neo判別にはエンジン径も併用。")],
+        },
+        "wing": {"fact": tr("neo 沿用 A320 基本翼盒與 35.8 公尺 Sharklet 翼展，並配合較重引擎及氣動改良調整局部結構。", "The neo retains the A320's basic wing box and 35.8 m Sharklet span, with local structural changes for heavier engines and aerodynamic refinements.", "neoはA320の基本翼箱とシャークレット装備時35.8 m翼幅を継承し、重いエンジンと空力改良に合わせ局部構造を変更しています。")},
+        "vstab": {"fact": tr("垂直尾翼外形與 A320ceo 幾乎相同，通常只能辨識 A320 家族，不能單靠它確認 neo。", "The vertical-tail outline is nearly identical to the A320ceo and normally identifies only the A320 family, not the neo by itself.", "垂直尾翼形状はA320ceoとほぼ同じで、通常はA320系列の識別に留まり、neo単独判定には使えません。")},
+        "hstab": {"fact": tr("低置後掠水平尾翼屬家族共通設計；俯視照片適合觀察梯形平面形，但不是 ceo／neo 的主要差異。", "The low-mounted swept tailplane is common across the family; a planform view shows its trapezoidal shape but does not distinguish ceo from neo.", "低位置後退水平尾翼は系列共通で、俯視では台形平面形を確認できますがceo／neoの主要差ではありません。")},
+        "gear": {"fact": tr("A320neo 維持可收放前三點式、鼻腳雙輪與每側雙輪主腳；照片是 neo 鼻輪細節，但輪式本身與 ceo 相同。", "The A320neo retains retractable tricycle gear with twin nose wheels and twin wheels on each main leg; the photograph shows neo nose-gear detail, but the arrangement is shared with ceo.", "A320neoは引込前三点式、前脚2輪、左右主脚各2輪を継承します。写真はneo前脚ですが、配置自体はceoと共通です。")},
+    },
+}
+
 
 def update(model: str) -> None:
     path = ROOT / "data" / f"{model}.json"
     data = json.loads(path.read_text(encoding="utf-8"))
     parts = data.setdefault("parts", {})
+    base_parts = {}
+    if model in PHOTO_BASES:
+        base = json.loads((ROOT / "data" / f"{PHOTO_BASES[model]}.json").read_text(encoding="utf-8"))
+        base_parts = base["parts"]
     for part_id in ORDER:
-        patch = CONTENT[model][part_id]
+        patch = CONTENT.get(model, {}).get(part_id)
         part = parts.setdefault(part_id, {})
-        part.update(patch)
+        if patch:
+            part.update(patch)
+        if base_parts:
+            if not part.get("fact") or not all(part["fact"].values()):
+                part["fact"] = base_parts[part_id]["fact"]
+            if len(part.get("bullets", [])) < 3:
+                part["bullets"] = base_parts[part_id]["bullets"]
+        part.update(NEO_DETAILS.get(model, {}).get(part_id, {}))
         part["name"] = NAMES[part_id]
         part.setdefault("specs", [])
         if part_id == "windshield":
@@ -3280,6 +3350,12 @@ def update(model: str) -> None:
         else:
             part["images"] = [photo(model, part_id, CAPTIONS[part_id], SOURCES[model][part_id])]
     data["partOrder"] = ORDER
+    if model in ("a319n", "a320n"):
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "A320ceo 實機座艙；A319neo／A320neo 家族布局參考，航電軟體與選裝設備可能不同",
+            "Real A320ceo cockpit; A319neo/A320neo family-layout reference, with avionics software and options subject to variation",
+            "A320ceo実機操縦席：A319neo／A320neo系列配置の参考で、航空電子ソフトや選択装備は異なる場合があります",
+        )
     if model in ("dc9", "md80"):
         parts["windshield"]["images"][0]["caption"] = tr(
             "保存機前斜角外窗（原尺寸實照裁切，非正投影）",
@@ -3680,7 +3756,7 @@ def update(model: str) -> None:
 
 
 def check() -> None:
-    for model in CONTENT:
+    for model in SOURCES:
         data = json.loads((ROOT / "data" / f"{model}.json").read_text(encoding="utf-8"))
         assert data["partOrder"] == ORDER and len(set(data["partOrder"])) == len(ORDER)
         for part_id in ORDER:
@@ -3702,8 +3778,8 @@ def check() -> None:
                 if image.get("licenseUrl"):
                     assert image.get("license") and (ROOT / image["licenseUrl"]).is_file()
         assert sum(len(data["parts"][part_id]["images"]) for part_id in ORDER) == 11
-    photo_count = len(CONTENT) * 11
-    print(f"Reference-photo data check passed: {len(CONTENT)} aircraft x 10 identification parts / {photo_count} photos.")
+    photo_count = len(SOURCES) * 11
+    print(f"Reference-photo data check passed: {len(SOURCES)} aircraft x 10 identification parts / {photo_count} photos.")
 
 
 if __name__ == "__main__":
@@ -3711,9 +3787,9 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Validate without changing any data")
-    parser.add_argument("--models", nargs="+", choices=CONTENT, help="Update only these aircraft")
+    parser.add_argument("--models", nargs="+", choices=SOURCES, help="Update only these aircraft")
     args = parser.parse_args()
     if not args.check:
-        for aircraft in args.models or CONTENT:
+        for aircraft in args.models or SOURCES:
             update(aircraft)
     check()

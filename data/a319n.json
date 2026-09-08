@@ -74,12 +74,38 @@
         ]
       ],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "737-700 也有相近的門／出口數，因此應再看 A319 較寬機身、圓鼻與圓形短艙。",
+        "en": "The 737-700 has a similar door/exit count, so confirm the A319's wider body, round nose and round nacelles.",
+        "ja": "737-700も似た扉数なので、A319の太い胴体、丸い機首、円形ナセルで確認します。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "每側前後各一扇主艙門。",
+          "en": "One main door sits at each end per side.",
+          "ja": "各側前後に主ドア1枚ずつです。"
+        },
+        {
+          "zh": "典型配置每側一個翼上逃生窗。",
+          "en": "A typical layout has one overwing exit per side.",
+          "ja": "標準配置は各側翼上出口1か所です。"
+        },
+        {
+          "zh": "機身比 737-700 約寬 19 cm。",
+          "en": "The body is about 19 cm wider than the 737-700's.",
+          "ja": "胴体は737-700より約19 cm太いです。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a319n/fuselage.jpg?v=440c6d0dfd6a",
+          "caption": {
+            "zh": "實機機身、舷窗與艙門細節",
+            "en": "Real fuselage, window and door detail",
+            "ja": "実機の胴体・窓・ドア詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09609).jpg"
+        }
+      ]
     },
     "cockpit": {
       "name": {
@@ -95,12 +121,38 @@
       },
       "specs": [],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A318、A319、A320、A321 的座艙高度共通，僅靠內裝通常無法判斷機身子型；但可立即排除有駕駛盤的 737。",
+        "en": "A318/A319/A320/A321 cockpits are highly common, so the exact subtype is hard to tell inside; the absence of yokes immediately separates a 737.",
+        "ja": "A318／A319／A320／A321の操縦席は共通性が高く子型判別は困難ですが、操縦輪がないため737とはすぐ区別できます。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "側桿位於兩名駕駛外側。",
+          "en": "Sidesticks sit outboard of both pilots.",
+          "ja": "サイドスティックは両席外側です。"
+        },
+        {
+          "zh": "飛行員正前方設有桌板。",
+          "en": "Tray tables occupy the space ahead of the pilots.",
+          "ja": "両席正面にテーブルがあります。"
+        },
+        {
+          "zh": "中央 ECAM 上下排列。",
+          "en": "Central ECAM displays are stacked vertically.",
+          "ja": "中央ECAMは上下配置です。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a319n/cockpit.jpg?v=b79579bd2354",
+          "caption": {
+            "zh": "A320ceo 實機座艙；A319neo／A320neo 家族布局參考，航電軟體與選裝設備可能不同",
+            "en": "Real A320ceo cockpit; A319neo/A320neo family-layout reference, with avionics software and options subject to variation",
+            "ja": "A320ceo実機操縦席：A319neo／A320neo系列配置の参考で、航空電子ソフトや選択装備は異なる場合があります"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg"
+        }
+      ]
     },
     "wing": {
       "name": {
@@ -121,12 +173,38 @@
         ]
       ],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "兩型翼展十分接近；從客艙看，A319 的圓形短艙與翼尖擋板通常比翼面形狀更有辨識力。",
+        "en": "The spans are very close. From the cabin, round nacelles and tip devices are more useful than planform.",
+        "ja": "両機の翼幅は近く、客室からは翼形より円形ナセルと翼端装置が有効です。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "翼根離地較高。",
+          "en": "The wing root sits higher above the ground.",
+          "ja": "翼根地上高が高めです。"
+        },
+        {
+          "zh": "後緣有大型襟翼與擾流板。",
+          "en": "Large flaps and spoilers line the trailing edge.",
+          "ja": "後縁に大型フラップとスポイラーがあります。"
+        },
+        {
+          "zh": "翼尖裝置是客艙視角的重要線索。",
+          "en": "The tip device is a useful cabin-view cue.",
+          "ja": "翼端装置が客室視点の重要な手掛かりです。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a319n/wing.jpg?v=b22fd4d9fdf1",
+          "caption": {
+            "zh": "實機主翼平面與外形",
+            "en": "Real wing planform and profile",
+            "ja": "実機主翼の平面・外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg"
+        }
+      ]
     },
     "engine": {
       "name": {
@@ -147,12 +225,38 @@
         ]
       ],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A319neo 可選 LEAP-1A 或 PW1100G；兩者風扇都比 ceo 動力更大，照片中的機體採 LEAP-1A。",
+        "en": "The A319neo offers LEAP-1A or PW1100G engines, both with larger fans than ceo powerplants; the photographed aircraft uses LEAP-1A.",
+        "ja": "A319neoはLEAP-1AまたはPW1100Gを選択でき、いずれもceoより大径です。写真の機体はLEAP-1Aです。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "大直徑高旁通比風扇。",
+          "en": "Large high-bypass fan.",
+          "ja": "大径高バイパスファン。"
+        },
+        {
+          "zh": "短艙下緣仍接近圓形。",
+          "en": "Nacelle lower edge remains nearly round.",
+          "ja": "ナセル下面はほぼ円形。"
+        },
+        {
+          "zh": "照片機體採 LEAP-1A。",
+          "en": "Photographed aircraft uses LEAP-1A.",
+          "ja": "写真機はLEAP-1A装備。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a319n/engine.jpg?v=ca674b75a913",
+          "caption": {
+            "zh": "實機引擎短艙外形",
+            "en": "Real engine-nacelle profile",
+            "ja": "実機エンジンナセル外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09591).jpg"
+        }
+      ]
     },
     "vstab": {
       "name": {
@@ -168,12 +272,38 @@
       },
       "specs": [],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "尾翼輪廓與 737 有差異但不如引擎、機鼻與起落架明顯；應作輔助而非單一判據。",
+        "en": "Fin shape differs from the 737 but less clearly than engines, nose and gear, so it is supporting rather than decisive.",
+        "ja": "737との差はありますがエンジン・機首・脚ほど明確でなく、補助判定に使います。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "前緣後掠、頂端較方。",
+          "en": "The leading edge is swept and the tip relatively squared.",
+          "ja": "前縁は後退し上端は比較的角形です。"
+        },
+        {
+          "zh": "根部整流區寬而平順。",
+          "en": "The root fairing is broad and smooth.",
+          "ja": "根元フェアリングは幅広く滑らかです。"
+        },
+        {
+          "zh": "短機身讓尾翼顯得較高。",
+          "en": "The short body makes the fin appear tall.",
+          "ja": "短胴で尾翼が高く見えます。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a319n/vstab.jpg?v=8013de0968be",
+          "caption": {
+            "zh": "實機垂直尾翼外形",
+            "en": "Real vertical-tail profile",
+            "ja": "実機垂直尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09609).jpg"
+        }
+      ]
     },
     "hstab": {
       "name": {
@@ -189,12 +319,38 @@
       },
       "specs": [],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "737-700 也使用相似的低置尾翼，因此應同時查看垂尾根部、引擎短艙與主輪收納方式。",
+        "en": "The 737-700 has a similar low tailplane, so also inspect fin root, nacelles and main-gear stowage.",
+        "ja": "737-700も似た低位置尾翼なので、垂尾根元、ナセル、主輪格納も確認します。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "水平尾翼低置於尾錐兩側。",
+          "en": "Tailplanes mount low on either side of the tailcone.",
+          "ja": "水平尾翼は尾部両側の低位置です。"
+        },
+        {
+          "zh": "後掠並向外逐漸收窄。",
+          "en": "They sweep aft and taper outward.",
+          "ja": "後退し外側へ細くなります。"
+        },
+        {
+          "zh": "單看此部位不足以定型。",
+          "en": "This part alone is insufficient for identification.",
+          "ja": "この部位だけでは機種を確定できません。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a319n/hstab.jpg?v=5c25a158b687",
+          "caption": {
+            "zh": "實機水平尾翼外形",
+            "en": "Real horizontal-tail profile",
+            "ja": "実機水平尾翼の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg"
+        }
+      ]
     },
     "gear": {
       "name": {
@@ -210,12 +366,38 @@
       },
       "specs": [],
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "兩者總輪數都為六輪，輪數完全無法區分；最可靠的是 A319 較長腳柱、較高離地姿態與完整艙門。",
+        "en": "Both total six wheels, so wheel count is useless. The A319's taller struts, higher stance and full doors are stronger cues.",
+        "ja": "両機とも合計6輪で輪数は使えません。A319の長い脚柱、高い姿勢、完全な脚扉を見ます。"
       },
-      "bullets": [],
-      "images": []
+      "bullets": [
+        {
+          "zh": "前腳與每側主腳皆為雙輪。",
+          "en": "Nose and each main unit use twin wheels.",
+          "ja": "前脚と左右主脚は各2輪です。"
+        },
+        {
+          "zh": "收起主輪由艙門遮蔽。",
+          "en": "Doors cover the retracted main wheels.",
+          "ja": "格納主輪は扉で覆われます。"
+        },
+        {
+          "zh": "離地高度高於 737-700。",
+          "en": "Ground clearance is greater than the 737-700's.",
+          "ja": "地上高は737-700より高いです。"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/reference/a319n/gear.jpg?v=f35189de4605",
+          "caption": {
+            "zh": "實機起落架細節",
+            "en": "Real landing-gear detail",
+            "ja": "実機着陸装置の詳細"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg"
+        }
+      ]
     },
     "overview": {
       "summary": {
@@ -224,18 +406,44 @@
         "ja": "A319neoはA320neoファミリーの短胴型で、約34 mの胴体に新世代エンジンとSharkletを組み合わせます。少ない座席数と良好な航続性能により、需要の薄い長距離区間に適します。"
       },
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "它與 737-700 幾乎等長、裝 Sharklet 時翼展也幾乎相同；辨識不能依賴尺寸，必須回到機鼻、引擎與起落架。",
+        "en": "It is nearly identical to the 737-700 in length and, with Sharklets, span. Size is therefore weak; use nose, engines and landing gear.",
+        "ja": "737-700と全長がほぼ同じで、Sharklet装備時の翼幅も同等です。寸法でなく機首、エンジン、脚を見ます。"
       },
-      "bullets": [],
+      "bullets": [
+        {
+          "zh": "機身寬且離地較高。",
+          "en": "The fuselage is wider and sits higher.",
+          "ja": "胴体が太く地上高も高めです。"
+        },
+        {
+          "zh": "機鼻圓鈍，窗帶輪廓較平順。",
+          "en": "The nose is rounder with a smoother window belt.",
+          "ja": "機首は丸く窓帯も滑らかです。"
+        },
+        {
+          "zh": "短艙底部接近圓形，主輪格納後被遮蔽。",
+          "en": "Nacelles are round underneath and retracted mains are covered.",
+          "ja": "ナセル下面は円形に近く格納主輪は覆われます。"
+        }
+      ],
       "name": {
         "zh": "整體外型",
         "en": "Overall profile",
         "ja": "全体外観"
       },
       "specs": [],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319n/overview.jpg?v=b1d98a939c0f",
+          "caption": {
+            "zh": "實機整體外型參考",
+            "en": "Real-aircraft overall-profile reference",
+            "ja": "実機全体外観の参考"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09591).jpg"
+        }
+      ]
     },
     "windshield": {
       "summary": {
@@ -244,18 +452,53 @@
         "ja": "6枚の操縦室窓は中央から側面へ滑らかにつながり、側窓下縁が斜めになるA320系の重要な正面特徴です。neoとceoで窓形状は基本的に共通です。"
       },
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "737-700 的主窗較扁、外側折角更銳利；正面與側面照片一起看，比單一角度可靠。",
+        "en": "The 737-700's main panes are shallower and outer corners sharper. Compare front and side views together.",
+        "ja": "737-700は主窓が浅く外側角が鋭いです。正面・側面写真を併用します。"
       },
-      "bullets": [],
+      "bullets": [
+        {
+          "zh": "正面主風擋較高。",
+          "en": "The main front panes appear taller.",
+          "ja": "正面主風防が高く見えます。"
+        },
+        {
+          "zh": "外側窗向後平順收尖。",
+          "en": "Outer panes taper smoothly aft.",
+          "ja": "外側窓が後方へ滑らかに細くなります。"
+        },
+        {
+          "zh": "圓鼻讓整組窗帶顯得較寬。",
+          "en": "The rounded nose makes the belt look broader.",
+          "ja": "丸い機首で窓帯が幅広く見えます。"
+        }
+      ],
       "name": {
         "zh": "駕駛艙外窗",
         "en": "Cockpit windows",
         "ja": "コックピット窓"
       },
       "specs": [],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319n/window-front.jpg?v=f9981b5a781e",
+          "caption": {
+            "zh": "正面窗型（由實機照片裁切）",
+            "en": "Front window geometry (crop of a real photograph)",
+            "ja": "正面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09591).jpg"
+        },
+        {
+          "src": "assets/reference/a319n/window-side.jpg?v=31273fc73a6c",
+          "caption": {
+            "zh": "側面窗型（由實機照片裁切）",
+            "en": "Side window geometry (crop of a real photograph)",
+            "ja": "側面窓形状（実機写真から切り出し）"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09609).jpg"
+        }
+      ]
     },
     "wingtip": {
       "summary": {
@@ -264,18 +507,44 @@
         "ja": "背の高い後退角付きSharkletはneoの標準翼端装置で、翼端渦と誘導抵抗を低減します。初期A320ファミリーの小型三角形ウイングチップフェンスとは明確に異なります。"
       },
       "fact": {
-        "zh": "",
-        "en": "",
-        "ja": ""
+        "zh": "A319neo 生產型標準搭配高而後掠的 Sharklet；這是與多數早期 A319ceo 上下翼尖擋板的重要差異。",
+        "en": "Production A319neo aircraft use tall swept Sharklets, an important contrast with the upper-and-lower fences on many early A319ceos.",
+        "ja": "量産A319neoは高く後退したシャークレットを備え、初期A319ceoに多い上下フェンスとの重要な相違点です。"
       },
-      "bullets": [],
+      "bullets": [
+        {
+          "zh": "高而向外彎的 Sharklet。",
+          "en": "Tall outward-curved Sharklet.",
+          "ja": "高く外向きに湾曲したシャークレット。"
+        },
+        {
+          "zh": "翼尖與翼面平順融合。",
+          "en": "Smoothly blended into the wing.",
+          "ja": "主翼へ滑らかに一体化。"
+        },
+        {
+          "zh": "不可與早期上下翼尖擋板混淆。",
+          "en": "Do not confuse it with early twin fences.",
+          "ja": "初期の上下翼端フェンスと混同しません。"
+        }
+      ],
       "name": {
         "zh": "翼尖小翼",
         "en": "Wingtip device",
         "ja": "翼端装置"
       },
       "specs": [],
-      "images": []
+      "images": [
+        {
+          "src": "assets/reference/a319n/wingtip.jpg?v=41141cf17732",
+          "caption": {
+            "zh": "實機翼尖裝置外形",
+            "en": "Real wingtip-device profile",
+            "ja": "実機翼端装置の外形"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg"
+        }
+      ]
     }
   }
 }

@@ -246,6 +246,13 @@ $photos = [ordered]@{
   "b727/cockpit.jpg" = "Boeing 727 cockpit Aviation museum (29097199906).jpg"
   "c909/overview.jpg" = "B-605U@PEK (20200802164325).jpg"
   "c919/overview.jpg" = "B-919X@PEK (20240829112234).jpg"
+  "a319n/cockpit.jpg" = "Airbus A320-214 Vueling EC-HHA cockpit (5508849819).jpg"
+  "a320n/cockpit.jpg" = "Airbus A320-214 Vueling EC-HHA cockpit (5508849819).jpg"
+  "a320n/engine.jpg" = "D-AINU A320neo Lufthansa PW1100G SCQ.jpg"
+  "a320n/wingtip.jpg" = "EC-NER A320neo Iberia winglet.jpg"
+  "a320n/wing.jpg" = "Spirit Airbus A320neo N923NK planform.jpg"
+  "a320n/vstab.jpg" = "D-AINU A320neo Lufthansa tailfin SCQ.jpg"
+  "a320n/gear.jpg" = "A320neo Nose Landing Gear.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -652,6 +659,21 @@ $windowPhotos += @(
   @{ Dest="c919/vstab.jpg"; Title="China Eastern Comac C919 B-919G on final approach to Shanghai Hongqiao May 2026 1.jpg"; Crop=@(.08,.20,.25) }
   @{ Dest="c919/hstab.jpg"; Title="China Eastern Comac C919 B-919G on final approach to Shanghai Hongqiao May 2026 1.jpg"; Crop=@(.07,.36,.30) }
   @{ Dest="c919/gear.jpg"; Title="B-919X@PEK (20240829112234).jpg"; Crop=@(.42,.49,.38) }
+  @{ Dest="a319n/overview.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09591).jpg"; Crop=@(.02,.01,.96) }
+  @{ Dest="a319n/window-front.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09591).jpg"; Crop=@(.025,.40,.18) }
+  @{ Dest="a319n/window-side.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09609).jpg"; Crop=@(.02,.42,.18) }
+  @{ Dest="a319n/fuselage.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09609).jpg"; Crop=@(.04,.30,.70) }
+  @{ Dest="a319n/engine.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09591).jpg"; Crop=@(.30,.47,.28) }
+  @{ Dest="a319n/wingtip.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09636).jpg"; Crop=@(.25,.29,.28) }
+  @{ Dest="a319n/wing.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09636).jpg"; Crop=@(.20,.31,.50) }
+  @{ Dest="a319n/vstab.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09609).jpg"; Crop=@(.72,.14,.25) }
+  @{ Dest="a319n/hstab.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09636).jpg"; Crop=@(.02,.33,.30) }
+  @{ Dest="a319n/gear.jpg"; Title="Hamburg-Finkenwerder Airport China Southern Airlines Airbus A319-153N B-32LM (DSC09636).jpg"; Crop=@(.43,.54,.20) }
+  @{ Dest="a320n/overview.jpg"; Title="CC-AWR JetSMART Airbus A320neo in GIG.jpg"; Crop=@(.10,.27,.82) }
+  @{ Dest="a320n/window-front.jpg"; Title="Airbus A320neo front view.jpg"; Crop=@(.21,.28,.38); Force=$true }
+  @{ Dest="a320n/window-side.jpg"; Title="CC-AWR JetSMART Airbus A320neo in GIG.jpg"; Crop=@(.13,.49,.20) }
+  @{ Dest="a320n/fuselage.jpg"; Title="CC-AWR JetSMART Airbus A320neo in GIG.jpg"; Crop=@(.13,.38,.72) }
+  @{ Dest="a320n/hstab.jpg"; Title="Spirit Airbus A320neo N923NK planform.jpg"; Crop=@(.72,.35,.26) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0

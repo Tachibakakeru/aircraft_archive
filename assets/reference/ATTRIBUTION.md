@@ -779,3 +779,29 @@ Technical cross-check: [COMAC ARJ21 aircraft characteristics for airport plannin
 No freely reusable photograph positively identified as a real C919 flight-deck interior was found; `cockpit.jpg` is a crop of the real aircraft's exterior cockpit area. No display mock-up, simulator, AI-generated or AI-enhanced image is substituted. B-919X is an extended-range delivery, while the external recognition notes are limited to features shared by the photographed C919 airframes.
 
 Technical cross-check: [COMAC C919 aircraft characteristics for airport planning](https://www.comac.cc/fujian/c919acap_en.pdf). Shape descriptions are observations of the credited real-aircraft photographs.
+
+## Airbus A319neo (`a319n`)
+
+| Local file(s) | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a319n/overview.jpg`, `window-front.jpg`, `engine.jpg` | [China Southern A319-153N B-32LM (DSC09591)](https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09591).jpg), MarcelX42; cropped | CC BY-SA 4.0 |
+| `a319n/window-side.jpg`, `fuselage.jpg`, `vstab.jpg` | [China Southern A319-153N B-32LM (DSC09609)](https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09609).jpg), MarcelX42; cropped | CC BY-SA 4.0 |
+| `a319n/wingtip.jpg`, `wing.jpg`, `hstab.jpg`, `gear.jpg` | [China Southern A319-153N B-32LM (DSC09636)](https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_China_Southern_Airlines_Airbus_A319-153N_B-32LM_(DSC09636).jpg), MarcelX42; cropped | CC BY-SA 4.0 |
+| `a319n/cockpit.jpg` | [Vueling A320-214 cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg), Curimedia; resized | CC BY 2.0 |
+
+The exterior references show an actual A319-153N with LEAP-1A engines. A freely reusable A319neo flight-deck photograph was not found, so the cockpit image is explicitly presented as an A320-family layout reference; software and operator options may differ. No image is AI-generated or enlarged beyond its downloaded source pixels.
+
+## Airbus A320neo (`a320n`)
+
+| Local file(s) | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a320n/overview.jpg`, `window-side.jpg`, `fuselage.jpg` | [JetSMART A320neo CC-AWR at GIG](https://commons.wikimedia.org/wiki/File:CC-AWR_JetSMART_Airbus_A320neo_in_GIG.jpg), Wilfredor; cropped | CC0 |
+| `a320n/window-front.jpg` | [A320neo front view](https://commons.wikimedia.org/wiki/File:Airbus_A320neo_front_view.jpg), Alexander Craker; cropped | CC BY-SA 4.0 |
+| `a320n/engine.jpg` | [Lufthansa A320neo PW1100G](https://commons.wikimedia.org/wiki/File:D-AINU_A320neo_Lufthansa_PW1100G_SCQ.jpg), Bene Riobó; resized | CC BY-SA 4.0 |
+| `a320n/wingtip.jpg` | [Iberia A320neo winglet](https://commons.wikimedia.org/wiki/File:EC-NER_A320neo_Iberia_winglet.jpg), Bene Riobó; resized | CC BY-SA 4.0 |
+| `a320n/wing.jpg`, `hstab.jpg` | [Spirit A320neo N923NK planform](https://commons.wikimedia.org/wiki/File:Spirit_Airbus_A320neo_N923NK_planform.jpg), 4300streetcar; resized/cropped | CC BY 4.0 |
+| `a320n/vstab.jpg` | [Lufthansa A320neo tailfin](https://commons.wikimedia.org/wiki/File:D-AINU_A320neo_Lufthansa_tailfin_SCQ.jpg), Bene Riobó; resized | CC BY-SA 4.0 |
+| `a320n/gear.jpg` | [A320neo nose landing gear](https://commons.wikimedia.org/wiki/File:A320neo_Nose_Landing_Gear.jpg), Gabriel Resende Veiga; resized | CC BY-SA 4.0 |
+| `a320n/cockpit.jpg` | [Vueling A320-214 cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg), Curimedia; resized | CC BY 2.0 |
+
+The cockpit photograph is an A320ceo family-layout reference and is labelled as such in all three languages; it is not evidence of a specific A320neo software or optional-equipment fit. The exterior photographs show actual A320neo aircraft or identified neo components. Wikimedia's 2560-pixel derivative was used for several crops after the original-file endpoint rate-limited requests; crop dimensions were calculated from the downloaded derivative and no output was upscaled.
