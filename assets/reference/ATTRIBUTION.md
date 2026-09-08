@@ -805,3 +805,29 @@ The exterior references show an actual A319-153N with LEAP-1A engines. A freely 
 | `a320n/cockpit.jpg` | [Vueling A320-214 cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg), Curimedia; resized | CC BY 2.0 |
 
 The cockpit photograph is an A320ceo family-layout reference and is labelled as such in all three languages; it is not evidence of a specific A320neo software or optional-equipment fit. The exterior photographs show actual A320neo aircraft or identified neo components. Wikimedia's 2560-pixel derivative was used for several crops after the original-file endpoint rate-limited requests; crop dimensions were calculated from the downloaded derivative and no output was upscaled.
+
+## Airbus A321neo (`a321n`)
+
+| Local file(s) | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a321n/overview.jpg`, `vstab.jpg`, `hstab.jpg` | [Scoot A321-271NX 9V-NCB](https://commons.wikimedia.org/wiki/File:Scoot_Airbus_A321neo_9V-NCB_Perth_2019_(01).jpg), Bahnfrend; resized/cropped | CC BY-SA 4.0 |
+| `a321n/cockpit.jpg` | [British Airways A321 G-EUXG cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A321_cockpit_-_G-EUXG_British_Airways.jpg), Mertbiol; resized | CC0 |
+| `a321n/window-front.jpg` | [Wizz Air UK A321neo G-WUKM](https://commons.wikimedia.org/wiki/File:G-WUKM,_Airbus_A321neo_of_Wizz_Air_UK_at_London_Luton_Airport_2025_003.jpg), Mike Peel; cropped | CC BY-SA 4.0 |
+| `a321n/window-side.jpg` | [IndiGo A321-271NX VT-IUD](https://commons.wikimedia.org/wiki/File:IndiGo_Airbus_A321neo_VT-IUD_Abu_Dhabi,_2019_(01).jpg), Bahnfrend; cropped | CC BY-SA 4.0 |
+| `a321n/fuselage.jpg` | [Vueling A321neo EC-NYD](https://commons.wikimedia.org/wiki/File:EC-NYD_A321neo_Vueling_ARN_01.jpg), Bene Riobó; cropped | CC BY-SA 4.0 |
+| `a321n/engine.jpg` | [Asiana A321neo HL8534 LEAP-1A](https://commons.wikimedia.org/wiki/File:HL8534_engine_NGO_2024-07-27.jpg), LMP 2001; resized | CC BY-SA 4.0 |
+| `a321n/wingtip.jpg` | [TAP A321LR Sharklet](https://commons.wikimedia.org/wiki/File:Airbus_A321_LR_neo_TAP_Air_Portugal,_Lisbon_-_Boston_flight_(51980371743).jpg), Sharon Hahn Darlin; resized | CC BY 2.0 |
+| `a321n/wing.jpg`, `gear.jpg` | [Delta A321neo N584DN](https://commons.wikimedia.org/wiki/File:Delta_Airbus_A321neo_N584DN_departing_Boston_June_2025.jpg), 4300streetcar; cropped | CC BY 4.0 |
+
+The cockpit photograph is an A321ceo family-layout reference and is explicitly labelled as such. The wingtip photograph shows the same Sharklet geometry on an A321LR member of the neo family. Exterior crops otherwise show identified A321neo aircraft. No image is AI-generated, AI-enhanced or enlarged beyond its downloaded source pixels.
+
+## Airbus A321XLR (`a321xlr`)
+
+| Local file(s) | Wikimedia Commons source and author | License |
+| --- | --- | --- |
+| `a321xlr/overview.jpg`, `window-side.jpg`, `fuselage.jpg`, `engine.jpg`, `vstab.jpg`, `hstab.jpg` | [First A321XLR prototype F-WXLR taxiing at Hamburg](https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05146).jpg), MarcelX42; resized/cropped | CC BY-SA 4.0 |
+| `a321xlr/wingtip.jpg`, `wing.jpg`, `gear.jpg` | [First A321XLR prototype F-WXLR on its maiden flight](https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05191).jpg), MarcelX42; cropped | CC BY-SA 4.0 |
+| `a321xlr/window-front.jpg` | [A321XLR F-WXLR at Airbus Family Day 2024](https://commons.wikimedia.org/wiki/File:Airbus_A321XLR_-_Airbus_Family_Day_2024_Toulouse_06.jpg), Duch; cropped | CC BY 4.0 |
+| `a321xlr/cockpit.jpg` | [British Airways A321 G-EUXG cockpit](https://commons.wikimedia.org/wiki/File:Airbus_A321_cockpit_-_G-EUXG_British_Airways.jpg), Mertbiol; resized | CC0 |
+
+F-WXLR is the first physical A321XLR prototype and performed the type's first flight. Its external photographs are valid prototype references, not proof that every production option is identical. A freely reusable XLR cockpit interior was not found, so the cockpit photograph is an explicitly disclosed A321ceo family-layout reference. No conceptual rendering, AI-generated image or AI enhancement is used.

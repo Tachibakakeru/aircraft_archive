@@ -253,6 +253,10 @@ $photos = [ordered]@{
   "a320n/wing.jpg" = "Spirit Airbus A320neo N923NK planform.jpg"
   "a320n/vstab.jpg" = "D-AINU A320neo Lufthansa tailfin SCQ.jpg"
   "a320n/gear.jpg" = "A320neo Nose Landing Gear.jpg"
+  "a321n/cockpit.jpg" = "Airbus A321 cockpit - G-EUXG British Airways.jpg"
+  "a321n/engine.jpg" = "HL8534 engine NGO 2024-07-27.jpg"
+  "a321n/wingtip.jpg" = "Airbus A321 LR neo TAP Air Portugal, Lisbon - Boston flight (51980371743).jpg"
+  "a321xlr/cockpit.jpg" = "Airbus A321 cockpit - G-EUXG British Airways.jpg"
 }
 
 $byTitle = Get-CommonsImageInfo $photos.Values 960 $true
@@ -674,6 +678,24 @@ $windowPhotos += @(
   @{ Dest="a320n/window-side.jpg"; Title="CC-AWR JetSMART Airbus A320neo in GIG.jpg"; Crop=@(.13,.49,.20) }
   @{ Dest="a320n/fuselage.jpg"; Title="CC-AWR JetSMART Airbus A320neo in GIG.jpg"; Crop=@(.13,.38,.72) }
   @{ Dest="a320n/hstab.jpg"; Title="Spirit Airbus A320neo N923NK planform.jpg"; Crop=@(.72,.35,.26) }
+  @{ Dest="a321n/overview.jpg"; Title="Scoot Airbus A321neo 9V-NCB Perth 2019 (01).jpg"; Crop=@(.01,.01,.98) }
+  @{ Dest="a321n/window-front.jpg"; Title="G-WUKM, Airbus A321neo of Wizz Air UK at London Luton Airport 2025 003.jpg"; Crop=@(.38,.27,.24) }
+  @{ Dest="a321n/window-side.jpg"; Title="IndiGo Airbus A321neo VT-IUD Abu Dhabi, 2019 (01).jpg"; Crop=@(.07,.39,.23); Force=$true }
+  @{ Dest="a321n/fuselage.jpg"; Title="EC-NYD A321neo Vueling ARN 01.jpg"; Crop=@(.08,.28,.84) }
+  @{ Dest="a321n/wing.jpg"; Title="Delta Airbus A321neo N584DN departing Boston June 2025.jpg"; Crop=@(.20,.18,.60) }
+  @{ Dest="a321n/vstab.jpg"; Title="Scoot Airbus A321neo 9V-NCB Perth 2019 (01).jpg"; Crop=@(.03,.35,.22) }
+  @{ Dest="a321n/hstab.jpg"; Title="Scoot Airbus A321neo 9V-NCB Perth 2019 (01).jpg"; Crop=@(.02,.42,.30) }
+  @{ Dest="a321n/gear.jpg"; Title="Delta Airbus A321neo N584DN departing Boston June 2025.jpg"; Crop=@(.37,.46,.30) }
+  @{ Dest="a321xlr/overview.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05146).jpg"; Crop=@(.02,.01,.96) }
+  @{ Dest="a321xlr/window-front.jpg"; Title="Airbus A321XLR - Airbus Family Day 2024 Toulouse 06.jpg"; Crop=@(.44,.22,.36) }
+  @{ Dest="a321xlr/window-side.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05146).jpg"; Crop=@(.72,.37,.25) }
+  @{ Dest="a321xlr/fuselage.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05146).jpg"; Crop=@(.04,.02,.92) }
+  @{ Dest="a321xlr/engine.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05146).jpg"; Crop=@(.46,.47,.25) }
+  @{ Dest="a321xlr/wingtip.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05191).jpg"; Crop=@(.67,.32,.22); Force=$true }
+  @{ Dest="a321xlr/wing.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05191).jpg"; Crop=@(.34,.24,.58) }
+  @{ Dest="a321xlr/vstab.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05146).jpg"; Crop=@(.08,.15,.22) }
+  @{ Dest="a321xlr/hstab.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05146).jpg"; Crop=@(.03,.34,.27) }
+  @{ Dest="a321xlr/gear.jpg"; Title="Hamburg-Finkenwerder Airport Airbus Industrie Airbus A321-251NY F-WXLR (DSC05191).jpg"; Crop=@(.34,.48,.34) }
 )
 
 $windowByTitle = Get-CommonsImageInfo ($windowPhotos | ForEach-Object Title) 0

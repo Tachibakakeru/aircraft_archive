@@ -2,11 +2,11 @@
 
 > 此檔由協作 task 持續更新。記錄實際變更、驗證結果與待處理事項；不記錄密碼、Token 或其他機密。
 
-## 目前狀態（2026-08-24）
+## 目前狀態（2026-09-08）
 
 - 專案：Cloudflare Pages 靜態/PWA 航空資料庫，正式分支為 `main`。
 - 資料庫現況：184 機型、47 個 3D 模型 JSON、85,587 座機場、594 家航空公司、46 筆航空小知識。
-- 最近已推送 commit：`b87532f`（新增貨運航空分類與航空知識搜尋功能）。
+- 最近已推送內容：補齊 A321neo 與 A321XLR 實機部位照片。
 - 工作目錄發現未追蹤檔案：`data/korean_airlines_debug.json`。它是除錯輸出，暫不刪除、不提交，待確認是否仍需保留。
 
 ## 已完成
@@ -505,3 +505,14 @@
 - 驗證通過：照片資料累計 52 型 × 10 類／572 張；本批 22 張可解碼、每型 11 張、所有 fact 三語非空、每部位至少三項 bullets；兩支文字產生器重跑後照片與詳細資料仍完整，裁切自我檢查、JavaScript 語法及 `git diff --check` 正常。
 - 資料引用升至 v=178，Service Worker cache 升為 `hangar-v39`。本地預覽：`http://localhost:8000/versus.html?a=a319n&b=a320n&local=178`。
 - 目前 184 型中 52 型已具完整 10 類實照；排除暫緩的 C929／C939，尚餘 115 型需要補照片，其中 22 型已有本輪前兩批文字、93 型仍需文字與照片一起補齊。下一批由 A321neo／A321XLR 接續。
+
+### 新增機型實照回補第二批：A321neo／A321XLR（2026-09-08，本地完成）
+
+- 上一批 A319neo／A320neo 已以 commit `65a82d3` 推送至 `origin/main`；本批接續 A321neo／A321XLR，已完成本地驗收並取得使用者發布授權。
+- 兩型各補齊 10 類、11 張照片（共 22 張）：整體、座艙、駕駛艙外窗前／側面、機身、引擎、翼尖、主翼、垂尾、平尾與起落架；每個部位均有三語 fact 與至少三項辨識重點。
+- A321neo 外觀使用 Scoot、Wizz Air UK、IndiGo、Vueling、Asiana、TAP A321LR 與 Delta 的實機照片；A321XLR 使用首架飛行原型機 F-WXLR 的滑行、首飛及 Airbus Family Day 實照。XLR 翼尖重新裁切，完整呈現 Sharklet，避免把垂尾當成主體。
+- 自由授權來源、作者、原始頁及裁切用途已加入 `assets/reference/ATTRIBUTION.md`。座艙照片為 A321ceo 家族布局參考，三語圖說明確揭露；A321LR 翼尖照片僅作同型 Sharklet 參考。沒有使用 AI 圖、概念圖或超過來源像素放大。
+- 重跑兩支文字產生器後，照片、fact、bullets 與 specs 均保留；照片資料累計 54 型 × 10 類／594 張。裁切自我檢查、資料完整性及 5 份相關 JavaScript 語法均通過。
+- 資料引用升至 v=179，Service Worker cache 升為 `hangar-v40`。本地預覽：`http://localhost:8000/versus.html?a=a321n&b=a321xlr&local=179`。
+- 排除暫緩的 C929／C939，完成本批後仍有 113 型待補實照，其中 20 型已有完整文字、93 型仍需文字與照片一起補齊。本批發布時明確排除未追蹤的 `data/korean_airlines_debug.json` 與 Token 備份。
+- 本批已提交並推送至 `origin/main`；本輪依使用者指示到此結束，下次由後續待補機型接續。

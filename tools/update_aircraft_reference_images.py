@@ -85,6 +85,32 @@ SOURCES = {
         "hstab": "https://commons.wikimedia.org/wiki/File:Spirit_Airbus_A320neo_N923NK_planform.jpg",
         "gear": "https://commons.wikimedia.org/wiki/File:A320neo_Nose_Landing_Gear.jpg",
     },
+    "a321n": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Scoot_Airbus_A321neo_9V-NCB_Perth_2019_(01).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Airbus_A321_cockpit_-_G-EUXG_British_Airways.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:G-WUKM,_Airbus_A321neo_of_Wizz_Air_UK_at_London_Luton_Airport_2025_003.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:IndiGo_Airbus_A321neo_VT-IUD_Abu_Dhabi,_2019_(01).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:EC-NYD_A321neo_Vueling_ARN_01.jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:HL8534_engine_NGO_2024-07-27.jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Airbus_A321_LR_neo_TAP_Air_Portugal,_Lisbon_-_Boston_flight_(51980371743).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Delta_Airbus_A321neo_N584DN_departing_Boston_June_2025.jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Scoot_Airbus_A321neo_9V-NCB_Perth_2019_(01).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Scoot_Airbus_A321neo_9V-NCB_Perth_2019_(01).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Delta_Airbus_A321neo_N584DN_departing_Boston_June_2025.jpg",
+    },
+    "a321xlr": {
+        "overview": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05146).jpg",
+        "cockpit": "https://commons.wikimedia.org/wiki/File:Airbus_A321_cockpit_-_G-EUXG_British_Airways.jpg",
+        "window_front": "https://commons.wikimedia.org/wiki/File:Airbus_A321XLR_-_Airbus_Family_Day_2024_Toulouse_06.jpg",
+        "window_side": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05146).jpg",
+        "fuselage": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05146).jpg",
+        "engine": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05146).jpg",
+        "wingtip": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05191).jpg",
+        "wing": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05191).jpg",
+        "vstab": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05146).jpg",
+        "hstab": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05146).jpg",
+        "gear": "https://commons.wikimedia.org/wiki/File:Hamburg-Finkenwerder_Airport_Airbus_Industrie_Airbus_A321-251NY_F-WXLR_(DSC05191).jpg",
+    },
     "b773": {
         "overview": "https://commons.wikimedia.org/wiki/File:Boeing_777-300ER,_Geneva_Airport,_Le_Grand-Saconnex_(BL7C0540).jpg",
         "cockpit": "https://commons.wikimedia.org/wiki/File:Boeing_777-200ER_cockpit.jpg",
@@ -3287,7 +3313,7 @@ NAMES = {
     "gear": tr("起落架", "Landing gear", "着陸装置"),
 }
 
-PHOTO_BASES = {"a319n": "a319", "a320n": "a320"}
+PHOTO_BASES = {"a319n": "a319", "a320n": "a320", "a321n": "a321", "a321xlr": "a321"}
 
 NEO_DETAILS = {
     "a319n": {
@@ -3317,6 +3343,48 @@ NEO_DETAILS = {
         "vstab": {"fact": tr("垂直尾翼外形與 A320ceo 幾乎相同，通常只能辨識 A320 家族，不能單靠它確認 neo。", "The vertical-tail outline is nearly identical to the A320ceo and normally identifies only the A320 family, not the neo by itself.", "垂直尾翼形状はA320ceoとほぼ同じで、通常はA320系列の識別に留まり、neo単独判定には使えません。")},
         "hstab": {"fact": tr("低置後掠水平尾翼屬家族共通設計；俯視照片適合觀察梯形平面形，但不是 ceo／neo 的主要差異。", "The low-mounted swept tailplane is common across the family; a planform view shows its trapezoidal shape but does not distinguish ceo from neo.", "低位置後退水平尾翼は系列共通で、俯視では台形平面形を確認できますがceo／neoの主要差ではありません。")},
         "gear": {"fact": tr("A320neo 維持可收放前三點式、鼻腳雙輪與每側雙輪主腳；照片是 neo 鼻輪細節，但輪式本身與 ceo 相同。", "The A320neo retains retractable tricycle gear with twin nose wheels and twin wheels on each main leg; the photograph shows neo nose-gear detail, but the arrangement is shared with ceo.", "A320neoは引込前三点式、前脚2輪、左右主脚各2輪を継承します。写真はneo前脚ですが、配置自体はceoと共通です。")},
+    },
+    "a321n": {
+        "overview": {
+            "fact": tr("A321neo 與 A321ceo 同為 A320 家族長胴型，但大型 neo 引擎、Sharklet 與 Airbus Cabin Flex 出口配置可協助辨識世代。", "The A321neo and A321ceo are both stretched A320-family members, but larger neo engines, Sharklets and Airbus Cabin Flex exit layouts help identify the generation.", "A321neoとA321ceoはいずれもA320系列の長胴型ですが、大型neoエンジン、シャークレット、Airbus Cabin Flex非常口配置が世代識別に役立ちます。"),
+            "bullets": [tr("A320 家族最長的量產主型之一。", "One of the longest production A320-family variants.", "A320系列で最長級の量産型。"), tr("大型 LEAP-1A／PW1100G 短艙。", "Large LEAP-1A/PW1100G nacelles.", "大型LEAP-1A／PW1100Gナセル。"), tr("標準配置高大 Sharklet。", "Tall Sharklets as standard.", "高いシャークレットを標準装備。")],
+        },
+        "cockpit": {"fact": tr("A321neo 延續 A320 家族側桿與 ECAM 架構；照片是 A321ceo 實機，僅作家族布局參考。", "The A321neo retains the A320-family sidestick and ECAM architecture; the photograph shows an A321ceo and is used only as a family-layout reference.", "A321neoはA320系列のサイドスティックとECAM構成を継承します。写真はA321ceo実機で、系列配置の参考としてのみ使用します。")},
+        "fuselage": {
+            "fact": tr("多數後期 A321neo 採 Airbus Cabin Flex：第三對大型門可取消，改設兩對翼上逃生口；實際配置仍依認證客艙而異。", "Many later A321neos use Airbus Cabin Flex, deleting the third pair of full-size doors in favor of two pairs of overwing exits; certified cabin layouts still vary.", "後期A321neoの多くはAirbus Cabin Flexを採用し、第3大型扉対を省いて翼上非常口2対へ変更しますが、認証客室仕様は異なります。"),
+            "bullets": [tr("全長約 44.5 公尺。", "About 44.5 m long.", "全長約44.5 m。"), tr("ACF 常見兩對翼上逃生口。", "ACF commonly has two overwing-exit pairs.", "ACFでは翼上非常口2対が一般的。"), tr("出口配置需依個別機體確認。", "Confirm exits on the individual airframe.", "非常口配置は個別機体で確認。")],
+        },
+        "engine": {
+            "fact": tr("A321neo 可選 LEAP-1A 或 PW1100G-JM；照片顯示韓亞航空 A321neo 的 LEAP-1A。", "The A321neo offers LEAP-1A or PW1100G-JM engines; the photograph shows a LEAP-1A on an Asiana A321neo.", "A321neoはLEAP-1AまたはPW1100G-JMを選択でき、写真はアシアナ航空A321neoのLEAP-1Aです。"),
+            "bullets": [tr("風扇明顯大於 ceo 引擎。", "Fan visibly larger than ceo engines.", "ファンはceoエンジンより明らかに大径。"), tr("可選 LEAP-1A 或 PW1100G-JM。", "Choice of LEAP-1A or PW1100G-JM.", "LEAP-1AまたはPW1100G-JM。"), tr("照片為 LEAP-1A 短艙。", "Photograph shows a LEAP-1A nacelle.", "写真はLEAP-1Aナセル。")],
+        },
+        "wingtip": {
+            "fact": tr("A321neo 標準採高而後掠的 Sharklet；照片為同家族 A321LR，翼尖裝置與一般 A321neo 共通。", "The A321neo uses tall swept Sharklets as standard; the photograph shows an A321LR whose wingtip device is shared with the regular A321neo.", "A321neoは高く後退したシャークレットを標準装備します。写真は同系列A321LRで、翼端装置は通常のA321neoと共通です。"),
+            "bullets": [tr("高大融合式 Sharklet。", "Tall blended Sharklet.", "高い一体型シャークレット。"), tr("由翼端連續向上彎曲。", "Continuous upward curve from the tip.", "翼端から連続して上方へ湾曲。"), tr("不同塗裝不改變基本幾何。", "Livery does not change the basic geometry.", "塗装が異なっても基本形状は同じ。")],
+        },
+    },
+    "a321xlr": {
+        "overview": {
+            "fact": tr("A321XLR 的核心差異多藏在機腹整合式後中央油箱與結構內；外觀上仍要依 XLR 標記、出口配置與已知機籍交叉確認。", "Most A321XLR changes are hidden in the integrated rear center tank and internal structure; externally, confirm XLR markings, exit layout and known registration together.", "A321XLRの主要差は機腹の一体型後部中央タンクと内部構造に隠れるため、外観ではXLR表記、非常口配置、既知の機体記号を併用します。"),
+            "bullets": [tr("外形仍屬 A321neo 長胴家族。", "Still externally an A321neo-family stretch.", "外形はA321neo長胴系列。"), tr("整合式後中央油箱不可由側面直接看見。", "Integrated rear center tank is not directly visible in profile.", "一体型後部中央タンクは側面から直接見えない。"), tr("照片為首架原型機 F-WXLR。", "Photograph shows first prototype F-WXLR.", "写真は初号試作機F-WXLR。")],
+        },
+        "cockpit": {"fact": tr("XLR 保留 A320 家族共通側桿／ECAM 飛行甲板，並加入遠程任務所需系統功能；照片為 A321ceo 家族布局參考。", "The XLR retains the A320-family sidestick/ECAM flight deck with systems functions for longer missions; the photograph is an A321ceo family-layout reference.", "XLRはA320系列共通のサイドスティック／ECAM操縦室に長距離任務向け機能を加えます。写真はA321ceo系列配置の参考です。")},
+        "fuselage": {
+            "fact": tr("XLR 機身長度仍約 44.5 公尺，外部主要沿用 ACF 門位；增加航程的整合式後中央油箱位於機身結構內。", "The XLR remains about 44.5 m long and largely retains ACF door positions externally; its integrated rear center tank is built into the fuselage structure.", "XLRは全長約44.5 mで外部は主にACF扉配置を継承し、航続距離を延ばす一体型後部中央タンクは胴体構造内にあります。"),
+            "bullets": [tr("全長與 A321neo 相同級別。", "Same length class as A321neo.", "全長はA321neoと同級。"), tr("採 ACF 出口配置。", "Uses an ACF exit arrangement.", "ACF非常口配置を採用。"), tr("不能只靠側面輪廓確認 XLR。", "Profile alone cannot confirm an XLR.", "側面輪郭だけではXLRを断定できない。")],
+        },
+        "engine": {
+            "fact": tr("F-WXLR 原型機裝 CFM LEAP-1A；量產 XLR 亦可依型號選擇 PW1100G-JM，不能把單張照片視為全系列唯一動力。", "Prototype F-WXLR carries CFM LEAP-1A engines; production XLR variants can also use PW1100G-JM, so one photograph does not define the whole fleet.", "試作機F-WXLRはCFM LEAP-1Aを装備しますが、量産XLRにはPW1100G-JM型もあり、1枚の写真を全系列の唯一動力とはみなしません。"),
+            "bullets": [tr("照片原型機採 LEAP-1A。", "Photographed prototype uses LEAP-1A.", "写真の試作機はLEAP-1A。"), tr("大直徑高旁通比短艙。", "Large high-bypass nacelle.", "大径高バイパスナセル。"), tr("引擎外形不足以區分一般 neo 與 XLR。", "Engine shape does not separate regular neo from XLR.", "エンジン形状だけで通常neoとXLRは区別できない。")],
+        },
+        "wingtip": {
+            "fact": tr("XLR 沿用 A321neo 的融合式 Sharklet；照片中近側翼尖與原型機尾翼同框，翼尖本身不是 XLR 專屬。", "The XLR retains the A321neo blended Sharklet; the near tip appears beside the prototype tail in the photograph, but the device is not XLR-exclusive.", "XLRはA321neoの一体型シャークレットを継承します。写真では近側翼端が試作機尾翼と同時に写りますが、XLR専用品ではありません。"),
+            "bullets": [tr("與 A321neo 共通 Sharklet。", "Shared with A321neo.", "A321neo共通シャークレット。"), tr("高而後掠、向外彎曲。", "Tall, swept and outward-curved.", "高く後退し外向きに湾曲。"), tr("需搭配機籍或標記確認 XLR。", "Use registration or markings to confirm XLR.", "XLR確認には機体記号や表記を併用。")],
+        },
+        "wing": {
+            "fact": tr("A321XLR 主翼外形接近 A321neo，但為較高最大起飛重量與長程任務強化結構及襟翼系統；這些改良不全能由遠照看出。", "The A321XLR wing resembles the A321neo's but has structural and flap-system changes for higher maximum takeoff weight and long-range missions; not all are visible at a distance.", "A321XLR主翼はA321neoに似ますが、高い最大離陸重量と長距離任務向けに構造・フラップ系統を変更しており、遠景では全て見分けられません。"),
+            "bullets": [tr("基本平面形延續 A321neo。", "Basic planform follows A321neo.", "基本平面形はA321neoを継承。"), tr("結構配合較高起飛重量強化。", "Structure strengthened for higher takeoff weight.", "高い離陸重量に合わせ構造強化。"), tr("外觀仍需以機籍交叉確認。", "Use registration as an external cross-check.", "外観確認には機体記号を併用。")],
+        },
     },
 }
 
@@ -3355,6 +3423,18 @@ def update(model: str) -> None:
             "A320ceo 實機座艙；A319neo／A320neo 家族布局參考，航電軟體與選裝設備可能不同",
             "Real A320ceo cockpit; A319neo/A320neo family-layout reference, with avionics software and options subject to variation",
             "A320ceo実機操縦席：A319neo／A320neo系列配置の参考で、航空電子ソフトや選択装備は異なる場合があります",
+        )
+    if model in ("a321n", "a321xlr"):
+        parts["cockpit"]["images"][0]["caption"] = tr(
+            "A321ceo 實機座艙；A321neo／A321XLR 家族布局參考，航電軟體與選裝設備可能不同",
+            "Real A321ceo cockpit; A321neo/A321XLR family-layout reference, with avionics software and options subject to variation",
+            "A321ceo実機操縦席：A321neo／A321XLR系列配置の参考で、航空電子ソフトや選択装備は異なる場合があります",
+        )
+    if model == "a321xlr":
+        parts["overview"]["images"][0]["caption"] = tr(
+            "首架 A321XLR 原型機 F-WXLR，漢堡芬肯韋德（2022）",
+            "First A321XLR prototype F-WXLR at Hamburg Finkenwerder (2022)",
+            "A321XLR初号試作機F-WXLR、ハンブルク・フィンケンヴェルダー（2022年）",
         )
     if model in ("dc9", "md80"):
         parts["windshield"]["images"][0]["caption"] = tr(
