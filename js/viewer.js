@@ -22,7 +22,7 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=179`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=182`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 // 3D 模型是可選的（如 DC-9、707 家族等尚未建過幾何的機型只有規格文案，
@@ -31,7 +31,7 @@ function loadData(){
 // 機身可看（PARTS/PART_ORDER 也一併 fallback 成空，見 init() 開頭）。
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=128`).then(r => r.ok ? r.json() : null).catch(() => null)
+  fetch(`models/${MODEL_ID}.json?v=182`).then(r => r.ok ? r.json() : null).catch(() => null)
 ]).then(([DATA, MODEL]) => init(DATA, MODEL || { parts: {}, anchors: {}, meta: {} }))
   .catch(() => fail(I18N.t("viewer.loaderror").replace("{id}", MODEL_ID)));
 
@@ -157,19 +157,23 @@ function init(DATA, MODEL){
 
   // ── 可動操縱面：各片建鉸鏈 pivot，掛在主翼群組下（拾取／高亮歸主翼）──
   const surfaces = [];
-  if (MODEL.surfaces && partGroups.wing){
+  if (MODEL.surfaces){
     for (const s of MODEL.surfaces){
+      const parent = partGroups[s.part || "wing"];
+      if (!parent) continue;
       const pivot = new THREE.Group();
       pivot.position.set(s.pv[0], s.pv[1], s.pv[2]);
-      pivot.userData = { type: s.t, side: s.sd,
+      pivot.userData = { type: s.t, side: s.sd, channel: s.channel, angle: s.angle, start: s.start || 0,
         axis: new THREE.Vector3(s.ax[0], s.ax[1], s.ax[2]).normalize(),
         base: new THREE.Vector3(s.pv[0], s.pv[1], s.pv[2]) };
       for (const e of s.e){
         const mesh = makeMesh(e);
         mesh.position.set(-s.pv[0], -s.pv[1], -s.pv[2]);   // 幾何相對樞紐
+        if (e.slide) mesh.userData.slide = { delta: new THREE.Vector3(...e.slide),
+          end: e.slideEnd || 1, base: mesh.position.clone() };
         pivot.add(mesh);
       }
-      partGroups.wing.add(pivot);
+      parent.add(pivot);
       surfaces.push(pivot);
     }
   }
@@ -180,8 +184,23 @@ function init(DATA, MODEL){
   // Fowler 平移：襟翼隨展開往後（-X）並略下（-Y）滑出、縫翼往前（+X）下伸
   const FOWLER = { flap: [-0.22, -0.05, 0], slat: [0.10, -0.05, 0] };
   let deployTarget = 0, deployNow = 0;
+  const articulation = Object.fromEntries((MODEL.controls || []).map(c => [c.id, {target: 0, now: 0}]));
   function applyDeploy(){
     for (const pv of surfaces){
+      if (pv.userData.channel){
+        const state = articulation[pv.userData.channel];
+        if (state){
+          const start = pv.userData.start;
+          const turn = start ? Math.max(0, Math.min(1, (state.now-start)/(1-start))) : state.now;
+          pv.quaternion.setFromAxisAngle(pv.userData.axis, pv.userData.angle * turn);
+          for (const mesh of pv.children){
+            const slide = mesh.userData.slide;
+            if (slide) mesh.position.copy(slide.base).addScaledVector(slide.delta,
+              Math.max(0, Math.min(1, state.now/slide.end)));
+          }
+        }
+        continue;
+      }
       const type = pv.userData.type;
       let ang = (DEPLOY[type] || 0) * deployNow;
       if (type !== "aileron") ang *= pv.userData.side;
@@ -739,7 +758,7 @@ function init(DATA, MODEL){
 
   /* ── 展開操縱面（襟翼／縫翼／擾流板／副翼） ── */
   const btnDeploy = document.getElementById("btn-deploy");
-  if (surfaces.length){
+  if (surfaces.some(s => !s.userData.channel)){
     btnDeploy.hidden = false;
     const syncDeploy = () => {
       const on = deployTarget > 0.5;
@@ -751,6 +770,40 @@ function init(DATA, MODEL){
       syncDeploy();
     });
     document.addEventListener("langchange", syncDeploy);
+  }
+  if (MODEL.controls?.length){
+    const details = document.createElement("details");
+    details.className = "model-controls";
+    const summary = document.createElement("summary");
+    const heading = {zh: "可動部位", en: "Moving parts", ja: "可動部位"};
+    details.append(summary);
+    const labels = [];
+    for (const c of MODEL.controls){
+      const label = document.createElement("label");
+      const title = document.createElement("span");
+      const slider = document.createElement("input");
+      slider.type = "range";
+      slider.min = c.min; slider.max = c.max; slider.step = c.step; slider.value = 0;
+      slider.dataset.control = c.id;
+      slider.addEventListener("input", () => { articulation[c.id].target = Number(slider.value); });
+      label.append(title, slider); details.append(label);
+      labels.push([title, c.label]);
+    }
+    const reset = document.createElement("button");
+    reset.type = "button";
+    reset.addEventListener("click", () => {
+      for (const state of Object.values(articulation)) state.target = 0;
+      for (const slider of details.querySelectorAll("input")) slider.value = 0;
+    });
+    details.append(reset);
+    function syncControls(){
+      summary.textContent = F(heading);
+      for (const [el, text] of labels) el.textContent = F(text);
+      reset.textContent = F({zh:"還原可動部位",en:"Reset moving parts",ja:"可動部位をリセット"});
+    }
+    syncControls();
+    document.addEventListener("langchange", syncControls);
+    document.querySelector(".controls").prepend(details);
   }
 
   /* ── 深連結：載入時自動選取部位、還原相機 ── */
@@ -779,6 +832,13 @@ function init(DATA, MODEL){
   function tick(){
     requestAnimationFrame(tick);
     if (autoRotate && !dragging) airplane.rotation.y += 0.0022;
+    let articulationChanged = false;
+    for (const state of Object.values(articulation)){
+      if (state.now === state.target) continue;
+      state.now = reducedMotion || Math.abs(state.now-state.target) < .001 ? state.target : state.now+(state.target-state.now)*.12;
+      articulationChanged = true;
+    }
+    if (articulationChanged) applyDeploy();
     if (Math.abs(deployNow - deployTarget) > 0.0015){
       deployNow += (deployTarget - deployNow) * 0.12;   // 平滑展開／收回
       applyDeploy();

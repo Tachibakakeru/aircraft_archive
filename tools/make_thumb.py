@@ -15,7 +15,8 @@ def main(src, dst):
     d = json.load(open(src))
     # 收集全部三角形（附部位標記）
     tris_all = []
-    for pid, entries in d["parts"].items():
+    groups = list(d["parts"].items()) + [(s.get("part", "wing"), s["e"]) for s in d.get("surfaces", [])]
+    for pid, entries in groups:
         rgb = VSTAB if pid == "vstab" else BODY
         for e in entries:
             if "q" in e:   # v2 量化格式

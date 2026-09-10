@@ -1,0 +1,6 @@
+.model-controls { width:180px; padding:10px; border:1px solid var(--stroke); border-radius:8px; background:var(--panel); color:var(--text); font-size:12px; max-height:45vh; overflow:auto; }
+.model-controls summary { cursor:pointer; }
+.model-controls label { display:block; margin-top:12px; }
+.model-controls input { display:block; width:100%; margin-top:8px; accent-color:var(--amber); }
+.model-controls button { width:100%; margin-top:10px; }
+@media(max-width:700px) { .model-controls { position:absolute; bottom:100%; left:0; margin-bottom:8px; } }

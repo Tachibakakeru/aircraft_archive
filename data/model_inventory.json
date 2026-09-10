@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-08",
+  "updated": "2026-09-09",
   "fleetCount": 184,
-  "modelCount": 47,
-  "missingCount": 137,
+  "modelCount": 48,
+  "missingCount": 136,
   "missing": [
     {
       "id": "dreamlifter",
@@ -613,11 +613,6 @@
       "id": "s92",
       "name": "Sikorsky S-92A+",
       "manufacturer": "Sikorsky"
-    },
-    {
-      "id": "concorde",
-      "name": "Aérospatiale / BAC Concorde",
-      "manufacturer": "Aérospatiale / BAC"
     },
     {
       "id": "icona5",

@@ -277,7 +277,16 @@ def main() -> None:
         assert aircraft_detail["partOrder"] == list(aircraft_detail["parts"])
         assert all(all(part["summary"][lang] for lang in ("zh", "en", "ja")) for part in aircraft_detail["parts"].values())
         by_id[row[0]] = fleet_entry(row)
-        (ROOT / "data" / f"{row[0]}.json").write_text(
+        if (ROOT / "models" / f"{row[0]}.json").exists():
+            by_id[row[0]]["has3d"] = True
+            by_id[row[0]]["thumb"] = f"assets/thumb_{row[0]}.png"
+        path = ROOT / "data" / f"{row[0]}.json"
+        if path.exists():
+            existing = json.loads(path.read_text(encoding="utf-8"))
+            if existing.get("parts"):
+                aircraft_detail["parts"] = existing["parts"]
+                aircraft_detail["partOrder"] = existing.get("partOrder", list(existing["parts"]))
+        path.write_text(
             json.dumps(aircraft_detail, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
     fleet["aircraft"] = [by_id[ident] for ident in old_order]

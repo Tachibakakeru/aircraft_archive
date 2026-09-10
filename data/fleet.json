@@ -3610,10 +3610,10 @@
         "en": "The supersonic airliner that operated scheduled transatlantic service, recognizable by its delta wing, droop nose, and roughly Mach 2 cruise.",
         "ja": "定期大西洋横断便に就航した超音速旅客機で、デルタ翼、可動式機首、約マッハ2の巡航で知られます。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_concorde.png?v=182",
       "icao": "CONC",
       "iata": "",
-      "has3d": false
+      "has3d": true
     },
     {
       "id": "icona5",

@@ -15,7 +15,7 @@ let idA = "b738", idB = "a320";
 let pickerA = null, pickerB = null;
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=179")).json();
+  fleet = await (await fetch("data/fleet.json?v=182")).json();
   fleet.aircraft.sort((a, b) => a.name.localeCompare(b.name, "en", { numeric: true, sensitivity: "base" }));
 
   const params = new URLSearchParams(location.search);
@@ -37,7 +37,7 @@ let pickerA = null, pickerB = null;
 
 async function loadData(id){
   if (dataCache[id]) return dataCache[id];
-  const d = await (await fetch(`data/${id}.json?v=179`)).json();
+  const d = await (await fetch(`data/${id}.json?v=182`)).json();
   dataCache[id] = d;
   return d;
 }

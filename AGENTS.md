@@ -4,7 +4,7 @@
 
 「天空檔案 / SKY ARCHIVE」是部署在 Cloudflare Pages 的純靜態航空資料網站與 PWA。它有四個可獨立瀏覽、可經驗證後編輯並發布的資料庫：
 
-1. **飛行器圖鑑**：184 個機型的資料、規格、家族、比較與可互動的 Three.js 3D 檢視器；其中 47 型已有 3D，137 型待補。
+1. **飛行器圖鑑**：184 個機型的資料、規格、家族、比較與可互動的 Three.js 3D 檢視器；本機其中 48 型已有 3D（含協和號試作），136 型待補。
 2. **機場與跑道**：85,587 座機場的搜尋、跑道、衛星圖、比較、收藏與資料編輯。
 3. **全球航空公司**：目前 594 家航空公司的公司資料、呼號、機隊、樞紐、航線、收藏與航線地圖。
 4. **航空小知識**：46 個三語航空知識條目，以座艙／飛航場景的可滑動互動 UI 呈現。
@@ -46,6 +46,9 @@
 - `tools/ac3d_lib.py` 與 `tools/convert_ac3d_*.py`：FlightGear AC3D 模型的解析與轉換。
 - `tools/make_thumb.py`：由 `models/*.json` 產生縮圖。
 - `tools/check_model_inventory.py`：依 `data/fleet.json` 與 `models/*.json` 重建 3D 模型盤點。
+- `models/blender/concorde.blend`：協和號原創試作，325 個網格物件、12 組鉸鏈；主架先伸縮再旋轉，短艙上方為固定結構，襟副翼不能連動引擎。`tools/build_concorde_blender.py` 以 Blender 重建並匯出 v2 JSON，`tools/check_concorde_model.py` 驗證幾何與收放行程。
+- v2 的 `surfaces` 可附 `part`、`channel`、`angle`，搭配 `controls` 提供三語可動部位滑桿；未附這些欄位的舊模型沿用原有展開操縱面按鈕。
+- 分段收放可用 `surfaces[].start` 延後旋轉，`e[].slide`／`slideEnd` 讓網格先沿母鉸鏈座標伸縮；Blender 與 viewer 必須保持同樣時序。碰撞檢查應涵蓋正負極限與中途姿態，不能只驗靜止幾何。
 - `tools/check_knowledge.py`：驗證知識條目 ID 與三語欄位完整性；執行 `python tools/check_knowledge.py`。
 
 ### 機場

@@ -299,3 +299,6 @@ python3 tools/build_airports.py /tmp/airports.csv /tmp/runways.csv /tmp/countrie
 載入速度；但美國等大國第一次點開機場時的載入會明顯慢一些，屬於全量
 匯入的既知取捨。
 規格分類鍵目前以繁中共用（尺寸/重量/性能等），數值支援多語言物件。
+# 協和號 Blender 試作模型
+
+協和號另有 SKY ARCHIVE 原創教學試作：`models/blender/concorde.blend` 為可編修來源，`models/concorde.json` 為站內 v2 幾何。重建方式、12 組鉸鏈與目前精度限制見 [模型製作說明](models/blender/README.md)。未使用外部成品網格、航空公司 Logo 或未知授權紋理；形體依公開尺寸近似建立，尚非精密 CAD 或飛行模擬器。
