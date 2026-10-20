@@ -42,6 +42,15 @@ const RUNWAY_TOPICS = [
   { id: "flaps-slats",      label: "FLAP" },
   { id: "crosswind",        label: "XWIND" },
   { id: "rvr",               label: "RVR" },
+  { id: "papi",              label: "PAPI" },
+  { id: "taxiway-signs",     label: "TAXI" },
+  { id: "runway-hold",       label: "HOLD" },
+  { id: "windsock",          label: "WIND" },
+  { id: "atis",              label: "ATIS" },
+  { id: "approach-lights",   label: "ALS" },
+  { id: "displaced-threshold",label: "THR" },
+  { id: "go-around",         label: "GA" },
+  { id: "fod",               label: "FOD" },
 ];
 const NAV_TOPICS = [
   { id: "ils",          label: "ILS" },
@@ -55,6 +64,17 @@ const NAV_TOPICS = [
   { id: "notam",                label: "NOTAM" },
   { id: "great-circle",         label: "GC" },
   { id: "adsb",                 label: "ADS-B" },
+  { id: "cavok",                label: "CAVOK" },
+  { id: "metar",                label: "METAR" },
+  { id: "taf",                  label: "TAF" },
+  { id: "cpdlc",                label: "CPDLC" },
+  { id: "sid",                  label: "SID" },
+  { id: "star",                 label: "STAR" },
+  { id: "rvsm",                 label: "RVSM" },
+  { id: "alternate",            label: "ALT APT" },
+  { id: "sigmet",               label: "SIGMET" },
+  { id: "airmet",               label: "AIRMET" },
+  { id: "callsign",             label: "CALLSIGN" },
 ];
 const SYSTEMS_TOPICS = [
   { id: "squawk", label: "SQUAWK" },
@@ -70,6 +90,22 @@ const SYSTEMS_TOPICS = [
   { id: "fdr-cvr",         label: "FDR/CVR" },
   { id: "krueger-flap",    label: "KRUEGER" },
   { id: "high-bypass",     label: "BPR" },
+  { id: "jet-fuel",        label: "JET A" },
+  { id: "avgas",           label: "AVGAS" },
+  { id: "fuel-plan",       label: "FUEL" },
+  { id: "fuel-reserve",    label: "RESV" },
+  { id: "fuel-temperature",label: "TEMP" },
+  { id: "fuel-crossfeed",  label: "XFEED" },
+  { id: "saf",             label: "SAF" },
+  { id: "tcas",            label: "TCAS" },
+  { id: "egpws",           label: "EGPWS" },
+  { id: "spoilers",        label: "SPOILER" },
+  { id: "winglets",        label: "WINGLET" },
+  { id: "mel",             label: "MEL" },
+  { id: "ground-effect",   label: "GE" },
+  { id: "fly-by-wire",     label: "FBW" },
+  { id: "autopilot",       label: "AP" },
+  { id: "mzfw",            label: "MZFW" },
 ];
 
 let TOPICS = [];
@@ -294,6 +330,24 @@ const RUNWAY_DECOR = {
     <line x1="${cx - 22}" y1="${cy}" x2="${cx + 22}" y2="${cy}" class="kn-fl-line major"/>
     <line x1="${cx - 22}" y1="${cy + 10}" x2="${cx + 22}" y2="${cy + 10}" class="kn-fl-line"/>
     <circle cx="${cx}" cy="${cy}" r="26" class="kn-cloud" opacity="0.35"/>`,
+  papi: (cx, cy) => `
+    ${[-18, -6, 6, 18].map((x, i) => `<rect x="${cx + x - 4}" y="${cy - 5}" width="8" height="10" rx="2" fill="${i < 2 ? '#f47970' : '#e8f3ff'}"/>`).join("")}`,
+  "taxiway-signs": (cx, cy) => `
+    <rect x="${cx - 24}" y="${cy - 12}" width="48" height="24" rx="3" class="kn-squawk-box"/><text x="${cx}" y="${cy + 6}" class="kn-squawk-text">A ←</text>`,
+  "runway-hold": (cx, cy) => `
+    <path d="M ${cx - 25} ${cy - 10} H ${cx + 25} M ${cx - 25} ${cy - 5} H ${cx + 25} M ${cx - 25} ${cy + 5} H ${cx + 25} M ${cx - 25} ${cy + 10} H ${cx + 25}" class="kn-fl-line major"/>`,
+  windsock: (cx, cy) => `
+    <path d="M ${cx - 22} ${cy + 22} V ${cy - 22} M ${cx - 22} ${cy - 20} L ${cx + 22} ${cy - 10} L ${cx - 22} ${cy - 2}" class="kn-jet-ribbon"/>`,
+  atis: (cx, cy) => `
+    <circle cx="${cx}" cy="${cy}" r="4" class="kn-etops-plane"/><path d="${arcPath(cx, cy, 14, 225, 495)} ${arcPath(cx, cy, 24, 225, 495)}" class="kn-wake-spiral"/>`,
+  "approach-lights": (cx, cy) => `
+    <path d="M ${cx} ${cy - 26} V ${cy + 25} M ${cx - 20} ${cy - 14} H ${cx + 20} M ${cx - 14} ${cy - 2} H ${cx + 14} M ${cx - 9} ${cy + 10} H ${cx + 9}" class="kn-fl-line major"/>`,
+  "displaced-threshold": (cx, cy) => `
+    <path d="M ${cx - 14} ${cy - 25} V ${cy + 25} M ${cx + 14} ${cy - 25} V ${cy + 25} M ${cx - 12} ${cy + 4} H ${cx + 12} M ${cx} ${cy - 17} V ${cy - 3}" class="kn-fl-line major"/>`,
+  "go-around": (cx, cy) => `
+    <path d="M ${cx - 27} ${cy + 18} Q ${cx - 4} ${cy + 18} ${cx + 7} ${cy - 10} L ${cx + 17} ${cy - 25} M ${cx + 8} ${cy - 22} L ${cx + 17} ${cy - 25} L ${cx + 20} ${cy - 16}" class="kn-jet-ribbon"/>`,
+  fod: (cx, cy) => `
+    <path d="M ${cx - 27} ${cy + 18} H ${cx + 27} M ${cx - 9} ${cy + 8} L ${cx - 2} ${cy - 5} L ${cx + 5} ${cy + 8} Z" class="kn-fl-line major"/>`,
 };
 const NAV_DECOR = {
   ils: (cx, cy) => `
@@ -344,6 +398,28 @@ const NAV_DECOR = {
     <circle cx="${cx}" cy="${cy}" r="3" class="kn-etops-plane"/>
     <path d="${arcPath(cx, cy, 12, 200, 340)}" class="kn-wake-spiral"/>
     <path d="${arcPath(cx, cy, 20, 200, 340)}" class="kn-wake-spiral"/>`,
+  cavok: (cx, cy) => `
+    <circle cx="${cx}" cy="${cy - 5}" r="15" class="kn-etops-ring"/><path d="M ${cx - 24} ${cy + 17} H ${cx + 24}" class="kn-fl-line major"/>`,
+  metar: (cx, cy) => `
+    <rect x="${cx - 26}" y="${cy - 20}" width="52" height="40" rx="3" class="kn-squawk-box"/><path d="M ${cx - 19} ${cy - 7} H ${cx + 19} M ${cx - 19} ${cy + 2} H ${cx + 13} M ${cx - 19} ${cy + 11} H ${cx + 7}" class="kn-fl-line"/>`,
+  taf: (cx, cy) => `
+    <path d="M ${cx - 24} ${cy + 12} L ${cx - 9} ${cy + 2} L ${cx + 4} ${cy + 5} L ${cx + 23} ${cy - 14}" class="kn-jet-ribbon"/><circle cx="${cx + 23}" cy="${cy - 14}" r="3" class="kn-etops-plane"/>`,
+  cpdlc: (cx, cy) => `
+    <rect x="${cx - 24}" y="${cy - 15}" width="48" height="30" rx="3" class="kn-squawk-box"/><path d="M ${cx - 15} ${cy - 5} H ${cx + 14} M ${cx - 15} ${cy + 5} H ${cx + 7}" class="kn-fl-line"/>`,
+  sid: (cx, cy) => `
+    <path d="M ${cx - 25} ${cy + 20} Q ${cx - 10} ${cy - 12} ${cx + 23} ${cy - 20} M ${cx + 15} ${cy - 23} L ${cx + 23} ${cy - 20} L ${cx + 19} ${cy - 12}" class="kn-jet-ribbon"/>`,
+  star: (cx, cy) => `
+    <path d="M ${cx - 24} ${cy - 20} Q ${cx + 4} ${cy - 14} ${cx + 23} ${cy + 20} M ${cx + 14} ${cy + 17} L ${cx + 23} ${cy + 20} L ${cx + 22} ${cy + 11}" class="kn-jet-ribbon"/>`,
+  rvsm: (cx, cy) => `
+    <path d="M ${cx - 24} ${cy - 14} H ${cx + 24} M ${cx - 24} ${cy + 14} H ${cx + 24} M ${cx} ${cy - 10} V ${cy + 10}" class="kn-fl-line major"/>`,
+  alternate: (cx, cy) => `
+    <circle cx="${cx - 21}" cy="${cy + 13}" r="4" class="kn-etops-plane"/><circle cx="${cx + 21}" cy="${cy + 13}" r="4" class="kn-etops-plane"/><path d="M ${cx - 17} ${cy + 13} Q ${cx - 2} ${cy - 25} ${cx + 21} ${cy + 13}" class="kn-jet-ribbon"/>`,
+  sigmet: (cx, cy) => `
+    <path d="M ${cx} ${cy - 25} L ${cx + 24} ${cy + 17} H ${cx - 24} Z" class="kn-tc-wing"/><path d="M ${cx} ${cy - 9} V ${cy + 5}" class="kn-fl-line major"/>`,
+  airmet: (cx, cy) => `
+    <circle cx="${cx}" cy="${cy}" r="23" class="kn-etops-ring"/><path d="M ${cx - 17} ${cy + 8} Q ${cx - 4} ${cy - 11} ${cx + 17} ${cy + 8}" class="kn-jet-ribbon"/>`,
+  callsign: (cx, cy) => `
+    <rect x="${cx - 27}" y="${cy - 13}" width="54" height="26" rx="4" class="kn-squawk-box"/><path d="M ${cx - 17} ${cy - 4} H ${cx + 17} M ${cx - 17} ${cy + 5} H ${cx + 6}" class="kn-fl-line"/>`,
 };
 const SYSTEMS_DECOR = {
   squawk: (cx, cy) => `
@@ -396,6 +472,38 @@ const SYSTEMS_DECOR = {
     <circle cx="${cx}" cy="${cy}" r="13" class="kn-squawk-box"/>
     <circle cx="${cx}" cy="${cy}" r="4" class="kn-g-hub"/>
     <path d="M ${cx - 25} ${cy} H ${cx + 25} M ${cx - 14} ${cy - 21} L ${cx + 14} ${cy + 21} M ${cx - 14} ${cy + 21} L ${cx + 14} ${cy - 21}" class="kn-jet-ribbon"/>`,
+  "jet-fuel": (cx, cy) => `
+    <path d="M ${cx} ${cy - 24} Q ${cx - 22} ${cy + 3} ${cx} ${cy + 22} Q ${cx + 22} ${cy + 3} ${cx} ${cy - 24} Z" class="kn-jet-ribbon"/>`,
+  avgas: (cx, cy) => `
+    <rect x="${cx - 15}" y="${cy - 19}" width="30" height="40" rx="3" class="kn-squawk-box"/><path d="M ${cx + 15} ${cy - 9} Q ${cx + 30} ${cy - 9} ${cx + 27} ${cy + 16}" class="kn-jet-ribbon"/>`,
+  "fuel-plan": (cx, cy) => `
+    <rect x="${cx - 25}" y="${cy - 20}" width="50" height="40" rx="3" class="kn-squawk-box"/><path d="M ${cx - 18} ${cy - 10} H ${cx + 18} M ${cx - 18} ${cy} H ${cx + 12} M ${cx - 18} ${cy + 10} H ${cx + 5}" class="kn-fl-line"/>`,
+  "fuel-reserve": (cx, cy) => `
+    <path d="${arcPath(cx, cy, 25, 30, 330)}" class="kn-arc kn-arc-yellow"/>${needle(cx, cy, 18, 230, "kn-needle kn-needle-short")}`,
+  "fuel-temperature": (cx, cy) => `
+    <rect x="${cx - 5}" y="${cy - 23}" width="10" height="35" rx="5" class="kn-squawk-box"/><circle cx="${cx}" cy="${cy + 15}" r="9" class="kn-tc-ball"/><path d="M ${cx} ${cy + 12} V ${cy - 12}" class="kn-fl-line major"/>`,
+  "fuel-crossfeed": (cx, cy) => `
+    <circle cx="${cx - 22}" cy="${cy}" r="10" class="kn-etops-ring"/><circle cx="${cx + 22}" cy="${cy}" r="10" class="kn-etops-ring"/><path d="M ${cx - 12} ${cy} H ${cx + 12} M ${cx} ${cy - 9} V ${cy + 9}" class="kn-jet-ribbon"/>`,
+  saf: (cx, cy) => `
+    <path d="M ${cx - 6} ${cy + 23} Q ${cx - 25} ${cy - 4} ${cx + 17} ${cy - 23} Q ${cx + 18} ${cy + 7} ${cx - 6} ${cy + 23} Z" class="kn-stall-wing"/><path d="M ${cx - 6} ${cy + 19} L ${cx + 9} ${cy - 10}" class="kn-jet-ribbon"/>`,
+  tcas: (cx, cy) => `
+    <circle cx="${cx}" cy="${cy}" r="25" class="kn-etops-ring"/><circle cx="${cx - 11}" cy="${cy + 8}" r="4" class="kn-etops-plane"/><circle cx="${cx + 12}" cy="${cy - 10}" r="4" class="kn-etops-plane"/><path d="M ${cx} ${cy + 11} V ${cy - 11}" class="kn-jet-arrow"/>`,
+  egpws: (cx, cy) => `
+    <path d="M ${cx - 27} ${cy + 17} L ${cx - 7} ${cy - 15} L ${cx + 5} ${cy + 1} L ${cx + 16} ${cy - 12} L ${cx + 28} ${cy + 17} Z" class="kn-stall-wing"/>`,
+  spoilers: (cx, cy) => `
+    <path d="M ${cx - 28} ${cy + 12} L ${cx + 28} ${cy + 12} M ${cx - 10} ${cy + 11} L ${cx - 1} ${cy - 15} L ${cx + 9} ${cy + 11}" class="kn-stall-wing"/>`,
+  winglets: (cx, cy) => `
+    <path d="M ${cx - 25} ${cy + 10} Q ${cx + 7} ${cy + 12} ${cx + 22} ${cy - 3} L ${cx + 25} ${cy - 25}" class="kn-stall-wing"/>`,
+  mel: (cx, cy) => `
+    <rect x="${cx - 19}" y="${cy - 23}" width="38" height="46" rx="3" class="kn-squawk-box"/><path d="M ${cx - 10} ${cy - 11} L ${cx - 5} ${cy - 6} L ${cx + 5} ${cy - 16} M ${cx - 10} ${cy + 4} H ${cx + 9} M ${cx - 10} ${cy + 13} H ${cx + 9}" class="kn-fl-line major"/>`,
+  "ground-effect": (cx, cy) => `
+    <path d="M ${cx - 28} ${cy - 5} Q ${cx} ${cy - 17} ${cx + 28} ${cy - 5} M ${cx - 27} ${cy + 20} H ${cx + 27}" class="kn-stall-wing"/>`,
+  "fly-by-wire": (cx, cy) => `
+    <rect x="${cx - 8}" y="${cy - 8}" width="16" height="16" rx="2" class="kn-squawk-box"/><path d="M ${cx - 26} ${cy} H ${cx - 8} M ${cx + 8} ${cy} H ${cx + 26} M ${cx} ${cy - 8} V ${cy - 24}" class="kn-jet-ribbon"/>`,
+  autopilot: (cx, cy) => `
+    <path d="${arcPath(cx, cy, 26, 25, 335)}" class="kn-arc kn-arc-green"/><path d="M ${cx - 15} ${cy + 7} H ${cx + 15} M ${cx} ${cy - 15} V ${cy + 16}" class="kn-fl-line major"/>`,
+  mzfw: (cx, cy) => `
+    <path d="M ${cx - 22} ${cy + 12} H ${cx + 22} M ${cx - 16} ${cy + 12} L ${cx - 8} ${cy - 12} H ${cx + 8} L ${cx + 16} ${cy + 12}" class="kn-fl-line major"/><path d="M ${cx} ${cy - 22} V ${cy - 8}" class="kn-jet-arrow"/>`,
 };
 function buildHotspotItem(t, decorFn){
   const cx = 85, cy = 85, r = 42;
@@ -732,7 +840,7 @@ function downscaleImg(file, maxW, quality){
 async function boot(){
   let data;
   try {
-    const res = await fetch("data/knowledge.json?v=161");
+    const res = await fetch("data/knowledge.json?v=184");
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {

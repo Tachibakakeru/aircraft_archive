@@ -5,7 +5,7 @@
 ## 目前狀態（2026-09-08）
 
 - 專案：Cloudflare Pages 靜態/PWA 航空資料庫，正式分支為 `main`。
-- 資料庫現況：184 機型、本機 48 個 3D 模型 JSON（含未發布的協和號試作）、85,587 座機場、594 家航空公司、46 筆航空小知識。
+- 資料庫現況（2026-10-20 本地）：184 機型、48 個 3D 模型 JSON、85,587 座機場、594 家航空公司、82 筆航空小知識。
 - 最近已推送內容：補齊 A321neo 與 A321XLR 實機部位照片。
 - 工作目錄發現未追蹤檔案：`data/korean_airlines_debug.json`。它是除錯輸出，暫不刪除、不提交，待確認是否仍需保留。
 
@@ -553,3 +553,25 @@
 - 使用者明確同意「幫我 PUSH，先到這」；本次提交涵蓋協和號 Blender 試作、實照細修、收輪／襟副翼穿模修正、v2 可動控制、縮圖、盤點與工作紀錄，目標 `origin/main`。
 - 發布前重跑模型行程檢查、相關 JavaScript 語法與差異空白檢查。明確排除 `data/korean_airlines_debug.json` 及 `json token/`，不新增其他功能。
 - 本輪到此結束；下次若繼續協和號，待辦為護罩獨立滑動、艙門及完整連桿時序。既有實照回補批次保持原進度，不因模型試作改算完成。
+
+### GitHub Token 輪替位置確認（2026-09-30）
+
+- 使用者新建 90 天 fine-grained PAT 並詢問更新位置。檢查 `functions/api/gh-save.js` 與 `js/storage.js`：正式站優先使用 Cloudflare Pages Production Secret `GH_TOKEN`；若使用舊版瀏覽器直連 GitHub，設定則保存在該瀏覽器的 `hangar_github_cfg`，可在 `editor.html` 的「⚙ GitHub」更新。兩者是不同憑證儲存位置。
+- 建議新 PAT 僅授權 `Tachibakakeru/aircraft_archive` 的 Contents Read and write；Cloudflare 更新 Secret 後重新部署 Production，再以站內編輯功能測試。不把 Token 寫進 Git、`Progress.md` 或訊息。本次未取得或更動任何 Token，未發布。
+
+### GitHub Token 更新後部署與編輯器設定說明（2026-09-30）
+
+- 確認正式站須在 Cloudflare Pages Production 的 Variables and Secrets 更換 `GH_TOKEN`，儲存後重新部署該環境；Git 整合的 `main` 新提交也會觸發部署。
+- 編輯器的「⚙ GitHub」→ 更新 Personal Access Token →「測試連線」→「儲存設定」只更新當前瀏覽器的備援直連設定；正式站的 `/api/gh-save` 優先使用 Cloudflare Secret，因此不能以此替代 `GH_TOKEN`。測試連線只驗讀取，真正寫入須由實際發布驗證。
+- 本次僅提供操作指引，沒有接觸憑證、重新部署或推送程式碼；原有網站編輯密碼不需更改。
+
+### 航空小知識：CAVOK、航油及延伸主題（2026-10-20，本地預覽，未推送）
+
+- 盤點原有 46 筆，補 19 筆至 65 筆：CAVOK、METAR、TAF、PAPI、滑行道標誌、跑道等待點、風向袋、Jet A／Jet A-1、AVGAS、航班燃油計畫、最後儲備與 Minimum Fuel、高空燃油溫度、交叉供油、SAF、TCAS、GPWS／EGPWS、擾流板、翼尖小翼、CPDLC。每筆含繁中／英文／日文名稱、摘要及補充說明；四個現有橫向場景各有對應圖示，不新增頁面或套件。
+- 查核來源：ICAO [CAVOK 條件](https://www.icao.int/Meetings/AMC/MA/2005/RVSM_TF26/RVSM_TF26rpt.pdf)、[飛行燃油規劃](https://www.icao.int/ESAF/Documents/meetings/2021/Operation%20of%20Aircraft%2019%20-%2020%20October%202021/Presentations/Day%202/FPFM-ET%20-%20Yoseph%20and%20Dawit.pdf)、[SAF 生命週期](https://www.icao.int/CORSIA/fuels-lifecycle)；FAA [Pilot’s Handbook](https://www.faa.gov/sites/faa.gov/files/pilots/pilot_handbook.pdf)、[PAPI](https://www.faa.gov/about/office_org/headquarters_offices/ato/service_units/techops/navservices/lsg/papi)、[Minimum Fuel](https://www.faa.gov/air_traffic/publications/atpubs/pcg_html/glossary-m.html)、[燃油凝固點](https://www.faa.gov/lessons_learned/transport_airplane/accidents/G-YMMM)、[Instrument Flying Handbook](https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf)。內容為教育性簡述，不替代飛航手冊與當地規範。
+- 更新知識頁 JS 與首頁資料 fetch 的版本鍵至 v=183。`python tools/check_knowledge.py` 驗證 65 筆唯一 ID 與三語欄位、`node --check js/knowledge.js` 通過；本地 App 可見預覽顯示新增轉盤節點、CAVOK 搜尋詳情、英文名稱切換及首頁 65 TOPICS。未更新正式網站，待使用者驗收後才可 push。
+- 延伸補第二批 17 筆，合計 82 筆：ATIS、進場燈、位移跑道頭、重飛、SID、STAR、RVSM、備降機場、MEL、地面效應、線傳飛控、自動駕駛、最大零燃油重量、機場 FOD、SIGMET、AIRMET、航空公司呼號。參考 FAA [SID／STAR 定義](https://www.faa.gov/air_traffic/publications/atpubs/pcg_html/glossary-s.html)、[RVSM](https://www.faa.gov/air_traffic/separation_standards/rvsm)、[MEL](https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf)、[地面效應](https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/10_afh_ch9.pdf)、[FOD](https://www.faa.gov/airports/airport_safety/fod)、[機場標示](https://www.faa.gov/air_traffic/publications/atpubs/aip_html/chap2_section_3.html)、[航空天氣產品](https://aviationweather.gov/help/) 與 ICAO [航空公司代碼／呼號](https://www.icao.int/operational-safety/Designators-and-indicators)。本地最終資料版本鍵升至 v=184，未 push。
+- 最終檢查：`python tools/check_knowledge.py` 通過 82 筆三語內容、唯一 ID 及場景節點一對一對應；`node --check js/knowledge.js`、`git diff --check` 通過。本地預覽已確認 CAVOK 可搜尋／閱讀，新增主題在轉盤出現、語言切換更新名稱，首頁顯示 82 TOPICS。保留本地伺服器與 App 預覽，沒有 commit 或 push；未觸碰 `data/korean_airlines_debug.json` 與 `json token/`。
+- 補充資料品質檢查：82 筆依 `instrument/aerodynamics/atc/navigation/weather/airport/operations/systems` 分類；新增內容的三語 `name/summary/fact` 均不為空、ID 無重複。預覽切回繁中並開啟 CAVOK 詳情供使用者檢查；螢幕截圖暫存於系統 Temp，不列入版本控制。
+- 另以預覽搜尋 `Jet A`，確認「噴射燃油 Jet A／Jet A-1」能置中並開啟詳情，顯示三語資料中的繁中內容；使用者要求的本輪暫停點已到（五小時用量視窗約用至 90%）。App 預覽最後保留在燃油詳情，待使用者檢查；未推送。
+- 使用者於下一輪明確同意「PUSH」。重新核對 App 本地預覽含新增節點，並重跑 82 筆知識資料驗證、JavaScript 語法及差異檢查均通過；僅提交本批知識資料、場景、首頁版本鍵、檢查器與作業文件，不納入未追蹤的韓國航空除錯資料或憑證資料夾，推送 `main`。
