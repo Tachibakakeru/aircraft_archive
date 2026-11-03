@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SKY ARCHIVE 首頁概念</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1565d8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<script>
+/* 與正式站共用同一個主題鍵；未選擇時交給系統的 prefers-color-scheme */
+try { const th = localStorage.getItem("hangar_theme"); if (th === "light" || th === "dark") document.documentElement.setAttribute("data-theme", th); } catch (e) {}
+</script>
+<style>
+/* 版面概念：出境大廳——天空 hero＋訂票式搜尋 → 四張登機證 → 出發看板＋機長廣播 → 機上工具 → METAR 頁尾 */
+:root{
+  --bg:#eef6ff; --bg-2:#e2efff; --card:#ffffff; --ink:#0b2a55; --muted:#4f6d96; --line:#cde0f7;
+  --azure:#1a73f0; --azure-2:#3d95ff; --on-azure:#ffffff; --cyan:#0b9fd0; --indigo:#3456e6; --teal:#0e8fb0;
+  --sky-1:#0f5fd0; --sky-2:#2f8cf5; --sky-3:#5aa9fb;
+  --hero-ink:#ffffff; --hero-muted:rgba(255,255,255,.9); --glass:rgba(6,50,130,.2); --glass-line:rgba(255,255,255,.36);
+  --cloud:rgba(255,255,255,.7); --stars:0;
+  --beacon:#e8930c; --ok:#0b936a;
+  --board-bg:#071a36; --board-cell:#10305c; --board-fg:#eaf4ff; --board-dim:#86a8d4; --board-hi:#63ccff; --board-line:#143766;
+  --shadow:0 22px 44px -26px rgba(16,82,170,.55);
+  --shadow-hi:0 30px 56px -26px rgba(16,82,170,.7);
+  --display:"Barlow Condensed","Noto Sans TC","PingFang TC","Hiragino Sans","Microsoft JhengHei",sans-serif;
+  --sans:"Noto Sans TC","PingFang TC","Hiragino Sans","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r:18px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#061730; --bg-2:#0a2244; --card:#0d284d; --ink:#e4f0ff; --muted:#93b3db; --line:#1d416f;
+  --azure:#4ea4ff; --azure-2:#7cbcff; --on-azure:#04152b; --cyan:#4fd3ff; --indigo:#8ea2ff; --teal:#5fd8f0;
+  --sky-1:#020b1d; --sky-2:#0b3470; --sky-3:#0a2550;
+  --hero-ink:#eef6ff; --hero-muted:rgba(226,240,255,.82); --glass:rgba(120,170,255,.1); --glass-line:rgba(150,195,255,.28);
+  --cloud:rgba(150,195,255,.1); --stars:1;
+  --beacon:#ffc24d; --ok:#45d8a5;
+  --board-bg:#030d1f; --board-cell:#0c2648; --board-fg:#eaf4ff; --board-dim:#7f9fca; --board-hi:#63ccff; --board-line:#11305a;
+  --shadow:0 22px 44px -26px rgba(0,0,0,.8); --shadow-hi:0 30px 56px -24px rgba(0,0,0,.9);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#061730; --bg-2:#0a2244; --card:#0d284d; --ink:#e4f0ff; --muted:#93b3db; --line:#1d416f;
+  --azure:#4ea4ff; --azure-2:#7cbcff; --on-azure:#04152b; --cyan:#4fd3ff; --indigo:#8ea2ff; --teal:#5fd8f0;
+  --sky-1:#020b1d; --sky-2:#0b3470; --sky-3:#0a2550;
+  --hero-ink:#eef6ff; --hero-muted:rgba(226,240,255,.82); --glass:rgba(120,170,255,.1); --glass-line:rgba(150,195,255,.28);
+  --cloud:rgba(150,195,255,.1); --stars:1;
+  --beacon:#ffc24d; --ok:#45d8a5;
+  --board-bg:#030d1f; --board-cell:#0c2648; --board-fg:#eaf4ff; --board-dim:#7f9fca; --board-hi:#63ccff; --board-line:#11305a;
+  --shadow:0 22px 44px -26px rgba(0,0,0,.8); --shadow-hi:0 30px 56px -24px rgba(0,0,0,.9);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+/* 依專案規則：隱藏所有原生捲軸，保留滾輪／觸控／鍵盤捲動 */
+*{scrollbar-width:none;-ms-overflow-style:none}
+*::-webkit-scrollbar{display:none}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--azure-2);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.mono{font-family:var(--mono)}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+
+/* ── 頂部導覽 ── */
+.top{position:relative;z-index:5;padding-block:18px}
+.top .wrap{display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--hero-ink)}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:.06em;line-height:1}
+.brand small{display:block;font-size:11px;letter-spacing:.2em;color:var(--hero-muted);margin-top:2px}
+.concept{font-family:var(--mono);font-size:10px;letter-spacing:.16em;padding:3px 8px;border-radius:99px;border:1px solid var(--glass-line);color:var(--hero-muted)}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{color:var(--hero-ink);text-decoration:none;font-size:14px;font-weight:500;padding:7px 12px;border-radius:99px;opacity:.9}
+.nav a:hover{background:var(--glass);opacity:1}
+.switches{display:flex;gap:8px;align-items:center}
+.seg{display:flex;padding:3px;border-radius:99px;background:var(--glass);border:1px solid var(--glass-line)}
+.seg button{border:0;background:transparent;color:var(--hero-ink);font-size:12.5px;padding:5px 10px;border-radius:99px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--hero-ink);color:var(--sky-1)}
+.icon-btn{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--glass-line);background:var(--glass);color:var(--hero-ink);cursor:pointer}
+.icon-btn svg{width:18px;height:18px}
+
+/* ── 天空 Hero ── */
+.sky{position:relative;z-index:2;isolation:isolate;
+  background:linear-gradient(180deg,var(--sky-1) 0%,var(--sky-2) 55%,var(--sky-3) 100%)}
+.sky::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:72px;z-index:-1;background:linear-gradient(180deg,transparent,var(--bg))}
+.sky-bg{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.sky-bg::before{content:"";position:absolute;inset:0;opacity:var(--stars);
+  background-image:radial-gradient(1.2px 1.2px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 28% 8%,#fff 50%,transparent 51%),
+  radial-gradient(1.4px 1.4px at 46% 22%,#cfe4ff 50%,transparent 51%),radial-gradient(1px 1px at 63% 12%,#fff 50%,transparent 51%),
+  radial-gradient(1.2px 1.2px at 81% 26%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 91% 9%,#cfe4ff 50%,transparent 51%),
+  radial-gradient(1px 1px at 7% 40%,#fff 50%,transparent 51%),radial-gradient(1.3px 1.3px at 70% 38%,#fff 50%,transparent 51%)}
+.cloud{position:absolute;border-radius:50%;background:radial-gradient(closest-side,var(--cloud),transparent);filter:blur(6px);animation:drift 80s linear infinite}
+.cloud.c1{width:520px;height:150px;top:62%;left:-8%}
+.cloud.c2{width:380px;height:110px;top:30%;left:58%;animation-duration:110s;animation-delay:-40s}
+.cloud.c3{width:640px;height:170px;top:78%;left:40%;animation-duration:140s;animation-delay:-70s}
+@keyframes drift{from{transform:translateX(-6vw)}50%{transform:translateX(6vw)}to{transform:translateX(-6vw)}}
+.hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:40px;align-items:center;padding-block:28px 96px}
+.hero-copy{min-width:0;color:var(--hero-ink)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--hero-muted)}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(38px,6vw,68px);line-height:1.08;letter-spacing:.01em;margin:12px 0 14px;white-space:pre-line}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#fff, #bfe3ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:17px;max-width:34em;color:var(--hero-muted);text-wrap:pretty}
+
+/* 訂票式搜尋框 */
+.booker{position:relative;margin-top:28px;background:var(--card);color:var(--ink);border-radius:22px;box-shadow:var(--shadow-hi);padding:14px}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;padding:2px 2px 12px}
+.tabs button{border:0;background:transparent;cursor:pointer;font-size:13.5px;font-weight:500;color:var(--muted);padding:6px 12px;border-radius:99px;display:inline-flex;align-items:center;gap:6px}
+.tabs button::before{content:"";width:9px;height:9px;border-radius:50%;border:2px solid currentColor;flex:none}
+.tabs button[aria-checked="true"]{background:color-mix(in srgb,var(--azure) 12%,transparent);color:var(--azure)}
+.tabs button[aria-checked="true"]::before{background:currentColor;box-shadow:inset 0 0 0 2px var(--card)}
+.fields{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;align-items:stretch;border:1px solid var(--line);border-radius:16px}
+.fld{padding:10px 16px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.fld .label{font-size:10px;color:var(--muted)}
+.fld .v{font-weight:700;font-size:16px;white-space:nowrap}
+.swap{display:grid;place-items:center;width:34px;color:var(--azure);border-inline:1px solid var(--line)}
+.swap svg{width:18px;height:18px;transform:rotate(90deg)}
+.fld input{border:0;outline:0;background:transparent;font:inherit;font-size:17px;font-weight:500;color:var(--ink);width:100%;padding:0}
+.fld input::placeholder{color:var(--muted);opacity:.75;font-weight:400}
+.fld:focus-within{box-shadow:inset 0 -2px 0 var(--azure)}
+.go{margin:6px;border:0;border-radius:12px;background:var(--azure);color:var(--on-azure);font-weight:700;font-size:15px;padding:0 22px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.go:hover{background:var(--azure-2)}
+.go svg{width:18px;height:18px}
+.results{position:absolute;left:14px;right:14px;top:calc(100% - 8px);z-index:20;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-hi);max-height:380px;overflow-y:auto;padding:6px}
+.rg{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--muted);padding:10px 12px 4px;text-transform:uppercase}
+.ri{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;align-items:center;padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--ink)}
+.ri[aria-selected="true"]{background:color-mix(in srgb,var(--azure) 12%,transparent)}
+.ri .code{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--azure)}
+.ri .n,.ri .s{display:block}
+.ri .n{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ri .s{font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ri .k{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:1px 8px;white-space:nowrap}
+.rmsg{padding:14px;color:var(--muted);font-size:14px}
+.rhint{padding:8px 12px 4px;border-top:1px solid var(--line);margin-top:6px;font-size:11.5px;color:var(--muted);font-family:var(--mono)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px}
+.chips .label{color:var(--hero-muted);margin-right:4px}
+.chip{border:1px solid var(--glass-line);background:var(--glass);color:var(--hero-ink);border-radius:99px;padding:5px 12px;font-size:13px;cursor:pointer;backdrop-filter:blur(6px)}
+.chip b{font-family:var(--mono);font-weight:600;margin-right:6px;letter-spacing:.04em}
+.chip:hover{background:var(--hero-ink);color:var(--sky-1)}
+
+/* 航線示意 */
+.route-card{position:relative;min-width:0;color:var(--hero-ink)}
+.route-card svg.map{width:100%;height:auto;display:block;overflow:visible}
+.map .grid{fill:none;stroke:var(--glass-line);stroke-width:1;stroke-dasharray:2 6}
+.map .track{fill:none;stroke:var(--hero-ink);stroke-opacity:.45;stroke-width:2;stroke-dasharray:4 7}
+.map .flown{fill:none;stroke:var(--hero-ink);stroke-width:3;stroke-linecap:round}
+.map .apt{fill:var(--sky-1);stroke:var(--hero-ink);stroke-width:3}
+.map .apt-ring{fill:none;stroke:var(--hero-ink);stroke-opacity:.5;animation:ping 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes ping{from{transform:scale(1);opacity:.9}to{transform:scale(3.2);opacity:0}}
+.map text{fill:var(--hero-ink);font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.04em}
+.map text.small{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.12em;fill:var(--hero-muted)}
+.map .plane{fill:var(--hero-ink)}
+.readout{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:6px;border-radius:14px;overflow:hidden;border:1px solid var(--glass-line);background:var(--glass-line);backdrop-filter:blur(8px)}
+.readout div{background:var(--glass);padding:10px 12px;min-width:0}
+.readout .label{font-size:9.5px;color:var(--hero-muted)}
+.readout b{display:block;font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:.02em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.route-cap{margin-top:10px;font-size:12.5px;color:var(--hero-muted)}
+
+/* ── 區段標題 ── */
+section.block{padding-block:56px 8px}
+.head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.head h2{font-family:var(--display);font-size:clamp(28px,3.6vw,38px);font-weight:900;letter-spacing:.01em;line-height:1.1;text-wrap:balance}
+.head h2 .label{display:block;font-size:11.5px;font-weight:500;color:var(--azure);margin-bottom:6px}
+.head p{color:var(--muted);max-width:32em}
+
+/* ── 登機證 ── */
+.passes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.pass{--acc:var(--azure);--stub:150px;position:relative;display:grid;grid-template-columns:minmax(0,1fr) var(--stub);
+  background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);overflow:hidden;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.pass[data-k="airports"]{--acc:var(--cyan)}
+.pass[data-k="airlines"]{--acc:var(--indigo)}
+.pass[data-k="knowledge"]{--acc:var(--teal)}
+.pass::before,.pass::after{content:"";position:absolute;right:var(--stub);width:24px;height:24px;border-radius:50%;background:var(--bg);transform:translateX(50%);z-index:1}
+.pass::before{top:-12px}.pass::after{bottom:-12px}
+.pass:hover{transform:translateY(-5px);box-shadow:var(--shadow-hi)}
+.pm{padding:22px 24px 22px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.ptop{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.ptop .label{color:var(--muted);font-size:10.5px}
+.ptop .cls{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--acc);border:1px solid currentColor;border-radius:99px;padding:1px 8px;white-space:nowrap}
+.proute{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:end;gap:14px}
+.proute .c b{display:block;font-family:var(--display);font-size:46px;line-height:.95;font-weight:700;letter-spacing:.03em}
+.proute .c span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;white-space:nowrap}
+.proute .c.to{text-align:right}
+.proute .c.to b{color:var(--acc)}
+.pline{position:relative;height:2px;margin-bottom:24px;background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 11px)}
+.pline svg{position:absolute;top:50%;left:18%;width:22px;height:22px;transform:translate(-50%,-50%) rotate(90deg);fill:var(--acc);transition:left .6s cubic-bezier(.2,.8,.2,1)}
+.pass:hover .pline svg{left:82%}
+.pfields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+.pfields .label{display:block;font-size:9.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pfields b{display:block;font-family:var(--display);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pdesc{color:var(--muted);font-size:14.5px;line-height:1.75;text-wrap:pretty}
+.ps{border-left:2px dashed var(--line);padding:22px 18px;display:flex;flex-direction:column;gap:10px;justify-content:space-between;
+  background:color-mix(in srgb,var(--acc) 7%,var(--card))}
+.ps .label{font-size:9.5px;color:var(--muted)}
+.ps .gate{font-family:var(--display);font-size:64px;line-height:.9;font-weight:700;color:var(--acc)}
+.ps .seat{font-family:var(--display);font-size:20px;font-weight:600}
+.barcode{height:42px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 12px);opacity:.85;border-radius:2px}
+.board-cta{display:flex;align-items:center;justify-content:space-between;font-weight:700;color:var(--acc);font-size:14px}
+.board-cta svg{width:16px;height:16px;transition:transform .25s}
+.pass:hover .board-cta svg{transform:translateX(4px)}
+
+/* ── 最近看過 ── */
+.recent{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}
+.rc{flex:none;display:flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:99px;background:var(--card);border:1px solid var(--line);text-decoration:none;font-size:13.5px;font-weight:500}
+.rc img{width:44px;height:30px;object-fit:contain;border-radius:99px;background:var(--bg-2)}
+.rc:hover{border-color:var(--azure)}
+
+/* ── 出發看板 + 機長廣播 ── */
+.split{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px;align-items:start}
+.board{background:var(--board-bg);color:var(--board-fg);border-radius:var(--r);padding:18px 18px 10px;box-shadow:var(--shadow);min-width:0}
+.bhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:2px 6px 14px}
+.bhead h3{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;gap:10px}
+.bhead h3 svg{width:22px;height:22px;fill:var(--board-hi);transform:rotate(45deg)}
+.bclock{font-family:var(--mono);font-size:13px;color:var(--board-dim);font-variant-numeric:tabular-nums}
+.bclock b{color:var(--board-hi);font-weight:600;font-size:15px;margin-left:6px}
+.shuffle{margin-left:auto;border:1px solid var(--board-line);background:var(--board-cell);color:var(--board-fg);border-radius:99px;padding:6px 14px;font-size:13px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.shuffle:hover{border-color:var(--board-hi)}
+.shuffle svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2}
+.brow{display:grid;grid-template-columns:58px 136px minmax(0,1fr) 54px 112px;gap:12px;align-items:center;padding:9px 6px;border-top:1px solid var(--board-line);text-decoration:none;color:var(--board-fg)}
+.brow.hdr{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--board-dim);text-transform:uppercase;border-top:0;padding-block:4px 8px}
+a.brow:hover{background:color-mix(in srgb,var(--board-hi) 9%,transparent)}
+.btime{font-family:var(--mono);font-size:14px;color:var(--board-hi);font-variant-numeric:tabular-nums}
+.tiles{display:flex;gap:2px}
+.tile{position:relative;width:17px;height:26px;display:grid;place-items:center;background:var(--board-cell);border-radius:3px;font-family:var(--mono);font-weight:600;font-size:14px;overflow:hidden}
+.tile::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--board-bg);opacity:.9}
+.tile.flip span{animation:flap .11s ease-in}
+@keyframes flap{from{transform:scaleY(.15);opacity:.4}to{transform:none;opacity:1}}
+.bdest{min-width:0}
+.bdest b{display:block;font-weight:500;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bdest span{display:block;font-size:12px;color:var(--board-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bgate{font-family:var(--mono);font-weight:600;font-size:14px}
+.bstat{font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:7px;white-space:nowrap;color:var(--board-hi)}
+.bstat::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.bstat.go3d{color:#5fe3b4}.bstat.boarding{color:#ffc95c}.bstat.boarding::before{animation:blink 1.1s steps(2) infinite}
+.bstat.new{color:#9db7ff}
+@keyframes blink{50%{opacity:.15}}
+
+.pa{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.pa-h{display:flex;align-items:center;gap:12px}
+.pa-h .mic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--azure) 14%,transparent);color:var(--azure)}
+.pa-h .mic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.pa-h h3{font-size:18px;font-weight:700;line-height:1.2}
+.pa-h .label{display:block;font-size:10px;color:var(--muted)}
+.wave{display:flex;gap:3px;align-items:center;height:18px;margin-left:auto}
+.wave i{width:3px;border-radius:2px;background:var(--azure);animation:wv 1.2s ease-in-out infinite}
+.wave i:nth-child(1){height:6px;animation-delay:-.2s}.wave i:nth-child(2){height:14px;animation-delay:-.5s}.wave i:nth-child(3){height:9px;animation-delay:-.1s}.wave i:nth-child(4){height:16px;animation-delay:-.7s}.wave i:nth-child(5){height:7px;animation-delay:-.4s}
+@keyframes wv{50%{transform:scaleY(.35)}}
+.pa-greet{color:var(--muted);font-size:14px}
+.pa-topic{font-family:var(--display);font-size:28px;font-weight:700;line-height:1.15;text-wrap:balance}
+.pa-sum{font-size:15px;line-height:1.8}
+.pa-fact{font-size:13.5px;line-height:1.75;color:var(--muted);background:var(--bg-2);border-radius:12px;padding:12px 14px}
+.pa-fact b{color:var(--azure);font-weight:700;margin-right:6px}
+.pa-act{display:flex;gap:10px;flex-wrap:wrap}
+.btn{border-radius:99px;padding:9px 16px;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:transparent;color:var(--ink)}
+.btn.pri{background:var(--azure);border-color:var(--azure);color:var(--on-azure)}
+.btn:hover{border-color:var(--azure)}
+.btn.pri:hover{background:var(--azure-2);border-color:var(--azure-2)}
+
+/* ── 機上工具 ── */
+.tools{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tool{display:flex;flex-direction:column;gap:8px;padding:18px;border-radius:16px;border:1px solid var(--line);background:color-mix(in srgb,var(--card) 70%,transparent);text-decoration:none;transition:border-color .2s,background .2s}
+.tool:hover{border-color:var(--azure);background:var(--card)}
+.tool svg{width:40px;height:40px;fill:none;stroke:var(--azure);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tool b{font-size:16px;font-weight:700}
+.tool span{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* ── 頁尾 METAR ── */
+footer{padding-block:64px 40px}
+.metar{display:flex;flex-direction:column;gap:10px;padding:18px 20px;border-radius:16px;background:var(--bg-2);border:1px solid var(--line)}
+.metar code{font-family:var(--mono);font-size:14px;font-weight:500;color:var(--azure);letter-spacing:.04em;word-break:break-word}
+.metar p{font-size:13.5px;color:var(--muted)}
+.foot-tag{margin-top:18px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom, 0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font-size:13.5px;transition:.25s;z-index:50;max-width:calc(100% - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ── 響應式 ── */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-bottom:56px}
+  .route-card{max-width:560px}
+  .split{grid-template-columns:1fr}
+  .tools{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav{display:none}
+  .switches{margin-left:auto}
+}
+@media (max-width:760px){
+  .passes{grid-template-columns:1fr}
+  .brow{grid-template-columns:128px minmax(0,1fr) 92px}
+  .btime,.bgate{display:none}
+}
+@media (max-width:520px){
+  .concept{display:none}
+  .brand small{display:none}
+  .fields{grid-template-columns:minmax(0,1fr) auto}
+  .fld.from,.swap{display:none}
+  .go span{display:none}
+  .go{padding:0 16px}
+  .pass{--stub:104px}
+  .pm{padding:18px 16px;gap:14px}
+  .proute .c b{font-size:36px}
+  .ps{padding:18px 12px}
+  .ps .gate{font-size:48px}
+  .pfields b{font-size:19px}
+  .readout{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .brow{grid-template-columns:minmax(0,1fr) 84px;row-gap:6px}
+  .brow .tiles{grid-column:1/-1}
+  .brow.hdr{display:none}
+  .tools{grid-template-columns:1fr}
+  .seg button{padding:5px 8px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="sky">
+  <div class="sky-bg" aria-hidden="true"><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div></div>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 25 Q20 6 34 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 3"/><path fill="currentColor" transform="translate(13 9) scale(.6) rotate(55 12 12)" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        <span><b>SKY ARCHIVE</b><small data-t="brand">天空檔案</small></span>
+      </a>
+      <span class="concept" data-t="concept">概念稿</span>
+      <nav class="nav" aria-label="main">
+        <a href="fleet.html" data-t="nav.fleet">飛行器圖鑑</a>
+        <a href="airports.html" data-t="nav.airports">機場與跑道</a>
+        <a href="airlines.html" data-t="nav.airlines">航空公司</a>
+        <a href="knowledge.html" data-t="nav.knowledge">小知識</a>
+      </nav>
+      <div class="switches">
+        <div class="seg" role="group" aria-label="Language" id="lang">
+          <button type="button" data-lang="zh">繁中</button><button type="button" data-lang="en">EN</button><button type="button" data-lang="ja">日本語</button>
+        </div>
+        <button class="icon-btn" type="button" id="theme" data-ta="theme" aria-label="切換深淺色">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap hero">
+    <div class="hero-copy">
+      <div class="eyebrow" data-t="hero.eyebrow">SKY ARCHIVE · 你的航空資料庫</div>
+      <h1 data-t="hero.title">今天，想往哪裡飛？</h1>
+      <p class="lede" data-t="hero.sub">機型、機場、航空公司與飛航知識都在這裡。輸入一個代碼，就能起飛。</p>
+
+      <form class="booker" id="booker" role="search" autocomplete="off">
+        <div class="tabs" role="radiogroup" aria-label="scope" id="tabs">
+          <button type="button" role="radio" data-scope="all" aria-checked="true" data-t="tab.all">全部</button>
+          <button type="button" role="radio" data-scope="fleet" aria-checked="false" data-t="tab.fleet">機型</button>
+          <button type="button" role="radio" data-scope="airports" aria-checked="false" data-t="tab.airports">機場</button>
+          <button type="button" role="radio" data-scope="airlines" aria-checked="false" data-t="tab.airlines">航空公司</button>
+          <button type="button" role="radio" data-scope="knowledge" aria-checked="false" data-t="tab.knowledge">知識</button>
+        </div>
+        <div class="fields">
+          <div class="fld from"><span class="label" data-t="search.from">出發</span><span class="v" data-t="search.fromVal">天空檔案</span></div>
+          <div class="swap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div>
+          <label class="fld" for="q"><span class="label" data-t="search.to">目的地</span>
+            <input id="q" type="search" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list" data-tp="search.ph" placeholder="A350、RCTP、長榮航空、CAVOK…">
+          </label>
+          <button class="go" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span data-t="search.go">搜尋</span></button>
+        </div>
+        <div class="results" id="results" role="listbox" hidden></div>
+      </form>
+
+      <div class="chips" id="chips"><span class="label" data-t="chips.label">熱門航點</span></div>
+    </div>
+
+    <div class="route-card" aria-hidden="true">
+      <svg class="map" viewBox="0 0 560 300">
+        <path class="grid" d="M0 70 Q280 30 560 70"/><path class="grid" d="M0 150 Q280 110 560 150"/><path class="grid" d="M0 230 Q280 190 560 230"/>
+        <path class="grid" d="M110 0 Q90 150 110 300"/><path class="grid" d="M280 0 V300"/><path class="grid" d="M450 0 Q470 150 450 300"/>
+        <path id="track" class="track" d="M70 232 C 170 40, 400 30, 492 176"/>
+        <path id="flown" class="flown" d="M70 232 C 170 40, 400 30, 492 176"/>
+        <circle class="apt-ring" cx="492" cy="176" r="8"/>
+        <circle class="apt" cx="70" cy="232" r="7"/><circle class="apt" cx="492" cy="176" r="7"/>
+        <text x="46" y="276">TPE</text><text class="small" x="46" y="292">RCTP</text>
+        <text id="destCode" x="470" y="220">HND</text><text id="destIcao" class="small" x="470" y="236">RJTT</text>
+        <g id="plane"><path class="plane" transform="translate(-15 -15) scale(1.25) rotate(90 12 12)" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></g>
+      </svg>
+      <div class="readout">
+        <div><span class="label" data-t="hud.to">目的地</span><b id="hudDest">—</b></div>
+        <div><span class="label" data-t="hud.dist">大圓距離</span><b id="hudDist">—</b></div>
+        <div><span class="label" data-t="hud.time">預估航時</span><b id="hudTime">—</b></div>
+        <div><span class="label" data-t="hud.fl">巡航高度</span><b id="hudFl">—</b></div>
+      </div>
+      <p class="route-cap" id="routeCap"></p>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="block wrap" aria-labelledby="gatesTitle">
+    <div class="head">
+      <h2 id="gatesTitle"><span class="label">GATES A–D</span><span data-t="gates.title">選擇登機門</span></h2>
+      <p data-t="gates.sub">四個資料庫，各有各的玩法。</p>
+    </div>
+    <div class="passes" id="passes"></div>
+  </section>
+
+  <section class="block wrap" id="recentWrap" hidden aria-labelledby="recentTitle">
+    <div class="head"><h2 id="recentTitle"><span class="label">RECENT FLIGHTS</span><span data-t="recent.title">最近看過的機型</span></h2></div>
+    <div class="recent" id="recent"></div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="depTitle">
+    <div class="head">
+      <h2 id="depTitle"><span class="label">TODAY'S PICKS</span><span data-t="dep.title">今日出發</span></h2>
+      <p data-t="dep.sub">每天換一組推薦，點任一列就直接登機。</p>
+    </div>
+    <div class="split">
+      <div class="board">
+        <div class="bhead">
+          <h3><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>DEPARTURES</h3>
+          <span class="bclock"><span data-t="board.local">當地時間</span><b id="clock">--:--</b></span>
+          <button class="shuffle" type="button" id="shuffle"><svg viewBox="0 0 24 24"><path d="M4 7h11l-3-3M20 17H9l3 3M4 7v4M20 17v-4"/></svg><span data-t="board.shuffle">換一批</span></button>
+        </div>
+        <div class="brow hdr"><span data-t="col.time">時間</span><span data-t="col.flight">班次</span><span data-t="col.dest">目的地</span><span data-t="col.gate">登機門</span><span data-t="col.status">狀態</span></div>
+        <div id="rows"></div>
+      </div>
+
+      <article class="pa" aria-live="polite">
+        <div class="pa-h">
+          <span class="mic"><svg viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M20 19c0 1.5-2 2.5-5 2.5h-2"/></svg></span>
+          <h3><span class="label">PA · CABIN</span><span data-t="pa.title">機長廣播</span></h3>
+          <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        </div>
+        <p class="pa-greet" id="paGreet"></p>
+        <div class="pa-topic" id="paTopic"></div>
+        <p class="pa-sum" id="paSum"></p>
+        <p class="pa-fact" id="paFact"></p>
+        <div class="pa-act">
+          <button class="btn" type="button" id="paNext" data-t="pa.next">換一則</button>
+          <a class="btn pri" href="knowledge.html"><span data-t="pa.open">看完整解說</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="toolsTitle">
+    <div class="head">
+      <h2 id="toolsTitle"><span class="label">FLIGHT DECK TOOLS</span><span data-t="tools.title">機上工具</span></h2>
+      <p data-t="tools.sub">比較、對照、追溯家族、量距離。</p>
+    </div>
+    <div class="tools">
+      <a class="tool" href="compare.html"><svg viewBox="0 0 40 40"><path d="M6 34h28"/><rect x="8" y="18" width="5" height="16" rx="1"/><rect x="17.5" y="10" width="5" height="24" rx="1"/><rect x="27" y="22" width="5" height="12" rx="1"/></svg><b data-t="tool.compare">機型比較</b><span data-t="tool.compare.d">最多四架機型並排比規格</span></a>
+      <a class="tool" href="versus.html"><svg viewBox="0 0 40 40"><path d="M4 14h12l3-4M4 14l4 4h8"/><path d="M36 26H24l-3 4M36 26l-4-4h-8"/><path d="M20 4v32" stroke-dasharray="2 3"/></svg><b data-t="tool.versus">Boeing 對 Airbus</b><span data-t="tool.versus.d">同級機型逐一部位對照</span></a>
+      <a class="tool" href="variants.html"><svg viewBox="0 0 40 40"><circle cx="20" cy="7" r="3.5"/><circle cx="9" cy="32" r="3.5"/><circle cx="20" cy="32" r="3.5"/><circle cx="31" cy="32" r="3.5"/><path d="M20 10.5V22M9 28.5V22h22v6.5M20 22v6.5"/></svg><b data-t="tool.variants">機型家族</b><span data-t="tool.variants.d">次型號與家族系譜一次看</span></a>
+      <a class="tool" href="distance.html"><svg viewBox="0 0 40 40"><circle cx="7" cy="29" r="3"/><circle cx="33" cy="25" r="3"/><path d="M9.5 27C14 12 26 10 31 22.5" stroke-dasharray="3 3"/><path d="M6 37h28M6 35v4M20 35v4M34 35v4"/></svg><b data-t="tool.distance">航線距離</b><span data-t="tool.distance.d">兩座機場之間的大圓距離</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="metar">
+    <span class="label" style="color:var(--muted)" data-t="foot.metar">資料庫天氣報告 · METAR</span>
+    <code id="metar">METAR SKYA</code>
+    <p id="metarDecode"></p>
+  </div>
+  <p class="foot-tag" data-t="foot.tag">SKY ARCHIVE — 飛行器、機場與航空公司的互動資料庫</p>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+"use strict";
+/* ═══════════════ 三語字串（概念頁自帶；正式套用時併入 js/i18n.js） ═══════════════ */
+const STR = {
+  zh: {
+    brand:"天空檔案", concept:"概念稿", theme:"切換深淺色",
+    "nav.fleet":"飛行器圖鑑","nav.airports":"機場與跑道","nav.airlines":"航空公司","nav.knowledge":"小知識",
+    "hero.eyebrow":"SKY ARCHIVE · 你的航空資料庫","hero.title":"今天，\n想往哪裡飛？",
+    "hero.sub":"機型、機場、航空公司與飛航知識都在這裡。輸入一個代碼，就能起飛。",
+    "tab.all":"全部","tab.fleet":"機型","tab.airports":"機場","tab.airlines":"航空公司","tab.knowledge":"知識",
+    "search.from":"出發","search.fromVal":"天空檔案","search.to":"目的地","search.go":"搜尋",
+    "search.ph":"A350、RCTP、長榮航空、CAVOK…",
+    "search.ph.fleet":"機型名稱或 ICAO 代碼，例如 B789","search.ph.airports":"機場名稱、城市、ICAO 或 IATA",
+    "search.ph.airlines":"公司名稱、呼號或代碼，例如 EVA","search.ph.knowledge":"術語或縮寫，例如 METAR、V1",
+    "search.empty":"找不到「{q}」。試試 ICAO 代碼，例如 RJTT 或 B744。","search.loading":"正在載入全球機場代碼…",
+    "search.hint":"↑↓ 選擇 · Enter 前往 · Esc 關閉",
+    "kind.fleet":"機型","kind.airports":"機場","kind.airlines":"航空公司","kind.knowledge":"知識",
+    "chips.label":"熱門航點",
+    "hud.to":"目的地","hud.dist":"大圓距離","hud.time":"預估航時","hud.fl":"巡航高度",
+    "hud.cap":"從桃園出發，飛往{name}。距離依機場座標以大圓公式計算。",
+    "gates.title":"選擇登機門","gates.sub":"四個資料庫，各有各的玩法。",
+    "pass.label":"登機證 · BOARDING PASS","pass.from":"首頁","pass.gate":"登機門","pass.seat":"座位","pass.board":"登機",
+    "p.fleet.t":"飛行器圖鑑","p.fleet.d":"從 A220 到協和號，翻開 {n} 個機型；其中 {m} 架可以直接 360° 轉著看。",
+    "p.fleet.f1":"機型","p.fleet.f2":"3D 模型","p.fleet.f3":"待補模型",
+    "p.airports.t":"機場與跑道","p.airports.d":"{n} 座機場，跑道長度、方位與衛星圖一次看齊。用 ICAO 或 IATA 代碼直接找。",
+    "p.airports.f1":"機場","p.airports.f2":"代碼","p.airports.f3":"檢視","p.airports.v3":"衛星圖",
+    "p.airlines.t":"全球航空公司","p.airlines.d":"{n} 家航空公司的呼號、機隊與樞紐，還能把航線畫在地球上。",
+    "p.airlines.f1":"航空公司","p.airlines.f2":"貨運／快遞","p.airlines.f3":"三大聯盟",
+    "p.knowledge.t":"航空小知識","p.knowledge.d":"CAVOK 是什麼？為什麼過了 V1 就不能停？{n} 個主題，在座艙場景裡點一點就懂。",
+    "p.knowledge.f1":"主題","p.knowledge.f2":"互動場景","p.knowledge.f3":"語言",
+    "recent.title":"最近看過的機型",
+    "dep.title":"今日出發","dep.sub":"每天換一組推薦，點任一列就直接登機。",
+    "board.local":"當地時間","board.shuffle":"換一批",
+    "col.time":"時間","col.flight":"班次","col.dest":"目的地","col.gate":"登機門","col.status":"狀態",
+    "st.3d":"3D 可看","st.spec":"規格齊全","st.ontime":"準時","st.boarding":"登機中","st.new":"新知",
+    "sub.airport":"{icao} · 距桃園 {d} km","sub.airline":"{country} · 機隊 {n} 架",
+    "pa.title":"機長廣播","pa.next":"換一則","pa.open":"看完整解說","pa.fact":"補充",
+    "pa.morning":"各位旅客早安，這裡是機長。","pa.afternoon":"各位旅客午安，這裡是機長。","pa.evening":"各位旅客晚安，這裡是機長。",
+    "pa.lead":"今天想跟大家聊聊：",
+    "tools.title":"機上工具","tools.sub":"比較、對照、追溯家族、量距離。",
+    "tool.compare":"機型比較","tool.compare.d":"最多四架機型並排比規格",
+    "tool.versus":"Boeing 對 Airbus","tool.versus.d":"同級機型逐一部位對照",
+    "tool.variants":"機型家族","tool.variants.d":"次型號與家族系譜一次看",
+    "tool.distance":"航線距離","tool.distance.d":"兩座機場之間的大圓距離",
+    "foot.metar":"資料庫天氣報告 · METAR",
+    "foot.decode":"解讀：{a} 個機型（{m} 個 3D）、{p} 座機場、{l} 家航空公司、{k} 個知識主題。能見度良好，全部資料庫可正常起降。",
+    "foot.tag":"SKY ARCHIVE — 飛行器、機場與航空公司的互動資料庫",
+    "toast.preview":"概念預覽：正式套用後，這裡會前往「{name}」。",
+    hours:"{h} 小時 {m} 分",
+    cat:{instrument:"儀表",aerodynamics:"空氣動力",atc:"航管",navigation:"導航",weather:"天氣",airport:"機場",operations:"飛航作業",systems:"航機系統"}
+  },
+  en: {
+    brand:"Sky Archive", concept:"CONCEPT", theme:"Toggle light / dark",
+    "nav.fleet":"Aircraft","nav.airports":"Airports","nav.airlines":"Airlines","nav.knowledge":"Knowledge",
+    "hero.eyebrow":"SKY ARCHIVE · YOUR AVIATION DATABASE","hero.title":"Where are we\nflying today?",
+    "hero.sub":"Aircraft, airports, airlines and flight know-how in one place. Type a code and take off.",
+    "tab.all":"All","tab.fleet":"Aircraft","tab.airports":"Airports","tab.airlines":"Airlines","tab.knowledge":"Knowledge",
+    "search.from":"From","search.fromVal":"Sky Archive","search.to":"To","search.go":"Search",
+    "search.ph":"A350, RCTP, EVA Air, CAVOK…",
+    "search.ph.fleet":"Type name or ICAO code, e.g. B789","search.ph.airports":"Airport, city, ICAO or IATA",
+    "search.ph.airlines":"Airline, call sign or code, e.g. EVA","search.ph.knowledge":"Term or acronym, e.g. METAR, V1",
+    "search.empty":"No match for “{q}”. Try an ICAO code such as RJTT or B744.","search.loading":"Loading airport codes worldwide…",
+    "search.hint":"↑↓ select · Enter open · Esc close",
+    "kind.fleet":"Aircraft","kind.airports":"Airport","kind.airlines":"Airline","kind.knowledge":"Knowledge",
+    "chips.label":"Popular",
+    "hud.to":"Destination","hud.dist":"Great circle","hud.time":"Est. block","hud.fl":"Cruise",
+    "hud.cap":"Departing Taoyuan for {name}. Distance uses the great-circle formula on airport coordinates.",
+    "gates.title":"Choose your gate","gates.sub":"Four databases, each with its own way to explore.",
+    "pass.label":"BOARDING PASS","pass.from":"Home","pass.gate":"Gate","pass.seat":"Seat","pass.board":"Board",
+    "p.fleet.t":"Aircraft Archive","p.fleet.d":"From the A220 to Concorde: {n} aircraft types, {m} of them ready to spin around in 3D.",
+    "p.fleet.f1":"Types","p.fleet.f2":"3D models","p.fleet.f3":"Models to add",
+    "p.airports.t":"Airports & Runways","p.airports.d":"{n} airports with runway lengths, headings and satellite views. Find any of them by ICAO or IATA code.",
+    "p.airports.f1":"Airports","p.airports.f2":"Codes","p.airports.f3":"View","p.airports.v3":"Satellite",
+    "p.airlines.t":"Airlines Worldwide","p.airlines.d":"Call signs, fleets and hubs of {n} airlines, with their routes drawn on a globe.",
+    "p.airlines.f1":"Airlines","p.airlines.f2":"Cargo","p.airlines.f3":"Alliances",
+    "p.knowledge.t":"Aviation Knowledge","p.knowledge.d":"What does CAVOK mean? Why can't you stop after V1? {n} topics explained inside cockpit scenes.",
+    "p.knowledge.f1":"Topics","p.knowledge.f2":"Scenes","p.knowledge.f3":"Languages",
+    "recent.title":"Recently viewed aircraft",
+    "dep.title":"Today's departures","dep.sub":"A fresh set of picks every day. Tap any row to board.",
+    "board.local":"Local time","board.shuffle":"Shuffle",
+    "col.time":"Time","col.flight":"Flight","col.dest":"Destination","col.gate":"Gate","col.status":"Status",
+    "st.3d":"3D ready","st.spec":"Specs","st.ontime":"On time","st.boarding":"Boarding","st.new":"New",
+    "sub.airport":"{icao} · {d} km from Taoyuan","sub.airline":"{country} · {n} aircraft",
+    "pa.title":"Captain speaking","pa.next":"Next one","pa.open":"Read the full topic","pa.fact":"Did you know",
+    "pa.morning":"Good morning, this is your captain speaking.","pa.afternoon":"Good afternoon, this is your captain speaking.","pa.evening":"Good evening, this is your captain speaking.",
+    "pa.lead":"Today's topic:",
+    "tools.title":"Flight deck tools","tools.sub":"Compare, cross-check, trace families, measure distance.",
+    "tool.compare":"Compare aircraft","tool.compare.d":"Up to four types side by side",
+    "tool.versus":"Boeing vs Airbus","tool.versus.d":"Rival types, part by part",
+    "tool.variants":"Aircraft families","tool.variants.d":"Sub-types and lineage",
+    "tool.distance":"Route distance","tool.distance.d":"Great-circle distance between airports",
+    "foot.metar":"DATABASE WEATHER · METAR",
+    "foot.decode":"Decoded: {a} aircraft types ({m} in 3D), {p} airports, {l} airlines and {k} topics. Visibility good, all databases open.",
+    "foot.tag":"SKY ARCHIVE — an interactive database of aircraft, airports and airlines",
+    "toast.preview":"Concept preview: once adopted, this opens “{name}”.",
+    hours:"{h} h {m} min",
+    cat:{instrument:"Instruments",aerodynamics:"Aerodynamics",atc:"ATC",navigation:"Navigation",weather:"Weather",airport:"Airport",operations:"Operations",systems:"Systems"}
+  },
+  ja: {
+    brand:"天空アーカイブ", concept:"コンセプト", theme:"ライト／ダーク切替",
+    "nav.fleet":"航空機図鑑","nav.airports":"空港・滑走路","nav.airlines":"航空会社","nav.knowledge":"豆知識",
+    "hero.eyebrow":"SKY ARCHIVE · あなたの航空データベース","hero.title":"今日は、\nどこへ飛びますか？",
+    "hero.sub":"機種、空港、航空会社、そして飛行の知識をひとつに。コードを入れれば、すぐに離陸。",
+    "tab.all":"すべて","tab.fleet":"機種","tab.airports":"空港","tab.airlines":"航空会社","tab.knowledge":"知識",
+    "search.from":"出発","search.fromVal":"天空アーカイブ","search.to":"行き先","search.go":"検索",
+    "search.ph":"A350、RCTP、エバー航空、CAVOK…",
+    "search.ph.fleet":"機種名または ICAO コード（例：B789）","search.ph.airports":"空港名・都市・ICAO・IATA",
+    "search.ph.airlines":"会社名・コールサイン・コード（例：EVA）","search.ph.knowledge":"用語や略語（例：METAR、V1）",
+    "search.empty":"「{q}」は見つかりません。RJTT や B744 などの ICAO コードをお試しください。","search.loading":"世界の空港コードを読み込み中…",
+    "search.hint":"↑↓ 選択 · Enter 開く · Esc 閉じる",
+    "kind.fleet":"機種","kind.airports":"空港","kind.airlines":"航空会社","kind.knowledge":"知識",
+    "chips.label":"人気の行き先",
+    "hud.to":"行き先","hud.dist":"大圏距離","hud.time":"所要時間","hud.fl":"巡航高度",
+    "hud.cap":"桃園から{name}へ。距離は空港座標から大圏距離で計算しています。",
+    "gates.title":"搭乗ゲートを選ぶ","gates.sub":"4 つのデータベース、それぞれの楽しみ方で。",
+    "pass.label":"搭乗券 · BOARDING PASS","pass.from":"ホーム","pass.gate":"ゲート","pass.seat":"座席","pass.board":"搭乗",
+    "p.fleet.t":"航空機図鑑","p.fleet.d":"A220 からコンコルドまで {n} 機種。そのうち {m} 機種は 3D でぐるりと回して見られます。",
+    "p.fleet.f1":"機種","p.fleet.f2":"3D モデル","p.fleet.f3":"未作成",
+    "p.airports.t":"空港・滑走路","p.airports.d":"{n} の空港の滑走路長・方位・衛星写真をまとめて確認。ICAO／IATA コードですぐ検索。",
+    "p.airports.f1":"空港","p.airports.f2":"コード","p.airports.f3":"表示","p.airports.v3":"衛星写真",
+    "p.airlines.t":"世界の航空会社","p.airlines.d":"{n} 社のコールサイン、機材、拠点空港。路線は地球儀の上に描かれます。",
+    "p.airlines.f1":"航空会社","p.airlines.f2":"貨物","p.airlines.f3":"アライアンス",
+    "p.knowledge.t":"航空豆知識","p.knowledge.d":"CAVOK とは？ V1 を過ぎるとなぜ止まれない？ {n} のトピックを操縦席のシーンで解説。",
+    "p.knowledge.f1":"トピック","p.knowledge.f2":"シーン","p.knowledge.f3":"言語",
+    "recent.title":"最近見た機種",
+    "dep.title":"本日の出発便","dep.sub":"おすすめは毎日入れ替わります。行をタップして搭乗。",
+    "board.local":"現地時刻","board.shuffle":"入れ替え",
+    "col.time":"時刻","col.flight":"便名","col.dest":"行き先","col.gate":"ゲート","col.status":"状況",
+    "st.3d":"3D あり","st.spec":"諸元","st.ontime":"定刻","st.boarding":"搭乗中","st.new":"新着",
+    "sub.airport":"{icao} · 桃園から {d} km","sub.airline":"{country} · 機材 {n} 機",
+    "pa.title":"機長アナウンス","pa.next":"次の話題","pa.open":"詳しく読む","pa.fact":"補足",
+    "pa.morning":"皆さま、おはようございます。機長です。","pa.afternoon":"皆さま、こんにちは。機長です。","pa.evening":"皆さま、こんばんは。機長です。",
+    "pa.lead":"本日のお話：",
+    "tools.title":"機内ツール","tools.sub":"比較・対照・系列・距離計算。",
+    "tool.compare":"機種比較","tool.compare.d":"最大 4 機種を並べて諸元比較",
+    "tool.versus":"Boeing 対 Airbus","tool.versus.d":"同クラス機を部位ごとに対照",
+    "tool.variants":"機種ファミリー","tool.variants.d":"派生型と系列をひと目で",
+    "tool.distance":"路線距離","tool.distance.d":"2 空港間の大圏距離",
+    "foot.metar":"データベース気象通報 · METAR",
+    "foot.decode":"解読：{a} 機種（3D {m}）、{p} 空港、{l} 航空会社、{k} トピック。視程良好、全データベース運用中。",
+    "foot.tag":"SKY ARCHIVE — 航空機・空港・航空会社のインタラクティブ・データベース",
+    "toast.preview":"コンセプトプレビュー：採用後は「{name}」へ移動します。",
+    hours:"{h} 時間 {m} 分",
+    cat:{instrument:"計器",aerodynamics:"空力",atc:"管制",navigation:"航法",weather:"気象",airport:"空港",operations:"運航",systems:"システム"}
+  }
+};
+
+/* 熱門航點：首屏航線示意與看板用，避免一開始就下載 1.9 MB 的全球代碼表 */
+const POPULAR = [
+  ["RJTT","HND",35.5523,139.7798,"東京羽田","Tokyo Haneda","東京羽田"],
+  ["RJAA","NRT",35.7647,140.3864,"東京成田","Tokyo Narita","東京成田"],
+  ["RJBB","KIX",34.4273,135.2440,"大阪關西","Osaka Kansai","関西"],
+  ["VHHH","HKG",22.3089,113.9146,"香港","Hong Kong","香港"],
+  ["WSSS","SIN",1.3502,103.9944,"新加坡樟宜","Singapore Changi","シンガポール・チャンギ"],
+  ["RKSI","ICN",37.4691,126.4505,"首爾仁川","Seoul Incheon","ソウル仁川"],
+  ["VTBS","BKK",13.6811,100.7473,"曼谷蘇凡納布","Bangkok Suvarnabhumi","バンコク・スワンナプーム"],
+  ["OMDB","DXB",25.2528,55.3644,"杜拜","Dubai","ドバイ"],
+  ["EGLL","LHR",51.4706,-0.4619,"倫敦希斯洛","London Heathrow","ロンドン・ヒースロー"],
+  ["LFPG","CDG",49.0128,2.5500,"巴黎戴高樂","Paris Charles de Gaulle","パリ・シャルル・ド・ゴール"],
+  ["EDDF","FRA",50.0333,8.5706,"法蘭克福","Frankfurt","フランクフルト"],
+  ["KSFO","SFO",37.6190,-122.3750,"舊金山","San Francisco","サンフランシスコ"],
+  ["KLAX","LAX",33.9425,-118.4081,"洛杉磯","Los Angeles","ロサンゼルス"],
+  ["KJFK","JFK",40.6398,-73.7789,"紐約甘迺迪","New York JFK","ニューヨーク JFK"],
+  ["YSSY","SYD",-33.9461,151.1772,"雪梨","Sydney","シドニー"],
+  ["RCSS","TSA",25.0694,121.5525,"臺北松山","Taipei Songshan","台北松山"]
+].map(([icao,iata,lat,lon,zh,en,ja]) => ({icao,iata,lat,lon,name:{zh,en,ja}}));
+const TPE = {icao:"RCTP",iata:"TPE",lat:25.0777,lon:121.2330};
+
+/* 讀不到資料時（例如離線）仍能完整呈現的後備數字 */
+const FALLBACK = {aircraft:184, models:48, airports:85587, airlines:594, cargo:18, alliances:3, topics:82};
+
+/* ═══════════════ 小工具 ═══════════════ */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const store = {
+  get(k){ try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k,v){ try { localStorage.setItem(k,v); } catch (e) {} }
+};
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let lang = (() => {
+  const s = store.get("hangar_lang"); if (s && STR[s]) return s;
+  const n = (navigator.language || "zh").toLowerCase();
+  return n.startsWith("ja") ? "ja" : n.startsWith("en") ? "en" : "zh";
+})();
+const t = (k, vars) => {
+  let s = STR[lang][k] ?? STR.zh[k] ?? k;
+  if (vars) for (const [a,b] of Object.entries(vars)) s = s.split(`{${a}}`).join(b);
+  return s;
+};
+const field = v => v == null ? "" : typeof v === "string" ? v : (v[lang] || v.zh || v.en || v.ja || "");
+const fmt = n => Number(n).toLocaleString(lang === "zh" ? "zh-TW" : lang);
+const airlineName = a => (lang === "zh" && a.nameZh) || (lang === "ja" && a.nameJa) || a.name;
+function rng(seed){ return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let x = Math.imul(seed ^ seed >>> 15, 1 | seed); x = x + Math.imul(x ^ x >>> 7, 61 | x) ^ x; return ((x ^ x >>> 14) >>> 0) / 4294967296; }; }
+function gcKm(a, b){
+  const R = 6371, r = Math.PI / 180;
+  const dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r;
+  const h = Math.sin(dLat/2)**2 + Math.cos(a.lat*r) * Math.cos(b.lat*r) * Math.sin(dLon/2)**2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+function blockTime(km){ const min = Math.round(km / 830 * 60 + 30); return t("hours", {h: Math.floor(min/60), m: String(min%60).padStart(2,"0")}); }
+function cruiseFl(km){ return km < 900 ? "FL280" : km < 2500 ? "FL350" : km < 6000 ? "FL370" : "FL390"; }
+async function getJSON(path, v){
+  for (const url of (v ? [`${path}?v=${v}`, path] : [path])) {
+    try { const r = await fetch(url); if (r.ok) return await r.json(); } catch (e) {}
+  }
+  return null;
+}
+
+/* ═══════════════ 資料 ═══════════════ */
+const D = {fleet:[], airlines:[], topics:[], airportCount:FALLBACK.airports, codes:null};
+const counts = () => ({
+  aircraft: D.fleet.length || FALLBACK.aircraft,
+  models: D.fleet.length ? D.fleet.filter(a => !/nomodel/.test(a.thumb || "")).length : FALLBACK.models,
+  airports: D.airportCount,
+  airlines: D.airlines.length || FALLBACK.airlines,
+  cargo: D.airlines.length ? D.airlines.filter(a => a.tier === "cargo").length : FALLBACK.cargo,
+  alliances: D.airlines.length ? new Set(D.airlines.map(a => a.alliance).filter(x => ["star","oneworld","skyteam"].includes(x))).size : FALLBACK.alliances,
+  topics: D.topics.length || FALLBACK.topics
+});
+
+/* ═══════════════ 介面字串 ═══════════════ */
+function applyStatic(){
+  document.documentElement.lang = lang === "zh" ? "zh-Hant" : lang;
+  document.querySelectorAll("[data-t]").forEach(el => el.textContent = t(el.dataset.t));
+  document.querySelectorAll("[data-ta]").forEach(el => el.setAttribute("aria-label", t(el.dataset.ta)));
+  document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  setPlaceholder();
+}
+function renderAll(){ applyStatic(); renderChips(); renderPasses(); renderRecent(); renderBoard(false); renderPA(); renderMetar(); updateRouteText(); }
+
+/* ═══════════════ 登機證 ═══════════════ */
+const GATES = [
+  {k:"fleet", href:"fleet.html", to:"ACF", gate:"A", seat:"3D", f:c => [fmt(c.aircraft), fmt(c.models), fmt(c.aircraft - c.models)], d:c => ({n:fmt(c.aircraft), m:fmt(c.models)})},
+  {k:"airports", href:"airports.html", to:"APT", gate:"B", seat:"RWY", f:c => [fmt(c.airports), "ICAO·IATA", t("p.airports.v3")], d:c => ({n:fmt(c.airports)})},
+  {k:"airlines", href:"airlines.html", to:"ALN", gate:"C", seat:"HUB", f:c => [fmt(c.airlines), fmt(c.cargo), fmt(c.alliances)], d:c => ({n:fmt(c.airlines)})},
+  {k:"knowledge", href:"knowledge.html", to:"KNW", gate:"D", seat:"PA", f:c => [fmt(c.topics), "4", "3"], d:c => ({n:fmt(c.topics)})}
+];
+const PLANE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>';
+function renderPasses(){
+  const c = counts();
+  $("#passes").innerHTML = GATES.map((g, i) => {
+    const f = g.f(c);
+    return `<a class="pass" data-k="${g.k}" href="${g.href}">
+      <div class="pm">
+        <div class="ptop"><span class="label">${esc(t("pass.label"))}</span><span class="cls">GATE ${g.gate}</span></div>
+        <div class="proute">
+          <div class="c"><b>SKY</b><span>${esc(t("pass.from"))}</span></div>
+          <div class="pline">${PLANE}</div>
+          <div class="c to"><b>${g.to}</b><span>${esc(t(`p.${g.k}.t`))}</span></div>
+        </div>
+        <p class="pdesc">${esc(t(`p.${g.k}.d`, g.d(c)))}</p>
+        <div class="pfields">
+          ${[1,2,3].map(n => `<div><span class="label">${esc(t(`p.${g.k}.f${n}`))}</span><b>${esc(f[n-1])}</b></div>`).join("")}
+        </div>
+      </div>
+      <div class="ps">
+        <div><span class="label">${esc(t("pass.gate"))}</span><div class="gate">${g.gate}${i+1}</div></div>
+        <div><span class="label">${esc(t("pass.seat"))}</span><div class="seat">${g.seat}</div></div>
+        <div class="barcode" aria-hidden="true"></div>
+        <span class="board-cta">${esc(t("pass.board"))}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>`;
+  }).join("");
+}
+
+/* ═══════════════ 最近看過（沿用 viewer.js 的 hangar_recent） ═══════════════ */
+function renderRecent(){
+  let ids = [];
+  try { ids = JSON.parse(store.get("hangar_recent") || "[]"); } catch (e) {}
+  const items = ids.map(id => D.fleet.find(a => a.id === id)).filter(Boolean).slice(0, 8);
+  $("#recentWrap").hidden = !items.length;
+  $("#recent").innerHTML = items.map(a => `<a class="rc" href="viewer.html?model=${encodeURIComponent(a.id)}"><img src="${esc(a.thumb)}" alt="" loading="lazy">${esc(a.name)}</a>`).join("");
+}
+
+/* ═══════════════ 熱門航點 chips ═══════════════ */
+const CHIP_KEYS = [["RCTP","airports"],["RJTT","airports"],["A350","fleet"],["EVA","airlines"],["CAVOK","knowledge"],["V1","knowledge"]];
+function renderChips(){
+  const label = `<span class="label">${esc(t("chips.label"))}</span>`;
+  const names = {RCTP:{zh:"桃園",en:"Taoyuan",ja:"桃園"},RJTT:{zh:"羽田",en:"Haneda",ja:"羽田"},A350:{zh:"空巴 A350",en:"Airbus A350",ja:"エアバス A350"},
+    EVA:{zh:"長榮航空",en:"EVA Air",ja:"エバー航空"},CAVOK:{zh:"天氣良好",en:"Weather OK",ja:"好天"},V1:{zh:"起飛決斷速度",en:"Takeoff speeds",ja:"離陸決心速度"}};
+  $("#chips").innerHTML = label + CHIP_KEYS.map(([q,s]) => `<button type="button" class="chip" data-q="${q}" data-s="${s}"><b>${q}</b>${esc(field(names[q]))}</button>`).join("");
+}
+$("#chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  setScope(b.dataset.s); const q = $("#q"); q.value = b.dataset.q; q.focus(); runSearch();
+});
+
+/* ═══════════════ 全站搜尋 ═══════════════ */
+let scope = "all", hits = [], active = -1;
+function setPlaceholder(){ $("#q").placeholder = t(scope === "all" ? "search.ph" : `search.ph.${scope}`); }
+function setScope(s){
+  scope = s;
+  document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-checked", String(b.dataset.scope === s)));
+  setPlaceholder();
+}
+$("#tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; setScope(b.dataset.scope); $("#q").focus(); runSearch(); });
+$("#tabs").addEventListener("keydown", e => {
+  if (!["ArrowLeft","ArrowRight"].includes(e.key)) return;
+  const bs = [...document.querySelectorAll("#tabs button")], i = bs.findIndex(b => b.dataset.scope === scope);
+  const n = bs[(i + (e.key === "ArrowRight" ? 1 : bs.length - 1)) % bs.length]; setScope(n.dataset.scope); n.focus(); runSearch();
+});
+const norm = s => String(s || "").toLowerCase().replace(/[\s\-_/·．.]/g, "");
+const wordStart = (raw, q) => String(raw || "").toLowerCase().split(/[\s\-_/·．.,:：（）()]+/).some(w => w && norm(w).startsWith(q));
+function score(q, codes, names){
+  let best = 0;
+  for (const c of codes) { const v = norm(c); if (!v) continue; if (v === q) best = Math.max(best, 100); else if (v.startsWith(q)) best = Math.max(best, 80); }
+  for (const n of names) {
+    const v = norm(n); if (!v) continue;
+    if (v.startsWith(q)) best = Math.max(best, 60);
+    else if (wordStart(n, q)) best = Math.max(best, 55);
+    else if (v.includes(q)) best = Math.max(best, 40);
+  }
+  return best;
+}
+async function ensureCodes(){
+  if (D.codes) return D.codes;
+  const raw = await getJSON("data/airport_codes.json", 138) || {};
+  const byId = new Map();
+  for (const [code, a] of Object.entries(raw)) {
+    const e = byId.get(a.id) || {id:a.id, name:a.name, city:a.city, codes:new Set([a.id])};
+    e.codes.add(code); byId.set(a.id, e);
+  }
+  D.codes = [...byId.values()];
+  return D.codes;
+}
+function searchAll(q){
+  const groups = [], want = k => scope === "all" || scope === k, cap = scope === "all" ? 4 : 10;
+  const push = (k, list) => { const g = list.filter(x => x.s > 0).sort((a,b) => b.s - a.s).slice(0, cap).map(x => ({...x, k})); if (g.length) groups.push(g); };
+  if (want("fleet")) push("fleet", D.fleet.map(a => ({s:score(q,[a.icao,a.id,a.name.replace(/^(Airbus|Boeing)\s*/,"")],[a.name,a.manufacturer]),
+    code:a.icao || a.id.toUpperCase(), n:a.name, sub:`${a.manufacturer} · ${field(a.category)}`, href:`viewer.html?model=${encodeURIComponent(a.id)}`})));
+  if (want("airports")) {
+    const pop = new Map(POPULAR.map(p => [p.icao, p]));
+    const list = (D.codes || POPULAR.map(p => ({id:p.icao, name:p.name.en, city:"", codes:new Set([p.icao,p.iata])}))).map(a => {
+      const p = pop.get(a.id), local = p ? [p.name.zh, p.name.ja, p.name.en] : [];
+      let s = score(q, [...a.codes], [a.name, a.city, ...local]); if (s && p) s += 5;
+      return {s, code:[...a.codes].find(c => c.length === 3) || a.id, n:p ? field(p.name) : a.name, sub:`${a.id}${a.city ? " · " + a.city : ""}`, href:`airports.html?icao=${encodeURIComponent(a.id)}`};
+    });
+    push("airports", list);
+  }
+  if (want("airlines")) push("airlines", D.airlines.map(a => { const b = score(q,[a.icao,a.iata,a.callsign],[a.name,a.nameZh,a.nameJa]); return {s:b && a.tier ? b + 3 : b,
+    code:a.iata || a.icao, n:airlineName(a), sub:`${a.icao || ""}${a.callsign ? " · " + a.callsign : ""} · ${field(a.country)}`, href:`airlines.html?id=${encodeURIComponent(a.id)}`}; }));
+  if (want("knowledge")) push("knowledge", D.topics.map(k => ({s:score(q,[k.id],[k.name?.zh,k.name?.en,k.name?.ja]),
+    code:k.id.replace(/-/g,"").toUpperCase().slice(0,6), n:field(k.name), sub:(STR[lang].cat||{})[k.category] || k.category, href:"knowledge.html"})));
+  /* 最相關的類別排最前面，例如輸入 EVA 時航空公司優先於機場 */
+  return groups.sort((a,b) => b[0].s - a[0].s).flat();
+}
+let searchToken = 0;
+async function runSearch(){
+  const qRaw = $("#q").value.trim(), q = norm(qRaw), box = $("#results"), my = ++searchToken;
+  if (!q) return closeResults();
+  if (!D.codes && (scope === "all" || scope === "airports")) {
+    if (scope === "airports") { box.innerHTML = `<div class="rmsg">${esc(t("search.loading"))}</div>`; openResults(); }
+    await ensureCodes(); if (my !== searchToken) return;
+  }
+  hits = searchAll(q); active = hits.length ? 0 : -1;
+  if (!hits.length) { box.innerHTML = `<div class="rmsg">${esc(t("search.empty", {q:qRaw}))}</div>`; openResults(); return; }
+  let html = "", last = "";
+  hits.forEach((h, i) => {
+    if (h.k !== last) { html += `<div class="rg">${esc(t("kind." + h.k))}</div>`; last = h.k; }
+    html += `<a class="ri" role="option" id="opt${i}" data-i="${i}" href="${h.href}" aria-selected="${i === active}"><span class="code">${esc(h.code)}</span><span style="min-width:0"><span class="n">${esc(h.n)}</span><span class="s">${esc(h.sub)}</span></span><span class="k">${esc(t("kind." + h.k))}</span></a>`;
+  });
+  box.innerHTML = html + `<div class="rhint">${esc(t("search.hint"))}</div>`;
+  openResults(); markActive();
+}
+function openResults(){ $("#results").hidden = false; $("#q").setAttribute("aria-expanded","true"); }
+function closeResults(){ $("#results").hidden = true; $("#q").setAttribute("aria-expanded","false"); active = -1; }
+function markActive(){
+  document.querySelectorAll("#results .ri").forEach(el => el.setAttribute("aria-selected", String(+el.dataset.i === active)));
+  const el = document.getElementById("opt" + active);
+  if (el) { el.scrollIntoView({block:"nearest"}); $("#q").setAttribute("aria-activedescendant", el.id); }
+}
+let debounce;
+$("#q").addEventListener("input", () => { clearTimeout(debounce); debounce = setTimeout(runSearch, 90); });
+$("#q").addEventListener("focus", () => { if ($("#q").value.trim()) runSearch(); if (scope === "all" || scope === "airports") ensureCodes(); });
+$("#q").addEventListener("keydown", e => {
+  if (e.key === "ArrowDown" && hits.length) { e.preventDefault(); active = (active + 1) % hits.length; markActive(); }
+  else if (e.key === "ArrowUp" && hits.length) { e.preventDefault(); active = (active - 1 + hits.length) % hits.length; markActive(); }
+  else if (e.key === "Escape") { closeResults(); }
+});
+$("#results").addEventListener("mousemove", e => { const r = e.target.closest(".ri"); if (r && +r.dataset.i !== active) { active = +r.dataset.i; markActive(); } });
+$("#booker").addEventListener("submit", async e => {
+  e.preventDefault();
+  if ($("#results").hidden) await runSearch();
+  const h = hits[active] || hits[0]; if (h) go(h.href, h.n);
+});
+document.addEventListener("click", e => { if (!e.target.closest("#booker") && !e.target.closest(".chip")) closeResults(); });
+
+/* ═══════════════ 首屏航線示意 ═══════════════ */
+const track = $("#track"), flown = $("#flown"), plane = $("#plane");
+const LEN = track.getTotalLength();
+flown.style.strokeDasharray = `${LEN} ${LEN}`;
+let destIdx = 0;
+function updateRouteText(){
+  const d = POPULAR[destIdx], km = gcKm(TPE, d);
+  $("#destCode").textContent = d.iata; $("#destIcao").textContent = d.icao;
+  $("#hudDest").textContent = field(d.name);
+  $("#hudDist").textContent = `${fmt(Math.round(km))} km`;
+  $("#hudTime").textContent = blockTime(km);
+  $("#hudFl").textContent = cruiseFl(km);
+  $("#routeCap").textContent = t("hud.cap", {name: field(d.name)});
+}
+function placePlane(p){
+  const L = LEN * p, a = track.getPointAtLength(L), b = track.getPointAtLength(Math.min(LEN, L + 1));
+  const ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
+  plane.setAttribute("transform", `translate(${a.x} ${a.y}) rotate(${ang})`);
+  flown.style.strokeDashoffset = String(LEN * (1 - p));
+}
+if (REDUCED) { placePlane(.62); }
+else {
+  const DUR = 9000, HOLD = 1400; let start = performance.now();
+  const loop = now => {
+    const el = now - start;
+    if (el > DUR + HOLD) { start = now; destIdx = (destIdx + 1) % (POPULAR.length - 1); updateRouteText(); }
+    const p = Math.min(1, el / DUR), ease = p < .5 ? 2*p*p : 1 - (-2*p + 2)**2 / 2;
+    placePlane(ease); requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+}
+
+/* ═══════════════ 出發看板 ═══════════════ */
+const POOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+let boardSeed = Number(new Date().toISOString().slice(0,10).replace(/-/g,""));
+let flights = [];
+function buildFlights(){
+  const r = rng(boardSeed), pick = arr => arr[Math.floor(r() * arr.length)];
+  const used = new Set(), uniq = (arr, key) => { for (let i = 0; i < 20; i++) { const x = pick(arr); if (x && !used.has(key(x))) { used.add(key(x)); return x; } } return pick(arr); };
+  const withModel = D.fleet.filter(a => !/nomodel/.test(a.thumb || ""));
+  const carriers = D.airlines.filter(a => ["mainline","lcc","cargo","regional"].includes(a.tier));
+  const out = [];
+  const ac = a => a && out.push({k:"fleet", code:a.icao || a.id.toUpperCase(), n:a.name, sub:`${a.manufacturer} · ${field(a.category)}`,
+    gate:"A", st:/nomodel/.test(a.thumb||"") ? "spec" : "3d", href:`viewer.html?model=${encodeURIComponent(a.id)}`});
+  const ap = p => out.push({k:"airports", code:p.iata, n:field(p.name), sub:t("sub.airport",{icao:p.icao, d:fmt(Math.round(gcKm(TPE,p)))}),
+    gate:"B", st:"ontime", href:`airports.html?icao=${p.icao}`});
+  const al = a => a && out.push({k:"airlines", code:`${a.iata || a.icao}${100 + Math.floor(r()*900)}`, n:airlineName(a), sub:t("sub.airline",{country:field(a.country), n:fmt(a.fleetTotal || 0)}),
+    gate:"C", st:"boarding", href:`airlines.html?id=${encodeURIComponent(a.id)}`});
+  const kn = k => k && out.push({k:"knowledge", code:k.id.replace(/-/g,"").toUpperCase().slice(0,7), n:field(k.name), sub:(STR[lang].cat||{})[k.category] || "",
+    gate:"D", st:"new", href:"knowledge.html"});
+  const pops = POPULAR.filter(p => p.icao !== "RCSS");
+  ac(uniq(withModel.length ? withModel : D.fleet, a => a.id)); ap(uniq(pops, p => p.icao)); al(uniq(carriers, a => a.id));
+  kn(uniq(D.topics, k => k.id)); ac(uniq(D.fleet, a => a.id)); ap(uniq(pops, p => p.icao));
+  const now = new Date(); let m = Math.ceil((now.getHours()*60 + now.getMinutes() + 6) / 5) * 5;
+  out.forEach(f => { f.time = `${String(Math.floor(m/60)%24).padStart(2,"0")}:${String(m%60).padStart(2,"0")}`; f.gate += 1 + Math.floor(r()*24); m += 5 + Math.floor(r()*3)*5; });
+  flights = out;
+}
+function tilesHTML(code){ return [...code.padEnd(7," ").slice(0,7)].map(ch => `<span class="tile"><span>${ch === " " ? "" : esc(ch)}</span></span>`).join(""); }
+function flapIn(container, code){
+  const finals = [...code.padEnd(7," ").slice(0,7)];
+  container.querySelectorAll(".tile").forEach((tile, i) => {
+    const span = tile.firstChild; let n = 0; const max = 4 + i * 2 + Math.floor(Math.random()*3);
+    const tick = () => {
+      tile.classList.remove("flip"); void tile.offsetWidth; tile.classList.add("flip");
+      if (n++ >= max) { span.textContent = finals[i] === " " ? "" : finals[i]; return; }
+      span.textContent = finals[i] === " " ? "" : POOL[Math.floor(Math.random() * POOL.length)];
+      setTimeout(tick, 55);
+    };
+    tick();
+  });
+}
+function renderBoard(animate){
+  if (!flights.length) buildFlights();
+  $("#rows").innerHTML = flights.map(f => `<a class="brow" href="${f.href}" data-name="${esc(f.n)}">
+      <span class="btime">${f.time}</span>
+      <span class="tiles" aria-label="${esc(f.code)}">${tilesHTML(animate ? "" : f.code)}</span>
+      <span class="bdest"><b>${esc(f.n)}</b><span>${esc(t("kind." + f.k))} · ${esc(f.sub)}</span></span>
+      <span class="bgate">${f.gate}</span>
+      <span class="bstat ${f.st === "3d" ? "go3d" : f.st}">${esc(t("st." + f.st))}</span>
+    </a>`).join("");
+  if (animate && !REDUCED) document.querySelectorAll("#rows .tiles").forEach((el, i) => setTimeout(() => flapIn(el, flights[i].code), i * 70));
+  else if (animate) document.querySelectorAll("#rows .tiles").forEach((el, i) => el.innerHTML = tilesHTML(flights[i].code));
+}
+$("#shuffle").addEventListener("click", () => { boardSeed = (boardSeed * 31 + 7) % 2147483647; buildFlights(); renderBoard(true); });
+function tickClock(){ const d = new Date(); $("#clock").textContent = `${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`; }
+tickClock(); setInterval(tickClock, 15000);
+
+/* ═══════════════ 機長廣播 ═══════════════ */
+let paIdx = -1;
+const PA_FALLBACK = [{id:"cavok", category:"weather", name:{zh:"CAVOK",en:"CAVOK",ja:"CAVOK"},
+  summary:{zh:"天氣報告中的 CAVOK 代表能見度 10 公里以上、沒有影響飛航的雲與重要天氣。",en:"CAVOK in a weather report means visibility of 10 km or more with no significant cloud or weather.",ja:"CAVOK は視程 10 km 以上で、運航に影響する雲や顕著な気象がないことを示す。"},
+  fact:{zh:"讀作「卡夫 OK」，是 Ceiling And Visibility OK 的縮寫。",en:"It stands for Ceiling And Visibility OK.",ja:"Ceiling And Visibility OK の略。"}}];
+function renderPA(){
+  const list = D.topics.length ? D.topics : PA_FALLBACK;
+  if (paIdx < 0) paIdx = Math.floor(rng(boardSeed + 17)() * list.length);
+  const k = list[paIdx % list.length], h = new Date().getHours();
+  $("#paGreet").textContent = [t(h < 11 ? "pa.morning" : h < 18 ? "pa.afternoon" : "pa.evening"), t("pa.lead")].join(lang === "en" ? " " : "");
+  $("#paTopic").textContent = field(k.name);
+  $("#paSum").textContent = field(k.summary);
+  const fact = field(k.fact);
+  $("#paFact").hidden = !fact;
+  $("#paFact").innerHTML = `<b>${esc(t("pa.fact"))}</b>${esc(fact)}`;
+}
+$("#paNext").addEventListener("click", () => { paIdx++; renderPA(); });
+
+/* ═══════════════ METAR 頁尾 ═══════════════ */
+function renderMetar(){
+  const c = counts(), d = new Date();
+  const z = `${String(d.getUTCDate()).padStart(2,"0")}${String(d.getUTCHours()).padStart(2,"0")}${String(d.getUTCMinutes()).padStart(2,"0")}Z`;
+  $("#metar").textContent = `METAR SKYA ${z} AC${c.aircraft}/${c.models}3D AP${c.airports} AL${c.airlines} KN${c.topics} CAVOK Q1013 NOSIG`;
+  $("#metarDecode").textContent = t("foot.decode", {a:fmt(c.aircraft), m:fmt(c.models), p:fmt(c.airports), l:fmt(c.airlines), k:fmt(c.topics)});
+}
+
+/* ═══════════════ 語言、主題、導覽 ═══════════════ */
+$("#lang").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; lang = b.dataset.lang; store.set("hangar_lang", lang); flights = []; renderAll(); });
+$("#theme").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const next = cur === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next); store.set("hangar_theme", next);
+});
+/* 概念頁若脫離網站單獨預覽（找不到 fleet.html），站內連結改為提示，不跳到不存在的頁面 */
+let PREVIEW = false;
+fetch("fleet.html", {method:"HEAD"}).then(r => { PREVIEW = !r.ok; }).catch(() => { PREVIEW = true; });
+let toastTimer;
+function toast(msg){ const el = $("#toast"); el.textContent = msg; el.classList.add("on"); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove("on"), 2600); }
+function go(href, name){ if (PREVIEW) toast(t("toast.preview", {name})); else location.href = href; }
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[href]"); if (!a || !PREVIEW) return;
+  const href = a.getAttribute("href"); if (/^https?:/.test(href)) return;
+  e.preventDefault();
+  const name = a.dataset.name || a.querySelector(".n, .c.to span, b")?.textContent || a.textContent.trim().split("\n")[0];
+  toast(t("toast.preview", {name: name.trim()}));
+});
+
+/* ═══════════════ 啟動 ═══════════════ */
+renderAll();
+(async () => {
+  const [fleet, airlines, count, knowledge] = await Promise.all([
+    getJSON("data/fleet.json", 182), getJSON("data/airlines.json", 139),
+    getJSON("data/airport_count.json", 138), getJSON("data/knowledge.json", 192)
+  ]);
+  if (fleet) D.fleet = fleet.aircraft || [];
+  if (airlines) D.airlines = airlines.airlines || [];
+  if (count) D.airportCount = count.count;
+  if (knowledge) {
+    const ids = new Set(knowledge.topics.map(k => k.id)); D.topics = knowledge.topics.slice();
+    try { JSON.parse(store.get("hangar_knowledge_custom") || "[]").forEach(k => { if (k && k.id && !ids.has(k.id)) { ids.add(k.id); D.topics.push(k); } }); } catch (e) {}
+  }
+  flights = []; paIdx = -1;
+  renderAll();
+})();
+</script>
+</body>
+</html>
