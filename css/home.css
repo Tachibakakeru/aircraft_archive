@@ -49,6 +49,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none !important}   /* 元件自己的 display（例如 .rp 的 flex）不能蓋過 hidden 屬性 */
 /* 依專案規則：隱藏所有原生捲軸，保留滾輪／觸控／鍵盤捲動 */
 *{scrollbar-width:none;-ms-overflow-style:none}
 *::-webkit-scrollbar{display:none}
@@ -137,17 +138,32 @@ button{font:inherit;color:inherit}
 .chip:hover{background:var(--hero-ink);color:var(--sky-1)}
 
 /* 航線示意 */
-.route-card{position:relative;min-width:0;color:var(--hero-ink)}
-.route-card svg.map{width:100%;height:auto;display:block;overflow:visible}
-.map .grid{fill:none;stroke:var(--glass-line);stroke-width:1;stroke-dasharray:2 6}
-.map .track{fill:none;stroke:var(--hero-ink);stroke-opacity:.45;stroke-width:2;stroke-dasharray:4 7}
-.map .flown{fill:none;stroke:var(--hero-ink);stroke-width:3;stroke-linecap:round}
-.map .apt{fill:var(--sky-1);stroke:var(--hero-ink);stroke-width:3}
-.map .apt-ring{fill:none;stroke:var(--hero-ink);stroke-opacity:.5;animation:ping 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
+/* 隨機航線卡（整塊可點，開啟航線規劃） */
+.route-card{position:relative;min-width:0;color:var(--hero-ink);cursor:pointer;border-radius:20px;padding:12px;margin:-12px;transition:background .2s}
+.route-card:hover{background:var(--glass)}
+.route-card:focus-visible{outline:3px solid var(--hero-ink);outline-offset:2px}
+.route-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+.route-top .label{color:var(--hero-muted)}
+.route-open{font-size:12.5px;font-weight:600;color:var(--hero-ink);display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:99px;border:1px solid var(--glass-line);background:var(--glass)}
+.route-open::after{content:"→";transition:transform .2s}
+.route-card:hover .route-open::after{transform:translateX(3px)}
+.route-map{aspect-ratio:560/300;width:100%;--sky-ink:var(--hero-ink);--sky-muted:var(--hero-muted)}
+
+/* RouteMap 元件（js/routemap.js）：點陣陸地 canvas＋SVG 航線 */
+.routemap{position:relative;overflow:hidden}
+.routemap canvas,.routemap svg{position:absolute;inset:0;width:100%;height:100%;display:block;transition:opacity .28s}
+.routemap.rm-fading canvas,.routemap.rm-fading svg{opacity:0}
+.rm-track{stroke:var(--rm-line);stroke-opacity:.6;stroke-width:2;stroke-dasharray:4 7;stroke-linecap:round}
+.rm-flown{stroke:var(--rm-line);stroke-width:3;stroke-linecap:round}
+.rm-dot{fill:var(--rm-fill);stroke:var(--rm-line);stroke-width:3}
+.rm-ring{fill:none;stroke:var(--rm-line);stroke-opacity:0;transform-box:fill-box;transform-origin:center}
+.rm-from .rm-ring{stroke-opacity:.5;animation:ping 2.4s ease-out infinite}
+.rm-arrived .rm-to .rm-ring{stroke-opacity:.6;animation:ping 1.6s ease-out infinite}
 @keyframes ping{from{transform:scale(1);opacity:.9}to{transform:scale(3.2);opacity:0}}
-.map text{fill:var(--hero-ink);font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.04em}
-.map text.small{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.12em;fill:var(--hero-muted)}
-.map .plane{fill:var(--hero-ink)}
+.rm-code{fill:var(--rm-label);font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.04em}
+.rm-sub{fill:var(--rm-sub);font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.04em}
+.rm-plane{fill:var(--rm-line);transition:opacity .35s}
+.rm-arrived .rm-plane{opacity:0 !important}   /* 抵達後飛機「降落」消失，露出終點 */
 .readout{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:6px;border-radius:14px;overflow:hidden;border:1px solid var(--glass-line);background:var(--glass-line);backdrop-filter:blur(8px)}
 .readout div{background:var(--glass);padding:10px 12px;min-width:0}
 .readout .label{font-size:9.5px;color:var(--hero-muted)}
@@ -274,7 +290,7 @@ footer{padding-block:64px 40px}
 /* ── 響應式 ── */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr;gap:28px;padding-bottom:56px}
-  .route-card{max-width:560px}
+  .route-card{max-width:600px;margin:0;padding:0}
   .split{grid-template-columns:1fr}
   .tools{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nav{display:none}
@@ -306,4 +322,78 @@ footer{padding-block:64px 40px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ═══════════════ 航線規劃（全螢幕對話框） ═══════════════ */
+body.rp-open{overflow:hidden}
+.rp{position:fixed;inset:0;z-index:60;background:rgba(3,14,34,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;
+  padding:max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px))}
+.rp-sheet:focus{outline:none}
+.rp-sheet{width:min(1180px,100%);max-height:100%;overflow-y:auto;background:var(--bg);border-radius:24px;box-shadow:var(--shadow-hi);display:flex;flex-direction:column}
+.rp-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:22px 24px 14px;color:var(--hero-ink);
+  background:linear-gradient(180deg,var(--sky-1),var(--sky-2));border-radius:24px 24px 0 0}
+.rp-head .label{color:var(--hero-muted)}
+.rp-head h2{font-family:var(--display);font-weight:900;font-size:clamp(26px,3.4vw,36px);line-height:1.1;margin:4px 0}
+.rp-head p{color:var(--hero-muted);font-size:14px}
+.rp-close{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--glass-line);background:var(--glass);color:var(--hero-ink);cursor:pointer;display:grid;place-items:center}
+.rp-close:hover{background:var(--hero-ink);color:var(--sky-1)}
+.rp-close svg{width:18px;height:18px}
+.rp-form{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto;gap:10px;align-items:end;padding:16px 24px 6px}
+.rp-field{position:relative;display:flex;flex-direction:column;gap:4px;min-width:0}
+.rp-field .label{font-size:10px;color:var(--muted)}
+.rp-field input{width:100%;font:inherit;font-size:16px;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.rp-field input:focus{outline:none;border-color:var(--azure);box-shadow:0 0 0 3px color-mix(in srgb,var(--azure) 18%,transparent)}
+.rp-icon,.rp-random{height:48px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--azure);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.rp-icon{width:48px}
+.rp-random{padding:0 16px;font-weight:700;font-size:14px;background:var(--azure);color:var(--on-azure);border-color:var(--azure)}
+.rp-random:hover{background:var(--azure-2)}
+.rp-icon:hover{border-color:var(--azure)}
+.rp-icon svg,.rp-random svg{width:20px;height:20px}
+.rp-list{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:5;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-hi);max-height:320px;overflow-y:auto;padding:6px}
+.rp-opt{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;align-items:center;padding:8px 10px;border-radius:10px;cursor:pointer}
+.rp-opt[aria-selected="true"],.rp-opt:hover{background:color-mix(in srgb,var(--azure) 12%,transparent)}
+.rp-opt b{font-family:var(--mono);font-size:13.5px;color:var(--azure)}
+.rp-opt .n,.rp-opt .s{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rp-opt .n{font-weight:500;font-size:14px}
+.rp-opt .s{font-size:12px;color:var(--muted)}
+.rp-msg{padding:12px;color:var(--muted);font-size:13.5px}
+.rp-presets{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 24px 14px}
+.rp-presets .label{color:var(--muted);margin-right:4px}
+.chip-lite{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--azure);background:color-mix(in srgb,var(--azure) 9%,transparent);border:1px solid transparent;border-radius:99px;padding:5px 11px;cursor:pointer}
+.chip-lite:hover{border-color:var(--azure)}
+.rp-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;padding:0 24px 24px;align-items:stretch}
+.rp-map{border-radius:18px;background:linear-gradient(180deg,var(--sky-1),var(--sky-2) 70%,var(--sky-3));min-height:380px;color:var(--hero-ink);
+  --sky-ink:var(--hero-ink);--sky-muted:var(--hero-muted)}
+.rp-info{display:flex;flex-direction:column;gap:14px;min-width:0}
+.rp-strip{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.rp-end b{display:block;font-family:var(--display);font-size:40px;line-height:1;font-weight:700;letter-spacing:.03em}
+.rp-end span{display:block;font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
+.rp-end.to{text-align:right}
+.rp-end.to b{color:var(--azure)}
+.rp-plane{width:26px;height:26px;fill:var(--azure);transform:rotate(90deg)}
+.rp-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.rp-stats div{background:var(--card);padding:10px 12px;min-width:0}
+.rp-stats dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rp-stats dd b{display:block;font-family:var(--display);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
+.rp-stats dd span{display:block;font-size:12px;color:var(--muted)}
+.rp-stats .rp-warn{grid-column:1/-1;color:var(--beacon);font-weight:600}
+.rp-note{font-size:12px;color:var(--muted);line-height:1.6}
+.rp-actions{display:flex;flex-wrap:wrap;gap:8px}
+.rp-actions .btn svg{width:14px;height:14px}
+@media (max-width:860px){
+  .rp-body{grid-template-columns:1fr}
+  .rp-map{min-height:0;aspect-ratio:4/3}
+  .rp-form{grid-template-columns:minmax(0,1fr) auto}
+  .rp-form #rpToField{grid-column:1}
+  .rp-form .rp-random{grid-column:2;grid-row:2}
+  .rp-form .rp-icon{grid-column:2;grid-row:1}
+}
+@media (max-width:520px){
+  .rp{padding:0}
+  .rp-sheet{border-radius:0;height:100%}
+  .rp-head{border-radius:0}
+  .rp-head,.rp-form,.rp-presets,.rp-body{padding-left:16px;padding-right:16px}
+  .rp-random span{display:none}
+  .rp-random{width:48px;padding:0}
+  .rp-end b{font-size:32px}
 }

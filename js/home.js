@@ -243,37 +243,200 @@ $("#booker").addEventListener("submit", async e => {
 });
 document.addEventListener("click", e => { if (!e.target.closest("#booker") && !e.target.closest(".chip")) closeResults(); });
 
-/* ═══════════════ 首屏航線示意 ═══════════════ */
-const track = $("#track"), flown = $("#flown"), plane = $("#plane");
-const LEN = track.getTotalLength();
-flown.style.strokeDasharray = `${LEN} ${LEN}`;
-let destIdx = 0;
-function updateRouteText(){
-  const d = POPULAR[destIdx], km = gcKm(TPE, d);
-  $("#destCode").textContent = d.iata; $("#destIcao").textContent = d.icao;
-  $("#hudDest").textContent = field(d.name);
+/* ═══════════════ 首屏隨機航線＋航線規劃 ═══════════════
+   - 首屏右上角：每飛完一趟，從大型機場清單（data/route_airports.json，1,172 座有 IATA 的
+     large_airport）隨機挑一組起降機場（距離 800–15,500 km）。清單載入前先用內建的熱門機場。
+   - 動畫由 js/routemap.js 負責：虛線航線從起點畫到終點 → 飛機飛過處變實線 → 抵達後換下一趟。
+   - 點這個區塊開啟「航線規劃」：可自己搜尋起降機場（大型機場＋全球機場代碼表）、交換、隨機、熱門航線，
+     並顯示距離、預估航時、巡航高度、起始航向、航程分類與最高緯度。 */
+const toApt = r => ({ id:r[0], iata:r[1], name:r[2], city:r[3], country:r[4], lat:r[5], lon:r[6], cityZh:r[7], cityJa:r[8] });
+const POP_APTS = [TPE, ...POPULAR].map(p => ({ id:p.icao, iata:p.iata, name:p.name ? p.name.en : "Taiwan Taoyuan International Airport",
+  city:p.name ? p.name.en : "Taoyuan", country:"", lat:p.lat, lon:p.lon,
+  cityZh:p.name ? p.name.zh : "臺灣桃園", cityJa:p.name ? p.name.ja : "台湾桃園" }));
+let routePool = POP_APTS, codesPool = null, countryNames = null;
+const aptCity = a => (lang === "zh" && a.cityZh) || (lang === "ja" && a.cityJa) || a.city || a.name;
+const aptCode = a => a.iata || a.id;
+const aptCountry = a => (countryNames && countryNames[a.country] && (countryNames[a.country][lang] || countryNames[a.country].en)) || a.country || "";
+const mapApt = a => ({ lat:a.lat, lon:a.lon, code:aptCode(a), label:aptCity(a) });
+function pickPair(pool = routePool){
+  for (let i = 0; i < 60; i++){
+    const a = pool[Math.floor(Math.random() * pool.length)], b = pool[Math.floor(Math.random() * pool.length)];
+    if (a === b) continue;
+    const km = gcKm(a, b);
+    if (km >= 800 && km <= 15500) return { a, b };
+  }
+  return { a: POP_APTS[0], b: POP_APTS[1] };
+}
+async function loadRoutePool(){
+  const [r, c] = await Promise.all([getJSON("data/route_airports.json", 1), getJSON("data/countries.json", 138)]);
+  if (r && r.airports && r.airports.length) routePool = r.airports.map(toApt);
+  if (c) countryNames = c;
+}
+
+/* 首屏 */
+const heroMap = RouteMap.create($("#heroMap"));
+let heroPair = pickPair(), heroPaused = false, heroResume = null;
+function updateHeroText(){
+  if (!heroPair) return;
+  const { a, b } = heroPair, km = gcKm(a, b);
+  $("#hudRoute").textContent = `${aptCode(a)} → ${aptCode(b)}`;
   $("#hudDist").textContent = `${fmt(Math.round(km))} km`;
   $("#hudTime").textContent = blockTime(km);
   $("#hudFl").textContent = cruiseFl(km);
-  $("#routeCap").textContent = t("hud.cap", {name: field(d.name)});
+  $("#routeCap").textContent = t("hud.cap");
+  $("#routeCard").setAttribute("aria-label", `${t("route.open")}: ${aptCity(a)} → ${aptCity(b)}`);
 }
-function placePlane(p){
-  const L = LEN * p, a = track.getPointAtLength(L), b = track.getPointAtLength(Math.min(LEN, L + 1));
-  const ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
-  plane.setAttribute("transform", `translate(${a.x} ${a.y}) rotate(${ang})`);
-  flown.style.strokeDashoffset = String(LEN * (1 - p));
+const updateRouteText = updateHeroText;   // renderAll() 換語言時呼叫
+async function heroLoop(){
+  for (;;){
+    if (heroPaused) await new Promise(r => { heroResume = r; });
+    const done = await heroMap.play(mapApt(heroPair.a), mapApt(heroPair.b), updateHeroText);
+    if (done && !heroPaused) heroPair = pickPair();
+  }
 }
-if (REDUCED) { placePlane(.62); }
-else {
-  const DUR = 9000, HOLD = 1400; let start = performance.now();
-  const loop = now => {
-    const el = now - start;
-    if (el > DUR + HOLD) { start = now; destIdx = (destIdx + 1) % (POPULAR.length - 1); updateRouteText(); }
-    const p = Math.min(1, el / DUR), ease = p < .5 ? 2*p*p : 1 - (-2*p + 2)**2 / 2;
-    placePlane(ease); requestAnimationFrame(loop);
+heroLoop();
+const routePoolReady = new Promise(res => (window.requestIdleCallback || (fn => setTimeout(fn, 1500)))(() => loadRoutePool().then(res, res)));
+
+/* 航線規劃 */
+const RP_PRESETS = [["RCTP","RJTT"],["RCTP","KLAX"],["EGLL","KJFK"],["WSSS","YSSY"],["OMDB","EGLL"],["RJAA","LFPG"],["KJFK","VHHH"]];
+let rpMap = null, rpA = null, rpB = null, rpOpener = null;
+const findApt = id => routePool.find(a => a.id === id) || POP_APTS.find(a => a.id === id) || (codesPool && codesPool.find(a => a.id === id));
+async function ensureCodesPool(){
+  if (codesPool) return codesPool;
+  const [raw] = await Promise.all([getJSON("data/airport_codes.json", 138), routePoolReady]);
+  const byId = new Map(routePool.map(a => [a.id, { ...a }]));
+  // 代碼表裡同一座機場會以 IATA、ICAO 各出現一次：以 id 合併，3 碼代碼補成 IATA
+  for (const [code, a] of Object.entries(raw || {})){
+    if (a.lat == null) continue;
+    let e = byId.get(a.id);
+    if (!e) { e = { id:a.id, iata:"", name:a.name, city:a.city || "", country:"", lat:a.lat, lon:a.lon, small:true }; byId.set(a.id, e); }
+    if (code.length === 3 && !e.iata) e.iata = code;
+  }
+  // 熱門機場另有中日文全名（例如「羽田」「成田」），加進搜尋別名
+  POP_APTS.forEach(p => { const e = byId.get(p.id); if (e) e.alias = [p.cityZh, p.cityJa, p.city]; });
+  codesPool = [...byId.values()];
+  return codesPool;
+}
+function aptSearch(q){
+  const nq = norm(q);
+  if (!nq) return [];
+  const list = codesPool || routePool;
+  return list.map(a => {
+    let sc = score(nq, [a.iata, a.id], [a.name, a.city, a.cityZh, a.cityJa, ...(a.alias || [])]);
+    if (sc && !a.small) sc += 6;
+    return { a, sc };
+  }).filter(x => x.sc > 0).sort((x, y) => y.sc - x.sc).slice(0, 8).map(x => x.a);
+}
+function rpLabel(a){ return a ? `${aptCode(a)} · ${aptCity(a)}` : ""; }
+function compass(deg){ return t("rp.dir." + ["N","NE","E","SE","S","SW","W","NW"][Math.round(deg / 45) % 8]); }
+function renderRpInfo(){
+  const a = rpA, b = rpB;
+  $("#rpFrom").value = rpLabel(a); $("#rpTo").value = rpLabel(b);
+  if (!a || !b) return;
+  const km = gcKm(a, b), course = RouteMap.bearing(a, b);
+  const pts = RouteMap.gcPoints(a, b, 96);
+  const top = pts.reduce((m, p) => Math.abs(p.lat) > Math.abs(m) ? p.lat : m, 0);
+  const kind = km < 1500 ? "short" : km < 4000 ? "medium" : km < 11000 ? "long" : "ultra";
+  $("#rpFromCode").textContent = aptCode(a); $("#rpToCode").textContent = aptCode(b);
+  $("#rpFromName").textContent = [a.name, [aptCity(a), aptCountry(a)].filter(Boolean).join(", ")].filter(Boolean).join(" · ");
+  $("#rpToName").textContent = [b.name, [aptCity(b), aptCountry(b)].filter(Boolean).join(", ")].filter(Boolean).join(" · ");
+  const rows = [
+    ["rp.dist", `${fmt(Math.round(km))} km`, `${fmt(Math.round(km / 1.852))} nm · ${fmt(Math.round(km / 1.609))} mi`],
+    ["rp.time", blockTime(km), ""],
+    ["rp.fl", cruiseFl(km), ""],
+    ["rp.course", `${Math.round(course).toString().padStart(3, "0")}°`, compass(course)],
+    ["rp.kind", t("rp.kind." + kind), { short: "< 1,500 km", medium: "1,500–4,000 km", long: "4,000–11,000 km", ultra: "> 11,000 km" }[kind]],
+    ["rp.maxlat", `${Math.abs(top).toFixed(1)}°${top >= 0 ? "N" : "S"}`, ""]
+  ];
+  $("#rpStats").innerHTML = rows.map(([k, v, sub]) => `<div><dt>${esc(t(k))}</dt><dd><b>${esc(v)}</b>${sub ? `<span>${esc(sub)}</span>` : ""}</dd></div>`).join("");
+  const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  $("#rpActions").innerHTML = `<button type="button" class="btn pri" id="rpReplay">${esc(t("rp.replay"))}</button>
+    <a class="btn" href="airports.html?icao=${encodeURIComponent(a.id)}">${esc(t("rp.fromApt"))} ${arrow}</a>
+    <a class="btn" href="airports.html?icao=${encodeURIComponent(b.id)}">${esc(t("rp.toApt"))} ${arrow}</a>
+    <a class="btn" href="distance.html?from=${encodeURIComponent(a.id)}&to=${encodeURIComponent(b.id)}">${esc(t("rp.calc"))} ${arrow}</a>`;
+  $("#rpReplay").addEventListener("click", rpPlay);
+}
+async function rpPlay(){
+  if (!rpA || !rpB || !rpMap) return;
+  const done = await rpMap.play(mapApt(rpA), mapApt(rpB));
+  if (done) rpMap.show(mapApt(rpA), mapApt(rpB));   // 播完停在抵達畫面，不自動換航線
+}
+function rpSet(a, b, play = true){
+  if (a && b && a.id === b.id) { $("#rpStats").innerHTML = `<div class="rp-warn">${esc(t("rp.same"))}</div>`; return; }
+  rpA = a || rpA; rpB = b || rpB;
+  renderRpInfo();
+  if (play) rpPlay();
+}
+function renderPresets(){
+  $("#rpPresets").innerHTML = `<span class="label">${esc(t("rp.presets"))}</span>` + RP_PRESETS.map(([x, y]) => {
+    const a = findApt(x), b = findApt(y);
+    return a && b ? `<button type="button" class="chip-lite" data-a="${x}" data-b="${y}">${esc(aptCode(a))} → ${esc(aptCode(b))}</button>` : "";
+  }).join("");
+}
+$("#rpPresets").addEventListener("click", e => { const c = e.target.closest("[data-a]"); if (c) rpSet(findApt(c.dataset.a), findApt(c.dataset.b)); });
+function openPlanner(){
+  rpOpener = document.activeElement;
+  heroPaused = true; heroMap.stop();
+  $("#planner").hidden = false;
+  document.body.classList.add("rp-open");
+  if (!rpMap) rpMap = RouteMap.create($("#rpMap"), { gap: 10, bulge: .1, minSpan: 30 });
+  renderPresets();
+  rpSet(heroPair.a, heroPair.b);
+  ensureCodesPool();
+  // 觸控裝置不自動聚焦輸入框（否則一打開就跳出鍵盤），改聚焦對話框本身
+  setTimeout(() => (matchMedia("(pointer: fine)").matches ? $("#rpFrom") : $(".rp-sheet")).focus({ preventScroll: true }), 50);
+}
+function closePlanner(){
+  $("#planner").hidden = true;
+  document.body.classList.remove("rp-open");
+  if (rpMap) rpMap.stop();
+  heroPaused = false;
+  if (heroResume) { const r = heroResume; heroResume = null; r(); }
+  if (rpOpener && rpOpener.focus) rpOpener.focus({ preventScroll: true });
+}
+$("#routeCard").addEventListener("click", openPlanner);
+$("#routeCard").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openPlanner(); } });
+$("#rpClose").addEventListener("click", closePlanner);
+$("#planner").addEventListener("click", e => { if (e.target.id === "planner") closePlanner(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#planner").hidden && !document.querySelector(".rp-list:not([hidden])")) closePlanner(); });
+$("#rpSwap").addEventListener("click", () => { if (rpA && rpB) rpSet(rpB, rpA); });
+$("#rpRandom").addEventListener("click", () => { const p = pickPair(); rpSet(p.a, p.b); });
+
+/* 機場搜尋選單（出發／抵達共用；↑↓ Enter Esc） */
+function wirePicker(input, list, which){
+  let items = [], act = -1;
+  const close = () => { list.hidden = true; input.setAttribute("aria-expanded", "false"); act = -1; };
+  const mark = () => list.querySelectorAll(".rp-opt").forEach((el, i) => {
+    el.setAttribute("aria-selected", String(i === act));
+    if (i === act) { el.scrollIntoView({ block: "nearest" }); input.setAttribute("aria-activedescendant", el.id); }
+  });
+  const choose = i => { const a = items[i]; if (!a) return; close(); which === "from" ? rpSet(a, null) : rpSet(null, a); input.blur(); };
+  const render = async () => {
+    const q = input.value.trim();
+    if (!q) { close(); return; }
+    if (!codesPool) { list.innerHTML = `<div class="rp-msg">${esc(t("rp.loading"))}</div>`; list.hidden = false; await ensureCodesPool(); if (input.value.trim() !== q) return; }
+    items = aptSearch(q); act = items.length ? 0 : -1;
+    list.innerHTML = items.length ? items.map((a, i) => `<div class="rp-opt" role="option" id="${input.id}-o${i}" data-i="${i}">
+        <b>${esc(aptCode(a))}</b><span><span class="n">${esc(a.name)}</span><span class="s">${esc([a.id, aptCity(a), aptCountry(a)].filter(Boolean).join(" · "))}</span></span></div>`).join("")
+      : `<div class="rp-msg">${esc(t("rp.empty", { q }))}</div>`;
+    list.hidden = false; input.setAttribute("aria-expanded", "true"); mark();
   };
-  requestAnimationFrame(loop);
+  let tm;
+  input.addEventListener("focus", () => input.select());
+  input.addEventListener("input", () => { clearTimeout(tm); tm = setTimeout(render, 80); });
+  input.addEventListener("keydown", e => {
+    if (list.hidden) return;
+    if (e.key === "ArrowDown" && items.length) { e.preventDefault(); act = (act + 1) % items.length; mark(); }
+    else if (e.key === "ArrowUp" && items.length) { e.preventDefault(); act = (act - 1 + items.length) % items.length; mark(); }
+    else if (e.key === "Enter") { e.preventDefault(); choose(act < 0 ? 0 : act); }
+    else if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); close(); input.value = rpLabel(which === "from" ? rpA : rpB); }
+  });
+  list.addEventListener("mousedown", e => { const o = e.target.closest(".rp-opt"); if (o) { e.preventDefault(); choose(+o.dataset.i); } });
+  input.addEventListener("blur", () => setTimeout(() => { if (!list.hidden) { close(); input.value = rpLabel(which === "from" ? rpA : rpB); } }, 150));
 }
+wirePicker($("#rpFrom"), $("#rpFromList"), "from");
+wirePicker($("#rpTo"), $("#rpToList"), "to");
+document.addEventListener("langchange", () => { if (!$("#planner").hidden) { renderPresets(); renderRpInfo(); } });
 
 /* ═══════════════ 出發看板 ═══════════════ */
 const POOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

@@ -682,3 +682,11 @@
 
 - 使用者回覆「PUSH」。推送前重跑：所有 `js/*.js` 語法檢查、`python tools/check_knowledge.py`（82 筆）、manifest 與主要資料 JSON 解析、`git diff --check`（排除上游 OFL 授權原文）、本機 HTTP 17 個主要檔案皆 200、十個子頁 Playwright 無 page error。`origin/main` 無新提交，以快轉合併 `claude/eager-euler-euibb4` 到 `main`（含全站藍色系、導覽列、新 Logo、地圖加速、線條圖示四輪改動），由 Cloudflare Pages 部署。
 - 回答使用者：首頁右上角航線示意不是隨機，而是依 `js/home.js` 的 `POPULAR` 清單固定順序輪播（每次載入都從東京羽田開始，桃園出發，依序 15 個目的地，臺北松山不在輪播中）。
+
+### 首頁隨機航線與航線規劃（2026-11-03，工作分支預覽，待確認）
+
+- 使用者要求首頁右上角每飛完一趟換隨機起降機場、點擊進入可手動選機場的畫面（由我設計）、航線虛線→飛過變實線的動畫。完整設計記於 `docs/homepage-concept.md` 第 12 節。
+- 新增 `js/routemap.js`（點陣世界地圖＋大圓航線動畫元件）、`data/route_airports.json`（1,172 座大型機場）、`data/landmask.json`（0.5° 陸地遮罩），與產生工具 `tools/build_route_airports.py`、`tools/build_landmask.py`。
+- 首頁：`#routeCard` 改為可點按鈕；新增 `#planner` 航線規劃對話框（搜尋、交換、隨機、熱門航線、距離／航時／高度／航向／分類／最高緯度、機場與距離計算器連結）。三語字串 `home.route.*`、`home.rp.*`。
+- 修正：`home.css` 補 `[hidden]{display:none !important}`，否則隱藏的對話框仍會攔截點擊。
+- 驗證：桌機／iPhone 13 模擬截圖與互動測試、無 page error、手機無溢出。推送到工作分支 `claude/eager-euler-euibb4` 供預覽，**未合併 `main`**。

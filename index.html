@@ -10,9 +10,9 @@
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="theme-color" content="#1565d8">
 <link rel="preload" href="assets/fonts/barlow-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/home.css?v=193">
+<link rel="stylesheet" href="css/home.css?v=203">
 <script src="js/theme.js?v=138"></script>
-<script src="js/i18n.js?v=201"></script>
+<script src="js/i18n.js?v=203"></script>
 </head>
 <body>
 
@@ -72,20 +72,11 @@
       <div class="chips" id="chips"><span class="label" data-i18n="home.chips.label">熱門航點</span></div>
     </div>
 
-    <div class="route-card" aria-hidden="true">
-      <svg class="map" viewBox="0 0 560 300">
-        <path class="grid" d="M0 70 Q280 30 560 70"/><path class="grid" d="M0 150 Q280 110 560 150"/><path class="grid" d="M0 230 Q280 190 560 230"/>
-        <path class="grid" d="M110 0 Q90 150 110 300"/><path class="grid" d="M280 0 V300"/><path class="grid" d="M450 0 Q470 150 450 300"/>
-        <path id="track" class="track" d="M70 232 C 170 40, 400 30, 492 176"/>
-        <path id="flown" class="flown" d="M70 232 C 170 40, 400 30, 492 176"/>
-        <circle class="apt-ring" cx="492" cy="176" r="8"/>
-        <circle class="apt" cx="70" cy="232" r="7"/><circle class="apt" cx="492" cy="176" r="7"/>
-        <text x="46" y="276">TPE</text><text class="small" x="46" y="292">RCTP</text>
-        <text id="destCode" x="470" y="220">HND</text><text id="destIcao" class="small" x="470" y="236">RJTT</text>
-        <g id="plane"><path class="plane" transform="translate(-15 -15) scale(1.25) rotate(90 12 12)" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></g>
-      </svg>
+    <div class="route-card" id="routeCard" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="planner">
+      <div class="route-top"><span class="label" data-i18n="home.route.badge">隨機航線</span><span class="route-open" data-i18n="home.route.open">自己選起降機場</span></div>
+      <div class="route-map" id="heroMap"></div>
       <div class="readout">
-        <div><span class="label" data-i18n="home.hud.to">目的地</span><b id="hudDest">—</b></div>
+        <div><span class="label" data-i18n="home.hud.route">航線</span><b id="hudRoute">—</b></div>
         <div><span class="label" data-i18n="home.hud.dist">大圓距離</span><b id="hudDist">—</b></div>
         <div><span class="label" data-i18n="home.hud.time">預估航時</span><b id="hudTime">—</b></div>
         <div><span class="label" data-i18n="home.hud.fl">巡航高度</span><b id="hudFl">—</b></div>
@@ -166,6 +157,51 @@
   <p class="foot-tag" data-i18n="home.foot.tag">SKY ARCHIVE — 飛行器、機場與航空公司的互動資料庫</p>
 </footer>
 
-<script src="js/home.js?v=193"></script>
+<!-- 航線規劃（點首頁右上角航線開啟；設計紀錄 docs/homepage-concept.md 第 12 節） -->
+<div class="rp" id="planner" hidden>
+  <div class="rp-sheet" role="dialog" aria-modal="true" aria-labelledby="rpTitle" tabindex="-1">
+    <header class="rp-head">
+      <div>
+        <span class="label">ROUTE PLANNER</span>
+        <h2 id="rpTitle" data-i18n="home.rp.title">航線規劃</h2>
+        <p data-i18n="home.rp.sub">選出發與抵達機場，看大圓航線、距離與預估航時。</p>
+      </div>
+      <button type="button" class="rp-close" id="rpClose" data-i18n-title="home.rp.close" title="關閉"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+
+    <div class="rp-form">
+      <div class="rp-field" id="rpFromField">
+        <label for="rpFrom" class="label" data-i18n="home.rp.from">出發</label>
+        <input id="rpFrom" type="text" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="rpFromList" aria-autocomplete="list" data-i18n-ph="home.rp.ph">
+        <div class="rp-list" id="rpFromList" role="listbox" hidden></div>
+      </div>
+      <button type="button" class="rp-icon" id="rpSwap" data-i18n-title="home.rp.swap" title="交換"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h15M16 4l3 3-3 3M20 17H5M8 14l-3 3 3 3"/></svg></button>
+      <div class="rp-field" id="rpToField">
+        <label for="rpTo" class="label" data-i18n="home.rp.to">抵達</label>
+        <input id="rpTo" type="text" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="rpToList" aria-autocomplete="list" data-i18n-ph="home.rp.ph">
+        <div class="rp-list" id="rpToList" role="listbox" hidden></div>
+      </div>
+      <button type="button" class="rp-random" id="rpRandom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3c4 0 6 10 10 10h3M4 17h3c1.6 0 2.8-1.6 3.9-3.5M17 4l3 3-3 3M17 14l3 3-3 3M13.1 9.5C14.2 8.1 15.4 7 17 7h3"/></svg><span data-i18n="home.rp.random">隨機一條</span></button>
+    </div>
+    <div class="rp-presets" id="rpPresets"><span class="label" data-i18n="home.rp.presets">熱門航線</span></div>
+
+    <div class="rp-body">
+      <div class="rp-map" id="rpMap"></div>
+      <aside class="rp-info" aria-live="polite">
+        <div class="rp-strip">
+          <div class="rp-end"><b id="rpFromCode">—</b><span id="rpFromName"></span></div>
+          <svg class="rp-plane" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+          <div class="rp-end to"><b id="rpToCode">—</b><span id="rpToName"></span></div>
+        </div>
+        <dl class="rp-stats" id="rpStats"></dl>
+        <p class="rp-note" data-i18n="home.rp.note">航時以平均地速約 830 km/h 加 30 分鐘起降估算，實際航班依航路、風向與機型而不同。</p>
+        <div class="rp-actions" id="rpActions"></div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<script src="js/routemap.js?v=5"></script>
+<script src="js/home.js?v=204"></script>
 </body>
 </html>
