@@ -908,19 +908,19 @@
       "category": "operations",
       "hotspot": null,
       "name": {
-        "zh": "飛航紀錄器 FDR／CVR",
-        "en": "FDR / CVR (Flight Recorders / \"Black Box\")",
-        "ja": "飛行記録装置 FDR／CVR（ブラックボックス）"
+        "zh": "黑盒子：飛航紀錄器 FDR／CVR",
+        "en": "Black Box: Flight Recorders (FDR / CVR)",
+        "ja": "ブラックボックス：飛行記録装置 FDR／CVR"
       },
       "summary": {
-        "zh": "飛航資料紀錄器（FDR）持續記錄飛機各項飛行參數，座艙語音紀錄器（CVR）錄下駕駛艙內對話與聲音，事故調查時是還原事發經過的關鍵證據。",
-        "en": "The Flight Data Recorder (FDR) continuously logs flight parameters, while the Cockpit Voice Recorder (CVR) records conversations and sounds in the cockpit — together the key evidence investigators use to reconstruct what happened in an accident.",
-        "ja": "フライトデータレコーダー（FDR）は各種飛行パラメーターを継続的に記録し、コックピットボイスレコーダー（CVR）は操縦室内の会話や音声を録音する。事故調査において経緯を再現する重要な証拠となる。"
+        "zh": "「黑盒子」是飛航紀錄器（flight recorder）的俗稱，常包括飛航資料紀錄器 FDR（Flight Data Recorder）與座艙語音紀錄器 CVR（Cockpit Voice Recorder）。FDR 記錄高度、空速、航向及系統狀態等參數；CVR 記錄機組通話與座艙聲響，協助事故調查重建經過。",
+        "en": "‘Black box’ is a nickname for flight recorders, commonly the Flight Data Recorder (FDR) and Cockpit Voice Recorder (CVR). The FDR logs parameters such as altitude, airspeed, heading and system states; the CVR captures crew speech and cockpit sounds. Together they help investigators reconstruct an accident.",
+        "ja": "「ブラックボックス」は飛行記録装置の通称で、通常は飛行データ記録装置 FDR（Flight Data Recorder）と操縦室音声記録装置 CVR（Cockpit Voice Recorder）を指す。FDR は高度・対気速度・方位・システム状態などを、CVR は乗員の会話や操縦室の音を記録し、事故調査で経緯を再現する手掛かりになる。"
       },
       "fact": {
-        "zh": "「黑盒子」其實外觀是鮮豔的橘色，方便事故現場搜尋人員辨識；其外殼設計需通過極端撞擊、高溫燃燒與深海高壓的認證測試，確保資料即使在嚴重事故中也能被完整取出。",
-        "en": "The \"black box\" is actually painted bright orange to help accident investigators find it at the scene; its casing must pass certification tests for extreme impact, high-temperature fire, and deep-sea pressure to ensure the data survives even a severe accident.",
-        "ja": "「ブラックボックス」という呼び名とは裏腹に、実際の外観は捜索しやすいよう鮮やかなオレンジ色に塗装されている。その筐体は極端な衝撃・高温での燃焼・深海の高圧に耐える認証試験に合格する必要があり、深刻な事故でもデータが完全な形で取り出せるよう設計されている。"
+        "zh": "名稱雖叫黑盒子，外殼通常是醒目的橘色。美國 NTSB 列出的耐撞存儲單元規格包括：承受 3,400 g 衝擊 6.5 毫秒、1,100°C 高溫燃燒 30 分鐘，以及約 20,000 呎（約 6,100 公尺）水深壓力；水下定位信標 ULB（Underwater Locator Beacon）遇水啟動，協助搜尋。這些是設計／測試條件，不保證每次事故都能完整回收資料。",
+        "en": "Despite the name, recorder cases are usually bright orange. NTSB-listed crash-survival specifications include a 3,400 g impact for 6.5 ms, fire at 1,100°C for 30 minutes, and water pressure equivalent to roughly 20,000 ft (6,100 m) depth. An Underwater Locator Beacon (ULB) helps searchers find a submerged recorder. These are design/test conditions, not a guarantee of complete recovery in every accident.",
+        "ja": "名前に反して、記録装置の外装は通常見つけやすい鮮やかなオレンジ色。米国 NTSB が示す耐事故性の仕様には、3,400 g・6.5 ミリ秒の衝撃、1,100°C・30 分間の火災、約 20,000 フィート（約 6,100 メートル）の水深に相当する圧力への耐性が含まれる。水中位置探知ビーコン ULB（Underwater Locator Beacon）は水没時の捜索を助ける。これらは設計・試験条件であり、どの事故でも全データの回収を保証するものではない。"
       },
       "images": []
     },

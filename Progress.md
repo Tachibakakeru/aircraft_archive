@@ -575,3 +575,9 @@
 - 補充資料品質檢查：82 筆依 `instrument/aerodynamics/atc/navigation/weather/airport/operations/systems` 分類；新增內容的三語 `name/summary/fact` 均不為空、ID 無重複。預覽切回繁中並開啟 CAVOK 詳情供使用者檢查；螢幕截圖暫存於系統 Temp，不列入版本控制。
 - 另以預覽搜尋 `Jet A`，確認「噴射燃油 Jet A／Jet A-1」能置中並開啟詳情，顯示三語資料中的繁中內容；使用者要求的本輪暫停點已到（五小時用量視窗約用至 90%）。App 預覽最後保留在燃油詳情，待使用者檢查；未推送。
 - 使用者於下一輪明確同意「PUSH」。重新核對 App 本地預覽含新增節點，並重跑 82 筆知識資料驗證、JavaScript 語法及差異檢查均通過；僅提交本批知識資料、場景、首頁版本鍵、檢查器與作業文件，不納入未追蹤的韓國航空除錯資料或憑證資料夾，推送 `main`。
+
+### 黑盒子／飛航紀錄器內容補強（2026-11-03，本地預覽）
+
+- 沿用既有 `fdr-cvr` 條目，不新增重複節點，知識總數仍為 82。三語名稱加入「黑盒子／Black Box／ブラックボックス」，摘要展開 FDR、CVR 英文全名與各自記錄用途；補充說明加入 ULB 全名及美國 NTSB 列出的 3,400 g／6.5 ms 衝擊、1,100°C／30 分鐘火災、約 20,000 呎水深壓力等設計測試條件，並註明不保證每次事故均完整回收資料。
+- 來源：[NTSB 飛航資料／座艙語音紀錄器說明與規格](https://www-s.ntsb.gov/news/Pages/cvr_fdr.aspx)、[FAA 事故現場飛航紀錄器識別](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_150_5200-12C.pdf)。知識資料快取鍵升至 `v=185`，本輪僅供本地檢查，未提交或推送。未追蹤的韓國航空除錯資料維持原狀。
+- 驗證：`python tools/check_knowledge.py` 通過（82 筆）、`node --check js/knowledge.js` 與 `git diff --check` 通過；重啟停止的本地服務並在**原** App 預覽分頁重新整理。實際搜尋「黑盒子」後可開啟繁中詳情，顯示 FDR／CVR／ULB 全名及耐受測試值。預覽保留供檢查，沒有推送。
