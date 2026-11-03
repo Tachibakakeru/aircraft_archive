@@ -661,3 +661,4 @@
 - 版本：子頁 `style.css`／`i18n.js`／`sitebar.js` 與相關頁面 CSS、`compare.js`、`globe.js` 升 `v=200`；Service Worker `hangar-v51`。
 - 驗證：十個子頁淺色／深色截圖無 page error、無橫向溢出；機場與航空公司詳情、手機寬度、小知識深連結、編輯器登入後畫面均確認。測試機連不到 cdnjs／Wikimedia／ArcGIS，3D 檢視器改用本機 Three.js 副本截圖。
 - 狀態：只在本機修改與 commit，**未推送任何分支**，等待使用者看預覽後確認。
+- 使用者要求「先存到工作分支，同時給我看預覽」：推送到 `claude/eager-euler-euibb4`（不加 `[CF-Pages-Skip]`，讓 Cloudflare 建立 Preview 部署供使用者實際操作），正式站 `main` 不變。
