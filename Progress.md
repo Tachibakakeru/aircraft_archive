@@ -632,4 +632,5 @@
 - 概念結構：天空漸層 hero（「今天，想往哪裡飛？」）＋訂票式「出發／目的地」全站搜尋（全部／機型／機場／航空公司／知識，支援 ↑↓／Enter／Esc）→ 熱門航點 chips → 桃園出發的航線示意（依座標算大圓距離、預估航時與巡航高度）→ 四張登機證式資料庫入口（Gate A–D，數字由資料即時計算）→ 最近看過（沿用 `hangar_recent`）→ 每日輪替的出發看板（翻牌效果、點列即深連結）＋「機長廣播」知識卡 → 機上工具 → METAR 格式的資料庫狀態頁尾。
 - 深淺色皆以 token 設計，沿用 `hangar_theme`／`hangar_lang`；三語字串目前寫在概念頁內，正式採用時須併入 `js/i18n.js`。字體使用 Google Fonts（Barlow Condensed、Noto Sans TC、IBM Plex Mono），採用前需決定是否接受外部字體依賴。
 - 驗證：本機 `server.py` 下 Playwright 實測桌面淺色／深色、390px 手機寬度皆無橫向溢出、無 console 錯誤；搜尋 `eva` 首筆為長榮航空、`羽田` 找到 RJTT、`v1` 首筆為起飛速度條目。另發布私人 Artifact 預覽（內含同一批資料檔）供使用者在 App 檢視。
+- 完整設計過程、想法與採用步驟已整理於 `docs/homepage-concept.md`，供其他 session 交接。
 - 未解事項：知識頁尚無單一條目深連結，搜尋／看板的知識項目暫時只連到 `knowledge.html`；若採用，建議補 `knowledge.html?topic=<id>`。正式套用時需取代 `index.html`、更新 `?v=N` 與 SW `CACHE` 名稱。
