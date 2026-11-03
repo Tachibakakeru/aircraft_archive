@@ -651,3 +651,4 @@
 - `sw.js` 對頁面導覽採 network-first，部署完成後重新整理即可取得新 HTML；新首頁的 CSS／JS 用新網址 `?v=193`，不會被舊快取攔截。
 - 本 session 的網路政策不允許連到 Cloudflare Pages 網域，無法直接查看正式站或部署紀錄；需請使用者在 Cloudflare Pages 的部署列表確認 `67fb10f` 是否建置成功，並強制重新整理。
 - 使用者提供 Cloudflare 畫面：Production `67fb10f` 停在 **initialize** 超過 8 分鐘，還沒進到 clone／build；同一提交的 Preview（`a92c09e5.aircraft-archive.pages.dev`）已成功。判斷為 Cloudflare 建置機排隊／卡住，不是程式碼問題（本站無建置步驟）。工作分支的 `fc3a5cd` Preview 同時排隊，可能占用同一個建置名額。建議取消卡住的部署後重試，並取消該 Preview。此筆紀錄暫不推送，避免再觸發新的建置。
+- 使用者取消卡住的部署並對 `main 67fb10f` 重試後，正式網站已顯示新版「出境大廳」首頁，發布完成。建議在 Cloudflare Pages 的 Branch control 限制預覽分支，避免工作分支的預覽建置與正式部署搶名額。
