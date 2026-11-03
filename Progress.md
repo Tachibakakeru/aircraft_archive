@@ -677,3 +677,8 @@
 - `css/style.css` 新增 `data-ico` 圖示系統（CSS mask、currentColor，不受 I18N 改字影響）與 27 個自繪圖示；HTML／JS 模板的 emoji 改為 `data-ico`，只有圖示的按鈕補 `aria-label`；收藏星號改由 `.on`／`aria-pressed` 切換實心；`i18n.js` 84 個字串移除 emoji；主題按鈕 ◐ 改太陽圖示。
 - 版本：style／i18n `v=201`、airports／airlines JS 與 airports.css `v=202`、auth／knowledge／versus／editor JS `v=201`、SW `hangar-v53`。
 - 驗證：全專案掃描無 emoji（保留 ↗ ▾ ✓ 等排版符號）；JS 語法檢查與多頁截圖通過。推送到工作分支供預覽，**未合併 `main`**。
+
+### 全站改版正式發布（2026-11-03）
+
+- 使用者回覆「PUSH」。推送前重跑：所有 `js/*.js` 語法檢查、`python tools/check_knowledge.py`（82 筆）、manifest 與主要資料 JSON 解析、`git diff --check`（排除上游 OFL 授權原文）、本機 HTTP 17 個主要檔案皆 200、十個子頁 Playwright 無 page error。`origin/main` 無新提交，以快轉合併 `claude/eager-euler-euibb4` 到 `main`（含全站藍色系、導覽列、新 Logo、地圖加速、線條圖示四輪改動），由 Cloudflare Pages 部署。
+- 回答使用者：首頁右上角航線示意不是隨機，而是依 `js/home.js` 的 `POPULAR` 清單固定順序輪播（每次載入都從東京羽田開始，桃園出發，依序 15 個目的地，臺北松山不在輪播中）。
