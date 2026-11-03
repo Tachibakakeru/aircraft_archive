@@ -10,9 +10,9 @@
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="theme-color" content="#1565d8">
 <link rel="preload" href="assets/fonts/barlow-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/home.css?v=203">
+<link rel="stylesheet" href="css/home.css?v=204">
 <script src="js/theme.js?v=138"></script>
-<script src="js/i18n.js?v=203"></script>
+<script src="js/i18n.js?v=204"></script>
 </head>
 <body>
 
@@ -194,6 +194,11 @@
           <div class="rp-end to"><b id="rpToCode">—</b><span id="rpToName"></span></div>
         </div>
         <dl class="rp-stats" id="rpStats"></dl>
+        <div class="rp-speed">
+          <span class="label" id="rpSpeedLabel" data-i18n="home.rp.speed">飛行速度</span>
+          <div class="rp-seg" id="rpSpeedOpts" role="radiogroup" aria-labelledby="rpSpeedLabel"></div>
+          <p class="rp-speed-hint" id="rpSpeedHint"></p>
+        </div>
         <p class="rp-note" data-i18n="home.rp.note">航時以平均地速約 830 km/h 加 30 分鐘起降估算，實際航班依航路、風向與機型而不同。</p>
         <div class="rp-actions" id="rpActions"></div>
       </aside>
@@ -201,7 +206,7 @@
   </div>
 </div>
 
-<script src="js/routemap.js?v=5"></script>
-<script src="js/home.js?v=204"></script>
+<script src="js/routemap.js?v=6"></script>
+<script src="js/home.js?v=205"></script>
 </body>
 </html>

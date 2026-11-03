@@ -273,6 +273,15 @@ async function loadRoutePool(){
   if (c) countryNames = c;
 }
 
+/* 飛行速度：以「每 1 小時航程播放幾秒」表示，航線越長飛越久，飛到終點才換下一條。
+   設定存在 localStorage（hangar_route_speed），首屏與航線規劃共用。 */
+const SPEEDS = [ { k:"xslow", sec:8 }, { k:"slow", sec:5 }, { k:"normal", sec:3 }, { k:"fast", sec:1.5 }, { k:"xfast", sec:.75 } ];
+let speedKey = (() => { const v = store.get("hangar_route_speed"); return SPEEDS.some(x => x.k === v) ? v : "normal"; })();
+const speedSec = () => SPEEDS.find(x => x.k === speedKey).sec;
+const cruiseHours = km => km / 830;
+const flyMs = km => Math.max(3000, Math.min(150000, cruiseHours(km) * speedSec() * 1000));
+const fmtSec = ms => { const s = Math.round(ms / 1000); return s >= 60 ? t("rp.minsec", { m: Math.floor(s / 60), s: s % 60 }) : t("rp.sec", { s }); };
+
 /* 首屏 */
 const heroMap = RouteMap.create($("#heroMap"));
 let heroPair = pickPair(), heroPaused = false, heroResume = null;
@@ -290,7 +299,7 @@ const updateRouteText = updateHeroText;   // renderAll() 換語言時呼叫
 async function heroLoop(){
   for (;;){
     if (heroPaused) await new Promise(r => { heroResume = r; });
-    const done = await heroMap.play(mapApt(heroPair.a), mapApt(heroPair.b), updateHeroText);
+    const done = await heroMap.play(mapApt(heroPair.a), mapApt(heroPair.b), updateHeroText, { flyMs: flyMs(gcKm(heroPair.a, heroPair.b)) });
     if (done && !heroPaused) heroPair = pickPair();
   }
 }
@@ -348,6 +357,7 @@ function renderRpInfo(){
     ["rp.kind", t("rp.kind." + kind), { short: "< 1,500 km", medium: "1,500–4,000 km", long: "4,000–11,000 km", ultra: "> 11,000 km" }[kind]],
     ["rp.maxlat", `${Math.abs(top).toFixed(1)}°${top >= 0 ? "N" : "S"}`, ""]
   ];
+  renderSpeed(km);
   $("#rpStats").innerHTML = rows.map(([k, v, sub]) => `<div><dt>${esc(t(k))}</dt><dd><b>${esc(v)}</b>${sub ? `<span>${esc(sub)}</span>` : ""}</dd></div>`).join("");
   const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   $("#rpActions").innerHTML = `<button type="button" class="btn pri" id="rpReplay">${esc(t("rp.replay"))}</button>
@@ -358,7 +368,7 @@ function renderRpInfo(){
 }
 async function rpPlay(){
   if (!rpA || !rpB || !rpMap) return;
-  const done = await rpMap.play(mapApt(rpA), mapApt(rpB));
+  const done = await rpMap.play(mapApt(rpA), mapApt(rpB), null, { flyMs: flyMs(gcKm(rpA, rpB)), holdMs: 600 });
   if (done) rpMap.show(mapApt(rpA), mapApt(rpB));   // 播完停在抵達畫面，不自動換航線
 }
 function rpSet(a, b, play = true){
@@ -367,6 +377,22 @@ function rpSet(a, b, play = true){
   renderRpInfo();
   if (play) rpPlay();
 }
+function renderSpeed(km){
+  $("#rpSpeedOpts").innerHTML = SPEEDS.map(x => `<button type="button" role="radio" aria-checked="${x.k === speedKey}" data-speed="${x.k}">${esc(t("rp.speed." + x.k))}</button>`).join("");
+  $("#rpSpeedHint").textContent = t("rp.speed.hint", { s: String(speedSec()), t: fmtSec(flyMs(km)) });
+}
+$("#rpSpeedOpts").addEventListener("click", e => {
+  const b = e.target.closest("[data-speed]"); if (!b) return;
+  speedKey = b.dataset.speed; store.set("hangar_route_speed", speedKey);
+  if (rpA && rpB) { renderSpeed(gcKm(rpA, rpB)); rpPlay(); }   // 立刻用新速度重飛一次
+});
+$("#rpSpeedOpts").addEventListener("keydown", e => {
+  if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
+  const i = SPEEDS.findIndex(x => x.k === speedKey), n = SPEEDS[(i + (e.key === "ArrowRight" ? 1 : SPEEDS.length - 1)) % SPEEDS.length];
+  speedKey = n.k; store.set("hangar_route_speed", speedKey);
+  if (rpA && rpB) { renderSpeed(gcKm(rpA, rpB)); rpPlay(); }
+  $(`#rpSpeedOpts [data-speed="${n.k}"]`).focus();
+});
 function renderPresets(){
   $("#rpPresets").innerHTML = `<span class="label">${esc(t("rp.presets"))}</span>` + RP_PRESETS.map(([x, y]) => {
     const a = findApt(x), b = findApt(y);

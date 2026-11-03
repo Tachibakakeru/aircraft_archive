@@ -690,3 +690,4 @@
 - 首頁：`#routeCard` 改為可點按鈕；新增 `#planner` 航線規劃對話框（搜尋、交換、隨機、熱門航線、距離／航時／高度／航向／分類／最高緯度、機場與距離計算器連結）。三語字串 `home.route.*`、`home.rp.*`。
 - 修正：`home.css` 補 `[hidden]{display:none !important}`，否則隱藏的對話框仍會攔截點擊。
 - 驗證：桌機／iPhone 13 模擬截圖與互動測試、無 page error、手機無溢出。推送到工作分支 `claude/eager-euler-euibb4` 供預覽，**未合併 `main`**。
+- 使用者回報右上角沒有飛機動畫、只像幻燈片且太快。原因是其裝置開啟「減少動態效果」，第一版因此跳過飛行、每 4 秒切換。已改為一律播放飛行；飛行時間依航線長度（巡航時數 × 每小時播放秒數），飛到終點停 2 秒才換下一組；航線規劃新增「飛行速度」五段設定（存 `hangar_route_speed`，首頁共用）。以 reduced-motion 模式重測通過。詳見 `docs/homepage-concept.md` 12.7。仍在工作分支，未合併 `main`。

@@ -7,17 +7,18 @@
    - 航線：沿大圓計算 96 個點，投影到畫面後再往「北側」加一點弧度，看起來像航空公司的航線圖。
    - 一趟的動畫順序：起降機場出現 → 虛線航線從起點畫到終點 → 飛機沿航線飛行，飛過的部分變實線
      → 抵達後終點脈動、停留 → 淡出換下一趟（由呼叫端決定下一趟）。
-   - 尊重 prefers-reduced-motion：直接顯示完成狀態（實線＋飛機停在終點前）。
+   - 飛行時間由呼叫端依航線長度與使用者選的速度決定（play 的 flyMs），飛到終點才換下一趟。
+     2026-11：不再因系統「減少動態效果」設定跳過飛行（使用者回報那樣只剩每 4 秒切換一次，像幻燈片）；
+     飛行動畫是這個區塊的主要內容，速度可在航線規劃裡調慢。
 
    用法：
      const map = RouteMap.create(containerEl, { dotColor: "--sky-ink", ... });
-     await map.play(fromAirport, toAirport);      // 播完一趟（含抵達停留）後 resolve
+     await map.play(fromAirport, toAirport, onShow, { flyMs });   // 播完一趟（含抵達停留）後 resolve
      map.show(fromAirport, toAirport);            // 不播動畫，直接顯示
      map.stop();
    機場物件需有 { lat, lon, code, label }。
    ═══════════════════════════════════════════════ */
 const RouteMap = (() => {
-  const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const PLANE = "M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z";
   let maskPromise = null;
   let uid = 0;
@@ -254,27 +255,28 @@ const RouteMap = (() => {
       }
     }
 
-    async function play(a, b, onShow){
+    async function play(a, b, onShow, { flyMs, holdMs = 2000 } = {}){
       const my = ++token;
       current = { a, b };
       const mask = await loadMask();
       if (my !== token) return false;
       route.classList.remove("rm-arrived");
       container.classList.add("rm-fading");
-      await wait(REDUCED ? 0 : 280);
+      await wait(280);
       if (my !== token) return false;
       render(a, b, mask);
       setProgress(0, 0);
       if (onShow) onShow();
       container.classList.remove("rm-fading");
-      if (REDUCED){ setProgress(1, .97); route.classList.add("rm-arrived"); await wait(4000); return my === token; }
       await wait(380);
       if (!await tween(900, p => setProgress(ease(p), 0), my)) return false;
-      const km = gcKm(a, b);
-      const dur = Math.max(4800, Math.min(9000, 4200 + km * .32));
-      if (!await tween(dur, p => setProgress(1, ease(p)), my)) return false;
+      const dur = flyMs || Math.max(4800, Math.min(9000, 4200 + gcKm(a, b) * .32));
+      // 長時間飛行用「幾乎等速」（前後各 8% 緩入緩出），看起來像巡航，不會在中段衝很快
+      const A = .08, V = 1 / (1 - A);
+      const cruise = p => p < A ? V * p * p / (2 * A) : p > 1 - A ? 1 - V * (1 - p) * (1 - p) / (2 * A) : V * A / 2 + V * (p - A);
+      if (!await tween(dur, p => setProgress(1, cruise(p)), my)) return false;
       route.classList.add("rm-arrived");
-      await wait(1600);
+      await wait(holdMs);
       return my === token;
     }
 
