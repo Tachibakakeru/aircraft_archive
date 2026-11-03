@@ -8,10 +8,10 @@
 <link rel="icon" href="assets/icon.svg?v=2" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="theme-color" content="#1565d8">
-<link rel="stylesheet" href="css/style.css?v=200">
+<link rel="stylesheet" href="css/style.css?v=201">
 <link rel="stylesheet" href="css/knowledge.css?v=200">
 <script src="js/theme.js?v=134"></script>
-<script src="js/i18n.js?v=200"></script>
+<script src="js/i18n.js?v=201"></script>
 <script src="js/sitebar.js?v=200" defer></script>
 </head>
 <body>
@@ -28,7 +28,7 @@
       <div id="kn-search-suggest" class="kn-search-suggest" hidden></div>
     </div>
     <button id="btn-lang" class="ed-entry" title="Language">繁中</button>
-    <button id="btn-theme" class="ed-entry" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+    <button id="btn-theme" class="ed-entry" data-i18n-title="viewer.theme" title="切換主題" aria-label="切換主題" data-ico="sun"></button>
   </div>
 </div>
 
@@ -80,7 +80,7 @@
 
 <div class="kn-overlay" id="kn-overlay" hidden>
   <div class="kn-modal" role="dialog" aria-modal="true">
-    <button class="kn-modal-close" id="kn-modal-close" data-i18n="knowledge.detail.close">✕ 關閉</button>
+    <button class="kn-modal-close" id="kn-modal-close" data-ico="x" data-i18n="knowledge.detail.close">關閉</button>
 
     <div class="kn-view" id="kn-view">
       <div class="kn-view-badge" id="kn-view-badge"></div>
@@ -88,7 +88,7 @@
       <p class="kn-view-summary" id="kn-view-summary"></p>
       <p class="kn-view-fact" id="kn-view-fact"></p>
       <div class="kn-view-gallery" id="kn-view-gallery"></div>
-      <button class="kn-editbtn" id="kn-view-edit" data-i18n="knowledge.detail.edit">✎ 編輯</button>
+      <button class="kn-editbtn" id="kn-view-edit" data-ico="edit" data-i18n="knowledge.detail.edit">編輯</button>
     </div>
 
     <div class="kn-edit" id="kn-edit" hidden>
@@ -107,28 +107,28 @@
       <input type="text" id="kn-edit-name" class="kn-edit-input">
       <label data-i18n="knowledge.edit.summary">簡介</label>
       <textarea id="kn-edit-summary" class="kn-edit-textarea" rows="3"></textarea>
-      <label data-i18n="knowledge.edit.fact">💡 冷知識</label>
+      <label data-ico="bulb" data-i18n="knowledge.edit.fact">冷知識</label>
       <textarea id="kn-edit-fact" class="kn-edit-textarea" rows="3"></textarea>
       <label data-i18n="knowledge.edit.images">圖片</label>
       <div class="kn-edit-imgs" id="kn-edit-imgs"></div>
       <div class="kn-edit-addrow">
         <input type="text" id="kn-edit-imgurl" class="kn-edit-imgurl" data-i18n-placeholder="knowledge.edit.imgurl" placeholder="圖片網址…">
         <button type="button" id="kn-edit-imgadd" data-i18n="knowledge.edit.imgadd">＋ 加入</button>
-        <button type="button" id="kn-edit-imgfile" data-i18n="knowledge.edit.imgfile">📁 上傳</button>
+        <button type="button" id="kn-edit-imgfile" data-ico="upload" data-i18n="knowledge.edit.imgfile">上傳</button>
         <input type="file" id="kn-edit-file" accept="image/*" multiple hidden>
       </div>
       <div class="kn-edit-actions">
         <button type="button" id="kn-edit-cancel" class="kn-btn-ghost" data-i18n="knowledge.edit.cancel">取消</button>
         <button type="button" id="kn-edit-save" class="kn-btn-ghost" data-i18n="knowledge.edit.save">儲存草稿（僅本機）</button>
-        <button type="button" id="kn-edit-publish" class="kn-btn-primary" data-i18n="knowledge.edit.publish">🚀 發布</button>
+        <button type="button" id="kn-edit-publish" class="kn-btn-primary" data-ico="cloud-up" data-i18n="knowledge.edit.publish">發布</button>
       </div>
     </div>
   </div>
 </div>
 
-<script src="js/auth.js?v=134"></script>
+<script src="js/auth.js?v=201"></script>
 <script src="js/storage.js?v=134"></script>
-<script src="js/knowledge.js?v=193"></script>
+<script src="js/knowledge.js?v=201"></script>
 <script src="js/ui.js?v=137"></script>
 </body>
 </html>

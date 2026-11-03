@@ -683,7 +683,8 @@ function openDetail(id){
   $("kn-view-badge").hidden = !t._local;
   $("kn-view-name").textContent = F(t.name);
   $("kn-view-summary").textContent = F(t.summary);
-  $("kn-view-fact").textContent = F(t.fact) ? `💡 ${F(t.fact)}` : "";
+  $("kn-view-fact").textContent = F(t.fact) || "";
+  $("kn-view-fact").dataset.ico = "bulb";
   const imgs = (t.images || []).filter(im => im.src);
   $("kn-view-gallery").innerHTML = imgs.map(im => {
     const caption = F(im.caption);
@@ -816,7 +817,7 @@ function addNewTopic(){
 }
 function renderEditingImages(){
   $("kn-edit-imgs").innerHTML = editingImages.map((im, i) =>
-    `<div class="kn-edit-imgitem"><img src="${escText(im.src)}" alt=""><button type="button" data-i="${i}" class="kn-edit-imgdel" title="✕">✕</button></div>`).join("");
+    `<div class="kn-edit-imgitem"><img src="${escText(im.src)}" alt=""><button type="button" data-i="${i}" class="kn-edit-imgdel" title="移除" aria-label="移除" data-ico="x"></button></div>`).join("");
   $("kn-edit-imgs").querySelectorAll(".kn-edit-imgdel").forEach(btn =>
     btn.addEventListener("click", () => { editingImages.splice(+btn.dataset.i, 1); renderEditingImages(); }));
 }

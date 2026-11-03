@@ -147,7 +147,7 @@ function specCatBlock(catName, rows){
   box.innerHTML = `
     <div class="spec-cat-head">
       <input type="text" class="cat-name" value="${escAttr(catName)}" placeholder="分類名稱">
-      <button class="cat-del tiny" title="刪除分類">✕</button>
+      <button class="cat-del tiny" title="刪除分類" aria-label="刪除分類" data-ico="x"></button>
     </div>
     <textarea class="cat-rows" rows="4" placeholder="項目：數值"></textarea>`;
   const nameInput = box.querySelector(".cat-name");
@@ -240,7 +240,7 @@ function renderImageList(){
         <input type="text" class="i-cap" value="${escAttr(editText(img.caption))}" placeholder="中文圖說（選填）">
         <input type="url" class="i-source" value="${escAttr(img.source || "")}" placeholder="原始照片／授權頁網址（選填）">
       </div>
-      <button class="del" title="刪除">✕</button>`;
+      <button class="del" title="刪除" aria-label="刪除" data-ico="x"></button>`;
     const srcInput = row.querySelector(".i-src");
     if (srcInput) srcInput.addEventListener("input", () => {
       imgs[i].src = srcInput.value; row.querySelector("img").src = srcInput.value; persist();

@@ -92,7 +92,7 @@ function partCardHtml(id, pid){
     ${imgHtml}
     <p class="vs-card-summary">${summary}</p>
     ${bullets.length ? `<div class="vs-card-clues"><b>${I18N.t("versus.clues")}</b><ul>${bullets.map(x => `<li>${F(x)}</li>`).join("")}</ul></div>` : ""}
-    ${fact ? `<p class="vs-card-fact">💡 ${fact}</p>` : ""}
+    ${fact ? `<p class="vs-card-fact" data-ico="bulb">${fact}</p>` : ""}
     <a class="vs-card-view" href="viewer.html?model=${id}&part=${pid}">${I18N.t("versus.viewpart")}</a>
     <a class="vs-card-edit" href="editor.html?model=${id}">${I18N.t("versus.edit")}</a>
   </div>`;

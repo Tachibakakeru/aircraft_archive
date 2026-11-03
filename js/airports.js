@@ -89,7 +89,7 @@ function renderCompareTray(){
   if (!CMP_LIST.length) return;
   $("apt-cmp-chips").innerHTML = CMP_LIST.map(id => {
     const a = AIRPORTS.find(x => x.id === id);
-    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="${I18N.t("compare.remove")}">✕</button></span>`;
+    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="${I18N.t("compare.remove")}" aria-label="${I18N.t("compare.remove")}" data-ico="x"></button></span>`;
   }).join("");
   $("apt-cmp-chips").querySelectorAll("button").forEach(b =>
     b.addEventListener("click", () => toggleCompare(b.dataset.id)));
@@ -566,7 +566,6 @@ function syncFavButton(){
   const btn = $("apt-p-fav");
   btn.classList.toggle("on", !!on);
   btn.setAttribute("aria-pressed", String(!!on));
-  btn.textContent = on ? "★" : "☆";
 }
 
 function syncCmpButton(){
@@ -763,8 +762,8 @@ function render(list){
         <span class="apt-name">${airportLocalName(a)}</span>
         <span class="apt-loc">${loc}</span>
       </span>
-      <button class="apt-row-cmp${cmp ? " on" : ""}" data-cmp-id="${a.id}" aria-pressed="${cmp}" title="${I18N.t("airports.detail.addCompare")}">⇄</button>
-      <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}">${fav ? "★" : "☆"}</button>
+      <button class="apt-row-cmp${cmp ? " on" : ""}" data-cmp-id="${a.id}" aria-pressed="${cmp}" title="${I18N.t("airports.detail.addCompare")}" aria-label="${I18N.t("airports.detail.addCompare")}" data-ico="compare"></button>
+      <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}" aria-label="${I18N.t("fleet.fav")}" data-ico="star"></button>
       <span class="apt-codes">${codes}</span>
     </div>`;
   }).join("");
@@ -1015,7 +1014,7 @@ async function renderNotesView(id){
 function renderEditingImages(){
   const el = $("apt-p-notes-imgs");
   el.innerHTML = editingImages.map((src, i) =>
-    `<div class="apt-notes-imgitem"><img src="${escapeHTML(src)}" alt=""><button type="button" data-i="${i}" class="apt-notes-imgdel" title="移除">✕</button></div>`
+    `<div class="apt-notes-imgitem"><img src="${escapeHTML(src)}" alt=""><button type="button" data-i="${i}" class="apt-notes-imgdel" title="移除" aria-label="移除" data-ico="x"></button></div>`
   ).join("");
   el.querySelectorAll(".apt-notes-imgdel").forEach(btn =>
     btn.addEventListener("click", () => { editingImages.splice(+btn.dataset.i, 1); renderEditingImages(); }));

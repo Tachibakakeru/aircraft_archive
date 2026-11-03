@@ -8,10 +8,10 @@
 <link rel="icon" href="assets/icon.svg?v=2" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="theme-color" content="#1565d8">
-<link rel="stylesheet" href="css/style.css?v=200">
+<link rel="stylesheet" href="css/style.css?v=201">
 <link rel="stylesheet" href="css/editor.css?v=200">
 <script src="js/theme.js?v=134"></script>
-<script src="js/i18n.js?v=200"></script>
+<script src="js/i18n.js?v=201"></script>
 <script src="js/sitebar.js?v=200" defer></script>
 </head>
 <body>
@@ -23,16 +23,16 @@
     <select id="model-select"></select>
   </div>
   <div class="ed-actions">
-    <button id="btn-lock" class="ghost" title="鎖定並登出">🔒</button>
-    <button id="btn-changepw" class="ghost" title="變更本機密碼（改過 Cloudflare 的 EDITOR_PASSWORD 後用這個）">🔑</button>
-    <button id="btn-github" class="ghost" title="GitHub 設定">⚙ GitHub</button>
+    <button id="btn-lock" class="ghost" title="鎖定並登出" aria-label="鎖定並登出" data-ico="lock"></button>
+    <button id="btn-changepw" class="ghost" title="變更本機密碼（改過 Cloudflare 的 EDITOR_PASSWORD 後用這個）" aria-label="變更本機密碼" data-ico="key"></button>
+    <button id="btn-github" class="ghost" title="GitHub 設定" data-ico="gear">GitHub</button>
     <button id="btn-preview" class="ghost">預覽</button>
     <button id="btn-save" class="primary">儲存</button>
   </div>
 </div>
 
 <div class="ed-note" id="ed-note">
-  編輯結果會即時儲存在瀏覽器本機（不會遺失）。設定 <b>⚙ GitHub</b> 後，
+  編輯結果會即時儲存在瀏覽器本機（不會遺失）。設定 <b>GitHub</b> 後，
   點「儲存」可直接更新網站；未設定時「儲存」會下載 JSON 供手動覆蓋。
   <button id="btn-clear-local" class="tiny">清除本機暫存</button>
 </div>
@@ -142,8 +142,8 @@
     </div>
 
     <div class="gh-transfer">
-      <button id="gh-copy" class="tiny">📋 複製設定碼</button>
-      <button id="gh-paste" class="tiny">📥 貼上設定碼</button>
+      <button id="gh-copy" class="tiny" data-ico="copy">複製設定碼</button>
+      <button id="gh-paste" class="tiny" data-ico="download">貼上設定碼</button>
       <span class="gh-transfer-hint">在其他裝置上「複製設定碼」，到新裝置貼上即可帶入全部欄位（含 Token），不必手動重新輸入。</span>
     </div>
 
@@ -158,9 +158,9 @@
   </div>
 </div>
 
-<script src="js/auth.js?v=134"></script>
+<script src="js/auth.js?v=201"></script>
 <script src="js/storage.js?v=134"></script>
-<script src="js/editor.js?v=182"></script>
+<script src="js/editor.js?v=201"></script>
 <script src="js/ui.js?v=137"></script>
 </body>
 </html>

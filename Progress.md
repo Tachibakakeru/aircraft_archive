@@ -670,3 +670,10 @@
 - 衛星圖加速且不重蹈手機錯位：改讀可快取的圖磚，但以整數像素畫進同一張 canvas（不再用 CSS 拼貼）；失敗退回 export 單張。地球檢視：閒置／按鈕意圖預載 Three.js，地球貼圖 1k → 2k／4k 漸進。新增 `assets/earth_daymap_1k.jpg`、`earth_daymap_2k.jpg`。
 - 版本：airports／airlines／globe JS 與 airports.css `v=201`；SW `hangar-v52`。
 - 驗證：iPhone 13 模擬＋測試圖磚確認拼接無錯位；地圖貼圖載入順序正確；無 page error。推送到工作分支 `claude/eager-euler-euibb4` 供 Cloudflare 預覽，**未合併 `main`**。
+
+### 全站改版第三輪：emoji 改線條圖示（2026-11-03）
+
+- 使用者決定 emoji 全部改掉並詢問方案；推薦並採用「自繪線條 SVG 圖示＋文字」（比較見 `docs/site-redesign.md` 7.1）。
+- `css/style.css` 新增 `data-ico` 圖示系統（CSS mask、currentColor，不受 I18N 改字影響）與 27 個自繪圖示；HTML／JS 模板的 emoji 改為 `data-ico`，只有圖示的按鈕補 `aria-label`；收藏星號改由 `.on`／`aria-pressed` 切換實心；`i18n.js` 84 個字串移除 emoji；主題按鈕 ◐ 改太陽圖示。
+- 版本：style／i18n `v=201`、airports／airlines JS 與 airports.css `v=202`、auth／knowledge／versus／editor JS `v=201`、SW `hangar-v53`。
+- 驗證：全專案掃描無 emoji（保留 ↗ ▾ ✓ 等排版符號）；JS 語法檢查與多頁截圖通過。推送到工作分支供預覽，**未合併 `main`**。

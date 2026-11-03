@@ -10,11 +10,11 @@
 <meta name="theme-color" content="#1565d8">
 <link rel="preconnect" href="https://server.arcgisonline.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<link rel="stylesheet" href="css/style.css?v=200">
+<link rel="stylesheet" href="css/style.css?v=201">
 <link rel="stylesheet" href="css/compare.css?v=200">
-<link rel="stylesheet" href="css/airports.css?v=201">
+<link rel="stylesheet" href="css/airports.css?v=202">
 <script src="js/theme.js?v=134"></script>
-<script src="js/i18n.js?v=200"></script>
+<script src="js/i18n.js?v=201"></script>
 <script src="js/sitebar.js?v=200" defer></script>
 </head>
 <body>
@@ -34,13 +34,13 @@
       <div class="apt-cmp-suggest" id="apt-country-suggest" hidden></div>
     </div>
     <select class="ed-entry" id="apt-type"></select>
-    <label class="ed-entry apt-fav-toggle"><input type="checkbox" id="apt-fav-only"><span data-i18n="airports.favonly">⭐ 只看收藏</span></label>
-    <button class="ed-entry" id="apt-view-toggle" data-i18n="airports.view.globe">🌐 地圖</button>
-    <button class="ed-entry" id="apt-cmp-open" data-i18n="fleet.compare">⇄ 比較</button>
+    <label class="ed-entry apt-fav-toggle"><input type="checkbox" id="apt-fav-only"><span data-ico="star" data-i18n="airports.favonly">只看收藏</span></label>
+    <button class="ed-entry" id="apt-view-toggle" data-ico="globe" data-i18n="airports.view.globe">地圖</button>
+    <button class="ed-entry" id="apt-cmp-open" data-ico="compare" data-i18n="fleet.compare">比較</button>
     <button class="ed-entry" id="apt-add-new">＋ 新增</button>
-    <a class="ed-entry" href="distance.html" data-i18n="nav.distance">📏 距離計算</a>
+    <a class="ed-entry" href="distance.html" data-ico="route" data-i18n="nav.distance">距離計算</a>
     <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
-    <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+    <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題" aria-label="切換主題" data-ico="sun"></button>
   </div>
 
   <div class="apt-globe-wrap" id="apt-globe-wrap" hidden>
@@ -53,7 +53,7 @@
 
   <div class="apt-count" id="apt-count"></div>
 
-  <div class="apt-loading" id="apt-loading">⏳ 資料庫載入中，請稍候…</div>
+  <div class="apt-loading" id="apt-loading" data-ico="clock">資料庫載入中，請稍候…</div>
 
   <div class="apt-list" id="apt-list"></div>
   <div class="apt-more" id="apt-more" hidden></div>
@@ -77,11 +77,11 @@
     <h2 id="apt-p-name">—</h2>
     <div class="en" id="apt-p-loc"></div>
     <div class="apt-badges" id="apt-p-badges"></div>
-    <button id="apt-p-share" class="apt-p-share" data-i18n-title="airports.detail.share" title="分享連結">🔗</button>
-    <button id="apt-p-cmp" class="apt-p-cmp" aria-pressed="false" data-i18n-title="airports.detail.addCompare" title="加入比較">⇄</button>
-    <button id="apt-p-fav" class="apt-p-fav" aria-pressed="false" title="收藏">☆</button>
-    <button id="apt-p-data-edit" class="apt-p-fav" title="編輯資料">✎</button>
-    <button id="apt-p-close" class="panel-close-btn" aria-label="關閉面板" data-i18n-aria="viewer.panel.close">✕</button>
+    <button id="apt-p-share" class="apt-p-share" data-i18n-title="airports.detail.share" title="分享連結" data-ico="link"></button>
+    <button id="apt-p-cmp" class="apt-p-cmp" aria-pressed="false" data-i18n-title="airports.detail.addCompare" title="加入比較" data-ico="compare"></button>
+    <button id="apt-p-fav" class="apt-p-fav" aria-pressed="false" title="收藏" aria-label="收藏" data-ico="star"></button>
+    <button id="apt-p-data-edit" class="apt-p-fav" title="編輯資料" aria-label="編輯資料" data-ico="edit"></button>
+    <button id="apt-p-close" class="panel-close-btn" aria-label="關閉面板" data-i18n-aria="viewer.panel.close" data-ico="x"></button>
   </div>
   <div class="panel-body">
     <div id="apt-p-sat"></div>
@@ -114,13 +114,13 @@
       <div class="al-edit-actions">
         <button id="apt-e-cancel" class="ghost">取消</button>
         <button id="apt-e-save">儲存本機</button>
-        <button id="apt-e-publish">☁ 儲存到網站</button>
+        <button id="apt-e-publish" data-ico="cloud-up">儲存到網站</button>
       </div>
     </div>
 
     <div class="apt-notes-title">
       <span data-i18n="airports.detail.notes">NOTES / 備註與歷史資訊</span>
-      <button id="apt-p-edit" class="apt-notes-editbtn" data-i18n="airports.detail.editBtn">✎ 編輯</button>
+      <button id="apt-p-edit" class="apt-notes-editbtn" data-ico="edit" data-i18n="airports.detail.editBtn">編輯</button>
     </div>
     <div id="apt-p-notes-view" class="apt-notes-view"></div>
     <div id="apt-p-notes-edit" class="apt-notes-edit" hidden>
@@ -129,14 +129,14 @@
       <div class="apt-notes-addrow">
         <input type="url" id="apt-p-notes-imgurl" class="apt-notes-imgurl" data-i18n-ph="airports.detail.imageUrlPh" placeholder="圖片網址 https://…">
         <button id="apt-p-notes-imgadd" class="ed-entry" data-i18n="airports.detail.addImageUrl">＋ 加入網址</button>
-        <button id="apt-p-notes-imgfile" class="ed-entry" data-i18n="airports.detail.uploadImage">📁 上傳圖片</button>
+        <button id="apt-p-notes-imgfile" class="ed-entry" data-ico="upload" data-i18n="airports.detail.uploadImage">上傳圖片</button>
         <input type="file" id="apt-p-notes-file" accept="image/*" multiple hidden>
       </div>
       <div class="apt-notes-actions">
         <span class="apt-notes-hint" data-i18n="airports.detail.notesLocal">＊僅儲存在你的瀏覽器（本機），發布後才會公開給所有訪客。</span>
         <button id="apt-p-notes-cancel" class="ed-entry" data-i18n="airports.detail.cancel">取消</button>
         <button id="apt-p-notes-save" class="ed-entry" data-i18n="airports.detail.save">儲存本機</button>
-        <button id="apt-p-notes-publish" class="ed-entry primary" data-i18n="airports.detail.publish">☁ 發布到網站</button>
+        <button id="apt-p-notes-publish" class="ed-entry primary" data-ico="cloud-up" data-i18n="airports.detail.publish">發布到網站</button>
       </div>
     </div>
   </div>
@@ -148,7 +148,7 @@
     <button id="sat-lb-out" title="縮小">－</button>
     <span id="sat-lightbox-zoom">z0</span>
     <button id="sat-lb-in" title="放大">＋</button>
-    <button id="sat-lb-close" aria-label="關閉" data-i18n-aria="viewer.panel.close">✕</button>
+    <button id="sat-lb-close" aria-label="關閉" data-i18n-aria="viewer.panel.close" data-ico="x"></button>
   </div>
   <div id="sat-lightbox-grid"></div>
   <div class="apt-sat-credit">Imagery © Esri, Maxar, Earthstar Geographics</div>
@@ -156,13 +156,13 @@
 
 <div class="apt-cmp-tray" id="apt-cmp-tray" hidden>
   <div class="apt-cmp-chips" id="apt-cmp-chips"></div>
-  <button class="apt-cmp-go" id="apt-cmp-go" data-i18n="airports.detail.compareGo">⇄ 開始比較</button>
+  <button class="apt-cmp-go" id="apt-cmp-go" data-ico="compare" data-i18n="airports.detail.compareGo">開始比較</button>
 </div>
 
 <div class="apt-cmp-modal" id="apt-cmp-modal" hidden>
   <div class="apt-cmp-modal-head">
     <h2 data-i18n="airports.detail.compareTitle">機場比較</h2>
-    <button id="apt-cmp-modal-close" class="ed-entry" aria-label="關閉" data-i18n-aria="viewer.panel.close">✕</button>
+    <button id="apt-cmp-modal-close" class="ed-entry" aria-label="關閉" data-i18n-aria="viewer.panel.close" data-ico="x"></button>
   </div>
   <div class="apt-cmp-modal-body">
     <div class="cmp-pickers" id="apt-cmp-pickers"></div>
@@ -180,7 +180,7 @@
   <div style="background:var(--panel);border:1px solid var(--stroke);border-radius:16px;padding:28px 32px;width:min(480px,90vw);max-height:90vh;overflow-y:auto;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
       <h2 style="font-family:var(--mono);font-size:16px;margin:0;">＋ 新增自訂機場</h2>
-      <button id="apt-add-close" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;">✕</button>
+      <button id="apt-add-close" aria-label="關閉" data-ico="x" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;"></button>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;">
       <label style="grid-column:1/-1;font-size:12px;color:var(--muted);">機場名稱 *
@@ -219,16 +219,16 @@
       <button id="apt-add-save" class="ed-entry primary">＋ 加入清單</button>
     </div>
     <div style="margin-top:10px;display:flex;justify-content:flex-end;">
-      <button id="apt-add-publish" class="ed-entry primary">☁ 發布到網站</button>
+      <button id="apt-add-publish" class="ed-entry primary" data-ico="cloud-up">發布到網站</button>
     </div>
     <p style="font-size:11px;color:var(--muted);margin-top:12px;">＊「加入清單」僅儲存在你的瀏覽器（本機）。「發布到網站」需要認證，會將所有本機自訂機場推送至 GitHub。</p>
   </div>
 </div>
 
-<script src="js/auth.js?v=134"></script>
+<script src="js/auth.js?v=201"></script>
 <script src="js/storage.js?v=134"></script>
 <script src="js/globe.js?v=201"></script>
-<script src="js/airports.js?v=201"></script>
+<script src="js/airports.js?v=202"></script>
 <script src="js/ui.js?v=137"></script>
 </body>
 </html>

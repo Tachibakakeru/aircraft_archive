@@ -93,7 +93,8 @@ function wirePwToggle(input){
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "pw-toggle";
-  btn.textContent = "👁";
+  btn.dataset.ico = "eye";
+  btn.setAttribute("aria-label", "顯示密碼");
   btn.title = "顯示密碼";
   const wrap = document.createElement("div");
   wrap.className = "pw-field";
@@ -103,7 +104,8 @@ function wirePwToggle(input){
   btn.addEventListener("click", () => {
     const showing = input.type === "text";
     input.type = showing ? "password" : "text";
-    btn.textContent = showing ? "👁" : "🙈";
+    btn.dataset.ico = showing ? "eye" : "eye-off";
+    btn.setAttribute("aria-label", showing ? "顯示密碼" : "隱藏密碼");
     btn.title = showing ? "顯示密碼" : "隱藏密碼";
   });
 }

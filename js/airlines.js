@@ -42,7 +42,7 @@ function makeTagInput(inputId, suggestId, chipsId, onChange){
   function renderChips(){
     const el = $(chipsId);
     el.innerHTML = chips.map((c, i) =>
-      `<span class="al-tag-chip">${escHTML(c.display)}<button type="button" data-i="${i}" title="移除">✕</button></span>`
+      `<span class="al-tag-chip">${escHTML(c.display)}<button type="button" data-i="${i}" title="移除" aria-label="移除" data-ico="x"></button></span>`
     ).join("");
     el.querySelectorAll("button[data-i]").forEach(b =>
       b.addEventListener("click", e => { e.stopPropagation(); chips.splice(+b.dataset.i, 1); renderChips(); onChange && onChange(); })
@@ -245,7 +245,7 @@ function renderCompareTray(){
   if (!CMP_LIST.length) return;
   $("al-cmp-chips").innerHTML = CMP_LIST.map(id => {
     const a = AIRLINES.find(x => x.id === id);
-    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="${I18N.t("compare.remove")}">✕</button></span>`;
+    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="${I18N.t("compare.remove")}" aria-label="${I18N.t("compare.remove")}" data-ico="x"></button></span>`;
   }).join("");
   $("al-cmp-chips").querySelectorAll("button").forEach(b =>
     b.addEventListener("click", () => toggleCompare(b.dataset.id)));
@@ -657,8 +657,8 @@ function render(list){
         ${tierTag}
         <span class="al-loc">${I18N.field(a.country)}${founded}</span>
       </span>
-      <button class="apt-row-cmp${cmp ? " on" : ""}" data-cmp-id="${a.id}" aria-pressed="${cmp}" title="${I18N.t("airports.detail.addCompare")}">⇄</button>
-      <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}">${fav ? "★" : "☆"}</button>
+      <button class="apt-row-cmp${cmp ? " on" : ""}" data-cmp-id="${a.id}" aria-pressed="${cmp}" title="${I18N.t("airports.detail.addCompare")}" aria-label="${I18N.t("airports.detail.addCompare")}" data-ico="compare"></button>
+      <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}" aria-label="${I18N.t("fleet.fav")}" data-ico="star"></button>
       <span class="al-codes"><span>${a.icao || ""}</span><span>${a.iata || ""}</span></span>
     </div>`;
   }).join("");
@@ -695,7 +695,6 @@ function syncFavButton(){
   const btn = $("al-p-fav");
   btn.classList.toggle("on", !!on);
   btn.setAttribute("aria-pressed", String(!!on));
-  btn.textContent = on ? "★" : "☆";
 }
 
 function syncCmpButton(){
@@ -797,7 +796,7 @@ function openAirline(id){
     <div class="al-fleet-row">
       <span class="al-fleet-type">${f.type}</span>
       <span class="al-fleet-count">×${f.count.toLocaleString()}</span>
-      ${f.fleetId ? `<a class="al-fleet-3d" href="viewer.html?model=${encodeURIComponent(f.fleetId)}">🔗 3D</a>` : ""}
+      ${f.fleetId ? `<a class="al-fleet-3d" href="viewer.html?model=${encodeURIComponent(f.fleetId)}" data-ico="cube">3D</a>` : ""}
     </div>`).join("") || `<div class="al-empty-inline">—</div>`;
 
   $("al-p-routes").innerHTML = routesHTML(a);

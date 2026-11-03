@@ -8,11 +8,11 @@
 <link rel="icon" href="assets/icon.svg?v=2" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="theme-color" content="#1565d8">
-<link rel="stylesheet" href="css/style.css?v=200">
-<link rel="stylesheet" href="css/airports.css?v=200">
+<link rel="stylesheet" href="css/style.css?v=201">
+<link rel="stylesheet" href="css/airports.css?v=202">
 <link rel="stylesheet" href="css/distance.css?v=200">
 <script src="js/theme.js?v=134"></script>
-<script src="js/i18n.js?v=200"></script>
+<script src="js/i18n.js?v=201"></script>
 <script src="js/sitebar.js?v=200" defer></script>
 </head>
 <body>
@@ -26,7 +26,7 @@
 
   <div class="fleet-toolbar">
     <button class="ed-entry" id="btn-lang" title="Language">繁中</button>
-    <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題">◐</button>
+    <button class="ed-entry" id="btn-theme" data-i18n-title="viewer.theme" title="切換主題" aria-label="切換主題" data-ico="sun"></button>
   </div>
 
   <div class="dist-form">
@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="dist-swap">
-      <button id="dist-swap-btn" title="交換" data-i18n-title="distance.swap">⇄</button>
+      <button id="dist-swap-btn" title="交換" aria-label="交換" data-i18n-title="distance.swap" data-ico="compare"></button>
     </div>
     <div class="dist-field">
       <label data-i18n="distance.to">抵達機場</label>
