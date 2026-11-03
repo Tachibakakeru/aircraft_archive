@@ -7,9 +7,9 @@ body{min-height:100vh}
   position:sticky;top:0;z-index:10;
   display:flex;align-items:center;gap:20px;flex-wrap:wrap;
   padding:14px 24px;
-  background:rgba(11,18,32,.92);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--stroke);
+  background:linear-gradient(180deg,var(--sky-2),var(--sky-3));
+  color:var(--sky-ink);
+  border-bottom:0;box-shadow:var(--shadow);
 }
 .ed-topbar .back{
   font-family:var(--mono);font-size:11px;letter-spacing:.18em;
@@ -34,8 +34,8 @@ button.primary,button.ghost{
   border-radius:6px;padding:9px 16px;cursor:pointer;
   transition:all .15s;
 }
-button.primary{background:var(--amber);color:var(--bg-0);border:1px solid var(--amber);font-weight:700}
-button.primary:hover{background:#ffc266}
+button.primary{background:var(--amber);color:var(--on-amber);border:1px solid var(--amber);font-weight:700}
+button.primary:hover{background:var(--amber-2)}
 button.ghost{background:transparent;color:var(--text);border:1px solid var(--stroke)}
 button.ghost:hover{border-color:var(--amber);color:var(--amber)}
 button.tiny{font-size:10px;padding:5px 10px;letter-spacing:.1em;
@@ -96,19 +96,19 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
   flex:1;
   font-family:var(--mono);font-size:12px;letter-spacing:.14em;
   color:var(--amber);
-  background:#0e1729;border:1px solid var(--stroke);border-radius:6px;
+  background:var(--bg-1);border:1px solid var(--stroke);border-radius:6px;
   padding:8px 12px;
 }
-:root[data-theme="light"] .spec-cat-head .cat-name{background:#eef2f7}
+
 .spec-cat-head .cat-name:focus{outline:none;border-color:var(--amber)}
 .cat-del{flex-shrink:0}
 .cat-rows{
   width:100%;
   font-family:var(--sans);font-size:13px;line-height:1.7;
-  color:var(--text);background:#0e1729;
+  color:var(--text);background:var(--bg-1);
   border:1px solid var(--stroke);border-radius:6px;padding:10px 12px;resize:vertical;
 }
-:root[data-theme="light"] .cat-rows{background:#eef2f7}
+
 .cat-rows:focus{outline:none;border-color:var(--amber)}
 
 .ed-form{flex:1;padding:32px 40px;max-width:720px}
@@ -141,11 +141,11 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
   padding:10px;
   background:var(--panel);border:1px solid var(--stroke);border-radius:8px;
 }
-.img-row img{width:80px;height:56px;object-fit:cover;border-radius:5px;flex-shrink:0;background:#0e1729}
+.img-row img{width:80px;height:56px;object-fit:cover;border-radius:5px;flex-shrink:0;background:var(--bg-1)}
 .img-row .img-fields{flex:1;display:flex;flex-direction:column;gap:6px}
 .img-row input{
   width:100%;font-family:var(--sans);font-size:12px;
-  color:var(--text);background:#0e1729;
+  color:var(--text);background:var(--bg-1);
   border:1px solid var(--stroke);border-radius:5px;padding:6px 9px;
 }
 .img-row .src-label{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--muted)}
@@ -153,13 +153,13 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
   background:transparent;border:1px solid var(--stroke);color:var(--muted);
   border-radius:5px;width:28px;height:28px;cursor:pointer;flex-shrink:0;
 }
-.img-row .del:hover{color:#ff7850;border-color:#ff7850}
+.img-row .del:hover{color:var(--warn);border-color:var(--warn)}
 .img-add{display:flex;gap:10px}
 .img-hint{margin-top:8px;font-size:11px;line-height:1.7;color:var(--muted)}
 
 .toast{
   position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
-  background:var(--amber);color:var(--bg-0);
+  background:var(--amber);color:var(--on-amber);
   font-family:var(--mono);font-size:12px;letter-spacing:.08em;font-weight:700;
   padding:12px 24px;border-radius:8px;
   opacity:0;pointer-events:none;transition:all .3s;
@@ -168,14 +168,14 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ── GitHub 設定對話框 ── */
-#btn-github.configured{color:var(--cyan);border-color:rgba(111,211,239,.4)}
+#btn-github.configured{color:var(--cyan);border-color:var(--cyan)}
 #btn-github.configured::after{content:" ●";color:var(--cyan);font-size:8px;vertical-align:middle}
 
 .gh-modal{
   position:fixed;inset:0;z-index:150;
   display:flex;align-items:center;justify-content:center;
   padding:24px;
-  background:rgba(6,10,18,.72);
+  background:var(--overlay-scrim);
   backdrop-filter:blur(4px);
 }
 .gh-box{
@@ -203,15 +203,15 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
 .gh-fld input{
   width:100%;
   font-family:var(--sans);font-size:14px;
-  color:var(--text);background:#0e1729;
+  color:var(--text);background:var(--bg-1);
   border:1px solid var(--stroke);border-radius:7px;padding:10px 12px;
 }
 .gh-fld input:focus{outline:none;border-color:var(--amber)}
 .gh-token-hint{margin-top:7px;font-size:11px;line-height:1.7;color:var(--muted)}
 .gh-token-hint b{color:var(--text)}
 .gh-status{min-height:20px;font-size:13px;margin:6px 0 12px}
-.gh-status.ok{color:#6fd3ef}
-.gh-status.err{color:#ff7850}
+.gh-status.ok{color:var(--cyan)}
+.gh-status.err{color:var(--warn)}
 .gh-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .gh-transfer{
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -231,3 +231,15 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
   .ed-topbar{flex-wrap:wrap;gap:12px}
   .gh-fld.two{flex-direction:column;gap:16px}
 }
+
+/* 2026-11 改版：頁首工具列改為天空帶（設計紀錄 docs/site-redesign.md） */
+.ed-topbar .back{color:var(--sky-muted)}
+.ed-topbar .back:hover{color:var(--sky-ink)}
+.ed-topbar .eyebrow{color:var(--sky-muted)}
+.ed-topbar h1{font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:.01em;color:var(--sky-ink)}
+.ed-topbar .tool-btn,.ed-topbar button.ghost,.ed-topbar button.tiny{color:var(--sky-ink);background:var(--glass);border-color:var(--glass-line)}
+.ed-topbar .tool-btn:hover,.ed-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+.ed-topbar button.primary{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+.ed-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}
+.ed-topbar .cmp-difftoggle{color:var(--sky-ink)}
+.ed-topbar :focus-visible{outline-color:var(--sky-ink)}

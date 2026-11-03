@@ -245,7 +245,7 @@ body{min-height:100vh}
   width:20px;height:20px;line-height:20px;text-align:center;padding:0;
   background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:11px;
 }
-.kn-edit-imgdel:hover{background:var(--amber);color:var(--bg-0)}
+.kn-edit-imgdel:hover{background:var(--amber);color:var(--on-amber)}
 
 .kn-edit-addrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .kn-edit-addrow .kn-edit-imgurl{flex:1;min-width:140px}
@@ -263,7 +263,7 @@ body{min-height:100vh}
 }
 .kn-btn-ghost{color:var(--muted);background:transparent;border:1px solid var(--stroke)}
 .kn-btn-ghost:hover{color:var(--text);border-color:var(--text)}
-.kn-btn-primary{color:var(--bg-0);background:var(--amber);border:1px solid var(--amber);font-weight:700}
+.kn-btn-primary{color:var(--on-amber);background:var(--amber);border:1px solid var(--amber);font-weight:700}
 .kn-btn-primary:hover{filter:brightness(1.08)}
 .kn-btn-primary:disabled, .kn-btn-ghost:disabled{opacity:.6;cursor:default}
 

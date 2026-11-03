@@ -7,8 +7,9 @@ body{min-height:100vh}
   position:sticky;top:0;z-index:10;
   display:flex;align-items:center;gap:16px;flex-wrap:wrap;
   padding:16px 24px;
-  background:var(--bg-1);
-  border-bottom:1px solid var(--stroke);
+  background:linear-gradient(180deg,var(--sky-2),var(--sky-3));
+  color:var(--sky-ink);
+  border-bottom:0;box-shadow:var(--shadow);
 }
 .vs-topbar .back{
   font-family:var(--mono);font-size:11px;letter-spacing:.18em;
@@ -123,3 +124,15 @@ body{min-height:100vh}
   .vs-head-spacer{display:none}
   .vs-row-label{position:static;padding-top:0}
 }
+
+/* 2026-11 改版：頁首工具列改為天空帶（設計紀錄 docs/site-redesign.md） */
+.vs-topbar .back{color:var(--sky-muted)}
+.vs-topbar .back:hover{color:var(--sky-ink)}
+.vs-topbar .eyebrow{color:var(--sky-muted)}
+.vs-topbar h1{font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:.01em;color:var(--sky-ink)}
+.vs-topbar .tool-btn,.vs-topbar button.ghost,.vs-topbar button.tiny{color:var(--sky-ink);background:var(--glass);border-color:var(--glass-line)}
+.vs-topbar .tool-btn:hover,.vs-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+.vs-topbar button.primary{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+.vs-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}
+.vs-topbar .cmp-difftoggle{color:var(--sky-ink)}
+.vs-topbar :focus-visible{outline-color:var(--sky-ink)}

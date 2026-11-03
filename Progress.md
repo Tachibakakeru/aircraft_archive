@@ -652,3 +652,12 @@
 - 本 session 的網路政策不允許連到 Cloudflare Pages 網域，無法直接查看正式站或部署紀錄；需請使用者在 Cloudflare Pages 的部署列表確認 `67fb10f` 是否建置成功，並強制重新整理。
 - 使用者提供 Cloudflare 畫面：Production `67fb10f` 停在 **initialize** 超過 8 分鐘，還沒進到 clone／build；同一提交的 Preview（`a92c09e5.aircraft-archive.pages.dev`）已成功。判斷為 Cloudflare 建置機排隊／卡住，不是程式碼問題（本站無建置步驟）。工作分支的 `fc3a5cd` Preview 同時排隊，可能占用同一個建置名額。建議取消卡住的部署後重試，並取消該 Preview。此筆紀錄暫不推送，避免再觸發新的建置。
 - 使用者取消卡住的部署並對 `main 67fb10f` 重試後，正式網站已顯示新版「出境大廳」首頁，發布完成。建議在 Cloudflare Pages 的 Branch control 限制預覽分支，避免工作分支的預覽建置與正式部署搶名額。
+
+### 全站 UI 改版第一輪（2026-11-03，本地，未推送）
+
+- 使用者要求其他頁面也跟進首頁風格，並指示**處理完先不推送**，先預覽檢查。完整設計與實作紀錄見新檔 `docs/site-redesign.md`。
+- 共用：`css/style.css` 的 token 改為亮藍天空／夜航深藍（沿用舊名稱，`--amber` 改為主強調色天空藍；新增 `--gold`、`--warn`、`--sky-*`、`--panel-solid`、`--thumb-bg`、`--display` 等），宣告自帶字體；新增 `js/sitebar.js` 全站導覽列，搬入各頁原有的語言／單位／主題按鈕。
+- 各頁：移除工具列中重複的導覽連結；`.fleet-head` 改滿版天空帶、工具列改浮動白卡；比較／對比／編輯器頂部改天空帶；強調色底上的文字統一用 `--on-amber`；收藏星號與地球儀收藏點改金色；`#panel` z-index 提高避免被導覽列蓋住。
+- 版本：子頁 `style.css`／`i18n.js`／`sitebar.js` 與相關頁面 CSS、`compare.js`、`globe.js` 升 `v=200`；Service Worker `hangar-v51`。
+- 驗證：十個子頁淺色／深色截圖無 page error、無橫向溢出；機場與航空公司詳情、手機寬度、小知識深連結、編輯器登入後畫面均確認。測試機連不到 cdnjs／Wikimedia／ArcGIS，3D 檢視器改用本機 Three.js 副本截圖。
+- 狀態：只在本機修改與 commit，**未推送任何分支**，等待使用者看預覽後確認。

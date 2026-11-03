@@ -1,43 +1,77 @@
 /* ═══════════════════════════════════════════
    機庫檔案 HANGAR ARCHIVE — 共用設計系統
    ═══════════════════════════════════════════ */
+/* 2026-11 改版：全站沿用首頁「出境大廳」的亮藍天空色系（設計紀錄 docs/site-redesign.md）。
+   為了不必改寫上百處引用，沿用舊 token 名稱：--amber 現在是「主強調色」（天空藍），
+   --amber-soft 是它的淡色底；真正的琥珀／金色只留給收藏星號（--gold）與警示（--warn）。 */
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:500;font-display:swap;src:url(../assets/fonts/barlow-condensed-500-latin.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url(../assets/fonts/barlow-condensed-600-latin.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:700;font-display:swap;src:url(../assets/fonts/barlow-condensed-700-latin.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(../assets/fonts/ibm-plex-mono-400-latin.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(../assets/fonts/ibm-plex-mono-500-latin.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:600;font-display:swap;src:url(../assets/fonts/ibm-plex-mono-600-latin.woff2) format("woff2")}
+/* ── 深色主題（夜航） ── */
 :root{
-  --bg-0:#0b1220;
-  --bg-1:#111c2e;
-  --panel:rgba(17,27,44,.92);
-  --stroke:rgba(255,255,255,.09);
-  --text:#e9eef6;
-  --muted:#93a3ba;
-  --amber:#ffb547;
-  --amber-soft:rgba(255,181,71,.16);
-  --cyan:#6fd3ef;
-  --on-amber:#0b1220;          /* 琥珀底上的文字（兩主題皆用深色） */
-  --bg-glow:#16233a;           /* 背景光暈（淺色主題調亮） */
-  --overlay-scrim:rgba(0,0,0,.55);
-  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Courier New",monospace;
-  --sans:"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif;
-  --scene-grid:#24344d;
-  --scene-grid2:#1a2740;
-  --scene-bg-1:#14213a;        /* 3D 場景背景（中心） */
-  --scene-bg-0:#0a1018;        /* 3D 場景背景（外緣） */
+  --bg-0:#061730;
+  --bg-1:#0a2244;
+  --panel:rgba(13,40,77,.94);
+  --panel-solid:#0d284d;
+  --stroke:rgba(140,190,255,.16);
+  --text:#e4f0ff;
+  --muted:#93b3db;
+  --amber:#4ea4ff;             /* 主強調色（天空藍） */
+  --amber-2:#7cbcff;           /* 主強調色 hover */
+  --amber-soft:rgba(78,164,255,.16);
+  --cyan:#4fd3ff;
+  --on-amber:#04152b;          /* 強調色底上的文字 */
+  --gold:#ffc24d;              /* 收藏星號 */
+  --warn:#ff8a65;              /* 錯誤／警示 */
+  --bg-glow:#0d3168;
+  --overlay-scrim:rgba(2,8,20,.6);
+  --shadow:0 22px 44px -26px rgba(0,0,0,.8);
+  --shadow-hi:0 30px 56px -24px rgba(0,0,0,.9);
+  --sky-1:#020b1d; --sky-2:#0b3470; --sky-3:#0a2550;   /* 頁首天空漸層 */
+  --sky-ink:#eef6ff; --sky-muted:rgba(226,240,255,.82);
+  --glass:rgba(120,170,255,.1); --glass-line:rgba(150,195,255,.28);
+  --thumb-bg:linear-gradient(180deg,#123462,#0a2146);
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,"Courier New",monospace;
+  --sans:"PingFang TC","Noto Sans TC","Hiragino Sans","Microsoft JhengHei",system-ui,-apple-system,sans-serif;
+  --display:"Barlow Condensed","PingFang TC","Noto Sans TC","Hiragino Sans","Microsoft JhengHei",sans-serif;
+  --scene-grid:#1d4170;
+  --scene-grid2:#14315a;
+  --scene-bg-1:#103462;        /* 3D 場景背景（中心） */
+  --scene-bg-0:#041026;        /* 3D 場景背景（外緣） */
+  color-scheme:dark;
 }
-/* ── 淺色主題 ── */
+/* ── 淺色主題（晴空） ── */
 :root[data-theme="light"]{
-  --bg-0:#eef2f7;
-  --bg-1:#f7f9fc;
-  --panel:rgba(255,255,255,.92);
-  --stroke:rgba(15,30,55,.12);
-  --text:#1a2740;
-  --muted:#5a6b82;
-  --amber:#e08a00;
-  --amber-soft:rgba(224,138,0,.12);
-  --cyan:#0d7fa8;
-  --bg-glow:#d7e3f0;           /* 淺色主題：柔和淺藍光暈，取代深色暈斑 */
-  --overlay-scrim:rgba(20,32,52,.35);
-  --scene-grid:#9fb0c6;
-  --scene-grid2:#b9c5d6;
-  --scene-bg-1:#cdd7e6;        /* 淺色場景：中心稍深藍灰，讓淺色機體有對比 */
-  --scene-bg-0:#9fb0c8;
+  --bg-0:#eef6ff;
+  --bg-1:#f7fbff;
+  --panel:rgba(255,255,255,.96);
+  --panel-solid:#ffffff;
+  --stroke:#cde0f7;
+  --text:#0b2a55;
+  --muted:#4f6d96;
+  --amber:#1a73f0;
+  --amber-2:#3d95ff;
+  --amber-soft:rgba(26,115,240,.1);
+  --cyan:#0b8fc0;
+  --on-amber:#ffffff;
+  --gold:#e8930c;
+  --warn:#d9480f;
+  --bg-glow:#d6e9ff;
+  --overlay-scrim:rgba(11,42,85,.35);
+  --shadow:0 22px 44px -26px rgba(16,82,170,.5);
+  --shadow-hi:0 30px 56px -26px rgba(16,82,170,.65);
+  --sky-1:#0f5fd0; --sky-2:#2f8cf5; --sky-3:#5aa9fb;
+  --sky-ink:#ffffff; --sky-muted:rgba(255,255,255,.9);
+  --glass:rgba(6,50,130,.2); --glass-line:rgba(255,255,255,.36);
+  --thumb-bg:linear-gradient(180deg,#3b86ea 0%,#1456b8 100%);   /* 縮圖多為淺色機體，用飽和天空藍襯底保持對比 */
+  --scene-grid:#9cc0ea;
+  --scene-grid2:#bcd5f2;
+  --scene-bg-1:#e6f2ff;        /* 淺色場景：中心亮、外緣天空藍，讓淺色機體有對比 */
+  --scene-bg-0:#9cc6f5;
+  color-scheme:light;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 /* 所有可捲動區維持滑鼠／觸控／鍵盤捲動，但不顯示原生捲軸軸線。 */
@@ -141,7 +175,7 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
 .craft-card .thumb{
   position:relative;
   aspect-ratio:16/9;
-  background:linear-gradient(180deg,#152238,#0e1729);
+  background:var(--thumb-bg);
   display:flex;align-items:center;justify-content:center;
   border-bottom:1px solid var(--stroke);
 }
@@ -186,7 +220,7 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
   opacity:0;transition:opacity .15s,color .15s,border-color .15s;
 }
 .craft-card:hover .card-fav,.card-fav.on{opacity:1}
-.card-fav.on,.card-fav:hover{color:var(--amber);border-color:var(--amber)}
+.card-fav.on,.card-fav:hover{color:var(--gold);border-color:var(--gold)}
 
 /* ── 最近瀏覽 ── */
 .fleet-recent{margin-bottom:26px}
@@ -201,7 +235,7 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
 }
 .recent-chip:hover{border-color:var(--amber)}
 .recent-chip img{width:44px;height:30px;object-fit:contain;border-radius:5px;
-  background:linear-gradient(180deg,#152238,#0e1729);-webkit-user-drag:none;pointer-events:none}
+  background:var(--thumb-bg);-webkit-user-drag:none;pointer-events:none}
 .recent-chip span{font-size:13px;white-space:nowrap}
 
 /* ── 時間軸檢視 ── */
@@ -220,7 +254,7 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
   border-radius:10px;padding:10px 14px;transition:border-color .15s,transform .15s}
 .tl-card:hover{border-color:var(--amber);transform:translateX(3px)}
 .tl-card img{width:88px;height:54px;object-fit:contain;flex-shrink:0;border-radius:6px;
-  background:linear-gradient(180deg,#152238,#0e1729)}
+  background:var(--thumb-bg)}
 .tl-info h3{font-size:16px;font-weight:700}
 .tl-info .tl-meta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.04em}
 .tl-cardwrap .card-fav{top:10px;left:auto;right:10px;opacity:1;
@@ -232,7 +266,7 @@ button:focus-visible, a:focus-visible{outline:2px solid var(--amber);outline-off
   color:var(--muted);line-height:2;opacity:.85;
 }
 #fleet-error{display:none;margin-top:32px;padding:18px 20px;
-  border:1px solid rgba(255,120,80,.4);border-radius:8px;
+  border:1px solid var(--warn);border-radius:8px;
   font-size:14px;line-height:1.9;color:var(--text)}
 #fleet-error code{font-family:var(--mono);color:var(--amber)}
 
@@ -509,7 +543,7 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
 }
 
 #panel{
-  position:fixed;top:0;right:0;bottom:0;z-index:6;
+  position:fixed;top:0;right:0;bottom:0;z-index:40;   /* 2026-11：高於全站導覽列（z-index 30） */
   width:min(380px,100vw);
   background:var(--panel);
   border-left:1px solid var(--stroke);
@@ -566,7 +600,7 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
   transform:rotate(45deg);
 }
 .gallery{margin:18px 0 4px;display:flex;flex-direction:column;gap:14px}
-.gallery figure{margin:0;border-radius:8px;overflow:hidden;border:1px solid var(--stroke);background:#0e1729}
+.gallery figure{margin:0;border-radius:8px;overflow:hidden;border:1px solid var(--stroke);background:var(--bg-1)}
 .gallery img{display:block;max-width:100%;width:auto;height:auto;margin-inline:auto}
 .gallery figcaption{
   padding:8px 12px;
@@ -636,7 +670,7 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
   position:fixed;inset:0;z-index:200;
   display:flex;align-items:center;justify-content:center;
   padding:24px;
-  background:radial-gradient(1000px 600px at 60% 30%,#16233a 0%,transparent 60%),
+  background:radial-gradient(1000px 600px at 60% 30%,var(--bg-glow) 0%,transparent 60%),
              linear-gradient(180deg,var(--bg-1),var(--bg-0));
 }
 .auth-box{
@@ -653,12 +687,12 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
 .auth-box input{
   width:100%;
   font-family:var(--sans);font-size:15px;
-  color:var(--text);background:#0e1729;
+  color:var(--text);background:var(--bg-1);
   border:1px solid var(--stroke);border-radius:8px;
   padding:12px 14px;margin-bottom:10px;
 }
 .auth-box input:focus{outline:none;border-color:var(--amber)}
-.auth-err{color:#ff7850;font-size:13px;min-height:20px;margin:2px 0 8px}
+.auth-err{color:var(--warn);font-size:13px;min-height:20px;margin:2px 0 8px}
 .auth-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}
 .auth-cancel{
   font-family:var(--mono);font-size:11px;letter-spacing:.14em;
@@ -668,7 +702,7 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
 .auth-cancel:hover{color:var(--amber)}
 #auth-submit{
   font-family:var(--mono);font-size:12px;letter-spacing:.12em;font-weight:700;
-  background:var(--amber);color:var(--bg-0);
+  background:var(--amber);color:var(--on-amber);
   border:none;border-radius:8px;padding:11px 22px;cursor:pointer;
   transition:background .15s;
 }
@@ -686,3 +720,67 @@ select.ed-entry option{background:var(--bg-1);color:var(--text)}
   padding:0;
 }
 .pw-toggle:hover{color:var(--text);background:rgba(255,255,255,.08)}
+
+/* ═══════════════════════════════════════════
+   2026-11 改版：全站導覽列、天空頁首與共用元件
+   （和首頁 css/home.css 同一套視覺；設計紀錄 docs/site-redesign.md）
+   ═══════════════════════════════════════════ */
+body{background:radial-gradient(1100px 600px at 80% 0%, var(--bg-glow) 0%, transparent 60%), var(--bg-0);background-attachment:fixed;overflow-x:clip}
+::selection{background:var(--amber-soft)}
+
+/* ── 全站導覽列（js/sitebar.js 插入） ── */
+.site-bar{position:relative;z-index:30;background:var(--sky-1);color:var(--sky-ink)}
+.site-bar-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:18px;
+  padding-block:12px;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.site-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--sky-ink);flex:none}
+.site-brand svg{width:30px;height:30px}
+.site-brand b{display:block;font-family:var(--display);font-size:19px;font-weight:700;letter-spacing:.06em;line-height:1}
+.site-brand small{display:block;font-size:10.5px;letter-spacing:.2em;color:var(--sky-muted);margin-top:2px}
+.site-nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto}
+.site-nav a{color:var(--sky-ink);text-decoration:none;font-size:13.5px;font-weight:500;padding:7px 12px;border-radius:99px;white-space:nowrap;opacity:.88}
+.site-nav a:hover{background:var(--glass);opacity:1}
+.site-nav a[aria-current="page"]{background:var(--sky-ink);color:var(--sky-1);opacity:1;font-weight:700}
+.site-tools{display:flex;gap:6px;align-items:center;flex:none}
+.site-bar .site-tools .site-tool{
+  font-family:var(--sans);font-size:12.5px;letter-spacing:0;line-height:1;
+  color:var(--sky-ink);background:var(--glass);border:1px solid var(--glass-line);
+  border-radius:99px;padding:8px 12px;min-height:34px;backdrop-filter:none;cursor:pointer;white-space:nowrap}
+.site-bar .site-tools .site-tool:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+.site-bar :focus-visible{outline-color:var(--sky-ink)}
+@media (max-width:760px){
+  .site-bar-in{flex-wrap:wrap;row-gap:8px}
+  .site-nav{order:3;width:100%;margin-left:0}
+  .site-tools{margin-left:auto}
+  .site-brand small{display:none}
+}
+
+/* ── 天空頁首：.fleet-head 變成滿版天空帶，下方工具列像首頁的訂票框一樣浮在交界 ── */
+.fleet-head{position:relative;isolation:isolate;color:var(--sky-ink);padding:28px 0 64px;margin-bottom:0}
+.fleet-head::before{content:"";position:absolute;z-index:-1;left:50%;width:100vw;transform:translateX(-50%);top:-160px;bottom:0;
+  background:linear-gradient(180deg,var(--sky-1) 0%,var(--sky-2) 62%,var(--sky-3) 100%)}
+.fleet-head::after{content:"";position:absolute;z-index:-1;left:50%;width:100vw;transform:translateX(-50%);bottom:-1px;height:56px;
+  background:linear-gradient(180deg,transparent,var(--bg-0))}
+.fleet-head .eyebrow,.fleet-head a.eyebrow.home-link{color:var(--sky-muted);letter-spacing:.2em}
+.fleet-head h1{font-family:var(--display);font-weight:900;font-size:clamp(32px,5vw,54px);letter-spacing:.01em;line-height:1.1;margin:10px 0 10px;color:var(--sky-ink);text-wrap:balance}
+.fleet-head .sub,.fleet-head .var-lede,.fleet-head p{color:var(--sky-muted);font-family:var(--sans);font-size:15px;letter-spacing:.01em;line-height:1.75;max-width:46em}
+.fleet-head :focus-visible{outline-color:var(--sky-ink)}
+.fleet-toolbar{position:relative;z-index:5;margin-top:-34px;margin-bottom:28px;padding:12px;
+  background:var(--panel-solid);border:1px solid var(--stroke);border-radius:18px;box-shadow:var(--shadow-hi)}
+
+/* ── 共用控制項 ── */
+.ed-entry{font-family:var(--sans);font-size:13px;letter-spacing:.01em;border-radius:99px;padding:9px 15px;background:var(--panel-solid)}
+.ed-entry:hover{background:var(--amber-soft)}
+select.ed-entry{padding-right:30px}
+#fleet-search, .search-input{border-radius:12px;padding:11px 14px;font-size:14.5px;background:var(--bg-1)}
+#fleet-search:focus, .search-input:focus{box-shadow:0 0 0 3px var(--amber-soft)}
+.tool-btn{font-family:var(--sans);font-size:12.5px;letter-spacing:.01em;border-radius:99px;padding:8px 13px}
+.eyebrow{color:var(--amber)}
+
+/* ── 卡片 ── */
+.craft-card{border-radius:18px;box-shadow:var(--shadow);background:var(--panel-solid)}
+.craft-card:hover{box-shadow:var(--shadow-hi);transform:translateY(-4px)}
+.craft-card h2{font-family:var(--display);font-size:24px;font-weight:700;letter-spacing:.02em}
+.craft-card .mfr{color:var(--amber)}
+.tl-card,.recent-chip{border-radius:14px;background:var(--panel-solid)}
+.tl-year{font-family:var(--display);font-size:18px}
+.v-header h1{font-family:var(--display);font-size:clamp(24px,3vw,36px);font-weight:900;letter-spacing:.01em}

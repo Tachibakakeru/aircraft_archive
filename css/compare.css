@@ -16,8 +16,9 @@ body{min-height:100vh}
   position:sticky;top:0;z-index:10;
   display:flex;align-items:center;gap:16px;flex-wrap:wrap;
   padding:16px 24px;
-  background:var(--bg-1);
-  border-bottom:1px solid var(--stroke);
+  background:linear-gradient(180deg,var(--sky-2),var(--sky-3));
+  color:var(--sky-ink);
+  border-bottom:0;box-shadow:var(--shadow);
 }
 .cmp-topbar .back{
   font-family:var(--mono);font-size:11px;letter-spacing:.18em;
@@ -82,7 +83,7 @@ body{min-height:100vh}
   border:1px solid var(--stroke);border-radius:5px;
   padding:4px 10px;cursor:pointer;transition:all .15s;
 }
-.cmp-table thead .remove:hover{color:#ff7850;border-color:#ff7850}
+.cmp-table thead .remove:hover{color:var(--warn);border-color:var(--warn)}
 .cmp-table thead .view-link{
   display:inline-block;margin-top:8px;margin-left:6px;
   font-family:var(--mono);font-size:10px;letter-spacing:.1em;
@@ -110,3 +111,15 @@ body{min-height:100vh}
 @media (max-width:640px){
   .cmp-table thead th{min-width:150px}
 }
+
+/* 2026-11 改版：頁首工具列改為天空帶（設計紀錄 docs/site-redesign.md） */
+.cmp-topbar .back{color:var(--sky-muted)}
+.cmp-topbar .back:hover{color:var(--sky-ink)}
+.cmp-topbar .eyebrow{color:var(--sky-muted)}
+.cmp-topbar h1{font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:.01em;color:var(--sky-ink)}
+.cmp-topbar .tool-btn,.cmp-topbar button.ghost,.cmp-topbar button.tiny{color:var(--sky-ink);background:var(--glass);border-color:var(--glass-line)}
+.cmp-topbar .tool-btn:hover,.cmp-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+.cmp-topbar button.primary{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+.cmp-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}
+.cmp-topbar .cmp-difftoggle{color:var(--sky-ink)}
+.cmp-topbar :focus-visible{outline-color:var(--sky-ink)}

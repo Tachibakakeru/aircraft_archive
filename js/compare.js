@@ -64,7 +64,7 @@ function dimM(id, label){
 // ── 尺寸比例對照（同比例側影，附成人參考） ──
 function renderSizeCompare(){
   const host = $("cmp-size");
-  const COLORS = ["#6fd3ef", "#ffb547", "#7ecb8f", "#c98bdb"];
+  const COLORS = ["#3d95ff", "#ffb547", "#3fcf9a", "#a98bff"];   // 分類色：第一架用站內主色藍，其餘維持高辨識度
   const items = selected.map((id, i) => ({
     id, name: craftMeta(id).name, color: COLORS[i % COLORS.length],
     L: dimM(id, "全長"), H: dimM(id, "機高")

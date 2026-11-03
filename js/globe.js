@@ -124,7 +124,7 @@ const AptGlobe = (() => {
     const key = (type || "") + "|" + (fav ? "1" : "0");
     if (planeTextureCache.has(key)) return planeTextureCache.get(key);
     const [varName, fallback] = TYPE_COLOR_VAR[type] || TYPE_COLOR_VAR.small_airport;
-    const color = fav ? themeColor("--amber", "#ffb547") : themeColor(varName, fallback);
+    const color = fav ? themeColor("--gold", "#ffc24d") : themeColor(varName, fallback);
 
     const size = 64;
     const c = document.createElement("canvas");
@@ -408,7 +408,7 @@ const AptGlobe = (() => {
       labelPositions.set(c.m.id, { sx: lx, sy: ly });
     });
 
-    const cyan = themeColor("--cyan", "#6fd3ef"), amber = themeColor("--amber", "#ffb547");
+    const cyan = themeColor("--cyan", "#6fd3ef"), amber = themeColor("--gold", "#ffc24d");
     svgLabels.innerHTML = placed.map(({ lx, ly, c }) => {
       const color = c.m.fav ? amber : cyan;
       const code = c.m.code || "";

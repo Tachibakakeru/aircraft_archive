@@ -14,7 +14,7 @@
 .var-legend b{color:var(--text);font-weight:600}
 .var-legend .sw{display:inline-flex;align-items:center;gap:7px}
 .chip-demo{display:inline-block;padding:2px 9px;border-radius:20px;font-family:var(--mono);font-size:10.5px}
-.chip-demo.in{background:var(--amber);color:var(--bg-0);font-weight:700}
+.chip-demo.in{background:var(--amber);color:var(--on-amber);font-weight:700}
 .chip-demo.out{border:1px solid var(--stroke);color:var(--muted)}
 
 .maker{margin-bottom:44px}
