@@ -1,14 +1,36 @@
 {
   "name": "天空檔案 SKY ARCHIVE",
   "short_name": "天空檔案",
-  "description": "飛行器 3D 互動圖鑑與全球機場資料庫",
+  "description": "飛行器 3D 互動圖鑑、全球機場與跑道、航空公司與航空小知識資料庫",
   "start_url": "index.html",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#0b1220",
-  "theme_color": "#0b1220",
+  "background_color": "#eef6ff",
+  "theme_color": "#1565d8",
   "icons": [
-    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+    {
+      "src": "assets/icon.svg?v=2",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

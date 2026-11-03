@@ -662,3 +662,11 @@
 - 驗證：十個子頁淺色／深色截圖無 page error、無橫向溢出；機場與航空公司詳情、手機寬度、小知識深連結、編輯器登入後畫面均確認。測試機連不到 cdnjs／Wikimedia／ArcGIS，3D 檢視器改用本機 Three.js 副本截圖。
 - 狀態：只在本機修改與 commit，**未推送任何分支**，等待使用者看預覽後確認。
 - 使用者要求「先存到工作分支，同時給我看預覽」：推送到 `claude/eager-euler-euibb4`（不加 `[CF-Pages-Skip]`，讓 Cloudflare 建立 Preview 部署供使用者實際操作），正式站 `main` 不變。
+
+### 全站改版第二輪：Logo 與地圖加速（2026-11-03）
+
+- 回答使用者「emoji 指哪個部分」：整理成表記在 `docs/site-redesign.md` 6.1，本輪不改。
+- 新 Logo：`assets/icon.svg` 改為天空藍漸層＋白色圓框／虛線航跡／飛機；新增 `icon-180/192/512.png`、`apple-touch-icon`，`manifest.json` 改藍色系並加入 PNG 與 maskable；各頁圖示連結加 `?v=2`。
+- 衛星圖加速且不重蹈手機錯位：改讀可快取的圖磚，但以整數像素畫進同一張 canvas（不再用 CSS 拼貼）；失敗退回 export 單張。地球檢視：閒置／按鈕意圖預載 Three.js，地球貼圖 1k → 2k／4k 漸進。新增 `assets/earth_daymap_1k.jpg`、`earth_daymap_2k.jpg`。
+- 版本：airports／airlines／globe JS 與 airports.css `v=201`；SW `hangar-v52`。
+- 驗證：iPhone 13 模擬＋測試圖磚確認拼接無錯位；地圖貼圖載入順序正確；無 page error。推送到工作分支 `claude/eager-euler-euibb4` 供 Cloudflare 預覽，**未合併 `main`**。

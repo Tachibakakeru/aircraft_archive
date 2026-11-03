@@ -15,6 +15,7 @@
 - [x] 截圖預覽給使用者（第一輪，2026-11-03）
 - [ ] 使用者檢查回饋與調整
 - [x] 推送到工作分支 `claude/eager-euler-euibb4` 存檔並產生 Cloudflare 預覽（使用者要求，2026-11-03）；**尚未合併到 `main`**
+- [x] 第二輪：說明 emoji 位置、新 Logo、地圖加速（2026-11-03，推送到工作分支供預覽）
 - [ ] 使用者確認後合併到 `main` 正式上線
 
 ## 1. 現況盤點（改版前）
@@ -121,3 +122,58 @@
 - `.fleet-head` 裡的「SKY ARCHIVE / 天空檔案」eyebrow 和導覽列品牌重複，可考慮改成麵包屑（例如「機場與跑道 / 距離計算」）。
 - 詳情面板、比較表、編輯器表單內部只做了換色，版面沒有重新設計。
 - `editor.html` 原本只有中文介面，本輪只補上 i18n.js 讓導覽列能顯示，編輯器本身仍未多語化。
+
+## 6. 第二輪（2026-11-03）：emoji 說明、新 Logo、地圖加速
+
+### 6.1 使用者問「emoji 指哪個部分」
+
+指的是子頁按鈕文字前面的表情符號，都來自 `js/i18n.js` 的字串（三種語言都有）。主要出現在：
+
+| 位置 | 字串 key | 目前文字（繁中） |
+|---|---|---|
+| 機隊／機場／航空公司工具列 | `fleet.favonly`、`airports.favonly` | ⭐ 只看收藏 |
+| 機場工具列 | `airports.view.globe` | 🌐 地圖 |
+| 航空公司工具列 | `airlines.view.map` | 🌐 航線地圖 |
+| 機隊工具列 | `nav.versus`、`nav.variants`、`fleet.edit` | ⚔ 機型對比、📋 機型家族、✎ 編輯資料 |
+| 機場工具列 | `nav.distance` | 📏 距離計算 |
+| 多處 | `fleet.compare`、`viewer.compare`、`viewer.specs` | ⇄ 比較、☰ 規格 |
+| 機場詳情／編輯 | `airports.detail.uploadImage`、`airports.detail.publish`、`airports.detail.editBtn` | 📁 上傳圖片、☁ 發布到網站、✎ 編輯 |
+| 小知識編輯 | `knowledge.edit.fact`、`knowledge.edit.imgfile`、`knowledge.edit.publish` | 💡 冷知識、📁 上傳、🚀 發布 |
+| 資料編輯器頂部 | `editor.html` 寫死 | 🔒、🔑、⚙ GitHub |
+
+本輪**沒有修改**，等使用者決定是否換成線條圖示或純文字。
+
+### 6.2 新 Logo（`assets/icon.svg`）
+
+- 舊版：深色 `#0b1220` 圓角方塊＋琥珀色飛機。
+- 新版：天空藍漸層圓角方塊（`#0f5fd0 → #2f8cf5 → #6db8ff`）、白色圓框、白色虛線航跡與起點圓點、沿航跡爬升的白色飛機；與首頁／導覽列的品牌標誌同一造型。主要圖形在中央安全區內，可當 maskable 圖示。
+- 新增 PNG：`assets/icon-180.png`（`apple-touch-icon`，iPhone 加到主畫面用）、`icon-192.png`、`icon-512.png`（PWA，含 maskable）。以 Playwright 由 SVG 輸出。
+- `manifest.json`：圖示改為 SVG＋PNG，`theme_color` `#1565d8`、`background_color` `#eef6ff`，描述補上航空公司與小知識。
+- 所有頁面：`<link rel="icon" href="assets/icon.svg?v=2">`、新增 `apple-touch-icon`、`manifest.json?v=2`，避免瀏覽器沿用舊圖示快取。
+
+### 6.3 地圖加速
+
+**(a) 機場衛星圖（詳情面板縮圖與放大檢視）**
+
+- 歷史：最早用多張 `<img>` 圖磚以 CSS Grid 拼貼，桌機正常，但**手機上常錯位亂拼**（子像素捨入、retina 縮放、記憶體壓力）。後來改用 Esri `export` 端點一次取整張影像解決錯位，但 export 每次由伺服器即時繪製、CDN 與瀏覽器都無法快取，一張常要 1 秒以上。
+- 現在（`js/airports.js` 的 `buildSatCanvas()`／`mountSat()`）：改回讀**圖磚**（CDN 快取、`sw.js` 的 `TILE_CACHE` 也會 cache-first 保存），平行下載後以**整數像素座標畫進同一張 `<canvas>`**。畫面上只有一張點陣圖、沒有任何 CSS 拼接，所以不可能出現舊版的錯位；圖磚一到就畫上（漸進顯示），第二次打開同一座機場直接讀快取。
+  - 先四捨五入視窗左上角的全域像素座標，再算每塊圖磚的位移，所有位移都是整數。
+  - 經度跨換日線時圖磚 x 取模環繞；緯度超出 Web Mercator 範圍時夾在 ±85.05°。
+  - 圖磚先以 CORS 載入（Service Worker 才能快取；地球檢視的地面貼片原本就以 CORS 讀同一服務，證實 Esri 有提供 CORS），失敗再以一般模式載入。
+  - 任何一塊圖磚失敗，就退回原本的 export 單張影像。
+  - 放大檢視切換縮放時，舊影像保留到新影像全部畫好才換，不會出現半新半舊。
+  - 框景與舊版一致：縮圖寬 3 塊圖磚（768px canvas），放大檢視寬 5 塊（1280px）。
+- `airports.html`、`airlines.html` 加 `preconnect` 到 `server.arcgisonline.com`（CORS）與 `cdnjs.cloudflare.com`。
+
+**(b) 機場／航空公司的 3D 地球（地圖模式）**
+
+- Three.js 原本要等按下「地圖」才開始下載。現在 `AptGlobe.preload()` 會在頁面閒置時（`requestIdleCallback`，省流量模式或 2G 除外），以及手指碰到／滑鼠移到地圖按鈕時，先下載 Three.js 和小張地球貼圖。
+- 地球貼圖改為漸進：先貼 `assets/earth_daymap_1k.jpg`（1024×512，約 63 KB），再換高解析——桌機且顯示卡支援 4096 用原本 `earth_daymap.jpg`（4096×2048，約 473 KB），手機／小螢幕／省流量用新增的 `earth_daymap_2k.jpg`（2048×1024，約 225 KB），也減少手機的顯示記憶體用量。貼圖到之前球體先用海洋藍，不會出現白球。
+
+**版本**：`js/airports.js`、`js/airlines.js`、`js/globe.js`、`css/airports.css` 升 `v=201`；Service Worker `hangar-v52`。
+
+### 6.4 驗證
+
+- 沙盒連不到 Esri，測試時由 Playwright 回傳「帶邊框、十字線與 z/y/x 編號的 SVG 測試圖磚」（含 CORS 標頭），在 **iPhone 13 模擬**下打開 RCTP：縮圖為 768×768 canvas、放大檢視 1280px canvas，所有圖磚邊框與十字線連續對齊、編號依序正確，中心落在桃園機場所在圖磚。
+- 地圖：閒置後已預載 Three.js 與 1k 貼圖；切到地圖時依序載入 1k → 2k（手機）。無 page error。
+- 實際 Esri 影像的載入速度要在預覽或正式站上確認（沙盒無法連線）。

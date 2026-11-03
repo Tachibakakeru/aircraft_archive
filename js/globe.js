@@ -149,6 +149,32 @@ const AptGlobe = (() => {
     return tex;
   }
 
+  const EARTH_TEX = {
+    low: "assets/earth_daymap_1k.jpg?v=200",
+    mid: "assets/earth_daymap_2k.jpg?v=200",
+    high: "assets/earth_daymap.jpg"
+  };
+  const conn = navigator.connection || {};
+  const lowData = !!conn.saveData || /(^|-)2g$/.test(conn.effectiveType || "");
+  function hiResEarthTexture(){
+    const small = Math.min(screen.width, screen.height) < 820;
+    return (!small && !lowData && renderer.capabilities.maxTextureSize >= 4096) ? EARTH_TEX.high : EARTH_TEX.mid;
+  }
+  // 預先載入：Three.js（約 150 KB 壓縮後）與 1024px 地球貼圖。滑鼠移到／手指碰到「地圖」按鈕時，
+  // 以及頁面閒置時（省流量模式除外）呼叫，真正切到地圖時幾乎不用再等下載。
+  let preloaded = false;
+  function preload(){
+    if (preloaded) return;
+    preloaded = true;
+    loadThree().catch(() => { loading = null; preloaded = false; });
+    const img = new Image();
+    img.src = EARTH_TEX.low;
+  }
+  if (!lowData){
+    const idle = window.requestIdleCallback || (fn => setTimeout(fn, 2500));
+    idle(preload, { timeout: 4000 });
+  }
+
   function loadThree(){
     if (window.THREE) return Promise.resolve();
     if (loading) return loading;
@@ -205,16 +231,28 @@ const AptGlobe = (() => {
 
     scene.add(new THREE.AmbientLight(0xffffff, 1));
 
-    // 實心球體貼衛星影像（NASA Blue Marble 日照面合成圖，經緯度等距投影，4096px）
-    const earthTex = new THREE.TextureLoader().load("assets/earth_daymap.jpg");
-    earthTex.encoding = THREE.sRGBEncoding;
-    earthTex.anisotropy = renderer.capabilities.getMaxAnisotropy();
-    earthTex.minFilter = THREE.LinearMipmapLinearFilter;
-    const core = new THREE.Mesh(
-      new THREE.SphereGeometry(1, 64, 48),
-      new THREE.MeshBasicMaterial({ map: earthTex })
-    );
+    // 實心球體貼衛星影像（NASA Blue Marble 日照面合成圖，經緯度等距投影）。
+    // 2026-11 加速：先貼 1024px 小圖（約 60 KB，一下就出現地球），再換成高解析：
+    // 桌機且顯示卡支援 4096 用原本 4096px，手機／小螢幕／省流量模式用 2048px（省記憶體與流量）。
+    // 貼圖到之前球體先用海洋藍，不會出現一顆白球。
+    const earthMat = new THREE.MeshBasicMaterial({ color: 0x1d4f8c });
+    const core = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 48), earthMat);
     scene.add(core);
+    const texLoader = new THREE.TextureLoader();
+    const applyEarthTex = tex => {
+      tex.encoding = THREE.sRGBEncoding;
+      tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+      tex.minFilter = THREE.LinearMipmapLinearFilter;
+      const old = earthMat.map;
+      earthMat.map = tex;
+      earthMat.color.set(0xffffff);
+      earthMat.needsUpdate = true;
+      if (old) old.dispose();
+    };
+    texLoader.load(EARTH_TEX.low, tex => {
+      applyEarthTex(tex);
+      texLoader.load(hiResEarthTexture(), applyEarthTex);
+    }, undefined, () => texLoader.load(hiResEarthTexture(), applyEarthTex));
 
     markerGroup = new THREE.Group();
     scene.add(markerGroup);
@@ -543,7 +581,7 @@ const AptGlobe = (() => {
   }
 
   return {
-    init, setMarkers, resize, destroy, isReady: () => ready,
+    init, preload, setMarkers, resize, destroy, isReady: () => ready,
     pauseAutoRotate, resumeAutoRotate, isAutoRotating, toggleAutoRotate, resetView,
     clearGroundPatch, focusOn, setRoutes, clearRoutes,
   };

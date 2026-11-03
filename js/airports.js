@@ -370,6 +370,8 @@ function escapeHTML(s){
   wireCountryPicker();
   $("apt-type").addEventListener("change", applyAll);
   $("apt-fav-only").addEventListener("change", applyAll);
+  // 2026-11 加速：手指碰到／滑鼠移到地圖按鈕就先下載 Three.js 與地球貼圖
+  ["pointerenter", "touchstart", "focus"].forEach(ev => $("apt-view-toggle").addEventListener(ev, () => AptGlobe.preload(), { once: true, passive: true }));
   $("apt-view-toggle").addEventListener("click", toggleGlobeMode);
   $("apt-globe-rotate").addEventListener("click", () => {
     const on = AptGlobe.toggleAutoRotate();
@@ -858,18 +860,24 @@ function runwayCardHTML(rw){
   </div>`;
 }
 
-/* ── 衛星影像（Esri World Imagery，公開免金鑰圖磚服務）──
-   依機場類別選縮放級別，組 3×3 圖磚拼成一張置中的空拍圖，
-   同時涵蓋機場全貌與跑道配置，不需額外地圖函式庫。 */
+/* ── 衛星影像（Esri World Imagery，公開免金鑰）──
+   依機場類別選縮放級別，取以機場為中心、寬 3 塊圖磚的範圍，同時涵蓋機場全貌與跑道配置。
+
+   2026-11 加速：改回讀「圖磚」，但不再用 CSS Grid 擺放多張 <img>。
+   - 舊問題：多張 <img> 用 CSS Grid 拼貼時，手機瀏覽器（子像素捨入、retina 縮放、記憶體壓力）
+     會把圖磚排得對不上，看起來整張亂拼。後來改用 export 端點抓「一整張」影像解決錯位，
+     但 export 每次都由伺服器即時繪製、無法被 CDN 快取，載入常要一秒以上。
+   - 現在：圖磚由 CDN 與 Service Worker（sw.js 的 TILE_CACHE）快取，平行下載後以「整數像素
+     座標」畫進同一張 <canvas>。畫面上始終只有一張點陣圖，沒有任何排版拼接，所以不會錯位；
+     第二次打開同一座機場直接從快取取圖。
+   - 任何圖磚載入失敗時，退回原本的 export 單張影像。 */
 const SAT_ZOOM = {
   large_airport: 13, medium_airport: 14, small_airport: 15,
   seaplane_base: 14, heliport: 16, balloonport: 15, closed: 14,
 };
-// 衛星影像改用 Esri World Imagery 的 export 端點：一次回傳「一整張」拼好的
-// 影像，而不是抓 N×N 塊圖磚再靠 CSS Grid 對齊。原本的圖磚拼貼在桌機正常，
-// 但手機瀏覽器（記憶體壓力大、子像素捨入、retina 縮放）常把 25 塊圖磚排得
-// 對不上、看起來整個跑掉；單張影像從根本不可能有「對不齊」的問題。
-// span 依 zoom 對應「tilesAcross 塊圖磚」的地面範圍，維持跟舊版一致的框景。
+const SAT_TILE = 256;
+const esriTileURL = (z, y, x) => `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}`;
+// 備援：export 端點一次回傳整張影像（較慢、不能快取，但同樣不會錯位）
 function esriExportURL(lat, lon, z, tilesAcross, px){
   const R = 20037508.34;   // Web Mercator 半週長（公尺）
   const cx = lon * R / 180;
@@ -879,13 +887,74 @@ function esriExportURL(lat, lon, z, tilesAcross, px){
   return `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export` +
     `?bbox=${bbox}&bboxSR=3857&imageSR=3857&size=${px},${px}&format=jpg&f=image`;
 }
+// 先以 CORS 載入（Service Worker 才能快取），伺服器不給 CORS 時改用一般載入（仍可畫進 canvas 顯示）
+function loadTileImage(url){
+  const attempt = cors => new Promise((resolve, reject) => {
+    const im = new Image();
+    if (cors) im.crossOrigin = "anonymous";
+    im.decoding = "async";
+    im.onload = () => resolve(im);
+    im.onerror = reject;
+    im.src = url;
+  });
+  return attempt(true).catch(() => attempt(false));
+}
+// 以 (lat, lon) 為中心、寬 tilesAcross 塊圖磚，拼成一張 canvas；圖磚一到就畫上（漸進顯示）。
+// 回傳 { canvas, done }，done 在全部圖磚處理完後 resolve 成功與否。
+function buildSatCanvas(lat, lon, z, tilesAcross){
+  const n = 2 ** z, T = SAT_TILE, size = tilesAcross * T;
+  const latR = Math.max(-85.0511, Math.min(85.0511, lat)) * Math.PI / 180;
+  const gx = (lon + 180) / 360 * n * T;                                                    // 全球像素座標
+  const gy = (1 - Math.log(Math.tan(latR) + 1 / Math.cos(latR)) / Math.PI) / 2 * n * T;
+  const left = Math.round(gx - size / 2), top = Math.round(gy - size / 2);                 // 先取整，之後每塊位移都是整數
+  const canvas = document.createElement("canvas");
+  canvas.width = canvas.height = size;
+  const ctx = canvas.getContext("2d");
+  const jobs = [];
+  for (let ty = Math.floor(top / T); ty <= Math.floor((top + size - 1) / T); ty++){
+    if (ty < 0 || ty >= n) continue;
+    for (let tx = Math.floor(left / T); tx <= Math.floor((left + size - 1) / T); tx++){
+      const wx = ((tx % n) + n) % n;                                                       // 跨換日線時經度環繞
+      const dx = tx * T - left, dy = ty * T - top;
+      jobs.push(loadTileImage(esriTileURL(z, ty, wx))
+        .then(im => { ctx.drawImage(im, dx, dy, T, T); return true; })
+        .catch(() => false));
+    }
+  }
+  return { canvas, done: Promise.all(jobs).then(r => r.every(Boolean)) };
+}
+// 把衛星圖放進容器：先放 canvas 漸進顯示；有圖磚失敗就換成 export 單張影像。
+// isCurrent() 回傳 false 代表使用者已切到別的機場／縮放，不再更新畫面。
+function mountSat(box, lat, lon, z, tilesAcross, exportPx, { swapWhenDone = false, isCurrent = () => true } = {}){
+  const { canvas, done } = buildSatCanvas(lat, lon, z, tilesAcross);
+  canvas.className = "apt-sat-canvas";
+  if (!swapWhenDone){ box.innerHTML = ""; box.classList.remove("loaded"); box.appendChild(canvas); }
+  done.then(ok => {
+    if (!isCurrent()) return;
+    if (ok){
+      if (swapWhenDone){ box.innerHTML = ""; box.appendChild(canvas); }
+      box.classList.add("loaded");
+      return;
+    }
+    const img = new Image();
+    img.alt = "";
+    img.onload = () => { if (!isCurrent()) return; box.innerHTML = ""; box.appendChild(img); box.classList.add("loaded"); };
+    img.src = esriExportURL(lat, lon, z, tilesAcross, exportPx);
+  });
+}
 function satelliteHTML(lat, lon, type){
   if (lat == null || lon == null) return "";
   const z = SAT_ZOOM[type] || 14;
-  return `<div class="apt-sat" role="button" tabindex="0" data-lat="${lat}" data-lon="${lon}" data-zoom="${z}">
-      <img src="${esriExportURL(lat, lon, z, 3, 640)}" alt="">
-    </div>
+  return `<div class="apt-sat" role="button" tabindex="0" data-lat="${lat}" data-lon="${lon}" data-zoom="${z}"></div>
     <div class="apt-sat-credit">${I18N.t("airports.sat.hint")} · Imagery © Esri, Maxar, Earthstar Geographics</div>`;
+}
+function renderSatellite(container, lat, lon, type){
+  container.innerHTML = satelliteHTML(lat, lon, type);
+  const box = container.querySelector(".apt-sat");
+  if (!box) return;
+  const key = `${lat},${lon}`;
+  container.dataset.satKey = key;
+  mountSat(box, lat, lon, parseInt(box.dataset.zoom, 10), 3, 640, { isCurrent: () => container.dataset.satKey === key });
 }
 
 /* ── 衛星影像放大檢視（點擊縮圖開啟，可再放大/縮小） ── */
@@ -898,18 +967,14 @@ function openSatLightbox(lat, lon, zoom){
 function renderSatLightbox(){
   const { lat, lon, zoom } = satState;
   $("sat-lightbox-zoom").textContent = "z" + zoom;
-  // 單張 export 影像：預載完成才換上，避免放大/縮小切換時看到半張舊半張新；
-  // 載入期間保留舊影像不清空，不會閃一下空白。
-  const img = new Image();
-  img.onload = () => {
-    if (!satState || satState.lat !== lat || satState.lon !== lon || satState.zoom !== zoom) return;
-    const box = $("sat-lightbox-grid");
-    box.innerHTML = "";
-    box.appendChild(img);
-  };
-  img.src = esriExportURL(lat, lon, zoom, 5, 1024);
+  // 放大／縮小時保留舊影像，新影像全部畫好才換上，不會看到半張舊半張新
+  const box = $("sat-lightbox-grid");
+  mountSat(box, lat, lon, zoom, 5, 1024, {
+    swapWhenDone: box.children.length > 0,
+    isCurrent: () => !!satState && satState.lat === lat && satState.lon === lon && satState.zoom === zoom
+  });
 }
-function closeSatLightbox(){ $("sat-lightbox").hidden = true; satState = null; }
+function closeSatLightbox(){ $("sat-lightbox").hidden = true; $("sat-lightbox-grid").innerHTML = ""; $("sat-lightbox-grid").classList.remove("loaded"); satState = null; }
 
 /* ── 機場備註／照片：檢視與編輯 ── */
 let editingImages = [];
@@ -1089,7 +1154,7 @@ async function openAirport(id){
 
   if (globeMode && typeof AptGlobe !== "undefined" && AptGlobe.isReady()) AptGlobe.focusOn(lat, lon);
 
-  $("apt-p-sat").innerHTML = satelliteHTML(d.lat, d.lon, a.type);
+  renderSatellite($("apt-p-sat"), d.lat, d.lon, a.type);
 
   const info = $("apt-p-info");
   const rows = [

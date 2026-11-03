@@ -517,6 +517,8 @@ function makeLogoEl(a, big){
   $("al-add-new").addEventListener("click", e => { e.stopPropagation(); openNewAirlineForm(); });
   wireEditForm();
 
+  // 2026-11 加速：手指碰到／滑鼠移到地圖按鈕就先下載 Three.js 與地球貼圖
+  ["pointerenter", "touchstart", "focus"].forEach(ev => $("al-view-toggle").addEventListener(ev, () => AptGlobe.preload(), { once: true, passive: true }));
   $("al-view-toggle").addEventListener("click", toggleGlobeMode);
   $("al-globe-reset").addEventListener("click", () => AptGlobe.resetView());
   $("al-globe-rotate").addEventListener("click", () => {
