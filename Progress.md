@@ -644,3 +644,9 @@
 - 驗證：`node --check`（home.js、knowledge.js、i18n.js）通過；本機 Playwright 實測三語、深淺色、手機寬度均無溢出與錯誤，`cavok` 搜尋可直接開啟小知識詳情。
 - 推送範圍：只推到工作分支 `claude/eager-euler-euibb4`，**尚未合併到 `main`**（正式網站由 `main` 部署），待使用者確認。
 - 使用者回覆「PUSH」，同意發布。推送前重跑 `node --check`（home／knowledge／i18n）、`python tools/check_knowledge.py`（82 筆）、`git diff --check` 均通過；`git diff --check` 只標出兩份 OFL 授權原文的行尾空白／CRLF，屬上游原文，保持不動。`origin/main` 無新提交，以快轉方式合併到 `main`，由 Cloudflare Pages 自動部署。
+
+### 正式站仍顯示舊首頁的排查（2026-11-03）
+
+- 使用者回報部署後打開仍是舊版。已確認 GitHub `main` 最新提交為 `67fb10f`，且 `origin/main:index.html` 已引用 `css/home.css?v=193`、`js/home.js?v=193`，推送確實完成。
+- `sw.js` 對頁面導覽採 network-first，部署完成後重新整理即可取得新 HTML；新首頁的 CSS／JS 用新網址 `?v=193`，不會被舊快取攔截。
+- 本 session 的網路政策不允許連到 Cloudflare Pages 網域，無法直接查看正式站或部署紀錄；需請使用者在 Cloudflare Pages 的部署列表確認 `67fb10f` 是否建置成功，並強制重新整理。
