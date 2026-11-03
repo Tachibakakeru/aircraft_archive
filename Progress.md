@@ -643,3 +643,4 @@
 - 版本：首頁 `home.css`／`home.js`／`i18n.js` 用 `v=193`，`knowledge.js` 升 `v=193`，Service Worker `hangar-v50`。`AGENTS.md`、`docs/homepage-concept.md`（新增第 11 節正式套用紀錄）已更新。
 - 驗證：`node --check`（home.js、knowledge.js、i18n.js）通過；本機 Playwright 實測三語、深淺色、手機寬度均無溢出與錯誤，`cavok` 搜尋可直接開啟小知識詳情。
 - 推送範圍：只推到工作分支 `claude/eager-euler-euibb4`，**尚未合併到 `main`**（正式網站由 `main` 部署），待使用者確認。
+- 使用者回覆「PUSH」，同意發布。推送前重跑 `node --check`（home／knowledge／i18n）、`python tools/check_knowledge.py`（82 筆）、`git diff --check` 均通過；`git diff --check` 只標出兩份 OFL 授權原文的行尾空白／CRLF，屬上游原文，保持不動。`origin/main` 無新提交，以快轉方式合併到 `main`，由 Cloudflare Pages 自動部署。
