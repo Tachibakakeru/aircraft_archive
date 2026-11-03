@@ -144,6 +144,9 @@ button{font:inherit;color:inherit}
 .route-card:focus-visible{outline:3px solid var(--hero-ink);outline-offset:2px}
 .route-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
 .route-top .label{color:var(--hero-muted)}
+.route-badge{display:inline-flex;align-items:center;gap:8px}
+.route-unpin{font:inherit;font-size:12px;font-weight:600;color:var(--hero-ink);background:transparent;border:1px dashed var(--glass-line);border-radius:99px;padding:3px 10px;cursor:pointer}
+.route-unpin:hover{background:var(--hero-ink);color:var(--sky-1);border-style:solid}
 .route-open{font-size:12.5px;font-weight:600;color:var(--hero-ink);display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:99px;border:1px solid var(--glass-line);background:var(--glass)}
 .route-open::after{content:"→";transition:transform .2s}
 .route-card:hover .route-open::after{transform:translateX(3px)}
@@ -386,6 +389,11 @@ body.rp-open{overflow:hidden}
 .rp-seg button:not([aria-checked="true"]):hover{color:var(--azure)}
 .rp-speed-hint{font-size:12.5px;color:var(--muted)}
 .rp-actions{display:flex;flex-wrap:wrap;gap:8px}
+.rp-applybar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rp-apply{flex:1 1 auto;justify-content:center;padding:12px 18px;font-size:15px}
+.rp-apply svg{width:18px;height:18px}
+.rp-apply[disabled]{opacity:.65;cursor:default}
+.rp-apply-hint{flex-basis:100%;font-size:12px;color:var(--muted)}
 .rp-actions .btn svg{width:14px;height:14px}
 @media (max-width:860px){
   .rp-body{grid-template-columns:1fr}

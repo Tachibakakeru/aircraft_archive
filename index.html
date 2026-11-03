@@ -10,9 +10,9 @@
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="theme-color" content="#1565d8">
 <link rel="preload" href="assets/fonts/barlow-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/home.css?v=204">
+<link rel="stylesheet" href="css/home.css?v=205">
 <script src="js/theme.js?v=138"></script>
-<script src="js/i18n.js?v=204"></script>
+<script src="js/i18n.js?v=205"></script>
 </head>
 <body>
 
@@ -73,7 +73,10 @@
     </div>
 
     <div class="route-card" id="routeCard" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="planner">
-      <div class="route-top"><span class="label" data-i18n="home.route.badge">隨機航線</span><span class="route-open" data-i18n="home.route.open">自己選起降機場</span></div>
+      <div class="route-top">
+        <span class="route-badge"><span class="label" id="heroBadge">隨機航線</span><button type="button" class="route-unpin" id="heroUnpin" hidden data-i18n="home.route.unpin">恢復隨機</button></span>
+        <span class="route-open" data-i18n="home.route.open">自己選起降機場</span>
+      </div>
       <div class="route-map" id="heroMap"></div>
       <div class="readout">
         <div><span class="label" data-i18n="home.hud.route">航線</span><b id="hudRoute">—</b></div>
@@ -193,6 +196,7 @@
           <svg class="rp-plane" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
           <div class="rp-end to"><b id="rpToCode">—</b><span id="rpToName"></span></div>
         </div>
+        <div class="rp-applybar" id="rpApplyBar"></div>
         <dl class="rp-stats" id="rpStats"></dl>
         <div class="rp-speed">
           <span class="label" id="rpSpeedLabel" data-i18n="home.rp.speed">飛行速度</span>
@@ -207,6 +211,6 @@
 </div>
 
 <script src="js/routemap.js?v=6"></script>
-<script src="js/home.js?v=205"></script>
+<script src="js/home.js?v=206"></script>
 </body>
 </html>

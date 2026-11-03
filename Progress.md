@@ -691,3 +691,4 @@
 - 修正：`home.css` 補 `[hidden]{display:none !important}`，否則隱藏的對話框仍會攔截點擊。
 - 驗證：桌機／iPhone 13 模擬截圖與互動測試、無 page error、手機無溢出。推送到工作分支 `claude/eager-euler-euibb4` 供預覽，**未合併 `main`**。
 - 使用者回報右上角沒有飛機動畫、只像幻燈片且太快。原因是其裝置開啟「減少動態效果」，第一版因此跳過飛行、每 4 秒切換。已改為一律播放飛行；飛行時間依航線長度（巡航時數 × 每小時播放秒數），飛到終點停 2 秒才換下一組；航線規劃新增「飛行速度」五段設定（存 `hangar_route_speed`，首頁共用）。以 reduced-motion 模式重測通過。詳見 `docs/homepage-concept.md` 12.7。仍在工作分支，未合併 `main`。
+- 使用者回報規劃裡產生的航線無法套用到首頁。新增「套用到首頁」（首頁改為重複飛該航線並保留到重新整理後，標籤變「我的航線」）與「恢復隨機」；存 `hangar_route_pin`。測試通過，詳見 `docs/homepage-concept.md` 12.8。仍在工作分支，未合併 `main`。

@@ -282,17 +282,35 @@ const cruiseHours = km => km / 830;
 const flyMs = km => Math.max(3000, Math.min(150000, cruiseHours(km) * speedSec() * 1000));
 const fmtSec = ms => { const s = Math.round(ms / 1000); return s >= 60 ? t("rp.minsec", { m: Math.floor(s / 60), s: s % 60 }) : t("rp.sec", { s }); };
 
+/* 套用到首頁：在航線規劃按「套用到首頁」後，首屏改為重複飛這一條（存在 localStorage.hangar_route_pin，
+   重新整理後仍保留），直到按「恢復隨機」。只存畫面需要的欄位，所以小機場也能套用。 */
+const PIN_KEY = "hangar_route_pin";
+const slimApt = a => ({ id:a.id, iata:a.iata || "", name:a.name || "", city:a.city || "", country:a.country || "", lat:a.lat, lon:a.lon, cityZh:a.cityZh || "", cityJa:a.cityJa || "" });
+let pinned = (() => { try { const v = JSON.parse(store.get(PIN_KEY) || "null"); return v && v.a && v.b && isFinite(v.a.lat) && isFinite(v.b.lat) ? v : null; } catch (e) { return null; } })();
+const nextPair = () => pinned ? { a: pinned.a, b: pinned.b } : pickPair();
+const samePair = (p, q) => !!(p && q && p.a.id === q.a.id && p.b.id === q.b.id);
+
 /* 首屏 */
 const heroMap = RouteMap.create($("#heroMap"));
-let heroPair = pickPair(), heroPaused = false, heroResume = null;
+let heroPair = nextPair(), heroPaused = false, heroResume = null;
+function updatePinUI(){
+  $("#heroBadge").textContent = t(pinned ? "route.badge.pinned" : "route.badge");
+  $("#heroUnpin").hidden = !pinned;
+  $("#routeCap").textContent = t(pinned ? "hud.cap.pinned" : "hud.cap");
+}
+function setPinned(pair){
+  pinned = pair ? { a: slimApt(pair.a), b: slimApt(pair.b) } : null;
+  if (pinned) store.set(PIN_KEY, JSON.stringify(pinned)); else { try { localStorage.removeItem(PIN_KEY); } catch (e) {} }
+  updatePinUI();
+}
 function updateHeroText(){
   if (!heroPair) return;
+  updatePinUI();
   const { a, b } = heroPair, km = gcKm(a, b);
   $("#hudRoute").textContent = `${aptCode(a)} → ${aptCode(b)}`;
   $("#hudDist").textContent = `${fmt(Math.round(km))} km`;
   $("#hudTime").textContent = blockTime(km);
   $("#hudFl").textContent = cruiseFl(km);
-  $("#routeCap").textContent = t("hud.cap");
   $("#routeCard").setAttribute("aria-label", `${t("route.open")}: ${aptCity(a)} → ${aptCity(b)}`);
 }
 const updateRouteText = updateHeroText;   // renderAll() 換語言時呼叫
@@ -300,10 +318,16 @@ async function heroLoop(){
   for (;;){
     if (heroPaused) await new Promise(r => { heroResume = r; });
     const done = await heroMap.play(mapApt(heroPair.a), mapApt(heroPair.b), updateHeroText, { flyMs: flyMs(gcKm(heroPair.a, heroPair.b)) });
-    if (done && !heroPaused) heroPair = pickPair();
+    if (done && !heroPaused) heroPair = nextPair();
   }
 }
 heroLoop();
+$("#heroUnpin").addEventListener("click", e => {
+  e.stopPropagation();          // 不要同時打開航線規劃
+  setPinned(null);
+  heroPair = pickPair(); heroMap.stop();   // 立刻換成隨機航線
+});
+$("#heroUnpin").addEventListener("keydown", e => e.stopPropagation());
 const routePoolReady = new Promise(res => (window.requestIdleCallback || (fn => setTimeout(fn, 1500)))(() => loadRoutePool().then(res, res)));
 
 /* 航線規劃 */
@@ -360,7 +384,18 @@ function renderRpInfo(){
   renderSpeed(km);
   $("#rpStats").innerHTML = rows.map(([k, v, sub]) => `<div><dt>${esc(t(k))}</dt><dd><b>${esc(v)}</b>${sub ? `<span>${esc(sub)}</span>` : ""}</dd></div>`).join("");
   const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-  $("#rpActions").innerHTML = `<button type="button" class="btn pri" id="rpReplay">${esc(t("rp.replay"))}</button>
+  const applied = samePair(pinned, { a, b });
+  $("#rpApplyBar").innerHTML = `<button type="button" class="btn pri rp-apply" id="rpApply"${applied ? " disabled" : ""}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>${esc(t(applied ? "rp.applied" : "rp.apply"))}</button>
+    ${pinned ? `<button type="button" class="btn" id="rpUnpin">${esc(t("route.unpin"))}</button>` : ""}
+    <p class="rp-apply-hint">${esc(t(applied ? "rp.applied.hint" : "rp.apply.hint"))}</p>`;
+  $("#rpApply").addEventListener("click", () => {
+    setPinned({ a: rpA, b: rpB });
+    heroPair = { a: pinned.a, b: pinned.b };
+    closePlanner();               // 關閉後首屏立刻從起點飛這條航線
+  });
+  if ($("#rpUnpin")) $("#rpUnpin").addEventListener("click", () => { setPinned(null); heroPair = pickPair(); renderRpInfo(); });
+  $("#rpActions").innerHTML = `<button type="button" class="btn" id="rpReplay">${esc(t("rp.replay"))}</button>
     <a class="btn" href="airports.html?icao=${encodeURIComponent(a.id)}">${esc(t("rp.fromApt"))} ${arrow}</a>
     <a class="btn" href="airports.html?icao=${encodeURIComponent(b.id)}">${esc(t("rp.toApt"))} ${arrow}</a>
     <a class="btn" href="distance.html?from=${encodeURIComponent(a.id)}&to=${encodeURIComponent(b.id)}">${esc(t("rp.calc"))} ${arrow}</a>`;

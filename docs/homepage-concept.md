@@ -351,3 +351,20 @@ Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概�
 **驗證**：用 Playwright 開啟 `reducedMotion: 'reduce'` 重現使用者環境：BKK→LAX（13,292 km）在 25 秒內飛機經過 47 個不同位置、尚未抵達前航線沒有被換掉；速度切換顯示很慢 2 分 8 秒／標準 48 秒／很快 12 秒，設定有存入 localStorage；無 page error。
 
 版本：`js/routemap.js?v=6`、`js/home.js?v=205`、`css/home.css?v=204`、`js/i18n.js?v=204`、Service Worker `hangar-v56`。
+
+### 12.8 新增「套用到首頁」（2026-11-03）
+
+**使用者回報**：在航線規劃按「隨機一條」產生航線後，關掉畫面回到首頁，右上角沒有改飛這條，缺少「套用」的選項。
+
+**做法**：
+- 航線規劃右側、航班條下方新增主要按鈕「**套用到首頁**」，並附說明：套用後首頁右上角會改飛這條航線（重新整理也會保留），直到按「恢復隨機」。
+- 按下後關閉規劃畫面，首頁立刻從起點開始飛這條航線，並**重複飛同一條**（每趟仍是飛到終點、停 2 秒再重飛）。
+- 首頁右上角的標籤從「隨機航線」變成「**我的航線**」，旁邊出現「**恢復隨機**」小按鈕（點它不會同時打開規劃畫面）；說明文字改為「首頁正在重複飛你套用的航線。點這裡可換一條，或按『恢復隨機』。」
+- 再次打開規劃時，如果目前航線就是已套用的那條，按鈕顯示「已套用到首頁」（停用），旁邊有「恢復隨機」；換一條再按「套用到首頁」即可更換。
+- 套用內容存在 `localStorage.hangar_route_pin`（只存 id、IATA、名稱、城市、國家、座標），所以從全球代碼表選的小機場也能套用。
+- 「重播飛行」改為次要按鈕，避免和「套用到首頁」兩個主要按鈕並列。
+- 新增字串：`home.route.badge.pinned`、`home.route.unpin`、`home.hud.cap.pinned`、`home.rp.apply`、`home.rp.applied`、`home.rp.apply.hint`、`home.rp.applied.hint`（三語）。
+
+**驗證**：規劃裡隨機產生 MXP → SUB → 按套用 → 規劃關閉、首頁航線變 MXP → SUB、標籤「我的航線」、出現「恢復隨機」→ 重新整理後仍是 MXP → SUB → 再開規劃按鈕為「已套用到首頁（停用）」→ 按「恢復隨機」後回到隨機航線、localStorage 清除；無 page error。
+
+版本：`js/home.js?v=206`、`css/home.css?v=205`、`js/i18n.js?v=205`、Service Worker `hangar-v57`。
