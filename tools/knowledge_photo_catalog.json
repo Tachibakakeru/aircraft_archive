@@ -1,0 +1,739 @@
+{
+  "alt": {
+    "file": "Six flight instruments.JPG",
+    "caption": {
+      "zh": "實機六基本儀表中的高度表（原照右上，已裁切單獨顯示）",
+      "en": "Altimeter from a real six-pack (upper right in the original; cropped to show this instrument only)",
+      "ja": "実機の六計器から高度計を切り出した写真（原画像の右上）"
+    },
+    "credit": "Meggar · cropped",
+    "local": "assets/knowledge/six-pack-alt.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "cropped": true,
+    "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Aircraft_altimeter.JPG?width=960",
+    "licenseName": "CC BY-SA 3.0"
+  },
+  "vsi": {
+    "file": "Six flight instruments.JPG",
+    "caption": {
+      "zh": "實機六基本儀表中的垂直速度表（原照右下，已裁切單獨顯示）",
+      "en": "Vertical speed indicator from a real six-pack (lower right in the original; cropped to show this instrument only)",
+      "ja": "実機の六計器から昇降計を切り出した写真（原画像の右下）"
+    },
+    "credit": "Meggar · cropped",
+    "local": "assets/knowledge/six-pack-vsi.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "cropped": true,
+    "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Vertical_speed_indicator_in_airplane_instrument_panel.png?width=960",
+    "licenseName": "CC BY-SA 3.0"
+  },
+  "wake": {
+    "file": "Wirbelschleppe.jpg",
+    "caption": {
+      "zh": "凝結尾跡中的可見尾流渦旋",
+      "en": "Visible wake vortex in a condensation trail",
+      "ja": "飛行機雲に現れた後流渦"
+    },
+    "credit": "Iki · CC BY-SA 3.0"
+  },
+  "ils": {
+    "file": "London Heathrow Instrument Landing System (ILS), October 2023 03.jpg",
+    "caption": {
+      "zh": "倫敦希斯洛機場的 ILS 地面設備",
+      "en": "ILS ground equipment at London Heathrow",
+      "ja": "ロンドン・ヒースロー空港の ILS 地上設備"
+    },
+    "credit": "DaHuzyBru · CC BY-SA 4.0"
+  },
+  "squawk": {
+    "file": "Transponder in Private Aircraft.jpg",
+    "caption": {
+      "zh": "私人飛機駕駛艙中的詢答機",
+      "en": "Transponder in a private aircraft cockpit",
+      "ja": "小型機の操縦席にあるトランスポンダー"
+    },
+    "credit": "Hp.Baumeler · CC BY-SA 4.0"
+  },
+  "adf": {
+    "file": "Automatic Radio Direction Finder R-5 ARN7 indicator.jpg",
+    "caption": {
+      "zh": "B-17G 機上實際安裝的 ADF 無線電羅盤方位指示器（裁切自實拍照片）",
+      "en": "ADF radio-compass bearing indicator installed on a B-17G, cropped from a real photograph",
+      "ja": "B-17G の機体に装備された ADF 無線方位指示器（実写写真から切り出し）"
+    },
+    "credit": "Pi3.124 · cropped",
+    "local": "assets/knowledge/adf-b17-radio-compass.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "licenseName": "CC BY-SA 4.0",
+    "cropped": true,
+    "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/NAV_Ger%C3%A4te_im_Cockpit_einer_C172_1212_VOR_Transponder_ADF.JPG?width=960"
+  },
+  "weight-balance": {
+    "file": "C-130 loadmasters, A deployed balancing act 130806-F-RY372-001.jpg",
+    "caption": {
+      "zh": "C-130 裝載長進行貨物配載",
+      "en": "C-130 loadmasters balancing a cargo load",
+      "ja": "C-130 のロードマスターによる貨物の重量配分"
+    },
+    "credit": "Senior Airman Bahja Jones · Public domain"
+  },
+  "thrust-reverser": {
+    "file": "Thrust reversers arp, G-EZIO, Airbus A319 of EasyJet at Bristol International Airport, 2006.jpg",
+    "caption": {
+      "zh": "A319 降落後展開的逆推力裝置",
+      "en": "Airbus A319 with thrust reversers deployed after landing",
+      "ja": "着陸後に逆推力装置を展開した A319"
+    },
+    "credit": "Adrian Pingstone · Public domain"
+  },
+  "flaps-slats": {
+    "file": "Slat A319.JPG",
+    "caption": {
+      "zh": "A319 機翼前緣縫翼實拍",
+      "en": "Airbus A319 leading-edge slat",
+      "ja": "A319 主翼前縁のスラット"
+    },
+    "credit": "User:Dtom · Public domain"
+  },
+  "crosswind": {
+    "file": "Air Nelson Q300 crosswind landing at Tauranga Airport.jpg",
+    "caption": {
+      "zh": "Q300 在側風中降落",
+      "en": "Q300 landing in a crosswind",
+      "ja": "横風の中で着陸する Q300"
+    },
+    "credit": "Ugur Ozden · CC BY-SA 2.0"
+  },
+  "rvr": {
+    "file": "AGIVIS 2000 Runway Visual Range System.jpg",
+    "caption": {
+      "zh": "跑道視程量測設備",
+      "en": "Runway visual range measurement equipment",
+      "ja": "滑走路視距離の測定装置"
+    },
+    "credit": "Aeronautical & General Instruments Limited · CC BY-SA 3.0"
+  },
+  "vor": {
+    "file": "VOR Ground Station, Interstate 44 South of Lawton, Oklahoma.jpg",
+    "caption": {
+      "zh": "美國奧克拉荷馬州的 VOR 地面電台",
+      "en": "VOR ground station in Oklahoma",
+      "ja": "オクラホマ州の VOR 地上局"
+    },
+    "credit": "Ken Lund · CC BY-SA 4.0"
+  },
+  "pressurization": {
+    "file": "Cabin pressure and Bleed air control panels on a Boeing 737-800.jpg",
+    "caption": {
+      "zh": "737-800 的座艙加壓與引氣控制面板",
+      "en": "Boeing 737-800 cabin pressure and bleed-air panels",
+      "ja": "737-800 の客室与圧・ブリードエア操作盤"
+    },
+    "credit": "-- Wsombeck 11:38, 21 February 2007 (UTC)wsombeck · Public domain"
+  },
+  "fuel-dumping": {
+    "file": "US Navy 051026-N-2838C-009 An F-14D Tomcat dumps fuel prior to a sun set landing aboard the Nimitz-class aircraft carrier USS Theodore Roosevelt (CVN 71).jpg",
+    "caption": {
+      "zh": "F-14D 降落前傾卸燃油",
+      "en": "F-14D dumping fuel before landing",
+      "ja": "着陸前に燃料を投棄する F-14D"
+    },
+    "credit": "U.S. Navy photo by Photographer's Mate 3rd Class Michael D. Cole · Public domain"
+  },
+  "pitot-static": {
+    "file": "Pitot tube of B787 (2).jpg",
+    "caption": {
+      "zh": "波音 787 機身上的皮托管",
+      "en": "Pitot tube on a Boeing 787",
+      "ja": "ボーイング 787 のピトー管"
+    },
+    "credit": "Olivier Cleynen · CC BY-SA 3.0"
+  },
+  "taf": {
+    "file": "US Navy 101003-N-1580K-616 Aerographer's collects and analyzes weather observations at the Naval Aviation Forecast Center at Naval Station Norfolk.jpg",
+    "caption": {
+      "zh": "航空氣象人員分析觀測資料以製作預報",
+      "en": "Aviation forecaster analyzing weather observations",
+      "ja": "観測データを解析する航空気象予報官"
+    },
+    "credit": "U.S. Navy photo by Mass Communication Specialist 2nd Class Ron Kuzlik · Public domain"
+  },
+  "taxiway-signs": {
+    "file": "Taxiway signs at Buchanan Field Airport.jpg",
+    "caption": {
+      "zh": "布坎南機場的滑行道指示牌",
+      "en": "Taxiway signs at Buchanan Field Airport",
+      "ja": "ブキャナン飛行場の誘導路標識"
+    },
+    "credit": "Bill Larkins · CC BY-SA 2.0"
+  },
+  "runway-hold": {
+    "file": "Hold Short.jpg",
+    "caption": {
+      "zh": "跑道等待位置標線與標誌",
+      "en": "Runway holding-position markings and sign",
+      "ja": "滑走路手前の待機位置標示"
+    },
+    "credit": "Bmurphy380 · CC BY-SA 4.0"
+  },
+  "windsock": {
+    "file": "Marshland Airport windsock and runway - geograph.org.uk - 656276.jpg",
+    "caption": {
+      "zh": "機場跑道旁的風向袋",
+      "en": "Windsock beside an airport runway",
+      "ja": "滑走路脇の吹き流し"
+    },
+    "credit": "Ben Harris · CC BY-SA 2.0"
+  },
+  "spoilers": {
+    "file": "Spoilers Activated on Landing, William P. Hobby Airport, Houston, Texas (16074232970).jpg",
+    "caption": {
+      "zh": "飛機落地後升起的擾流板",
+      "en": "Spoilers raised after touchdown",
+      "ja": "接地後に展開したスポイラー"
+    },
+    "credit": "Ken Lund from Reno, Nevada, USA · CC BY-SA 2.0"
+  },
+  "ground-effect": {
+    "file": "Harvard low flyby over runway with landing gear out.jpg",
+    "caption": {
+      "zh": "飛機貼近跑道低空飛行的實景",
+      "en": "Aircraft flying low above a runway",
+      "ja": "滑走路のすぐ上を低空飛行する機体"
+    },
+    "credit": "Pseudopanax at English Wikipedia · Public domain"
+  },
+  "ai": {
+    "file": "Six flight instruments.JPG",
+    "caption": {
+      "zh": "實機六基本儀表中的姿態指示器（原照上排中央，已裁切單獨顯示）",
+      "en": "Attitude indicator from a real six-pack (upper center in the original; cropped to show this instrument only)",
+      "ja": "実機の六計器から姿勢指示器を切り出した写真（原画像の上段中央）"
+    },
+    "credit": "Meggar · cropped",
+    "local": "assets/knowledge/six-pack-ai.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "cropped": true,
+    "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Six_flight_instruments.JPG?width=960",
+    "licenseName": "CC BY-SA 3.0"
+  },
+  "tc": {
+    "file": "Six flight instruments.JPG",
+    "caption": {
+      "zh": "實機六基本儀表中的轉彎協調器（原照左下，已裁切單獨顯示）",
+      "en": "Turn coordinator from a real six-pack (lower left in the original; cropped to show this instrument only)",
+      "ja": "実機の六計器から旋回計を切り出した写真（原画像の左下）"
+    },
+    "credit": "Meggar · cropped",
+    "local": "assets/knowledge/six-pack-tc.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "cropped": true,
+    "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Six_flight_instruments.JPG?width=960",
+    "licenseName": "CC BY-SA 3.0"
+  },
+  "hdg": {
+    "file": "Six flight instruments.JPG",
+    "caption": {
+      "zh": "實機六基本儀表中的航向指示器（原照下排中央，已裁切單獨顯示）",
+      "en": "Heading indicator from a real six-pack (lower center in the original; cropped to show this instrument only)",
+      "ja": "実機の六計器から方位指示器を切り出した写真（原画像の下段中央）"
+    },
+    "credit": "Meggar · cropped",
+    "local": "assets/knowledge/six-pack-hdg.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "cropped": true,
+    "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Six_flight_instruments.JPG?width=960",
+    "licenseName": "CC BY-SA 3.0"
+  },
+  "mach": {
+    "file": "D-558-II-NASA-E49-032 Cockpit.jpg",
+    "caption": {
+      "zh": "NASA D-558 試驗機儀表板，包含馬赫表",
+      "en": "NASA D-558 test aircraft panel, including a Mach meter",
+      "ja": "マッハ計を含む NASA D-558 試験機の実計器盤"
+    },
+    "credit": "NACA · Public domain"
+  },
+  "flight-level": {
+    "file": "Aircraft altimeter.JPG",
+    "caption": {
+      "zh": "實機高度表；飛航空層使用標準氣壓設定",
+      "en": "Real altimeter; flight levels use standard pressure",
+      "ja": "実機の高度計。フライトレベルは標準気圧で読む"
+    },
+    "credit": "User:CambridgeBayWeather · Public domain"
+  },
+  "v-speeds": {
+    "file": "Airspeed indicator DC-10.jpg",
+    "caption": {
+      "zh": "DC-10 空速表；起飛速度須依個別條件設定",
+      "en": "DC-10 airspeed indicator; takeoff speeds are set for each departure",
+      "ja": "DC-10 の速度計。離陸速度は条件ごとに設定する"
+    },
+    "credit": "ChristianSchd Christian Schröder · CC BY-SA 3.0"
+  },
+  "standby": {
+    "file": "Boeing 737 cockpit view from cabin.jpg",
+    "caption": {
+      "zh": "737 儀表中央可見備用姿態指示器",
+      "en": "Boeing 737 panel with a central standby attitude indicator",
+      "ja": "中央に予備姿勢計を備える 737 の計器盤"
+    },
+    "credit": "Excounter · CC BY-SA 4.0"
+  },
+  "decision-height": {
+    "file": "Aircraft altimeter.JPG",
+    "caption": {
+      "zh": "實際高度表；進場時須核對決斷高度",
+      "en": "Real altimeter used when monitoring approach minima",
+      "ja": "進入最低高度の確認に使う実機の高度計"
+    },
+    "credit": "User:CambridgeBayWeather · Public domain"
+  },
+  "transition-altitude": {
+    "file": "Aircraft altimeter.JPG",
+    "caption": {
+      "zh": "可調氣壓設定的實際高度表",
+      "en": "Real altimeter with adjustable pressure setting",
+      "ja": "気圧設定を変更できる実機の高度計"
+    },
+    "credit": "User:CambridgeBayWeather · Public domain"
+  },
+  "apu": {
+    "file": "APU exhaust outlet on G650.jpg",
+    "caption": {
+      "zh": "Gulfstream G650 尾部的 APU 排氣口",
+      "en": "APU exhaust outlet on a Gulfstream G650",
+      "ja": "ガルフストリーム G650 の APU 排気口"
+    },
+    "credit": "Olivier Cleynen · CC BY-SA 3.0"
+  },
+  "stall": {
+    "file": "Hohenems-airport-airplane Tecnam P2010 (D-ELMD)-Stall Warning System (stick shaker)-01ASD.jpg",
+    "caption": {
+      "zh": "Tecnam P2010 的失速警告裝置",
+      "en": "Stall-warning device on a Tecnam P2010",
+      "ja": "Tecnam P2010 の失速警報装置"
+    },
+    "credit": "Asurnipal · CC BY-SA 4.0"
+  },
+  "cavok": {
+    "file": "Russia, Irkutsk, Ust-Ilimsk - Ust-Ilimsk Airport WMID3138574.jpg",
+    "caption": {
+      "zh": "晴朗天空下的實際機場；僅供能見度情境參考",
+      "en": "Real airport under clear skies; visibility context only",
+      "ja": "晴天の実際の空港。視程の参考写真"
+    },
+    "credit": "Haralug · CC BY-SA 3.0"
+  },
+  "runway-numbering": {
+    "file": "Runway 27 Threshold, Liverpool Airport - geograph.org.uk - 6215245.jpg",
+    "caption": {
+      "zh": "利物浦機場 27 號跑道入口",
+      "en": "Runway 27 threshold at Liverpool Airport",
+      "ja": "リバプール空港の滑走路27進入端"
+    },
+    "credit": "Richard Cooke · CC BY-SA 2.0"
+  },
+  "dme": {
+    "file": "Indicator, TACAN, Distance Measuring Equipment (DME), To-From, Type CA-1477-2 - DPLA - 299c0380b6968146ea018a070359a1d9 (page 3).jpg",
+    "caption": {
+      "zh": "實際 DME 距離指示器，顯示以浬為單位的距離",
+      "en": "Real DME indicator showing distance in nautical miles",
+      "ja": "海里単位で距離を示す実物の DME 指示器"
+    },
+    "credit": "Civil Aeronautics Administration, Collins Radio Co · CC0"
+  },
+  "efis": {
+    "file": "Airbus A320-214 Vueling EC-HHA cockpit (5508849819).jpg",
+    "caption": {
+      "zh": "A320 電子飛行儀表與中央顯示器",
+      "en": "Airbus A320 electronic flight displays",
+      "ja": "A320 の電子飛行計器と中央表示器"
+    },
+    "credit": "Curimedia · CC BY 2.0"
+  },
+  "mtow": {
+    "file": "C-130 loadmasters, A deployed balancing act 130806-F-RY372-001.jpg",
+    "caption": {
+      "zh": "C-130 貨物配載；起飛前須核對重量限制",
+      "en": "C-130 cargo loading; takeoff weight must be checked",
+      "ja": "C-130 の貨物搭載。離陸重量の確認が必要"
+    },
+    "credit": "Senior Airman Bahja Jones · Public domain"
+  },
+  "rnav": {
+    "file": "Airbus A320-214 Vueling EC-HHA cockpit (5508849819).jpg",
+    "caption": {
+      "zh": "A320 導航顯示器與飛行管理電腦供航路導航使用",
+      "en": "A320 navigation displays and flight management computers",
+      "ja": "航路航法に使う A320 の航法表示器と飛行管理装置"
+    },
+    "credit": "Curimedia · CC BY 2.0"
+  },
+  "airspace-class": {
+    "file": "Unidentified terminal and radar tower, London Heathrow airport.jpg",
+    "caption": {
+      "zh": "希斯洛機場航管雷達塔；空域分類屬航管規則",
+      "en": "Heathrow radar tower; airspace classes are ATC rules",
+      "ja": "ヒースロー空港のレーダー塔。空域区分は管制規則"
+    },
+    "credit": "Joe Mabel · CC BY-SA 4.0"
+  },
+  "adsb": {
+    "file": "Homemade 1090 MHz ADS-B dipole antenna.jpg",
+    "caption": {
+      "zh": "接收航空器 ADS-B 廣播的 1090 MHz 天線",
+      "en": "1090 MHz antenna receiving aircraft ADS-B broadcasts",
+      "ja": "航空機の ADS-B 信号を受信する 1090 MHz アンテナ"
+    },
+    "credit": "Happy-marmotte · CC BY-SA 3.0"
+  },
+  "krueger-flap": {
+    "file": "B-HUK Boeing 744F Cathay Pacific Cargo (7628201648).jpg",
+    "caption": {
+      "zh": "747F 起降構型；可觀察機翼前緣與後緣裝置",
+      "en": "747F in landing configuration, showing wing-edge devices",
+      "ja": "着陸形態の 747F。主翼前縁・後縁装置が見える"
+    },
+    "credit": "Aeroprints.com · CC BY-SA 3.0"
+  },
+  "high-bypass": {
+    "file": "D-AINU A320neo Lufthansa PW1100G SCQ.jpg",
+    "caption": {
+      "zh": "A320neo 的 PW1100G 高旁通比渦扇發動機",
+      "en": "PW1100G high-bypass turbofan on an A320neo",
+      "ja": "A320neo の高バイパス比ターボファン PW1100G"
+    },
+    "credit": "Bene Riobó · CC BY-SA 4.0"
+  },
+  "metar": {
+    "file": "2017-06-06 10 45 14 Present weather sensor on the Automated Surface Observing System (ASOS) at Ronald Reagan Washington National Airport in Arlington County, Virginia.jpg",
+    "caption": {
+      "zh": "華盛頓國家機場 ASOS 實際天氣感測器",
+      "en": "ASOS weather sensor at Reagan National Airport",
+      "ja": "レーガン・ナショナル空港の ASOS 気象センサー"
+    },
+    "credit": "Famartin · CC BY-SA 4.0"
+  },
+  "papi": {
+    "file": "PAPI Jersey Airport.JPG",
+    "caption": {
+      "zh": "澤西機場跑道旁的 PAPI 進場指示燈",
+      "en": "PAPI approach lights at Jersey Airport",
+      "ja": "ジャージー空港の PAPI 進入角指示灯"
+    },
+    "credit": "Original uploader Tswgb . Edit by Abuk SABUK · Public domain"
+  },
+  "avgas": {
+    "file": "Tarbes-Lourdes-Pyrénées Airport gas station for general aviation.jpg",
+    "caption": {
+      "zh": "機場加油站同時提供 Jet A-1 與 AVGAS 100LL",
+      "en": "Airport fuel station offering Jet A-1 and AVGAS 100LL",
+      "ja": "Jet A-1 と AVGAS 100LL を扱う空港給油所"
+    },
+    "credit": "Hugo LUC · CC BY-SA 4.0"
+  },
+  "winglets": {
+    "file": "Winglet of Boeing 737-800.jpg",
+    "caption": {
+      "zh": "737-800 實機翼尖小翼",
+      "en": "Winglet on a Boeing 737-800",
+      "ja": "737-800 のウィングレット"
+    },
+    "credit": "МаратД · CC BY-SA 4.0"
+  },
+  "displaced-threshold": {
+    "file": "Suburban Airport Displaced Threshold.JPG",
+    "caption": {
+      "zh": "實際跑道位移入口與前方標線",
+      "en": "Real displaced runway threshold and markings",
+      "ja": "実際の移設滑走路進入端と標示"
+    },
+    "credit": "FlugKerl2 · CC BY-SA 3.0"
+  },
+  "fly-by-wire": {
+    "file": "Fly-by-wire system (6389156597).jpg",
+    "caption": {
+      "zh": "線傳飛控飛機的側桿操縱器",
+      "en": "Side-stick control on a fly-by-wire aircraft",
+      "ja": "フライ・バイ・ワイヤ機のサイドスティック"
+    },
+    "credit": "SuperJet International · CC BY-SA 2.0"
+  },
+  "autopilot": {
+    "file": "Airbus A320-214 Vueling EC-HHA cockpit (5508849819).jpg",
+    "caption": {
+      "zh": "A320 駕駛艙上方的自動駕駛控制面板",
+      "en": "Autopilot control panel above the A320 flight displays",
+      "ja": "A320 の表示器上部にある自動操縦操作盤"
+    },
+    "credit": "Curimedia · CC BY 2.0"
+  },
+  "mzfw": {
+    "file": "C-130 loadmasters, A deployed balancing act 130806-F-RY372-001.jpg",
+    "caption": {
+      "zh": "貨物配載實景；零燃油重量包含機身與酬載",
+      "en": "Cargo loading; zero-fuel weight includes aircraft and payload",
+      "ja": "貨物搭載の実景。無燃料重量には機体と搭載物を含む"
+    },
+    "credit": "Senior Airman Bahja Jones · Public domain"
+  },
+  "fod": {
+    "file": "Time for a FOD walk (11593141175).jpg",
+    "caption": {
+      "zh": "機場人員巡檢並清除地面外來物",
+      "en": "Airfield crew conducting a FOD walk",
+      "ja": "異物を探して除去する飛行場職員"
+    },
+    "credit": "US Air Force from USA · Public domain"
+  },
+  "jetstream": {
+    "file": "Jet stream seen from the ground.JPG",
+    "caption": {
+      "zh": "高空飛機凝結尾跡；噴射氣流本身不可見",
+      "en": "High-altitude aircraft contrail; the jet stream itself is invisible",
+      "ja": "高高度の航空機雲。ジェット気流そのものは見えない"
+    },
+    "credit": "Littlegood · CC BY-SA 2.5"
+  },
+  "windshear": {
+    "file": "Microburst - NOAA.jpg",
+    "caption": {
+      "zh": "實際微下擊暴流；近地風切會危及起降",
+      "en": "Real microburst; low-level wind shear threatens takeoff and landing",
+      "ja": "実際のマイクロバースト。低高度のウインドシアは離着陸の脅威"
+    },
+    "credit": "NOAA National Severe Storms Laboratory · Public domain"
+  },
+  "etops": {
+    "file": "Clouds Over the Atlantic Ocean.jpg",
+    "caption": {
+      "zh": "跨大西洋飛行實景；ETOPS 規範備降機場可達時間",
+      "en": "Transatlantic flight; ETOPS sets limits on diversion time",
+      "ja": "大西洋横断飛行の実景。ETOPS は代替空港への飛行時間に関する要件"
+    },
+    "credit": "DiscoA340 · CC BY-SA 4.0"
+  },
+  "edto": {
+    "file": "Clouds Over the Atlantic Ocean.jpg",
+    "caption": {
+      "zh": "遠程洋面飛行實景；EDTO 也涉及備降計畫",
+      "en": "Long oceanic flight; EDTO also involves diversion planning",
+      "ja": "長距離洋上飛行の実景。EDTO にも代替飛行場への計画が必要"
+    },
+    "credit": "DiscoA340 · CC BY-SA 4.0"
+  },
+  "fuel-reserve": {
+    "file": "Fuel contents gauge.JPG",
+    "caption": {
+      "zh": "實際航空器燃油量表；法定備用油量屬飛行計畫",
+      "en": "Real aircraft fuel gauge; required reserves are a flight-planning quantity",
+      "ja": "実際の航空機燃料計。必要な予備燃料量は飛行計画で定める"
+    },
+    "credit": "RobbieMcConnel · CC BY-SA 3.0"
+  },
+  "saf": {
+    "file": "Synthetic fuel load.jpg",
+    "caption": {
+      "zh": "軍機裝載混合型替代航空燃油的實景",
+      "en": "Aircraft being fueled with an alternative aviation fuel blend",
+      "ja": "代替航空燃料の混合燃料を航空機に給油する実景"
+    },
+    "credit": "Samuel King Jr. / US Air Force · Public domain"
+  },
+  "tcas": {
+    "file": "TCAS Indicator.jpg",
+    "caption": {
+      "zh": "真實飛機座艙中的 TCAS 交通顯示器",
+      "en": "Actual TCAS traffic display in an aircraft cockpit",
+      "ja": "実機の操縦室にある TCAS 交通表示器"
+    },
+    "credit": "Meggar · CC BY-SA 3.0"
+  },
+  "egpws": {
+    "file": "The EGPWS and it's pretty colours (525774026).jpg",
+    "caption": {
+      "zh": "飛行中駕駛艙的 EGPWS 地形顯示",
+      "en": "EGPWS terrain display in an operating cockpit",
+      "ja": "飛行中の操縦室に表示された EGPWS 地形情報"
+    },
+    "credit": "Shawn · CC BY-SA 2.0"
+  },
+  "cpdlc": {
+    "file": "A330 DCDU.jpg",
+    "caption": {
+      "zh": "A330 駕駛艙內實際使用的資料鏈控制顯示器",
+      "en": "Data-link control and display unit in a real A330 cockpit",
+      "ja": "実際の A330 操縦室にあるデータリンク表示装置"
+    },
+    "credit": "SempreVolando · CC BY 3.0"
+  },
+  "radalt": {
+    "file": "US Navy 070311-N-8590D-005 Aviation Electronics Technician Airman Kyle Purcell replaces grounding straps on the radar altimeter of an EA-6B Prowler.jpg",
+    "caption": {
+      "zh": "技師維修 EA-6B 上的雷達高度計設備",
+      "en": "Technician servicing radar-altimeter equipment on an EA-6B",
+      "ja": "EA-6B の電波高度計設備を整備する技術者"
+    },
+    "credit": "Rafael Duffie / US Navy · Public domain"
+  },
+  "go-around": {
+    "file": "RAAF Lockheed C-130J Hercules executing go-around.jpg",
+    "caption": {
+      "zh": "澳洲空軍 C-130J 實際執行重飛",
+      "en": "Royal Australian Air Force C-130J executing a go-around",
+      "ja": "オーストラリア空軍 C-130J の実際のゴーアラウンド"
+    },
+    "credit": "Pseudopanax · Public domain"
+  },
+  "callsign": {
+    "file": "Air traffic controller schiphol tower.jpg",
+    "caption": {
+      "zh": "史基浦機場航管員以無線電識別並呼叫航班",
+      "en": "Schiphol tower controller using radio callsigns to address flights",
+      "ja": "スキポール空港の管制官。無線交信では航空機のコールサインを用いる"
+    },
+    "credit": "Mark Brouwer · CC BY-SA 2.5"
+  },
+  "holding": {
+    "file": "Holding at Intersection BASUM during air traffic jam-10.jpg",
+    "caption": {
+      "zh": "德國 BASUM 航點上空，等待航線中的飛機凝結尾跡",
+      "en": "Aircraft contrails during a hold over BASUM, Germany",
+      "ja": "ドイツの BASUM ウェイポイント上空で待機する航空機の航跡"
+    },
+    "credit": "Bin im Garten · Public domain"
+  },
+  "fuel-plan": {
+    "file": "ACARS Message (3555653334).jpg",
+    "caption": {
+      "zh": "實際航班 ACARS 規劃資料單，含燃油量、起迄點與航路",
+      "en": "Real ACARS planning sheet showing fuel, airports and route",
+      "ja": "実際の ACARS 飛行計画書。燃料量、出発・到着地と経路を記載"
+    },
+    "credit": "Shawn · CC BY-SA 2.0"
+  },
+  "notam": {
+    "file": "Rialto Airport X on Runway.JPG",
+    "caption": {
+      "zh": "Rialto 機場關閉跑道的 X 標誌；跑道停用須以飛航公告告知",
+      "en": "Closed runway at Rialto; operational closures are communicated via NOTAM",
+      "ja": "閉鎖されたリアルト飛行場の滑走路。運用上の閉鎖は NOTAM で通知する"
+    },
+    "credit": "Gabriel Felton · CC BY-SA 4.0"
+  },
+  "great-circle": {
+    "file": "Greenland 1694b.jpg",
+    "caption": {
+      "zh": "跨洲航班飛越格陵蘭的實景；大圓航線為地球表面最短路徑",
+      "en": "Greenland on an intercontinental flight; a great circle is the shortest surface path",
+      "ja": "大陸間飛行中のグリーンランド。大圏航路は地球表面の最短経路"
+    },
+    "credit": "Túrelio · CC BY-SA 2.5"
+  },
+  "fuel-temperature": {
+    "file": "US Navy 081129-N-2456S-045 Aviation Machinist's Mate 2nd Class Ed Bryk, assigned to VAQ-141, installs a fuel temperature transmitter on an EA-6B Prowler in the hangar bay aboard the aircraft carrier USS Theodore Roosevelt (CVN.jpg",
+    "caption": {
+      "zh": "技師為 EA-6B 安裝實際燃油溫度感測器；高空飛行須監控燃油溫度",
+      "en": "Technician installing a fuel-temperature sensor on an EA-6B; fuel is monitored in cruise",
+      "ja": "EA-6B の燃料温度センサーを取り付ける整備士。巡航中も燃料温度を監視する"
+    },
+    "credit": "John Suits / US Navy · Public domain"
+  },
+  "fuel-crossfeed": {
+    "file": "Overhead panel of A320 aircraft at parking stand.jpg",
+    "caption": {
+      "zh": "A320 實機頂板上的燃油交叉供油（X FEED）控制區",
+      "en": "Fuel crossfeed (X FEED) control on a real A320 overhead panel",
+      "ja": "実機 A320 のオーバーヘッドパネルにある燃料クロスフィード操作部"
+    },
+    "credit": "Olivier Cleynen · CC BY-SA 3.0"
+  },
+  "atis": {
+    "file": "Ellsworth 1 of 4 bases testing new Automatic Terminal Information Service 160114-F-SE307-020.jpg",
+    "caption": {
+      "zh": "美國 Ellsworth 基地塔臺人員更新 ATIS 訊息",
+      "en": "Tower staff updating ATIS information at Ellsworth Air Force Base",
+      "ja": "エルズワース空軍基地で ATIS 情報を更新する管制官"
+    },
+    "credit": "Donald C. Knechtel / US Air Force · Public domain"
+  },
+  "sid": {
+    "file": "Airbus A320-232 Wizz Air HA-LPM.jpg",
+    "caption": {
+      "zh": "Wizz Air A320 從巴塞隆納起飛後轉彎，進入標準離場程序",
+      "en": "Wizz Air A320 banking after departure from Barcelona toward a SID",
+      "ja": "バルセロナを離陸後、SID に向けて旋回する Wizz Air A320"
+    },
+    "credit": "Curimedia · CC BY 2.0"
+  },
+  "star": {
+    "file": "Navigation Display (ND) on Boeing 747-400.jpg",
+    "caption": {
+      "zh": "747-400 實機導航顯示器；標準到場程序可顯示為航點序列",
+      "en": "Real 747-400 navigation display; a STAR can appear as a sequence of waypoints",
+      "ja": "実機 747-400 の航法表示器。STAR はウェイポイント列として表示できる"
+    },
+    "credit": "Saschaporsche · CC BY-SA 3.0"
+  },
+  "rvsm": {
+    "file": "Primary flight display of an A320 during cruise.jpg",
+    "caption": {
+      "zh": "A320 巡航中的主飛行顯示器；RVSM 需要準確監控高度",
+      "en": "A320 primary display in cruise; RVSM depends on accurate altitude keeping",
+      "ja": "巡航中の A320 の主飛行表示器。RVSM には正確な高度保持が必要"
+    },
+    "credit": "Olivier Cleynen · CC0"
+  },
+  "mel": {
+    "file": "In the plane Be-200 RF-32768. On a table the aircraft logbook (5554279051).jpg",
+    "caption": {
+      "zh": "Be-200 機內的航空器維護紀錄簿；MEL 用於判定設備故障後是否可放行",
+      "en": "Be-200 aircraft logbook; the MEL governs dispatch with inoperative equipment",
+      "ja": "Be-200 機内の航空機ログブック。MEL は装備故障時の運航可否を定める"
+    },
+    "credit": "Aleksandr Markin · CC BY-SA 2.0"
+  },
+  "alternate": {
+    "file": "110311-F-NW653-086 Commercial aircraft diverted from Narita IAP to Yokota.jpg",
+    "caption": {
+      "zh": "2011 年地震後，多架原定飛成田的客機轉降橫田基地",
+      "en": "Airliners diverted from Narita to Yokota after the 2011 earthquake",
+      "ja": "2011 年の地震後、成田から横田基地へダイバートした旅客機"
+    },
+    "credit": "Samuel Morse / US Air Force · Public domain"
+  },
+  "sigmet": {
+    "file": "Cumulonimbus viewed from airplane.jpg",
+    "caption": {
+      "zh": "飛機上拍到的積雨雲；強對流可能觸發 SIGMET 危險天氣情報",
+      "en": "Cumulonimbus seen from an aircraft; severe convection can prompt a SIGMET",
+      "ja": "機上から撮影した積乱雲。激しい対流は SIGMET の対象になり得る"
+    },
+    "credit": "Shyamal · CC0"
+  },
+  "airmet": {
+    "file": "Ice on an aircraft wing.jpg",
+    "caption": {
+      "zh": "實際機翼積冰；中度結冰風險可能列入 AIRMET",
+      "en": "Real wing icing; moderate icing risk may be included in an AIRMET",
+      "ja": "実際の主翼着氷。中程度の着氷リスクは AIRMET の対象となり得る"
+    },
+    "credit": "Cory W. Watts · CC BY-SA 2.0"
+  },
+  "asi": {
+    "file": "Six flight instruments.JPG",
+    "caption": {
+      "zh": "實機六基本儀表中的空速表（原照左上，已裁切單獨顯示）",
+      "en": "Airspeed indicator from a real six-pack (upper left in the original; cropped to show this instrument only)",
+      "ja": "実機の六計器から対気速度計を切り出した写真（原画像の左上）"
+    },
+    "credit": "Meggar · cropped",
+    "local": "assets/knowledge/six-pack-asi.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "cropped": true,
+    "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Airspeed_indicator_DC-10.jpg?width=960",
+    "licenseName": "CC BY-SA 3.0"
+  }
+}

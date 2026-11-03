@@ -178,6 +178,8 @@ python3 tools/make_thumb.py models/a380.json assets/thumb_a380.png
   CC BY-NC-SA 4.0 釋出，若他人取用本站的 DC-9 模型資料，需比照遵守
   非商業／具名歸屬／同授權分享三項條件，與站上其餘 GPL 授權的機型不同。
 - 網站程式碼與文案：自行撰寫。
+- 航空小知識的 `assets/knowledge/six-pack-*.jpg` 為 [Meggar 的實機六儀表照片](https://commons.wikimedia.org/wiki/File:Six_flight_instruments.JPG)裁切版本；六張裁圖均依原圖的 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) 授權分享。`tools/crop_knowledge_instruments.py` 記錄裁切座標；其他知識照片的作者與授權逐張列於 `data/knowledge.json`。
+- `assets/knowledge/adf-b17-radio-compass.jpg` 裁自 [Pi3.124 拍攝的 B-17G ADF 儀表實照](https://commons.wikimedia.org/wiki/File:Automatic_Radio_Direction_Finder_R-5_ARN7_indicator.jpg)，依原圖 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 授權分享；裁切位置亦記於 `tools/crop_knowledge_instruments.py`。
 - Three.js：MIT License，經 cdnjs 載入。
 
 ## GitHub 直接更新（方案 A）

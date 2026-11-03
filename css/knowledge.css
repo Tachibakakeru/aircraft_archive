@@ -210,8 +210,13 @@ body{min-height:100vh}
   background:var(--amber-soft);border-radius:8px;padding:9px 11px;
 }
 .kn-view-fact:empty, .kn-view-gallery:empty{display:none}
-.kn-view-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-top:12px}
-.kn-view-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;border:1px solid var(--stroke)}
+.kn-view-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;margin-top:16px}
+.kn-view-gallery img{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:var(--bg-0);border-radius:8px;border:1px solid var(--stroke)}
+.kn-view-gallery figure{margin:0;min-width:0}
+.kn-view-gallery figure.kn-gauge-photo{width:100%;max-width:430px;margin-inline:auto}
+.kn-view-gallery .kn-gauge-photo img{aspect-ratio:1}
+.kn-view-gallery figcaption{font-size:10px;line-height:1.45;color:var(--muted);margin-top:4px}
+.kn-view-gallery figcaption a{color:var(--cyan)}
 
 .kn-editbtn{
   margin-top:16px;

@@ -19,7 +19,7 @@
         "en": "At high altitude, indicated airspeed reads lower than true airspeed (TAS) because thinner air produces less dynamic pressure — one reason a cruising jet can \"feel\" slower than its actual ground speed.",
         "ja": "高高度では大気が薄く動圧が小さいため、指示対気速度は実対気速度（TAS）より低く出る。巡航中のジェット機が実際の対地速度より「遅く感じる」理由の一つ。"
       },
-      "images": []
+      "images": [{"src": "assets/knowledge/six-pack-asi.jpg", "caption": {"zh": "實機六基本儀表中的空速表（原照左上，已裁切單獨顯示）", "en": "Airspeed indicator from a real six-pack (upper left in the original; cropped to show this instrument only)", "ja": "実機の六計器から対気速度計を切り出した写真（原画像の左上）"}, "source": "https://commons.wikimedia.org/wiki/File:Six_flight_instruments.JPG", "credit": "Meggar · cropped", "license": "https://creativecommons.org/licenses/by-sa/3.0/", "cropped": true, "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Airspeed_indicator_DC-10.jpg?width=960", "licenseName": "CC BY-SA 3.0"}]
     },
     {
       "id": "ai",
@@ -40,7 +40,7 @@
         "en": "Also called the \"artificial horizon.\" In cloud or at night with no visible horizon, pilots rely on it entirely for orientation — its failure is a leading cause of spatial disorientation.",
         "ja": "「人工水平儀」とも呼ばれる。雲中や夜間で実際の地平線が見えないとき、パイロットはこの計器だけを頼りに姿勢を判断する。故障すると空間識失調を招きやすい。"
       },
-      "images": []
+      "images": [{"src": "assets/knowledge/six-pack-ai.jpg", "caption": {"zh": "實機六基本儀表中的姿態指示器（原照上排中央，已裁切單獨顯示）", "en": "Attitude indicator from a real six-pack (upper center in the original; cropped to show this instrument only)", "ja": "実機の六計器から姿勢指示器を切り出した写真（原画像の上段中央）"}, "source": "https://commons.wikimedia.org/wiki/File:Six_flight_instruments.JPG", "credit": "Meggar · cropped", "license": "https://creativecommons.org/licenses/by-sa/3.0/", "cropped": true, "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Six_flight_instruments.JPG?width=960", "licenseName": "CC BY-SA 3.0"}]
     },
     {
       "id": "alt",
@@ -61,7 +61,7 @@
         "en": "QNH, QFE, and QNE are three different references: QNH gives altitude above sea level; QFE reads zero at the airport elevation; QNE uses the standard pressure (1013.25 hPa / 29.92 inHg) for high-altitude \"flight levels.\" Rules specify exactly when to switch between them.",
         "ja": "QNH／QFE／QNEは3種類の基準。QNHは海抜高度、QFEは空港標高を基準（着陸時にゼロ）、QNE（標準気圧1013.25hPa／29.92inHg）は高高度の「フライトレベル」に使用。切り替えのタイミングは航空規則で定められている。"
       },
-      "images": []
+      "images": [{"src": "assets/knowledge/six-pack-alt.jpg", "caption": {"zh": "實機六基本儀表中的高度表（原照右上，已裁切單獨顯示）", "en": "Altimeter from a real six-pack (upper right in the original; cropped to show this instrument only)", "ja": "実機の六計器から高度計を切り出した写真（原画像の右上）"}, "source": "https://commons.wikimedia.org/wiki/File:Six_flight_instruments.JPG", "credit": "Meggar · cropped", "license": "https://creativecommons.org/licenses/by-sa/3.0/", "cropped": true, "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Aircraft_altimeter.JPG?width=960", "licenseName": "CC BY-SA 3.0"}]
     },
     {
       "id": "tc",
@@ -82,7 +82,7 @@
         "en": "\"Step on the ball\" is a classic flight-training mnemonic: press the rudder pedal on whichever side the ball has drifted to, bringing it back to center for a coordinated, slip-free turn.",
         "ja": "「ボールを踏め」は飛行訓練の定番の合言葉。ボールが偏った側のラダーを踏んで中央に戻すことで、スリップのない協調旋回になる。"
       },
-      "images": []
+      "images": [{"src": "assets/knowledge/six-pack-tc.jpg", "caption": {"zh": "實機六基本儀表中的轉彎協調器（原照左下，已裁切單獨顯示）", "en": "Turn coordinator from a real six-pack (lower left in the original; cropped to show this instrument only)", "ja": "実機の六計器から旋回計を切り出した写真（原画像の左下）"}, "source": "https://commons.wikimedia.org/wiki/File:Six_flight_instruments.JPG", "credit": "Meggar · cropped", "license": "https://creativecommons.org/licenses/by-sa/3.0/", "cropped": true, "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Six_flight_instruments.JPG?width=960", "licenseName": "CC BY-SA 3.0"}]
     },
     {
       "id": "hdg",
@@ -103,7 +103,7 @@
         "en": "Modern airliners use ring-laser or fiber-optic gyro inertial reference systems (IRS), far more accurate than mechanical gyros — but the heading indicator's position and role still persist in the classic six-pack layout.",
         "ja": "現代の旅客機はリングレーザーや光ファイバージャイロを用いた慣性基準装置（IRS）を採用し、機械式ジャイロより格段に高精度だが、「方位指示器」の位置と役割は今も標準6計器配置に残っている。"
       },
-      "images": []
+      "images": [{"src": "assets/knowledge/six-pack-hdg.jpg", "caption": {"zh": "實機六基本儀表中的航向指示器（原照下排中央，已裁切單獨顯示）", "en": "Heading indicator from a real six-pack (lower center in the original; cropped to show this instrument only)", "ja": "実機の六計器から方位指示器を切り出した写真（原画像の下段中央）"}, "source": "https://commons.wikimedia.org/wiki/File:Six_flight_instruments.JPG", "credit": "Meggar · cropped", "license": "https://creativecommons.org/licenses/by-sa/3.0/", "cropped": true, "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Six_flight_instruments.JPG?width=960", "licenseName": "CC BY-SA 3.0"}]
     },
     {
       "id": "vsi",
@@ -124,7 +124,7 @@
         "en": "The VSI has a built-in lag of about 6–9 seconds, since it relies on a *rate of change* rather than an instantaneous value. Modern airliners often add an Instantaneous VSI (IVSI) to reduce this lag.",
         "ja": "VSIは瞬時値ではなく気圧の「変化率」に依存するため、約6〜9秒の遅れがある。現代の旅客機はこの遅れを減らすため瞬時昇降計（IVSI）を併用することが多い。"
       },
-      "images": []
+      "images": [{"src": "assets/knowledge/six-pack-vsi.jpg", "caption": {"zh": "實機六基本儀表中的垂直速度表（原照右下，已裁切單獨顯示）", "en": "Vertical speed indicator from a real six-pack (lower right in the original; cropped to show this instrument only)", "ja": "実機の六計器から昇降計を切り出した写真（原画像の右下）"}, "source": "https://commons.wikimedia.org/wiki/File:Six_flight_instruments.JPG", "credit": "Meggar · cropped", "license": "https://creativecommons.org/licenses/by-sa/3.0/", "cropped": true, "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Vertical_speed_indicator_in_airplane_instrument_panel.png?width=960", "licenseName": "CC BY-SA 3.0"}]
     },
     {
       "id": "mach",
@@ -145,7 +145,7 @@
         "en": "The speed of sound isn't fixed — it drops as temperature falls. That's why the same indicated airspeed can push you closer to the sound barrier at high altitude.",
         "ja": "音速は一定ではなく、気温が下がると低下する。そのため同じ指示対気速度でも、高高度ではより音速に近づきやすい。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/D-558-II-NASA-E49-032_Cockpit.jpg?width=960", "caption": {"zh": "NASA D-558 試驗機儀表板，包含馬赫表", "en": "NASA D-558 test aircraft panel, including a Mach meter", "ja": "マッハ計を含む NASA D-558 試験機の実計器盤"}, "source": "https://commons.wikimedia.org/wiki/File:D-558-II-NASA-E49-032_Cockpit.jpg", "credit": "NACA · Public domain"}]
     },
     {
       "id": "wake",
@@ -166,7 +166,7 @@
         "en": "Controllers apply minimum separation based on weight category (Light/Medium/Heavy/Super). Super-heavy types like the A380 require even longer spacing than ordinary Heavy-category aircraft.",
         "ja": "管制官は前後の機体の重量区分（軽量／中量／重量／超重量）に応じて最小間隔を設定する。A380のような超重量機は、通常の重量機よりもさらに長い後方乱気流間隔が必要となる。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Wirbelschleppe.jpg?width=960", "caption": {"zh": "凝結尾跡中的可見尾流渦旋", "en": "Visible wake vortex in a condensation trail", "ja": "飛行機雲に現れた後流渦"}, "source": "https://commons.wikimedia.org/wiki/File:Wirbelschleppe.jpg", "credit": "Iki · CC BY-SA 3.0"}]
     },
     {
       "id": "ils",
@@ -187,7 +187,7 @@
         "en": "ILS is graded CAT I/II/IIIa/IIIb/IIIc by precision. CAT IIIc could theoretically support a \"zero visibility\" autoland, but in practice airport infrastructure and airline dispatch rules still set minimums.",
         "ja": "ILSは精度によりCAT I／II／IIIa／IIIb／IIIcに分類される。理論上CAT IIIcは「視程ゼロ」でのオートランドに対応するが、実際には空港設備や航空会社の運航規定により最低基準が設けられる。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/London_Heathrow_Instrument_Landing_System_(ILS),_October_2023_03.jpg?width=960", "caption": {"zh": "倫敦希斯洛機場的 ILS 地面設備", "en": "ILS ground equipment at London Heathrow", "ja": "ロンドン・ヒースロー空港の ILS 地上設備"}, "source": "https://commons.wikimedia.org/wiki/File:London_Heathrow_Instrument_Landing_System_(ILS),_October_2023_03.jpg", "credit": "DaHuzyBru · CC BY-SA 4.0"}]
     },
     {
       "id": "squawk",
@@ -208,7 +208,7 @@
         "en": "A few codes are internationally standardized for emergencies: 7500 = hijacking, 7600 = radio failure, 7700 = general emergency. Setting any of these instantly alerts ground control systems.",
         "ja": "国際的に共通の緊急コードがある。7500はハイジャック、7600は通信機故障、7700は一般緊急事態。これらを設定すると地上の管制システムに即座に警報が入る。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Transponder_in_Private_Aircraft.jpg?width=960", "caption": {"zh": "私人飛機駕駛艙中的詢答機", "en": "Transponder in a private aircraft cockpit", "ja": "小型機の操縦席にあるトランスポンダー"}, "source": "https://commons.wikimedia.org/wiki/File:Transponder_in_Private_Aircraft.jpg", "credit": "Hp.Baumeler · CC BY-SA 4.0"}]
     },
     {
       "id": "holding",
@@ -229,7 +229,7 @@
         "en": "Standard holds use right turns with 1-minute legs (below 14,000 ft) or 1.5-minute legs (above) — but left-hand holds are also used depending on wind and airspace constraints.",
         "ja": "標準的な待機パターンは右旋回で、各辺の飛行時間は1分（低高度）または1.5分（高高度）。ただし風向や空域の制約により左旋回の待機も用いられる。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Holding_at_Intersection_BASUM_during_air_traffic_jam-10.jpg?width=960", "caption": {"zh": "德國 BASUM 航點上空，等待航線中的飛機凝結尾跡", "en": "Aircraft contrails during a hold over BASUM, Germany", "ja": "ドイツの BASUM ウェイポイント上空で待機する航空機の航跡"}, "source": "https://commons.wikimedia.org/wiki/File:Holding_at_Intersection_BASUM_during_air_traffic_jam-10.jpg", "credit": "Bin im Garten · Public domain"}]
     },
     {
       "id": "jetstream",
@@ -250,7 +250,7 @@
         "en": "Airlines deliberately route trans-Pacific/trans-Atlantic flights to ride the jet stream's tailwind, saving time and fuel — which is why the same route can take an hour or more longer in one direction than the other.",
         "ja": "航空会社は太平洋・大西洋横断便のルートを、ジェット気流の追い風を利用するよう意図的に設計し、時間と燃料を節約する。同一区間でも往復で1時間以上の所要時間差が出るのはこのため。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Jet_stream_seen_from_the_ground.JPG?width=960", "caption": {"zh": "高空飛機凝結尾跡；噴射氣流本身不可見", "en": "High-altitude aircraft contrail; the jet stream itself is invisible", "ja": "高高度の航空機雲。ジェット気流そのものは見えない"}, "source": "https://commons.wikimedia.org/wiki/File:Jet_stream_seen_from_the_ground.JPG", "credit": "Littlegood · CC BY-SA 2.5"}]
     },
     {
       "id": "stall",
@@ -271,7 +271,7 @@
         "en": "Stall is an angle-of-attack problem, not a speed problem — a commonly misunderstood point. An aircraft in a steep climb or hard turn can stall even at high airspeed if the angle of attack gets too large.",
         "ja": "失速は迎え角の問題であり速度の問題ではない、という点はよく誤解される。急上昇や急旋回中は、対気速度が十分でも迎え角が大きすぎれば失速し得る。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Hohenems-airport-airplane_Tecnam_P2010_(D-ELMD)-Stall_Warning_System_(stick_shaker)-01ASD.jpg?width=960", "caption": {"zh": "Tecnam P2010 的失速警告裝置", "en": "Stall-warning device on a Tecnam P2010", "ja": "Tecnam P2010 の失速警報装置"}, "source": "https://commons.wikimedia.org/wiki/File:Hohenems-airport-airplane_Tecnam_P2010_(D-ELMD)-Stall_Warning_System_(stick_shaker)-01ASD.jpg", "credit": "Asurnipal · CC BY-SA 4.0"}]
     },
     {
       "id": "runway-numbering",
@@ -292,7 +292,7 @@
         "en": "Earth's magnetic field slowly drifts, so runway numbers occasionally need remeasuring and repainting — some airports have changed their runway numbers more than once over the decades.",
         "ja": "地球の磁場は緩やかに移動するため、滑走路番号は定期的に再測量・再塗装が必要になる。数十年の運用中に番号が複数回変更された空港も存在する。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Runway_27_Threshold,_Liverpool_Airport_-_geograph.org.uk_-_6215245.jpg?width=960", "caption": {"zh": "利物浦機場 27 號跑道入口", "en": "Runway 27 threshold at Liverpool Airport", "ja": "リバプール空港の滑走路27進入端"}, "source": "https://commons.wikimedia.org/wiki/File:Runway_27_Threshold,_Liverpool_Airport_-_geograph.org.uk_-_6215245.jpg", "credit": "Richard Cooke · CC BY-SA 2.0"}]
     },
     {
       "id": "windshear",
@@ -313,7 +313,7 @@
         "en": "Modern airliners carry onboard wind-shear detection radar, and most major airports have Low-Level Wind Shear Alert Systems (LLWAS) that immediately warn both tower and aircraft when hazardous shear is detected.",
         "ja": "現代の旅客機には機上ウィンドシア検知レーダーが搭載され、主要空港の多くには低高度ウィンドシア警報システム（LLWAS）が設置されている。危険なウィンドシアを検知すると管制塔と航空機に即座に警報が出る。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Microburst_-_NOAA.jpg?width=960", "caption": {"zh": "實際微下擊暴流；近地風切會危及起降", "en": "Real microburst; low-level wind shear threatens takeoff and landing", "ja": "実際のマイクロバースト。低高度のウインドシアは離着陸の脅威"}, "source": "https://commons.wikimedia.org/wiki/File:Microburst_-_NOAA.jpg", "credit": "NOAA National Severe Storms Laboratory · Public domain"}]
     },
     {
       "id": "v-speeds",
@@ -334,7 +334,7 @@
         "en": "V1 isn't a fixed number — it's recalculated for every takeoff based on weight, runway length, wind, airport elevation, and temperature. The same aircraft rarely has the same V1 twice.",
         "ja": "V1は固定値ではなく、機体重量・滑走路長・風・空港標高・気温に応じて毎回計算される。同じ機体でも日や空港が変われば同じV1になることはほぼない。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Airspeed_indicator_DC-10.jpg?width=960", "caption": {"zh": "DC-10 空速表；起飛速度須依個別條件設定", "en": "DC-10 airspeed indicator; takeoff speeds are set for each departure", "ja": "DC-10 の速度計。離陸速度は条件ごとに設定する"}, "source": "https://commons.wikimedia.org/wiki/File:Airspeed_indicator_DC-10.jpg", "credit": "ChristianSchd Christian Schröder · CC BY-SA 3.0"}]
     },
     {
       "id": "flight-level",
@@ -355,7 +355,7 @@
         "en": "This common reference lets all high-altitude traffic maintain separation using the same \"virtual altitude,\" unaffected by local pressure variations — only near the ground do aircraft switch back to true QNH-based altitude.",
         "ja": "この統一基準の狙いは、すべての高高度機が現地の気圧差に影響されない同一の「仮想高度」で間隔を保つこと。地表付近に近づいて初めてQNH基準の実高度に切り替える。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Aircraft_altimeter.JPG?width=960", "caption": {"zh": "實機高度表；飛航空層使用標準氣壓設定", "en": "Real altimeter; flight levels use standard pressure", "ja": "実機の高度計。フライトレベルは標準気圧で読む"}, "source": "https://commons.wikimedia.org/wiki/File:Aircraft_altimeter.JPG", "credit": "User:CambridgeBayWeather · Public domain"}]
     },
     {
       "id": "etops",
@@ -376,7 +376,7 @@
         "en": "Today's highly reliable engines can achieve ETOPS-370 certification (370 minutes on one engine), letting twin-engine jets fly ultra-long-haul oceanic routes once reserved for three- and four-engine aircraft.",
         "ja": "現代の高信頼性エンジンはETOPS-370（片発でも370分飛行可能）の認証を取得できるようになり、かつては3発・4発機しか運航できなかった長距離洋上ルートを双発機が直行できるようになった。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Clouds_Over_the_Atlantic_Ocean.jpg?width=960", "caption": {"zh": "跨大西洋飛行實景；ETOPS 規範備降機場可達時間", "en": "Transatlantic flight; ETOPS sets limits on diversion time", "ja": "大西洋横断飛行の実景。ETOPS は代替空港への飛行時間に関する要件"}, "source": "https://commons.wikimedia.org/wiki/File:Clouds_Over_the_Atlantic_Ocean.jpg", "credit": "DiscoA340 · CC BY-SA 4.0"}]
     },
     {
       "id": "adf",
@@ -397,7 +397,7 @@
         "en": "The RMI (Radio Magnetic Indicator) is an upgraded ADF whose card rotates with the aircraft's heading, letting pilots read the station's magnetic bearing directly instead of mentally computing relative bearing.",
         "ja": "RMI（無線磁方位指示器）はADFの発展形で、カード自体が機首方位に応じて回転するため、相対方位を暗算せずに局の磁方位を直接読み取れる。"
       },
-      "images": []
+      "images": [{"src": "assets/knowledge/adf-b17-radio-compass.jpg", "caption": {"zh": "B-17G 機上實際安裝的 ADF 無線電羅盤方位指示器（裁切自實拍照片）", "en": "ADF radio-compass bearing indicator installed on a B-17G, cropped from a real photograph", "ja": "B-17G の機体に装備された ADF 無線方位指示器（実写写真から切り出し）"}, "source": "https://commons.wikimedia.org/wiki/File:Automatic_Radio_Direction_Finder_R-5_ARN7_indicator.jpg", "credit": "Pi3.124 · cropped", "license": "https://creativecommons.org/licenses/by-sa/4.0/", "licenseName": "CC BY-SA 4.0", "cropped": true, "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/NAV_Ger%C3%A4te_im_Cockpit_einer_C172_1212_VOR_Transponder_ADF.JPG?width=960"}]
     },
     {
       "id": "dme",
@@ -418,7 +418,7 @@
         "en": "DME shows \"slant range\" — when an aircraft passes low directly over a station, the DME reading approaches the aircraft's actual altitude rather than dropping to zero, even though horizontal distance is zero.",
         "ja": "DMEが示すのは「斜距離」。局の真上を低高度で通過すると、水平距離はゼロでもDMEの表示は実際の高度に近い値になり、ゼロにはならない。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Indicator,_TACAN,_Distance_Measuring_Equipment_(DME),_To-From,_Type_CA-1477-2_-_DPLA_-_299c0380b6968146ea018a070359a1d9_(page_3).jpg?width=960", "caption": {"zh": "實際 DME 距離指示器，顯示以浬為單位的距離", "en": "Real DME indicator showing distance in nautical miles", "ja": "海里単位で距離を示す実物の DME 指示器"}, "source": "https://commons.wikimedia.org/wiki/File:Indicator,_TACAN,_Distance_Measuring_Equipment_(DME),_To-From,_Type_CA-1477-2_-_DPLA_-_299c0380b6968146ea018a070359a1d9_(page_3).jpg", "credit": "Civil Aeronautics Administration, Collins Radio Co · CC0"}]
     },
     {
       "id": "radalt",
@@ -439,7 +439,7 @@
         "en": "A radio altimeter only produces readings at low altitude (typically below 2,500 ft) and is mainly used for precision approaches (ILS CAT II/III) and ground proximity warning systems (GPWS/EGPWS).",
         "ja": "電波高度計は低高度（通常2,500フィート以下）でのみ数値を示し、主に精密進入（ILS CAT II/III）や対地接近警報装置（GPWS/EGPWS）に使用される。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Navy_070311-N-8590D-005_Aviation_Electronics_Technician_Airman_Kyle_Purcell_replaces_grounding_straps_on_the_radar_altimeter_of_an_EA-6B_Prowler.jpg?width=960", "caption": {"zh": "技師維修 EA-6B 上的雷達高度計設備", "en": "Technician servicing radar-altimeter equipment on an EA-6B", "ja": "EA-6B の電波高度計設備を整備する技術者"}, "source": "https://commons.wikimedia.org/wiki/File:US_Navy_070311-N-8590D-005_Aviation_Electronics_Technician_Airman_Kyle_Purcell_replaces_grounding_straps_on_the_radar_altimeter_of_an_EA-6B_Prowler.jpg", "credit": "Rafael Duffie / US Navy · Public domain"}]
     },
     {
       "id": "standby",
@@ -460,7 +460,7 @@
         "en": "The standby attitude indicator on modern airliners typically has its own battery and gyro, letting it keep working independently for at least 30 minutes even after a total loss of external power.",
         "ja": "現代の旅客機の予備姿勢指示器は通常、専用のバッテリーとジャイロを内蔵しており、外部電源を完全に失っても最低30分以上は単独で作動し続けられる。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Boeing_737_cockpit_view_from_cabin.jpg?width=960", "caption": {"zh": "737 儀表中央可見備用姿態指示器", "en": "Boeing 737 panel with a central standby attitude indicator", "ja": "中央に予備姿勢計を備える 737 の計器盤"}, "source": "https://commons.wikimedia.org/wiki/File:Boeing_737_cockpit_view_from_cabin.jpg", "credit": "Excounter · CC BY-SA 4.0"}]
     },
     {
       "id": "efis",
@@ -481,7 +481,7 @@
         "en": "Glass cockpits greatly reduced the number of instruments and the pilot's visual scanning workload — but this makes standby mechanical instruments even more important as a fallback if the screens and computers fail.",
         "ja": "グラスコックピットの普及により計器の数とパイロットの走査負担は大幅に減ったが、その分、画面やコンピューターが故障した際の予備機械式計器の重要性はより高まっている。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg?width=960", "caption": {"zh": "A320 電子飛行儀表與中央顯示器", "en": "Airbus A320 electronic flight displays", "ja": "A320 の電子飛行計器と中央表示器"}, "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg", "credit": "Curimedia · CC BY 2.0"}]
     },
     {
       "id": "decision-height",
@@ -502,7 +502,7 @@
         "en": "DH (Decision Height, relative to the airport) and DA (Decision Altitude, relative to sea level) are often used interchangeably; the exact figures and criteria depend on the ILS category (CAT I/II/III).",
         "ja": "DH（決心「高度」、空港基準）とDA（決心「海抜高度」、海面基準）は混同して使われることが多く、実際の数値と判断基準はILSのカテゴリー（CAT I/II/III）によって異なる。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Aircraft_altimeter.JPG?width=960", "caption": {"zh": "實際高度表；進場時須核對決斷高度", "en": "Real altimeter used when monitoring approach minima", "ja": "進入最低高度の確認に使う実機の高度計"}, "source": "https://commons.wikimedia.org/wiki/File:Aircraft_altimeter.JPG", "credit": "User:CambridgeBayWeather · Public domain"}]
     },
     {
       "id": "weight-balance",
@@ -523,7 +523,7 @@
         "en": "Any change to the load manifest — uneven passenger seating, cargo loading order — can shift the CG, which is why weight and balance is recalculated before every single takeoff rather than using a fixed number.",
         "ja": "座席配置の偏りや貨物の積載順序などマニフェストの変更は重心を動かしうるため、固定値を使い回すのではなく毎回の離陸前に再計算される。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/C-130_loadmasters,_A_deployed_balancing_act_130806-F-RY372-001.jpg?width=960", "caption": {"zh": "C-130 裝載長進行貨物配載", "en": "C-130 loadmasters balancing a cargo load", "ja": "C-130 のロードマスターによる貨物の重量配分"}, "source": "https://commons.wikimedia.org/wiki/File:C-130_loadmasters,_A_deployed_balancing_act_130806-F-RY372-001.jpg", "credit": "Senior Airman Bahja Jones · Public domain"}]
     },
     {
       "id": "mtow",
@@ -544,7 +544,7 @@
         "en": "The same aircraft taking off from a \"hot and high\" airport (high temperature, high elevation) faces lower air density and reduced engine/wing efficiency, so the allowable takeoff weight can be well below the structural MTOW.",
         "ja": "高温・高標高の「ホット・アンド・ハイ」空港から離陸する場合、空気密度が低くエンジンや主翼の効率が落ちるため、許容離陸重量が構造上限のMTOWを大きく下回ることがある。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/C-130_loadmasters,_A_deployed_balancing_act_130806-F-RY372-001.jpg?width=960", "caption": {"zh": "C-130 貨物配載；起飛前須核對重量限制", "en": "C-130 cargo loading; takeoff weight must be checked", "ja": "C-130 の貨物搭載。離陸重量の確認が必要"}, "source": "https://commons.wikimedia.org/wiki/File:C-130_loadmasters,_A_deployed_balancing_act_130806-F-RY372-001.jpg", "credit": "Senior Airman Bahja Jones · Public domain"}]
     },
     {
       "id": "thrust-reverser",
@@ -565,7 +565,7 @@
         "en": "Thrust reversers are especially valuable on wet or icy runways, since tire braking friction drops in those conditions while aerodynamic deceleration (reversers, spoilers) is unaffected by runway friction.",
         "ja": "逆噴射は濡れた滑走路や凍結した滑走路で特に重要となる。タイヤブレーキの摩擦力はそうした状況で低下するが、空力的な減速（逆噴射・スポイラー）は滑走路の摩擦係数に左右されないためである。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Thrust_reversers_arp,_G-EZIO,_Airbus_A319_of_EasyJet_at_Bristol_International_Airport,_2006.jpg?width=960", "caption": {"zh": "A319 降落後展開的逆推力裝置", "en": "Airbus A319 with thrust reversers deployed after landing", "ja": "着陸後に逆推力装置を展開した A319"}, "source": "https://commons.wikimedia.org/wiki/File:Thrust_reversers_arp,_G-EZIO,_Airbus_A319_of_EasyJet_at_Bristol_International_Airport,_2006.jpg", "credit": "Adrian Pingstone · Public domain"}]
     },
     {
       "id": "flaps-slats",
@@ -586,7 +586,7 @@
         "en": "Fully extended flaps and slats substantially lower the stall speed — this is why airliners can safely take off and land at speeds far below cruise speed, sometimes over a hundred km/h slower.",
         "ja": "フラップとスラットを完全に展開すると失速速度が大幅に下がる。これが旅客機が巡航速度よりはるかに遅い速度——時に時速100km以上遅い速度——で安全に離着陸できる理由である。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Slat_A319.JPG?width=960", "caption": {"zh": "A319 機翼前緣縫翼實拍", "en": "Airbus A319 leading-edge slat", "ja": "A319 主翼前縁のスラット"}, "source": "https://commons.wikimedia.org/wiki/File:Slat_A319.JPG", "credit": "User:Dtom · Public domain"}]
     },
     {
       "id": "crosswind",
@@ -607,7 +607,7 @@
         "en": "Pilots often combine a \"crab\" approach with a sideslip correction (de-crab) just before touchdown to handle crosswind, aligning the fuselage with the runway direction right at the moment of touchdown.",
         "ja": "パイロットは横風に対処するため、進入中は「クラブ」（機首を風上に向ける）を用い、接地直前に「サイドスリップ修正（デクラブ）」を行い、接地の瞬間に機体を滑走路方向へ合わせる技術をよく使う。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Air_Nelson_Q300_crosswind_landing_at_Tauranga_Airport.jpg?width=960", "caption": {"zh": "Q300 在側風中降落", "en": "Q300 landing in a crosswind", "ja": "横風の中で着陸する Q300"}, "source": "https://commons.wikimedia.org/wiki/File:Air_Nelson_Q300_crosswind_landing_at_Tauranga_Airport.jpg", "credit": "Ugur Ozden · CC BY-SA 2.0"}]
     },
     {
       "id": "rvr",
@@ -628,7 +628,7 @@
         "en": "In dense fog with very low visibility, airports may activate Low Visibility Procedures (LVP), limiting how many aircraft can be on taxiways and runways at once to avoid the risk of ground collisions.",
         "ja": "視程が著しく低い濃霧の中では、空港は低視程運航方式（LVP）を発動し、誘導路や滑走路上に同時に存在できる航空機の数を制限して地上衝突のリスクを避けることがある。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/AGIVIS_2000_Runway_Visual_Range_System.jpg?width=960", "caption": {"zh": "跑道視程量測設備", "en": "Runway visual range measurement equipment", "ja": "滑走路視距離の測定装置"}, "source": "https://commons.wikimedia.org/wiki/File:AGIVIS_2000_Runway_Visual_Range_System.jpg", "credit": "Aeronautical & General Instruments Limited · CC BY-SA 3.0"}]
     },
     {
       "id": "vor",
@@ -649,7 +649,7 @@
         "en": "Crossing radials from multiple VOR stations can pinpoint an aircraft's exact position — this was the primary way aircraft fixed their position on airways before satellite navigation (GPS/GNSS) became widespread.",
         "ja": "複数のVOR局のラジアルを交差させることで機体の正確な位置を特定できる。これは衛星航法（GPS/GNSS）が普及する以前、航空路上で位置を測定する主要な方法だった。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/VOR_Ground_Station,_Interstate_44_South_of_Lawton,_Oklahoma.jpg?width=960", "caption": {"zh": "美國奧克拉荷馬州的 VOR 地面電台", "en": "VOR ground station in Oklahoma", "ja": "オクラホマ州の VOR 地上局"}, "source": "https://commons.wikimedia.org/wiki/File:VOR_Ground_Station,_Interstate_44_South_of_Lawton,_Oklahoma.jpg", "credit": "Ken Lund · CC BY-SA 4.0"}]
     },
     {
       "id": "rnav",
@@ -670,7 +670,7 @@
         "en": "RNP (Required Navigation Performance) is an advanced RNAV specification requiring the aircraft not just to fly the route, but to continuously monitor and alert if its own navigation error exceeds the allowed tolerance.",
         "ja": "RNP（Required Navigation Performance）はRNAVの発展規格で、経路上を飛行するだけでなく、自機の航法誤差が許容範囲を超えていないか常時監視・警告する能力まで要求する。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg?width=960", "caption": {"zh": "A320 導航顯示器與飛行管理電腦供航路導航使用", "en": "A320 navigation displays and flight management computers", "ja": "航路航法に使う A320 の航法表示器と飛行管理装置"}, "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg", "credit": "Curimedia · CC BY 2.0"}]
     },
     {
       "id": "transition-altitude",
@@ -691,7 +691,7 @@
         "en": "The transition altitude varies hugely by country — fixed at 18,000 ft across the entire United States, but as low as 3,000–6,000 ft at many European airports — so pilots flying internationally must check the local value.",
         "ja": "移行高度は国によって大きく異なり、アメリカ全土では一律18,000フィートだが、ヨーロッパの多くの空港ではわずか3,000〜6,000フィートしかない。国際飛行を行うパイロットは現地の数値を必ず確認する必要がある。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Aircraft_altimeter.JPG?width=960", "caption": {"zh": "可調氣壓設定的實際高度表", "en": "Real altimeter with adjustable pressure setting", "ja": "気圧設定を変更できる実機の高度計"}, "source": "https://commons.wikimedia.org/wiki/File:Aircraft_altimeter.JPG", "credit": "User:CambridgeBayWeather · Public domain"}]
     },
     {
       "id": "airspace-class",
@@ -712,7 +712,7 @@
         "en": "The controlled airspace around major airports such as Taipei Taoyuan and Songshan is mostly Class C, requiring small aircraft to obtain ATC clearance to enter; uncontrolled Class G airspace is more common at low altitude in remote areas.",
         "ja": "台北桃園・松山などの主要空港周辺の管制区の多くはクラスCに属し、小型機が進入するには管制官の許可が必要となる。一方、無管制のクラスG空域は低高度・遠隔地でよく見られる。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Unidentified_terminal_and_radar_tower,_London_Heathrow_airport.jpg?width=960", "caption": {"zh": "希斯洛機場航管雷達塔；空域分類屬航管規則", "en": "Heathrow radar tower; airspace classes are ATC rules", "ja": "ヒースロー空港のレーダー塔。空域区分は管制規則"}, "source": "https://commons.wikimedia.org/wiki/File:Unidentified_terminal_and_radar_tower,_London_Heathrow_airport.jpg", "credit": "Joe Mabel · CC BY-SA 4.0"}]
     },
     {
       "id": "notam",
@@ -733,7 +733,7 @@
         "en": "NOTAMs have traditionally been written in dense, telegram-style abbreviated English that's hard to parse; many countries are now working to simplify the format and add graphics to reduce the risk of pilots missing critical notices.",
         "ja": "NOTAMは伝統的に電報のように高度に省略された英語で書かれ、情報量が多く読みにくい。近年は多くの国で書式の簡素化や図式化が進められ、パイロットが重要な通報を見落とすリスクの低減が図られている。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Rialto_Airport_X_on_Runway.JPG?width=960", "caption": {"zh": "Rialto 機場關閉跑道的 X 標誌；跑道停用須以飛航公告告知", "en": "Closed runway at Rialto; operational closures are communicated via NOTAM", "ja": "閉鎖されたリアルト飛行場の滑走路。運用上の閉鎖は NOTAM で通知する"}, "source": "https://commons.wikimedia.org/wiki/File:Rialto_Airport_X_on_Runway.JPG", "credit": "Gabriel Felton · CC BY-SA 4.0"}]
     },
     {
       "id": "great-circle",
@@ -754,7 +754,7 @@
         "en": "This is why long routes like Taipei to New York often deliberately fly north over Alaska and near the Arctic before heading south — that seemingly roundabout arc is actually the true shortest path on a sphere.",
         "ja": "台北からニューヨークのような長距離路線が、あえてアラスカや北極圏付近を経由してから南下する理由もこれで、一見遠回りに見えるその弧こそが、球面上の本当の最短距離なのである。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Greenland_1694b.jpg?width=960", "caption": {"zh": "跨洲航班飛越格陵蘭的實景；大圓航線為地球表面最短路徑", "en": "Greenland on an intercontinental flight; a great circle is the shortest surface path", "ja": "大陸間飛行中のグリーンランド。大圏航路は地球表面の最短経路"}, "source": "https://commons.wikimedia.org/wiki/File:Greenland_1694b.jpg", "credit": "Túrelio · CC BY-SA 2.5"}]
     },
     {
       "id": "adsb",
@@ -775,7 +775,7 @@
         "en": "Because ADS-B signals are unencrypted, ordinary people can receive them with cheap equipment and see live global flight traffic on flight-tracking websites — one of the common data sources behind features like this site's distance calculator.",
         "ja": "ADS-B信号は暗号化されていないため、一般の人でも安価な受信機器で受信でき、フライトトラッキングサイトで世界中の便のリアルタイムな動きを見ることができる。これは本サイトの距離計算などの機能を支える一般的なデータ源の一つでもある。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Homemade_1090_MHz_ADS-B_dipole_antenna.jpg?width=960", "caption": {"zh": "接收航空器 ADS-B 廣播的 1090 MHz 天線", "en": "1090 MHz antenna receiving aircraft ADS-B broadcasts", "ja": "航空機の ADS-B 信号を受信する 1090 MHz アンテナ"}, "source": "https://commons.wikimedia.org/wiki/File:Homemade_1090_MHz_ADS-B_dipole_antenna.jpg", "credit": "Happy-marmotte · CC BY-SA 3.0"}]
     },
     {
       "id": "pressurization",
@@ -796,7 +796,7 @@
         "en": "Cabin \"altitude\" isn't sea level (0 ft) — it's deliberately maintained around an equivalent 6,000–8,000 ft, which is one reason passengers often feel ear discomfort, fatigue, or thirst during a flight.",
         "ja": "客室の「高度」は海面（0フィート）ではなく、意図的に約6,000〜8,000フィート相当に維持されている。搭乗中に耳鳴りや疲労感、喉の渇きを感じやすい理由の一つでもある。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabin_pressure_and_Bleed_air_control_panels_on_a_Boeing_737-800.jpg?width=960", "caption": {"zh": "737-800 的座艙加壓與引氣控制面板", "en": "Boeing 737-800 cabin pressure and bleed-air panels", "ja": "737-800 の客室与圧・ブリードエア操作盤"}, "source": "https://commons.wikimedia.org/wiki/File:Cabin_pressure_and_Bleed_air_control_panels_on_a_Boeing_737-800.jpg", "credit": "-- Wsombeck 11:38, 21 February 2007 (UTC)wsombeck · Public domain"}]
     },
     {
       "id": "deicing",
@@ -817,7 +817,7 @@
         "en": "Even a thin, seemingly harmless layer of frost or ice on a wing can significantly alter airflow and raise the stall speed — so a thin coat of ice can never be ignored before takeoff, no matter how minor it looks.",
         "ja": "主翼にできた一見わずかな霜や氷でも、気流の性質を大きく変え、失速速度を高めてしまうことがある。そのため見た目が薄い氷であっても、離陸前に決して軽視してはならない。"
       },
-      "images": []
+      "images": [{"src":"https://commons.wikimedia.org/wiki/Special:FilePath/2008_wing_deicing_01.jpg?width=960","caption":{"zh":"波音 737 機翼除冰實景","en":"De-icing a Boeing 737 wing","ja":"ボーイング 737 の主翼除氷"},"source":"https://commons.wikimedia.org/wiki/File:2008_wing_deicing_01.jpg","credit":"Nicholas Hartmann · CC BY-SA 4.0"}]
     },
     {
       "id": "apu",
@@ -838,7 +838,7 @@
         "en": "Some airports restrict APU usage time due to noise and emissions concerns, requiring aircraft to connect to ground power and air conditioning units (GPU/PCA) instead, reducing environmental impact around the ramp.",
         "ja": "一部の空港では騒音や排出ガスへの配慮からAPUの使用時間を制限し、代わりに地上電源・空調車（GPU/PCA）の接続を求めることがあり、エプロン周辺の環境負荷を低減している。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/APU_exhaust_outlet_on_G650.jpg?width=960", "caption": {"zh": "Gulfstream G650 尾部的 APU 排氣口", "en": "APU exhaust outlet on a Gulfstream G650", "ja": "ガルフストリーム G650 の APU 排気口"}, "source": "https://commons.wikimedia.org/wiki/File:APU_exhaust_outlet_on_G650.jpg", "credit": "Olivier Cleynen · CC BY-SA 3.0"}]
     },
     {
       "id": "fuel-dumping",
@@ -859,7 +859,7 @@
         "en": "Not every aircraft type has fuel dumping capability — many small and mid-size airliners have little gap between maximum takeoff weight and maximum landing weight, so it's not designed in; these types often instead have to circle and burn off fuel before an emergency landing.",
         "ja": "すべての機種が燃料投棄機能を持つわけではない。多くの中小型旅客機は最大離陸重量と最大着陸重量の差が小さく設計上不要なため、こうした機種は緊急着陸の際にむしろ空中で旋回しながら燃料を消費する必要がある。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Navy_051026-N-2838C-009_An_F-14D_Tomcat_dumps_fuel_prior_to_a_sun_set_landing_aboard_the_Nimitz-class_aircraft_carrier_USS_Theodore_Roosevelt_(CVN_71).jpg?width=960", "caption": {"zh": "F-14D 降落前傾卸燃油", "en": "F-14D dumping fuel before landing", "ja": "着陸前に燃料を投棄する F-14D"}, "source": "https://commons.wikimedia.org/wiki/File:US_Navy_051026-N-2838C-009_An_F-14D_Tomcat_dumps_fuel_prior_to_a_sun_set_landing_aboard_the_Nimitz-class_aircraft_carrier_USS_Theodore_Roosevelt_(CVN_71).jpg", "credit": "U.S. Navy photo by Photographer's Mate 3rd Class Michael D. Cole · Public domain"}]
     },
     {
       "id": "pitot-static",
@@ -880,7 +880,7 @@
         "en": "Pitot tube icing or blockage (e.g. by insects) has been the cause of multiple airspeed-indication failure accidents in aviation history, which is why modern airliners' pitot tubes are fitted with continuously operating electric heating to prevent icing.",
         "ja": "ピトー管の着氷や異物（昆虫など）による閉塞は、航空史上いくつもの対気速度指示異常事故の原因となってきた。そのため現代の旅客機のピトー管には、常時作動する電熱式防氷機能が装備されている。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Pitot_tube_of_B787_(2).jpg?width=960", "caption": {"zh": "波音 787 機身上的皮托管", "en": "Pitot tube on a Boeing 787", "ja": "ボーイング 787 のピトー管"}, "source": "https://commons.wikimedia.org/wiki/File:Pitot_tube_of_B787_(2).jpg", "credit": "Olivier Cleynen · CC BY-SA 3.0"}]
     },
     {
       "id": "edto",
@@ -901,7 +901,7 @@
         "en": "EDTO can be seen as an expanded version of the ETOPS concept — while ETOPS originally only governed twin-engine airliners, EDTO extends the same idea to three- and four-engine types and cargo aircraft, unifying the international terminology for \"extended range\" flight.",
         "ja": "EDTOはETOPSの概念を拡張したものと言える。ETOPSはもともと双発旅客機のみを対象としていたが、EDTOはこれを3発・4発機や貨物機など、より広範な機隊にまで適用し、「延長運航」に関する国際的な用語を統一するものである。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Clouds_Over_the_Atlantic_Ocean.jpg?width=960", "caption": {"zh": "遠程洋面飛行實景；EDTO 也涉及備降計畫", "en": "Long oceanic flight; EDTO also involves diversion planning", "ja": "長距離洋上飛行の実景。EDTO にも代替飛行場への計画が必要"}, "source": "https://commons.wikimedia.org/wiki/File:Clouds_Over_the_Atlantic_Ocean.jpg", "credit": "DiscoA340 · CC BY-SA 4.0"}]
     },
     {
       "id": "fdr-cvr",
@@ -922,7 +922,7 @@
         "en": "Despite the name, recorder cases are usually bright orange. NTSB-listed crash-survival specifications include a 3,400 g impact for 6.5 ms, fire at 1,100°C for 30 minutes, and water pressure equivalent to roughly 20,000 ft (6,100 m) depth. An Underwater Locator Beacon (ULB) helps searchers find a submerged recorder. These are design/test conditions, not a guarantee of complete recovery in every accident.",
         "ja": "名前に反して、記録装置の外装は通常見つけやすい鮮やかなオレンジ色。米国 NTSB が示す耐事故性の仕様には、3,400 g・6.5 ミリ秒の衝撃、1,100°C・30 分間の火災、約 20,000 フィート（約 6,100 メートル）の水深に相当する圧力への耐性が含まれる。水中位置探知ビーコン ULB（Underwater Locator Beacon）は水没時の捜索を助ける。これらは設計・試験条件であり、どの事故でも全データの回収を保証するものではない。"
       },
-      "images": []
+      "images": [{"src":"https://commons.wikimedia.org/wiki/Special:FilePath/Flightrecorders.JPG?width=960","caption":{"zh":"實機後機身內的 FDR 與 CVR","en":"FDR and CVR mounted in an aircraft's rear fuselage","ja":"実機の後部胴体に取り付けられた FDR と CVR"},"source":"https://commons.wikimedia.org/wiki/File:Flightrecorders.JPG","credit":"YSSYguy · CC BY-SA 3.0"}]
     },
     {
       "id": "krueger-flap",
@@ -948,7 +948,7 @@
         {"zh":"提高低速時的最大升力。","en":"Raises maximum lift at low speed.","ja":"低速時の最大揚力を高める。"},
         {"zh":"目的似前緣縫翼，但展開結構不同。","en":"Similar purpose to a slat, different deployment geometry.","ja":"スラットと目的は似るが展開構造が異なる。"}
       ],
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/B-HUK_Boeing_744F_Cathay_Pacific_Cargo_(7628201648).jpg?width=960", "caption": {"zh": "747F 起降構型；可觀察機翼前緣與後緣裝置", "en": "747F in landing configuration, showing wing-edge devices", "ja": "着陸形態の 747F。主翼前縁・後縁装置が見える"}, "source": "https://commons.wikimedia.org/wiki/File:B-HUK_Boeing_744F_Cathay_Pacific_Cargo_(7628201648).jpg", "credit": "Aeroprints.com · CC BY-SA 3.0"}]
     },
     {
       "id": "high-bypass",
@@ -969,259 +969,259 @@
         "en": "For an ideal air-breathing propulsor, propulsive efficiency is ηp ≈ 2V0 / (Vj + V0), where V0 is flight speed and Vj is mean jet speed. As Vj approaches V0, less useless kinetic energy remains in the wake and ηp rises—why high-bypass airliners use less fuel in subsonic cruise. Overall efficiency is roughly ηoverall = ηthermal × ηpropulsive, with fan/turbine losses, nacelle drag, and installation effects still mattering. The trade-offs are larger diameter, mass, drag, and ground-clearance needs; fast aircraft seeking high thrust-to-weight normally use low bypass ratios. A large fan and lower jet velocity also generally reduce jet noise.",
         "ja": "理想化した空気吸入推進の推進効率は ηp ≈ 2V0／(Vj + V0)（V0 は飛行速度、Vj は平均噴流速度）。Vj が V0 に近いほど後流に残る無駄な運動エネルギーが減り、ηp は上がる。これが亜音速巡航で高バイパス旅客機が燃料を節約できる物理的理由である。全体効率はおおむね ηoverall = ηthermal × ηpropulsive だが、ファン／タービン損失、ナセル抗力、搭載損失も影響する。代償は直径・重量・抗力・地上高の要求であり、高速性や高推力重量比を重視する戦闘機は通常低バイパス比を選ぶ。大径ファンと低い噴流速度は、一般に噴流騒音の低減にも有利である。"
       },
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/D-AINU_A320neo_Lufthansa_PW1100G_SCQ.jpg?width=960", "caption": {"zh": "A320neo 的 PW1100G 高旁通比渦扇發動機", "en": "PW1100G high-bypass turbofan on an A320neo", "ja": "A320neo の高バイパス比ターボファン PW1100G"}, "source": "https://commons.wikimedia.org/wiki/File:D-AINU_A320neo_Lufthansa_PW1100G_SCQ.jpg", "credit": "Bene Riobó · CC BY-SA 4.0"}]
     },
     {
       "id": "cavok", "category": "weather", "hotspot": "cavok",
       "name": {"zh": "CAVOK：雲與能見度良好", "en": "CAVOK: Ceiling and Visibility OK", "ja": "CAVOK：雲・視程良好"},
       "summary": {"zh": "在符合條件的機場天氣報告中，CAVOK 代替能見度、現在天氣與雲況欄位：能見度至少 10 公里、沒有顯著天氣，也沒有低於 5,000 呎或最高最低扇區高度（取較高者）的雲底。", "en": "In eligible aerodrome weather reports, CAVOK replaces visibility, present weather and cloud groups: visibility is at least 10 km, no significant weather is present, and no cloud base lies below 5,000 ft or the highest minimum sector altitude, whichever is higher.", "ja": "条件を満たす飛行場気象報では、CAVOK が視程・現在天気・雲の情報を置き換える。視程は 10 km 以上、顕著な天気はなく、雲底は 5,000 ft と最も高い最低扇区高度の高い方より下にない。"},
       "fact": {"zh": "此外不能有積雨雲（CB）或塔狀積雲（TCU）。CAVOK 不代表無雲，也不代表適合所有飛行活動；仍須查看風、溫度、氣壓與天氣變化。它常出現在 METAR 等機場天氣報告中。", "en": "There must also be no cumulonimbus (CB) or towering cumulus (TCU). CAVOK does not mean cloudless or automatically safe for every flight: check wind, temperature, pressure and changing conditions too. It commonly appears in METAR reports.", "ja": "積乱雲（CB）や塔状積雲（TCU）も存在しないことが必要。CAVOK は快晴や全ての飛行に安全という意味ではない。風・気温・気圧と天候の変化も確認する。METAR などに現れる。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Russia,_Irkutsk,_Ust-Ilimsk_-_Ust-Ilimsk_Airport_WMID3138574.jpg?width=960", "caption": {"zh": "晴朗天空下的實際機場；僅供能見度情境參考", "en": "Real airport under clear skies; visibility context only", "ja": "晴天の実際の空港。視程の参考写真"}, "source": "https://commons.wikimedia.org/wiki/File:Russia,_Irkutsk,_Ust-Ilimsk_-_Ust-Ilimsk_Airport_WMID3138574.jpg", "credit": "Haralug · CC BY-SA 3.0"}]
     },
     {
       "id": "metar", "category": "weather", "hotspot": "metar",
       "name": {"zh": "METAR：機場天氣實況", "en": "METAR: Aerodrome Weather Observation", "ja": "METAR：飛行場の実況気象"},
       "summary": {"zh": "METAR 是機場例行天氣觀測報告，依序提供觀測時間、風、能見度、天氣、雲況、溫度／露點及氣壓等資訊。", "en": "A METAR is a routine aerodrome weather observation reporting time, wind, visibility, weather, clouds, temperature/dew point and pressure in a compact code.", "ja": "METAR は飛行場の定時気象観測報。時刻、風、視程、天気、雲、気温／露点、気圧などを簡潔な符号で伝える。"},
       "fact": {"zh": "METAR 說明的是觀測當時附近的情況，不是整段航程的天氣預測。風向通常以真方位報告；解讀時還要注意報告時間與 SPECI（特殊觀測）是否更新。", "en": "A METAR is an observation at a given time, not a forecast for the whole flight. Reported wind direction is generally true; check the observation time and any newer SPECI special report.", "ja": "METAR は観測時点の実況であり、飛行全体の予報ではない。風向は通常真方位で示す。観測時刻と、より新しい SPECI（特別観測）の有無にも注意する。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/2017-06-06_10_45_14_Present_weather_sensor_on_the_Automated_Surface_Observing_System_(ASOS)_at_Ronald_Reagan_Washington_National_Airport_in_Arlington_County,_Virginia.jpg?width=960", "caption": {"zh": "華盛頓國家機場 ASOS 實際天氣感測器", "en": "ASOS weather sensor at Reagan National Airport", "ja": "レーガン・ナショナル空港の ASOS 気象センサー"}, "source": "https://commons.wikimedia.org/wiki/File:2017-06-06_10_45_14_Present_weather_sensor_on_the_Automated_Surface_Observing_System_(ASOS)_at_Ronald_Reagan_Washington_National_Airport_in_Arlington_County,_Virginia.jpg", "credit": "Famartin · CC BY-SA 4.0"}]
     },
     {
       "id": "taf", "category": "weather", "hotspot": "taf",
       "name": {"zh": "TAF：機場天氣預報", "en": "TAF: Aerodrome Forecast", "ja": "TAF：飛行場予報"},
       "summary": {"zh": "TAF 是指定機場、指定有效期間的天氣預報；與觀測實況 METAR 不同，會描述預期的風、能見度、重要天氣與雲況。", "en": "A TAF forecasts weather at a specific aerodrome for a stated validity period, describing expected wind, visibility, significant weather and clouds rather than current observations.", "ja": "TAF は特定の飛行場と有効期間を対象とする気象予報。実況の METAR と異なり、予想される風・視程・顕著な天気・雲を示す。"},
       "fact": {"zh": "FM 表示從特定時間開始的新預報狀態，TEMPO 表示短暫變化，PROB 表示概率組；應將有效時段與預計抵達時間對照，不可只看第一行。", "en": "FM introduces a new forecast state from a specified time, TEMPO indicates temporary fluctuations and PROB a probability group. Match the forecast period to your arrival time rather than reading only the first line.", "ja": "FM は指定時刻からの新しい予報、TEMPO は一時的な変動、PROB は確率を示す。最初の行だけで判断せず、到着予定時刻に当たる期間を読む。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Navy_101003-N-1580K-616_Aerographer%27s_collects_and_analyzes_weather_observations_at_the_Naval_Aviation_Forecast_Center_at_Naval_Station_Norfolk.jpg?width=960", "caption": {"zh": "航空氣象人員分析觀測資料以製作預報", "en": "Aviation forecaster analyzing weather observations", "ja": "観測データを解析する航空気象予報官"}, "source": "https://commons.wikimedia.org/wiki/File:US_Navy_101003-N-1580K-616_Aerographer%27s_collects_and_analyzes_weather_observations_at_the_Naval_Aviation_Forecast_Center_at_Naval_Station_Norfolk.jpg", "credit": "U.S. Navy photo by Mass Communication Specialist 2nd Class Ron Kuzlik · Public domain"}]
     },
     {
       "id": "papi", "category": "airport", "hotspot": "papi",
       "name": {"zh": "PAPI：精密進場航道指示燈", "en": "PAPI: Precision Approach Path Indicator", "ja": "PAPI：精密進入角指示灯"},
       "summary": {"zh": "跑道旁一列通常四盞燈，用紅白燈色向進場飛機顯示相對於設定下滑路徑的高度。", "en": "A row of usually four lights beside the runway uses red and white indications to show whether an approaching aircraft is above or below the designed glide path.", "ja": "滑走路脇の通常４灯の列が、赤と白の表示で進入機に設定された降下経路より高いか低いかを知らせる。"},
       "fact": {"zh": "典型四燈 PAPI 的兩白兩紅表示在設定下滑道附近；白燈多代表偏高，紅燈多代表偏低。PAPI 只提供垂直目視指引，左右對準仍須依跑道與其他導航資訊判斷。", "en": "On a typical four-light PAPI, two white and two red mean near the designed path; more white means high, more red means low. PAPI provides vertical visual guidance, not lateral alignment.", "ja": "標準的な４灯式では白２・赤２が設定経路付近を示し、白が多いと高く、赤が多いと低い。PAPI は垂直方向の視覚誘導であり、左右方向の誘導ではない。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/PAPI_Jersey_Airport.JPG?width=960", "caption": {"zh": "澤西機場跑道旁的 PAPI 進場指示燈", "en": "PAPI approach lights at Jersey Airport", "ja": "ジャージー空港の PAPI 進入角指示灯"}, "source": "https://commons.wikimedia.org/wiki/File:PAPI_Jersey_Airport.JPG", "credit": "Original uploader Tswgb . Edit by Abuk SABUK · Public domain"}]
     },
     {
       "id": "taxiway-signs", "category": "airport", "hotspot": "taxiway-signs",
       "name": {"zh": "滑行道標誌與標線", "en": "Taxiway Signs and Markings", "ja": "誘導路の標識と標示"},
       "summary": {"zh": "滑行道的字母／數字標示與地面標線協助機組在複雜機場辨識位置、方向及跑道等待點。", "en": "Taxiway letters, signs and pavement markings help crews identify their position, direction of travel and runway holding points at complex airports.", "ja": "誘導路の文字・数字標識と路面標示は、複雑な空港で現在位置・進行方向・滑走路待機位置を確認する助けになる。"},
       "fact": {"zh": "常見的黑底黃字是目前所在滑行道的位置標誌，黃底黑字是方向指示；紅底白字是不得逕自越過的強制指令標誌。各國細節以當地公布圖資為準。", "en": "Common conventions: yellow-on-black identifies the present taxiway, black-on-yellow points to a direction, and white-on-red marks a mandatory instruction that must not be crossed without clearance. Consult local charts for details.", "ja": "一般に黒地に黄文字は現在の誘導路、黄地に黒文字は進行方向、赤地に白文字は許可なしで通過できない強制指示を示す。詳細は現地の公示資料に従う。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Taxiway_signs_at_Buchanan_Field_Airport.jpg?width=960", "caption": {"zh": "布坎南機場的滑行道指示牌", "en": "Taxiway signs at Buchanan Field Airport", "ja": "ブキャナン飛行場の誘導路標識"}, "source": "https://commons.wikimedia.org/wiki/File:Taxiway_signs_at_Buchanan_Field_Airport.jpg", "credit": "Bill Larkins · CC BY-SA 2.0"}]
     },
     {
       "id": "runway-hold", "category": "airport", "hotspot": "runway-hold",
       "name": {"zh": "跑道等待點與進入許可", "en": "Runway Holding Position and Clearance", "ja": "滑走路待機位置と進入許可"},
       "summary": {"zh": "滑行道接近跑道的等待位置以標線與標誌提醒機組停止，未獲塔台許可不得進入或穿越跑道。", "en": "Markings and signs at a taxiway's runway holding position tell crews to stop; entering or crossing the runway requires an explicit clearance.", "ja": "誘導路から滑走路に近づく待機位置には標示・標識があり、明示的な許可なしに滑走路へ進入・横断してはならない。"},
       "fact": {"zh": "即使已獲滑行許可，也不等於獲准穿越沿途跑道。管制員通常會明確說出跑道號碼，機組需複誦相關許可，以降低跑道侵入風險。", "en": "A taxi clearance alone is not clearance to cross a runway along the route. Controllers identify the runway explicitly and crews read back the clearance to reduce runway-incursion risk.", "ja": "地上走行の許可だけでは途中の滑走路横断は許可されない。管制官は滑走路番号を明示し、乗員は許可を復唱して誤進入を防ぐ。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Hold_Short.jpg?width=960", "caption": {"zh": "跑道等待位置標線與標誌", "en": "Runway holding-position markings and sign", "ja": "滑走路手前の待機位置標示"}, "source": "https://commons.wikimedia.org/wiki/File:Hold_Short.jpg", "credit": "Bmurphy380 · CC BY-SA 4.0"}]
     },
     {
       "id": "windsock", "category": "airport", "hotspot": "windsock",
       "name": {"zh": "風向袋與迎風起降", "en": "Windsock and Headwind Operations", "ja": "吹き流しと向かい風での離着陸"},
       "summary": {"zh": "機場風向袋顯示當地風向與大致風力，幫助判斷跑道周邊風況。飛機通常盡量迎風起降，以降低所需地速。", "en": "An airport windsock gives a visual indication of local wind direction and approximate strength. Aircraft generally prefer to take off and land into the wind to reduce required groundspeed.", "ja": "空港の吹き流しは現地の風向と風の強さの目安を示す。航空機は通常、必要な対地速度を下げるため向かい風で離着陸する。"},
       "fact": {"zh": "風向是風吹來的方向；風向袋的開口朝上風側，尾端指向下風側。風向袋僅提供目視參考，實際跑道選擇還要考量塔台風資料、地形與運作限制。", "en": "Wind direction names where the wind comes from: the windsock mouth faces upwind and its tail points downwind. It is a visual aid, not a substitute for reported winds and operational runway selection.", "ja": "風向は風が吹いてくる方向。吹き流しの口は風上、尾は風下を向く。これは視覚的な目安であり、報告された風や運用上の滑走路選択に代わるものではない。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Marshland_Airport_windsock_and_runway_-_geograph.org.uk_-_656276.jpg?width=960", "caption": {"zh": "機場跑道旁的風向袋", "en": "Windsock beside an airport runway", "ja": "滑走路脇の吹き流し"}, "source": "https://commons.wikimedia.org/wiki/File:Marshland_Airport_windsock_and_runway_-_geograph.org.uk_-_656276.jpg", "credit": "Ben Harris · CC BY-SA 2.0"}]
     },
     {
       "id": "jet-fuel", "category": "systems", "hotspot": "jet-fuel",
       "name": {"zh": "噴射燃油 Jet A／Jet A-1", "en": "Jet Fuel: Jet A and Jet A-1", "ja": "ジェット燃料 Jet A／Jet A-1"},
       "summary": {"zh": "Jet A 與 Jet A-1 是以煤油為基礎、供渦輪發動機使用的航空燃油，與活塞發動機常用的航空汽油不同。", "en": "Jet A and Jet A-1 are kerosene-type aviation fuels used by turbine engines, distinct from the aviation gasoline commonly used by piston engines.", "ja": "Jet A と Jet A-1 はタービンエンジン用の灯油系航空燃料で、主にピストンエンジンで使う航空ガソリンとは異なる。"},
       "fact": {"zh": "兩者重要差異之一是規範的最高凝固點：Jet A 為 −40°C，Jet A-1 為 −47°C。這是燃油規格界限，不代表每批燃油恰好在該溫度凝固；長程高空飛行須監控實際燃油溫度與該批燃油性質。", "en": "A key specification difference is the maximum freezing point: −40°C for Jet A and −47°C for Jet A-1. These are specification limits, not the exact freezing point of every batch; long high-altitude flights monitor actual fuel temperature and fuel properties.", "ja": "主な規格上の違いは最大凝固点で、Jet A は −40°C、Jet A-1 は −47°C。全てのロットがその温度で凍るという意味ではない。高高度の長距離飛行では実際の燃料温度と燃料特性を監視する。"},
-      "images": []
+      "images": [{"src":"https://commons.wikimedia.org/wiki/Special:FilePath/Jet_a1_truck_refueling_dsc04316.jpg?width=960","caption":{"zh":"波音 777 實機加注 Jet A-1","en":"Boeing 777 refueling with Jet A-1","ja":"ボーイング 777 への Jet A-1 給油"},"source":"https://commons.wikimedia.org/wiki/File:Jet_a1_truck_refueling_dsc04316.jpg","credit":"David Monniaux · CC BY-SA 3.0"}]
     },
     {
       "id": "avgas", "category": "systems", "hotspot": "avgas",
       "name": {"zh": "航空汽油 AVGAS 100LL", "en": "Aviation Gasoline: AVGAS 100LL", "ja": "航空ガソリン AVGAS 100LL"},
       "summary": {"zh": "AVGAS 是專供符合規格的航空活塞發動機使用的汽油；100LL 是常見等級，LL 表示相對傳統高鉛等級的低鉛，不是無鉛。", "en": "AVGAS is gasoline specified for compatible aircraft piston engines. 100LL is a common grade; LL means low lead relative to older high-lead grades, not lead-free.", "ja": "AVGAS は対応する航空機用ピストンエンジン向けのガソリン。100LL は一般的な等級で、LL は従来の高鉛燃料に比べて低鉛という意味で、無鉛ではない。"},
       "fact": {"zh": "燃油種類須依飛機飛行手冊及加油口標示確認；把 Jet A 加進需要 AVGAS 的飛機可能造成嚴重發動機損害。加油前後均要核對等級與燃油污染狀況。", "en": "Fuel grade must match the aircraft flight manual and filler markings. Putting Jet A into an aircraft requiring AVGAS can seriously damage its engine. Check the grade and contamination before flight.", "ja": "燃料等級は飛行規程と給油口の表示で確認する。AVGAS を必要とする機体に Jet A を入れるとエンジンに重大な損傷を与え得る。飛行前に等級と汚染の有無を確認する。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Tarbes-Lourdes-Pyr%C3%A9n%C3%A9es_Airport_gas_station_for_general_aviation.jpg?width=960", "caption": {"zh": "機場加油站同時提供 Jet A-1 與 AVGAS 100LL", "en": "Airport fuel station offering Jet A-1 and AVGAS 100LL", "ja": "Jet A-1 と AVGAS 100LL を扱う空港給油所"}, "source": "https://commons.wikimedia.org/wiki/File:Tarbes-Lourdes-Pyr%C3%A9n%C3%A9es_Airport_gas_station_for_general_aviation.jpg", "credit": "Hugo LUC · CC BY-SA 4.0"}]
     },
     {
       "id": "fuel-plan", "category": "operations", "hotspot": "fuel-plan",
       "name": {"zh": "航班燃油計畫與 Block Fuel", "en": "Flight Fuel Plan and Block Fuel", "ja": "飛行燃料計画とブロック燃料"},
       "summary": {"zh": "航班不能只加上預計航程消耗量；起飛前還要估算滑行、航程、不確定因素、備降、最後儲備與必要時額外燃油。", "en": "A flight cannot load only its expected en-route burn. Planning also accounts for taxi, trip, contingencies, alternate, final reserve and any additional fuel needed.", "ja": "飛行に必要なのは予定航路の消費量だけではない。地上走行、航程、不測の要因、代替飛行場、最終予備、必要な追加燃料も見積もる。"},
       "fact": {"zh": "常見概念式：Block Fuel ≈ Taxi + Trip + Contingency + Alternate + Final Reserve + Additional／Discretionary。各項是否必需及算法取決於法規、機型、航線與公司程序；不能把全部儲備都當作可任意消耗的航程燃油。", "en": "A useful planning outline is Block Fuel ≈ Taxi + Trip + Contingency + Alternate + Final Reserve + Additional/Discretionary. Which components apply and how they are calculated depend on rules, aircraft, route and operator; reserves are not ordinary trip fuel.", "ja": "概念式はブロック燃料 ≈ 地上走行＋航程＋不測事態＋代替飛行場＋最終予備＋追加・裁量燃料。必要な項目と算出方法は規則・機種・経路・運航者によって異なり、予備燃料を通常の航程燃料として扱ってはいけない。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/ACARS_Message_(3555653334).jpg?width=960", "caption": {"zh": "實際航班 ACARS 規劃資料單，含燃油量、起迄點與航路", "en": "Real ACARS planning sheet showing fuel, airports and route", "ja": "実際の ACARS 飛行計画書。燃料量、出発・到着地と経路を記載"}, "source": "https://commons.wikimedia.org/wiki/File:ACARS_Message_(3555653334).jpg", "credit": "Shawn · CC BY-SA 2.0"}]
     },
     {
       "id": "fuel-reserve", "category": "operations", "hotspot": "fuel-reserve",
       "name": {"zh": "最後儲備燃油與 Minimum Fuel", "en": "Final Reserve and Minimum Fuel", "ja": "最終予備燃料とミニマムフューエル"},
       "summary": {"zh": "最後儲備燃油是為延誤或變更情況保留的安全餘量，並非飛到目的地剛好用完的燃油。Minimum Fuel 則是向管制員表示已難以承受額外延誤。", "en": "Final reserve is a safety margin for unexpected circumstances, not fuel to consume routinely by touchdown. A Minimum Fuel call advises ATC that little or no further delay can be accepted.", "ja": "最終予備燃料は不測の事態に備える安全余裕で、到着までに使い切る通常燃料ではない。Minimum Fuel はこれ以上の遅延をほとんど受け入れられないことを管制に伝える。"},
       "fact": {"zh": "Minimum Fuel 本身不是緊急宣告，也不自動取得優先權；若預計安全落地需要優先處置，機組須明確宣布緊急情況。法規中的最後儲備量依營運類型與轄區而異，不能把某一個固定分鐘數套用所有飛機。", "en": "Minimum Fuel is not itself an emergency declaration and does not automatically grant priority. If priority is needed to land safely, the crew declares an emergency. Required final reserve varies by operation and jurisdiction; one fixed number does not apply to all aircraft.", "ja": "Minimum Fuel 自体は緊急宣言ではなく、優先権も自動的には得られない。安全な着陸に優先処置が必要なら明確に緊急事態を宣言する。最終予備量は運航形態と管轄規則で異なる。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuel_contents_gauge.JPG?width=960", "caption": {"zh": "實際航空器燃油量表；法定備用油量屬飛行計畫", "en": "Real aircraft fuel gauge; required reserves are a flight-planning quantity", "ja": "実際の航空機燃料計。必要な予備燃料量は飛行計画で定める"}, "source": "https://commons.wikimedia.org/wiki/File:Fuel_contents_gauge.JPG", "credit": "RobbieMcConnel · CC BY-SA 3.0"}]
     },
     {
       "id": "fuel-temperature", "category": "systems", "hotspot": "fuel-temperature",
       "name": {"zh": "高空燃油溫度與凝固點", "en": "Fuel Temperature and Freezing Point", "ja": "高高度の燃料温度と凝固点"},
       "summary": {"zh": "長時間高空飛行時，機翼油箱會受寒冷環境影響，燃油溫度可能接近該批燃油的凝固點；因此飛航組員會監控溫度並保留餘裕。", "en": "On long high-altitude flights, cold surroundings can cool wing-tank fuel toward that batch's freezing point, so crews monitor temperature and maintain margin.", "ja": "長時間の高高度飛行では外気によって翼内燃料が冷え、そのロットの凝固点に近づくことがあるため、乗員は温度を監視し余裕を保つ。"},
       "fact": {"zh": "Jet A-1 的 −47°C 是規格所容許的最高凝固點，不是「低於此溫度就立刻整箱結冰」。凝固點附近會出現蠟晶並可能影響供油；具體限制與處置以機型手冊及實際燃油檢測為準。", "en": "The −47°C Jet A-1 figure is a specification maximum, not a claim that an entire tank freezes instantly below it. Wax crystals near the actual freezing point can impair fuel flow; aircraft procedures and measured fuel properties govern the response.", "ja": "Jet A-1 の −47°C は規格上の最大凝固点であり、それ以下でタンク全体が瞬時に凍るわけではない。実際の凝固点付近ではワックス結晶が生じ燃料流量に影響し得る。対処は機種の手順と実測値に従う。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Navy_081129-N-2456S-045_Aviation_Machinist%27s_Mate_2nd_Class_Ed_Bryk,_assigned_to_VAQ-141,_installs_a_fuel_temperature_transmitter_on_an_EA-6B_Prowler_in_the_hangar_bay_aboard_the_aircraft_carrier_USS_Theodore_Roosevelt_(CVN.jpg?width=960", "caption": {"zh": "技師為 EA-6B 安裝實際燃油溫度感測器；高空飛行須監控燃油溫度", "en": "Technician installing a fuel-temperature sensor on an EA-6B; fuel is monitored in cruise", "ja": "EA-6B の燃料温度センサーを取り付ける整備士。巡航中も燃料温度を監視する"}, "source": "https://commons.wikimedia.org/wiki/File:US_Navy_081129-N-2456S-045_Aviation_Machinist%27s_Mate_2nd_Class_Ed_Bryk,_assigned_to_VAQ-141,_installs_a_fuel_temperature_transmitter_on_an_EA-6B_Prowler_in_the_hangar_bay_aboard_the_aircraft_carrier_USS_Theodore_Roosevelt_(CVN.jpg", "credit": "John Suits / US Navy · Public domain"}]
     },
     {
       "id": "fuel-crossfeed", "category": "systems", "hotspot": "fuel-crossfeed",
       "name": {"zh": "燃油交叉供油與油量不平衡", "en": "Fuel Crossfeed and Imbalance", "ja": "燃料クロスフィードと左右不均衡"},
       "summary": {"zh": "多發飛機的交叉供油系統可讓一側油箱向另一側發動機供油，以在特定程序下處理油量不平衡或供油故障。", "en": "On multi-engine aircraft, crossfeed can allow fuel from one side's tanks to feed another engine under specified procedures, such as managing an imbalance or fuel-system fault.", "ja": "多発機のクロスフィードは、規定の手順に従って片側のタンクから反対側のエンジンへ燃料を供給し、不均衡や供給系統の不具合に対応できる。"},
       "fact": {"zh": "油量不平衡也可能源自漏油；若未先辨識原因而依一般平衡程序開啟交叉供油，可能讓可用燃油流向漏油側。實際操作必須遵循該機型檢查單。", "en": "An imbalance can also signal a leak. Opening crossfeed under a routine balancing procedure without diagnosing the cause may send usable fuel toward a leaking side. Follow the specific aircraft checklist.", "ja": "左右差は燃料漏れの兆候でもある。原因を特定せず通常の均衡手順でクロスフィードを開くと、使用可能な燃料を漏れている側へ送る恐れがある。機種別チェックリストに従う。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Overhead_panel_of_A320_aircraft_at_parking_stand.jpg?width=960", "caption": {"zh": "A320 實機頂板上的燃油交叉供油（X FEED）控制區", "en": "Fuel crossfeed (X FEED) control on a real A320 overhead panel", "ja": "実機 A320 のオーバーヘッドパネルにある燃料クロスフィード操作部"}, "source": "https://commons.wikimedia.org/wiki/File:Overhead_panel_of_A320_aircraft_at_parking_stand.jpg", "credit": "Olivier Cleynen · CC BY-SA 3.0"}]
     },
     {
       "id": "saf", "category": "systems", "hotspot": "saf",
       "name": {"zh": "永續航空燃油 SAF", "en": "Sustainable Aviation Fuel (SAF)", "ja": "持続可能な航空燃料（SAF）"},
       "summary": {"zh": "SAF 是符合永續性及燃油規格條件的替代航空燃油；部分途徑可與傳統噴射燃油按核准比例混合，供現有飛機使用。", "en": "SAF is alternative aviation fuel meeting relevant sustainability and fuel specifications. Approved pathways may be blended with conventional jet fuel within certified limits for use in existing aircraft.", "ja": "SAF は持続可能性と燃料規格の条件を満たす代替航空燃料。認められた製造方法では規定比率で従来のジェット燃料と混合し、既存機で使用できる。"},
       "fact": {"zh": "SAF 的減排評估看原料取得、製造、運輸與燃燒的全生命週期；飛機尾管仍會排放二氧化碳，不能把 SAF 說成『飛行零排放』。不同原料與製程的減排幅度並不相同。", "en": "SAF emissions are assessed across the life cycle—from feedstock through production, transport and combustion. Aircraft still emit CO₂ in flight: SAF is not zero-emission flying, and reductions vary by feedstock and pathway.", "ja": "SAF の排出削減は原料調達・製造・輸送・燃焼までのライフサイクルで評価する。飛行中の排気にはなお CO₂ が含まれ、『飛行時ゼロ排出』ではない。原料と製法によって削減幅は異なる。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Synthetic_fuel_load.jpg?width=960", "caption": {"zh": "軍機裝載混合型替代航空燃油的實景", "en": "Aircraft being fueled with an alternative aviation fuel blend", "ja": "代替航空燃料の混合燃料を航空機に給油する実景"}, "source": "https://commons.wikimedia.org/wiki/File:Synthetic_fuel_load.jpg", "credit": "Samuel King Jr. / US Air Force · Public domain"}]
     },
     {
       "id": "tcas", "category": "systems", "hotspot": "tcas",
       "name": {"zh": "TCAS：空中防撞系統", "en": "TCAS: Traffic Collision Avoidance System", "ja": "TCAS：航空機衝突防止装置"},
       "summary": {"zh": "TCAS 利用其他飛機的詢答機訊號評估空中相撞風險，提供交通提示（TA）；具備相應能力的系統還會發出垂直避讓指令（RA）。", "en": "TCAS uses nearby aircraft transponder signals to assess collision risk and issue traffic advisories (TA); suitably equipped systems can also issue vertical resolution advisories (RA).", "ja": "TCAS は周囲の航空機のトランスポンダ信号から衝突リスクを評価し、交通情報（TA）を出す。対応するシステムは垂直方向の回避指示（RA）も出せる。"},
       "fact": {"zh": "兩架具協調能力的飛機接近時，TCAS 可協調相容的避讓方向，例如一架爬升、另一架下降。TCAS 依賴對方可用的詢答機資料，不等於能偵測所有飛行物。", "en": "When two compatible aircraft converge, their TCAS systems can coordinate complementary RAs, such as one climbing and the other descending. TCAS depends on usable transponder data; it does not detect every object in the sky.", "ja": "対応機同士が接近すると、一方が上昇し他方が降下するように協調した RA を発行できる。TCAS は相手の利用可能なトランスポンダ情報に依存し、空中のあらゆる物体を検知できるわけではない。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/TCAS_Indicator.jpg?width=960", "caption": {"zh": "真實飛機座艙中的 TCAS 交通顯示器", "en": "Actual TCAS traffic display in an aircraft cockpit", "ja": "実機の操縦室にある TCAS 交通表示器"}, "source": "https://commons.wikimedia.org/wiki/File:TCAS_Indicator.jpg", "credit": "Meggar · CC BY-SA 3.0"}]
     },
     {
       "id": "egpws", "category": "systems", "hotspot": "egpws",
       "name": {"zh": "GPWS／EGPWS：近地警告", "en": "GPWS / EGPWS: Terrain Warning", "ja": "GPWS／EGPWS：対地接近警報"},
       "summary": {"zh": "近地警告系統監測飛機與地面接近的危險情況；強化型 EGPWS／TAWS 還可利用地形資料庫與位置資訊，提前提示前方地形風險。", "en": "GPWS warns of hazardous proximity to terrain. Enhanced EGPWS/TAWS can also use a terrain database and aircraft position to warn of terrain ahead.", "ja": "GPWS は地表への危険な接近を警告する。強化型の EGPWS／TAWS は地形データベースと機体位置を使い、前方の地形リスクも早めに知らせる。"},
       "fact": {"zh": "常聽到的『TERRAIN, PULL UP』是警告，不是駕駛員自動駕駛指令。系統不能替代正確導航、高度管理與儀表進場程序；資料庫及位置精度也有適用限制。", "en": "A 'TERRAIN, PULL UP' callout is a warning, not an autopilot command. The system does not replace navigation, altitude management or approach procedures; database and position accuracy also matter.", "ja": "『TERRAIN, PULL UP』は警告であり、自動操縦への指令ではない。正しい航法・高度管理・進入手順の代わりにはならず、データベースや位置精度にも限界がある。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/The_EGPWS_and_it%27s_pretty_colours_(525774026).jpg?width=960", "caption": {"zh": "飛行中駕駛艙的 EGPWS 地形顯示", "en": "EGPWS terrain display in an operating cockpit", "ja": "飛行中の操縦室に表示された EGPWS 地形情報"}, "source": "https://commons.wikimedia.org/wiki/File:The_EGPWS_and_it%27s_pretty_colours_(525774026).jpg", "credit": "Shawn · CC BY-SA 2.0"}]
     },
     {
       "id": "spoilers", "category": "aerodynamics", "hotspot": "spoilers",
       "name": {"zh": "擾流板與地面減速板", "en": "Spoilers and Ground Speedbrakes", "ja": "スポイラーとグラウンドスポイラー"},
       "summary": {"zh": "擾流板是從機翼上表面升起的面板，可減少升力並增加阻力；用途依機型與飛行階段包括滾轉輔助、空中減速與落地後卸除升力。", "en": "Spoilers are panels rising from the wing's upper surface to reduce lift and increase drag. Depending on aircraft and phase of flight, they assist roll, slow the aircraft or dump lift after touchdown.", "ja": "スポイラーは翼上面から立ち上がって揚力を減らし抗力を増す板。機種と飛行段階に応じ、ロール補助、空中減速、接地後の揚力除去に使われる。"},
       "fact": {"zh": "落地後卸除機翼升力，能讓更多機重壓在輪胎上，提高輪煞車的可用摩擦力。它與逆噴射都是減速輔助，但原理不同：擾流板改變翼面氣流，逆噴射改變引擎推力方向。", "en": "Dumping lift after touchdown transfers more weight to the wheels, improving braking friction. Spoilers and reverse thrust both assist deceleration but work differently: one changes airflow over the wing, the other redirects engine thrust.", "ja": "着陸後に揚力を除くと車輪にかかる荷重が増え、ブレーキ摩擦を得やすくなる。逆噴射も減速を助けるが、スポイラーは翼の気流、逆噴射はエンジン推力の方向を変える点が違う。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Spoilers_Activated_on_Landing,_William_P._Hobby_Airport,_Houston,_Texas_(16074232970).jpg?width=960", "caption": {"zh": "飛機落地後升起的擾流板", "en": "Spoilers raised after touchdown", "ja": "接地後に展開したスポイラー"}, "source": "https://commons.wikimedia.org/wiki/File:Spoilers_Activated_on_Landing,_William_P._Hobby_Airport,_Houston,_Texas_(16074232970).jpg", "credit": "Ken Lund from Reno, Nevada, USA · CC BY-SA 2.0"}]
     },
     {
       "id": "winglets", "category": "aerodynamics", "hotspot": "winglets",
       "name": {"zh": "翼尖小翼與誘導阻力", "en": "Winglets and Induced Drag", "ja": "ウイングレットと誘導抗力"},
       "summary": {"zh": "機翼產生升力時，翼尖附近高壓氣流向低壓側繞流形成翼尖渦流；翼尖小翼藉由調整翼尖流場，減少部分誘導阻力。", "en": "As a wing generates lift, higher-pressure air curls around the tip toward the low-pressure side, creating a tip vortex. Winglets reshape the tip flow and can reduce some induced drag.", "ja": "翼が揚力を生むと翼端で高圧側の空気が低圧側へ回り込み、翼端渦が生じる。ウイングレットは翼端の流れを整え、誘導抗力の一部を減らす。"},
       "fact": {"zh": "翼尖小翼不是免費的節油裝置：它增加重量與表面積，效益取決於原本機翼、航程、速度與安裝設計；有些新機型改用延長翼展或後掠翼尖。", "en": "Winglets are not free fuel savings: they add mass and wetted area, and their benefit depends on wing design, range, speed and installation. Some aircraft instead use greater span or raked tips.", "ja": "ウイングレットは無条件に燃料を節約するわけではない。重量と表面積が増え、効果は元の翼、航続距離、速度、取付設計による。翼幅拡大や後退した翼端を採る機種もある。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Winglet_of_Boeing_737-800.jpg?width=960", "caption": {"zh": "737-800 實機翼尖小翼", "en": "Winglet on a Boeing 737-800", "ja": "737-800 のウィングレット"}, "source": "https://commons.wikimedia.org/wiki/File:Winglet_of_Boeing_737-800.jpg", "credit": "МаратД · CC BY-SA 4.0"}]
     },
     {
       "id": "cpdlc", "category": "navigation", "hotspot": "cpdlc",
       "name": {"zh": "CPDLC：管制員與飛行員資料鏈", "en": "CPDLC: Controller–Pilot Data Link", "ja": "CPDLC：管制官・操縦士データリンク"},
       "summary": {"zh": "CPDLC 讓管制員與機組透過資料鏈傳遞特定管制訊息，例如高度、航路或頻率指示，減少長途航線的無線電語音負荷。", "en": "CPDLC exchanges certain ATC messages between controllers and crews by data link—for example altitude, route or frequency instructions—reducing voice-radio workload on suitable routes.", "ja": "CPDLC は管制官と乗員が高度・経路・周波数などの特定の管制メッセージをデータリンクで交換し、対象空域での音声無線の負担を減らす。"},
       "fact": {"zh": "它不是一般乘客的網路聊天，訊息有標準化格式與確認流程；緊急或通訊失效時，機組仍須依程序使用語音或其他可用方式。可用性視空域、地面設備與飛機裝備而定。", "en": "It is not passenger-style chat: messages use standardized formats and acknowledgement procedures. In an emergency or data-link failure, crews follow procedures for voice or other available communication. Availability depends on airspace and equipment.", "ja": "一般的なチャットではなく、標準化したメッセージと確認手順を用いる。緊急時やリンク障害時は手順に従い音声などで通信する。利用可否は空域と地上・機上設備による。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/A330_DCDU.jpg?width=960", "caption": {"zh": "A330 駕駛艙內實際使用的資料鏈控制顯示器", "en": "Data-link control and display unit in a real A330 cockpit", "ja": "実際の A330 操縦室にあるデータリンク表示装置"}, "source": "https://commons.wikimedia.org/wiki/File:A330_DCDU.jpg", "credit": "SempreVolando · CC BY 3.0"}]
     },
     {
       "id": "atis", "category": "airport", "hotspot": "atis",
       "name": {"zh": "ATIS：機場自動終端情報", "en": "ATIS: Automatic Terminal Information Service", "ja": "ATIS：飛行場情報放送"},
       "summary": {"zh": "ATIS 定期向進離場機組廣播機場天氣、使用跑道、氣壓與其他重要運作資訊，減少塔台重複通話。", "en": "ATIS broadcasts routine airport weather, runway in use, pressure and other operational information to arriving and departing crews, reducing repeated controller transmissions.", "ja": "ATIS は到着・出発機に空港の天気、使用滑走路、気圧、運航上の重要情報を放送し、管制官の反復通話を減らす。"},
       "fact": {"zh": "每次更新通常有字母識別碼；機組向管制員報告已收到哪一版情報，仍需留意臨時變更與最新管制指示。", "en": "Updates normally have a letter identifier; crews tell ATC which version they received, but still follow later changes and current clearances.", "ja": "更新ごとに通常アルファベットの識別符号が付き、乗員は受信した版を管制へ伝える。ただし臨時変更と最新の管制指示にも注意する。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellsworth_1_of_4_bases_testing_new_Automatic_Terminal_Information_Service_160114-F-SE307-020.jpg?width=960", "caption": {"zh": "美國 Ellsworth 基地塔臺人員更新 ATIS 訊息", "en": "Tower staff updating ATIS information at Ellsworth Air Force Base", "ja": "エルズワース空軍基地で ATIS 情報を更新する管制官"}, "source": "https://commons.wikimedia.org/wiki/File:Ellsworth_1_of_4_bases_testing_new_Automatic_Terminal_Information_Service_160114-F-SE307-020.jpg", "credit": "Donald C. Knechtel / US Air Force · Public domain"}]
     },
     {
       "id": "approach-lights", "category": "airport", "hotspot": "approach-lights",
       "name": {"zh": "進場燈光系統 ALS", "en": "Approach Lighting System (ALS)", "ja": "進入灯火システム（ALS）"},
       "summary": {"zh": "進場燈光從跑道入口向進場方向延伸，讓飛行員在低能見度接近跑道時更容易辨識跑道延長線與入口位置。", "en": "Approach lights extend outward from the runway threshold toward arriving aircraft, helping pilots identify the runway alignment and threshold in reduced visibility.", "ja": "進入灯火は滑走路入口から進入方向へ延び、視程が低いときに滑走路の延長線と入口を見つけやすくする。"},
       "fact": {"zh": "ALS 配置因跑道進場類型而異；有些設序列閃光燈。看見進場燈光不等於可無條件繼續下降，仍須遵守該儀器進場程序的目視參考與最低標準。", "en": "ALS layouts vary by approach type and some include sequenced flashers. Seeing approach lights alone does not grant unlimited descent; instrument-approach visual-reference and minimum rules still apply.", "ja": "ALS の配置は進入方式によって異なり、連鎖閃光灯を含むものもある。灯火を視認しても無条件に降下を続けられるわけではなく、計器進入の視覚参考と最低値を守る。"},
-      "images": []
+      "images": [{"src":"https://commons.wikimedia.org/wiki/Special:FilePath/Approach_lights_at_EFJY_20120818.jpg?width=960","caption":{"zh":"芬蘭 Jyväskylä 機場 30 跑道進場燈","en":"Runway 30 approach lights at Jyväskylä Airport","ja":"ユヴァスキュラ空港滑走路 30 の進入灯火"},"source":"https://commons.wikimedia.org/wiki/File:Approach_lights_at_EFJY_20120818.jpg","credit":"anttilep · CC BY-SA 2.0"}]
     },
     {
       "id": "sid", "category": "navigation", "hotspot": "sid",
       "name": {"zh": "SID：標準儀器離場程序", "en": "SID: Standard Instrument Departure", "ja": "SID：標準計器出発方式"},
       "summary": {"zh": "SID 是公布的儀器飛行離場程序，銜接機場與航路，讓大量航班按可預期方式爬升、轉彎與離場。", "en": "A SID is a published instrument departure procedure connecting an airport to the en-route structure, organizing climbs, turns and traffic flow.", "ja": "SID は空港から航空路へつなぐ公示された計器出発方式で、上昇・旋回・出発交通を整理する。"},
       "fact": {"zh": "程序圖上可能包含高度、速度與導航限制；不能只靠在飛航管理電腦載入 SID 就逕自飛行，仍需取得適當管制許可並核對版本。", "en": "A chart may include altitude, speed and navigation constraints. Loading a SID into the flight management system does not itself authorize flight; an appropriate ATC clearance and current chart are needed.", "ja": "図には高度・速度・航法の制限がある場合がある。飛行管理装置に SID を読み込むだけでは飛行の許可にならず、適切な管制許可と最新版の図が必要。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Airbus_A320-232_Wizz_Air_HA-LPM.jpg?width=960", "caption": {"zh": "Wizz Air A320 從巴塞隆納起飛後轉彎，進入標準離場程序", "en": "Wizz Air A320 banking after departure from Barcelona toward a SID", "ja": "バルセロナを離陸後、SID に向けて旋回する Wizz Air A320"}, "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320-232_Wizz_Air_HA-LPM.jpg", "credit": "Curimedia · CC BY 2.0"}]
     },
     {
       "id": "star", "category": "navigation", "hotspot": "star",
       "name": {"zh": "STAR：標準終端到場程序", "en": "STAR: Standard Terminal Arrival Route", "ja": "STAR：標準計器到着方式"},
       "summary": {"zh": "STAR 是已公布的儀器到場航路，將航路上的飛機引導至終端區，通常銜接後續的進場程序或管制引導。", "en": "A STAR is a published instrument arrival route bringing en-route aircraft into the terminal area, usually toward an approach or further ATC vectors.", "ja": "STAR は航空路から飛行機をターミナル空域へ導く公示された計器到着経路で、通常は進入方式や追加の管制誘導につながる。"},
       "fact": {"zh": "STAR 不一定直接帶到跑道入口；機組仍要留意管制許可、圖上的速度／高度限制及接續的儀器進場程序。", "en": "A STAR need not lead directly to the runway threshold. Crews still follow the clearance, published speed/altitude constraints and the subsequent instrument approach.", "ja": "STAR が滑走路入口まで直接導くとは限らない。乗員は管制許可、図示された速度・高度制限、続く計器進入を確認する。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Navigation_Display_(ND)_on_Boeing_747-400.jpg?width=960", "caption": {"zh": "747-400 實機導航顯示器；標準到場程序可顯示為航點序列", "en": "Real 747-400 navigation display; a STAR can appear as a sequence of waypoints", "ja": "実機 747-400 の航法表示器。STAR はウェイポイント列として表示できる"}, "source": "https://commons.wikimedia.org/wiki/File:Navigation_Display_(ND)_on_Boeing_747-400.jpg", "credit": "Saschaporsche · CC BY-SA 3.0"}]
     },
     {
       "id": "rvsm", "category": "navigation", "hotspot": "rvsm",
       "name": {"zh": "RVSM：縮小垂直隔離", "en": "RVSM: Reduced Vertical Separation Minimum", "ja": "RVSM：短縮垂直間隔"},
       "summary": {"zh": "RVSM 讓符合條件的飛機在指定高空空域以 1,000 呎垂直間隔飛行，增加可用高度層與空域容量。", "en": "RVSM permits appropriately qualified aircraft in designated high-altitude airspace to use 1,000-ft vertical separation, increasing available flight levels and capacity.", "ja": "RVSM は指定された高高度空域で要件を満たす航空機の垂直間隔を 1,000 ft にし、利用できる高度と空域容量を増やす。"},
       "fact": {"zh": "常見 RVSM 空域為 FL290 至 FL410（含兩端），以 1,000 呎取代傳統 2,000 呎間隔。機體高度測量、保持能力與營運許可均須符合要求；不能單憑飛機能爬到該高度就進入。", "en": "A common RVSM band is FL290–FL410 inclusive, replacing the former 2,000-ft spacing with 1,000 ft. Altimetry, altitude-keeping and operational approval matter; simply being able to reach that altitude is insufficient.", "ja": "一般的な RVSM 空域は FL290～FL410（両端を含む）で、従来の 2,000 ft 間隔を 1,000 ft にする。高度計測・高度保持性能と運航承認が必要で、高度まで上昇できるだけでは足りない。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Primary_flight_display_of_an_A320_during_cruise.jpg?width=960", "caption": {"zh": "A320 巡航中的主飛行顯示器；RVSM 需要準確監控高度", "en": "A320 primary display in cruise; RVSM depends on accurate altitude keeping", "ja": "巡航中の A320 の主飛行表示器。RVSM には正確な高度保持が必要"}, "source": "https://commons.wikimedia.org/wiki/File:Primary_flight_display_of_an_A320_during_cruise.jpg", "credit": "Olivier Cleynen · CC0"}]
     },
     {
       "id": "mel", "category": "operations", "hotspot": "mel",
       "name": {"zh": "MEL：最低裝備需求清單", "en": "MEL: Minimum Equipment List", "ja": "MEL：運航最低装備品目一覧"},
       "summary": {"zh": "MEL 列出在特定限制與程序下，即使某些設備故障仍可合法放行的項目；它不是任意忽略故障的許可證。", "en": "An MEL lists items with which an aircraft may be dispatched despite a fault, but only under specified limitations and procedures; it is not permission to ignore defects.", "ja": "MEL は一部の装備が故障していても、定められた制限と手順の下で運航可能な項目を示す。故障を自由に無視できる許可ではない。"},
       "fact": {"zh": "若故障項目不在適用 MEL 中，或未達成規定的維修、操作與期限條件，就不能以 MEL 名義放行；機組與維修／簽派人員須核對該機的有效清單。", "en": "If a failed item is not covered by the applicable MEL, or its maintenance, operating or time limits are unmet, dispatch cannot be justified by the MEL. Crews and maintenance/dispatch personnel consult the valid list for that aircraft.", "ja": "故障項目が適用 MEL にない、または整備・運用・期限の条件を満たさない場合、MEL による出発はできない。乗員と整備・運航管理者は当該機の有効な一覧を確認する。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/In_the_plane_Be-200_RF-32768._On_a_table_the_aircraft_logbook_(5554279051).jpg?width=960", "caption": {"zh": "Be-200 機內的航空器維護紀錄簿；MEL 用於判定設備故障後是否可放行", "en": "Be-200 aircraft logbook; the MEL governs dispatch with inoperative equipment", "ja": "Be-200 機内の航空機ログブック。MEL は装備故障時の運航可否を定める"}, "source": "https://commons.wikimedia.org/wiki/File:In_the_plane_Be-200_RF-32768._On_a_table_the_aircraft_logbook_(5554279051).jpg", "credit": "Aleksandr Markin · CC BY-SA 2.0"}]
     },
     {
       "id": "displaced-threshold", "category": "airport", "hotspot": "displaced-threshold",
       "name": {"zh": "位移跑道頭", "en": "Displaced Runway Threshold", "ja": "移設された滑走路末端"},
       "summary": {"zh": "位移跑道頭把某方向的降落接地起點移入跑道內，常用於避開進場端障礙物，使該方向可用落地距離變短。", "en": "A displaced threshold moves the landing start point inward for one direction, often because of approach-end obstacles, reducing landing distance available in that direction.", "ja": "移設された滑走路末端は一方向の着陸開始点を内側へ移すもので、進入側の障害物などに対応し、その方向の着陸可能距離を短くする。"},
       "fact": {"zh": "在 FAA 常見標示中，位移區域有白色箭頭；該區域通常仍可供兩方向起飛，以及反向落地，但不能當作位移方向的落地接地區。與完全不可供起降的黃色 V 字停機坪／防噴流區不同。", "en": "With standard FAA markings, white arrows identify the displaced area. It can normally be used for takeoff in either direction and landing in the opposite direction, but not touchdown in the displaced direction. It differs from a chevron-marked unusable blast pad.", "ja": "FAA の標準的な標示では移設部分に白い矢印がある。通常、両方向の離陸と逆方向の着陸には使えるが、移設方向の接地点にはできない。黄色の山形模様で示す使用不可のブラストパッドとは違う。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Suburban_Airport_Displaced_Threshold.JPG?width=960", "caption": {"zh": "實際跑道位移入口與前方標線", "en": "Real displaced runway threshold and markings", "ja": "実際の移設滑走路進入端と標示"}, "source": "https://commons.wikimedia.org/wiki/File:Suburban_Airport_Displaced_Threshold.JPG", "credit": "FlugKerl2 · CC BY-SA 3.0"}]
     },
     {
       "id": "go-around", "category": "operations", "hotspot": "go-around",
       "name": {"zh": "重飛／復飛 Go-Around", "en": "Go-Around / Missed Approach", "ja": "ゴーアラウンド／進入復行"},
       "summary": {"zh": "如果進場不穩定、跑道有障礙或天氣未達落地條件，機組可中止降落，增加推力並依程序重新爬升。", "en": "If an approach is unstable, the runway obstructed or landing conditions unmet, crews can discontinue landing, apply power and climb away following the appropriate procedure.", "ja": "進入が安定しない、滑走路に障害物がある、着陸条件を満たさない場合、乗員は着陸を中止し推力を増して所定の手順で上昇できる。"},
       "fact": {"zh": "重飛是正常的安全操作，不代表飛行員犯錯。儀器進場有公布的復飛航路；目視進場或塔台指示可能不同，機組須依當下許可、地形及機型檢查單行動。", "en": "A go-around is a routine safety maneuver, not proof of pilot error. Instrument approaches publish missed-approach paths; visual approaches or ATC instructions may differ, so crews follow the applicable clearance and aircraft procedure.", "ja": "ゴーアラウンドは通常の安全操作であり、操縦士の失敗を意味しない。計器進入には公示された復行経路があるが、目視進入や管制指示は異なる場合があり、その時の許可と機種手順に従う。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/RAAF_Lockheed_C-130J_Hercules_executing_go-around.jpg?width=960", "caption": {"zh": "澳洲空軍 C-130J 實際執行重飛", "en": "Royal Australian Air Force C-130J executing a go-around", "ja": "オーストラリア空軍 C-130J の実際のゴーアラウンド"}, "source": "https://commons.wikimedia.org/wiki/File:RAAF_Lockheed_C-130J_Hercules_executing_go-around.jpg", "credit": "Pseudopanax · Public domain"}]
     },
     {
       "id": "alternate", "category": "operations", "hotspot": "alternate",
       "name": {"zh": "備降機場與轉降", "en": "Alternate Aerodrome and Diversion", "ja": "代替飛行場とダイバート"},
       "summary": {"zh": "若目的地無法安全落地，可改降預先規劃或途中選擇的可用機場；是否須事先指定備降場由飛行規則與天氣等條件決定。", "en": "If landing at the destination becomes inadvisable, an aircraft may divert to a suitable planned or newly selected aerodrome. Whether an alternate must be filed depends on flight rules and conditions.", "ja": "目的地への安全な着陸が難しい場合、事前計画または飛行中に選んだ適切な飛行場へ目的地を変更できる。代替飛行場の事前指定要件は飛行規則や気象条件による。"},
       "fact": {"zh": "備降規劃不只看距離，還需檢查天氣、跑道長度、開放時間與機型性能，並計入從目的地轉往備降場所需的燃油。", "en": "An alternate is not chosen by distance alone: weather, runway length, opening hours and aircraft performance matter, as does fuel to reach it after a diversion.", "ja": "代替飛行場は距離だけで選ばない。天気、滑走路長、運用時間、機体性能を確認し、目的地から向かうための燃料も計画する。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/110311-F-NW653-086_Commercial_aircraft_diverted_from_Narita_IAP_to_Yokota.jpg?width=960", "caption": {"zh": "2011 年地震後，多架原定飛成田的客機轉降橫田基地", "en": "Airliners diverted from Narita to Yokota after the 2011 earthquake", "ja": "2011 年の地震後、成田から横田基地へダイバートした旅客機"}, "source": "https://commons.wikimedia.org/wiki/File:110311-F-NW653-086_Commercial_aircraft_diverted_from_Narita_IAP_to_Yokota.jpg", "credit": "Samuel Morse / US Air Force · Public domain"}]
     },
     {
       "id": "ground-effect", "category": "aerodynamics", "hotspot": "ground-effect",
       "name": {"zh": "地面效應 Ground Effect", "en": "Ground Effect", "ja": "地面効果"},
       "summary": {"zh": "機翼接近地面飛行時，翼尖渦流和下洗氣流受到地面影響，誘導阻力減少，飛機可能在跑道上方呈現較容易維持飛行的感覺。", "en": "Close to the ground, the wing's vortices and downwash are altered, reducing induced drag. The aircraft may seem to float above the runway.", "ja": "翼が地面に近いと翼端渦や吹き下ろしが変化して誘導抗力が減り、滑走路上で機体が浮きやすく感じられることがある。"},
       "fact": {"zh": "這不是地面把飛機『托起來』的氣墊；離開地面效應後誘導阻力會再增加，因此過早嘗試爬升可能造成爬升性能不足。", "en": "It is not a literal cushion of air pushing the aircraft up. Induced drag rises again when it climbs out of ground effect, so trying to climb too early can expose inadequate climb performance.", "ja": "地面が空気のクッションで機体を押し上げるわけではない。地面効果から離れると誘導抗力は再び増え、早すぎる上昇は上昇性能不足につながり得る。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Harvard_low_flyby_over_runway_with_landing_gear_out.jpg?width=960", "caption": {"zh": "飛機貼近跑道低空飛行的實景", "en": "Aircraft flying low above a runway", "ja": "滑走路のすぐ上を低空飛行する機体"}, "source": "https://commons.wikimedia.org/wiki/File:Harvard_low_flyby_over_runway_with_landing_gear_out.jpg", "credit": "Pseudopanax at English Wikipedia · Public domain"}]
     },
     {
       "id": "fly-by-wire", "category": "systems", "hotspot": "fly-by-wire",
       "name": {"zh": "線傳飛控 Fly-by-Wire", "en": "Fly-by-Wire Flight Controls", "ja": "フライ・バイ・ワイヤ操縦系統"},
       "summary": {"zh": "線傳飛控將飛行員輸入轉為電子訊號，經飛控電腦處理後驅動控制面，而非單靠傳統機械鋼索直接連接。", "en": "Fly-by-wire converts pilot inputs to electronic signals processed by flight-control computers before actuating control surfaces, rather than relying only on direct mechanical cables.", "ja": "フライ・バイ・ワイヤは操縦入力を電子信号に変え、飛行制御コンピューターを通して舵面を動かす。従来の機械的なケーブル接続だけに頼らない。"},
       "fact": {"zh": "電腦可依設計加入操縱保護、配平與穩定功能，但具體邏輯因機型而異。線傳飛控不等於飛機沒有液壓或沒有人工操縱權；作動器與備援設計仍十分重要。", "en": "Computers may add handling protections, trim and stability functions, but logic differs by aircraft. Fly-by-wire does not imply no hydraulics or no pilot control: actuators and redundancy remain essential.", "ja": "コンピューターは設計に応じて操縦保護、トリム、安定化を行うが、内容は機種ごとに異なる。油圧が不要、または操縦士の操作権がないという意味ではなく、作動装置と冗長性は重要。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Fly-by-wire_system_(6389156597).jpg?width=960", "caption": {"zh": "線傳飛控飛機的側桿操縱器", "en": "Side-stick control on a fly-by-wire aircraft", "ja": "フライ・バイ・ワイヤ機のサイドスティック"}, "source": "https://commons.wikimedia.org/wiki/File:Fly-by-wire_system_(6389156597).jpg", "credit": "SuperJet International · CC BY-SA 2.0"}]
     },
     {
       "id": "autopilot", "category": "systems", "hotspot": "autopilot",
       "name": {"zh": "自動駕駛與飛航指引", "en": "Autopilot and Flight Director", "ja": "自動操縦とフライトディレクター"},
       "summary": {"zh": "自動駕駛可控制飛機跟隨選定的航向、高度或航路；飛航指引則在儀表上顯示機組應如何操縱，兩者可以協同也可以分開使用。", "en": "An autopilot can control an aircraft to follow selected heading, altitude or route. A flight director displays guidance cues for the crew; the two can work together or separately.", "ja": "自動操縦は選択した方位・高度・経路に従うよう機体を操作する。フライトディレクターは操縦指示を計器に表示し、両者は連携も独立使用もできる。"},
       "fact": {"zh": "『開自動駕駛』不代表飛機能自行判斷所有交通、天氣與故障；機組仍需設定正確模式、監控是否如預期執行，並在必要時接手。", "en": "Engaging autopilot does not let an aircraft judge every traffic, weather or failure situation. Crews select the right modes, monitor what the system actually does and take over when necessary.", "ja": "自動操縦を入れても交通・天候・故障を全て自律判断できるわけではない。乗員は適切なモードを選び、意図どおり動くか監視し、必要なら引き継ぐ。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg?width=960", "caption": {"zh": "A320 駕駛艙上方的自動駕駛控制面板", "en": "Autopilot control panel above the A320 flight displays", "ja": "A320 の表示器上部にある自動操縦操作盤"}, "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320-214_Vueling_EC-HHA_cockpit_(5508849819).jpg", "credit": "Curimedia · CC BY 2.0"}]
     },
     {
       "id": "mzfw", "category": "operations", "hotspot": "mzfw",
       "name": {"zh": "最大零燃油重量 MZFW", "en": "Maximum Zero Fuel Weight (MZFW)", "ja": "最大零燃料重量（MZFW）"},
       "summary": {"zh": "MZFW 是不計可用燃油時，飛機與載荷合計允許的最大重量，用來限制機身載荷對機翼結構的彎曲負擔。", "en": "MZFW is the maximum permitted aircraft-plus-payload weight excluding usable fuel, limiting wing-bending loads from a heavily loaded fuselage.", "ja": "MZFW は使用可能燃料を除いた機体と搭載物の許容最大重量で、重い胴体荷重が翼構造にかける曲げ負荷を制限する。"},
       "fact": {"zh": "它與 MTOW（最大起飛重量）不同：即使起飛總重尚未超標，若乘客與貨物過重仍可能超出 MZFW；不能把多加的燃油當成放寬載荷上限。", "en": "It differs from MTOW: even when total takeoff weight is within limits, excessive passengers or cargo can exceed MZFW. Adding fuel does not increase the permitted payload limit.", "ja": "MTOW（最大離陸重量）とは異なる。離陸時の総重量が範囲内でも、旅客や貨物が多すぎれば MZFW を超える。燃料を増やしても搭載物の上限は緩まない。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/C-130_loadmasters,_A_deployed_balancing_act_130806-F-RY372-001.jpg?width=960", "caption": {"zh": "貨物配載實景；零燃油重量包含機身與酬載", "en": "Cargo loading; zero-fuel weight includes aircraft and payload", "ja": "貨物搭載の実景。無燃料重量には機体と搭載物を含む"}, "source": "https://commons.wikimedia.org/wiki/File:C-130_loadmasters,_A_deployed_balancing_act_130806-F-RY372-001.jpg", "credit": "Senior Airman Bahja Jones · Public domain"}]
     },
     {
       "id": "fod", "category": "airport", "hotspot": "fod",
       "name": {"zh": "FOD：機場外來物碎片", "en": "FOD: Foreign Object Debris", "ja": "FOD：空港内の異物"},
       "summary": {"zh": "FOD 是落在機場不應出現位置、可能傷害人員或損壞飛機的物品，例如工具、石塊、金屬片與鬆脫零件。", "en": "Foreign object debris is an object in the wrong place at an airport that can injure people or damage an aircraft—for example tools, stones, metal fragments or loose parts.", "ja": "FOD は空港内の不適切な場所にあり、人を傷つけたり機体を損傷させたりする異物。工具、石、金属片、外れた部品などがある。"},
       "fact": {"zh": "噴射發動機吸入 FOD 可能損傷風扇葉片；跑道上的異物也可能傷及輪胎。機場的巡查與清除程序是防止事故的重要防線。", "en": "An engine can ingest FOD and damage fan blades; debris on a runway can also harm tires. Airport inspection and removal are important safety defenses.", "ja": "ジェットエンジンが FOD を吸い込むとファンブレードを損傷し得る。滑走路上の異物はタイヤにも危険。空港の点検と除去は重要な安全対策となる。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Time_for_a_FOD_walk_(11593141175).jpg?width=960", "caption": {"zh": "機場人員巡檢並清除地面外來物", "en": "Airfield crew conducting a FOD walk", "ja": "異物を探して除去する飛行場職員"}, "source": "https://commons.wikimedia.org/wiki/File:Time_for_a_FOD_walk_(11593141175).jpg", "credit": "US Air Force from USA · Public domain"}]
     },
     {
       "id": "sigmet", "category": "weather", "hotspot": "sigmet",
       "name": {"zh": "SIGMET：顯著危險天氣情報", "en": "SIGMET: Significant Meteorological Information", "ja": "SIGMET：重大気象情報"},
       "summary": {"zh": "SIGMET 對指定空域發布可能影響飛行安全的顯著天氣資訊，例如嚴重亂流、雷暴、結冰或火山灰。", "en": "A SIGMET warns of significant weather in a defined area that may affect flight safety, such as severe turbulence, thunderstorms, icing or volcanic ash.", "ja": "SIGMET は指定空域で飛行の安全に影響する顕著な気象を知らせる。激しい乱気流、雷雨、着氷、火山灰などが対象になる。"},
       "fact": {"zh": "SIGMET 不是單一機場的 METAR 觀測，也不是所有地區都採相同分類門檻；閱讀時應核對有效時段、範圍與高度層，並配合最新天氣產品。", "en": "A SIGMET is not a single-airport METAR observation, and thresholds differ across services. Check its validity time, area and altitude band alongside current weather products.", "ja": "SIGMET は一つの空港の METAR 実況ではなく、分類基準も地域で異なり得る。有効時間、範囲、高度帯と最新の気象情報を確認する。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Cumulonimbus_viewed_from_airplane.jpg?width=960", "caption": {"zh": "飛機上拍到的積雨雲；強對流可能觸發 SIGMET 危險天氣情報", "en": "Cumulonimbus seen from an aircraft; severe convection can prompt a SIGMET", "ja": "機上から撮影した積乱雲。激しい対流は SIGMET の対象になり得る"}, "source": "https://commons.wikimedia.org/wiki/File:Cumulonimbus_viewed_from_airplane.jpg", "credit": "Shyamal · CC0"}]
     },
     {
       "id": "airmet", "category": "weather", "hotspot": "airmet",
       "name": {"zh": "AIRMET：航路天氣警示", "en": "AIRMET: Airmen's Meteorological Information", "ja": "AIRMET：航空気象注意情報"},
       "summary": {"zh": "AIRMET 針對可能影響飛行的廣域天氣條件提供警示，例如中度亂流、結冰或影響目視飛行的低雲與能見度。", "en": "An AIRMET highlights widespread weather potentially hazardous to aircraft, such as moderate turbulence, icing or low ceilings/visibility affecting visual flight.", "ja": "AIRMET は広域にわたる飛行上の注意を要する気象、例えば中程度の乱気流・着氷・有視界飛行に影響する低い雲や視程を知らせる。"},
       "fact": {"zh": "AIRMET 與 SIGMET 並非簡單的『小警報／大警報』：各國產品與門檻不同，須按當地航空氣象服務解讀；不能因未發布 AIRMET 就假設航路沒有天氣風險。", "en": "AIRMET and SIGMET are not merely small versus large alarms; products and criteria vary by region. Absence of an AIRMET does not guarantee a hazard-free route.", "ja": "AIRMET と SIGMET は単純な小・大警報の違いではなく、製品や基準は地域によって異なる。AIRMET がないからといって経路に気象リスクがないとは限らない。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Ice_on_an_aircraft_wing.jpg?width=960", "caption": {"zh": "實際機翼積冰；中度結冰風險可能列入 AIRMET", "en": "Real wing icing; moderate icing risk may be included in an AIRMET", "ja": "実際の主翼着氷。中程度の着氷リスクは AIRMET の対象となり得る"}, "source": "https://commons.wikimedia.org/wiki/File:Ice_on_an_aircraft_wing.jpg", "credit": "Cory W. Watts · CC BY-SA 2.0"}]
     },
     {
       "id": "callsign", "category": "atc", "hotspot": "callsign",
       "name": {"zh": "航空公司呼號與航班號", "en": "Airline Call Sign and Flight Number", "ja": "航空会社のコールサインと便名"},
       "summary": {"zh": "管制通話使用的呼號通常由航空公司無線電呼號加航班識別碼組成；它不一定與旅客看到的 IATA 航班號或飛機註冊號完全相同。", "en": "An ATC call sign commonly combines an airline's radiotelephony designator with a flight identifier; it need not match the passenger-facing IATA flight number or aircraft registration exactly.", "ja": "管制通信のコールサインは通常、航空会社の無線電話呼称と便識別番号を組み合わせる。旅客向け IATA 便名や機体登録記号と必ずしも同一ではない。"},
       "fact": {"zh": "ICAO 三字代碼供飛航計畫等識別航空公司，無線電呼號則在語音中讀出，兩者功能不同。共掛班號可能使同一航班在訂位系統有多個號碼，但空中通話仍需用實際營運航班的識別。", "en": "The ICAO three-letter designator identifies an operator in flight plans, while the telephony designator is spoken on the radio. Codesharing can create several booking flight numbers, but ATC uses the operating flight's identification.", "ja": "ICAO の３字コードは飛行計画などで運航者を識別し、無線電話呼称は音声で用いる。コードシェアでは予約上の便名が複数でも、管制では実際の運航便の識別を使う。"},
-      "images": []
+      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Air_traffic_controller_schiphol_tower.jpg?width=960", "caption": {"zh": "史基浦機場航管員以無線電識別並呼叫航班", "en": "Schiphol tower controller using radio callsigns to address flights", "ja": "スキポール空港の管制官。無線交信では航空機のコールサインを用いる"}, "source": "https://commons.wikimedia.org/wiki/File:Air_traffic_controller_schiphol_tower.jpg", "credit": "Mark Brouwer · CC BY-SA 2.5"}]
     }
   ]
 }

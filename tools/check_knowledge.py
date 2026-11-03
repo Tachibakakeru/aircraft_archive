@@ -10,6 +10,15 @@ assert len(ids) == len(set(ids)), "duplicate knowledge topic id"
 for topic in topics:
     for field in ("name", "summary", "fact"):
         assert all(topic.get(field, {}).get(lang) for lang in ("zh", "en", "ja")), f"{topic['id']}: missing {field} translation"
+    for image in topic.get("images", []):
+        assert image.get("src"), f"{topic['id']}: image missing URL"
+        # User-uploaded photos are optional and need no Commons attribution.
+        if image.get("source"):
+            assert image["source"].startswith("https://") and image.get("credit"), f"{topic['id']}: sourced image missing credit"
+            assert all(image.get("caption", {}).get(lang) for lang in ("zh", "en", "ja")), f"{topic['id']}: sourced image missing caption translation"
+        if image.get("cropped"):
+            assert (root / image["src"]).is_file(), f"{topic['id']}: cropped image file missing"
+            assert image.get("license", "").startswith("https://"), f"{topic['id']}: cropped image missing license link"
 js = (root / "js" / "knowledge.js").read_text(encoding="utf-8")
 scene_ids = []
 for scene in ("INSTRUMENT", "RUNWAY", "NAV", "SYSTEMS"):

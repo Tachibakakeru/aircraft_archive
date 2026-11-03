@@ -581,3 +581,30 @@
 - 沿用既有 `fdr-cvr` 條目，不新增重複節點，知識總數仍為 82。三語名稱加入「黑盒子／Black Box／ブラックボックス」，摘要展開 FDR、CVR 英文全名與各自記錄用途；補充說明加入 ULB 全名及美國 NTSB 列出的 3,400 g／6.5 ms 衝擊、1,100°C／30 分鐘火災、約 20,000 呎水深壓力等設計測試條件，並註明不保證每次事故均完整回收資料。
 - 來源：[NTSB 飛航資料／座艙語音紀錄器說明與規格](https://www-s.ntsb.gov/news/Pages/cvr_fdr.aspx)、[FAA 事故現場飛航紀錄器識別](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_150_5200-12C.pdf)。知識資料快取鍵升至 `v=185`，本輪僅供本地檢查，未提交或推送。未追蹤的韓國航空除錯資料維持原狀。
 - 驗證：`python tools/check_knowledge.py` 通過（82 筆）、`node --check js/knowledge.js` 與 `git diff --check` 通過；重啟停止的本地服務並在**原** App 預覽分頁重新整理。實際搜尋「黑盒子」後可開啟繁中詳情，顯示 FDR／CVR／ULB 全名及耐受測試值。預覽保留供檢查，沒有推送。
+
+### 航空小知識實照對照（2026-11-03，本地完成，待使用者檢查）
+
+- 使用者先同意推送上一輪黑盒子內容；已提交並推送 `2bed2d5` 到 `origin/main`。以下實照批次仍僅在本地，**未推送**。
+- 為 82／82 個既有知識節點各加一張 Wikimedia Commons 真實照片或實際操作畫面；77 張經逐一挑選的照片記於 `tools/knowledge_photo_catalog.json`，其餘 5 張直接記於主資料。每張附繁中／英文／日文圖說、原檔頁連結及作者／授權。抽象概念的圖說會明說照片實際拍到的設備或場景，避免把照片當作概念本身的直接證據。未用 AI 生成圖。
+- 詳情彈窗在文字下方顯示完整照片與來源，避免裁切；編輯器原有的網址加入、本機上傳與逐張移除保留，且修改既有條目時會保留照片的圖說／來源／授權資料。`AGENTS.md` 記下以後新增內容頁的可選圖片與可移除規則。
+- 修正舊版本機文字草稿含空 `images` 陣列而遮蔽新照片的問題；新草稿以 `imagesEdited` 分辨使用者是否真的移除了全部照片。發布時不把此本機標記寫入正式資料。知識資料／資源版本鍵改為 `v=187`，Service Worker 改 `hangar-v44`。
+- 驗證：`python tools/check_knowledge.py`（82 筆）、`node --check js/knowledge.js`、`git diff --check` 通過；本地 HTTP 回傳 82／82 筆含照片。獨立瀏覽器實測舊的文字草稿覆蓋情境，ATIS 詳情仍載入實照（960px）並顯示圖說與來源。71 張不重複照片的網址逐一測試均能取得圖片；其中一張首測遇 Wikimedia 暫時性 429，重試取得 200。原 App 預覽分頁仍存在，但本輪後段控制介面回報 `browser.user is unavailable`，未能替原分頁重新整理；請使用者在既有分頁重新整理檢查。
+- 保留 `data/korean_airlines_debug.json` 與 `json token/` 原狀，不納入提交。待使用者檢查圖片內容與排列後再決定是否推送。
+
+### 座艙六儀表實照分別裁切（2026-11-03，本地，未推送）
+
+- 使用者指出原本的六儀表合照難以分辨哪一具儀表對應哪個節點。依 [Wikimedia Commons 原圖與六個儀表標註](https://commons.wikimedia.org/wiki/File:Six_flight_instruments.JPG)，從 Meggar 拍攝的 1503×927 實機照片直接裁出空速、姿態、高度、轉彎、航向、垂直速度六張獨立圖片，存於 `assets/knowledge/six-pack-*.jpg`；沒有生成或重繪內容。`tools/crop_knowledge_instruments.py` 記錄裁切座標，可重建檔案。
+- 六個知識節點的主要圖片改為各自的獨立裁圖；三語圖說明示原照位置與裁切，來源連到 Commons 原檔，附 Meggar、裁切註記及 [CC BY-SA 3.0 授權](https://creativecommons.org/licenses/by-sa/3.0/) 連結。詳情圖採正方形比例並限制顯示寬度，避免拉伸或混入旁邊儀表。
+- 知識 CSS／JS／資料鍵升至 `v=188`，Service Worker 升 `hangar-v45`。`tools/apply_knowledge_photos.py` 及照片目錄支援本地裁圖路徑；`tools/check_knowledge.py` 驗證裁圖存在與授權連結。82 筆主題數量不變，本批尚未推送。
+- 本地瀏覽器逐一解碼六張裁圖，實際載入尺寸介於 413×404 與 430×419；姿態指示器詳情截圖確認只顯示單一儀表，三語圖說、原圖與授權連結均在圖下。`python tools/check_knowledge.py`、`node --check js/knowledge.js`、`git diff --check` 通過；README 補裁圖授權。原 App 分頁仍在，但預覽控制介面再次回報 `browser.user is unavailable`，這輪以本地瀏覽器截圖作可見替代，未聲稱已刷新原分頁。
+- 補舊草稿相容性：六個裁圖記錄上一版圖片網址；舊文字草稿若只是連帶保留未改過的合照，讀取時改用新裁圖。已明確換圖或移除圖片的草稿仍保留使用者選擇。獨立瀏覽器驗證三種情境（舊圖回退新裁圖／明確保留舊圖／明確移除）均正確；最終版本鍵 `v=189`、SW `hangar-v46`，未 push。
+
+### ADF 儀表實照修正（2026-11-03，本地，未推送）
+
+- 原 ADF 圖是 Cessna 172 的無線電設備堆疊，照片下方雖有 ADF 控制器，卻沒有清楚顯示方位指針，與條目講述的儀表不符。改用 [Pi3.124 拍攝的 B-17G 機上 ADF 無線電羅盤指示器](https://commons.wikimedia.org/wiki/File:Automatic_Radio_Direction_Finder_R-5_ARN7_indicator.jpg) 實照，從原圖裁出已安裝的上方方位儀表，排除下方磁羅盤；裁圖為 `assets/knowledge/adf-b17-radio-compass.jpg`，裁切程序已加入 `tools/crop_knowledge_instruments.py`。
+- 圖說以繁中／英／日明示 B-17G 機上指示器與裁切；保留原圖、作者與 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 連結。圖庫授權文字改讀每張照片的 `licenseName`，避免把 4.0 誤標為 3.0。舊文字草稿若帶著未改過的原 ADF 圖，會自動顯示新版照片；明確自訂或刪除圖片仍尊重草稿。
+- 瀏覽器驗證 ADF 詳情載入 1560×1560 真實裁圖、三語圖說及兩個正確來源／授權連結；`python tools/check_knowledge.py`、`node --check js/knowledge.js` 與 `git diff --check` 通過。資源版本鍵 `v=190`、SW `hangar-v47`；原 App 預覽分頁仍在但控制介面暫時無法刷新，使用獨立本地瀏覽器截圖供檢查。尚未推送。
+
+### 實照批次推送核准（2026-11-03）
+
+- 使用者看過 ADF 修正並明確要求「PUSH」。本批範圍為 82 筆小知識實照、六個基本儀表與 ADF 的實拍裁圖、編輯與舊草稿相容修正、照片來源與授權、版本更新及資料驗證。提交前重跑 `python tools/check_knowledge.py`、`node --check js/knowledge.js`、`git diff --check` 均通過。明確排除未追蹤的 `data/korean_airlines_debug.json` 與 `json token/`。

@@ -1,4 +1,4 @@
-﻿"use strict";
+"use strict";
 /* ═══════════════════════════════════════════════
    航空小知識 — 互動座艙儀表面板 + 補充知識卡片
    資料來源 data/knowledge.json（單一檔案，topics 陣列）。
@@ -134,11 +134,17 @@ function mergedTopic(id){
   const base = byId[id];
   if (!base) return null;
   const local = getLocalOverride(id);
+  // 舊版草稿即使只改文字也會寫入 images: []；不要讓它遮住新加入的實照。
+  const localImages = Array.isArray(local?.images) ? local.images : null;
+  const replacedSrc = base.images?.[0]?.replaces;
+  const oldUnchangedImage = local?.imagesEdited !== true && replacedSrc && localImages?.length === 1 && localImages[0].src === replacedSrc;
+  const useLocalImages = local?.imagesEdited === true || (localImages && localImages.length > 0 && !oldUnchangedImage);
   return local ? {
     ...base, ...local,
     name: mergeField(base.name, local.name),
     summary: mergeField(base.summary, local.summary),
     fact: mergeField(base.fact, local.fact),
+    images: useLocalImages ? localImages : base.images,
     _local: true,
   } : base;
 }
@@ -679,8 +685,14 @@ function openDetail(id){
   $("kn-view-summary").textContent = F(t.summary);
   $("kn-view-fact").textContent = F(t.fact) ? `💡 ${F(t.fact)}` : "";
   const imgs = (t.images || []).filter(im => im.src);
-  $("kn-view-gallery").innerHTML = imgs.map(im =>
-    `<img src="${im.src}" alt="${F(im.caption) || F(t.name)}" loading="lazy">`).join("");
+  $("kn-view-gallery").innerHTML = imgs.map(im => {
+    const caption = F(im.caption);
+    const source = im.source && /^https:\/\//.test(im.source) ? im.source : "";
+    const license = im.license && /^https:\/\//.test(im.license) ? im.license : "";
+    const credit = source ? `<a href="${escText(source)}" target="_blank" rel="noopener noreferrer">${escText(im.credit || "圖片來源")}</a>` : "";
+    const attribution = [credit, license ? `<a href="${escText(license)}" target="_blank" rel="noopener noreferrer">${escText(im.licenseName || "License")}</a>` : ""].filter(Boolean).join(" · ");
+    return `<figure${im.cropped ? ' class="kn-gauge-photo"' : ""}><img src="${escText(im.src)}" alt="${escText(caption || F(t.name))}" loading="lazy">${caption || attribution ? `<figcaption>${escText(caption)}${caption && attribution ? " · " : ""}${attribution}</figcaption>` : ""}</figure>`;
+  }).join("");
   $("kn-edit").hidden = true;
   $("kn-view").hidden = false;
   $("kn-overlay").hidden = false;
@@ -734,7 +746,7 @@ function openEditor(){
   $("kn-edit-name").value = F(t.name) || "";
   $("kn-edit-summary").value = F(t.summary) || "";
   $("kn-edit-fact").value = F(t.fact) || "";
-  editingImages = (t.images || []).filter(im => im.src).map(im => im.src);
+  editingImages = (t.images || []).filter(im => im.src).map(im => ({ ...im }));
   renderEditingImages();
   $("kn-new-fields").hidden = true;
   $("kn-view").hidden = true;
@@ -778,7 +790,7 @@ function addNewTopic(){
     name:    { zh: "", en: "", ja: "", [lang]: nameText },
     summary: { zh: "", en: "", ja: "" },
     fact:    { zh: "", en: "", ja: "" },
-    images:  editingImages.map(src => ({ src, caption: "" })),
+    images:  editingImages.map(im => ({ ...im })),
     _custom: true,
   };
   const summaryText = $("kn-edit-summary").value.trim();
@@ -803,8 +815,8 @@ function addNewTopic(){
   return topic;
 }
 function renderEditingImages(){
-  $("kn-edit-imgs").innerHTML = editingImages.map((src, i) =>
-    `<div class="kn-edit-imgitem"><img src="${src}" alt=""><button type="button" data-i="${i}" class="kn-edit-imgdel" title="✕">✕</button></div>`).join("");
+  $("kn-edit-imgs").innerHTML = editingImages.map((im, i) =>
+    `<div class="kn-edit-imgitem"><img src="${escText(im.src)}" alt=""><button type="button" data-i="${i}" class="kn-edit-imgdel" title="✕">✕</button></div>`).join("");
   $("kn-edit-imgs").querySelectorAll(".kn-edit-imgdel").forEach(btn =>
     btn.addEventListener("click", () => { editingImages.splice(+btn.dataset.i, 1); renderEditingImages(); }));
 }
@@ -817,7 +829,8 @@ function buildOverride(){
     name: nameText ? nextFieldValue(base.name, nameText) : base.name,
     summary: summaryText ? nextFieldValue(base.summary, summaryText) : base.summary,
     fact: factText ? nextFieldValue(base.fact, factText) : base.fact,
-    images: editingImages.map(src => ({ src, caption: "" })),
+    images: editingImages.map(im => ({ ...im })),
+    imagesEdited: JSON.stringify(editingImages) !== JSON.stringify(base.images || []),
   };
 }
 // 縮圖壓縮後再存，避免 localStorage 塞爆（與 airports.js 相同做法）
@@ -840,7 +853,7 @@ function downscaleImg(file, maxW, quality){
 async function boot(){
   let data;
   try {
-    const res = await fetch("data/knowledge.json?v=185");
+    const res = await fetch("data/knowledge.json?v=190");
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {
@@ -938,7 +951,8 @@ async function boot(){
     try {
       const override = buildOverride();
       saveLocalOverride(currentTopicId, override);
-      byId[currentTopicId] = { ...byId[currentTopicId], ...override };
+      const { imagesEdited, ...publishedFields } = override;
+      byId[currentTopicId] = { ...byId[currentTopicId], ...publishedFields };
       const result = await Storage.save("knowledge", { topics: TOPICS.map(t => byId[t.id]) });
       alert(result.message);
     } catch {
@@ -960,7 +974,7 @@ async function boot(){
     const input = $("kn-edit-imgurl");
     const url = input.value.trim();
     if (!url) return;
-    editingImages.push(url);
+    editingImages.push({ src: url, caption: "" });
     input.value = "";
     renderEditingImages();
   });
@@ -968,7 +982,7 @@ async function boot(){
   $("kn-edit-file").addEventListener("change", async e => {
     for (const file of e.target.files){
       const dataUrl = await downscaleImg(file, 1200, 0.8);
-      if (dataUrl) editingImages.push(dataUrl);
+      if (dataUrl) editingImages.push({ src: dataUrl, caption: "" });
     }
     renderEditingImages();
     e.target.value = "";
