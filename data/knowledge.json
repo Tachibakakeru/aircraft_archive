@@ -292,7 +292,7 @@
         "en": "Earth's magnetic field slowly drifts, so runway numbers occasionally need remeasuring and repainting — some airports have changed their runway numbers more than once over the decades.",
         "ja": "地球の磁場は緩やかに移動するため、滑走路番号は定期的に再測量・再塗装が必要になる。数十年の運用中に番号が複数回変更された空港も存在する。"
       },
-      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Runway_27_Threshold,_Liverpool_Airport_-_geograph.org.uk_-_6215245.jpg?width=960", "caption": {"zh": "利物浦機場 27 號跑道入口", "en": "Runway 27 threshold at Liverpool Airport", "ja": "リバプール空港の滑走路27進入端"}, "source": "https://commons.wikimedia.org/wiki/File:Runway_27_Threshold,_Liverpool_Airport_-_geograph.org.uk_-_6215245.jpg", "credit": "Richard Cooke · CC BY-SA 2.0"}]
+      "images": [{"src": "assets/knowledge/rctp-runway-23r-nlsc-2024.jpg", "caption": {"zh": "桃園國際機場（RCTP）北跑道 23R 跑道頭正射航照；可見地面 23R 編號與入口標線", "en": "Orthophoto of the runway 23R threshold on the north runway at Taiwan Taoyuan International Airport (RCTP), showing the painted 23R designation and threshold bars", "ja": "台湾桃園国際空港（RCTP）の北側滑走路23R進入端の正射画像。路面の23R表示と進入端標識が見える"}, "source": "https://wms.nlsc.gov.tw/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=121.2422,25.09365,121.24405,25.09515&SRS=EPSG:4326&WIDTH=1200&HEIGHT=960&LAYERS=PHOTO2&STYLES=&FORMAT=image/jpeg", "credit": "內政部國土測繪中心 NLSC · 2024 正射影像", "replaces": ["https://commons.wikimedia.org/wiki/Special:FilePath/Runway_27_Threshold,_Liverpool_Airport_-_geograph.org.uk_-_6215245.jpg?width=960", "https://commons.wikimedia.org/wiki/Special:FilePath/Runway_22L.jpg?width=960"]}]
     },
     {
       "id": "windshear",

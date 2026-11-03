@@ -608,3 +608,20 @@
 ### 實照批次推送核准（2026-11-03）
 
 - 使用者看過 ADF 修正並明確要求「PUSH」。本批範圍為 82 筆小知識實照、六個基本儀表與 ADF 的實拍裁圖、編輯與舊草稿相容修正、照片來源與授權、版本更新及資料驗證。提交前重跑 `python tools/check_knowledge.py`、`node --check js/knowledge.js`、`git diff --check` 均通過。明確排除未追蹤的 `data/korean_airlines_debug.json` 與 `json token/`。
+
+### 起飛速度與跑道編號照片修正（2026-11-03，本地，未推送）
+
+- `v-speeds` 原本使用 DC-10 傳統空速表，與 `asi` 節點辨識上重複。改為法國 BEA 2019 年 Boeing 777-F 事件調查報告第 19 頁的實際 FMS 起飛參考速度螢幕照片；畫面右側可讀到 V1、VR、V2。三語圖說特別指出事故示例的輸入值與參考值不一致，不能當作正常起飛設定。圖片原始嵌入解析度 475×370，保留原圖不生成、不重繪，附報告來源。BEA 網站的照片重製條款要求核對作者許可；本批維持本地展示，公開發布前須釐清使用權。
+- `runway-numbering` 改為 Olivier Cleynen 拍攝的[尼斯機場跑道 22L 實照](https://commons.wikimedia.org/wiki/File:Runway_22L.jpg)，入口標線與 `22L` 字樣都清楚可見；圖說註明拍攝時封閉維護，附 CC BY-SA 4.0 授權連結。
+- 兩張圖都記錄舊圖 `replaces`，舊本機文字草稿若只是連帶保留未修改的舊照片會改用新版；使用者明確修改或移除照片的草稿維持原狀。照片目錄及套用器支援 BEA 報告這類非 Commons 來源。資源版本鍵升至 `v=191`，Service Worker 升 `hangar-v48`。
+- 驗證：`python tools/check_knowledge.py`（82 筆）、`python tools/apply_knowledge_photos.py`（78 筆圖庫）、`node --check js/knowledge.js`、`git diff --check` 通過；本地 HTTP 的 v191 資料與 JPEG 均回傳 200。原 App 預覽控制回報 `browser.user is unavailable`；`open_in_codex` 僅回 `queued`，不能視作已刷新原預覽。嘗試在背景啟動 Edge 擷取本地畫面遭自動核准機制以 `blocked by policy` 拒絕，故直接展示實際圖檔作替代。未推送；未追蹤的韓國航空除錯資料與憑證資料夾未動。
+
+### RCTP 23R 跑道頭實照替換（2026-11-03，本地，未推送）
+
+- 依使用者指定，`runway-numbering` 的尼斯 22L 圖改為國土測繪中心 PHOTO2 圖層所提供的桃園機場（RCTP）北跑道 23R 正射航照，畫面可直接看到地面 `23R` 編號與跑道入口白色標線。原始 WMS 影像保留 `NLSC 2024` 水印，存於 `assets/knowledge/rctp-runway-23r-nlsc-2024.jpg`；圖說與來源均記錄於三語資料和照片目錄。官方服務說明允許擷取並嵌入地圖影像；來源：[國土測繪中心臺灣圖資服務](https://maps.nlsc.gov.tw/pro/sysinfo_en.jsp)、[桃園機場跑道命名說明](https://www.anws.gov.tw/FAQDetailC005240.aspx?Cond=034d1e36-165e-49cf-ae2e-20f1888ebd01)。
+- 互動場景的小卡文字與 SVG 跑道編號一併由 `27` 改為 `23R`。舊本機草稿中若仍保留 Liverpool 27 或 Nice 22L 的未改照片，都會回退至新圖；明確換圖／刪圖的草稿不受影響。資源版本鍵升至 `v=192`，Service Worker 升 `hangar-v49`。這批仍未推送，並保留前一輪尚未推送的 V 速度畫面修正。
+- 驗證：`python tools/check_knowledge.py`（82 筆）、`python tools/apply_knowledge_photos.py`（78 筆）、`node --check js/knowledge.js`、`git diff --check` 通過；本地 HTTP 確認 v192 的 `runway-numbering` 指向新圖、保留兩種舊圖遷移資訊，JPEG 回傳 200。原 App 分頁控制仍回 `browser.user is unavailable`；`open_in_codex` 對檔案也只回 `queued`，未將它誤報為即時預覽。
+
+### RCTP 23R 公開發布範圍（2026-11-03）
+
+- 使用者要求推送。公開版本包含 RCTP 23R 實照、三語圖說、場景標籤、舊草稿遷移與資源版本更新。BEA Boeing 777 V 速照片的重製授權尚未確認，因此照片及對應資料修改保留本機，不進入本次提交；網站暫時沿用原本的 DC-10 空速表圖片。未追蹤的韓國航空除錯檔與憑證資料夾不納入提交。

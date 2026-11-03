@@ -31,7 +31,7 @@ const INSTRUMENT_TOPICS = [
 ];
 
 const RUNWAY_TOPICS = [
-  { id: "runway-numbering", label: "RWY 27" },
+  { id: "runway-numbering", label: "RWY 23R" },
   { id: "v-speeds",         label: "V1 VR V2" },
   { id: "wake",              label: "WAKE" },
   { id: "windshear",         label: "SHEAR" },
@@ -137,7 +137,7 @@ function mergedTopic(id){
   // 舊版草稿即使只改文字也會寫入 images: []；不要讓它遮住新加入的實照。
   const localImages = Array.isArray(local?.images) ? local.images : null;
   const replacedSrc = base.images?.[0]?.replaces;
-  const oldUnchangedImage = local?.imagesEdited !== true && replacedSrc && localImages?.length === 1 && localImages[0].src === replacedSrc;
+  const oldUnchangedImage = local?.imagesEdited !== true && replacedSrc && localImages?.length === 1 && [].concat(replacedSrc).includes(localImages[0].src);
   const useLocalImages = local?.imagesEdited === true || (localImages && localImages.length > 0 && !oldUnchangedImage);
   return local ? {
     ...base, ...local,
@@ -292,7 +292,7 @@ const RUNWAY_DECOR = {
     <rect x="${cx - 11}" y="${cy - 34}" width="22" height="68" class="kn-rwy-strip"/>
     <line x1="${cx}" y1="${cy - 28}" x2="${cx}" y2="${cy - 12}" class="kn-rwy-dash"/>
     <line x1="${cx}" y1="${cy - 4}" x2="${cx}" y2="${cy + 12}" class="kn-rwy-dash"/>
-    <text x="${cx}" y="${cy + 26}" class="kn-rwy-num">27</text>`,
+    <text x="${cx}" y="${cy + 26}" class="kn-rwy-num">23R</text>`,
   "v-speeds": (cx, cy) => `
     <path d="M ${cx - 22} ${cy + 12} L ${cx + 6} ${cy - 4} L ${cx + 22} ${cy - 16} L ${cx + 10} ${cy - 6} L ${cx - 4} ${cy - 2} Z" class="kn-vspeed-plane"/>
     <path d="M ${cx + 18} ${cy - 24} l 8 -6 m -8 6 l 1 -9 m -1 9 l 9 1" class="kn-vspeed-arrow"/>`,
@@ -853,7 +853,7 @@ function downscaleImg(file, maxW, quality){
 async function boot(){
   let data;
   try {
-    const res = await fetch("data/knowledge.json?v=190");
+    const res = await fetch("data/knowledge.json?v=192");
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {

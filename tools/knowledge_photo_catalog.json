@@ -327,13 +327,19 @@
     "credit": "Haralug · CC BY-SA 3.0"
   },
   "runway-numbering": {
-    "file": "Runway 27 Threshold, Liverpool Airport - geograph.org.uk - 6215245.jpg",
+    "file": "NLSC PHOTO2 WMS RCTP 23R",
+    "local": "assets/knowledge/rctp-runway-23r-nlsc-2024.jpg",
+    "source": "https://wms.nlsc.gov.tw/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=121.2422,25.09365,121.24405,25.09515&SRS=EPSG:4326&WIDTH=1200&HEIGHT=960&LAYERS=PHOTO2&STYLES=&FORMAT=image/jpeg",
     "caption": {
-      "zh": "利物浦機場 27 號跑道入口",
-      "en": "Runway 27 threshold at Liverpool Airport",
-      "ja": "リバプール空港の滑走路27進入端"
+      "zh": "桃園國際機場（RCTP）北跑道 23R 跑道頭正射航照；可見地面 23R 編號與入口標線",
+      "en": "Orthophoto of the runway 23R threshold on the north runway at Taiwan Taoyuan International Airport (RCTP), showing the painted 23R designation and threshold bars",
+      "ja": "台湾桃園国際空港（RCTP）の北側滑走路23R進入端の正射画像。路面の23R表示と進入端標識が見える"
     },
-    "credit": "Richard Cooke · CC BY-SA 2.0"
+    "credit": "內政部國土測繪中心 NLSC · 2024 正射影像",
+    "replaces": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Runway_27_Threshold,_Liverpool_Airport_-_geograph.org.uk_-_6215245.jpg?width=960",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Runway_22L.jpg?width=960"
+    ]
   },
   "dme": {
     "file": "Indicator, TACAN, Distance Measuring Equipment (DME), To-From, Type CA-1477-2 - DPLA - 299c0380b6968146ea018a070359a1d9 (page 3).jpg",

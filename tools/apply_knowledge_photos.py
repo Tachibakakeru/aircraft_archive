@@ -20,7 +20,7 @@ topics = {topic["id"]: topic for topic in json.loads(text)["topics"]}
 catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
 if sys.argv[1:] == ["--credits"]:
     sys.stdout.reconfigure(encoding="utf-8")
-    files = list(dict.fromkeys(item["file"] for item in catalog.values()))
+    files = list(dict.fromkeys(item["file"] for item in catalog.values() if not item.get("source")))
     info = {}
     for offset in range(0, len(files), 20):
         titles = "|".join("File:" + name for name in files[offset:offset + 20])
@@ -32,6 +32,9 @@ if sys.argv[1:] == ["--credits"]:
         info.update({page["title"].removeprefix("File:"): page.get("imageinfo", [{}])[0]
                      for page in response.json().get("query", {}).get("pages", {}).values()})
     for topic_id, item in catalog.items():
+        if item.get("source"):
+            print(topic_id, "NON_COMMONS", item["source"])
+            continue
         found = info.get(item["file"])
         if not found:
             print(topic_id, "MISSING", item["file"])
@@ -52,7 +55,7 @@ for topic_id, entry in catalog.items():
     image = {
         "src": entry.get("local") or f"https://commons.wikimedia.org/wiki/Special:FilePath/{path}?width=960",
         "caption": entry["caption"],
-        "source": f"https://commons.wikimedia.org/wiki/File:{path}",
+        "source": entry.get("source") or f"https://commons.wikimedia.org/wiki/File:{path}",
         "credit": entry["credit"],
     }
     if entry.get("license"):
