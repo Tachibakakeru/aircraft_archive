@@ -1,7 +1,8 @@
 # 首頁新 UI 概念稿：設計紀錄與交接說明
 
 > 給後續 session 的交接文件。說明 `home-concept.html` 的來由、設計想法、實作細節、驗證結果，以及正式採用前要做的事。
-> 建立日期：2026-11-03。狀態：**概念稿，使用者尚未決定是否採用**。正式首頁 `index.html` 完全沒有修改。
+> 建立日期：2026-11-03。
+> **狀態更新（2026-11-03）：使用者要求「套用到正式首頁」，已正式採用。** 概念頁 `home-concept.html` 已刪除，內容拆成 `index.html`＋`css/home.css`＋`js/home.js`，字串併入 `js/i18n.js` 的 `home.*`。第 1～8 節保留概念階段的想法與紀錄；正式套用的實際做法見第 11 節。
 
 ---
 
@@ -247,3 +248,28 @@ METAR 格式的資料庫狀態頁尾
 - Google Fonts 外部依賴尚未確認。
 - 出發看板的「時間、班號、登機門」是裝飾性的隨機值，不是真實航班；若使用者在意誤解，可改成更明確的「今日推薦」標示。
 - 航線示意的航時與巡航高度是粗略估算，僅供視覺效果。
+
+## 11. 正式套用紀錄（2026-11-03）
+
+使用者看過 Artifact 預覽後要求「套用到正式首頁」。依第 9 節步驟處理：
+
+| 項目 | 做法 |
+|---|---|
+| 頁面結構 | `index.html` 改為概念稿的版面；移除「概念稿」標籤與預覽模式（不再對 `fleet.html` 發 HEAD 請求、不再攔截連結）。 |
+| 樣式 | 全部移到 `css/home.css`（首頁不載入 `css/style.css`，所以 token 名稱不會互相衝突）。 |
+| 程式 | 移到 `js/home.js`；改用 `I18N.t("home.*")`、`I18N.field()`、`I18N.set()`、`HangarTheme.toggle()`；重新載入 `js/theme.js`（Service Worker 註冊、回機隊保留搜尋條件）。 |
+| 三語字串 | 113 個 key／語言併入 `js/i18n.js`，全部在 `home.` 命名空間（例如 `home.hero.title`、`home.p.fleet.d`、`home.cat.weather`）；舊的 `home.title`、`home.fleet.desc` 等已移除（只有舊首頁使用）。帶變數的字串用 `{n}`、`{name}`，由 `home.js` 的 `t(k, vars)` 代入。 |
+| 字體 | **不使用 Google Fonts**。Barlow Condensed（500/600/700）與 IBM Plex Mono（400/500/600）的拉丁子集 woff2 放在 `assets/fonts/`（共約 110 KB，SIL OFL 1.1，授權檔一併收錄，README 已註記）；中日文改用系統字體堆疊（PingFang TC → Noto Sans TC → Hiragino Sans → Microsoft JhengHei）。這樣不依賴外部服務，PWA 離線也能顯示。 |
+| 小知識深連結 | `js/knowledge.js` 新增 `knowledge.html?topic=<id>`：資料載入後轉盤轉到該條目並開啟詳情（不在場景中的條目直接開詳情）。首頁搜尋、出發看板、機長廣播「看完整解說」都改連到條目。 |
+| 搜尋鍵盤操作 | 仍由 `home.js` 自己處理（↑↓／Enter／Esc）。`js/ui.js` 的共用處理是以 mousedown 選取「選項按鈕」為前提，首頁搜尋結果是一般連結，硬套會讓 Enter 行為不一致，所以沒有改用；首頁也沒有載入 `ui.js`。 |
+| 版本與快取 | `css/home.css`、`js/home.js`、首頁的 `js/i18n.js` 用 `v=193`；`knowledge.html` 的 `js/knowledge.js` 升為 `v=193`；`sw.js` 的 `CACHE` 由 `hangar-v49` 升為 `hangar-v50`。資料 fetch 的版本鍵沿用（fleet 182、airlines 139、airport_count／airport_codes 138、knowledge 192）。其他頁面仍引用舊版 `i18n.js?v=…`，它們不需要新的 `home.*` 字串，所以不受影響。 |
+| 文件 | `AGENTS.md` 首頁與小知識列已更新；`README.md` 加字體授權；`Progress.md` 已記錄。 |
+
+驗證（本機 `server.py`＋Playwright）：
+- 繁中淺色、英文深色桌面 1360px、日文 390px 手機：無橫向溢出、無 console／page error；Barlow Condensed 確認已載入。
+- 首頁搜尋 `cavok` 按 Enter → `knowledge.html?topic=cavok`，轉盤定位並開啟「CAVOK：雲與能見度良好」詳情。
+- 語言切換會寫入 `hangar_lang`、更新 `<html lang>` 與全部文字；主題切換寫入 `hangar_theme`。
+- 有 `hangar_recent` 紀錄時「最近看過的機型」正確顯示縮圖。
+- 測試環境中只有小知識詳情的 Wikimedia 外部照片因沙盒網路無法載入，與本次改動無關。
+
+Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概念階段版本（含預覽模式與 Google Fonts），不會自動同步正式首頁。

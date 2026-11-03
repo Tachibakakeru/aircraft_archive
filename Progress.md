@@ -634,3 +634,12 @@
 - 驗證：本機 `server.py` 下 Playwright 實測桌面淺色／深色、390px 手機寬度皆無橫向溢出、無 console 錯誤；搜尋 `eva` 首筆為長榮航空、`羽田` 找到 RJTT、`v1` 首筆為起飛速度條目。另發布私人 Artifact 預覽（內含同一批資料檔）供使用者在 App 檢視。
 - 完整設計過程、想法與採用步驟已整理於 `docs/homepage-concept.md`，供其他 session 交接。
 - 未解事項：知識頁尚無單一條目深連結，搜尋／看板的知識項目暫時只連到 `knowledge.html`；若採用，建議補 `knowledge.html?topic=<id>`。正式套用時需取代 `index.html`、更新 `?v=N` 與 SW `CACHE` 名稱。
+
+### 首頁「出境大廳」正式套用（2026-11-03）
+
+- 使用者要求「套用到正式首頁」。`index.html` 改為新版面；樣式移到 `css/home.css`、程式移到 `js/home.js`；三語字串（每種語言 113 個 `home.*` key）併入 `js/i18n.js`，並移除只有舊首頁使用的舊 `home.*` key。概念頁 `home-concept.html` 已刪除。
+- 字體不依賴 Google Fonts：Barlow Condensed／IBM Plex Mono 拉丁子集自帶於 `assets/fonts/`（SIL OFL 1.1，授權檔一併收錄、README 已註記），中日文使用系統字體。
+- `js/knowledge.js` 新增 `knowledge.html?topic=<id>` 深連結；首頁搜尋、出發看板、機長廣播都連到單一條目。
+- 版本：首頁 `home.css`／`home.js`／`i18n.js` 用 `v=193`，`knowledge.js` 升 `v=193`，Service Worker `hangar-v50`。`AGENTS.md`、`docs/homepage-concept.md`（新增第 11 節正式套用紀錄）已更新。
+- 驗證：`node --check`（home.js、knowledge.js、i18n.js）通過；本機 Playwright 實測三語、深淺色、手機寬度均無溢出與錯誤，`cavok` 搜尋可直接開啟小知識詳情。
+- 推送範圍：只推到工作分支 `claude/eager-euler-euibb4`，**尚未合併到 `main`**（正式網站由 `main` 部署），待使用者確認。

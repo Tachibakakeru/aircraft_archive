@@ -157,6 +157,8 @@ python3 tools/make_thumb.py models/a380.json assets/thumb_a380.png
 
 ## 授權聲明
 
+- 首頁字體 **Barlow Condensed**（The Barlow Project Authors）與 **IBM Plex Mono**（IBM Corp.）採 **SIL Open Font License 1.1**，僅收錄未修改的拉丁子集 woff2 於 `assets/fonts/`，授權全文見同資料夾的 `OFL-*.txt`。
+
 - 3D 模型來源：[Flightradar24/fr24-3d-models](https://github.com/Flightradar24/fr24-3d-models)，
   採 **GPL-2.0** 授權。本專案對模型的修改（格式轉換、部位分類）依同授權釋出，
   轉換工具 `tools/convert_fr24.py` 即為修改流程的完整原始碼。

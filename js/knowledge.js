@@ -1000,5 +1000,11 @@ async function boot(){
     if (currentTopicId && !$("kn-overlay").hidden) openDetail(currentTopicId);
     renderKnowledgeSearch();
   });
+
+  // 深連結：knowledge.html?topic=<id>（首頁搜尋、出發看板、機長廣播使用）
+  const wanted = new URLSearchParams(location.search).get("topic");
+  if (wanted && byId[wanted]) setTimeout(() => {
+    if (topicScene(wanted)) selectKnowledgeTopic(wanted); else openDetail(wanted);
+  }, 250);
 }
 boot();

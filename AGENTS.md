@@ -22,7 +22,7 @@
 
 | 頁面 | 用途 | 主要程式 |
 |---|---|---|
-| `index.html` | 首頁；動態讀取四種資料庫數量 | 行內統計程式、`js/i18n.js` |
+| `index.html` | 首頁「出境大廳」：全站搜尋、航線示意、登機證入口、每日出發看板、機長廣播、METAR 狀態列；設計紀錄見 `docs/homepage-concept.md` | `js/home.js`、`css/home.css`、`js/i18n.js`（`home.*`） |
 | `fleet.html` | 機型清單、篩選、收藏與最近瀏覽 | 頁面內程式、`js/theme.js` |
 | `viewer.html` | Three.js 機型檢視器，網址為 `?model=<id>` | `js/viewer.js` |
 | `compare.html` | 最多四架機型比較 | `js/compare.js` |
@@ -30,7 +30,7 @@
 | `versus.html` | Boeing / Airbus 兩機型部位與規格比較 | `js/versus.js` |
 | `airports.html` | 機場、跑道、衛星圖、收藏、比較、編輯 | `js/airports.js` |
 | `airlines.html` | 航空公司、機隊、航線圖、收藏、編輯 | `js/airlines.js`、`js/globe.js` |
-| `knowledge.html` | 可無限滑動的航空知識互動場景 | `js/knowledge.js` |
+| `knowledge.html` | 可無限滑動的航空知識互動場景；`?topic=<id>` 直接開啟條目 | `js/knowledge.js` |
 | `editor.html` | 機型部位與規格的通用編輯器 | `js/editor.js` |
 
 ## 資料與資產
