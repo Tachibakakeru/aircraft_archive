@@ -99,7 +99,7 @@
 - `js/metar.js`：機場詳情的即時天氣（自行解析 METAR、飛航類別、風向袋、建議跑道）。
 - `404.html`：「航班取消」頁，用 `<base href="/">`（Cloudflare 對任何不存在的路徑回應此檔）。
 - 新資料與產生工具：`data/route_airports.json`（`tools/build_route_airports.py`，1,172 座大型機場）、`data/landmask.json`（`tools/build_landmask.py`，0.5° 陸地遮罩）、`assets/silhouettes/*.png`＋`data/silhouettes.json`（`tools/build_silhouettes.py`，由 3D 模型產生俯視剪影並對應 184 機型）、`assets/earth_daymap_1k/2k.jpg`（地球漸進貼圖）、`assets/icon*.png`（App 圖示）。新增 3D 模型後要重跑 `build_silhouettes.py`。
-- 常用 localStorage 鍵：`hangar_tz`、`hangar_route_speed`、`hangar_route_pin`、`hangar_al_view`、`hangar_vscene`、`hangar_sound`、`hangar_tx`、`hangar_anniv_dismiss`。
+- 常用 localStorage 鍵：`hangar_tz`、`hangar_route_speed`、`hangar_route_pin`、`hangar_al_view`、`hangar_vscene`、`hangar_sound`、`hangar_tx`、`hangar_anniv_dismiss`、`hangar_board_auto`、`hangar_pa_auto`（首頁看板／機長廣播自動輪換秒數，0 = 手動）。
 - 動畫與「減少動態效果」：使用者明確要求首頁航線與換頁動畫在系統開啟 reduced-motion 時仍要播放（曾因此被誤認為沒有動畫），不要再以 reduced-motion 直接略過。
 - Cloudflare Pages 部署偶爾卡在 initialize：先 Cancel 卡住的部署再 Retry；只改文件的提交可在訊息加 `[CF-Pages-Skip]` 避免多佔建置名額。
 

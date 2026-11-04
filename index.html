@@ -10,12 +10,12 @@
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="theme-color" content="#1565d8">
 <link rel="preload" href="assets/fonts/barlow-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/home.css?v=207">
+<link rel="stylesheet" href="css/home.css?v=208">
 <link rel="stylesheet" href="css/routemap.css?v=2">
 <link rel="stylesheet" href="css/sky.css?v=5">
 <link rel="stylesheet" href="css/transition.css?v=8">
 <script src="js/theme.js?v=138"></script>
-<script src="js/i18n.js?v=215"></script>
+<script src="js/i18n.js?v=216"></script>
 <script src="js/skytime.js?v=4"></script>
 <script src="js/transition.js?v=6"></script>
 <script src="js/extras.js?v=5" defer></script>
@@ -132,6 +132,7 @@
           <h3><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>DEPARTURES</h3>
           <span class="bclock"><span data-i18n="home.board.local">當地時間</span><b id="clock">--:--</b></span>
           <button class="shuffle" type="button" id="shuffle"><svg viewBox="0 0 24 24"><path d="M4 7h11l-3-3M20 17H9l3 3M4 7v4M20 17v-4"/></svg><span data-i18n="home.board.shuffle">換一批</span></button>
+          <span class="auto-ctl" id="boardAuto"></span>
         </div>
         <div class="brow hdr"><span data-i18n="home.col.time">時間</span><span data-i18n="home.col.flight">班次</span><span data-i18n="home.col.dest">目的地</span><span data-i18n="home.col.gate">登機門</span><span data-i18n="home.col.status">狀態</span></div>
         <div id="rows"></div>
@@ -142,6 +143,7 @@
           <span class="mic"><svg viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M20 19c0 1.5-2 2.5-5 2.5h-2"/></svg></span>
           <h3><span class="label">PA · CABIN</span><span data-i18n="home.pa.title">機長廣播</span></h3>
           <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="auto-ctl" id="paAuto"></span>
         </div>
         <p class="pa-greet" id="paGreet"></p>
         <div class="pa-topic" id="paTopic"></div>
@@ -229,6 +231,6 @@
 </div>
 
 <script src="js/routemap.js?v=7"></script>
-<script src="js/home.js?v=208"></script>
+<script src="js/home.js?v=209"></script>
 </body>
 </html>

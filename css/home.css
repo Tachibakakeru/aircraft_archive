@@ -426,3 +426,47 @@ body.rp-open{overflow:hidden}
 .wp-empty .wp-sub{white-space:normal}
 .wp-empty .wp-stub{background:transparent}
 @media (max-width:520px){ .wp{width:260px} }
+
+/* ═══════════════ 自動輪換控制（今日出發、機長廣播；2026-11） ═══════════════ */
+.board,.pa{position:relative}
+.auto-bar{position:absolute;left:18px;right:18px;top:0;height:3px;border-radius:0 0 3px 3px;overflow:hidden;opacity:0;transition:opacity .3s}
+.auto-on>.auto-bar{opacity:1}
+.auto-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--azure),var(--cyan));transform-origin:0 50%;transform:scaleX(0);transition:transform .2s linear}
+.board>.auto-bar i{background:linear-gradient(90deg,var(--board-hi),#9fe3ff)}
+.auto-paused>.auto-bar i{opacity:.45}
+.auto-ctl{position:relative;flex:none}
+.auto-btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:99px;padding:6px 12px;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer;white-space:nowrap}
+.auto-btn:hover,.auto-btn[aria-expanded="true"]{border-color:var(--azure);color:var(--azure)}
+.auto-ico{width:14px;height:14px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;flex:none}
+.auto-ctl.on .auto-btn{color:var(--azure);border-color:color-mix(in srgb,var(--azure) 50%,var(--line))}
+.auto-ctl.on .auto-ico{animation:auto-spin 1.6s linear infinite}
+.auto-paused .auto-ctl.on .auto-ico{animation-play-state:paused}
+@keyframes auto-spin{to{transform:rotate(360deg)}}
+.board .auto-btn{border-color:var(--board-line);background:var(--board-cell);color:var(--board-dim)}
+.board .auto-btn:hover,.board .auto-btn[aria-expanded="true"],.board .auto-ctl.on .auto-btn{border-color:var(--board-hi);color:var(--board-hi)}
+.auto-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:30;min-width:200px;padding:8px;border-radius:14px;background:var(--card);color:var(--ink);
+  border:1px solid var(--line);box-shadow:var(--shadow-hi);display:flex;flex-direction:column;gap:2px}
+.auto-menu[hidden]{display:none}
+.auto-mh{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:4px 10px 6px}
+.auto-menu button[data-v]{text-align:left;border:0;background:transparent;color:inherit;font:inherit;font-size:14px;padding:8px 10px 8px 30px;border-radius:9px;cursor:pointer;position:relative}
+.auto-menu button[data-v]:hover,.auto-menu button[data-v]:focus-visible{background:var(--bg-2);outline:none}
+.auto-menu button[aria-checked="true"]{color:var(--azure);font-weight:700}
+.auto-menu button[aria-checked="true"]::before{content:"";position:absolute;left:11px;top:50%;width:9px;height:5px;margin-top:-4px;border:solid currentColor;border-width:0 0 2px 2px;transform:rotate(-45deg)}
+.auto-custom{display:flex;align-items:center;gap:6px;margin-top:4px;padding:8px 6px 4px 10px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+.auto-custom.on{color:var(--azure)}
+.auto-custom input{width:64px;padding:5px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-family:var(--mono);font-size:13px;-moz-appearance:textfield}
+.auto-custom input::-webkit-outer-spin-button,.auto-custom input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.auto-custom .auto-ok{margin-left:auto;border:0;border-radius:8px;background:var(--azure);color:var(--on-azure);font:inherit;font-size:12px;font-weight:700;padding:5px 10px;cursor:pointer}
+.pa-swap .pa-topic,.pa-swap .pa-sum,.pa-swap .pa-fact{animation:pa-in .5s ease both}
+.pa-swap .pa-sum{animation-delay:.06s}.pa-swap .pa-fact{animation-delay:.12s}
+@keyframes pa-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (max-width:520px){ .bhead .auto-ctl{margin-left:auto} }
+/* 使用者要求動畫在「減少動態效果」下也照常播放（見 AGENTS.md）：看板翻牌、廣播換則、自動輪換圖示從上面的全域關閉規則排除 */
+@media (prefers-reduced-motion:reduce){
+  .tile.flip span{animation:flap .11s ease-in!important}
+  .pa-swap .pa-topic,.pa-swap .pa-sum,.pa-swap .pa-fact{animation:pa-in .5s ease both!important}
+  .pa-swap .pa-sum{animation-delay:.06s!important}.pa-swap .pa-fact{animation-delay:.12s!important}
+  .auto-ctl.on .auto-ico{animation:auto-spin 1.6s linear infinite!important}
+  .auto-bar i{transition:transform .2s linear!important}
+  .auto-paused .auto-ctl.on .auto-ico{animation-play-state:paused!important}
+}

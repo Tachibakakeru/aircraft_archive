@@ -36,7 +36,6 @@ const store = {
   get(k){ try { return localStorage.getItem(k); } catch (e) { return null; } },
   set(k,v){ try { localStorage.setItem(k,v); } catch (e) {} }
 };
-const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 let lang = I18N.get();
 /* 首頁字串都在 js/i18n.js 的 home.* 命名空間；{name} 形式的變數在這裡代入 */
 const t = (k, vars) => {
@@ -595,8 +594,7 @@ function renderBoard(animate){
       <span class="bgate">${f.gate}</span>
       <span class="bstat ${f.st === "3d" ? "go3d" : f.st}">${esc(t("st." + f.st))}</span>
     </a>`).join("");
-  if (animate && !REDUCED) document.querySelectorAll("#rows .tiles").forEach((el, i) => setTimeout(() => flapIn(el, flights[i].code), i * 70));
-  else if (animate) document.querySelectorAll("#rows .tiles").forEach((el, i) => el.innerHTML = tilesHTML(flights[i].code));
+  if (animate) document.querySelectorAll("#rows .tiles").forEach((el, i) => setTimeout(() => flapIn(el, flights[i].code), i * 70));
 }
 $("#shuffle").addEventListener("click", () => { boardSeed = (boardSeed * 31 + 7) % 2147483647; buildFlights(); renderBoard(true); });
 // 看板時鐘、班次時間、機長問候都跟著 js/skytime.js 選的時區（預設裝置時區）
@@ -622,7 +620,82 @@ function renderPA(){
   $("#paFact").innerHTML = `<b>${esc(t("pa.fact"))}</b>${esc(fact)}`;
   $("#paOpen").href = list === D.topics ? `knowledge.html?topic=${encodeURIComponent(k.id)}` : "knowledge.html";
 }
-$("#paNext").addEventListener("click", () => { paIdx++; renderPA(); });
+$("#paNext").addEventListener("click", () => { paIdx++; swapPA(); });
+
+/* ═══════════════ 自動輪換：今日出發、機長廣播（2026-11） ═══════════════
+   每個區塊各自一個「手動／每 N 秒自動」選單（站內自訂選單，不用原生 select），選擇存在 localStorage
+   （hangar_board_auto、hangar_pa_auto，單位秒，0 = 手動）。自動時區塊頂端有倒數細條；
+   滑鼠停在區塊上、鍵盤焦點在區塊內、選單開著或分頁在背景時暫停，手動按「換一批／換一則」會重新倒數。 */
+const AUTO_PRESETS = [0, 10, 20, 30, 60, 180, 300, 600];
+const autoClosers = [];
+const fmtDur = sec => sec < 60 ? t("auto.sec", { n: sec }) : sec % 60 ? t("auto.minSec", { m: Math.floor(sec / 60), s: sec % 60 }) : t("auto.min", { n: sec / 60 });
+function makeAuto({ host, card, key, run }){
+  let sec = Math.max(0, parseInt(store.get(key), 10) || 0), left = sec, last = performance.now(), hover = false;
+  host.innerHTML = `<button type="button" class="auto-btn" aria-haspopup="menu" aria-expanded="false"><span class="auto-ico" aria-hidden="true"></span><span class="auto-lbl"></span></button>
+    <div class="auto-menu" role="menu" hidden></div>`;
+  const btn = host.querySelector(".auto-btn"), menu = host.querySelector(".auto-menu");
+  const bar = document.createElement("div"); bar.className = "auto-bar"; bar.innerHTML = "<i></i>"; card.prepend(bar);
+  const paint = () => {
+    host.classList.toggle("on", sec > 0); card.classList.toggle("auto-on", sec > 0);
+    host.querySelector(".auto-lbl").textContent = sec ? t("auto.every", { t: fmtDur(sec) }) : t("auto.manual");
+    btn.title = sec ? t("auto.hint") : t("auto.title");
+  };
+  const renderMenu = () => {
+    const custom = !AUTO_PRESETS.includes(sec);
+    menu.innerHTML = `<div class="auto-mh">${esc(t("auto.title"))}</div>` + AUTO_PRESETS.map(v =>
+      `<button type="button" role="menuitemradio" aria-checked="${v === sec}" data-v="${v}">${esc(v ? fmtDur(v) : t("auto.manual"))}</button>`).join("") +
+      `<label class="auto-custom${custom ? " on" : ""}"><span>${esc(t("auto.custom"))}</span><input type="number" min="5" max="3600" step="5" inputmode="numeric" value="${custom ? sec : ""}" placeholder="45"><span>${esc(t("auto.unit"))}</span><button type="button" class="auto-ok">OK</button></label>`;
+  };
+  const set = v => { sec = Math.max(0, Math.min(3600, v | 0)); if (sec && sec < 5) sec = 5; store.set(key, String(sec)); left = sec; paint(); close(); };
+  // 選單預設對齊按鈕右緣；窄螢幕若超出畫面左右邊界就改貼另一邊，避免撐寬頁面
+  const place = () => {
+    menu.style.left = ""; menu.style.right = "";
+    const r = menu.getBoundingClientRect(), vw = document.documentElement.clientWidth;
+    if (r.left < 8) { menu.style.right = "auto"; menu.style.left = `${Math.min(0, 8 - host.getBoundingClientRect().left)}px`; }
+    else if (r.right > vw - 8) { menu.style.right = `${r.right - vw + 8}px`; }
+  };
+  const open = () => { autoClosers.forEach(c => c !== close && c()); renderMenu(); menu.hidden = false; place(); btn.setAttribute("aria-expanded", "true"); (menu.querySelector('[aria-checked="true"]') || menu.querySelector("button")).focus(); };
+  const close = () => { if (menu.hidden) return; menu.hidden = true; btn.setAttribute("aria-expanded", "false"); };
+  autoClosers.push(close);
+  btn.addEventListener("click", e => { e.stopPropagation(); menu.hidden ? open() : (close(), btn.focus()); });
+  menu.addEventListener("click", e => {
+    e.stopPropagation();
+    const b = e.target.closest("button[data-v]"); if (b) { set(+b.dataset.v); btn.focus(); return; }
+    if (e.target.closest(".auto-ok")) { const v = +menu.querySelector("input").value; if (v > 0) { set(v); btn.focus(); } }
+  });
+  menu.addEventListener("keydown", e => {
+    const items = [...menu.querySelectorAll("button[data-v], input")], i = items.indexOf(document.activeElement);
+    if (e.key === "Escape") { e.preventDefault(); close(); btn.focus(); }
+    else if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); items[(i + (e.key === "ArrowDown" ? 1 : -1) + items.length) % items.length].focus(); }
+    else if (e.key === "Enter" && e.target.tagName === "INPUT") { e.preventDefault(); const v = +e.target.value; if (v > 0) { set(v); btn.focus(); } }
+  });
+  document.addEventListener("click", e => { if (!host.contains(e.target)) close(); });
+  card.addEventListener("pointerenter", () => hover = true);
+  card.addEventListener("pointerleave", () => hover = false);
+  setInterval(() => {
+    const now = performance.now(), dt = (now - last) / 1000; last = now;
+    const f = document.activeElement, paused = !sec || hover || !menu.hidden || document.hidden || (card.contains(f) && !host.contains(f));
+    card.classList.toggle("auto-paused", !!sec && paused);
+    if (!sec) { bar.firstChild.style.transform = "scaleX(0)"; return; }
+    if (!paused) left -= dt;
+    if (left <= 0) { left = sec; run(); }
+    bar.firstChild.style.transform = `scaleX(${Math.min(1, Math.max(0, 1 - left / sec))})`;
+  }, 200);
+  paint();
+  document.addEventListener("langchange", () => { paint(); if (!menu.hidden) renderMenu(); });
+  return { reset: () => { left = sec; } };
+}
+// 自動換的時候用隨機種子（手動「換一批」維持原本的種子序列）
+const boardAuto = makeAuto({ host: $("#boardAuto"), card: $(".board"), key: "hangar_board_auto",
+  run: () => { boardSeed = Math.floor(Math.random() * 2147483646) + 1; buildFlights(); renderBoard(true); } });
+const paAuto = makeAuto({ host: $("#paAuto"), card: $(".pa"), key: "hangar_pa_auto",
+  run: () => { const n = (D.topics.length || 1); if (n > 1) paIdx = (paIdx + 1 + Math.floor(Math.random() * (n - 1))) % n; swapPA(); } });
+$("#shuffle").addEventListener("click", () => boardAuto.reset());
+$("#paNext").addEventListener("click", () => paAuto.reset());
+function swapPA(){
+  const pa = $(".pa"); pa.classList.remove("pa-swap"); void pa.offsetWidth;
+  renderPA(); pa.classList.add("pa-swap");
+}
 
 /* ═══════════════ METAR 頁尾 ═══════════════ */
 function renderMetar(){
