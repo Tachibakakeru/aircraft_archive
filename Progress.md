@@ -726,3 +726,4 @@
 - 依使用者錄影修正過場動畫：凝結尾縮短並淡出、布幕改用 transform（主執行緒忙碌時不卡、不留邊條）、抵達時 transitionend 即移除；發現正式站為乾淨網址（/airlines），修正頁面名稱與返回判斷，並直接前往乾淨網址省掉 308 轉址；bfcache 還原一律右往左。詳見 `docs/site-redesign.md` 11.11。仍在工作分支，未合併 `main`。
 - 修正瀏覽器上一頁／下一頁的過場方向：依歷史紀錄位置判斷（Navigation API，舊瀏覽器以 history.state 編號備援並保護 replaceState）；修正 bfcache 還原時布幕直接消失（強制先套用蓋著的樣式）。兩種環境皆測試通過。詳見 `docs/site-redesign.md` 11.12。仍在工作分支，未合併 `main`。
 - 修正首頁 Logo 飛越出現斜線：凝結尾改接在飛機後面、與飛機同角度並淡出，飛完即移除。詳見 `docs/site-redesign.md` 11.13。仍在工作分支，未合併 `main`。
+- 使用者回覆「PUSH」：機型剪影、換頁過場（含方向與殘線修正）、機尾牆、彩蛋、座艙音效，檢查通過後快轉合併到 `main`。
