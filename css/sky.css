@@ -33,7 +33,7 @@
 .flip-clock{--fh:1.36em;--fbg:#0b2a55;--fbg2:#123a72;--fink:#f4f9ff;display:inline-flex;align-items:center;gap:3px;
   font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:26px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
 .flip{position:relative;display:inline-block;width:.86em;height:var(--fh);perspective:240px;border-radius:6px;box-shadow:0 6px 12px -6px rgba(3,20,48,.55)}
-.flip>span{position:absolute;left:0;right:0;height:50%;overflow:hidden;color:var(--fink);backface-visibility:hidden}
+.flip>span{position:absolute;left:0;right:0;height:50%;overflow:hidden;color:var(--fink);-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .flip>span>i{display:block;height:var(--fh);line-height:var(--fh);text-align:center;font-style:normal}
 .flip .ft,.flip .fft{top:0;border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--fbg2),var(--fbg))}
 .flip .fb,.flip .ffb{bottom:0;border-radius:0 0 6px 6px;background:linear-gradient(180deg,var(--fbg),var(--fbg2))}
@@ -51,6 +51,14 @@
 @keyframes flip-colon{50%{opacity:.35}}
 .sky-meta{display:flex;flex-direction:column;gap:2px;line-height:1.25}
 @media (max-width:520px){ .flip-clock{font-size:21px} }
+/* 首頁 home.css 在 reduced-motion 時用 * {animation:none!important} 關掉所有動畫；
+   使用者明確要求翻頁時鐘照常播放，所以這裡用更高權重的 !important 把翻牌動畫加回來。 */
+@media (prefers-reduced-motion:reduce){
+  .flip.flipping .fft{animation:flip-top .28s cubic-bezier(.55,.06,.68,.19) forwards!important}
+  .flip.flipping .ffb{animation:flip-bot .3s .26s cubic-bezier(.22,.61,.36,1) forwards!important}
+  .flip.flipping .ft::after{animation:flip-shade .28s forwards!important}
+  .flip-clock .flip-sep{animation:flip-colon 1s steps(2) infinite!important}
+}
 .site-clock{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:12px;display:inline-flex;gap:6px;align-items:baseline;cursor:pointer;
   color:var(--sky-ink, #fff);background:transparent;border:1px solid var(--glass-line, rgba(255,255,255,.35));border-radius:99px;padding:7px 11px;white-space:nowrap}
 .site-clock b{font-weight:600;font-variant-numeric:tabular-nums}
