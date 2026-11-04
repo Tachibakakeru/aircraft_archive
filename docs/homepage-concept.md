@@ -380,3 +380,7 @@ Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概�
 - **翻頁式時鐘**（`js/skytime.js` `renderFlip()`、`css/sky.css`）：完整時鐘（`[data-skyclock]` 非 compact）改為六張翻牌＋閃爍冒號，旁邊保留星期與 UTC±X／城市。結構只建一次，只有變動的數字翻牌：上半片帶舊數字翻下（0→-90°），下半片帶新數字接著翻下（90°→0），`animationend` 後歸位。依使用者要求，reduced-motion 下仍播放。動畫狀態 class 用 `flipping`（避免與首頁搜尋按鈕的 `.go` 衝突——之前 Logo 飛越也踩過同一個坑）。
 - **版本**：`js/home.js?v=208`、`css/home.css?v=207`、`js/skytime.js?v=3`、`css/sky.css?v=3`、`js/i18n.js?v=214`、Service Worker `hangar-v67`。新增字串 `home.wallet.*`（三語）。
 - **修正（2026-11-04）**：使用者回報預覽站翻頁鐘「只有數字改變、沒有翻頁動畫」。原因是 `css/home.css` 在 `prefers-reduced-motion: reduce` 時有全域 `*{animation:none!important}`，使用者的裝置開著「減少動態效果」。在 `css/sky.css` 的 reduced-motion 區塊用更高權重的 `!important` 把翻牌與冒號動畫加回來，並補上 `-webkit-backface-visibility`（Safari）。Playwright 以 `reducedMotion: 'reduce'` 驗證翻牌中途 `animation-name` 為 `flip-top`。版本：`css/sky.css?v=4`、`hangar-v68`。**注意**：首頁其他 CSS 動畫仍受那條全域規則影響；之後首頁新增想在 reduced-motion 下照常播放的 CSS 動畫，都要用同樣方式排除。
+
+### 12.11 正式發布（2026-11-04）
+
+使用者回覆「PUSH」。以快轉方式把工作分支合併到 `main`（`bcf5f79`），包含站內改版第三輪（機場即時天氣、登機證式比較／收藏蓋章、3D 時段場景，見 `docs/site-redesign.md`）與 12.10（我的登機證夾、翻頁式時鐘及其 reduced-motion 修正）。

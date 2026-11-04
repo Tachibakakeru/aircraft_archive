@@ -15,7 +15,7 @@
 | 衛星圖拖曳與定點縮放 | 8 | 已發布 |
 | 跑道進度條、距離計算動畫、404、天空時間與時區時鐘 | 10 | 已發布 |
 | 機型剪影、換頁過場（含方向與殘線修正）、機尾牆、彩蛋、座艙音效 | 11 | 已發布 |
-| 機場即時天氣 METAR、登機證式收藏／比較、3D 時段場景 | 12 | **工作分支預覽中，待使用者確認後推送 `main`** |
+| 機場即時天氣 METAR、登機證式收藏／比較、3D 時段場景 | 12 | 已推送 `main`（2026-11-04，`bcf5f79`） |
 | 3D「起飛示範」鏡頭 | 9 | 未做 |
 
 首頁本身的設計與後續（隨機航線、航線規劃、飛行速度、套用到首頁）記在 `docs/homepage-concept.md`。
@@ -442,7 +442,7 @@
 
 **發布（2026-11-04）**：使用者回覆「PUSH」。第 11 節（機型剪影、換頁過場、機尾牆、彩蛋、座艙音效）與 11.10–11.13 的修正一起上線。推送前重跑 JS 語法、知識資料、JSON（含 `data/silhouettes.json`）、`git diff --check`、十個子頁、上一頁／下一頁方向、機尾牆與彩蛋測試，皆通過；`origin/main` 無新提交，快轉合併到 `main`。剩下的建議：機場即時天氣（METAR）、登機證式收藏／比較、3D 檢視器時段場景。
 
-## 12. 最後三項建議：機場即時天氣、登機證式收藏／比較、3D 檢視器時段場景（2026-11-04，工作分支預覽中）
+## 12. 最後三項建議：機場即時天氣、登機證式收藏／比較、3D 檢視器時段場景（2026-11-04，已推送 main）
 
 ### 12.1 機場即時天氣 METAR／TAF（對話編號第 6 項）
 - **`functions/api/metar.js`**（Cloudflare Pages Function）：`GET /api/metar?ids=RCTP`（最多 4 個 ICAO），向 NOAA Aviation Weather Center（aviationweather.gov）公開資料 API 取 METAR＋TAF，整理成 `[{icao, raw, taf, time, fltCat}]`。不需金鑰；User-Agent 用一般用途名稱；Cloudflare 快取 5 分鐘；JSON 端點失敗時改用 raw 文字端點。部署後才有作用（本機 `server.py` 沒有 /api，面板會顯示「需要部署到 Cloudflare」）。
