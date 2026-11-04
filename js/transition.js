@@ -3,7 +3,7 @@
    換頁過場動畫（2026-11）：點站內連結時，一架飛機飛過、身後拉出天空布幕蓋住畫面，
    中央顯示「前往 ○○」；新頁面載入時，布幕跟著第二架飛機滑開，露出新頁面。
    - 方向：一般前往是「左 → 右」；回到上一頁是「右 → 左」飛回去，包括
-       ・瀏覽器的返回鍵／手勢（新頁面以 navigation type = back_forward 或 bfcache 還原判斷），
+       ・瀏覽器的上一頁（←）鍵／手勢；瀏覽器的下一頁（→）鍵則是「左 → 右」（依歷史紀錄位置判斷，見 traverseDir），
        ・站內的「← 返回」連結（class="back"、rel="prev"，或目標就是 document.referrer 那一頁）。
    - 飛機與凝結尾走畫面上方約 30% 的高度，不經過中央的目的地文字。
    - 只攔截同網站、同分頁的一般 .html 連結；新分頁、下載、外部連結、#錨點、按住 Ctrl／⌘／Shift／中鍵都不攔截。
@@ -53,12 +53,49 @@
     return ((a && a.textContent) || "").trim().slice(0, 24) || "SKY ARCHIVE";
   }
 
+  /* 瀏覽器的「上一頁／下一頁」方向（2026-11 修正：原本兩者都當成上一頁，按下一頁也右 → 左）
+     判斷方式：比較「這一頁」與「剛離開那一頁」在分頁歷史紀錄中的位置，位置變小＝上一頁（右 → 左），變大＝下一頁（左 → 右）。
+     1. Navigation API（Chrome／Edge 等）：navigation.activation.entry.index 與 .from.index，bfcache 還原時也會更新。
+     2. 其他瀏覽器：每個頁面在 history.state 記一個遞增編號 txIdx（並包裝 replaceState，避免各頁改網址時把它清掉），
+        離開時把自己的編號存進 sessionStorage，抵達時比較。 */
+  const IDX_KEY = "hangar_tx_idx", FROM_KEY = "hangar_tx_from";
+  const hasNav = typeof navigation !== "undefined" && navigation && navigation.currentEntry;
+  const ownIdx = (() => {
+    if (hasNav) return navigation.currentEntry.index;
+    try {
+      let st = history.state || {};
+      if (typeof st.txIdx !== "number"){
+        const n = (+sessionStorage.getItem(IDX_KEY) || 0) + 1;
+        sessionStorage.setItem(IDX_KEY, String(n));
+        st = Object.assign({}, st, { txIdx: n });
+        history.replaceState(st, "");
+      }
+      const keep = history.replaceState.bind(history), idx = st.txIdx;
+      history.replaceState = (state, title, url) => keep(Object.assign({}, state || {}, { txIdx: idx }), title, url);
+      return idx;
+    } catch (e) { return -1; }
+  })();
+  // 回傳 "back"／"forward"／""（無法判斷）
+  function traverseDir(){
+    try {
+      const act = hasNav && navigation.activation;
+      if (act && act.navigationType === "traverse" && act.from && act.entry) return act.entry.index < act.from.index ? "back" : "forward";
+      const from = +sessionStorage.getItem(FROM_KEY);
+      const cur = hasNav ? navigation.currentEntry.index : ownIdx;
+      if (Number.isFinite(from) && from >= 0 && cur >= 0 && from !== cur) return cur < from ? "back" : "forward";
+    } catch (e) {}
+    return "";
+  }
+
   // 抵達：一進頁面就先蓋上（CSS 以 html.tx-arriving::before 畫出布幕）
   let arriving = null;
   const flag = readFlag();
   if (!OFF && navType !== "reload"){
     if (flag && flag.click) arriving = { name: flag.name, back: !!flag.back };
-    else if (flag && navType === "back_forward") arriving = { name: nameFor(location), back: true };
+    else if (navType === "back_forward"){
+      const dir = traverseDir();
+      if (dir || flag) arriving = { name: nameFor(location), back: dir !== "forward" };
+    }
   }
   if (arriving) html.classList.add("tx-arriving");
 
@@ -104,14 +141,25 @@
   });
 
   // 用瀏覽器返回鍵／手勢離開時沒有 click 可攔，只留下標記，讓上一頁抵達時「右 → 左」飛回來
-  window.addEventListener("pagehide", () => { if (!leaving) setFlag({ t: Date.now() }); });
+  window.addEventListener("pagehide", () => {
+    if (!leaving) setFlag({ t: Date.now() });
+    try { sessionStorage.setItem(FROM_KEY, String(hasNav ? navigation.currentEntry.index : ownIdx)); } catch (e) {}
+  });
 
   function arrive(a){
     if (!a) return;
     const el = overlay({ kicker: t(a.back ? "tx.returned" : "tx.arrived", a.back ? "返回" : "抵達"), name: a.name }, a.back);
     el.classList.add("tx-covered");
     html.classList.remove("tx-arriving");
-    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("tx-in")));
+    // 先強制套用「蓋著」的樣式再開始滑走。bfcache 還原時瀏覽器可能把兩次樣式變更合併成一次，
+    // 布幕就會直接消失、看起來像沒有動畫（使用者回報「上一頁常常直接跳轉」）。
+    const curtain = el.querySelector(".tx-curtain");
+    void getComputedStyle(curtain).transform;
+    void curtain.getBoundingClientRect();
+    let started = false;
+    const go = () => { if (started) return; started = true; el.classList.add("tx-in"); };
+    requestAnimationFrame(() => requestAnimationFrame(go));
+    setTimeout(go, 150);   // 頁面剛還原時 rAF 可能暫停，保底
     // 布幕滑完就整個移除（含凝結尾），不留殘線；頁面忙碌時計時器可能延遲，所以兩者都設
     const done = () => el.remove();
     el.querySelector(".tx-curtain").addEventListener("transitionend", e => { if (e.propertyName === "transform") setTimeout(done, 60); }, { once: true });
@@ -126,6 +174,7 @@
     document.querySelectorAll(".tx").forEach(x => x.remove());
     html.classList.remove("tx-arriving");
     readFlag();
-    if (!OFF) arrive({ name: nameFor(location), back: true });   // bfcache 還原只會發生在上一頁／下一頁，一律右 → 左
+    // bfcache 還原只會發生在上一頁／下一頁：依歷史位置決定方向（上一頁右 → 左、下一頁左 → 右）
+    if (!OFF) arrive({ name: nameFor(location), back: traverseDir() !== "forward" });
   });
 })();

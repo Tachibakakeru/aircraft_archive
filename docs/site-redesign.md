@@ -404,3 +404,22 @@
 驗證（深色、1280×760）：首頁→機場頁，每 100 ms 取樣：布幕 0→816→1050→1171→1242→1279→1293 px 滑出，凝結尾透明度在布幕滑完前已從 1 降到 0，之後圖層移除，結束畫面無殘線、無邊條；按返回回到首頁為右往左，同樣乾淨。頁面代號：`/airlines`、`/airlines.html` → airlines，`/`、`/index.html` → index。無 page error。
 
 版本：`js/transition.js?v=4`、`css/transition.css?v=6`、Service Worker `hangar-v63`。
+
+### 11.12 瀏覽器上一頁（←）／下一頁（→）方向修正（2026-11-04）
+
+使用者回報：按瀏覽器左上角的「←」（上一頁）常常直接跳轉沒有動畫，按「→」（下一頁）反而出現右往左的動畫；應該是 ← 右往左飛回去、→ 左往右前進。
+
+原因：
+1. 上一版把所有 `back_forward` 導覽都當成「上一頁」，所以按下一頁也右往左。
+2. 按上一頁時瀏覽器多半從 bfcache 還原頁面（`pageshow.persisted`）。還原當下新增的布幕在「蓋著」樣式還沒被計算前就加上「滑走」class，兩次樣式變更被合併成一次，沒有過渡動畫，布幕直接消失，看起來就是直接跳轉。（測試用的無頭瀏覽器不使用 bfcache，所以先前的測試沒抓到。）
+
+修正（`js/transition.js`）：
+- `traverseDir()`：比較這一頁與剛離開那一頁在分頁歷史紀錄中的位置，位置變小＝上一頁（右往左，「回到 ○○」），變大＝下一頁（左往右，「抵達 ○○」）。
+  - 支援 Navigation API 的瀏覽器（Chrome、Edge 等）用 `navigation.activation.entry.index` 與 `.from.index`，bfcache 還原也會更新；或比較 `navigation.currentEntry.index` 與離開時存進 sessionStorage 的位置。
+  - 其他瀏覽器：每頁在 `history.state.txIdx` 記遞增編號；因為各頁會用 `history.replaceState(null, …)` 改網址（航空公司、機場、比較、對比、編輯器、檢視器），所以包裝 `replaceState`，保留 txIdx。離開時（`pagehide`）存自己的編號，抵達時比較。
+- 抵達動畫開始前強制計算「蓋著」的樣式（`getComputedStyle`＋`getBoundingClientRect`），再於兩個 rAF 後加上「滑走」，並以 150 ms 計時器保底（頁面剛還原時 rAF 可能暫停）。
+- 重新整理仍不播放動畫。
+
+驗證：機隊 → 航空公司 → 小知識後，← 到航空公司「右→左 回到 航空公司」、← 到機隊「右→左 回到 飛行器圖鑑」、→ 到航空公司「左→右 抵達 航空公司」、→ 到小知識「左→右 抵達 小知識」、重新整理無動畫；頁面以 `replaceState(null)` 改網址後方向仍正確。另以移除 Navigation API 的方式模擬 Safari／Firefox，結果相同。十個子頁回歸無 page error。
+
+版本：`js/transition.js?v=6`、Service Worker `hangar-v64`。
