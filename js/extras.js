@@ -133,12 +133,15 @@
       const el = document.createElement("div");
       el.className = "flyby";
       el.setAttribute("aria-hidden", "true");
-      const top = 12 + Math.random() * 40;
-      el.innerHTML = `<div class="flyby-trail" style="top:${top}vh"></div><div class="flyby-plane" style="top:${top}vh">${PLANE}</div>`;
+      // 飛行路線：整條路線（.flyby-path）稍微傾斜，飛機在路線上平移，凝結尾是飛機的子元素，永遠接在機尾
+      const top = 18 + Math.random() * 30;
+      el.innerHTML = `<div class="flyby-path" style="top:${top}vh"><div class="flyby-plane"><div class="flyby-trail"></div>${PLANE}</div></div>`;
       document.body.appendChild(el);
       requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("flyby-on")));
-      setTimeout(() => { el.classList.add("fade"); }, 2300);
-      setTimeout(() => { el.remove(); busy = false; }, 3400);
+      const plane = el.querySelector(".flyby-plane");
+      const finish = () => { if (!el.isConnected) return; el.remove(); busy = false; };
+      plane.addEventListener("transitionend", e => { if (e.propertyName === "transform") finish(); });
+      setTimeout(finish, 3200);   // 保底
     });
   }
 })();

@@ -64,13 +64,13 @@ html.tx-arriving::before{content:"";position:fixed;inset:0;z-index:2147483646;
 .snd-btn{display:inline-grid;place-items:center}
 .snd-btn svg{width:17px;height:17px}
 .site-bar .site-tools .snd-btn{width:34px;padding:0}
-/* Logo 飛越 */
-.flyby{position:fixed;inset:0;z-index:2147483600;pointer-events:none;overflow:hidden;transition:opacity 1s}
-.flyby.fade{opacity:0}
-.flyby-plane{position:absolute;left:0;width:46px;height:46px;margin:-23px 0 0 -23px;transform:translateX(-8vw) translateY(10vh) rotate(-6deg);
+/* Logo 飛越：路線稍微爬升（−6°），飛機沿路線飛過；凝結尾接在機尾、長 35vw，飛到後段淡出，不留線 */
+.flyby{position:fixed;inset:0;z-index:2147483600;pointer-events:none;overflow:hidden}
+.flyby-path{position:absolute;left:0;width:100vw;height:0;transform:rotate(-6deg);transform-origin:0 0}
+.flyby-plane{position:absolute;left:0;top:0;width:46px;height:46px;margin:-23px 0 0 -23px;transform:translateX(-10vw);will-change:transform;
   filter:drop-shadow(0 4px 6px rgba(0,20,60,.4))}
-.flyby-plane svg{width:100%;height:100%;fill:#fff;transform:rotate(90deg)}
-.flyby-trail{position:absolute;left:0;height:3px;width:0;margin-top:-1.5px;transform:translateY(10vh) rotate(-6deg);transform-origin:left center;
-  background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.9));border-radius:2px;box-shadow:0 0 8px rgba(255,255,255,.6)}
-.flyby.flyby-on .flyby-plane{transform:translateX(108vw) translateY(calc(10vh - 12.2vw)) rotate(-6deg);transition:transform 2.2s cubic-bezier(.4,.1,.4,1)}
-.flyby.flyby-on .flyby-trail{width:108vw;transform:translateY(10vh) rotate(-6deg) skewY(0);transition:width 2.2s cubic-bezier(.4,.1,.4,1)}
+.flyby-plane svg{position:relative;width:100%;height:100%;fill:#fff;transform:rotate(90deg)}
+.flyby-trail{position:absolute;top:50%;right:60%;width:35vw;height:2px;margin-top:-1px;border-radius:2px;
+  background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.85));box-shadow:0 0 6px rgba(255,255,255,.5)}
+.flyby.flyby-on .flyby-plane{transform:translateX(150vw);transition:transform 2.4s cubic-bezier(.35,.05,.45,1)}
+.flyby.flyby-on .flyby-trail{opacity:0;transition:opacity .6s 1.5s}
