@@ -16,3 +16,4 @@
 .rm-sub{fill:var(--rm-sub);font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.04em}
 .rm-plane{fill:var(--rm-line);transition:opacity .35s}
 .rm-arrived .rm-plane{opacity:0 !important}   /* 抵達後飛機「降落」消失，露出終點 */
+.rm-plane-img{filter:drop-shadow(0 3px 4px rgba(0,20,60,.45))}

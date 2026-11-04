@@ -105,7 +105,7 @@ const RouteMap = (() => {
           <path class="rm-flown" fill="none"/>
           <g class="rm-apt rm-from"><circle class="rm-ring" r="8"/><circle class="rm-dot" r="6.5"/><text class="rm-code"/><text class="rm-sub"/></g>
           <g class="rm-apt rm-to"><circle class="rm-ring" r="8"/><circle class="rm-dot" r="6.5"/><text class="rm-code"/><text class="rm-sub"/></g>
-          <g class="rm-plane"><path d="${PLANE}" transform="translate(-15 -15) scale(1.25) rotate(90 12 12)"/></g>
+          <g class="rm-plane"><path class="rm-plane-icon" d="${PLANE}" transform="translate(-15 -15) scale(1.25) rotate(90 12 12)"/><image class="rm-plane-img" href="" width="0" height="0" display="none"/></g>
         </g>
       </svg>`;
     const canvas = container.querySelector("canvas"), svg = container.querySelector("svg");
@@ -296,7 +296,20 @@ const RouteMap = (() => {
       loadMask().then(mask => { render(current.a, current.b, mask); setProgress(last[0], last[1]); });
     });
 
-    return { play, show, stop };
+    // 換成指定機型的俯視剪影（assets/silhouettes/*.png，機頭朝上）；src 為空時恢復預設飛機圖示。
+    // size 為圖示邊長（px），呼叫端可依翼展決定，讓 A380 看起來比 A320 大。
+    function setPlane(src, size = 40){
+      const img = plane.querySelector(".rm-plane-img"), icon = plane.querySelector(".rm-plane-icon");
+      if (!src){ img.setAttribute("display", "none"); icon.removeAttribute("display"); return; }
+      img.setAttribute("href", src);
+      img.setAttribute("width", size); img.setAttribute("height", size);
+      img.setAttribute("x", -size / 2); img.setAttribute("y", -size / 2);
+      img.setAttribute("transform", "rotate(90)");   // 剪影機頭朝上，航線方向是 +x
+      img.removeAttribute("display");
+      icon.setAttribute("display", "none");
+    }
+
+    return { play, show, stop, setPlane };
   }
 
   return { create, gcKm, bearing, gcPoints, loadMask };

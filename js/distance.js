@@ -202,7 +202,15 @@ function wirePicker(box, input, onSelect){
    速度設定與首頁共用 localStorage.hangar_route_speed。 */
 const SPEEDS = [ { k:"xslow", sec:8 }, { k:"slow", sec:5 }, { k:"normal", sec:3 }, { k:"fast", sec:1.5 }, { k:"xfast", sec:.75 } ];
 const speedKey = () => { try { const v = localStorage.getItem("hangar_route_speed"); return SPEEDS.some(x => x.k === v) ? v : "normal"; } catch { return "normal"; } };
-let routeMap = null, mapKey = "", mapState = null;
+let routeMap = null, mapKey = "", mapState = null, silhouettes = null;
+// 機型剪影：tools/build_silhouettes.py 產生；沒有 3D 模型的機型對應同家族或同類別的剪影
+async function loadSilhouettes(){
+  if (silhouettes) return silhouettes;
+  try { silhouettes = await (await fetch("data/silhouettes.json?v=1")).json(); } catch { silhouettes = {}; }
+  return silhouettes;
+}
+// 圖示大小依翼展：約 10 m（小飛機）→ 28 px，80 m（A380）→ 56 px
+const planeSize = span => Math.round(Math.max(28, Math.min(56, 22 + (span || 35) * .42)));
 function renderSpeedButtons(){
   const cur = speedKey();
   $("dist-anim-speed").innerHTML = SPEEDS.map(x => `<button type="button" role="radio" aria-checked="${x.k === cur}" data-speed="${x.k}">${I18N.t("home.rp.speed." + x.k)}</button>`).join("");
@@ -224,7 +232,7 @@ async function updateMap(){
   const key = [fromId, toId, aircraftId, speedKey(), I18N.get()].join("|");
   if (key === mapKey) return;
   mapKey = key;
-  const [from, to, speed] = await Promise.all([airportCoords(fromId), airportCoords(toId), aircraftId ? cruiseSpeedKmh(aircraftId) : null]);
+  const [from, to, speed, sil] = await Promise.all([airportCoords(fromId), airportCoords(toId), aircraftId ? cruiseSpeedKmh(aircraftId) : null, loadSilhouettes()]);
   if (key !== mapKey) return;
   if (!from || !to){ wrap.hidden = true; return; }
   const ac = FLEET.find(a => a.id === aircraftId);
@@ -232,6 +240,8 @@ async function updateMap(){
     name: speed && ac ? ac.name : I18N.t("distance.map.avg") };
   wrap.hidden = false;
   if (!routeMap) routeMap = RouteMap.create($("dist-map"), { minSpan: 30 });
+  const sv = aircraftId && sil[aircraftId];
+  routeMap.setPlane(sv ? `assets/silhouettes/${sv.s}.png?v=1` : null, sv ? planeSize(sv.span) : 40);
   renderSpeedButtons();
   playMap();
 }

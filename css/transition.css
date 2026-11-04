@@ -1,0 +1,61 @@
+/* ═══════════════════════════════════════════
+   換頁過場動畫（js/transition.js，2026-11 試作）
+   離開：飛機由左向右飛過，身後的天空布幕跟著展開蓋住畫面（約 0.5 秒）。
+   抵達：布幕蓋著出現，第二架飛機往右飛走，布幕跟著往右收起（約 0.6 秒）。
+   顏色用目前的天空變數，會跟著時段與深淺色變化。
+   ═══════════════════════════════════════════ */
+.tx,html.tx-arriving::before{
+  --tx-1:var(--sky-1,#0f5fd0); --tx-2:var(--sky-2,#2f8cf5); --tx-3:var(--sky-3,#5aa9fb);
+}
+html.tx-arriving::before{content:"";position:fixed;inset:0;z-index:2147483646;
+  background:linear-gradient(160deg,var(--tx-1),var(--tx-2) 60%,var(--tx-3))}
+.tx{position:fixed;inset:0;z-index:2147483647;pointer-events:none;overflow:hidden}
+.tx-curtain{position:absolute;inset:0;background:linear-gradient(160deg,var(--tx-1),var(--tx-2) 60%,var(--tx-3));
+  clip-path:inset(0 100% 0 0);display:grid;place-items:center}
+.tx-label{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;opacity:0;transform:translateY(8px);text-align:center;padding:0 24px}
+.tx-kicker{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+.tx-label b{font-family:"Barlow Condensed","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;font-weight:800;font-size:clamp(30px,5vw,52px);letter-spacing:.02em}
+.tx-plane{position:absolute;left:0;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;transform:translateX(-12vw);
+  filter:drop-shadow(0 6px 10px rgba(0,20,60,.45))}
+.tx-plane svg{width:100%;height:100%;fill:#fff;transform:rotate(90deg)}
+.tx-trail{position:absolute;left:0;top:50%;height:3px;width:0;margin-top:-1.5px;
+  background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.85));border-radius:2px}
+
+/* 離開 */
+.tx.tx-out .tx-curtain{clip-path:inset(0 0 0 0);transition:clip-path .5s cubic-bezier(.6,0,.3,1)}
+.tx.tx-out .tx-plane{transform:translateX(112vw) translateY(-6vh);transition:transform .5s cubic-bezier(.6,0,.3,1)}
+.tx.tx-out .tx-trail{width:100vw;transition:width .5s cubic-bezier(.6,0,.3,1)}
+.tx.tx-out .tx-label{opacity:1;transform:none;transition:opacity .25s .22s,transform .25s .22s}
+
+/* 抵達（先蓋著，再往右收） */
+.tx.tx-covered .tx-curtain{clip-path:inset(0 0 0 0)}
+.tx.tx-covered .tx-label{opacity:1;transform:none}
+.tx.tx-covered .tx-trail{width:0}
+.tx.tx-in .tx-curtain{clip-path:inset(0 0 0 100%);transition:clip-path .6s cubic-bezier(.55,0,.25,1) .05s}
+.tx.tx-in .tx-plane{transform:translateX(112vw) translateY(-10vh) rotate(-8deg);transition:transform .62s cubic-bezier(.55,0,.25,1)}
+.tx.tx-in .tx-label{opacity:0;transition:opacity .2s}
+
+/* ═══════════ 小彩蛋與座艙音效（js/extras.js） ═══════════ */
+/* 航空紀念日橫幅（首頁） */
+.anniv{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:-4px 0 14px;padding:8px 12px 8px 14px;border-radius:14px;
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.38);color:#fff;font-size:13.5px;max-width:40em}
+.anniv-ic{color:#ffd36b}
+.anniv-text{flex:1 1 220px}
+.anniv-go{color:#fff;font-weight:700;text-decoration:none;white-space:nowrap}
+.anniv-go:hover{text-decoration:underline}
+.anniv-x{background:none;border:0;color:inherit;font-size:18px;line-height:1;cursor:pointer;opacity:.8;padding:0 4px}
+.anniv-x:hover{opacity:1}
+/* 音效開關（首頁沿用 .icon-btn、子頁沿用 .site-tool 的外觀） */
+.snd-btn{display:inline-grid;place-items:center}
+.snd-btn svg{width:17px;height:17px}
+.site-bar .site-tools .snd-btn{width:34px;padding:0}
+/* Logo 飛越 */
+.flyby{position:fixed;inset:0;z-index:2147483600;pointer-events:none;overflow:hidden;transition:opacity 1s}
+.flyby.fade{opacity:0}
+.flyby-plane{position:absolute;left:0;width:46px;height:46px;margin:-23px 0 0 -23px;transform:translateX(-8vw) translateY(10vh) rotate(-6deg);
+  filter:drop-shadow(0 4px 6px rgba(0,20,60,.4))}
+.flyby-plane svg{width:100%;height:100%;fill:#fff;transform:rotate(90deg)}
+.flyby-trail{position:absolute;left:0;height:3px;width:0;margin-top:-1.5px;transform:translateY(10vh) rotate(-6deg);transform-origin:left center;
+  background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.9));border-radius:2px;box-shadow:0 0 8px rgba(255,255,255,.6)}
+.flyby.flyby-on .flyby-plane{transform:translateX(108vw) translateY(calc(10vh - 12.2vw)) rotate(-6deg);transition:transform 2.2s cubic-bezier(.4,.1,.4,1)}
+.flyby.flyby-on .flyby-trail{width:108vw;transform:translateY(10vh) rotate(-6deg) skewY(0);transition:width 2.2s cubic-bezier(.4,.1,.4,1)}

@@ -520,6 +520,16 @@ function makeLogoEl(a, big){
   // 2026-11 加速：手指碰到／滑鼠移到地圖按鈕就先下載 Three.js 與地球貼圖
   ["pointerenter", "touchstart", "focus"].forEach(ev => $("al-view-toggle").addEventListener(ev, () => AptGlobe.preload(), { once: true, passive: true }));
   $("al-view-toggle").addEventListener("click", toggleGlobeMode);
+  const tailBtn = $("al-tail-toggle");
+  tailBtn.classList.toggle("active", tailView);
+  tailBtn.setAttribute("aria-pressed", String(tailView));
+  tailBtn.addEventListener("click", () => {
+    tailView = !tailView;
+    try { localStorage.setItem("hangar_al_view", tailView ? "tails" : "list"); } catch {}
+    tailBtn.classList.toggle("active", tailView);
+    tailBtn.setAttribute("aria-pressed", String(tailView));
+    applyAll();
+  });
   $("al-globe-reset").addEventListener("click", () => AptGlobe.resetView());
   $("al-globe-rotate").addEventListener("click", () => {
     const on = AptGlobe.toggleAutoRotate();
@@ -633,6 +643,24 @@ function applyAll(){
   render(list);
 }
 
+/* 機尾塗裝牆（2026-11）：同一份篩選結果改用「垂直尾翼」卡片排成牆；滑過或聚焦時尾翼翻面，
+   背面顯示呼號與主要樞紐。點擊同樣開啟詳情。選擇存在 localStorage.hangar_al_view。 */
+let tailView = (() => { try { return localStorage.getItem("hangar_al_view") === "tails"; } catch { return false; } })();
+const escAttr = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+function tailHTML(a){
+  const name = localAirlineName(a) || a.name;
+  const fav = isFav(a.id);
+  const hub = (a.hubs || [])[0] || "";
+  return `<div class="al-row al-tail" data-id="${a.id}" tabindex="0" role="button" aria-label="${escAttr(a.name)}">
+      <div class="al-fin" style="--fin-c:${logoColor(a.id)}">
+        <div class="al-fin-face al-fin-front"><span class="al-logo-slot"></span></div>
+        <div class="al-fin-face al-fin-back"><span class="al-fin-k">${I18N.t("airlines.callsign")}</span><b>${escAttr(a.callsign || a.icao || "—")}</b><span class="al-fin-hub">${escAttr(hub)}</span></div>
+      </div>
+      <span class="al-tail-code">${escAttr([a.iata, a.icao].filter(Boolean).join(" · "))}</span>
+      <span class="al-tail-name">${escAttr(name)}</span>
+      <button class="apt-row-fav${fav ? " on" : ""}" data-fav-id="${a.id}" aria-pressed="${fav}" title="${I18N.t("fleet.fav")}" aria-label="${I18N.t("fleet.fav")}" data-ico="star"></button>
+    </div>`;
+}
 function render(list){
   const listEl = $("al-list"), emptyEl = $("al-empty"), countEl = $("al-count");
   countEl.innerHTML = `${I18N.t("airlines.count")} <b>${list.length}</b> / ${AIRLINES.length}`;
@@ -642,8 +670,10 @@ function render(list){
     return;
   }
   emptyEl.hidden = true;
+  listEl.classList.toggle("al-tails", tailView);
 
-  listEl.innerHTML = list.map(a => {
+  if (tailView) listEl.innerHTML = list.map(tailHTML).join("");
+  else listEl.innerHTML = list.map(a => {
     const fav = isFav(a.id);
     const cmp = isInCompare(a.id);
     const tierTag = a.tier ? `<span class="al-tier-tag al-tier-${a.tier}">${I18N.t("airlines.tier." + a.tier)}</span>` : "";
@@ -664,7 +694,7 @@ function render(list){
   }).join("");
 
   listEl.querySelectorAll(".al-row").forEach((row, i) => {
-    row.querySelector(".al-logo-slot").replaceWith(makeLogoEl(list[i]));
+    row.querySelector(".al-logo-slot").replaceWith(makeLogoEl(list[i], tailView));
   });
   listEl.querySelectorAll(".apt-row-cmp").forEach(btn =>
     btn.addEventListener("click", e => {
