@@ -260,3 +260,5 @@
 - iPhone 13 模擬（CDP 觸控事件）：雙指張開 z14→z15、單指拖曳移動；頁面無橫向溢出；全程無 page error。
 
 **版本**：`js/airports.js?v=203`、`css/airports.css?v=203`、所有頁面 `css/style.css?v=202`、`js/i18n.js?v=206`、Service Worker `hangar-v58`。
+
+**發布（2026-11-04）**：使用者回覆「PUSH」。推送前重跑 JS 語法、知識資料 82 筆、JSON 解析、`git diff --check`、衛星圖拖曳／縮放測試與十個子頁瀏覽器測試，皆通過；`origin/main` 無新提交，快轉合併到 `main`。
