@@ -319,3 +319,7 @@
 
 ### 10.6 版本
 新增 `js/skytime.js?v=2`、`css/sky.css?v=2`、`js/runway.js?v=2`、`css/routemap.css?v=1`、`404.html`；`css/style.css?v=203`、`js/i18n.js?v=207`、`js/sitebar.js?v=201`、`js/home.js?v=207`、`css/home.css?v=206`、`js/airports.js?v=204`、`css/airports.css?v=203`、`js/distance.js?v=202`、`css/distance.css?v=202`；Service Worker `hangar-v60`。
+
+**發布（2026-11-04）**：使用者回覆「PUSH」。推送前重跑 JS 語法、知識資料、JSON、`git diff --check` 與十個子頁瀏覽器測試，皆通過；`origin/main` 無新提交，快轉合併到 `main`。
+
+> 註：第 9 節表格的編號與對話中給使用者的編號不同。對話編號為：1 跑道進度條、2 距離計算動畫、3 天空依時間、4 航班取消 404、5 機尾塗裝牆、6 機場即時天氣、7 登機證式收藏／比較、8 3D 檢視器時段場景、9 彩蛋、10 座艙音效。使用者說的「1、2、4」依對話編號＝跑道、距離、404（另加做了 3 天空依時間）。
