@@ -5,7 +5,7 @@
    - 天空時段：在 <html> 設 data-sky = dawn（05–07 時）／day（07–17）／dusk（17–19:30）／night，
      CSS（css/style.css、css/home.css）依此換天空漸層，夜間顯示星星。每分鐘檢查一次。
    - 時鐘：頁面上有 [data-skyclock] 的元素會每秒更新「時:分:秒、星期、UTC±X」。
-     [data-skyclock="compact"] 只顯示「時:分:秒 UTC±X」（導覽列用）。
+     [data-skyclock="compact"] 只顯示「時:分:秒 UTC±X」（導覽列用）；兩種都是翻頁式數字。
    - 時區選單：點 [data-tzpicker] 開啟站內自訂選單（可搜尋，依專案規則不用原生下拉選單）。
    - 事件：時區改變時在 document 派發 "tzchange"（detail = 時區名稱），讓頁面其他時鐘一起更新。
    字串使用 js/i18n.js 的 sky.*；未載入 I18N 時退回繁中。
@@ -91,11 +91,7 @@ const SkyTime = (() => {
     if (!els.length) return;
     const p = parts(), time = `${pad(p.h)}:${pad(p.m)}:${pad(p.s)}`, off = fmtOffset(p.offset);
     els.forEach(el => {
-      if (el.dataset.skyclock === "compact"){
-        el.innerHTML = `<b>${time}</b><span class="sky-off">${off}</span>`;
-      } else {
-        renderFlip(el, time, p, off);
-      }
+      renderFlip(el, time, p, off, el.dataset.skyclock === "compact");
     });
   }
 
@@ -119,18 +115,23 @@ const SkyTime = (() => {
     card.children[1].firstChild.textContent = d; card.children[2].firstChild.textContent = d;
     card.classList.remove("flipping");
   }
-  function renderFlip(el, time, p, off){
+  // compact（子頁導覽列、404）：同樣的翻牌但縮小，旁邊只放 UTC±X
+  function renderFlip(el, time, p, off, compact){
     const digits = time.replace(/:/g, "");
     let wrap = el.querySelector(".flip-clock");
     if (!wrap){
-      el.innerHTML = `<span class="flip-clock" aria-hidden="true">${[0, 2, 4].map(i => flipCard(digits[i]) + flipCard(digits[i + 1])).join('<span class="flip-sep">:</span>')}</span><span class="sky-meta"><span class="sky-day"></span><span class="sky-off"></span></span>`;
+      const meta = compact ? `<span class="sky-off"></span>` : `<span class="sky-meta"><span class="sky-day"></span><span class="sky-off"></span></span>`;
+      el.innerHTML = `<span class="flip-clock${compact ? " sm" : ""}" aria-hidden="true">${[0, 2, 4].map(i => flipCard(digits[i]) + flipCard(digits[i + 1])).join('<span class="flip-sep">:</span>')}</span>${meta}`;
       el.addEventListener("animationend", settleFlip);
       wrap = el.querySelector(".flip-clock");
     } else {
       wrap.querySelectorAll(".flip").forEach((c, i) => setFlip(c, digits[i]));
     }
-    el.querySelector(".sky-day").textContent = p.weekday;
-    el.querySelector(".sky-off").textContent = `${off} · ${cityName(tz())}${chosen ? "" : " · " + t("sky.tz.autoShort")}`;
+    if (compact) el.querySelector(".sky-off").textContent = off;
+    else {
+      el.querySelector(".sky-day").textContent = p.weekday;
+      el.querySelector(".sky-off").textContent = `${off} · ${cityName(tz())}${chosen ? "" : " · " + t("sky.tz.autoShort")}`;
+    }
     el.setAttribute("aria-label", `${time} ${p.weekday} ${off}`);
   }
 

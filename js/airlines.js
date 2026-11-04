@@ -306,7 +306,7 @@ function renderAlCmpPickers(){
   if (CMP_LIST.length < 4){
     const add = document.createElement("button");
     add.className = "cmp-add";
-    add.textContent = I18N.t("compare.apt.add");
+    add.textContent = I18N.t("compare.al.add");
     add.addEventListener("click", () => {
       CMP_LIST.push("");
       renderAlCmpPickers();
@@ -320,18 +320,24 @@ function renderAlCmpPickers(){
 
 function renderAlCmpTable(){
   const table = $("al-cmp-table");
-  const ids = CMP_LIST.filter(Boolean);
+  // 只比較資料庫裡還找得到的公司（舊的比較清單可能留著已改名或刪除的 id）
+  const ids = CMP_LIST.filter(id => id && AIRLINES.some(a => a.id === id));
   if (!ids.length){ table.innerHTML = ""; return; }
   const metaOf = {};
   ids.forEach(id => { metaOf[id] = AIRLINES.find(a => a.id === id); });
 
   let html = "<thead><tr><th></th>";
-  ids.forEach(id => {
+  // 2026-11：每一欄的表頭做成一張登機證（與機場比較共用 css/airports.css 的樣式）
+  ids.forEach((id, i) => {
     const m = metaOf[id];
-    html += `<th><div class="craft-head">
-      <h2>${m.name}</h2>
-      <div class="mfr">${[m.icao, m.iata].filter(Boolean).join(" · ") || "—"}</div>
-      <div><button class="remove" data-id="${id}">${I18N.t("compare.remove")}</button></div>
+    const code = m.iata || m.icao || id.toUpperCase();
+    const local = localAirlineName(m);
+    const sub = [m.callsign, I18N.field(m.country)].filter(Boolean).join(" · ");
+    html += `<th><div class="craft-head bp-head">
+      <div class="bp-top"><span class="bp-k">BOARDING PASS · ${I18N.t("bp.pass")} ${i + 1}</span><button class="remove" data-id="${id}">${I18N.t("compare.remove")}</button></div>
+      <b class="bp-code">${escAttr(code)}</b>
+      <h2>${escAttr(m.name)}${local ? ` <small>${escAttr(local)}</small>` : ""}</h2>
+      <div class="bp-foot"><span class="mfr">${[m.icao, m.iata].filter(Boolean).join(" · ") || "—"}</span><span class="bp-sub">${escAttr(sub)}</span><i class="bp-bar" aria-hidden="true"></i></div>
     </div></th>`;
   });
   html += "</tr></thead><tbody>";

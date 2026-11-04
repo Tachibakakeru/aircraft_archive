@@ -445,3 +445,23 @@
 .bp-stub button{position:absolute;top:6px;right:6px;width:18px;height:18px;display:grid;place-items:center;border-radius:50%;color:var(--muted)}
 .bp-stub button:hover{color:var(--warn);background:var(--amber-soft)}
 @media (max-width:640px){ .apt-cmp-chips{max-width:58vw;overflow-x:auto} }
+
+/* ── 比較視窗的登機證表頭（2026-11；機場與航空公司比較共用） ── */
+.cmp-table thead th{vertical-align:top}
+.craft-head.bp-head{position:relative;display:flex;flex-direction:column;gap:4px;min-width:200px;margin:0 10px 6px 0;padding:14px 16px 12px;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--amber) 16%,var(--panel)),var(--panel) 70%);border:1px solid var(--stroke);border-radius:14px;
+  box-shadow:0 14px 26px -18px rgba(0,0,0,.6)}
+.bp-head .bp-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bp-head .bp-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.bp-head .remove{font-size:11px}
+.bp-head .bp-code{font-family:var(--display);font-size:44px;line-height:1;font-weight:700;color:var(--amber);letter-spacing:.04em}
+.bp-head h2{font-size:15px;line-height:1.3;margin:0}
+.bp-head h2 small{font-weight:500;color:var(--muted);font-size:12px}
+.bp-head .bp-foot{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 64px;grid-template-rows:auto auto;column-gap:10px;align-items:center;
+  margin:12px -16px 0;padding:10px 16px 0;border-top:2px dashed var(--stroke)}
+.bp-head .bp-foot::before,.bp-head .bp-foot::after{content:"";position:absolute;top:-8px;width:14px;height:14px;border-radius:50%;background:var(--bg-0);border:1px solid var(--stroke)}
+.bp-head .bp-foot::before{left:-8px}.bp-head .bp-foot::after{right:-8px}
+.bp-head .bp-foot .mfr{grid-column:1;margin:0}
+.bp-head .bp-sub{grid-column:1;font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bp-head .bp-bar{grid-column:2;grid-row:1/3;height:30px;opacity:.75;border-radius:2px;
+  background:repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 4px,currentColor 4px 5px,transparent 5px 8px,currentColor 8px 11px,transparent 11px 12px)}

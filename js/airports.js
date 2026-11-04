@@ -194,12 +194,16 @@ async function renderAptCmpTable(){
   ids.forEach((id, i) => { notesOf[id] = notesArr[i]; });
 
   let html = "<thead><tr><th></th>";
-  ids.forEach(id => {
+  // 2026-11：每一欄的表頭做成一張登機證（樣式在 css/airports.css「比較視窗的登機證表頭」，航空公司頁共用）
+  ids.forEach((id, i) => {
     const m = metaOf[id];
-    html += `<th><div class="craft-head">
-      <h2>${m.name}</h2>
-      <div class="mfr">${[m.icao, m.iata].filter(Boolean).join(" · ") || "—"}</div>
-      <div><button class="remove" data-id="${id}">${I18N.t("compare.remove")}</button></div>
+    const code = m.iata || m.icao || id;
+    const sub = [m.city, countryName(m.country)].filter(Boolean).join(" · ");
+    html += `<th><div class="craft-head bp-head">
+      <div class="bp-top"><span class="bp-k">BOARDING PASS · ${I18N.t("bp.pass")} ${i + 1}</span><button class="remove" data-id="${id}">${I18N.t("compare.remove")}</button></div>
+      <b class="bp-code">${escapeHTML(code)}</b>
+      <h2>${escapeHTML(m.name)}</h2>
+      <div class="bp-foot"><span class="mfr">${[m.icao, m.iata].filter(Boolean).join(" · ") || "—"}</span><span class="bp-sub">${escapeHTML(sub)}</span><i class="bp-bar" aria-hidden="true"></i></div>
     </div></th>`;
   });
   html += "</tr></thead><tbody>";

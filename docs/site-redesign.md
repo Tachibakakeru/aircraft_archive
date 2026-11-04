@@ -466,3 +466,11 @@
 
 ### 12.4 版本
 新增 `functions/api/metar.js`、`js/metar.js?v=1`；`js/airports.js?v=205`、`css/airports.css?v=205`、`js/airlines.js?v=204`、`js/viewer.js?v=201`、`js/extras.js?v=5`、`css/transition.css?v=8`、`css/style.css?v=206`、`js/i18n.js?v=213`；Service Worker `hangar-v66`。
+
+### 12.x 追加：比較視窗登機證表頭、導覽列翻頁時鐘（2026-11-04，工作分支預覽中）
+
+- **起因**：使用者在機場頁按工具列「比較」，看到的是舊表格，以為登機證式比較沒上線。登機證原本只在列表按 ⇄ 後的底部浮動清單（存根）出現。
+- **比較視窗**：`js/airports.js`、`js/airlines.js` 的比較表頭改為 `.craft-head.bp-head` 登機證：`BOARDING PASS · 登機證 N`、大字 IATA（或 ICAO）、名稱（航空公司加本地名）、撕口虛線＋兩側半圓缺口、ICAO · IATA、城市·國家（機場）或呼號·國家（航空公司）、條碼；「移除」按鈕保留 `.remove` class。樣式在 `css/airports.css` 末段（航空公司頁共用）。
+- **導覽列時鐘**：`SkyTime.renderClocks()` 的 compact 版也走 `renderFlip()`，加 `.flip-clock.sm`（14px 翻牌、較亮的牌面色）＋UTC±X；首頁完整版不變。reduced-motion 例外沿用 `css/sky.css`。
+- **修正**：航空公司比較新增按鈕改用 `compare.al.add`；`renderAlCmpTable` 過濾掉資料庫已不存在的 id，避免 `m.name` 錯誤。
+- **版本**：`js/airports.js?v=206`、`js/airlines.js?v=205`、`css/airports.css?v=206`、`js/skytime.js?v=4`、`css/sky.css?v=5`、`js/i18n.js?v=215`、Service Worker `hangar-v69`。
