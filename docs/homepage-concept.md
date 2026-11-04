@@ -368,3 +368,7 @@ Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概�
 **驗證**：規劃裡隨機產生 MXP → SUB → 按套用 → 規劃關閉、首頁航線變 MXP → SUB、標籤「我的航線」、出現「恢復隨機」→ 重新整理後仍是 MXP → SUB → 再開規劃按鈕為「已套用到首頁（停用）」→ 按「恢復隨機」後回到隨機航線、localStorage 清除；無 page error。
 
 版本：`js/home.js?v=206`、`css/home.css?v=205`、`js/i18n.js?v=205`、Service Worker `hangar-v57`。
+
+### 12.9 正式發布（2026-11-04）
+
+使用者回覆「PUSH」。推送前重跑：所有 `js/*.js` 語法檢查、`python tools/check_knowledge.py`（82 筆）、manifest 與資料 JSON（含新的 `landmask.json`、`route_airports.json`）解析、`git diff --check`、本機 HTTP 主要檔案皆 200、「套用到首頁」流程與十個子頁 Playwright 測試無錯誤。`origin/main` 無新提交，以快轉方式把工作分支合併到 `main`（含 12.1–12.8：隨機航線、航線規劃、飛行速度、套用到首頁）。
