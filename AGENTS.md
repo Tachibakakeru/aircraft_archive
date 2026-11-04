@@ -84,6 +84,24 @@
 - `js/auth.js`：編輯鎖。正式站優先用 `/api/verify` 與 Cloudflare 的 `EDITOR_PASSWORD`；本機才退回瀏覽器 SHA-256 雜湊。
 - `js/storage.js`：所有編輯發布均透過 `Storage.save(id, data)`；優先 `/api/gh-save`，再退回使用者瀏覽器內的 GitHub Token，最後下載 JSON。
 - `functions/api/verify.js`、`functions/api/gh-save.js`：Cloudflare Pages Functions。Cloudflare 環境變數需有 `EDITOR_PASSWORD`、`GH_OWNER`、`GH_REPO`、`GH_TOKEN`；`GH_BRANCH` 可選（預設 `main`）。
+- `functions/api/metar.js`：`/api/metar?ids=RCTP`，轉接 aviationweather.gov 的 METAR／TAF，Cloudflare 快取 5 分鐘；不需環境變數。本機 `server.py` 沒有 `/api`，機場天氣會顯示「需部署到 Cloudflare」。
+
+### 2026-11 全站 UI 改版新增的共用模組（設計紀錄：`docs/homepage-concept.md`、`docs/site-redesign.md`）
+
+- `css/style.css`：子頁設計 token 改為亮藍天空／夜航深藍。**`--amber` 是歷史名稱，現在代表主強調色（天空藍）**；收藏用 `--gold`、警示 `--warn`、天空帶 `--sky-1/2/3`、`--sky-ink`、`--glass*`、標題字 `--display`。也定義 `data-ico="名稱"` 線條圖示系統（CSS mask、跟著文字顏色；**不要再用 emoji 當按鈕圖示**）、跑道進度條樣式。字體（Barlow Condensed、IBM Plex Mono 拉丁子集）自帶在 `assets/fonts/`。
+- `css/home.css`＋`js/home.js`：首頁「出境大廳」（不載入 style.css，token 名稱自成一套：`--azure`、`--hero-ink`…）。
+- `js/sitebar.js`（defer）：子頁頂部導覽列，會把頁面的 `#btn-lang`／`#btn-unit`／`#btn-theme` 搬進去；3D 檢視器不插入。
+- `js/skytime.js`＋`css/sky.css`（全站）：依所選時區（`hangar_tz`）設定 `<html data-sky="dawn|day|dusk|night">` 改天空漸層；`[data-skyclock]` 時鐘、`[data-tzpicker]` 站內時區選單；派發 `skychange`、`tzchange`。`sky.css` 必須在 style.css／home.css 之後載入。
+- `js/transition.js`＋`css/transition.css`（全站，放 `<head>`）：換頁過場。前往左→右、上一頁右→左、下一頁左→右（依歷史紀錄位置判斷；會包裝 `history.replaceState` 保留 `txIdx`）。正式站是乾淨網址（`/airlines`，Cloudflare 會把 `*.html` 308 轉址），頁面判斷一律用去掉 `.html` 的檔名。`localStorage.hangar_tx = "off"` 可關閉。
+- `js/extras.js`（defer）：座艙音效（Web Audio、預設關、`hangar_sound`）、首頁航空紀念日橫幅（`?date=MM-DD` 可預覽）、首頁 Logo 飛越、收藏蓋章。
+- `js/routemap.js`＋`css/routemap.css`：點陣世界地圖＋大圓航線動畫元件（首頁隨機航線、航線規劃、距離計算共用），`setPlane()` 可換機型剪影。
+- `js/runway.js`：大檔下載的跑道進度條（機場頁 `airports.json`；壓縮傳輸時用 `expectedBytes` 估算，資料大幅變動時更新 `js/airports.js` 裡的數值）。
+- `js/metar.js`：機場詳情的即時天氣（自行解析 METAR、飛航類別、風向袋、建議跑道）。
+- `404.html`：「航班取消」頁，用 `<base href="/">`（Cloudflare 對任何不存在的路徑回應此檔）。
+- 新資料與產生工具：`data/route_airports.json`（`tools/build_route_airports.py`，1,172 座大型機場）、`data/landmask.json`（`tools/build_landmask.py`，0.5° 陸地遮罩）、`assets/silhouettes/*.png`＋`data/silhouettes.json`（`tools/build_silhouettes.py`，由 3D 模型產生俯視剪影並對應 184 機型）、`assets/earth_daymap_1k/2k.jpg`（地球漸進貼圖）、`assets/icon*.png`（App 圖示）。新增 3D 模型後要重跑 `build_silhouettes.py`。
+- 常用 localStorage 鍵：`hangar_tz`、`hangar_route_speed`、`hangar_route_pin`、`hangar_al_view`、`hangar_vscene`、`hangar_sound`、`hangar_tx`、`hangar_anniv_dismiss`。
+- 動畫與「減少動態效果」：使用者明確要求首頁航線與換頁動畫在系統開啟 reduced-motion 時仍要播放（曾因此被誤認為沒有動畫），不要再以 reduced-motion 直接略過。
+- Cloudflare Pages 部署偶爾卡在 initialize：先 Cancel 卡住的部署再 Retry；只改文件的提交可在訊息加 `[CF-Pages-Skip]` 避免多佔建置名額。
 
 ## 編輯與發布規則
 

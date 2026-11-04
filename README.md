@@ -157,6 +157,10 @@ python3 tools/make_thumb.py models/a380.json assets/thumb_a380.png
 
 ## 授權聲明
 
+- 機場即時天氣：METAR／TAF 來自美國國家海洋暨大氣總署 NOAA 的 Aviation Weather Center（aviationweather.gov）公開資料，經 `functions/api/metar.js` 轉接與 5 分鐘快取；為美國政府公開資料，頁面上標註出處。跑道建議僅依風向估算。
+- 航線動畫的點陣世界地圖：`data/landmask.json` 由 `assets/earth_daymap.jpg`（NASA Blue Marble，公有領域）以 `tools/build_landmask.py` 產生。
+- 機型俯視剪影 `assets/silhouettes/*.png`：由站內各 3D 模型（`models/*.json`）以 `tools/build_silhouettes.py` 投影產生，屬各模型的衍生作品，沿用各模型原本的授權（多數為 GPL-2.0；DC-9 為 CC BY-NC-SA 4.0，見下方各模型說明）。
+
 - 首頁字體 **Barlow Condensed**（The Barlow Project Authors）與 **IBM Plex Mono**（IBM Corp.）採 **SIL Open Font License 1.1**，僅收錄未修改的拉丁子集 woff2 於 `assets/fonts/`，授權全文見同資料夾的 `OFL-*.txt`。
 
 - 3D 模型來源：[Flightradar24/fr24-3d-models](https://github.com/Flightradar24/fr24-3d-models)，
