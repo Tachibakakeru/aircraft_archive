@@ -440,3 +440,28 @@
 版本：`js/extras.js?v=4`、`css/transition.css?v=7`、Service Worker `hangar-v65`。
 
 **發布（2026-11-04）**：使用者回覆「PUSH」。第 11 節（機型剪影、換頁過場、機尾牆、彩蛋、座艙音效）與 11.10–11.13 的修正一起上線。推送前重跑 JS 語法、知識資料、JSON（含 `data/silhouettes.json`）、`git diff --check`、十個子頁、上一頁／下一頁方向、機尾牆與彩蛋測試，皆通過；`origin/main` 無新提交，快轉合併到 `main`。剩下的建議：機場即時天氣（METAR）、登機證式收藏／比較、3D 檢視器時段場景。
+
+## 12. 最後三項建議：機場即時天氣、登機證式收藏／比較、3D 檢視器時段場景（2026-11-04，工作分支預覽中）
+
+### 12.1 機場即時天氣 METAR／TAF（對話編號第 6 項）
+- **`functions/api/metar.js`**（Cloudflare Pages Function）：`GET /api/metar?ids=RCTP`（最多 4 個 ICAO），向 NOAA Aviation Weather Center（aviationweather.gov）公開資料 API 取 METAR＋TAF，整理成 `[{icao, raw, taf, time, fltCat}]`。不需金鑰；User-Agent 用一般用途名稱；Cloudflare 快取 5 分鐘；JSON 端點失敗時改用 raw 文字端點。部署後才有作用（本機 `server.py` 沒有 /api，面板會顯示「需要部署到 Cloudflare」）。
+- **`js/metar.js`**（`AptWeather`）：前端**自己解析 METAR 原文**，不依賴上游 JSON 欄位：風（含陣風、風向變化、VRB、MPS／KMH 換算）、能見度（公尺、SM 分數、CAVOK、9999）、天氣現象（強度＋描述詞＋30 種現象）、雲（FEW／SCT／BKN／OVC／VV 與 CB／TCU、NSC 等）、溫度露點、QNH（Q 或 A 制互換）；以雲幕高與能見度推算飛航類別 VFR／MVFR／IFR／LIFR（上游有提供就用上游的）。
+- **建議跑道**：用機場詳細資料裡每條跑道兩端的真方位（`le.hdg`／`he.hdg`）計算逆風與側風分量，選逆風最大者；風小於 3 kt 或風向不定時顯示「風很小，各跑道方向都可使用」。明示只依風向估算、實際由塔台指派。
+- **畫面**（機場詳情面板「WEATHER／即時天氣」，在基本資料與跑道之間）：風向袋（袋尾指向下風處，每 3 kt 撐起一段、15 kt 全滿）、飛航類別色塊（VFR 綠、MVFR 藍、IFR 紅、LIFR 紫）、觀測時間、建議跑道、六格白話解讀、METAR 原文、可展開的 TAF 原文、資料來源說明。沒有 ICAO 代碼或沒有發布 METAR 的機場會顯示說明。
+- 三語字串 `wx.*`（約 80 個）、`airports.detail.weather`。
+- 驗證（模擬 /api/metar 回應）：RCTP `23015G25KT 200V260 9999 -SHRA FEW012 BKN025CB 24/21 Q1009` → MVFR、建議 23R（逆風 15、側風 0）、輕陣雨、裂雲 2,500 ft 積雨雲；EGLL `08004KT CAVOK 12/06 Q1022` → VFR、建議 09L；KJFK `31009KT 1/2SM FG VV002 08/08 A3001` → LIFR、能見度 805 m、霧、垂直能見度 200 ft、QNH 1016 hPa、建議 31R。風向袋方向正確（西南風指向東北、東風指向西、西北風指向東南）。本機無 Function 時顯示部署說明。**正式資料要部署後才能實測**（沙盒連不到 aviationweather.gov）。
+
+### 12.2 登機證式收藏／比較（對話編號第 7 項）
+- 機場與航空公司的比較清單（畫面底部浮動列）改為疊放的「登機證存根」：每張有「登機證 1／2／3」、大字代碼（IATA 優先）、城市或公司名、左側撕線與缺口，略帶不同角度疊在一起；滑到清單上（或鍵盤聚焦）時展開排平。
+- 收藏蓋章（`js/extras.js` 全站）：按下原本未收藏的星號（機隊卡片、機場／航空公司列表與詳情、機尾牆）時，在按鈕上蓋一個「已收藏 · SKY ARCHIVE」入境章（由大縮小、旋轉 −14°、0.75 秒後淡出）。「只看收藏」篩選不會觸發。
+- 新字串 `bp.pass`、`bp.saved`、`bp.removed`。
+
+### 12.3 3D 檢視器時段場景（對話編號第 8 項）
+- 檢視器工具列新增「場景」按鈕：自動（跟著 `js/skytime.js` 所選時區的時段）→ 清晨 → 正午 → 黃昏 → 夜間，存在 `localStorage.hangar_vscene`。
+- 每個時段改變背景（`body[data-vscene]`；夜間加星星）與三盞燈：半球光顏色與亮度、主光顏色與方向（清晨太陽在東邊低角度、黃昏在西邊）、邊緣光。暗場景時左上標題改白字。
+- **航行燈**：從模型幾何自動找出左右翼尖（機頭 +x、左翼 −z）、機尾與機身頂部：左翼尖紅燈、右翼尖綠燈（常亮）、翼尖與機尾白色閃光燈（每 1.2 秒雙閃）、機身頂部紅色防撞燈（每秒一閃，漸暗）。以加成混合的光暈貼圖呈現，掛在模型群組上，跟著旋轉；夜間全亮、晨昏較淡、白天不顯示。沒有 3D 模型的機型不建立。
+- 「起飛示範」鏡頭未實作（工作量大，可之後再評估）。
+- 新字串 `viewer.scene*`。
+
+### 12.4 版本
+新增 `functions/api/metar.js`、`js/metar.js?v=1`；`js/airports.js?v=205`、`css/airports.css?v=205`、`js/airlines.js?v=204`、`js/viewer.js?v=201`、`js/extras.js?v=5`、`css/transition.css?v=8`、`css/style.css?v=206`、`js/i18n.js?v=213`；Service Worker `hangar-v66`。

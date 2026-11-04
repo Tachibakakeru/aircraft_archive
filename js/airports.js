@@ -87,9 +87,11 @@ function renderCompareTray(){
   const tray = $("apt-cmp-tray");
   tray.hidden = !CMP_LIST.length;
   if (!CMP_LIST.length) return;
-  $("apt-cmp-chips").innerHTML = CMP_LIST.map(id => {
+  // 2026-11：比較清單改為疊放的「登機證存根」（樣式在 css/airports.css「登機證式比較清單」）
+  $("apt-cmp-chips").innerHTML = CMP_LIST.map((id, i) => {
     const a = AIRPORTS.find(x => x.id === id);
-    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="${I18N.t("compare.remove")}" aria-label="${I18N.t("compare.remove")}" data-ico="x"></button></span>`;
+    const code = a ? (a.iata || a.icao || a.id) : id, sub = a ? (a.city || a.name || "") : "";
+    return `<span class="apt-cmp-chip bp-stub"><span class="bp-k">${I18N.t("bp.pass")} ${i + 1}</span><b>${escapeHTML(code)}</b><small>${escapeHTML(sub)}</small><button data-id="${id}" title="${I18N.t("compare.remove")}" aria-label="${I18N.t("compare.remove")}" data-ico="x"></button></span>`;
   }).join("");
   $("apt-cmp-chips").querySelectorAll("button").forEach(b =>
     b.addEventListener("click", () => toggleCompare(b.dataset.id)));
@@ -1289,6 +1291,7 @@ async function openAirport(id){
 
   $("apt-p-info").innerHTML = "";
   $("apt-p-sat").innerHTML = "";
+  $("apt-p-wx").innerHTML = "";
   const rwEl = $("apt-p-runways");
   rwEl.innerHTML = `<div class="apt-empty" style="padding:20px 0">${I18N.t("viewer.loading")}</div>`;
   panel.classList.add("open");
@@ -1323,6 +1326,9 @@ async function openAirport(id){
     ? rws.map(runwayCardHTML).join("")
     : `<div class="apt-empty" style="padding:20px 0">${I18N.t("airports.detail.norunways")}</div>`;
 
+  // 即時天氣（js/metar.js）：用 ICAO 代碼查 METAR；切到別的機場時不再更新
+  if (typeof AptWeather !== "undefined")
+    AptWeather.render($("apt-p-wx"), (a.icao || (/^[A-Z]{4}$/.test(a.id) ? a.id : "")).toUpperCase(), rws, () => panel.dataset.id === id);
   history.replaceState(null, "", `?icao=${encodeURIComponent(id)}`);
   renderHubAirlines(id);
 }

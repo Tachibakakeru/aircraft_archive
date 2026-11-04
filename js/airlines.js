@@ -243,9 +243,11 @@ function renderCompareTray(){
   const tray = $("al-cmp-tray");
   tray.hidden = !CMP_LIST.length;
   if (!CMP_LIST.length) return;
-  $("al-cmp-chips").innerHTML = CMP_LIST.map(id => {
+  // 2026-11：比較清單改為疊放的「登機證存根」
+  $("al-cmp-chips").innerHTML = CMP_LIST.map((id, i) => {
     const a = AIRLINES.find(x => x.id === id);
-    return `<span class="apt-cmp-chip">${a ? (a.icao || a.iata || a.id) : id}<button data-id="${id}" title="${I18N.t("compare.remove")}" aria-label="${I18N.t("compare.remove")}" data-ico="x"></button></span>`;
+    const code = a ? (a.iata || a.icao || a.id) : id, sub = a ? (localAirlineName(a) || a.name) : "";
+    return `<span class="apt-cmp-chip bp-stub"><span class="bp-k">${I18N.t("bp.pass")} ${i + 1}</span><b>${escAttr(code)}</b><small>${escAttr(sub)}</small><button data-id="${id}" title="${I18N.t("compare.remove")}" aria-label="${I18N.t("compare.remove")}" data-ico="x"></button></span>`;
   }).join("");
   $("al-cmp-chips").querySelectorAll("button").forEach(b =>
     b.addEventListener("click", () => toggleCompare(b.dataset.id)));

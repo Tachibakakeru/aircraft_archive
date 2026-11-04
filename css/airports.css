@@ -390,3 +390,58 @@
   .apt-globe-wrap{height:min(60vh,480px)}
   .apt-globe-controls button{padding:6px 9px;font-size:10px}
 }
+
+/* ═══════════ 即時天氣 METAR（js/metar.js，2026-11） ═══════════ */
+.apt-p-wx{margin:4px 0 18px}
+.wx-msg{font-size:13px;color:var(--muted);line-height:1.7;padding:6px 0}
+.wx-card{display:flex;flex-direction:column;gap:12px;background:var(--panel-solid);border:1px solid var(--stroke);border-radius:14px;padding:14px}
+.wx-top{display:flex;gap:14px;align-items:center}
+.wx-sock{width:104px;height:104px;flex:none}
+.wx-ring{fill:color-mix(in srgb,var(--amber) 6%,transparent);stroke:var(--stroke);stroke-width:2}
+.wx-n{fill:var(--muted);font-family:var(--mono);font-size:12px;text-anchor:middle;dominant-baseline:middle}
+.wx-pole{stroke:var(--text);stroke-width:3;stroke-linecap:round}
+.wx-s0{fill:#ff6b35}
+.wx-s1{fill:#f4f6fa;stroke:#ff6b35;stroke-width:.6}
+.wx-hub{fill:var(--text)}
+.wx-summary{display:flex;flex-direction:column;gap:4px;min-width:0}
+.wx-cat{align-self:flex-start;font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.06em;padding:2px 10px;border-radius:8px;color:#fff}
+/* 航空圖表慣用色：VFR 綠、MVFR 藍、IFR 紅、LIFR 紫 */
+.wx-vfr{background:#1f9d55}.wx-mvfr{background:#1a73f0}.wx-ifr{background:#d93025}.wx-lifr{background:#a33ad1}
+.wx-cat-name{font-size:12.5px;color:var(--muted)}
+.wx-time{font-size:12px;color:var(--muted)}
+.wx-rwy{font-size:13px;font-weight:600;color:var(--amber);line-height:1.5}
+.wx-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--stroke);border:1px solid var(--stroke);border-radius:10px;overflow:hidden;margin:0}
+.wx-grid div{background:var(--panel-solid);padding:8px 10px;min-width:0}
+.wx-grid dt{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted)}
+.wx-grid dd{margin:2px 0 0;font-size:13px;line-height:1.5;word-break:break-word}
+.wx-raw{display:flex;flex-direction:column;gap:4px}
+.wx-raw span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted)}
+.wx-raw code,.wx-taf code{font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--text);background:var(--bg-1);border-radius:8px;padding:8px 10px;word-break:break-word;white-space:pre-wrap}
+.wx-taf summary{cursor:pointer;font-size:12.5px;color:var(--amber);font-weight:600}
+.wx-taf code{display:block;margin-top:6px}
+.wx-src{font-size:11px;color:var(--muted);line-height:1.6;margin:0}
+#panel .wx-card .wx-src{font-size:11px;line-height:1.6;color:var(--muted);margin:0}
+.wx-grid div:last-child:nth-child(odd){grid-column:1/-1}
+
+/* ═══════════ 登機證式比較清單與收藏蓋章（2026-11） ═══════════ */
+.apt-cmp-tray{padding:12px 14px 12px 18px;border-radius:16px;gap:14px}
+.apt-cmp-chips{gap:0;flex-wrap:nowrap;max-width:60vw;padding:4px 0 4px 10px}
+/* 每張存根疊在前一張上，滑到清單上時展開 */
+.apt-cmp-chip.bp-stub{position:relative;display:grid;grid-template-columns:auto auto;grid-template-rows:auto auto auto;column-gap:6px;align-items:center;
+  min-width:96px;max-width:150px;margin-left:-26px;padding:8px 26px 8px 14px;border-radius:10px;
+  background:var(--panel-solid);color:var(--text);border:1px solid var(--stroke);box-shadow:0 6px 14px -8px rgba(4,20,50,.5);
+  transform:rotate(var(--bp-r,-3deg));transition:margin .25s, transform .25s}
+.apt-cmp-chip.bp-stub:first-child{margin-left:0}
+.apt-cmp-chip.bp-stub:nth-child(2n){--bp-r:2deg}
+.apt-cmp-chip.bp-stub:nth-child(3n){--bp-r:-1deg}
+.apt-cmp-chips:hover .apt-cmp-chip.bp-stub,.apt-cmp-chips:focus-within .apt-cmp-chip.bp-stub{margin-left:8px;transform:none}
+.apt-cmp-chips:hover .apt-cmp-chip.bp-stub:first-child,.apt-cmp-chips:focus-within .apt-cmp-chip.bp-stub:first-child{margin-left:0}
+/* 撕線：左側虛線＋上下半圓缺口 */
+.apt-cmp-chip.bp-stub::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;border-left:2px dashed var(--stroke)}
+.apt-cmp-chip.bp-stub::after{content:"";position:absolute;left:-7px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--panel);border-right:1px solid var(--stroke)}
+.bp-stub .bp-k{grid-column:1/-1;font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.bp-stub b{grid-column:1/-1;font-family:var(--display);font-size:22px;line-height:1;font-weight:700;color:var(--amber);letter-spacing:.04em}
+.bp-stub small{grid-column:1/-1;font-size:10.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:110px}
+.bp-stub button{position:absolute;top:6px;right:6px;width:18px;height:18px;display:grid;place-items:center;border-radius:50%;color:var(--muted)}
+.bp-stub button:hover{color:var(--warn);background:var(--amber-soft)}
+@media (max-width:640px){ .apt-cmp-chips{max-width:58vw;overflow-x:auto} }

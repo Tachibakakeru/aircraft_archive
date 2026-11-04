@@ -120,6 +120,27 @@
   document.addEventListener("langchange", renderAnniv);
   document.addEventListener("tzchange", renderAnniv);
 
+  /* ── 收藏蓋章（2026-11）：按下收藏星號（原本未收藏）時，在按鈕上蓋一個「已收藏」登機章 ──
+     各頁的收藏按鈕都帶 data-ico="star"（機隊卡片、機場／航空公司列表與詳情、機尾牆）；
+     「只看收藏」篩選是 <label> 裡的文字，不是按鈕，不會觸發。點擊前判斷狀態，因為列表會在點擊後重畫。 */
+  document.addEventListener("click", e => {
+    const b = e.target.closest('button[data-ico="star"], a[data-ico="star"]');
+    if (!b) return;
+    const wasOn = b.classList.contains("on") || b.getAttribute("aria-pressed") === "true";
+    if (wasOn) return;
+    const r = b.getBoundingClientRect();
+    const st = document.createElement("div");
+    st.className = "fav-stamp";
+    st.setAttribute("aria-hidden", "true");
+    st.innerHTML = `<span>${t("bp.saved", "已收藏")}</span><small>SKY ARCHIVE</small>`;
+    st.style.left = (r.left + r.width / 2) + "px";
+    st.style.top = (r.top + r.height / 2) + "px";
+    document.body.appendChild(st);
+    requestAnimationFrame(() => requestAnimationFrame(() => st.classList.add("in")));
+    setTimeout(() => st.classList.add("out"), 750);
+    setTimeout(() => st.remove(), 1250);
+  }, true);
+
   /* ── Logo 飛越（只在首頁） ── */
   const brand = document.querySelector(".top .brand");
   if (brand){

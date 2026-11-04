@@ -74,3 +74,12 @@ html.tx-arriving::before{content:"";position:fixed;inset:0;z-index:2147483646;
   background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.85));box-shadow:0 0 6px rgba(255,255,255,.5)}
 .flyby.flyby-on .flyby-plane{transform:translateX(150vw);transition:transform 2.4s cubic-bezier(.35,.05,.45,1)}
 .flyby.flyby-on .flyby-trail{opacity:0;transition:opacity .6s 1.5s}
+/* 收藏蓋章：像登機證上的入境章，從大縮到定位、略帶旋轉，停一下後淡出 */
+.fav-stamp{position:fixed;z-index:2147483500;pointer-events:none;display:flex;flex-direction:column;align-items:center;gap:1px;
+  padding:5px 10px 4px;border:2px solid #d9480f;border-radius:8px;color:#d9480f;background:rgba(255,255,255,.88);
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.88),inset 0 0 0 3px #d9480f;
+  transform:translate(-50%,-50%) rotate(-14deg) scale(2.2);opacity:0;transition:transform .22s cubic-bezier(.3,1.6,.6,1),opacity .15s}
+.fav-stamp span{font-family:"Barlow Condensed","PingFang TC","Noto Sans TC",sans-serif;font-weight:800;font-size:15px;letter-spacing:.08em;line-height:1}
+.fav-stamp small{font-family:"IBM Plex Mono",monospace;font-size:7px;letter-spacing:.2em}
+.fav-stamp.in{transform:translate(-50%,-50%) rotate(-14deg) scale(1);opacity:1}
+.fav-stamp.out{opacity:0;transform:translate(-50%,-80%) rotate(-14deg) scale(1);transition:opacity .45s,transform .45s}

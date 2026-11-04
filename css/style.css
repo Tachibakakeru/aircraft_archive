@@ -854,3 +854,15 @@ select.ed-entry{padding-right:30px}
 .rwy-fail .rwy-label{color:var(--warn)}
 @media (prefers-reduced-motion:reduce){ .rwy-takeoff .rwy-plane{transition:opacity .2s} }
 [data-ico="tail"]{--ico:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 stroke=%22black%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22%3E%3Cpath d=%22M3 20h18L17 4h-5zM15.5 9.5l1.6 10.5%22/%3E%3C/svg%3E")}
+/* 3D 檢視器時段場景（js/viewer.js，body[data-vscene]；正午沿用主題的 --scene-bg） */
+body.viewer[data-vscene="dawn"]{background:radial-gradient(135% 105% at 50% 70%, #f7c6a8 0%, #8a8fd0 55%, #34407e 100%)}
+body.viewer[data-vscene="dusk"]{background:radial-gradient(135% 105% at 50% 75%, #f39a6c 0%, #7a5aa8 50%, #232a5e 100%)}
+body.viewer[data-vscene="night"]{background:radial-gradient(135% 105% at 50% 40%, #0f2650 0%, #050d22 70%, #02060f 100%)}
+body.viewer[data-vscene="night"]::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.8;
+  background-image:radial-gradient(1.2px 1.2px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 28% 8%,#fff 50%,transparent 51%),
+  radial-gradient(1.4px 1.4px at 46% 22%,#cfe4ff 50%,transparent 51%),radial-gradient(1px 1px at 63% 12%,#fff 50%,transparent 51%),
+  radial-gradient(1.2px 1.2px at 81% 26%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 91% 9%,#cfe4ff 50%,transparent 51%),
+  radial-gradient(1px 1px at 7% 40%,#fff 50%,transparent 51%),radial-gradient(1.3px 1.3px at 70% 38%,#fff 50%,transparent 51%)}
+/* 晨昏與夜間背景較暗，左上標題與右上提示改用白字 */
+body.viewer[data-vscene] .v-header h1,body.viewer[data-vscene] .v-header .sub,body.viewer[data-vscene] .v-header .back,body.viewer[data-vscene] .hint,body.viewer[data-vscene] #credit{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+body.viewer[data-vscene] .v-header .sub,body.viewer[data-vscene] .hint,body.viewer[data-vscene] #credit{opacity:.85}

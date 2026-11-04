@@ -65,7 +65,8 @@ function init(DATA, MODEL){
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 200);
 
-  scene.add(new THREE.HemisphereLight(0xcfe4ff, 0x1a2436, 0.9));
+  const hemi = new THREE.HemisphereLight(0xcfe4ff, 0x1a2436, 0.9);
+  scene.add(hemi);
   const key = new THREE.DirectionalLight(0xfff2df, 0.95);
   key.position.set(6, 9, 5);
   scene.add(key);
@@ -209,6 +210,109 @@ function init(DATA, MODEL){
       if (f) pv.position.set(b.x + f[0] * deployNow, b.y + f[1] * deployNow, b.z + f[2] * deployNow);
     }
   }
+
+  /* ── 時段場景與航行燈（2026-11）──
+     「場景」按鈕依序切換：自動（跟著 js/skytime.js 所選時區的時段）／清晨／正午／黃昏／夜間，存在 localStorage.hangar_vscene。
+     - 每個時段換背景漸層（body[data-vscene]，見 css/style.css）與三盞燈的顏色、亮度、方向（清晨太陽在東邊低角度、黃昏在西邊）。
+     - 航行燈：從模型幾何找出左右翼尖（左 = −z，機頭朝 +x）、機尾與機身頂部，
+       左翼尖紅燈、右翼尖綠燈（常亮）、翼尖與機尾白色閃光燈（每 1.2 秒雙閃）、機身頂部紅色防撞燈（每秒一閃）。
+       夜間全亮、晨昏較淡、白天不顯示。燈掛在 airplane 群組上，會跟著模型旋轉。 */
+  const SCENE_PRESETS = {
+    day:   { hemi: [0xcfe4ff, 0x1a2436, .9],  key: [0xfff2df, .95, [6, 9, 5]],    rim: [0x6fd3ef, .35], lights: 0 },
+    dawn:  { hemi: [0xffd8c4, 0x2a2440, .78], key: [0xffb07a, .95, [8, 3.2, 2]],  rim: [0x8fa8ff, .3],  lights: .55 },
+    dusk:  { hemi: [0xffc09e, 0x2a1f3a, .62], key: [0xff8a4c, .9,  [-8, 2.6, 3]], rim: [0x6a7cff, .35], lights: .75 },
+    night: { hemi: [0x5b74b0, 0x05080f, .4],  key: [0xa9bcff, .3,  [-4, 8, -3]],  rim: [0x3a5cff, .3],  lights: 1 }
+  };
+  const SCENE_MODES = ["auto", "dawn", "day", "dusk", "night"];
+  let sceneMode = (() => { try { const v = localStorage.getItem("hangar_vscene"); return SCENE_MODES.includes(v) ? v : "auto"; } catch { return "auto"; } })();
+  let navLevel = 0;
+  const navLights = [];
+  (function buildNavLights(){
+    let minZ = null, maxZ = null, minX = null, top = null;
+    const v = new THREE.Vector3();
+    airplane.updateMatrixWorld(true);
+    for (const g of Object.values(partGroups)) g.traverse(o => {
+      if (!o.isMesh) return;
+      const pos = o.geometry.attributes.position;
+      for (let i = 0; i < pos.count; i += 3){
+        v.fromBufferAttribute(pos, i).applyMatrix4(o.matrixWorld);
+        if (!minZ || v.z < minZ.z) minZ = v.clone();
+        if (!maxZ || v.z > maxZ.z) maxZ = v.clone();
+        if (!minX || v.x < minX.x) minX = v.clone();
+      }
+    });
+    if (!minZ || !maxZ) return;
+    const span = maxZ.z - minZ.z;
+    // 防撞燈：機身部位（fuselage）中心線上、機翼附近的最高點（不取垂直尾翼）
+    const fus = partGroups.fuselage;
+    if (fus) fus.traverse(o => {
+      if (!o.isMesh) return;
+      const pos = o.geometry.attributes.position;
+      for (let i = 0; i < pos.count; i += 3){
+        v.fromBufferAttribute(pos, i).applyMatrix4(o.matrixWorld);
+        if (Math.abs(v.z) < span * .03 && Math.abs(v.x - (minZ.x + maxZ.x) / 2) < span * .15 && (!top || v.y > top.y)) top = v.clone();
+      }
+    });
+    const c = document.createElement("canvas"); c.width = c.height = 64;
+    const cx = c.getContext("2d"), grd = cx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    grd.addColorStop(0, "rgba(255,255,255,1)"); grd.addColorStop(.25, "rgba(255,255,255,.55)"); grd.addColorStop(1, "rgba(255,255,255,0)");
+    cx.fillStyle = grd; cx.fillRect(0, 0, 64, 64);
+    const glow = new THREE.CanvasTexture(c);
+    const size = Math.max(.35, span * .07);
+    function add(color, p, kind){
+      const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: glow, color, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0 }));
+      sprite.scale.set(size, size, 1);
+      sprite.position.copy(p);
+      sprite.visible = false;
+      airplane.add(sprite);
+      navLights.push({ sprite, kind });
+    }
+    add(0xff2a2a, minZ, "steady");                       // 左翼尖紅燈
+    add(0x2dff6a, maxZ, "steady");                       // 右翼尖綠燈
+    add(0xffffff, minZ.clone().add(new THREE.Vector3(-span * .01, 0, 0)), "strobe");
+    add(0xffffff, maxZ.clone().add(new THREE.Vector3(-span * .01, 0, 0)), "strobe");
+    add(0xffffff, minX, "strobe");                       // 機尾白燈
+    if (top) add(0xff3030, top.clone().add(new THREE.Vector3(0, size * .1, 0)), "beacon");
+  })();
+  function currentPhase(){
+    if (sceneMode !== "auto") return sceneMode;
+    const p = document.documentElement.dataset.sky;
+    return SCENE_PRESETS[p] ? p : "day";
+  }
+  function applyScene(){
+    const ph = currentPhase(), sp = SCENE_PRESETS[ph];
+    hemi.color.setHex(sp.hemi[0]); hemi.groundColor.setHex(sp.hemi[1]); hemi.intensity = sp.hemi[2];
+    key.color.setHex(sp.key[0]); key.intensity = sp.key[1]; key.position.set(...sp.key[2]);
+    rim.color.setHex(sp.rim[0]); rim.intensity = sp.rim[1];
+    navLevel = sp.lights;
+    navLights.forEach(l => { l.sprite.visible = navLevel > 0; });
+    if (ph === "day") document.body.removeAttribute("data-vscene"); else document.body.dataset.vscene = ph;
+    const btn = document.getElementById("btn-scene");
+    if (btn){
+      const name = I18N.t("viewer.scene." + ph);
+      btn.textContent = sceneMode === "auto" ? `${I18N.t("viewer.scene")}：${I18N.t("viewer.scene.auto")}（${name}）` : `${I18N.t("viewer.scene")}：${name}`;
+      btn.title = I18N.t("viewer.scene.hint");
+    }
+  }
+  function updateNavLights(now){
+    if (!navLevel) return;
+    const t = now / 1000;
+    for (const l of navLights){
+      let a = 1;
+      if (l.kind === "strobe"){ const ph = t % 1.2; a = ph < .05 || (ph > .14 && ph < .19) ? 1 : 0; }
+      else if (l.kind === "beacon"){ const ph = t % 1; a = ph < .12 ? 1 : Math.max(0, 1 - (ph - .12) * 6); }
+      l.sprite.material.opacity = a * navLevel * (l.kind === "steady" ? .95 : 1);
+    }
+  }
+  const btnScene = document.getElementById("btn-scene");
+  if (btnScene) btnScene.addEventListener("click", () => {
+    sceneMode = SCENE_MODES[(SCENE_MODES.indexOf(sceneMode) + 1) % SCENE_MODES.length];
+    try { localStorage.setItem("hangar_vscene", sceneMode); } catch {}
+    applyScene();
+  });
+  document.addEventListener("skychange", () => { if (sceneMode === "auto") applyScene(); });
+  document.addEventListener("langchange", applyScene);
+  applyScene();
 
   /* ── 視角控制 ── */
   const target = new THREE.Vector3(0, 1.1, 0);
@@ -846,6 +950,7 @@ function init(DATA, MODEL){
     applyCamera();
     updateCallout();
     updateHotspots();
+    updateNavLights(performance.now());
     renderer.render(scene, camera);
   }
   tick();
