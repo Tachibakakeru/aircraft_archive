@@ -1,7 +1,9 @@
 /* ═══════════════════════════════════════════
-   換頁過場動畫（js/transition.js，2026-11 試作）
-   離開：飛機由左向右飛過，身後的天空布幕跟著展開蓋住畫面（約 0.5 秒）。
-   抵達：布幕蓋著出現，第二架飛機往右飛走，布幕跟著往右收起（約 0.6 秒）。
+   換頁過場動畫（js/transition.js）
+   離開：飛機飛過畫面上方約 28% 的高度，拖著凝結尾；身後的天空布幕跟著展開蓋住畫面（0.9 秒）。
+   抵達：布幕蓋著出現，第二架飛機飛走，布幕跟著收起（1.0 秒）。
+   方向：一般為左 → 右；.tx-rev（回上一頁）為右 → 左。
+   凝結尾是飛機的子元素，所以永遠接在機尾，不會和飛機錯開；飛行高度避開中央的目的地文字。
    顏色用目前的天空變數，會跟著時段與深淺色變化。
    ═══════════════════════════════════════════ */
 .tx,html.tx-arriving::before{
@@ -9,31 +11,41 @@
 }
 html.tx-arriving::before{content:"";position:fixed;inset:0;z-index:2147483646;
   background:linear-gradient(160deg,var(--tx-1),var(--tx-2) 60%,var(--tx-3))}
-.tx{position:fixed;inset:0;z-index:2147483647;pointer-events:none;overflow:hidden}
+.tx{position:fixed;inset:0;z-index:2147483647;pointer-events:none;overflow:hidden;--tx-ease:cubic-bezier(.45,0,.3,1)}
 .tx-curtain{position:absolute;inset:0;background:linear-gradient(160deg,var(--tx-1),var(--tx-2) 60%,var(--tx-3));
   clip-path:inset(0 100% 0 0);display:grid;place-items:center}
 .tx-label{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;opacity:0;transform:translateY(8px);text-align:center;padding:0 24px}
 .tx-kicker{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
 .tx-label b{font-family:"Barlow Condensed","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;font-weight:800;font-size:clamp(30px,5vw,52px);letter-spacing:.02em}
-.tx-plane{position:absolute;left:0;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;transform:translateX(-12vw);
-  filter:drop-shadow(0 6px 10px rgba(0,20,60,.45))}
-.tx-plane svg{width:100%;height:100%;fill:#fff;transform:rotate(90deg)}
-.tx-trail{position:absolute;left:0;top:50%;height:3px;width:0;margin-top:-1.5px;
-  background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.85));border-radius:2px}
+.tx-plane{position:absolute;left:0;top:28%;width:64px;height:64px;margin:-32px 0 0 -32px;transform:translateX(-10vw);
+  filter:drop-shadow(0 6px 10px rgba(0,20,60,.4))}
+.tx-plane svg{position:relative;width:100%;height:100%;fill:#fff;transform:rotate(90deg)}
+/* 凝結尾：從機尾往後延伸，越遠越淡 */
+.tx-trail{position:absolute;top:50%;right:62%;width:130vw;height:2px;margin-top:-1px;border-radius:2px;
+  background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.75))}
 
-/* 離開 */
-.tx.tx-out .tx-curtain{clip-path:inset(0 0 0 0);transition:clip-path .5s cubic-bezier(.6,0,.3,1)}
-.tx.tx-out .tx-plane{transform:translateX(112vw) translateY(-6vh);transition:transform .5s cubic-bezier(.6,0,.3,1)}
-.tx.tx-out .tx-trail{width:100vw;transition:width .5s cubic-bezier(.6,0,.3,1)}
-.tx.tx-out .tx-label{opacity:1;transform:none;transition:opacity .25s .22s,transform .25s .22s}
+/* 離開（左 → 右） */
+.tx.tx-out .tx-curtain{clip-path:inset(0 0 0 0);transition:clip-path .9s var(--tx-ease)}
+.tx.tx-out .tx-plane{transform:translateX(112vw);transition:transform .9s var(--tx-ease)}
+.tx.tx-out .tx-label{opacity:1;transform:none;transition:opacity .35s .4s,transform .35s .4s}
 
 /* 抵達（先蓋著，再往右收） */
 .tx.tx-covered .tx-curtain{clip-path:inset(0 0 0 0)}
 .tx.tx-covered .tx-label{opacity:1;transform:none}
-.tx.tx-covered .tx-trail{width:0}
-.tx.tx-in .tx-curtain{clip-path:inset(0 0 0 100%);transition:clip-path .6s cubic-bezier(.55,0,.25,1) .05s}
-.tx.tx-in .tx-plane{transform:translateX(112vw) translateY(-10vh) rotate(-8deg);transition:transform .62s cubic-bezier(.55,0,.25,1)}
-.tx.tx-in .tx-label{opacity:0;transition:opacity .2s}
+.tx.tx-in .tx-curtain{clip-path:inset(0 0 0 100%);transition:clip-path 1s var(--tx-ease) .05s}
+.tx.tx-in .tx-plane{transform:translateX(112vw);transition:transform 1s var(--tx-ease)}
+.tx.tx-in .tx-label{opacity:0;transition:opacity .3s}
+
+/* 回上一頁（右 → 左）：飛機機頭朝左、凝結尾在右側，布幕由右往左蓋、由右往左收 */
+.tx.tx-rev .tx-curtain{clip-path:inset(0 0 0 100%)}
+.tx.tx-rev .tx-plane{transform:translateX(110vw)}
+.tx.tx-rev .tx-plane svg{transform:rotate(-90deg)}
+.tx.tx-rev .tx-trail{right:auto;left:62%;background:linear-gradient(270deg,rgba(255,255,255,0),rgba(255,255,255,.75))}
+.tx.tx-rev.tx-out .tx-curtain{clip-path:inset(0 0 0 0)}
+.tx.tx-rev.tx-out .tx-plane{transform:translateX(-12vw)}
+.tx.tx-rev.tx-covered .tx-curtain{clip-path:inset(0 0 0 0)}
+.tx.tx-rev.tx-in .tx-curtain{clip-path:inset(0 100% 0 0)}
+.tx.tx-rev.tx-in .tx-plane{transform:translateX(-12vw)}
 
 /* ═══════════ 小彩蛋與座艙音效（js/extras.js） ═══════════ */
 /* 航空紀念日橫幅（首頁） */

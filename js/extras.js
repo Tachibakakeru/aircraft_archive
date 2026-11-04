@@ -16,23 +16,34 @@
   /* ── 座艙音效 ── */
   let ctx = null;
   const soundOn = () => { try { return localStorage.getItem("hangar_sound") === "on"; } catch (e) { return false; } };
-  function chime(){
+  // 「叮－咚」：兩個音都有短起音與自然衰減，最後再由總音量淡出到 0，不會突然斷掉。
+  // within（毫秒）：必須在多久內結束（例如換頁前的離開動畫時間），會把兩個音靠近一點並提早淡出。
+  function chime({ within = 0 } = {}){
     if (!soundOn()) return;
     try {
       ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
       if (ctx.state === "suspended") ctx.resume();
-      const now = ctx.currentTime;
-      [[880, 0], [698.5, .32]].forEach(([f, at]) => {          // A5 → F5，類似客艙廣播前的雙音
-        const o = ctx.createOscillator(), g = ctx.createGain(), o2 = ctx.createOscillator();
+      const now = ctx.currentTime + .02;
+      const total = within ? Math.max(.6, within / 1000 - .05) : 1.9;   // 整段聲音長度（秒）
+      const gap = within ? Math.min(.32, total * .3) : .38;              // 第二聲「咚」的起點
+      const master = ctx.createGain();
+      master.gain.setValueAtTime(1, now);
+      master.gain.setValueAtTime(1, now + total * .55);
+      master.gain.linearRampToValueAtTime(0, now + total);               // 最後 45% 時間淡出到靜音
+      master.connect(ctx.destination);
+      [[880, 0], [698.5, gap]].forEach(([f, at]) => {                    // A5 → F5，類似客艙廣播前的雙音
+        const o = ctx.createOscillator(), o2 = ctx.createOscillator(), g = ctx.createGain(), g2 = ctx.createGain();
         o.type = "sine"; o.frequency.value = f;
-        o2.type = "sine"; o2.frequency.value = f * 2.01;       // 一點泛音，聽起來像金屬鐘
-        const g2 = ctx.createGain(); g2.gain.value = .18;
+        o2.type = "sine"; o2.frequency.value = f * 2.01;                 // 一點泛音，聽起來像金屬鐘
+        g2.gain.value = .16;
         o2.connect(g2).connect(g);
-        o.connect(g).connect(ctx.destination);
-        g.gain.setValueAtTime(0, now + at);
-        g.gain.linearRampToValueAtTime(.22, now + at + .015);
-        g.gain.exponentialRampToValueAtTime(.0008, now + at + 1.1);
-        o.start(now + at); o2.start(now + at); o.stop(now + at + 1.2); o2.stop(now + at + 1.2);
+        o.connect(g).connect(master);
+        const st = now + at, end = now + total;
+        g.gain.setValueAtTime(0, st);
+        g.gain.linearRampToValueAtTime(.2, st + .02);
+        g.gain.exponentialRampToValueAtTime(.02, Math.max(st + .1, end - .05));
+        g.gain.linearRampToValueAtTime(0, end);
+        o.start(st); o2.start(st); o.stop(end + .05); o2.stop(end + .05);
       });
     } catch (e) {}
   }

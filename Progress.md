@@ -722,3 +722,4 @@
 - 新增：`tools/build_silhouettes.py` 由 3D 模型產生 48 張俯視剪影與 184 機型對照（`data/silhouettes.json`），距離計算的飛機改為所選機型剪影、大小依翼展；`js/transition.js` 換頁過場（飛機拉天空布幕）；航空公司「機尾牆」；`js/extras.js` 航空紀念日橫幅、首頁 Logo 飛越、Web Audio 座艙音效（預設關）。詳見 `docs/site-redesign.md` 第 11 節。
 - 修正：飛越動畫 class 與首頁搜尋鈕 `.go` 撞名；機尾翻面軸心。
 - 驗證全部通過、無 page error。推送到工作分支供預覽，**未合併 `main`**。下一輪：METAR、登機證式收藏／比較、3D 時段場景。
+- 依使用者回饋調整過場動畫：飛機改走上方 28% 高度不擋字、速度放慢（0.9／1.0 秒）、回上一頁（返回連結、目標為 referrer、瀏覽器返回鍵）改右往左；叮咚聲改為換頁前淡出到靜音。詳見 `docs/site-redesign.md` 11.10。仍在工作分支，未合併 `main`。
