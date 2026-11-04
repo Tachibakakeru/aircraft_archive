@@ -373,7 +373,7 @@ Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概�
 
 使用者回覆「PUSH」。推送前重跑：所有 `js/*.js` 語法檢查、`python tools/check_knowledge.py`（82 筆）、manifest 與資料 JSON（含新的 `landmask.json`、`route_airports.json`）解析、`git diff --check`、本機 HTTP 主要檔案皆 200、「套用到首頁」流程與十個子頁 Playwright 測試無錯誤。`origin/main` 無新提交，以快轉方式把工作分支合併到 `main`（含 12.1–12.8：隨機航線、航線規劃、飛行速度、套用到首頁）。
 
-### 12.10 我的登機證夾＋翻頁式時鐘（2026-11-04，工作分支預覽中）
+### 12.10 我的登機證夾＋翻頁式時鐘（2026-11-04，已發布）
 
 - **起因**：使用者找不到「登機證式收藏」。它原本只出現在機場／航空公司頁的比較清單（按「⇄」後底部出現登機證存根）與按星號收藏時的「已收藏」蓋章，入口不明顯，而且那一輪還沒推送正式站。
 - **我的登機證夾**（`#walletWrap`，位於登機門區塊之後、最近看過之前）：讀三個收藏鍵 `hangar_favs`（機型）、`hangar_apt_favs`（機場）、`hangar_airline_favs`（航空公司），最新收藏排最前，每筆做成小登機證（左：類別、大代碼、名稱、副資訊；右：虛線撕口存根＋條碼，機型顯示座位數、機場／航空公司顯示 ICAO）。分頁籤「全部／機型／機場／航空公司」附數量；空狀態是虛線登機證並說明「到各頁按星號收藏」。機場名稱用 `ensureCodesPool()` 補 IATA 與城市。其他分頁改收藏時以 `storage` 事件即時更新。三種類別用不同強調色（azure／cyan／indigo）。
@@ -385,7 +385,7 @@ Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概�
 
 使用者回覆「PUSH」。以快轉方式把工作分支合併到 `main`（`bcf5f79`），包含站內改版第三輪（機場即時天氣、登機證式比較／收藏蓋章、3D 時段場景，見 `docs/site-redesign.md`）與 12.10（我的登機證夾、翻頁式時鐘及其 reduced-motion 修正）。
 
-### 12.12 今日出發／機長廣播的自動輪換（2026-11-04，工作分支預覽中）
+### 12.12 今日出發／機長廣播的自動輪換（2026-11-04，已發布）
 
 - **需求**：兩個區塊都能選「自動定時隨機變換」或「手動」，自動時可調整間隔。
 - **控制**（`js/home.js` `makeAuto()`）：在看板標題列（「換一批」右邊）與廣播標題列（音波右邊）各放一顆膠囊按鈕，顯示「手動」或「自動 · 每 N 秒」。點開站內選單：手動、10 秒、20 秒、30 秒、1 分鐘、3 分鐘、5 分鐘、10 分鐘，以及自訂秒數（5–3600 秒，按 OK 或 Enter）。方向鍵移動、Esc 關閉；開一個選單會關掉另一個；窄螢幕會自動貼齊邊界，不撐寬頁面。
@@ -395,9 +395,26 @@ Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概�
 - **reduced-motion**：看板翻牌原本在 reduced-motion 下直接顯示結果，現改為照常播放；`css/home.css` 末段把翻牌、廣播淡入、輪換圖示從全域關閉規則排除（使用者明確要求）。
 - **版本**：`js/home.js?v=209`、`css/home.css?v=208`、`js/i18n.js?v=216`、Service Worker `hangar-v70`。
 
-### 12.13 今日出發翻牌重做＋班次消失修正（2026-11-04，工作分支預覽中）
+### 12.13 今日出發翻牌重做＋班次消失修正（2026-11-04，已發布）
 
 - **錯誤**：開自動（或手動按「換一批」）後「班次」欄整欄消失。舊的翻字效果在字格加 `flip` class，而 12.10 的翻頁時鐘在 `css/sky.css`（全站載入）定義了 `.flip{height:var(--fh)}`、`.flip>span{position:absolute}`；`--fh` 只在時鐘內定義，字格高度失效、文字被絕對定位，整格看不見。**教訓**：全站 CSS 的 class 要加前綴；時鐘卡片已改名 `sk-flip`。
 - **翻牌看板**（`js/home.js` `tileCard`／`flipTile`／`flapTo`／`swapRow`）：每個字格是上下兩半＋兩片翻頁（與時鐘同原理，class 為 `tt/tb/tft/tfb`、`tile-go`）。換批時每格依序翻過 2–6 個隨機字元再停在新字，最後一翻放慢（`.slow`），格與格錯開 45ms、列與列錯開 90ms。時間、目的地、登機門、狀態以 `plate-out`／`plate-in` 整片字牌翻轉後換內容。列元素原地更新，不再整個重建；連續觸發以序號（`_seq`、`_tok`）讓舊的翻牌鏈自動停止。
 - reduced-motion 下照常播放（`css/home.css` 末段排除）。
 - **版本**：`js/home.js?v=210`、`css/home.css?v=209`、`js/skytime.js?v=5`、`css/sky.css?v=6`、Service Worker `hangar-v71`。
+
+### 12.14 正式發布（2026-11-04）
+
+使用者回覆「PUSH」。以快轉方式把工作分支合併到 `main`（`6587cbe..4a20a35`）：12.12 自動輪換、12.13 翻牌看板與班次消失修正，以及全站的比較視窗登機證表頭、導覽列翻頁時鐘（見 `docs/site-redesign.md` 12.x）。推送前重跑 JS 語法檢查、知識條目檢查、JSON 解析與十個頁面的 Playwright 載入測試，皆無錯誤。
+
+**首頁目前的區塊與互動總覽（給接手的 session）**
+
+| 區塊 | 主要互動 | 儲存鍵 |
+|---|---|---|
+| 頂端 | 語言、音效、主題切換；Logo 飛越彩蛋 | `hangar_lang`、`hangar_sound`、`hangar_theme` |
+| 英雄區 | 翻頁時鐘（點開選時區）、搜尋、隨機航線動畫（點開航線規劃、可套用到首頁、飛行速度） | `hangar_tz`、`hangar_route_pin`、`hangar_route_speed` |
+| 登機門 | 四個資料庫入口登機證 | — |
+| 我的登機證夾 | 收藏的機型／機場／航空公司，依類別切換 | `hangar_favs`、`hangar_apt_favs`、`hangar_airline_favs` |
+| 最近看過 | 最近瀏覽機型 | `hangar_recent` |
+| 今日出發 | 翻牌看板；換一批；自動輪換（手動／預設／自訂秒數） | `hangar_board_auto` |
+| 機長廣播 | 知識條目；換一則；自動輪換 | `hangar_pa_auto` |
+| 頁尾 | METAR 風格狀態列、航空紀念日橫幅 | `hangar_anniv_dismiss` |
