@@ -520,7 +520,7 @@ function buildFlights(){
   const pops = POPULAR.filter(p => p.icao !== "RCSS");
   ac(uniq(withModel.length ? withModel : D.fleet, a => a.id)); ap(uniq(pops, p => p.icao)); al(uniq(carriers, a => a.id));
   kn(uniq(D.topics, k => k.id)); ac(uniq(D.fleet, a => a.id)); ap(uniq(pops, p => p.icao));
-  const now = new Date(); let m = Math.ceil((now.getHours()*60 + now.getMinutes() + 6) / 5) * 5;
+  const now = zoneNow(); let m = Math.ceil((now.h*60 + now.m + 6) / 5) * 5;
   out.forEach(f => { f.time = `${String(Math.floor(m/60)%24).padStart(2,"0")}:${String(m%60).padStart(2,"0")}`; f.gate += 1 + Math.floor(r()*24); m += 5 + Math.floor(r()*3)*5; });
   flights = out;
 }
@@ -551,8 +551,11 @@ function renderBoard(animate){
   else if (animate) document.querySelectorAll("#rows .tiles").forEach((el, i) => el.innerHTML = tilesHTML(flights[i].code));
 }
 $("#shuffle").addEventListener("click", () => { boardSeed = (boardSeed * 31 + 7) % 2147483647; buildFlights(); renderBoard(true); });
-function tickClock(){ const d = new Date(); $("#clock").textContent = `${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`; }
+// 看板時鐘、班次時間、機長問候都跟著 js/skytime.js 選的時區（預設裝置時區）
+const zoneNow = () => (typeof SkyTime !== "undefined" ? SkyTime.parts() : (d => ({ h: d.getHours(), m: d.getMinutes() }))(new Date()));
+function tickClock(){ const z = zoneNow(); $("#clock").textContent = `${String(z.h).padStart(2,"0")}:${String(z.m).padStart(2,"0")}`; }
 tickClock(); setInterval(tickClock, 15000);
+document.addEventListener("tzchange", () => { tickClock(); flights = []; renderBoard(false); renderPA(); });
 
 /* ═══════════════ 機長廣播 ═══════════════ */
 let paIdx = -1;
@@ -562,7 +565,7 @@ const PA_FALLBACK = [{id:"cavok", category:"weather", name:{zh:"CAVOK",en:"CAVOK
 function renderPA(){
   const list = D.topics.length ? D.topics : PA_FALLBACK;
   if (paIdx < 0) paIdx = Math.floor(rng(boardSeed + 17)() * list.length);
-  const k = list[paIdx % list.length], h = new Date().getHours();
+  const k = list[paIdx % list.length], h = zoneNow().h;
   $("#paGreet").textContent = [t(h < 11 ? "pa.morning" : h < 18 ? "pa.afternoon" : "pa.evening"), t("pa.lead")].join(lang === "en" ? " " : "");
   $("#paTopic").textContent = field(k.name);
   $("#paSum").textContent = field(k.summary);

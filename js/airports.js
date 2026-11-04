@@ -305,11 +305,13 @@ function escapeHTML(s){
 
 (async () => {
   try {
-    const [aRes, cRes] = await Promise.all([
-      fetch("data/airports.json?v=128"),
+    // 2026-11：約 11 MB 的機場資料改用「跑道進度條」顯示下載進度（js/runway.js），載完起飛
+    const rw = typeof Runway !== "undefined" ? Runway.mount($("apt-loading"), { label: I18N.t("airports.loading.label") }) : null;
+    window.__aptRunway = rw;
+    const [aData, cRes] = await Promise.all([
+      rw ? Runway.fetchJSON("data/airports.json?v=128", rw, { expectedBytes: 10948884 }) : fetch("data/airports.json?v=128").then(r => r.json()),
       fetch("data/countries.json?v=128"),
     ]);
-    const aData = await aRes.json();
     COUNTRIES = await cRes.json();
     AIRPORTS = aData.airports;
     // 合併已發布的自訂機場（airports_custom.json）
@@ -339,13 +341,13 @@ function escapeHTML(s){
     const existingIds = new Set(AIRPORTS.map(a => a.id));
     customs.forEach(c => { if (!existingIds.has(c.id)) AIRPORTS.push(c); });
   } catch {
-    $("apt-loading").hidden = true;
+    if (window.__aptRunway) window.__aptRunway.fail(I18N.t("airports.loaderror")); else $("apt-loading").hidden = true;
     $("apt-list").innerHTML = "";
     $("apt-empty").hidden = false;
     $("apt-empty").textContent = I18N.t("airports.loaderror");
     return;
   }
-  $("apt-loading").hidden = true;
+  if (window.__aptRunway) window.__aptRunway.takeoff(); else $("apt-loading").hidden = true;
   try {
     const res = await fetch("data/city_names.json?v=128");
     if (res.ok) CITY_NAMES = await res.json();

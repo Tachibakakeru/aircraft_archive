@@ -132,6 +132,12 @@ function fmtHours(h){
   I18N.mountSelector($("btn-lang"));
   $("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
   document.addEventListener("langchange", () => { I18N.apply(); recalc(); });
+  $("dist-replay").addEventListener("click", playMap);
+  $("dist-anim-speed").addEventListener("click", e => {
+    const b = e.target.closest("[data-speed]"); if (!b) return;
+    try { localStorage.setItem("hangar_route_speed", b.dataset.speed); } catch {}
+    renderSpeedButtons(); mapKey = ""; updateMap();
+  });
 
   const p = new URLSearchParams(location.search);
   if (p.get("from") && AIRPORTS.some(a => a.id === p.get("from"))){
@@ -191,7 +197,47 @@ function wirePicker(box, input, onSelect){
   input.addEventListener("blur", () => setTimeout(() => { suggest.hidden = true; }, 150));
 }
 
+/* ── 航線動畫（2026-11）：選好兩座機場就在點陣地圖上飛一趟（js/routemap.js，與首頁同一元件）。
+   飛行時間＝距離 ÷ 機型巡航速度（未選機型用平均 830 km/h）× 每小時播放秒數；
+   速度設定與首頁共用 localStorage.hangar_route_speed。 */
+const SPEEDS = [ { k:"xslow", sec:8 }, { k:"slow", sec:5 }, { k:"normal", sec:3 }, { k:"fast", sec:1.5 }, { k:"xfast", sec:.75 } ];
+const speedKey = () => { try { const v = localStorage.getItem("hangar_route_speed"); return SPEEDS.some(x => x.k === v) ? v : "normal"; } catch { return "normal"; } };
+let routeMap = null, mapKey = "", mapState = null;
+function renderSpeedButtons(){
+  const cur = speedKey();
+  $("dist-anim-speed").innerHTML = SPEEDS.map(x => `<button type="button" role="radio" aria-checked="${x.k === cur}" data-speed="${x.k}">${I18N.t("home.rp.speed." + x.k)}</button>`).join("");
+}
+function playMap(){
+  if (!mapState || !routeMap) return;
+  const { from, to, km, kmh, name } = mapState;
+  const hours = km / kmh, sec = SPEEDS.find(x => x.k === speedKey()).sec;
+  const ms = Math.max(3000, Math.min(150000, hours * sec * 1000));
+  $("dist-map-info").textContent = I18N.t("distance.map.info")
+    .replace("{name}", name).replace("{kmh}", Math.round(kmh).toLocaleString()).replace("{h}", fmtHours(hours)).replace("{s}", String(Math.round(ms / 1000)));
+  const apt = p => ({ lat: p.lat, lon: p.lon, code: p.meta.iata || p.meta.icao || p.meta.id, label: p.meta.city || p.meta.name });
+  routeMap.play(apt(from), apt(to), null, { flyMs: ms, holdMs: 600 }).then(done => { if (done) routeMap.show(apt(from), apt(to)); });
+}
+async function updateMap(){
+  const wrap = $("dist-map-wrap");
+  if (!fromId || !toId || fromId === toId || typeof RouteMap === "undefined"){ wrap.hidden = true; mapKey = ""; return; }
+  const aircraftId = $("dist-aircraft").value;
+  const key = [fromId, toId, aircraftId, speedKey(), I18N.get()].join("|");
+  if (key === mapKey) return;
+  mapKey = key;
+  const [from, to, speed] = await Promise.all([airportCoords(fromId), airportCoords(toId), aircraftId ? cruiseSpeedKmh(aircraftId) : null]);
+  if (key !== mapKey) return;
+  if (!from || !to){ wrap.hidden = true; return; }
+  const ac = FLEET.find(a => a.id === aircraftId);
+  mapState = { from, to, km: haversineKm(from.lat, from.lon, to.lat, to.lon), kmh: speed || 830,
+    name: speed && ac ? ac.name : I18N.t("distance.map.avg") };
+  wrap.hidden = false;
+  if (!routeMap) routeMap = RouteMap.create($("dist-map"), { minSpan: 30 });
+  renderSpeedButtons();
+  playMap();
+}
+
 async function recalc(){
+  updateMap();
   const aircraftId = $("dist-aircraft").value;
   const resultEl = $("dist-result"), emptyEl = $("dist-empty");
   if (!fromId || !toId || !aircraftId){

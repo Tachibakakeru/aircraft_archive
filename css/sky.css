@@ -1,0 +1,54 @@
+/* ═══════════════════════════════════════════
+   天空時段與時區時鐘（2026-11，搭配 js/skytime.js）
+   <html data-sky="dawn|day|dusk|night"> 依所選時區的當地時間切換天空漸層；
+   首頁（css/home.css）與子頁（css/style.css）用同名的 --sky-1/2/3，所以一組規則兩邊共用。
+   本檔必須在 style.css／home.css 之後載入。
+   ═══════════════════════════════════════════ */
+/* 淺色主題（也是未指定主題時的預設） */
+:root[data-sky="dawn"]{ --sky-1:#3a5fb4; --sky-2:#7c9fe0; --sky-3:#eeb39f; --cloud:rgba(255,226,214,.7); --stars:0 }
+:root[data-sky="dusk"]{ --sky-1:#1f3d8c; --sky-2:#5b6fc2; --sky-3:#ec9a76; --cloud:rgba(255,205,180,.5); --stars:0 }
+:root[data-sky="night"]{ --sky-1:#030f27; --sky-2:#0a2a5e; --sky-3:#17407c; --cloud:rgba(150,195,255,.08); --stars:1 }
+/* 深色主題：維持夜航深藍，只在晨昏的地平線加一點暖色，白天稍亮 */
+:root[data-theme="dark"][data-sky="day"]{ --sky-1:#06214d; --sky-2:#0f4a96; --sky-3:#0d3366; --stars:0 }
+:root[data-theme="dark"][data-sky="dawn"]{ --sky-1:#04163a; --sky-2:#163f7c; --sky-3:#3d3466; --stars:.4 }
+:root[data-theme="dark"][data-sky="dusk"]{ --sky-1:#04163a; --sky-2:#1c3a78; --sky-3:#4a2e55; --stars:.4 }
+:root[data-theme="dark"][data-sky="night"]{ --sky-1:#020b1d; --sky-2:#0b3470; --sky-3:#0a2550; --stars:1 }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"])[data-sky="day"]{ --sky-1:#06214d; --sky-2:#0f4a96; --sky-3:#0d3366; --stars:0 }
+  :root:not([data-theme="light"])[data-sky="dawn"]{ --sky-1:#04163a; --sky-2:#163f7c; --sky-3:#3d3466; --stars:.4 }
+  :root:not([data-theme="light"])[data-sky="dusk"]{ --sky-1:#04163a; --sky-2:#1c3a78; --sky-3:#4a2e55; --stars:.4 }
+  :root:not([data-theme="light"])[data-sky="night"]{ --sky-1:#020b1d; --sky-2:#0b3470; --sky-3:#0a2550; --stars:1 }
+}
+/* ── 時鐘按鈕 ── */
+.hero-copy .sky-clock{margin-bottom:16px}
+.sky-clock{display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;font:inherit;color:inherit;cursor:pointer;text-align:left;
+  background:var(--glass, rgba(255,255,255,.15));border:1px solid var(--glass-line, rgba(255,255,255,.35));border-radius:14px;padding:8px 14px}
+.sky-clock:hover{background:var(--glass-line, rgba(255,255,255,.3))}
+.sky-clock .sky-time{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:22px;font-weight:600;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.sky-clock .sky-day{font-size:14px;font-weight:600}
+.sky-clock .sky-off{font-size:12.5px;opacity:.85}
+.sky-clock .sky-off::after{content:" ▾";opacity:.8}
+.site-clock{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:12px;display:inline-flex;gap:6px;align-items:baseline;cursor:pointer;
+  color:var(--sky-ink, #fff);background:transparent;border:1px solid var(--glass-line, rgba(255,255,255,.35));border-radius:99px;padding:7px 11px;white-space:nowrap}
+.site-clock b{font-weight:600;font-variant-numeric:tabular-nums}
+.site-clock .sky-off{opacity:.8}
+.site-clock:hover{background:var(--glass, rgba(255,255,255,.15))}
+@media (max-width:600px){ .site-clock{display:none} }
+
+/* ── 時區選單（站內自訂，隱藏原生捲軸） ── */
+.tz-menu{position:fixed;z-index:120;display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:16px;
+  background:var(--panel-solid, var(--card, #fff));color:var(--text, var(--ink, #0b2a55));border:1px solid var(--stroke, var(--line, #cde0f7));
+  box-shadow:0 24px 50px -20px rgba(4,20,50,.55);font-family:var(--sans)}
+.tz-menu[hidden]{display:none}
+.tz-title{font-size:14px}
+.tz-search{font:inherit;font-size:14px;padding:9px 12px;border-radius:10px;border:1px solid var(--stroke, var(--line, #cde0f7));background:var(--bg-1, var(--bg, #f7fbff));color:inherit;width:100%}
+.tz-search:focus{outline:none;border-color:var(--amber, var(--azure, #1a73f0))}
+.tz-list{overflow-y:auto;min-height:0;flex:1;scrollbar-width:none}
+.tz-list::-webkit-scrollbar{display:none}
+.tz-opt{display:grid;grid-template-columns:84px minmax(0,1fr);gap:8px;align-items:center;padding:7px 8px;border-radius:9px;cursor:pointer}
+.tz-opt.active,.tz-opt:hover{background:color-mix(in srgb, var(--amber, var(--azure, #1a73f0)) 12%, transparent)}
+.tz-opt[aria-selected="true"] b::after{content:" ✓";color:var(--amber, var(--azure, #1a73f0))}
+.tz-off{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:var(--amber, var(--azure, #1a73f0));font-weight:600}
+.tz-name b{display:block;font-size:13.5px;font-weight:600}
+.tz-name small{display:block;font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tz-empty{padding:12px;color:var(--muted);font-size:13px}

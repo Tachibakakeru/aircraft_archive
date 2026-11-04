@@ -1,0 +1,18 @@
+/* ═══════════════════════════════════════════
+   航線動畫地圖元件（js/routemap.js）的樣式：首頁、航線規劃、距離計算共用。
+   顏色由容器上的 --sky-ink／--sky-muted／--sky-1 決定（routemap.js 讀取後寫到 --rm-*）。
+   ═══════════════════════════════════════════ */
+.routemap{position:relative;overflow:hidden}
+.routemap canvas,.routemap svg{position:absolute;inset:0;width:100%;height:100%;display:block;transition:opacity .28s}
+.routemap.rm-fading canvas,.routemap.rm-fading svg{opacity:0}
+.rm-track{stroke:var(--rm-line);stroke-opacity:.6;stroke-width:2;stroke-dasharray:4 7;stroke-linecap:round}
+.rm-flown{stroke:var(--rm-line);stroke-width:3;stroke-linecap:round}
+.rm-dot{fill:var(--rm-fill);stroke:var(--rm-line);stroke-width:3}
+.rm-ring{fill:none;stroke:var(--rm-line);stroke-opacity:0;transform-box:fill-box;transform-origin:center}
+.rm-from .rm-ring{stroke-opacity:.5;animation:ping 2.4s ease-out infinite}
+.rm-arrived .rm-to .rm-ring{stroke-opacity:.6;animation:ping 1.6s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.9}to{transform:scale(3.2);opacity:0}}
+.rm-code{fill:var(--rm-label);font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.04em}
+.rm-sub{fill:var(--rm-sub);font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.04em}
+.rm-plane{fill:var(--rm-line);transition:opacity .35s}
+.rm-arrived .rm-plane{opacity:0 !important}   /* 抵達後飛機「降落」消失，露出終點 */

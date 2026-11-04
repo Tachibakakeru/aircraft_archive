@@ -31,11 +31,14 @@
       <a class="site-brand" href="index.html">${LOGO}<span><b>SKY ARCHIVE</b><small></small></span></a>
       <nav class="site-nav" aria-label="SKY ARCHIVE">${LINKS.map(l =>
         `<a href="${l.href}"${l.pages.includes(page) ? ' aria-current="page"' : ""}></a>`).join("")}</nav>
-      <div class="site-tools"></div>
+      <div class="site-tools"><button type="button" class="site-clock" data-skyclock="compact" data-tzpicker></button></div>
     </div>`;
     document.body.prepend(bar);
     document.body.classList.add("has-site-bar");
     label(bar);
+    const clk = bar.querySelector(".site-clock");
+    clk.title = t("sky.tz.change");
+    if (typeof SkyTime !== "undefined") SkyTime.renderClocks();
 
     const tools = bar.querySelector(".site-tools");
     ["btn-lang", "btn-unit", "btn-theme"].forEach(id => {
@@ -47,7 +50,7 @@
       // 原工具列若只剩空白（例如距離計算頁），整列移除，避免留下空卡片
       if (from && from !== tools && !from.children.length && !from.textContent.trim()) from.remove();
     });
-    document.addEventListener("langchange", () => label(bar));
+    document.addEventListener("langchange", () => { label(bar); clk.title = t("sky.tz.change"); });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build);

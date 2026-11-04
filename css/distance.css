@@ -40,3 +40,14 @@
   .dist-swap{align-self:center;padding-bottom:0}
   .dist-stats{gap:20px}
 }
+
+/* 2026-11：航線動畫（js/routemap.js，與首頁同一元件） */
+.dist-map-wrap{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.dist-map{aspect-ratio:16/7;min-height:240px;border-radius:18px;box-shadow:var(--shadow);
+  background:linear-gradient(180deg,var(--sky-1),var(--sky-2) 70%,var(--sky-3))}
+.dist-map-bar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.dist-map-info{flex:1 1 280px;font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.dist-anim-speed{display:flex;gap:3px;padding:3px;border-radius:99px;background:var(--panel-solid);border:1px solid var(--stroke)}
+.dist-anim-speed button{border:0;background:transparent;border-radius:99px;padding:6px 11px;font:inherit;font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap}
+.dist-anim-speed button[aria-checked="true"]{background:var(--amber);color:var(--on-amber)}
+@media (max-width:640px){ .dist-map{aspect-ratio:4/3} .dist-anim-speed{width:100%;justify-content:space-between} }
