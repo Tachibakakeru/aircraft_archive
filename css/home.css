@@ -397,3 +397,32 @@ body.rp-open{overflow:hidden}
   .rp-random{width:48px;padding:0}
   .rp-end b{font-size:32px}
 }
+
+/* ═══════════════ 我的登機證夾（2026-11） ═══════════════ */
+.wallet-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.wallet-tabs button{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:99px;padding:6px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.wallet-tabs button span{font-family:var(--mono);font-size:11px;background:var(--bg-2);color:var(--ink);border-radius:99px;padding:0 7px}
+.wallet-tabs button[aria-selected="true"]{background:var(--azure);border-color:var(--azure);color:var(--on-azure)}
+.wallet-tabs button[aria-selected="true"] span{background:rgba(255,255,255,.25);color:var(--on-azure)}
+.wallet{display:flex;gap:16px;overflow-x:auto;padding:6px 2px 14px;scroll-snap-type:x proximity}
+.wp{--acc:var(--azure);position:relative;flex:none;width:300px;display:grid;grid-template-columns:minmax(0,1fr) 88px;background:var(--card);border-radius:16px;
+  box-shadow:var(--shadow);text-decoration:none;color:var(--ink);overflow:hidden;scroll-snap-align:start;transition:transform .2s,box-shadow .2s}
+.wp[data-k="airports"]{--acc:var(--cyan)}
+.wp[data-k="airlines"]{--acc:var(--indigo)}
+.wp:hover{transform:translateY(-3px) rotate(-.6deg);box-shadow:var(--shadow-hi)}
+.wp::before,.wp::after{content:"";position:absolute;right:88px;width:18px;height:18px;border-radius:50%;background:var(--bg);transform:translateX(50%)}
+.wp::before{top:-9px}.wp::after{bottom:-9px}
+.wp-main{display:flex;flex-direction:column;gap:3px;padding:14px 16px;min-width:0}
+.wp-main .label{font-size:9.5px;color:var(--muted)}
+.wp-main b{font-family:var(--display);font-size:32px;line-height:1.05;font-weight:700;color:var(--acc);letter-spacing:.03em}
+.wp-name{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wp-sub{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wp-stub{border-left:2px dashed var(--line);padding:14px 12px;display:flex;flex-direction:column;justify-content:space-between;gap:6px;background:color-mix(in srgb,var(--acc) 7%,var(--card))}
+.wp-stub .label{font-size:9px;color:var(--muted)}
+.wp-stub b{font-family:var(--display);font-size:17px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wp-stub .barcode{height:26px}
+.wp-empty{width:min(520px,100%);box-shadow:none;border:2px dashed var(--line);background:transparent}
+.wp-empty .wp-main b{font-size:20px;color:var(--ink)}
+.wp-empty .wp-sub{white-space:normal}
+.wp-empty .wp-stub{background:transparent}
+@media (max-width:520px){ .wp{width:260px} }

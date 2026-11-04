@@ -372,3 +372,10 @@ Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概�
 ### 12.9 正式發布（2026-11-04）
 
 使用者回覆「PUSH」。推送前重跑：所有 `js/*.js` 語法檢查、`python tools/check_knowledge.py`（82 筆）、manifest 與資料 JSON（含新的 `landmask.json`、`route_airports.json`）解析、`git diff --check`、本機 HTTP 主要檔案皆 200、「套用到首頁」流程與十個子頁 Playwright 測試無錯誤。`origin/main` 無新提交，以快轉方式把工作分支合併到 `main`（含 12.1–12.8：隨機航線、航線規劃、飛行速度、套用到首頁）。
+
+### 12.10 我的登機證夾＋翻頁式時鐘（2026-11-04，工作分支預覽中）
+
+- **起因**：使用者找不到「登機證式收藏」。它原本只出現在機場／航空公司頁的比較清單（按「⇄」後底部出現登機證存根）與按星號收藏時的「已收藏」蓋章，入口不明顯，而且那一輪還沒推送正式站。
+- **我的登機證夾**（`#walletWrap`，位於登機門區塊之後、最近看過之前）：讀三個收藏鍵 `hangar_favs`（機型）、`hangar_apt_favs`（機場）、`hangar_airline_favs`（航空公司），最新收藏排最前，每筆做成小登機證（左：類別、大代碼、名稱、副資訊；右：虛線撕口存根＋條碼，機型顯示座位數、機場／航空公司顯示 ICAO）。分頁籤「全部／機型／機場／航空公司」附數量；空狀態是虛線登機證並說明「到各頁按星號收藏」。機場名稱用 `ensureCodesPool()` 補 IATA 與城市。其他分頁改收藏時以 `storage` 事件即時更新。三種類別用不同強調色（azure／cyan／indigo）。
+- **翻頁式時鐘**（`js/skytime.js` `renderFlip()`、`css/sky.css`）：完整時鐘（`[data-skyclock]` 非 compact）改為六張翻牌＋閃爍冒號，旁邊保留星期與 UTC±X／城市。結構只建一次，只有變動的數字翻牌：上半片帶舊數字翻下（0→-90°），下半片帶新數字接著翻下（90°→0），`animationend` 後歸位。依使用者要求，reduced-motion 下仍播放。動畫狀態 class 用 `flipping`（避免與首頁搜尋按鈕的 `.go` 衝突——之前 Logo 飛越也踩過同一個坑）。
+- **版本**：`js/home.js?v=208`、`css/home.css?v=207`、`js/skytime.js?v=3`、`css/sky.css?v=3`、`js/i18n.js?v=214`、Service Worker `hangar-v67`。新增字串 `home.wallet.*`（三語）。

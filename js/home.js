@@ -84,7 +84,7 @@ function applyStatic(){
   document.querySelectorAll("#lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
   setPlaceholder();
 }
-function renderAll(){ applyStatic(); renderChips(); renderPasses(); renderRecent(); renderBoard(false); renderPA(); renderMetar(); updateRouteText(); }
+function renderAll(){ applyStatic(); renderChips(); renderPasses(); renderRecent(); renderWallet(); renderBoard(false); renderPA(); renderMetar(); updateRouteText(); }
 
 /* ═══════════════ 登機證 ═══════════════ */
 const GATES = [
@@ -129,6 +129,54 @@ function renderRecent(){
   $("#recentWrap").hidden = !items.length;
   $("#recent").innerHTML = items.map(a => `<a class="rc" href="viewer.html?model=${encodeURIComponent(a.id)}"><img src="${esc(a.thumb)}" alt="" loading="lazy">${esc(a.name)}</a>`).join("");
 }
+
+/* ═══════════════ 我的登機證夾（2026-11） ═══════════════
+   讀各頁的收藏（機型 hangar_favs、機場 hangar_apt_favs、航空公司 hangar_airline_favs），每一筆做成一張小登機證，
+   最新收藏的排在最前面；可依類別切換。其他分頁改了收藏時（storage 事件）即時更新。 */
+const WALLET_KEYS = { fleet: "hangar_favs", airports: "hangar_apt_favs", airlines: "hangar_airline_favs" };
+let walletTab = "all";
+const readFavs = key => { try { const v = JSON.parse(store.get(key) || "[]"); return Array.isArray(v) ? v : []; } catch (e) { return []; } };
+async function walletItems(){
+  const out = [];
+  readFavs(WALLET_KEYS.fleet).slice().reverse().forEach(id => {
+    const a = D.fleet.find(x => x.id === id); if (!a) return;
+    out.push({ k: "fleet", code: a.icao || id.toUpperCase(), name: a.name, sub: `${a.manufacturer} · ${field(a.category)}`, seat: a.seats || "—", href: `viewer.html?model=${encodeURIComponent(id)}` });
+  });
+  const aptIds = readFavs(WALLET_KEYS.airports).slice().reverse();
+  if (aptIds.length) await ensureCodesPool();
+  aptIds.forEach(id => {
+    const a = (codesPool || []).find(x => x.id === id);
+    out.push({ k: "airports", code: a ? aptCode(a) : id, name: a ? a.name : id, sub: a ? [aptCity(a), aptCountry(a)].filter(Boolean).join(" · ") : "", seat: id, href: `airports.html?icao=${encodeURIComponent(id)}` });
+  });
+  readFavs(WALLET_KEYS.airlines).slice().reverse().forEach(id => {
+    const a = D.airlines.find(x => x.id === id); if (!a) return;
+    out.push({ k: "airlines", code: a.iata || a.icao || id.toUpperCase(), name: airlineName(a), sub: [a.callsign, field(a.country)].filter(Boolean).join(" · "), seat: a.icao || "—", href: `airlines.html?id=${encodeURIComponent(id)}` });
+  });
+  return out;
+}
+async function renderWallet(){
+  const all = await walletItems();
+  const counts = { all: all.length, fleet: 0, airports: 0, airlines: 0 };
+  all.forEach(x => counts[x.k]++);
+  $("#walletTabs").innerHTML = ["all", "fleet", "airports", "airlines"].map(k =>
+    `<button type="button" role="tab" aria-selected="${k === walletTab}" data-tab="${k}">${esc(t(k === "all" ? "tab.all" : "kind." + k))}<span>${counts[k]}</span></button>`).join("");
+  const list = walletTab === "all" ? all : all.filter(x => x.k === walletTab);
+  if (!list.length){
+    $("#wallet").innerHTML = `<div class="wp wp-empty"><div class="wp-main"><span class="label">${esc(t("wallet.emptyK"))}</span><b>${esc(t("wallet.empty"))}</b><span class="wp-sub">${esc(t("wallet.how"))}</span></div><div class="wp-stub"><span class="label">GATE</span><b>—</b><div class="barcode" aria-hidden="true"></div></div></div>`;
+    return;
+  }
+  $("#wallet").innerHTML = list.map(x => `<a class="wp" data-k="${x.k}" href="${x.href}">
+      <div class="wp-main">
+        <span class="label">BOARDING PASS · ${esc(t("kind." + x.k))}</span>
+        <b>${esc(x.code)}</b>
+        <span class="wp-name">${esc(x.name)}</span>
+        <span class="wp-sub">${esc(x.sub)}</span>
+      </div>
+      <div class="wp-stub"><span class="label">${esc(t(x.k === "fleet" ? "wallet.seats" : "wallet.icao"))}</span><b>${esc(x.seat)}</b><div class="barcode" aria-hidden="true"></div></div>
+    </a>`).join("");
+}
+$("#walletTabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (!b) return; walletTab = b.dataset.tab; renderWallet(); });
+window.addEventListener("storage", e => { if (Object.values(WALLET_KEYS).includes(e.key)) renderWallet(); });
 
 /* ═══════════════ 熱門航點 chips ═══════════════ */
 const CHIP_KEYS = [["RCTP","airports"],["RJTT","airports"],["A350","fleet"],["EVA","airlines"],["CAVOK","knowledge"],["V1","knowledge"]];

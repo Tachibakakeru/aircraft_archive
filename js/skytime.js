@@ -94,9 +94,44 @@ const SkyTime = (() => {
       if (el.dataset.skyclock === "compact"){
         el.innerHTML = `<b>${time}</b><span class="sky-off">${off}</span>`;
       } else {
-        el.innerHTML = `<b class="sky-time">${time}</b><span class="sky-day">${p.weekday}</span><span class="sky-off">${off} · ${cityName(tz())}${chosen ? "" : " · " + t("sky.tz.autoShort")}</span>`;
+        renderFlip(el, time, p, off);
       }
     });
+  }
+
+  /* 翻頁式時鐘（2026-11）：每個數字是一張翻牌。結構只建一次，之後只翻有變動的數字：
+     上半片顯示舊數字往下翻（0 → -90°），下半片帶著新數字接著翻下來（90° → 0）。
+     使用者要求動畫在 reduced-motion 下也照常播放，所以不用媒體查詢略過。 */
+  const flipCard = d => `<span class="flip" data-v="${d}"><span class="ft"><i>${d}</i></span><span class="fb"><i>${d}</i></span><span class="fft"><i>${d}</i></span><span class="ffb"><i>${d}</i></span></span>`;
+  function setFlip(card, d){
+    const old = card.dataset.v;
+    if (old === d) return;
+    card.dataset.v = d;
+    const [ft, fb, fft, ffb] = card.children;
+    ft.firstChild.textContent = d; fb.firstChild.textContent = old;
+    fft.firstChild.textContent = old; ffb.firstChild.textContent = d;
+    card.classList.remove("flipping"); void card.offsetWidth; card.classList.add("flipping");
+  }
+  function settleFlip(e){
+    const card = e.target.closest(".flip");
+    if (!card || !e.target.classList.contains("ffb")) return;
+    const d = card.dataset.v;
+    card.children[1].firstChild.textContent = d; card.children[2].firstChild.textContent = d;
+    card.classList.remove("flipping");
+  }
+  function renderFlip(el, time, p, off){
+    const digits = time.replace(/:/g, "");
+    let wrap = el.querySelector(".flip-clock");
+    if (!wrap){
+      el.innerHTML = `<span class="flip-clock" aria-hidden="true">${[0, 2, 4].map(i => flipCard(digits[i]) + flipCard(digits[i + 1])).join('<span class="flip-sep">:</span>')}</span><span class="sky-meta"><span class="sky-day"></span><span class="sky-off"></span></span>`;
+      el.addEventListener("animationend", settleFlip);
+      wrap = el.querySelector(".flip-clock");
+    } else {
+      wrap.querySelectorAll(".flip").forEach((c, i) => setFlip(c, digits[i]));
+    }
+    el.querySelector(".sky-day").textContent = p.weekday;
+    el.querySelector(".sky-off").textContent = `${off} · ${cityName(tz())}${chosen ? "" : " · " + t("sky.tz.autoShort")}`;
+    el.setAttribute("aria-label", `${time} ${p.weekday} ${off}`);
   }
 
   // 時區選單（站內自訂，可搜尋，↑↓ Enter Esc）
