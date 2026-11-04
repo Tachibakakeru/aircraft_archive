@@ -123,11 +123,20 @@
 .sat-lb-toolbar button:hover{border-color:var(--amber);color:var(--amber)}
 #sat-lightbox-zoom{min-width:28px;text-align:center;color:var(--muted)}
 #sat-lightbox-grid{
-  width:min(80vh,80vw);aspect-ratio:1;
-  border-radius:10px;overflow:hidden;border:1px solid var(--stroke);
+  position:relative;width:min(78vh,92vw);aspect-ratio:1;
+  border-radius:12px;overflow:hidden;border:1px solid var(--stroke);
   animation:sat-pulse 1.6s ease-in-out infinite;
+  touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;
 }
-#sat-lightbox-grid img,#sat-lightbox-grid canvas{width:100%;height:100%;min-width:0;min-height:0;display:block;object-fit:cover}
+#sat-lightbox-grid.dragging{cursor:grabbing}
+#sat-lightbox-grid:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+/* 實際畫面比方框大（四周各多 1 塊圖磚），位置與大小由 js/airports.js 的 satRender() 設定 */
+#sat-lightbox-grid .sat-lb-canvas{position:absolute;display:block;max-width:none;transform-origin:center;will-change:transform;pointer-events:none}
+/* 中心準星：標示縮放中心／機場位置 */
+#sat-lightbox-grid::after{content:"";position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.85);box-shadow:0 0 0 1px rgba(0,0,0,.35);pointer-events:none}
+.sat-lb-toolbar button:disabled{opacity:.4;cursor:default}
+.sat-lb-hint{font-size:12px;color:var(--text);opacity:.85;text-align:center}
 
 /* ── 機場詳情面板（沿用 #panel 樣式） ── */
 .apt-badges{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}

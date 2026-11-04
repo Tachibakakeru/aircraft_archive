@@ -228,3 +228,35 @@
 - 版本：所有頁面 `css/style.css?v=201`、`js/i18n.js?v=201`；`js/airports.js`／`js/airlines.js` `v=202`、`css/airports.css` `v=202`；`js/auth.js`、`js/knowledge.js`、`js/versus.js`、`js/editor.js` `v=201`；Service Worker `hangar-v53`。
 - 掃描所有 HTML／JS／CSS，除上述保留符號外已無 emoji。
 - 截圖確認：機隊（淺色／深色）、機場、航空公司工具列，機場與航空公司詳情面板頂端按鈕，3D 檢視器頂部，編輯器頂部，圖示都正確顯示、大小一致；所有 JS 語法檢查通過、無 page error。
+
+## 8. 機場衛星圖放大檢視：拖曳移動與定點縮放（2026-11-04）
+
+**使用者回報**：手機上衛星圖已不再錯位，但放大檢視只能以機場為中心縮放，無法移動畫面、自己選要放大的位置。
+
+**做法**（`js/airports.js` 的 `satRender()`／`satPreview()`／`satCommit()`／`wireSatGestures()`）：
+- 仍維持「整張 canvas」，**不回到多張 `<img>` 用 CSS 拼貼**（手機錯位的根源）。
+- 畫面顯示 5 塊圖磚寬，實際畫 7 塊（四周各多 1 塊），拖曳時邊緣不會馬上露白。
+- 手勢進行中只對目前這張 canvas 套 CSS `transform`（平移、縮放），即時跟手；放開後把「畫面正中央對應的地點」換算成新的中心點與最接近的整數縮放級別（z2～z19），重畫一張新 canvas。
+- 新 canvas 先把舊影像依座標縮放畫上當佔位，圖磚到了再逐塊蓋上，所以切換時不會閃白或跳動；圖磚仍由 CDN 與 Service Worker 快取。
+- `buildSatCanvas()` 新增 `before(ctx, left, top)` 參數（下載圖磚前先畫佔位）並回傳 canvas 左上角的全球像素座標，供下一張換算位置。
+
+**操作**：
+| 動作 | 結果 |
+|---|---|
+| 滑鼠拖曳／單指拖曳 | 移動畫面 |
+| 滾輪 | 以游標位置為中心放大／縮小一級 |
+| 雙指捏合 | 以兩指中點為中心縮放（放開時取最接近的整數級別），捏合時也可同時移動 |
+| 雙擊（滑鼠）／輕點兩下（觸控） | 在該位置放大一級（Shift＋雙擊縮小） |
+| 工具列 －／＋ | 以畫面中心縮放；到 z2／z19 時按鈕停用 |
+| 新增「回到機場」按鈕（準星圖示） | 以目前縮放級別重新置中到機場 |
+| 鍵盤（方框聚焦時） | 方向鍵移動四分之一畫面、＋／－ 縮放、Esc 關閉 |
+
+- 方框中央有白色準星，標示縮放中心；方框下方加一行操作提示（三語：`airports.sat.lbHint`、`airports.sat.lbAria`、`airports.sat.zoomIn/zoomOut/recenter`）。
+- 方框設 `touch-action:none`，手機上拖曳不會捲動整頁；放大檢視的方框改為 `min(78vh, 92vw)`，手機上更大。
+- 新增圖示 `data-ico="target"`（`css/style.css`）。
+
+**驗證**（Playwright＋帶 z/y/x 編號的測試圖磚，逐格核對座標）：
+- 桌機：拖曳 (−200, −150) px 後中心從 13/3506/6854 移到 13/3507/6856（≈1.45、1.09 塊圖磚，符合 138 px／塊）；在左上四分之一處滾輪放大後，游標下的位置維持不動、級別 z13→z14；雙擊放大 z15；－ 鈕回 z14；「回到機場」重新置中到 RCTP；方向鍵與 ＋ 鍵有效。
+- iPhone 13 模擬（CDP 觸控事件）：雙指張開 z14→z15、單指拖曳移動；頁面無橫向溢出；全程無 page error。
+
+**版本**：`js/airports.js?v=203`、`css/airports.css?v=203`、所有頁面 `css/style.css?v=202`、`js/i18n.js?v=206`、Service Worker `hangar-v58`。

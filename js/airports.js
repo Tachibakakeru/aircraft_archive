@@ -442,8 +442,10 @@ function escapeHTML(s){
     if (sat) openSatLightbox(parseFloat(sat.dataset.lat), parseFloat(sat.dataset.lon), parseInt(sat.dataset.zoom, 10));
   });
   $("sat-lb-close").addEventListener("click", e => { e.stopPropagation(); closeSatLightbox(); });
-  $("sat-lb-in").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.min(19, satState.zoom + 1); renderSatLightbox(); });
-  $("sat-lb-out").addEventListener("click", e => { e.stopPropagation(); satState.zoom = Math.max(2, satState.zoom - 1); renderSatLightbox(); });
+  $("sat-lb-in").addEventListener("click", e => { e.stopPropagation(); satZoomAt({ x: 0, y: 0 }, 1); });
+  $("sat-lb-out").addEventListener("click", e => { e.stopPropagation(); satZoomAt({ x: 0, y: 0 }, -1); });
+  $("sat-lb-home").addEventListener("click", e => { e.stopPropagation(); satRecenter(); });
+  wireSatGestures();
   $("sat-lightbox").addEventListener("click", e => { e.stopPropagation(); if (e.target.id === "sat-lightbox") closeSatLightbox(); });
 
   // 機場資料編輯
@@ -900,7 +902,7 @@ function loadTileImage(url){
 }
 // 以 (lat, lon) 為中心、寬 tilesAcross 塊圖磚，拼成一張 canvas；圖磚一到就畫上（漸進顯示）。
 // 回傳 { canvas, done }，done 在全部圖磚處理完後 resolve 成功與否。
-function buildSatCanvas(lat, lon, z, tilesAcross){
+function buildSatCanvas(lat, lon, z, tilesAcross, before){
   const n = 2 ** z, T = SAT_TILE, size = tilesAcross * T;
   const latR = Math.max(-85.0511, Math.min(85.0511, lat)) * Math.PI / 180;
   const gx = (lon + 180) / 360 * n * T;                                                    // 全球像素座標
@@ -909,6 +911,7 @@ function buildSatCanvas(lat, lon, z, tilesAcross){
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = size;
   const ctx = canvas.getContext("2d");
+  if (before) before(ctx, left, top);   // 例如：先把上一張影像縮放後畫上當佔位，圖磚到了再蓋過去
   const jobs = [];
   for (let ty = Math.floor(top / T); ty <= Math.floor((top + size - 1) / T); ty++){
     if (ty < 0 || ty >= n) continue;
@@ -920,7 +923,7 @@ function buildSatCanvas(lat, lon, z, tilesAcross){
         .catch(() => false));
     }
   }
-  return { canvas, done: Promise.all(jobs).then(r => r.every(Boolean)) };
+  return { canvas, left, top, done: Promise.all(jobs).then(r => r.every(Boolean)) };
 }
 // 把衛星圖放進容器：先放 canvas 漸進顯示；有圖磚失敗就換成 export 單張影像。
 // isCurrent() 回傳 false 代表使用者已切到別的機場／縮放，不再更新畫面。
@@ -956,22 +959,167 @@ function renderSatellite(container, lat, lon, type){
   mountSat(box, lat, lon, parseInt(box.dataset.zoom, 10), 3, 640, { isCurrent: () => container.dataset.satKey === key });
 }
 
-/* ── 衛星影像放大檢視（點擊縮圖開啟，可再放大/縮小） ── */
+/* ── 衛星影像放大檢視：可拖曳移動、在指定位置縮放（2026-11） ──
+   做法仍是「整張 canvas」，不回到多張 <img> 用 CSS 拼貼（手機會錯位）：
+   - 畫面顯示 5 塊圖磚寬，實際畫 7 塊（四周各多 1 塊），拖曳時邊緣不會馬上露白。
+   - 手勢進行中只對目前這張 canvas 套 CSS transform（平移／縮放），即時跟手；
+     放開後依手勢換算新的中心點與縮放級別，重畫一張新 canvas。
+   - 新 canvas 先把舊影像依座標縮放畫上當佔位，再由圖磚逐塊蓋上，所以切換時不會閃白或跳動。
+   - 操作：滑鼠拖曳／單指拖曳移動；滾輪、雙指捏合、雙擊（雙點）在該位置縮放；＋－按鈕以中心縮放；
+     方向鍵移動、＋／－鍵縮放；「回到機場」重新置中。 */
+const SAT_VIEW = 5, SAT_RENDER = 7, SAT_ZMIN = 2, SAT_ZMAX = 19;
 let satState = null;
+const satToGlobal = (lat, lon, z) => {
+  const n = 2 ** z * SAT_TILE, r = Math.max(-85.0511, Math.min(85.0511, lat)) * Math.PI / 180;
+  return { x: (lon + 180) / 360 * n, y: (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * n };
+};
+const satFromGlobal = (x, y, z) => {
+  const n = 2 ** z * SAT_TILE;
+  return { lat: Math.atan(Math.sinh(Math.PI * (1 - 2 * y / n))) * 180 / Math.PI, lon: x / n * 360 - 180 };
+};
 function openSatLightbox(lat, lon, zoom){
-  satState = { lat, lon, zoom };
-  renderSatLightbox();
-  $("sat-lightbox").hidden = false;
-}
-function renderSatLightbox(){
-  const { lat, lon, zoom } = satState;
-  $("sat-lightbox-zoom").textContent = "z" + zoom;
-  // 放大／縮小時保留舊影像，新影像全部畫好才換上，不會看到半張舊半張新
+  const g = satToGlobal(lat, lon, zoom);
+  satState = { home: { lat, lon, z: zoom }, gx: g.x, gy: g.y, z: zoom, cur: null, req: 0, anim: false };
   const box = $("sat-lightbox-grid");
-  mountSat(box, lat, lon, zoom, 5, 1024, {
-    swapWhenDone: box.children.length > 0,
-    isCurrent: () => !!satState && satState.lat === lat && satState.lon === lon && satState.zoom === zoom
+  box.innerHTML = ""; box.classList.remove("loaded");
+  $("sat-lightbox").hidden = false;
+  satRender();
+  box.focus({ preventScroll: true });
+}
+function satGeom(){
+  const S = $("sat-lightbox-grid").clientWidth || 600;
+  return { S, f: S / (SAT_VIEW * SAT_TILE), C: S * SAT_RENDER / SAT_VIEW };   // f：每個圖磚像素在畫面上的 CSS 寬；C：canvas 的 CSS 邊長
+}
+function satRender(){
+  const st = satState; if (!st) return;
+  const my = ++st.req, box = $("sat-lightbox-grid"), old = st.cur;
+  // 緯度方向不超出世界範圍
+  const N = 2 ** st.z * SAT_TILE;
+  st.gy = Math.max(0, Math.min(N, st.gy));
+  st.gx = ((st.gx % N) + N) % N;
+  $("sat-lightbox-zoom").textContent = "z" + st.z;
+  $("sat-lb-in").disabled = st.z >= SAT_ZMAX; $("sat-lb-out").disabled = st.z <= SAT_ZMIN;
+  const { lat, lon } = satFromGlobal(st.gx, st.gy, st.z);
+  const built = buildSatCanvas(lat, lon, st.z, SAT_RENDER, (ctx, L1, T1) => {
+    if (!old) return;
+    const k = 2 ** (st.z - old.z);   // 舊影像的像素 → 新影像的像素
+    try { ctx.drawImage(old.canvas, old.left * k - L1, old.top * k - T1, old.canvas.width * k, old.canvas.height * k); } catch (e) {}
   });
+  const { C } = satGeom();
+  built.canvas.className = "sat-lb-canvas";
+  Object.assign(built.canvas.style, { width: C + "px", height: C + "px", left: (-(C - box.clientWidth) / 2) + "px", top: (-(C - box.clientWidth) / 2) + "px" });
+  box.querySelectorAll("canvas,img").forEach(el => el.remove());
+  box.appendChild(built.canvas);
+  st.cur = { canvas: built.canvas, left: built.left, top: built.top, z: st.z };
+  built.done.then(() => { if (satState && satState.req === my) box.classList.add("loaded"); });
+}
+// 手勢預覽：只對目前 canvas 套 transform。O：縮放中心、T：平移（皆為相對方框中心的 CSS px）
+function satPreview(O, T, k, animate){
+  const st = satState; if (!st || !st.cur) return;
+  const c = st.cur.canvas, { C } = satGeom();
+  c.style.transition = animate ? "transform .18s ease-out" : "none";
+  c.style.transformOrigin = `${O.x + C / 2}px ${O.y + C / 2}px`;
+  c.style.transform = `translate(${T.x}px, ${T.y}px) scale(${k})`;
+}
+// 手勢結束：算出現在畫面正中央對應的地點，換成最接近的整數縮放級別後重畫
+function satCommit(O, T, k){
+  const st = satState; if (!st) return;
+  const { f } = satGeom();
+  const q = { x: O.x - (T.x + O.x) / k, y: O.y - (T.y + O.y) / k };
+  const dz = Math.max(SAT_ZMIN - st.z, Math.min(SAT_ZMAX - st.z, Math.round(Math.log2(k))));
+  const m = 2 ** dz;
+  st.gx = (st.gx + q.x / f) * m; st.gy = (st.gy + q.y / f) * m; st.z += dz;
+  satRender();
+}
+// 以某一點（相對方框中心）為中心縮放一級，帶短暫動畫
+function satZoomAt(O, dz){
+  const st = satState; if (!st || st.anim) return;
+  dz = Math.max(SAT_ZMIN - st.z, Math.min(SAT_ZMAX - st.z, dz));
+  if (!dz) return;
+  st.anim = true;
+  satPreview(O, { x: 0, y: 0 }, 2 ** dz, true);
+  setTimeout(() => { if (!satState) return; satState.anim = false; satCommit(O, { x: 0, y: 0 }, 2 ** dz); }, 190);
+}
+function satPan(dx, dy){
+  const st = satState; if (!st || st.anim) return;
+  st.anim = true;
+  satPreview({ x: 0, y: 0 }, { x: dx, y: dy }, 1, true);
+  setTimeout(() => { if (!satState) return; satState.anim = false; satCommit({ x: 0, y: 0 }, { x: dx, y: dy }, 1); }, 190);
+}
+function wireSatGestures(){
+  const box = $("sat-lightbox-grid");
+  const rel = e => { const r = box.getBoundingClientRect(); return { x: e.clientX - r.left - r.width / 2, y: e.clientY - r.top - r.height / 2 }; };
+  const pts = new Map();
+  let g = null, lastTap = null;
+  const begin = () => {
+    const a = [...pts.values()];
+    if (a.length >= 2){
+      const mid = { x: (a[0].x + a[1].x) / 2, y: (a[0].y + a[1].y) / 2 };
+      g = { pinch: true, O: mid, mid0: mid, d0: Math.hypot(a[0].x - a[1].x, a[0].y - a[1].y) || 1, T: { x: 0, y: 0 }, k: 1 };
+    } else if (a.length === 1){
+      g = { pinch: false, O: { x: 0, y: 0 }, start: { ...a[0] }, T: { x: 0, y: 0 }, k: 1, t0: performance.now(), moved: 0 };
+    }
+  };
+  const finish = () => { if (g && (g.T.x || g.T.y || g.k !== 1)) satCommit(g.O, g.T, g.k); g = null; };
+  box.addEventListener("pointerdown", e => {
+    if (!satState || satState.anim || (e.pointerType === "mouse" && e.button !== 0)) return;
+    box.setPointerCapture(e.pointerId);
+    if (g) finish();
+    pts.set(e.pointerId, rel(e));
+    begin();
+    box.classList.add("dragging");
+  });
+  box.addEventListener("pointermove", e => {
+    if (!pts.has(e.pointerId) || !g) return;
+    pts.set(e.pointerId, rel(e));
+    const a = [...pts.values()];
+    if (g.pinch && a.length >= 2){
+      const mid = { x: (a[0].x + a[1].x) / 2, y: (a[0].y + a[1].y) / 2 };
+      const d = Math.hypot(a[0].x - a[1].x, a[0].y - a[1].y);
+      g.k = Math.max(1 / 8, Math.min(8, d / g.d0));
+      g.T = { x: mid.x - g.mid0.x, y: mid.y - g.mid0.y };
+    } else if (!g.pinch){
+      g.T = { x: a[0].x - g.start.x, y: a[0].y - g.start.y };
+      g.moved = Math.max(g.moved, Math.hypot(g.T.x, g.T.y));
+    }
+    satPreview(g.O, g.T, g.k, false);
+  });
+  const up = e => {
+    if (!pts.has(e.pointerId)) return;
+    const p = pts.get(e.pointerId);
+    pts.delete(e.pointerId);
+    // 輕點兩下（觸控）＝在該點放大
+    if (g && !g.pinch && e.pointerType !== "mouse" && g.moved < 8 && performance.now() - g.t0 < 300){
+      const now = performance.now();
+      if (lastTap && now - lastTap.t < 320 && Math.hypot(p.x - lastTap.x, p.y - lastTap.y) < 30){ g = null; lastTap = null; satZoomAt(p, 1); }
+      else lastTap = { t: now, x: p.x, y: p.y };
+    }
+    finish();
+    if (pts.size) begin();          // 雙指放開一指後，剩下那一指繼續拖曳
+    else box.classList.remove("dragging");
+  };
+  box.addEventListener("pointerup", up);
+  box.addEventListener("pointercancel", up);
+  box.addEventListener("dblclick", e => { e.preventDefault(); satZoomAt(rel(e), e.shiftKey ? -1 : 1); });
+  box.addEventListener("wheel", e => {
+    if (!satState) return;
+    e.preventDefault();
+    if (Math.abs(e.deltaY) < 2) return;
+    satZoomAt(rel(e), e.deltaY < 0 ? 1 : -1);
+  }, { passive: false });
+  box.addEventListener("keydown", e => {
+    const step = box.clientWidth / 4;
+    const map = { ArrowLeft: [step, 0], ArrowRight: [-step, 0], ArrowUp: [0, step], ArrowDown: [0, -step] };
+    if (map[e.key]){ e.preventDefault(); satPan(...map[e.key]); }
+    else if (e.key === "+" || e.key === "="){ e.preventDefault(); satZoomAt({ x: 0, y: 0 }, 1); }
+    else if (e.key === "-" || e.key === "_"){ e.preventDefault(); satZoomAt({ x: 0, y: 0 }, -1); }
+  });
+}
+function satRecenter(){
+  const st = satState; if (!st) return;
+  const g = satToGlobal(st.home.lat, st.home.lon, st.z);
+  st.gx = g.x; st.gy = g.y;
+  satRender();
 }
 function closeSatLightbox(){ $("sat-lightbox").hidden = true; $("sat-lightbox-grid").innerHTML = ""; $("sat-lightbox-grid").classList.remove("loaded"); satState = null; }
 
