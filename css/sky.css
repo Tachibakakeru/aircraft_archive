@@ -32,18 +32,18 @@
 .sky-clock:has(.flip-clock){align-items:center;gap:8px 14px}
 .flip-clock{--fh:1.36em;--fbg:#0b2a55;--fbg2:#123a72;--fink:#f4f9ff;display:inline-flex;align-items:center;gap:3px;
   font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:26px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
-.flip{position:relative;display:inline-block;width:.86em;height:var(--fh);perspective:240px;border-radius:6px;box-shadow:0 6px 12px -6px rgba(3,20,48,.55)}
-.flip>span{position:absolute;left:0;right:0;height:50%;overflow:hidden;color:var(--fink);-webkit-backface-visibility:hidden;backface-visibility:hidden}
-.flip>span>i{display:block;height:var(--fh);line-height:var(--fh);text-align:center;font-style:normal}
-.flip .ft,.flip .fft{top:0;border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--fbg2),var(--fbg))}
-.flip .fb,.flip .ffb{bottom:0;border-radius:0 0 6px 6px;background:linear-gradient(180deg,var(--fbg),var(--fbg2))}
-.flip .fb>i,.flip .ffb>i{margin-top:calc(var(--fh) / -2)}
-.flip .ft,.flip .fft{border-bottom:1px solid rgba(0,0,0,.45)}
-.flip .fft{transform-origin:50% 100%;z-index:2}
-.flip .ffb{transform-origin:50% 0;z-index:2;transform:rotateX(90deg)}
-.flip.flipping .fft{animation:flip-top .28s cubic-bezier(.55,.06,.68,.19) forwards}
-.flip.flipping .ffb{animation:flip-bot .3s .26s cubic-bezier(.22,.61,.36,1) forwards}
-.flip.flipping .ft::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28);animation:flip-shade .28s forwards}
+.sk-flip{position:relative;display:inline-block;width:.86em;height:var(--fh);perspective:240px;border-radius:6px;box-shadow:0 6px 12px -6px rgba(3,20,48,.55)}
+.sk-flip>span{position:absolute;left:0;right:0;height:50%;overflow:hidden;color:var(--fink);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.sk-flip>span>i{display:block;height:var(--fh);line-height:var(--fh);text-align:center;font-style:normal}
+.sk-flip .ft,.sk-flip .fft{top:0;border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--fbg2),var(--fbg))}
+.sk-flip .fb,.sk-flip .ffb{bottom:0;border-radius:0 0 6px 6px;background:linear-gradient(180deg,var(--fbg),var(--fbg2))}
+.sk-flip .fb>i,.sk-flip .ffb>i{margin-top:calc(var(--fh) / -2)}
+.sk-flip .ft,.sk-flip .fft{border-bottom:1px solid rgba(0,0,0,.45)}
+.sk-flip .fft{transform-origin:50% 100%;z-index:2}
+.sk-flip .ffb{transform-origin:50% 0;z-index:2;transform:rotateX(90deg)}
+.sk-flip.flipping .fft{animation:flip-top .28s cubic-bezier(.55,.06,.68,.19) forwards}
+.sk-flip.flipping .ffb{animation:flip-bot .3s .26s cubic-bezier(.22,.61,.36,1) forwards}
+.sk-flip.flipping .ft::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.28);animation:flip-shade .28s forwards}
 @keyframes flip-top{to{transform:rotateX(-90deg)}}
 @keyframes flip-bot{from{transform:rotateX(90deg)}to{transform:rotateX(0)}}
 @keyframes flip-shade{to{background:rgba(0,0,0,0)}}
@@ -53,16 +53,16 @@
 @media (max-width:520px){ .flip-clock{font-size:21px} }
 .site-clock:has(.flip-clock){align-items:center;padding:5px 10px 5px 7px;gap:7px}
 .flip-clock.sm{--fbg:#123a72;--fbg2:#1d4f94;font-size:14px;gap:2px}
-.flip-clock.sm .flip{width:.9em;border-radius:3px;perspective:120px;box-shadow:0 3px 6px -3px rgba(3,20,48,.6)}
+.flip-clock.sm .sk-flip{width:.9em;border-radius:3px;perspective:120px;box-shadow:0 3px 6px -3px rgba(3,20,48,.6)}
 .flip-clock.sm .ft,.flip-clock.sm .fft{border-radius:3px 3px 0 0}
 .flip-clock.sm .fb,.flip-clock.sm .ffb{border-radius:0 0 3px 3px}
 .flip-clock.sm .flip-sep{width:.3em}
 /* 首頁 home.css 在 reduced-motion 時用 * {animation:none!important} 關掉所有動畫；
    使用者明確要求翻頁時鐘照常播放，所以這裡用更高權重的 !important 把翻牌動畫加回來。 */
 @media (prefers-reduced-motion:reduce){
-  .flip.flipping .fft{animation:flip-top .28s cubic-bezier(.55,.06,.68,.19) forwards!important}
-  .flip.flipping .ffb{animation:flip-bot .3s .26s cubic-bezier(.22,.61,.36,1) forwards!important}
-  .flip.flipping .ft::after{animation:flip-shade .28s forwards!important}
+  .sk-flip.flipping .fft{animation:flip-top .28s cubic-bezier(.55,.06,.68,.19) forwards!important}
+  .sk-flip.flipping .ffb{animation:flip-bot .3s .26s cubic-bezier(.22,.61,.36,1) forwards!important}
+  .sk-flip.flipping .ft::after{animation:flip-shade .28s forwards!important}
   .flip-clock .flip-sep{animation:flip-colon 1s steps(2) infinite!important}
 }
 .site-clock{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:12px;display:inline-flex;gap:6px;align-items:baseline;cursor:pointer;

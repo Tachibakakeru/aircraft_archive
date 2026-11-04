@@ -394,3 +394,10 @@ Artifact 預覽（https://claude.ai/artifact/XRnht3NarATR1KHbxQ53yQ）仍是概�
 - **儲存**：`hangar_board_auto`、`hangar_pa_auto`（秒，0 = 手動，預設手動）。新增字串 `home.auto.*`（三語）。
 - **reduced-motion**：看板翻牌原本在 reduced-motion 下直接顯示結果，現改為照常播放；`css/home.css` 末段把翻牌、廣播淡入、輪換圖示從全域關閉規則排除（使用者明確要求）。
 - **版本**：`js/home.js?v=209`、`css/home.css?v=208`、`js/i18n.js?v=216`、Service Worker `hangar-v70`。
+
+### 12.13 今日出發翻牌重做＋班次消失修正（2026-11-04，工作分支預覽中）
+
+- **錯誤**：開自動（或手動按「換一批」）後「班次」欄整欄消失。舊的翻字效果在字格加 `flip` class，而 12.10 的翻頁時鐘在 `css/sky.css`（全站載入）定義了 `.flip{height:var(--fh)}`、`.flip>span{position:absolute}`；`--fh` 只在時鐘內定義，字格高度失效、文字被絕對定位，整格看不見。**教訓**：全站 CSS 的 class 要加前綴；時鐘卡片已改名 `sk-flip`。
+- **翻牌看板**（`js/home.js` `tileCard`／`flipTile`／`flapTo`／`swapRow`）：每個字格是上下兩半＋兩片翻頁（與時鐘同原理，class 為 `tt/tb/tft/tfb`、`tile-go`）。換批時每格依序翻過 2–6 個隨機字元再停在新字，最後一翻放慢（`.slow`），格與格錯開 45ms、列與列錯開 90ms。時間、目的地、登機門、狀態以 `plate-out`／`plate-in` 整片字牌翻轉後換內容。列元素原地更新，不再整個重建；連續觸發以序號（`_seq`、`_tok`）讓舊的翻牌鏈自動停止。
+- reduced-motion 下照常播放（`css/home.css` 末段排除）。
+- **版本**：`js/home.js?v=210`、`css/home.css?v=209`、`js/skytime.js?v=5`、`css/sky.css?v=6`、Service Worker `hangar-v71`。

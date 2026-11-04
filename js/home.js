@@ -571,30 +571,70 @@ function buildFlights(){
   out.forEach(f => { f.time = `${String(Math.floor(m/60)%24).padStart(2,"0")}:${String(m%60).padStart(2,"0")}`; f.gate += 1 + Math.floor(r()*24); m += 5 + Math.floor(r()*3)*5; });
   flights = out;
 }
-function tilesHTML(code){ return [...code.padEnd(7," ").slice(0,7)].map(ch => `<span class="tile"><span>${ch === " " ? "" : esc(ch)}</span></span>`).join(""); }
-function flapIn(container, code){
-  const finals = [...code.padEnd(7," ").slice(0,7)];
-  container.querySelectorAll(".tile").forEach((tile, i) => {
-    const span = tile.firstChild; let n = 0; const max = 4 + i * 2 + Math.floor(Math.random()*3);
-    const tick = () => {
-      tile.classList.remove("flip"); void tile.offsetWidth; tile.classList.add("flip");
-      if (n++ >= max) { span.textContent = finals[i] === " " ? "" : finals[i]; return; }
-      span.textContent = finals[i] === " " ? "" : POOL[Math.floor(Math.random() * POOL.length)];
-      setTimeout(tick, 55);
-    };
-    tick();
-  });
+/* 班次代碼：真的翻牌（split-flap）。每格是上下兩半＋兩片翻頁：上半片帶舊字翻下，下半片帶新字接著落下；
+   換批時每格先翻過幾個隨機字元再停在新字，最後一翻放慢。class 名稱刻意不用 "flip"（那是 sky.css 翻頁時鐘的 class，
+   2026-11 曾因撞名讓看板代碼整列消失）。 */
+const tileChars = code => [...code.padEnd(7, " ").slice(0, 7)].map(ch => ch === " " ? "" : ch);
+const tileCard = ch => `<span class="tile" data-v="${esc(ch)}"><span class="tt"><i>${esc(ch)}</i></span><span class="tb"><i>${esc(ch)}</i></span><span class="tft"><i>${esc(ch)}</i></span><span class="tfb"><i>${esc(ch)}</i></span></span>`;
+function tilesHTML(code){ return tileChars(code).map(tileCard).join(""); }
+function flipTile(tile, ch, last){
+  const old = tile.dataset.v, [tt, tb, tft, tfb] = tile.children;
+  tile.dataset.v = ch;
+  tt.firstChild.textContent = ch; tb.firstChild.textContent = old;
+  tft.firstChild.textContent = old; tfb.firstChild.textContent = ch;
+  tile.classList.toggle("slow", !!last);
+  tile.classList.remove("tile-go"); void tile.offsetWidth; tile.classList.add("tile-go");
+}
+function flapTo(tile, final, steps){
+  const seq = (tile._seq || 0) + 1; tile._seq = seq;
+  const next = () => {
+    if (tile._seq !== seq) return;
+    if (steps-- > 0) { tile._done = next; flipTile(tile, POOL[Math.floor(Math.random() * POOL.length)], false); }
+    else { tile._done = null; flipTile(tile, final, true); }
+  };
+  next();
+}
+// 下半片落定後：把底下兩片換成新字，接著翻下一個字
+$("#rows").addEventListener("animationend", e => {
+  if (!e.target.classList.contains("tfb")) return;
+  const tile = e.target.parentElement, d = tile.dataset.v;
+  tile.children[1].firstChild.textContent = d; tile.children[2].firstChild.textContent = d;
+  tile.classList.remove("tile-go", "slow");
+  const done = tile._done; tile._done = null; if (done) done();
+});
+const rowHTML = f => `<a class="brow" href="${f.href}" data-name="${esc(f.n)}">
+      <span class="btime">${f.time}</span>
+      <span class="tiles" aria-label="${esc(f.code)}">${tilesHTML(f.code)}</span>
+      <span class="bdest">${destHTML(f)}</span>
+      <span class="bgate">${f.gate}</span>
+      <span class="bstat ${f.st === "3d" ? "go3d" : f.st}">${esc(t("st." + f.st))}</span>
+    </a>`;
+const destHTML = f => `<b>${esc(f.n)}</b><span>${esc(t("kind." + f.k))} · ${esc(f.sub)}</span>`;
+// 其他欄位（時間、目的地、登機門、狀態）像整片字牌一樣翻過去再換內容
+function swapRow(row, f, delay){
+  const tok = (row._tok || 0) + 1; row._tok = tok;
+  setTimeout(() => {
+    if (row._tok !== tok) return;
+    row.classList.remove("plate-in"); row.classList.add("plate-out");
+    setTimeout(() => {
+      if (row._tok !== tok) return;
+      row.href = f.href; row.dataset.name = f.n;
+      row.querySelector(".btime").textContent = f.time;
+      row.querySelector(".tiles").setAttribute("aria-label", f.code);
+      row.querySelector(".bdest").innerHTML = destHTML(f);
+      row.querySelector(".bgate").textContent = f.gate;
+      const st = row.querySelector(".bstat"); st.className = `bstat ${f.st === "3d" ? "go3d" : f.st}`; st.textContent = t("st." + f.st);
+      row.classList.remove("plate-out"); void row.offsetWidth; row.classList.add("plate-in");
+    }, 170);
+    const chars = tileChars(f.code);
+    row.querySelectorAll(".tile").forEach((tile, j) => setTimeout(() => flapTo(tile, chars[j], 2 + j + Math.floor(Math.random() * 3)), j * 45));
+  }, delay);
 }
 function renderBoard(animate){
   if (!flights.length) buildFlights();
-  $("#rows").innerHTML = flights.map(f => `<a class="brow" href="${f.href}" data-name="${esc(f.n)}">
-      <span class="btime">${f.time}</span>
-      <span class="tiles" aria-label="${esc(f.code)}">${tilesHTML(animate ? "" : f.code)}</span>
-      <span class="bdest"><b>${esc(f.n)}</b><span>${esc(t("kind." + f.k))} · ${esc(f.sub)}</span></span>
-      <span class="bgate">${f.gate}</span>
-      <span class="bstat ${f.st === "3d" ? "go3d" : f.st}">${esc(t("st." + f.st))}</span>
-    </a>`).join("");
-  if (animate) document.querySelectorAll("#rows .tiles").forEach((el, i) => setTimeout(() => flapIn(el, flights[i].code), i * 70));
+  const rows = [...document.querySelectorAll("#rows .brow")];
+  if (!animate || rows.length !== flights.length) { $("#rows").innerHTML = flights.map(rowHTML).join(""); return; }
+  rows.forEach((row, i) => swapRow(row, flights[i], i * 90));
 }
 $("#shuffle").addEventListener("click", () => { boardSeed = (boardSeed * 31 + 7) % 2147483647; buildFlights(); renderBoard(true); });
 // 看板時鐘、班次時間、機長問候都跟著 js/skytime.js 選的時區（預設裝置時區）

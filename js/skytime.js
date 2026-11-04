@@ -98,7 +98,7 @@ const SkyTime = (() => {
   /* 翻頁式時鐘（2026-11）：每個數字是一張翻牌。結構只建一次，之後只翻有變動的數字：
      上半片顯示舊數字往下翻（0 → -90°），下半片帶著新數字接著翻下來（90° → 0）。
      使用者要求動畫在 reduced-motion 下也照常播放，所以不用媒體查詢略過。 */
-  const flipCard = d => `<span class="flip" data-v="${d}"><span class="ft"><i>${d}</i></span><span class="fb"><i>${d}</i></span><span class="fft"><i>${d}</i></span><span class="ffb"><i>${d}</i></span></span>`;
+  const flipCard = d => `<span class="sk-flip" data-v="${d}"><span class="ft"><i>${d}</i></span><span class="fb"><i>${d}</i></span><span class="fft"><i>${d}</i></span><span class="ffb"><i>${d}</i></span></span>`;
   function setFlip(card, d){
     const old = card.dataset.v;
     if (old === d) return;
@@ -109,7 +109,7 @@ const SkyTime = (() => {
     card.classList.remove("flipping"); void card.offsetWidth; card.classList.add("flipping");
   }
   function settleFlip(e){
-    const card = e.target.closest(".flip");
+    const card = e.target.closest(".sk-flip");
     if (!card || !e.target.classList.contains("ffb")) return;
     const d = card.dataset.v;
     card.children[1].firstChild.textContent = d; card.children[2].firstChild.textContent = d;
@@ -125,7 +125,7 @@ const SkyTime = (() => {
       el.addEventListener("animationend", settleFlip);
       wrap = el.querySelector(".flip-clock");
     } else {
-      wrap.querySelectorAll(".flip").forEach((c, i) => setFlip(c, digits[i]));
+      wrap.querySelectorAll(".sk-flip").forEach((c, i) => setFlip(c, digits[i]));
     }
     if (compact) el.querySelector(".sky-off").textContent = off;
     else {
