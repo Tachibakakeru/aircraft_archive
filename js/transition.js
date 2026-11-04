@@ -31,16 +31,26 @@
   }
   const setFlag = v => { try { sessionStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} };
 
+  // 頁面代號：Cloudflare Pages 會把 /airlines.html 轉址成 /airlines，兩種寫法都要認得
+  const pageKey = path => { const k = (path.split("/").pop() || "index").replace(/\.html$/i, "").toLowerCase(); return k || "index"; };
+  const samePage = (a, b) => a.origin === b.origin && pageKey(a.pathname) === pageKey(b.pathname) && a.search === b.search;
+  // 正式站用乾淨網址時，直接前往去掉 .html 的網址，省掉一次 308 轉址（本機 server.py 不支援乾淨網址，維持原樣）
+  const cleanUrls = !/\.html$/i.test(location.pathname) && location.pathname !== "/" && !/^(localhost|127\.)/.test(location.hostname);
+  function targetHref(url){
+    if (!cleanUrls || !/\.html$/i.test(url.pathname)) return url.href;
+    const u = new URL(url.href);
+    u.pathname = /\/index\.html$/i.test(u.pathname) ? u.pathname.replace(/index\.html$/i, "") : u.pathname.replace(/\.html$/i, "");
+    return u.href;
+  }
   // 依頁面決定要顯示的名稱
   function nameFor(url, a){
-    const page = (url.pathname.split("/").pop() || "index.html").toLowerCase();
-    const map = { "index.html": ["home.pass.from", "首頁"], "": ["home.pass.from", "首頁"], "fleet.html": ["home.nav.fleet", "飛行器圖鑑"],
-      "airports.html": ["home.nav.airports", "機場與跑道"], "airlines.html": ["home.nav.airlines", "航空公司"], "knowledge.html": ["home.nav.knowledge", "小知識"],
-      "distance.html": ["nav.distance", "距離計算"], "compare.html": ["home.tool.compare", "機型比較"], "versus.html": ["nav.versus", "機型對比"],
-      "variants.html": ["nav.variants", "機型家族"], "viewer.html": ["tx.viewer", "3D 檢視器"], "editor.html": ["fleet.edit", "編輯資料"] };
-    const m = map[page];
+    const map = { "index": ["home.pass.from", "首頁"], "fleet": ["home.nav.fleet", "飛行器圖鑑"],
+      "airports": ["home.nav.airports", "機場與跑道"], "airlines": ["home.nav.airlines", "航空公司"], "knowledge": ["home.nav.knowledge", "小知識"],
+      "distance": ["nav.distance", "距離計算"], "compare": ["home.tool.compare", "機型比較"], "versus": ["nav.versus", "機型對比"],
+      "variants": ["nav.variants", "機型家族"], "viewer": ["tx.viewer", "3D 檢視器"], "editor": ["fleet.edit", "編輯資料"] };
+    const m = map[pageKey(url.pathname)];
     if (m) return t(m[0], m[1]);
-    return ((a && a.textContent) || "").trim().slice(0, 24) || document.title;
+    return ((a && a.textContent) || "").trim().slice(0, 24) || "SKY ARCHIVE";
   }
 
   // 抵達：一進頁面就先蓋上（CSS 以 html.tx-arriving::before 畫出布幕）
@@ -65,10 +75,7 @@
 
   function isBack(a, url){
     if (a.classList.contains("back") || /\bprev\b/.test(a.rel || "")) return true;
-    try {
-      const ref = new URL(document.referrer);
-      return ref.origin === url.origin && ref.pathname === url.pathname && ref.search === url.search;
-    } catch (e) { return false; }
+    try { return samePage(new URL(document.referrer), url); } catch (e) { return false; }
   }
 
   let leaving = false;
@@ -79,7 +86,7 @@
     requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("tx-out")));
     if (window.HangarSound) window.HangarSound.chime({ within: OUT_MS });   // 開啟音效時播放，換頁前淡出
     setFlag({ t: Date.now(), name, back, click: true });
-    setTimeout(() => { location.href = url.href; }, OUT_MS);
+    setTimeout(() => { location.href = targetHref(url); }, OUT_MS);
   }
 
   document.addEventListener("click", e => {
@@ -90,7 +97,8 @@
     try { url = new URL(a.getAttribute("href"), location.href); } catch (err) { return; }
     if (url.origin !== location.origin) return;
     if (url.pathname === location.pathname && url.search === location.search && url.hash) return;   // 同頁錨點
-    if (!/\.html$|\/$/.test(url.pathname)) return;                                                // 只處理頁面，不攔截圖片、JSON 等
+    const last = url.pathname.split("/").pop();
+    if (last.includes(".") && !/\.html$/i.test(last)) return;                                    // 只處理頁面，不攔截圖片、JSON 等
     e.preventDefault();
     if (!leaving) depart(a, url);
   });
@@ -104,7 +112,10 @@
     el.classList.add("tx-covered");
     html.classList.remove("tx-arriving");
     requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("tx-in")));
-    setTimeout(() => el.remove(), IN_MS + 120);
+    // 布幕滑完就整個移除（含凝結尾），不留殘線；頁面忙碌時計時器可能延遲，所以兩者都設
+    const done = () => el.remove();
+    el.querySelector(".tx-curtain").addEventListener("transitionend", e => { if (e.propertyName === "transform") setTimeout(done, 60); }, { once: true });
+    setTimeout(done, IN_MS + 400);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", () => arrive(arriving)); else arrive(arriving);
 
@@ -114,7 +125,7 @@
     leaving = false;
     document.querySelectorAll(".tx").forEach(x => x.remove());
     html.classList.remove("tx-arriving");
-    const f = readFlag();
-    if (!OFF && f) arrive({ name: nameFor(location), back: true });
+    readFlag();
+    if (!OFF) arrive({ name: nameFor(location), back: true });   // bfcache 還原只會發生在上一頁／下一頁，一律右 → 左
   });
 })();
