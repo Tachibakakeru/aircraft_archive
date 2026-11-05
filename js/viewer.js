@@ -946,6 +946,9 @@ function init(DATA, MODEL){
     const duration = 12 + preflight;
     const bounds = new THREE.Box3();
     Object.values(partGroups).forEach(g => bounds.expandByObject(g));
+    const wingBounds = new THREE.Box3().setFromObject(partGroups.wing || airplane);
+    const wingCenterX = (wingBounds.min.x + wingBounds.max.x) / 2;
+    const wingFocusZ = wingBounds.max.z * .32;
     const width = Math.max(9, (bounds.max.z - bounds.min.z) * 1.45);
     const pavement = new THREE.MeshStandardMaterial({color:0x293746,roughness:1});
     const shoulder = new THREE.MeshStandardMaterial({color:0x495a50,roughness:1});
@@ -1028,10 +1031,14 @@ function init(DATA, MODEL){
       airplane.rotation.set(0,0,angle);
       shadow.position.x=x;
       shadow.material.opacity=.12*(1-climb*.94);
-      target.set(x,airplane.position.y+1.15,0);
+      const wingFocus=hasTakeoffFlaps ? 1-smooth(flightT/1.6) : 0;
+      target.set(x+wingCenterX*wingFocus,airplane.position.y+1.15-.4*wingFocus,wingFocusZ*wingFocus);
       if (!takeoff.manualCamera){
-        theta=2.15-.25*climb; phi=1.18+.36*climb;
-        radius=Math.min(46,Math.max(20,19/camera.aspect))+2*climb;
+        theta=2.15-.25*climb+.38*wingFocus;
+        phi=1.18+.36*climb-.19*wingFocus;
+        const chaseRadius=Math.min(46,Math.max(20,19/camera.aspect))+2*climb;
+        const focusRadius=Math.min(30,Math.max(13,11/camera.aspect));
+        radius=chaseRadius*(1-wingFocus)+focusRadius*wingFocus;
       }
       if (hasTakeoffFlaps){
         const flaps=.42*smooth(t/1.7)*(1-smooth((flightT-8.8)/1.9));
