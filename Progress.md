@@ -743,3 +743,40 @@
 - 3D 檢視器加入「場景」：自動／清晨／正午／黃昏／夜間，換背景與光照，夜間顯示航行燈與閃光燈。
 - 驗證：模擬 METAR 三種天氣解析與建議跑道正確、比較清單與蓋章、五種場景截圖；無 page error。詳見 `docs/site-redesign.md` 第 12 節。推送到工作分支供預覽，**未合併 `main`**。
 - 使用者詢問「目前做的內容都有記錄到 md 檔案嗎」：核對後補上 `AGENTS.md`（新共用模組、資料、工具、Function、localStorage 鍵、reduced-motion 與部署注意事項）、`README.md` 授權（METAR、陸地遮罩、機型剪影），更新兩份設計紀錄的章節狀態與 `docs/site-redesign.md` 的「目前狀態」總表、本檔開頭的目前狀態。
+
+### 遠端 GitHub 與 Cloudflare 版本核對（2026-11-05，本地紀錄）
+
+- 使用者要求讀取 GitHub／Cloudflare 最新內容及 `AGENTS.md`、`Progress.md`、`docs/homepage-concept.md`、`docs/site-redesign.md`。已 fetch `origin/main`，最新 `dc3bd51`，本機 `main` 比遠端少 36 個提交；遠端文件與正式站為 2026-11 全站 UI 改版版本。
+- 正式站 `https://aircraft-archive.pages.dev/` 回傳 200；首頁、`js/home.js`、`js/skytime.js`、`js/airports.js`、`css/home.css`、`data/knowledge.json` 的回應位元組與 `origin/main` 完全一致。`/api/metar?ids=RCTP` 回傳 200、一筆含 METAR 原文的資料。原 App 預覽分頁已沿用並切到正式首頁、設為可見。
+- 遠端文件顯示：首頁出境大廳、隨機航線／航線規劃、登機證夾、翻頁時鐘與翻牌看板；子頁藍色系、線條圖示、換頁過場、衛星圖拖曳縮放、即時天氣、比較登機證、3D 時段場景均已發布。3D「起飛示範」鏡頭尚未做；iPhone Safari 動畫仍待實機確認。
+- 本機程式碼未合併遠端，保留未提交的 V 速照片與資料覆寫、韓國航空除錯檔。後續程式修改前先安全同步遠端並處理本機差異；本次只更新此工作紀錄，未提交／推送。
+
+### 本地 Markdown 同步（2026-11-05）
+
+- 依使用者要求，再次 fetch GitHub `origin/main`（`dc3bd51`），將遠端最新版 `AGENTS.md`、`README.md`、`docs/homepage-concept.md`、`docs/site-redesign.md` 複製到本機；其他 Markdown（`assets/reference/ATTRIBUTION.md`、`models/blender/README.md`）已與遠端一致；`Progress.md` 以遠端版本為底，保留先前未推送的「遠端 GitHub 與 Cloudflare 版本核對」本機紀錄。
+- 本次只同步文件，沒有合併或更新本機程式碼分支（仍落後遠端 36 個提交），未提交或推送。V 速照片相關本機資料與韓國航空除錯檔維持原狀。
+
+### 本機主分支同步至遠端最新（2026-11-05）
+
+- 依使用者要求將本機程式完整更新：先取回 `origin/main`，以快轉方式將本機 `main` 由 `198b6c8` 更新至 `dc3bd51`（補進 36 個遠端提交），現與遠端主分支對齊。沒有修改 GitHub 或重新部署。
+- 同步前以具名 Git stash 暫存需讓路的本機文件與資料；同步後僅恢復 `Progress.md` 本機紀錄及尚未公開的 V 速圖片對應資料。`AGENTS.md`、`README.md`、兩份設計紀錄與最新版主分支一致；V 速照片與韓國航空除錯檔保持原位。BEA 照片公開重製授權仍待釐清，不納入已發布版本。
+- 驗證：`git status` 顯示 `main...origin/main` 無 ahead／behind；82 筆知識檢查、25 份 JavaScript 語法、7 份 JSON 解析及 `git diff --check` 通過。本機首頁 `http://localhost:8000/` 回傳 200，原 App 預覽分頁已沿用並顯示新版首頁、登機證夾、184 機型及自動看板。
+- 本輪未提交或推送；後續可直接在最新版程式碼上繼續作業。本機未發布的知識圖片資料仍是工作目錄差異，發布前須另行檢查授權。
+
+### 3D 起飛示範鏡頭（2026-11-05，本地預覽）
+
+- 依新版天空場景製作檢視器「起飛示範」：跑道、滑跑、抬頭、爬升、跟隨鏡頭與進度提示；有起落架鉸鏈的協和號會收輪，其他固定翼機型不假造收輪。按鈕可停止／重播，關閉後恢復原視角與可動部位。
+- 新增 `css/takeoff.css`，修改 `viewer.html`、`js/viewer.js`、`js/i18n.js` 三語字串；更新引用版本及 Service Worker 快取名稱。使用者已在原本的 App 預覽分頁即時觀看本地協和號檢視器。
+- 驗證：JavaScript 語法與 `git diff --check` 通過；在本地預覽協和號滑跑至爬升、收輪、停止與重播，以及 737-800 的一般機型路徑。示範是視覺示意，不代表真實起飛速度或跑道距離。
+- 待辦：使用者檢查預覽並決定是否保留／調整。**本輪未提交、未推送。**未發布的知識照片資料與韓國航空除錯檔仍保持原狀。
+
+### 起飛示範可自由轉動視角（2026-11-05，本地預覽調整）
+
+- 依使用者回饋，起飛播放中拖曳模型不再停止示範；滑鼠拖曳／觸控旋轉視角、滾輪／雙指縮放後，保留手動角度與距離，鏡頭仍跟隨飛機滑跑和爬升。點「重播示範」恢復預設鏡頭。
+- 驗證：本地協和號播放到滑跑／收輪時拖曳，進度持續且角度未彈回；滾輪縮放後示範仍在。`node --check` 與 `git diff --check` 通過。沿用原預覽分頁，未提交、未推送。
+
+### 起飛示範加入襟翼動作（2026-11-05，本地預覽）
+
+- 依使用者要求，有獨立 `flap`／`slat` 網格的機型在滑跑前展開示意起飛構型，爬升後收回；不連動擾流板。協和號沒有傳統襟翼，依 Heritage Concorde 的機翼資料保留原構型，不把襟副翼冒充襟翼。
+- `js/viewer.js` 加入依模型能力判斷的兩秒起飛構型階段、翼面動畫與示範前狀態還原；`js/i18n.js` 增加三語階段文字，更新資源版號及 Service Worker 快取名稱。
+- 驗證：`models/b738.json` 含 12 片襟翼與 12 片縫翼，`models/concorde.json` 沒有襟翼／縫翼；本地 737-800 起飛與爬升畫面、停止後既有翼面設定恢復、JavaScript 語法及 `git diff --check` 均通過。原 App 預覽分頁已沿用並切到 737-800。未提交、未推送；使用者可檢查後決定是否調整。

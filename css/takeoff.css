@@ -1,0 +1,21 @@
+.takeoff-hud{
+  position:fixed;right:24px;bottom:96px;z-index:5;width:min(290px,calc(100vw - 48px));
+  padding:16px 18px;border:1px solid var(--stroke);border-radius:12px;
+  background:var(--panel);color:var(--text);backdrop-filter:blur(14px);
+  box-shadow:0 12px 40px rgba(0,0,0,.17);
+}
+.takeoff-hud-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font:10px var(--mono);letter-spacing:.16em;color:var(--amber)}
+.takeoff-hud-head button{border:0;background:transparent;color:var(--muted);font:20px var(--sans);
+  line-height:1;cursor:pointer;padding:0 2px}
+.takeoff-hud-head button:hover{color:var(--text)}
+.takeoff-hud strong{display:block;margin:12px 0 13px;font-size:20px;font-weight:650;letter-spacing:.04em}
+.takeoff-progress{height:4px;border-radius:4px;background:var(--stroke);overflow:hidden}
+.takeoff-progress span{display:block;width:0;height:100%;border-radius:inherit;background:var(--amber)}
+.takeoff-hud small{display:block;margin-top:10px;color:var(--muted);font-size:10px;line-height:1.5}
+@media(max-width:640px){
+  .takeoff-hud{right:16px;bottom:136px;width:min(260px,calc(100vw - 32px))}
+  .controls{right:16px;overflow-x:auto;scrollbar-width:none}
+  .controls::-webkit-scrollbar{display:none}
+  .controls>button{flex-shrink:0}
+}

@@ -203,11 +203,12 @@ function init(DATA, MODEL){
         continue;
       }
       const type = pv.userData.type;
-      let ang = (DEPLOY[type] || 0) * deployNow;
+      const amount = takeoff && (type === "flap" || type === "slat") ? takeoff.flaps : deployNow;
+      let ang = (DEPLOY[type] || 0) * amount;
       if (type !== "aileron") ang *= pv.userData.side;
       pv.quaternion.setFromAxisAngle(pv.userData.axis, ang);
       const f = FOWLER[type], b = pv.userData.base;
-      if (f) pv.position.set(b.x + f[0] * deployNow, b.y + f[1] * deployNow, b.z + f[2] * deployNow);
+      if (f) pv.position.set(b.x + f[0] * amount, b.y + f[1] * amount, b.z + f[2] * amount);
     }
   }
 
@@ -318,12 +319,14 @@ function init(DATA, MODEL){
   const target = new THREE.Vector3(0, 1.1, 0);
   let theta = 0.9, phi = 1.15, radius = 13;
   const RAD_MIN = 5, RAD_MAX = 26;
+  let radiusMax = RAD_MAX;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let autoRotate = !reducedMotion;
+  let takeoff = null;
 
   function applyCamera(){
     phi = Math.max(0.25, Math.min(Math.PI - 0.35, phi));
-    radius = Math.max(RAD_MIN, Math.min(RAD_MAX, radius));
+    radius = Math.max(RAD_MIN, Math.min(radiusMax, radius));
     camera.position.set(
       target.x + radius * Math.sin(phi) * Math.cos(theta),
       target.y + radius * Math.cos(phi),
@@ -348,7 +351,10 @@ function init(DATA, MODEL){
     if (pointers.size === 2){
       const [a, b] = [...pointers.values()];
       const d = Math.hypot(a.x-b.x, a.y-b.y);
-      if (pinchDist > 0) radius *= pinchDist / d;
+      if (pinchDist > 0){
+        radius *= pinchDist / d;
+        if (takeoff) takeoff.manualCamera = true;
+      }
       pinchDist = d;
       moved = 99;
       return;
@@ -357,6 +363,7 @@ function init(DATA, MODEL){
 
     const dx = e.clientX - lastX, dy = e.clientY - lastY;
     moved += Math.abs(dx) + Math.abs(dy);
+    if (takeoff && moved > 3) takeoff.manualCamera = true;
     theta += dx * 0.0055;
     phi   -= dy * 0.0055;
     lastX = e.clientX; lastY = e.clientY;
@@ -367,6 +374,7 @@ function init(DATA, MODEL){
     if (pointers.size === 0){
       dragging = false;
       canvas.classList.remove("dragging");
+      if (takeoff) return;
       if (moved < 7) pickAt(e.clientX, e.clientY);
       else { camDirty = true; updateURL(); }
     }
@@ -376,9 +384,12 @@ function init(DATA, MODEL){
   let wheelTimer = 0;
   canvas.addEventListener("wheel", e => {
     e.preventDefault();
+    if (takeoff) takeoff.manualCamera = true;
     radius *= (1 + Math.sign(e.deltaY) * 0.08);
-    camDirty = true;
-    clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260);
+    if (!takeoff){
+      camDirty = true;
+      clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260);
+    }
   }, {passive:false});
 
   /* ── 點選 / 懸停 ── */
@@ -578,12 +589,15 @@ function init(DATA, MODEL){
 
   /* ── 控制按鈕 ── */
   const btnRotate = document.getElementById("btn-rotate");
+  let stopTakeoff = () => {};
   btnRotate.setAttribute("aria-pressed", String(autoRotate));
   btnRotate.addEventListener("click", () => {
+    stopTakeoff();
     autoRotate = !autoRotate;
     btnRotate.setAttribute("aria-pressed", String(autoRotate));
   });
   document.getElementById("btn-reset").addEventListener("click", () => {
+    stopTakeoff();
     theta = 0.9; phi = 1.15; radius = 13;
     airplane.rotation.y = 0;
   });
@@ -800,12 +814,14 @@ function init(DATA, MODEL){
       case "s": case "S": document.getElementById("btn-specs").click(); break;
       case "?": buildKeysHelp(); keysHelp.hidden = !keysHelp.hidden; break;
       case "+": case "=":
-        radius *= 0.92; camDirty = true;
-        clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260);
+        if (takeoff) takeoff.manualCamera = true;
+        radius *= 0.92;
+        if (!takeoff){ camDirty = true; clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260); }
         e.preventDefault(); break;
       case "-": case "_":
-        radius *= 1.08; camDirty = true;
-        clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260);
+        if (takeoff) takeoff.manualCamera = true;
+        radius *= 1.08;
+        if (!takeoff){ camDirty = true; clearTimeout(wheelTimer); wheelTimer = setTimeout(updateURL, 260); }
         e.preventDefault(); break;
     }
   });
@@ -846,7 +862,7 @@ function init(DATA, MODEL){
       selectPart(list[i]);
     }, 4200);
   }
-  btnTour.addEventListener("click", () => tourTimer ? stopTour() : startTour());
+  btnTour.addEventListener("click", () => { stopTakeoff(); tourTimer ? stopTour() : startTour(); });
   // 手動操作時停止導覽
   canvas.addEventListener("pointerdown", stopTour);
   document.getElementById("chips").addEventListener("click", stopTour);
@@ -870,6 +886,7 @@ function init(DATA, MODEL){
       btnDeploy.textContent = I18N.t(on ? "viewer.deploy.stow" : "viewer.deploy");
     };
     btnDeploy.addEventListener("click", () => {
+      stopTakeoff();
       deployTarget = deployTarget > 0.5 ? 0 : 1;
       syncDeploy();
     });
@@ -889,7 +906,10 @@ function init(DATA, MODEL){
       slider.type = "range";
       slider.min = c.min; slider.max = c.max; slider.step = c.step; slider.value = 0;
       slider.dataset.control = c.id;
-      slider.addEventListener("input", () => { articulation[c.id].target = Number(slider.value); });
+      slider.addEventListener("input", () => {
+        const value=Number(slider.value);
+        stopTakeoff(); articulation[c.id].target=value; slider.value=value;
+      });
       label.append(title, slider); details.append(label);
       labels.push([title, c.label]);
     }
@@ -908,6 +928,132 @@ function init(DATA, MODEL){
     syncControls();
     document.addEventListener("langchange", syncControls);
     document.querySelector(".controls").prepend(details);
+  }
+
+  /* ── 起飛示範：跑道滑跑 → 抬頭 → 爬升；有 gear 鉸鏈才收輪 ── */
+  const btnTakeoff = document.getElementById("btn-takeoff");
+  const takeoffHud = document.getElementById("takeoff-hud");
+  const takeoffPhase = document.getElementById("takeoff-phase");
+  const takeoffProgress = document.querySelector(".takeoff-progress");
+  const takeoffProgressFill = document.getElementById("takeoff-progress-fill");
+  const runway = new THREE.Group();
+  runway.visible = false;
+  scene.add(runway);
+  if (has3D && !["heli", "ask21"].includes(MODEL_ID)){
+    btnTakeoff.hidden = false;
+    const hasTakeoffFlaps = surfaces.some(s => !s.userData.channel && (s.userData.type === "flap" || s.userData.type === "slat"));
+    const preflight = hasTakeoffFlaps ? 2 : 0;
+    const duration = 12 + preflight;
+    const bounds = new THREE.Box3();
+    Object.values(partGroups).forEach(g => bounds.expandByObject(g));
+    const width = Math.max(9, (bounds.max.z - bounds.min.z) * 1.45);
+    const pavement = new THREE.MeshStandardMaterial({color:0x293746,roughness:1});
+    const shoulder = new THREE.MeshStandardMaterial({color:0x495a50,roughness:1});
+    const paint = new THREE.MeshBasicMaterial({color:0xf5f2e5});
+    const light = new THREE.MeshBasicMaterial({color:0xffd990});
+    function slab(w, d, x, y, z, material){
+      const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, .012, d), material);
+      mesh.position.set(x, y, z); runway.add(mesh);
+    }
+    slab(116, width+12, 0, -.065, 0, shoulder);
+    slab(110, width, 0, -.045, 0, pavement);
+    for (const side of [-1, 1]){
+      slab(108, .07, 0, -.025, side*(width/2-.25), paint);
+      for (let x=-49; x<=49; x+=7) slab(.12, .12, x, -.016, side*(width/2+.2), light);
+      for (let z=.85; z<width/2-1; z+=.7){
+        slab(2.6, .37, -49, -.022, side*z, paint);
+        slab(2.6, .37, 49, -.022, side*z, paint);
+      }
+    }
+    for (let x=-42; x<44; x+=7) slab(3.1, .12, x, -.021, 0, paint);
+
+    const smooth = n => { n=Math.max(0,Math.min(1,n)); return n*n*(3-2*n); };
+    function syncTakeoffText(){
+      if (!takeoff) return;
+      takeoffPhase.textContent = I18N.t("viewer.takeoff." + takeoff.stage);
+      btnTakeoff.textContent = I18N.t(takeoff.stage === "complete" ? "viewer.takeoff.replay" : "viewer.takeoff.stop");
+    }
+    stopTakeoff = function(){
+      if (!takeoff) return;
+      const s = takeoff.saved;
+      takeoff = null;
+      airplane.position.copy(s.position); airplane.rotation.copy(s.rotation);
+      shadow.position.copy(s.shadowPosition); shadow.scale.copy(s.shadowScale);
+      shadow.material.opacity = s.shadowOpacity;
+      target.copy(s.target); theta=s.theta; phi=s.phi; radius=s.radius;
+      radiusMax=RAD_MAX;
+      autoRotate=s.autoRotate; btnRotate.setAttribute("aria-pressed", String(autoRotate));
+      deployTarget=s.deployTarget; deployNow=s.deployNow; applyDeploy();
+      btnDeploy.setAttribute("aria-pressed", String(deployTarget > .5));
+      btnDeploy.textContent=I18N.t(deployTarget > .5 ? "viewer.deploy.stow" : "viewer.deploy");
+      if (articulation.gear) articulation.gear.target=s.gear;
+      const gearSlider = document.querySelector('input[data-control="gear"]');
+      if (gearSlider) gearSlider.value=s.gear;
+      grid.visible=s.gridVisible; runway.visible=false; hotspotLayer.hidden=false;
+      takeoffHud.hidden=true; btnTakeoff.setAttribute("aria-pressed", "false");
+      btnTakeoff.textContent=I18N.t("viewer.takeoff");
+      if (s.part) selectPart(s.part);
+    };
+    function startTakeoff(){
+      if (takeoff) stopTakeoff();
+      const saved={
+        position:airplane.position.clone(),rotation:airplane.rotation.clone(),
+        shadowPosition:shadow.position.clone(),shadowScale:shadow.scale.clone(),
+        shadowOpacity:shadow.material.opacity,
+        target:target.clone(),theta,phi,radius,autoRotate,
+        gear:articulation.gear?.target ?? 0,deployTarget,deployNow,
+        gridVisible:grid.visible,part:selectedPartId
+      };
+      stopTour(); deselect();
+      autoRotate=false; btnRotate.setAttribute("aria-pressed", "false");
+      deployTarget=deployNow=0; applyDeploy();
+      btnDeploy.setAttribute("aria-pressed", "false");
+      btnDeploy.textContent=I18N.t("viewer.deploy");
+      radiusMax=48;
+      grid.visible=false; runway.visible=true; hotspotLayer.hidden=true;
+      shadow.scale.set(1.05,.58,1);
+      if (articulation.gear){ articulation.gear.target=0; document.querySelector('input[data-control="gear"]').value=0; }
+      takeoff={saved,started:performance.now(),stage:hasTakeoffFlaps ? "flaps" : "roll",manualCamera:false,flaps:0};
+      takeoffHud.hidden=false; btnTakeoff.setAttribute("aria-pressed", "true");
+      syncTakeoffText();
+    }
+    function updateTakeoff(now){
+      if (!takeoff) return;
+      const t=Math.min(duration,(now-takeoff.started)/1000);
+      const flightT=Math.max(0,t-preflight);
+      const rotate=smooth((flightT-4.5)/2.3), climb=smooth((flightT-6)/5.5);
+      const x=-26+68*smooth(flightT/11), angle=.15*rotate;
+      const lift=Math.max(0,-bounds.min.x*Math.sin(angle));
+      airplane.position.set(x,-bounds.min.y+lift+8*climb,0);
+      airplane.rotation.set(0,0,angle);
+      shadow.position.x=x;
+      shadow.material.opacity=.12*(1-climb*.94);
+      target.set(x,airplane.position.y+1.15,0);
+      if (!takeoff.manualCamera){
+        theta=2.15-.25*climb; phi=1.18+.36*climb;
+        radius=Math.min(46,Math.max(20,19/camera.aspect))+2*climb;
+      }
+      if (hasTakeoffFlaps){
+        const flaps=.42*smooth(t/1.7)*(1-smooth((flightT-8.8)/1.9));
+        if (Math.abs(flaps-takeoff.flaps)>.0001){ takeoff.flaps=flaps; applyDeploy(); }
+      }
+      if (articulation.gear){
+        const gear=smooth((flightT-7)/1.7);
+        articulation.gear.target=gear;
+        document.querySelector('input[data-control="gear"]').value=gear;
+      }
+      const stage=t>=duration ? "complete" : t<preflight ? "flaps" : flightT>=7 && articulation.gear ? "gear" : flightT>=6.3 ? "climb" : flightT>=4.5 ? "rotate" : "roll";
+      if (stage!==takeoff.stage){ takeoff.stage=stage; syncTakeoffText(); }
+      const progress=Math.round(t/duration*100);
+      takeoffProgress.setAttribute("aria-valuenow",String(progress));
+      takeoffProgressFill.style.width=progress+"%";
+    }
+    btnTakeoff.addEventListener("click", () => takeoff && takeoff.stage!=="complete" ? stopTakeoff() : startTakeoff());
+    document.getElementById("takeoff-close").addEventListener("click", stopTakeoff);
+    document.addEventListener("langchange", syncTakeoffText);
+    document.addEventListener("keydown", e => { if (e.key==="Escape") stopTakeoff(); });
+    // 渲染迴圈可同時用於檢視器與示範；不另開第二個 animation loop。
+    airplane.userData.updateTakeoff=updateTakeoff;
   }
 
   /* ── 深連結：載入時自動選取部位、還原相機 ── */
@@ -935,11 +1081,12 @@ function init(DATA, MODEL){
 
   function tick(){
     requestAnimationFrame(tick);
+    airplane.userData.updateTakeoff?.(performance.now());
     if (autoRotate && !dragging) airplane.rotation.y += 0.0022;
     let articulationChanged = false;
     for (const state of Object.values(articulation)){
       if (state.now === state.target) continue;
-      state.now = reducedMotion || Math.abs(state.now-state.target) < .001 ? state.target : state.now+(state.target-state.now)*.12;
+      state.now = (reducedMotion && !takeoff) || Math.abs(state.now-state.target) < .001 ? state.target : state.now+(state.target-state.now)*.12;
       articulationChanged = true;
     }
     if (articulationChanged) applyDeploy();
