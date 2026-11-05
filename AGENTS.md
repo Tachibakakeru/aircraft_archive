@@ -47,6 +47,8 @@
 - `tools/make_thumb.py`：由 `models/*.json` 產生縮圖。
 - `tools/check_model_inventory.py`：依 `data/fleet.json` 與 `models/*.json` 重建 3D 模型盤點。
 - `models/blender/concorde.blend`：協和號原創試作，325 個網格物件、12 組鉸鏈；主架先伸縮再旋轉，短艙上方為固定結構，襟副翼不能連動引擎。`tools/build_concorde_blender.py` 以 Blender 重建並匯出 v2 JSON，`tools/check_concorde_model.py` 驗證幾何與收放行程。
+- `tools/add_a321_gear.py`：以 Airbus A321 公開技術資料為比例參考，在原 FR24 模型上產生六輪與三組可動起落架，直接輸出站內 v2 JSON；原模型只有輪艙門，腳本可重跑。此為展示用近似模型，不是原廠 CAD。修改後須更新 `viewer.js` 的模型 fetch 版號與 Service Worker 快取。
+- `tools/build_a321_gear_blender.py`：使用本機 Blender 5.2（執行檔 `D:\blender.exe`）載入 A321 v2 模型，建立可編輯的 `models/blender/a321_gear.blend`（第 1 格伸出、第 61 格收起），並以機身網格檢查前輪收起後是否露出；新增輪組幾何仍以 `tools/add_a321_gear.py` 為來源。
 - v2 的 `surfaces` 可附 `part`、`channel`、`angle`，搭配 `controls` 提供三語可動部位滑桿；未附這些欄位的舊模型沿用原有展開操縱面按鈕。
 - 分段收放可用 `surfaces[].start` 延後旋轉，`e[].slide`／`slideEnd` 讓網格先沿母鉸鏈座標伸縮；Blender 與 viewer 必須保持同樣時序。碰撞檢查應涵蓋正負極限與中途姿態，不能只驗靜止幾何。
 - `tools/check_knowledge.py`：驗證知識條目 ID 與三語欄位完整性；執行 `python tools/check_knowledge.py`。

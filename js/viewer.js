@@ -31,7 +31,7 @@ function loadData(){
 // 機身可看（PARTS/PART_ORDER 也一併 fallback 成空，見 init() 開頭）。
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=182`).then(r => r.ok ? r.json() : null).catch(() => null)
+  fetch(`models/${MODEL_ID}.json?v=211`).then(r => r.ok ? r.json() : null).catch(() => null)
 ]).then(([DATA, MODEL]) => init(DATA, MODEL || { parts: {}, anchors: {}, meta: {} }))
   .catch(() => fail(I18N.t("viewer.loaderror").replace("{id}", MODEL_ID)));
 
