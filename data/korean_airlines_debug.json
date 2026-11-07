@@ -1,0 +1,370 @@
+[
+  {
+    "id": "am",
+    "name": "Aeroméxico",
+    "icao": "AMX",
+    "iata": "AM",
+    "country": {
+      "zh": "墨西哥",
+      "en": "Mexico",
+      "ja": "メキシコ"
+    },
+    "founded": 1934,
+    "alliance": "skyteam",
+    "hubs": [
+      "Mexico City"
+    ],
+    "fleetTotal": 150,
+    "fleet": [
+      {
+        "type": "Boeing 737 家族",
+        "count": 100,
+        "fleetId": "b738"
+      },
+      {
+        "type": "Boeing 787-8 / -9",
+        "count": 22,
+        "fleetId": "b789"
+      }
+    ],
+    "routes": [
+      "New York JFK",
+      "Madrid",
+      "Paris CDG",
+      "Tokyo Narita"
+    ],
+    "tagline": {
+      "zh": "墨西哥最大航空公司，墨西哥城樞紐是連結拉丁美洲與北美航線最密集的機場之一。",
+      "en": "Mexico's largest airline; its Mexico City hub is one of the busiest gateways linking Latin America with North America.",
+      "ja": "メキシコ最大の航空会社。メキシコシティ・ハブは中南米と北米を結ぶ路線が最も密集する空港の一つ。"
+    },
+    "tier": "mainline",
+    "logoSrc": "flightaware_logos",
+    "nameZh": "墨西哥國際航空",
+    "nameJa": "アエロメヒコ航空",
+    "callsign": "AEROMEXICO"
+  },
+  {
+    "id": "su",
+    "name": "Aeroflot",
+    "icao": "AFL",
+    "iata": "SU",
+    "country": {
+      "zh": "俄羅斯",
+      "en": "Russia",
+      "ja": "ロシア"
+    },
+    "founded": 1923,
+    "alliance": "none",
+    "hubs": [
+      "Moscow Sheremetyevo"
+    ],
+    "fleetTotal": 180,
+    "fleet": [
+      {
+        "type": "Airbus A320 家族",
+        "count": 90,
+        "fleetId": "a320"
+      },
+      {
+        "type": "Boeing 777-300ER",
+        "count": 15,
+        "fleetId": "b773"
+      },
+      {
+        "type": "Airbus A330",
+        "count": 20,
+        "fleetId": "a332"
+      }
+    ],
+    "routes": [
+      "國際線因制裁大幅縮減",
+      "北京",
+      "杜拜",
+      "伊斯坦堡"
+    ],
+    "tagline": {
+      "zh": "俄羅斯國家航空，全球歷史最悠久的持續營運航空公司之一，2022 年後因制裁被多聯盟暫停會籍、國際航線大幅萎縮。",
+      "en": "Russia's flag carrier and one of the world's oldest continuously operating airlines; sanctions since 2022 suspended its alliance memberships and sharply shrank its international network.",
+      "ja": "ロシアのフラッグキャリアで、現存する航空会社の中でも屈指の歴史を持つ。2022年以降の制裁でアライアンス資格が停止され、国際線網も大幅に縮小した。"
+    },
+    "tier": "mainline",
+    "logoSrc": "flightaware_logos",
+    "nameZh": "俄羅斯航空",
+    "nameJa": "アエロフロート・ロシア航空",
+    "callsign": "AEROFLOT"
+  },
+  {
+    "id": "tus",
+    "name": "ABSA - Aerolinhas Brasileiras",
+    "icao": "TUS",
+    "iata": "M3",
+    "country": {
+      "zh": "Brazil",
+      "en": "Brazil",
+      "ja": "Brazil"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "radarbox_logos",
+    "callsign": "ABSA Cargo"
+  },
+  {
+    "id": "sli",
+    "name": "Aerolitoral",
+    "icao": "SLI",
+    "iata": "5D",
+    "country": {
+      "zh": "Mexico",
+      "en": "Mexico",
+      "ja": "Mexico"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "COSTERA"
+  },
+  {
+    "id": "arg",
+    "name": "Aerolineas Argentinas",
+    "icao": "ARG",
+    "iata": "AR",
+    "country": {
+      "zh": "Argentina",
+      "en": "Argentina",
+      "ja": "Argentina"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "ARGENTINA"
+  },
+  {
+    "id": "aul",
+    "name": "Aeroflot-Nord",
+    "icao": "AUL",
+    "iata": "5N",
+    "country": {
+      "zh": "Russia",
+      "en": "Russia",
+      "ja": "Russia"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "ARCHANGELSK AIR"
+  },
+  {
+    "id": "awu",
+    "name": "Aeroline GmbH",
+    "icao": "AWU",
+    "iata": "7E",
+    "country": {
+      "zh": "Germany",
+      "en": "Germany",
+      "ja": "Germany"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "SYLT-AIR"
+  },
+  {
+    "id": "dnv",
+    "name": "Aeroflot-Don",
+    "icao": "DNV",
+    "iata": "D9",
+    "country": {
+      "zh": "Russia",
+      "en": "Russia",
+      "ja": "Russia"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "radarbox_logos",
+    "callsign": "DONAVIA"
+  },
+  {
+    "id": "lne",
+    "name": "Aerolane",
+    "icao": "LNE",
+    "iata": "XL",
+    "country": {
+      "zh": "Ecuador",
+      "en": "Ecuador",
+      "ja": "Ecuador"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "AEROLANE"
+  },
+  {
+    "id": "nig",
+    "name": "Aero Contractors",
+    "icao": "NIG",
+    "iata": "AJ",
+    "country": {
+      "zh": "Nigeria",
+      "en": "Nigeria",
+      "ja": "Nigeria"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "AEROLINE"
+  },
+  {
+    "id": "rpb",
+    "name": "AeroRep",
+    "icao": "RPB",
+    "iata": "P5",
+    "country": {
+      "zh": "Colombia",
+      "en": "Colombia",
+      "ja": "Colombia"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "AEROREPUBLICA"
+  },
+  {
+    "id": "tao",
+    "name": "Aeromar",
+    "icao": "TAO",
+    "iata": "VW",
+    "country": {
+      "zh": "Mexico",
+      "en": "Mexico",
+      "ja": "Mexico"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "TRANS-AEROMAR"
+  },
+  {
+    "id": "glg",
+    "name": "Aerolineas Galapagos (Aerogal)",
+    "icao": "GLG",
+    "iata": "2K",
+    "country": {
+      "zh": "Ecuador",
+      "en": "Ecuador",
+      "ja": "Ecuador"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "flightaware_logos",
+    "callsign": "GALAPAGOS"
+  },
+  {
+    "id": "tso",
+    "name": "Transaero Airlines",
+    "icao": "TSO",
+    "iata": "UN",
+    "country": {
+      "zh": "Russia",
+      "en": "Russia",
+      "ja": "Russia"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "radarbox_logos",
+    "callsign": "TRANSOVIET"
+  },
+  {
+    "id": "iam",
+    "name": "Aeronautica Militare",
+    "icao": "IAM",
+    "iata": "",
+    "country": {
+      "zh": "Italy",
+      "en": "Italy",
+      "ja": "Italy"
+    },
+    "founded": null,
+    "alliance": "none",
+    "tier": null,
+    "hubs": [],
+    "fleetTotal": null,
+    "fleet": [],
+    "routes": [],
+    "tagline": {},
+    "logoSrc": "radarbox_logos",
+    "callsign": "Italian Airforce"
+  }
+]
