@@ -817,3 +817,14 @@
 
 - 使用者確認「PUSH」，將 A321 六輪／三組收放起落架、前輪樞紐穿模修正、Blender 可編輯檔與重建／檢查腳本一併發布；檢視器資源版號為 211、Service Worker 為 `hangar-v77`。
 - 已完成的本地驗證包括放下／中途／收起與起飛示範、產生程式可重跑、Blender 743 個有效頂點的機腹外露檢查。發布範圍不含未確認授權的 V 速照片與知識資料覆寫、韓國航空除錯檔。其他機型的輪組仍待逐型處理。
+
+### UI／動畫 Skills 安裝與動畫稽核（2026-11-07 17:00–17:31，本地，未提交）
+
+- 安裝 emilkowalski/skills 的 6 個 skill 到 `.claude/skills/`（emil-design-eng、improve-animations、animation-performance、choreograph、mobile-native、break-ui），另產生 `skills-lock.json`；**未提交**，提交前決定是否列入 `.gitignore`（避免被 Cloudflare Pages 一起部署）。
+- 以 `improve-animations` 稽核全站 CSS／JS 動畫（commit `8fff512`），未改任何程式碼。尊重既有決定：首頁航線、換頁過場、翻頁時鐘、翻牌看板在 reduced-motion 下照常播放；過場 0.9／1.0 秒與 `--tx-ease`；跑道起飛與翻牌下落的 ease-in（物理動作）。
+- 發現：16 處 `transition:all`；行動裝置（PWA）的 hover 位移／機尾翻轉未以 `(hover:hover) and (pointer:fine)` 限定，觸控點擊會卡在 hover 狀態；動畫 `left`／`width`／`margin`（`js/runway.js` 每幀改 `left`/`width`，正是機場頁解析 11 MB 時）；全站沒有 `:active` 按壓回饋；四組近似的 ease-out 曲線沒有共用 token；toast 用預設 ease。
+- 待使用者選定哪些項目寫成 `plans/` 實作計畫；尚未寫計畫、尚未實作。
+- 2026-11-07 17:31：在 `AGENTS.md`（「持續紀錄規則」之前）新增「UI／動畫 Skills」段落：來源、安裝／更新指令、6 個 skill 的用途與本專案適用處、套用時須優先遵守的既有動畫決定、`plans/` 位置、`.gitignore` 待決事項。新建 `CLAUDE.md`，內容為同一段落（附註完整地圖見 `AGENTS.md`）。
+- 本輪全部改動都只在本地：`AGENTS.md`、`CLAUDE.md`（新）、`Progress.md`、`.claude/skills/`（新）、`skills-lock.json`（新）；**尚未提交、尚未推送**，等使用者確認。未動到網站程式碼、資料或快取版號。
+- 2026-11-07 19:13：使用者選擇「Gitignore skills」。`.gitignore` 新增 `.claude/skills/`；`AGENTS.md`、`CLAUDE.md` 的待決事項改為已決定（只提交 `skills-lock.json`，以 `npx skills experimental_install` 還原）。原因：skill 複本未附 MIT 授權聲明、Cloudflare Pages 會部署 repo 內檔案。仍未提交、未推送。
+- 2026-11-07 19:13：發現 17:51 新出現未追蹤的 `.agents/skills/`（同 6 個 skill 的複本，非本 task 建立），同理列入 `.gitignore`，檔案本身未刪除。
