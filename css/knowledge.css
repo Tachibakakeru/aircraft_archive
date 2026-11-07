@@ -216,7 +216,14 @@ body{min-height:100vh}
 .kn-view-gallery figure.kn-gauge-photo{width:100%;max-width:430px;margin-inline:auto}
 .kn-view-gallery .kn-gauge-photo img{aspect-ratio:1}
 .kn-view-gallery figcaption{font-size:10px;line-height:1.45;color:var(--muted);margin-top:4px}
-.kn-view-gallery figcaption a{color:var(--cyan)}
+.kn-view-gallery figcaption a,.kn-view-sources a{color:var(--cyan)}
+.kn-view-sections section{margin-top:14px}
+.kn-view-sections h4{font-size:14px;margin-bottom:4px}
+.kn-view-sections p{font-size:13px;line-height:1.75;white-space:pre-line}
+.kn-view-sources{font-size:12px;line-height:1.6;margin-top:12px}
+.kn-view-sources:empty{display:none}
+.kn-reference-gallery{grid-template-columns:1fr}
+.kn-reference-gallery img{aspect-ratio:auto;background:#fff}
 
 .kn-editbtn{
   margin-top:16px;

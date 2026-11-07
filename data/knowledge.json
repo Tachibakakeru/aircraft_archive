@@ -337,6 +337,53 @@
       "images": [{"src": "assets/knowledge/v-speeds-nasa-takeoff.png", "caption": {"zh": "NASA 起飛速度與距離示意圖。方框標出 V1、VR 與 V2，沿著跑道滑跑、抬輪到初始爬升排列（原圖裁切並轉正）。", "en": "NASA takeoff speed and distance diagram. The boxes mark V1, VR and V2 from the runway roll through rotation and initial climb (cropped and rotated).", "ja": "NASA の離陸速度と距離の模式図。滑走から機首上げ、初期上昇までの V1・VR・V2 を枠で示す（原図を切り出し、向きを調整）。"}, "source": "https://ntrs.nasa.gov/api/citations/19730009304/downloads/19730009304.pdf#page=73", "credit": "NASA / FAA · NASA TN D-7106 (1973), Fig. 33", "license": "https://ntrs.nasa.gov/citations/19730009304", "licenseName": "Public domain (U.S. government work)", "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Airspeed_indicator_DC-10.jpg?width=960"}]
     },
     {
+      "id": "static-takeoff",
+      "category": "operations",
+      "hotspot": null,
+      "name": {
+        "zh": "靜止起飛（Static Takeoff）",
+        "en": "Static Takeoff",
+        "ja": "静止離陸（スタティックテイクオフ）"
+      },
+      "summary": {
+        "zh": "靜止起飛也稱靜態起飛。飛機對正跑道並停住，機組踩住煞車，先讓引擎在機型規定的設定下穩定，再放煞車開始起飛滾行。滾動起飛（Rolling Takeoff）則在飛機移動時建立推力，仍須遵守機型的推力穩定程序。",
+        "en": "In a static takeoff, the aircraft lines up and stops on the runway. The crew holds the brakes while the engines stabilize at the setting specified for the aircraft, then releases the brakes to begin the takeoff roll. In a rolling takeoff, thrust builds while the aircraft is moving, with the prescribed stabilization step still observed.",
+        "ja": "静止離陸では滑走路に正対して停止し、ブレーキを保持したまま機種所定の設定でエンジンを安定させ、ブレーキを解除して離陸滑走を始める。ローリングテイクオフでは機体が動きながら推力を上げるが、所定の安定化手順は同じく必要になる。"
+      },
+      "fact": {
+        "zh": "左右引擎即使同時加推力，反應也可能一快一慢。先穩定引擎有助於減少低速時的推力不對稱與偏航。以 Airbus 公開的程序為例，放煞車前先達到中間穩定設定，之後才建立起飛推力。實際設定與可採用的方式取決於機型手冊、營運程序、可用跑道、風況與道面狀況。",
+        "en": "Engines can spool up at different rates even when thrust is commanded together. Stabilizing them first helps limit asymmetric thrust and yaw at low speed. In Airbus's published example, the engines reach an intermediate setting before brake release and takeoff thrust is set afterward. The aircraft manual, operator procedures, available runway, wind and runway condition govern which technique is used.",
+        "ja": "同時に推力を指示しても、左右エンジンの加速には差が出ることがある。先に安定させると、低速での推力差や偏向を抑えやすい。Airbus の公開例では、ブレーキ解除前に中間設定で安定させ、その後に離陸推力を設定する。方式や設定は機種のマニュアル、運航手順、利用可能な滑走路、風や路面状態によって決まる。"
+      },
+      "sources": [
+        {
+          "url": "https://safetyfirst.airbus.com/engine-thrust-management-thrust-setting-at-takeoff/",
+          "label": {
+            "zh": "Airbus 起飛推力管理",
+            "en": "Airbus takeoff thrust management",
+            "ja": "Airbus 離陸時の推力管理"
+          }
+        },
+        {
+          "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/17_afh_ch16.pdf",
+          "label": {
+            "zh": "FAA 飛行手冊第 16 章",
+            "en": "FAA Airplane Flying Handbook, Chapter 16",
+            "ja": "FAA 飛行ハンドブック第16章"
+          }
+        },
+        {
+          "url": "https://www.ttsb.gov.tw/media/3605/fe061_factual.pdf",
+          "label": {
+            "zh": "臺灣運安會中文資料，附錄 5",
+            "en": "Taiwan TTSB report, Appendix 5 (Chinese)",
+            "ja": "台湾運安会資料、付録5（中国語）"
+          }
+        }
+      ],
+      "images": []
+    },
+    {
       "id": "flight-level",
       "category": "navigation",
       "hotspot": null,
@@ -977,6 +1024,221 @@
       "summary": {"zh": "在符合條件的機場天氣報告中，CAVOK 代替能見度、現在天氣與雲況欄位：能見度至少 10 公里、沒有顯著天氣，也沒有低於 5,000 呎或最高最低扇區高度（取較高者）的雲底。", "en": "In eligible aerodrome weather reports, CAVOK replaces visibility, present weather and cloud groups: visibility is at least 10 km, no significant weather is present, and no cloud base lies below 5,000 ft or the highest minimum sector altitude, whichever is higher.", "ja": "条件を満たす飛行場気象報では、CAVOK が視程・現在天気・雲の情報を置き換える。視程は 10 km 以上、顕著な天気はなく、雲底は 5,000 ft と最も高い最低扇区高度の高い方より下にない。"},
       "fact": {"zh": "此外不能有積雨雲（CB）或塔狀積雲（TCU）。CAVOK 不代表無雲，也不代表適合所有飛行活動；仍須查看風、溫度、氣壓與天氣變化。它常出現在 METAR 等機場天氣報告中。", "en": "There must also be no cumulonimbus (CB) or towering cumulus (TCU). CAVOK does not mean cloudless or automatically safe for every flight: check wind, temperature, pressure and changing conditions too. It commonly appears in METAR reports.", "ja": "積乱雲（CB）や塔状積雲（TCU）も存在しないことが必要。CAVOK は快晴や全ての飛行に安全という意味ではない。風・気温・気圧と天候の変化も確認する。METAR などに現れる。"},
       "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Russia,_Irkutsk,_Ust-Ilimsk_-_Ust-Ilimsk_Airport_WMID3138574.jpg?width=960", "caption": {"zh": "晴朗天空下的實際機場；僅供能見度情境參考", "en": "Real airport under clear skies; visibility context only", "ja": "晴天の実際の空港。視程の参考写真"}, "source": "https://commons.wikimedia.org/wiki/File:Russia,_Irkutsk,_Ust-Ilimsk_-_Ust-Ilimsk_Airport_WMID3138574.jpg", "credit": "Haralug · CC BY-SA 3.0"}]
+    },
+    {
+      "id": "station-plot",
+      "category": "weather",
+      "hotspot": "station-plot",
+      "name": {
+        "zh": "地面測站圖：航空天氣圖示",
+        "en": "Surface Station Plot: Weather Symbols",
+        "ja": "地上観測点プロット：天気記号"
+      },
+      "summary": {
+        "zh": "地面測站圖（Surface Station Plot／Station Model）用測站圓圈、風羽、數字與符號，呈現特定時間、地點的觀測。本條目依 NOAA 天氣預報中心（WPC）的圖例，逐一解讀測站位置、現在天氣、風、海平面氣壓、三小時氣壓趨勢和天空覆蓋。",
+        "en": "A surface station plot, or station model, uses a station circle, wind barbs, numbers and symbols to show observations at a particular place and time. This guide walks through the fields in NOAA Weather Prediction Center's example and each symbol in its weather, wind, pressure trend and sky-cover keys.",
+        "ja": "地上観測点プロット（ステーションモデル）は、観測点の円、風矢羽根、数値や記号で特定の地点・時刻の観測を示す。ここでは NOAA 気象予報センター（WPC）の例を基に、配置と現在天気、風、海面気圧、3時間気圧傾向、雲量の記号を解説する。"
+      },
+      "fact": {
+        "zh": "先看圖名、觀測時間與單位。海平面氣壓是為了比較不同海拔的測站而換算的數值。航空高度表設定 QNH、機場雲幕高度和飛航警報要從對應產品查閱。",
+        "en": "Start with the chart title, observation time and units. Sea-level pressure is reduced to a common level so stations at different elevations can be compared. Use the relevant aviation products for QNH, airport ceilings and flight weather advisories.",
+        "ja": "まず図の名称、観測時刻、単位を確認する。海面気圧は標高が異なる観測点を比較するために換算した値。高度計規正値 QNH、空港のシーリング、航空気象警報は対応する資料で確認する。"
+      },
+      "sections": [
+        {
+          "imageSrc": "assets/knowledge/noaa-station-plot.gif",
+          "title": {
+            "zh": "1. 先看圖上各欄位的位置",
+            "en": "1. Read the layout",
+            "ja": "1. 数値と記号の位置"
+          },
+          "body": {
+            "zh": "中央圓圈是測站位置，圓內標記表示天空覆蓋，伸出的線是風桿。左上是氣溫，左下是露點，正左是現在天氣。右上是海平面氣壓，右側是三小時氣壓變化。\nNOAA 範例的 57 是氣溫 57°F，56 是露點 56°F，三個紅點表示中雨，107 是 1010.7 hPa，−6 加上先斜降再水平的線，表示三小時淨下降 0.6 hPa、先降後穩。氣溫與露點越接近，空氣越接近飽和，仍要看實際觀測才能判斷有沒有霧。",
+            "en": "The circle marks the station and its fill shows sky cover. The shaft extending from it shows wind. Temperature is upper left, dew point lower left, and present weather directly left. Sea-level pressure is upper right and the three-hour change is on the right.\nIn NOAA's example, 57 and 56 are temperature and dew point in °F, three red dots indicate moderate rain, and 107 decodes to 1010.7 hPa. The −6 and descending-then-level stroke mean a net fall of 0.6 hPa in three hours, followed by steady pressure. A small temperature–dew point spread indicates air closer to saturation, while fog requires its own observation.",
+            "ja": "中央の円が観測点で、塗り方は雲量、伸びる軸は風を示す。左上は気温、左下は露点、真左は現在天気。右上は海面気圧、右側は3時間の気圧変化。\nNOAA の例では 57 と 56 は華氏の気温と露点。赤い点3個は並の雨、107 は 1010.7 hPa。−6 と下降後に水平になる線は、3時間で 0.6 hPa 低下し、後半は横ばいだったことを示す。気温と露点が近いほど飽和に近いが、霧の有無は別に観測する。"
+          }
+        },
+        {
+          "imageSrc": "assets/knowledge/noaa-station-weather.gif",
+          "title": {
+            "zh": "2. 現在天氣：原圖的 18 個符號",
+            "en": "2. Present weather: the 18 symbols in the key",
+            "ja": "2. 現在天気：凡例の18記号"
+          },
+          "body": {
+            "zh": "● 雨：兩點是小雨，三點是中雨，四點是大雨。\n＊ 雪：兩、三、四個星號依序表示小雪、中雪、大雪。\n雷符號：上方有點表示伴雨，有星號表示伴雪，單獨出現表示測站沒有降水。\n倒空心三角形表示陣性降水：上方一點是陣雨，一個星號是陣雪。\n兩個逗點是毛毛雨。凍結的彎鉤配實心點是凍雨，配逗點是凍毛毛雨。\n正立三角形內加點是冰珠（ice pellets；美式英語 sleet）。\n兩條水平線在這張圖例中是薄霧，三條是較濃的霧。橫向 ∞ 表示霾。這張圖例只列常見組合，其他強度、間歇或近期天氣可查 NOAA 的完整表。",
+            "en": "Rain: two dots for light, three for moderate, and four for heavy. Snow: two, three or four asterisks mark the same intensity levels.\nThunder: a dot above the thunder mark indicates rain, an asterisk indicates snow, and the thunder mark alone indicates no precipitation at the station.\nShowers: an inverted open triangle with a dot above means rain showers, and with an asterisk means snow showers.\nTwo commas mark drizzle. The freezing hook with a dot means freezing rain, and with a comma means freezing drizzle.\nAn upright triangle containing a dot marks ice pellets (sleet in US usage).\nTwo horizontal strokes represent thin fog in this key, three indicate thicker fog, and a sideways infinity sign means haze. NOAA's full table covers additional intensities, timing and recent weather.",
+            "ja": "雨は点2・3・4個が弱・並・強の順。雪は星印2・3・4個で同じ強さを示す。\n雷の記号の上に点があれば雨、星印なら雪を伴う。雷の記号だけなら観測点で降水なし。\n逆三角形はしゅう雨性の降水。上の点はにわか雨、星印はにわか雪。\nコンマ2つは霧雨。凍結を示す曲線に点を添えると着氷性の雨、コンマなら着氷性の霧雨。\n点を入れた正三角形は氷粒（米国でいう sleet）。\nこの凡例では横線2本が薄い霧、3本が濃い霧。横向きの ∞ は煙霧。強さや降り方、直前の天気を表す他の記号は NOAA の全表を参照。"
+          }
+        },
+        {
+          "imageSrc": "assets/knowledge/noaa-station-wind.gif",
+          "title": {
+            "zh": "3. 風羽：風從哪裡吹來、有多快",
+            "en": "3. Wind barbs: where the wind comes from and how fast",
+            "ja": "3. 風矢羽根：吹いてくる方向と速さ"
+          },
+          "body": {
+            "zh": "從測站圓心伸出的風桿，指向風吹來的方向。三角旗 50 節、長羽 10 節、短羽 5 節，全部相加，依 5 節一級繪製。\nNOAA 圖例的四個例子是西風 75 節（50＋10＋10＋5）、東北風 25 節（10＋10＋5）、南風 5 節（單一短羽）和靜風（無風桿，以測站外的圓環表示）。靜風圓環與內圈的雲量填色各有用途。",
+            "en": "The shaft points from the station toward the direction the wind comes from. Add 50 kt for each triangular pennant, 10 kt for each full barb and 5 kt for each half barb. Plots use 5 kt increments.\nNOAA's examples are west at 75 kt (50 + 10 + 10 + 5), northeast at 25 kt (10 + 10 + 5), south at 5 kt (one half barb), and calm (an outer circle with no shaft). The outer calm circle and the inner sky-cover fill convey different observations.",
+            "ja": "軸は観測点から風が吹いてくる方向へ伸びる。三角旗は50 kt、長い羽根は10 kt、短い羽根は5 kt。合計を5 kt刻みで示す。\nNOAA の例は西風75 kt（50＋10＋10＋5）、北東風25 kt（10＋10＋5）、南風5 kt（短い羽根1本）、静穏（軸がなく外側に円）。静穏の外円と内側の雲量表示は別の観測項目。"
+          }
+        },
+        {
+          "title": {
+            "zh": "4. 三位數海平面氣壓",
+            "en": "4. Three-digit sea-level pressure",
+            "ja": "4. 3桁の海面気圧"
+          },
+          "body": {
+            "zh": "右上數字省略開頭的 9 或 10，末位是 0.1 hPa（1 mb＝1 hPa）。一般地面圖可把 000–499 前面補 10、500–999 前面補 9，並在最後一位前加小數點。極端氣壓應與相鄰測站及圖例交叉確認。\nNOAA 範例：410 → 1041.0、103 → 1010.3、987 → 998.7、872 → 987.2 hPa。",
+            "en": "The first 9 or 10 is omitted and the last digit represents 0.1 hPa (1 mb = 1 hPa). For typical surface values, prefix 000–499 with 10, or 500–999 with 9, then place the decimal before the last digit. Check unusual values against nearby stations and the chart legend.\nNOAA examples: 410 → 1041.0, 103 → 1010.3, 987 → 998.7, and 872 → 987.2 hPa.",
+            "ja": "先頭の9または10を省き、末尾1桁は0.1 hPa（1 mb＝1 hPa）を表す。通常は000～499に10、500～999に9を付け、末尾1桁の前に小数点を置く。極端な値は周囲の観測点と凡例で確認する。\nNOAA の例：410 → 1041.0、103 → 1010.3、987 → 998.7、872 → 987.2 hPa。"
+          }
+        },
+        {
+          "imageSrc": "assets/knowledge/noaa-station-pressure.gif",
+          "title": {
+            "zh": "5. 三小時氣壓趨勢：9 種線形",
+            "en": "5. Three-hour pressure trend: nine patterns",
+            "ja": "5. 3時間の気圧傾向：9パターン"
+          },
+          "body": {
+            "zh": "數字表示三小時的淨變化，單位是 0.1 hPa。線由左至右表示變化過程。\n淨降：持續下降、下降後持平、先降後小幅回升、先升後更大幅下降。\n淨升：持續上升、上升後持平、先降後更大幅回升、先升後小幅下降。\n持平：水平短線。兩段折線要同時看順序與哪一段較大，才能分辨淨升或淨降。",
+            "en": "The number is the net three-hour change in tenths of a hPa. Read the line left to right for how pressure changed.\nNet fall: continuous fall; fall then steady; fall then a smaller rise; rise then a greater fall.\nNet rise: continuous rise; rise then steady; fall then a greater rise; rise then a smaller fall.\nSteady: a horizontal stroke. For bent lines, both the order and relative size of the two movements matter.",
+            "ja": "数値は3時間の正味変化を0.1 hPa単位で示す。線は左から右へ時間順に読む。\n正味低下：低下を継続、低下後に横ばい、低下後に小幅上昇、上昇後にそれを上回る低下。\n正味上昇：上昇を継続、上昇後に横ばい、低下後にそれを上回る上昇、上昇後に小幅低下。\n横ばい：水平の短線。折れ線は順番と各変化の大小を合わせて読む。"
+          }
+        },
+        {
+          "imageSrc": "assets/knowledge/noaa-station-sky.gif",
+          "title": {
+            "zh": "6. 天空覆蓋：8 種圓圈標記",
+            "en": "6. Sky cover: eight circle markings",
+            "ja": "6. 空の覆われ方：8種類の円"
+          },
+          "body": {
+            "zh": "空圈是晴空。圓內有直線是少量雲（這張圖例標為低於約 12%）。填約四分之一是疏雲、二分之一是半晴半雲、四分之三是多雲、全填是陰天。\n圓內有 X 表示天空被霧或其他現象遮蔽，難以直接判斷雲量。圓內有 M 表示雲量資料缺失。這些標記描述總天空覆蓋，雲底高度要另查。",
+            "en": "An empty circle is clear. A vertical stroke marks few clouds (less than about 12% in this key). A quarter fill is scattered, half is partly cloudy, three quarters is mostly cloudy, and full is overcast.\nAn X means the sky is obscured by fog or another phenomenon and cloud amount cannot be observed directly. An M means sky-cover data is missing. These marks show total sky cover. Look up cloud-base height separately.",
+            "ja": "空の円は快晴。縦線は雲がわずか（この凡例では約12%未満）。4分の1は雲が散在、半分は雲量約50%、4分の3は雲が多く、全面を塗れば全天が雲に覆われている。\n円内の X は霧などで空が遮られ、雲量を直接観測できない状態。M は雲量データの欠測。円は全天の覆われ方を示し、雲底の高さは別に確認する。"
+          }
+        },
+        {
+          "title": {
+            "zh": "7. 航空上怎麼用",
+            "en": "7. How it relates to aviation weather",
+            "ja": "7. 航空気象との関係"
+          },
+          "body": {
+            "zh": "把多個測站放在一起，可比較地面風、降水和氣壓的分布。不同產品還可能加上能見度、過去天氣、雲型、雲底高度或累積降水，單位與位置依圖例確認。\nMETAR 提供機場實況，TAF 是機場預報，SIGMET 通報航路上的顯著危險天氣。地面測站圖是觀測快照，航空用途需搭配這些產品與有效時間。",
+            "en": "Comparing stations shows regional patterns in surface wind, precipitation and pressure. Other plots can add visibility, past weather, cloud types, cloud-base height or accumulated precipitation. Check their own legends for positions and units.\nA METAR reports current airport conditions, a TAF forecasts airport conditions, and a SIGMET advises of significant en-route weather. A station plot is an observation snapshot to use alongside those products and their valid times.",
+            "ja": "複数の観測点を比べると、地上風、降水、気圧の分布が分かる。図によっては視程、過去天気、雲形、雲底高度や積算降水量も加わるため、配置と単位は各凡例を確認する。\nMETAR は空港の実況、TAF は空港予報、SIGMET は航路上の顕著な危険気象の情報。地上観測点の図は一時点の実況なので、各資料と有効時刻を合わせて読む。"
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/knowledge/noaa-station-plot.gif",
+          "caption": {
+            "zh": "NOAA 地面測站圖範例",
+            "en": "NOAA sample surface station plot",
+            "ja": "NOAA 地上観測点プロットの例"
+          },
+          "source": "https://www.wpc.ncep.noaa.gov/html/stationplot.shtml",
+          "credit": "NOAA / NWS Weather Prediction Center",
+          "license": "https://www.weather.gov/disclaimer",
+          "licenseName": "Public domain (NWS)"
+        },
+        {
+          "src": "assets/knowledge/noaa-station-weather.gif",
+          "caption": {
+            "zh": "NOAA 現在天氣圖例，共 18 個符號",
+            "en": "NOAA present weather key, 18 symbols",
+            "ja": "NOAA 現在天気の凡例（18記号）"
+          },
+          "source": "https://www.wpc.ncep.noaa.gov/html/stationplot.shtml#weather",
+          "credit": "NOAA / NWS Weather Prediction Center",
+          "license": "https://www.weather.gov/disclaimer",
+          "licenseName": "Public domain (NWS)"
+        },
+        {
+          "src": "assets/knowledge/noaa-station-wind.gif",
+          "caption": {
+            "zh": "NOAA 風羽與靜風的四個例子",
+            "en": "NOAA wind barbs and calm: four examples",
+            "ja": "NOAA の風矢羽根と静穏の例（4種）"
+          },
+          "source": "https://www.wpc.ncep.noaa.gov/html/stationplot.shtml#wind",
+          "credit": "NOAA / NWS Weather Prediction Center",
+          "license": "https://www.weather.gov/disclaimer",
+          "licenseName": "Public domain (NWS)"
+        },
+        {
+          "src": "assets/knowledge/noaa-station-pressure.gif",
+          "caption": {
+            "zh": "NOAA 三小時氣壓趨勢圖例，共 9 種線形",
+            "en": "NOAA three-hour pressure trend key, nine patterns",
+            "ja": "NOAA 3時間気圧傾向の凡例（9種）"
+          },
+          "source": "https://www.wpc.ncep.noaa.gov/html/stationplot.shtml#prestend",
+          "credit": "NOAA / NWS Weather Prediction Center",
+          "license": "https://www.weather.gov/disclaimer",
+          "licenseName": "Public domain (NWS)"
+        },
+        {
+          "src": "assets/knowledge/noaa-station-sky.gif",
+          "caption": {
+            "zh": "NOAA 天空覆蓋圖例，含遮蔽和缺測，共 8 種",
+            "en": "NOAA sky-cover key, eight marks including obscured and missing",
+            "ja": "NOAA の空の覆われ方の凡例（遮蔽と欠測を含む8種）"
+          },
+          "source": "https://www.wpc.ncep.noaa.gov/html/stationplot.shtml#skycover",
+          "credit": "NOAA / NWS Weather Prediction Center",
+          "license": "https://www.weather.gov/disclaimer",
+          "licenseName": "Public domain (NWS)"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.wpc.ncep.noaa.gov/html/stationplot.shtml",
+          "label": {
+            "zh": "NOAA WPC 原始測站圖例",
+            "en": "Original NOAA WPC station plot key",
+            "ja": "NOAA WPC の観測点プロット原典"
+          }
+        },
+        {
+          "url": "https://www.noaa.gov/jetstream/wxmaps-max/jetstream-max-surface-weather-plot-symbols",
+          "label": {
+            "zh": "NOAA 完整 100 種現在天氣代碼",
+            "en": "NOAA's full set of 100 present weather codes",
+            "ja": "NOAA 現在天気コード全100種"
+          }
+        },
+        {
+          "url": "https://www.wpc.ncep.noaa.gov/dailywxmap/wxsymbols.html",
+          "label": {
+            "zh": "WPC 其他測站欄位",
+            "en": "Additional WPC station fields",
+            "ja": "WPC の追加観測項目"
+          }
+        },
+        {
+          "url": "https://aviationweather.gov/gfa/help/?page=tutorial",
+          "label": {
+            "zh": "美國航空氣象中心圖例",
+            "en": "Aviation Weather Center chart guide",
+            "ja": "米国航空気象センターの凡例"
+          }
+        },
+        {
+          "url": "https://climate.cwa.gov.tw/GroundObservation",
+          "label": {
+            "zh": "臺灣中央氣象署地面觀測資料",
+            "en": "Taiwan CWA surface observation data (Chinese)",
+            "ja": "台湾中央気象署の地上観測資料（中国語）"
+          }
+        }
+      ]
     },
     {
       "id": "metar", "category": "weather", "hotspot": "metar",

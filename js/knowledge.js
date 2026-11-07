@@ -33,6 +33,7 @@ const INSTRUMENT_TOPICS = [
 const RUNWAY_TOPICS = [
   { id: "runway-numbering", label: "RWY 23R" },
   { id: "v-speeds",         label: "V1 VR V2" },
+  { id: "static-takeoff",   label: "STATIC T/O" },
   { id: "wake",              label: "WAKE" },
   { id: "windshear",         label: "SHEAR" },
   { id: "decision-height",  label: "DA(H)" },
@@ -66,6 +67,7 @@ const NAV_TOPICS = [
   { id: "adsb",                 label: "ADS-B" },
   { id: "cavok",                label: "CAVOK" },
   { id: "metar",                label: "METAR" },
+  { id: "station-plot",         label: "STN PLOT" },
   { id: "taf",                  label: "TAF" },
   { id: "cpdlc",                label: "CPDLC" },
   { id: "sid",                  label: "SID" },
@@ -296,6 +298,10 @@ const RUNWAY_DECOR = {
   "v-speeds": (cx, cy) => `
     <path d="M ${cx - 22} ${cy + 12} L ${cx + 6} ${cy - 4} L ${cx + 22} ${cy - 16} L ${cx + 10} ${cy - 6} L ${cx - 4} ${cy - 2} Z" class="kn-vspeed-plane"/>
     <path d="M ${cx + 18} ${cy - 24} l 8 -6 m -8 6 l 1 -9 m -1 9 l 9 1" class="kn-vspeed-arrow"/>`,
+  "static-takeoff": (cx, cy) => `
+    <rect x="${cx - 25}" y="${cy - 7}" width="12" height="12" rx="2" class="kn-squawk-box"/>
+    <path d="M ${cx - 5} ${cy - 1} H ${cx + 25} m -8 -7 l 8 7 -8 7" class="kn-vspeed-arrow"/>
+    <path d="M ${cx - 26} ${cy + 16} H ${cx + 26}" class="kn-fl-line major" stroke-dasharray="5 4"/>`,
   wake: (cx, cy) => `
     <line x1="${cx - 26}" y1="${cy}" x2="${cx - 4}" y2="${cy}" class="kn-wake-wing"/>
     <path d="${arcPath(cx + 6, cy, 8, 0, 300)}" class="kn-wake-spiral"/>
@@ -406,6 +412,12 @@ const NAV_DECOR = {
     <path d="${arcPath(cx, cy, 20, 200, 340)}" class="kn-wake-spiral"/>`,
   cavok: (cx, cy) => `
     <circle cx="${cx}" cy="${cy - 5}" r="15" class="kn-etops-ring"/><path d="M ${cx - 24} ${cy + 17} H ${cx + 24}" class="kn-fl-line major"/>`,
+  "station-plot": (cx, cy) => `
+    <circle cx="${cx}" cy="${cy}" r="9" class="kn-squawk-box"/>
+    <path d="M ${cx - 4} ${cy - 8} l -12 -23 m 0 0 l 13 -5 m -8 14 l 8 -3" class="kn-vspeed-arrow"/>
+    <circle cx="${cx - 20}" cy="${cy}" r="2.8" class="kn-g-hub"/>
+    <circle cx="${cx - 27}" cy="${cy + 6}" r="2.8" class="kn-g-hub"/>
+    <circle cx="${cx - 13}" cy="${cy + 6}" r="2.8" class="kn-g-hub"/>`,
   metar: (cx, cy) => `
     <rect x="${cx - 26}" y="${cy - 20}" width="52" height="40" rx="3" class="kn-squawk-box"/><path d="M ${cx - 19} ${cy - 7} H ${cx + 19} M ${cx - 19} ${cy + 2} H ${cx + 13} M ${cx - 19} ${cy + 11} H ${cx + 7}" class="kn-fl-line"/>`,
   taf: (cx, cy) => `
@@ -685,15 +697,24 @@ function openDetail(id){
   $("kn-view-summary").textContent = F(t.summary);
   $("kn-view-fact").textContent = F(t.fact) || "";
   $("kn-view-fact").dataset.ico = "bulb";
+  $("kn-view-sources").innerHTML = (t.sources || []).filter(source => /^https:\/\//.test(source.url)).map(source =>
+    `<a href="${escText(source.url)}" target="_blank" rel="noopener noreferrer">${escText(F(source.label))}</a>`
+  ).join(" · ");
   const imgs = (t.images || []).filter(im => im.src);
-  $("kn-view-gallery").innerHTML = imgs.map(im => {
+  function renderFigure(im){
     const caption = F(im.caption);
     const source = im.source && /^https:\/\//.test(im.source) ? im.source : "";
     const license = im.license && /^https:\/\//.test(im.license) ? im.license : "";
     const credit = source ? `<a href="${escText(source)}" target="_blank" rel="noopener noreferrer">${escText(im.credit || "圖片來源")}</a>` : "";
     const attribution = [credit, license ? `<a href="${escText(license)}" target="_blank" rel="noopener noreferrer">${escText(im.licenseName || "License")}</a>` : ""].filter(Boolean).join(" · ");
     return `<figure${im.cropped ? ' class="kn-gauge-photo"' : ""}><img src="${escText(im.src)}" alt="${escText(caption || F(t.name))}" loading="lazy">${caption || attribution ? `<figcaption>${escText(caption)}${caption && attribution ? " · " : ""}${attribution}</figcaption>` : ""}</figure>`;
+  }
+  const sections = t.sections || [];
+  $("kn-view-sections").innerHTML = sections.map(section => {
+    const image = imgs.find(im => im.src === section.imageSrc);
+    return `<section><h4>${escText(F(section.title))}</h4><p>${escText(F(section.body))}</p>${image ? `<div class="kn-view-gallery kn-reference-gallery">${renderFigure(image)}</div>` : ""}</section>`;
   }).join("");
+  $("kn-view-gallery").innerHTML = imgs.filter(im => !sections.some(section => section.imageSrc === im.src)).map(renderFigure).join("");
   $("kn-edit").hidden = true;
   $("kn-view").hidden = false;
   $("kn-overlay").hidden = false;
@@ -854,7 +875,7 @@ function downscaleImg(file, maxW, quality){
 async function boot(){
   let data;
   try {
-    const res = await fetch("data/knowledge.json?v=193");
+    const res = await fetch("data/knowledge.json?v=195");
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {
