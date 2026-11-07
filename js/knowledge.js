@@ -545,14 +545,15 @@ const SCENES = {
   systems:    { topics: SYSTEMS_TOPICS,    renderItem: t => buildHotspotItem(t, SYSTEMS_DECOR[t.id]) },
 };
 function trackEl(key){ return document.querySelector(`[data-track="${key}"]`); }
+function centeredScrollLeft(track, item){
+  return item.offsetLeft - track.children[0].offsetLeft + (item.offsetWidth - track.clientWidth) / 2;
+}
 // 目前置中（最接近視窗中央）的主題 id，用於切換語言重繪後回到原本瀏覽位置
 function centeredItemEl(key){
   const track = trackEl(key);
-  const centerX = track.clientWidth / 2;
   let best = null, bestDist = Infinity;
   for (const item of track.children){
-    const itemCenter = item.offsetLeft - track.scrollLeft + item.offsetWidth / 2;
-    const dist = Math.abs(itemCenter - centerX);
+    const dist = Math.abs(centeredScrollLeft(track, item) - track.scrollLeft);
     if (dist < bestDist){ bestDist = dist; best = item; }
   }
   return best;
@@ -566,10 +567,8 @@ function scrollToTopic(key, id){
   const track = trackEl(key);
   const idx = s.topics.findIndex(t => t.id === id);
   if (idx < 0) return;
-  const itemWidth = track.children[0].offsetWidth;   // offsetWidth：不受 coverflow transform:scale 影響的真實版面寬度
-  const oneSetWidth = itemWidth * s.topics.length;
   track.style.scrollSnapType = "none";
-  track.scrollLeft = oneSetWidth + idx * itemWidth + itemWidth / 2 - track.clientWidth / 2;
+  track.scrollLeft = centeredScrollLeft(track, track.children[s.topics.length + idx]);
   track.style.scrollSnapType = "";
 }
 // 點旁邊項目時，平滑捲動把它帶到置中。scrollIntoView 在有 scroll-snap-type
@@ -577,7 +576,7 @@ function scrollToTopic(key, id){
 // 改成自己算目標位置＋暫時關閉 snap，動畫結束（或逾時保險）再恢復。
 function centerItem(key, item, done){
   const track = trackEl(key);
-  const targetLeft = item.offsetLeft + item.offsetWidth / 2 - track.clientWidth / 2;
+  const targetLeft = centeredScrollLeft(track, item);
   track.style.scrollSnapType = "none";
   const from = track.scrollLeft;
   const dist = targetLeft - from;
@@ -601,13 +600,7 @@ function renderTrack(key){
   const track = trackEl(key);
   const one = s.topics.map(s.renderItem).join("");
   track.innerHTML = one + one + one;
-  const oneSetWidth = track.scrollWidth / 3;
-  const itemWidth = track.children[0].offsetWidth;   // offsetWidth：不受 coverflow transform:scale 影響的真實版面寬度
-  // scroll-snap-type 在場的話，直接設 scrollLeft 常被瀏覽器忽略／吸附掉，
-  // 要先暫時關閉才能精準跳到目標位置，設完再恢復。
-  track.style.scrollSnapType = "none";
-  track.scrollLeft = oneSetWidth + itemWidth / 2 - track.clientWidth / 2;
-  track.style.scrollSnapType = "";
+  scrollToTopic(key, s.topics[0].id);
   updateCoverflow(key);
 }
 function wireLoop(key){
@@ -616,13 +609,18 @@ function wireLoop(key){
   track.addEventListener("scroll", () => {
     clearTimeout(settleTimer);
     settleTimer = setTimeout(() => {
-      const oneSetWidth = track.scrollWidth / 3;
-      if (track.scrollLeft < oneSetWidth * 0.5 || track.scrollLeft > oneSetWidth * 1.5){
-        const delta = track.scrollLeft < oneSetWidth * 0.5 ? oneSetWidth : -oneSetWidth;
-        track.style.scrollSnapType = "none";
-        track.scrollLeft += delta;
-        track.style.scrollSnapType = "";
-      }
+      if (track.style.scrollSnapType === "none" || track.classList.contains("kn-dragging")) return;
+      const centered = centeredItemEl(key);
+      if (!centered) return;
+      const count = SCENES[key].topics.length;
+      const index = Array.prototype.indexOf.call(track.children, centered);
+      if (index >= count && index < count * 2) return;
+      const equivalent = track.children[count + index % count];
+      // 對齊中間那份的實際節點，避免以捲動寬度估算而在交界來回跳位。
+      track.style.scrollSnapType = "none";
+      track.scrollLeft = centeredScrollLeft(track, equivalent);
+      if (document.activeElement === centered) equivalent.focus({ preventScroll: true });
+      track.style.scrollSnapType = "";
     }, 120);
   }, { passive: true });
 }
@@ -633,8 +631,7 @@ function updateCoverflow(key){
   const track = trackEl(key);
   const centerX = track.clientWidth / 2;
   for (const item of track.children){
-    const itemCenter = item.offsetLeft - track.scrollLeft + item.offsetWidth / 2;
-    const norm = Math.min(1, Math.abs(itemCenter - centerX) / centerX);
+    const norm = Math.min(1, Math.abs(centeredScrollLeft(track, item) - track.scrollLeft) / centerX);
     item.style.transform = `scale(${(1 - norm * 0.3).toFixed(3)})`;
     item.style.opacity = (1 - norm * 0.6).toFixed(3);
   }
