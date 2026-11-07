@@ -828,3 +828,10 @@
 - 本輪全部改動都只在本地：`AGENTS.md`、`CLAUDE.md`（新）、`Progress.md`、`.claude/skills/`（新）、`skills-lock.json`（新）；**尚未提交、尚未推送**，等使用者確認。未動到網站程式碼、資料或快取版號。
 - 2026-11-07 19:13：使用者選擇「Gitignore skills」。`.gitignore` 新增 `.claude/skills/`；`AGENTS.md`、`CLAUDE.md` 的待決事項改為已決定（只提交 `skills-lock.json`，以 `npx skills experimental_install` 還原）。原因：skill 複本未附 MIT 授權聲明、Cloudflare Pages 會部署 repo 內檔案。仍未提交、未推送。
 - 2026-11-07 19:13：發現 17:51 新出現未追蹤的 `.agents/skills/`（同 6 個 skill 的複本，非本 task 建立），同理列入 `.gitignore`，檔案本身未刪除。
+- 2026-11-07 19:16：使用者回覆「Push it」。已提交 `0b312d8`（.gitignore、AGENTS.md、CLAUDE.md、Progress.md、skills-lock.json；訊息含 `[CF-Pages-Skip]`，不觸發部署）並推送 `origin/main`（`8fff512..0b312d8`）。上方「尚未提交、尚未推送」為當時狀態。未包含 knowledge 資料、V 速照片、韓國航空除錯檔。
+
+### 待提交資料與 Skills 用法（2026-11-07）
+
+- 本機提交 `892e1ce` 收錄 `data/korean_airlines_debug.json`。15 筆資料中有 14 筆與現有公開資料完全相同，`tus` 的 `tier` 在快照是 `null`、主資料是 `cargo`。保留除錯快照原貌。
+- V 速 JPEG 來自 BEA 調查報告第 19 頁。[BEA 使用聲明](https://bea.aero/en/legal-notice/)要求影像重製先取得同意。照片、`data/knowledge.json` 及 `tools/knowledge_photo_catalog.json` 的圖片替換草稿留在工作目錄，待釐清授權後再一併提交。
+- 核對兩個技能目錄與鎖定檔，確認六個技能均已安裝。同步 `AGENTS.md` 與 `CLAUDE.md` 的用法、提示詞、動畫稽核與實作流程、鎖定檔還原方式，並確認兩份文件的 Skills 段落一致。
