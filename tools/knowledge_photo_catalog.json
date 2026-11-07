@@ -264,13 +264,18 @@
     "credit": "User:CambridgeBayWeather · Public domain"
   },
   "v-speeds": {
-    "file": "Airspeed indicator DC-10.jpg",
+    "file": "19730009304.pdf",
+    "local": "assets/knowledge/v-speeds-nasa-takeoff.png",
+    "source": "https://ntrs.nasa.gov/api/citations/19730009304/downloads/19730009304.pdf#page=73",
     "caption": {
-      "zh": "DC-10 空速表；起飛速度須依個別條件設定",
-      "en": "DC-10 airspeed indicator; takeoff speeds are set for each departure",
-      "ja": "DC-10 の速度計。離陸速度は条件ごとに設定する"
+      "zh": "NASA 起飛速度與距離示意圖。方框標出 V1、VR 與 V2，沿著跑道滑跑、抬輪到初始爬升排列（原圖裁切並轉正）。",
+      "en": "NASA takeoff speed and distance diagram. The boxes mark V1, VR and V2 from the runway roll through rotation and initial climb (cropped and rotated).",
+      "ja": "NASA の離陸速度と距離の模式図。滑走から機首上げ、初期上昇までの V1・VR・V2 を枠で示す（原図を切り出し、向きを調整）。"
     },
-    "credit": "ChristianSchd Christian Schröder · CC BY-SA 3.0"
+    "credit": "NASA / FAA · NASA TN D-7106 (1973), Fig. 33",
+    "license": "https://ntrs.nasa.gov/citations/19730009304",
+    "licenseName": "Public domain (U.S. government work)",
+    "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Airspeed_indicator_DC-10.jpg?width=960"
   },
   "standby": {
     "file": "Boeing 737 cockpit view from cabin.jpg",

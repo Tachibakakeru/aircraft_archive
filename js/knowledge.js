@@ -854,7 +854,7 @@ function downscaleImg(file, maxW, quality){
 async function boot(){
   let data;
   try {
-    const res = await fetch("data/knowledge.json?v=192");
+    const res = await fetch("data/knowledge.json?v=193");
     if (!res.ok) throw new Error();
     data = await res.json();
   } catch {

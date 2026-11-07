@@ -334,7 +334,7 @@
         "en": "V1 isn't a fixed number — it's recalculated for every takeoff based on weight, runway length, wind, airport elevation, and temperature. The same aircraft rarely has the same V1 twice.",
         "ja": "V1は固定値ではなく、機体重量・滑走路長・風・空港標高・気温に応じて毎回計算される。同じ機体でも日や空港が変われば同じV1になることはほぼない。"
       },
-      "images": [{"src": "https://commons.wikimedia.org/wiki/Special:FilePath/Airspeed_indicator_DC-10.jpg?width=960", "caption": {"zh": "DC-10 空速表；起飛速度須依個別條件設定", "en": "DC-10 airspeed indicator; takeoff speeds are set for each departure", "ja": "DC-10 の速度計。離陸速度は条件ごとに設定する"}, "source": "https://commons.wikimedia.org/wiki/File:Airspeed_indicator_DC-10.jpg", "credit": "ChristianSchd Christian Schröder · CC BY-SA 3.0"}]
+      "images": [{"src": "assets/knowledge/v-speeds-nasa-takeoff.png", "caption": {"zh": "NASA 起飛速度與距離示意圖。方框標出 V1、VR 與 V2，沿著跑道滑跑、抬輪到初始爬升排列（原圖裁切並轉正）。", "en": "NASA takeoff speed and distance diagram. The boxes mark V1, VR and V2 from the runway roll through rotation and initial climb (cropped and rotated).", "ja": "NASA の離陸速度と距離の模式図。滑走から機首上げ、初期上昇までの V1・VR・V2 を枠で示す（原図を切り出し、向きを調整）。"}, "source": "https://ntrs.nasa.gov/api/citations/19730009304/downloads/19730009304.pdf#page=73", "credit": "NASA / FAA · NASA TN D-7106 (1973), Fig. 33", "license": "https://ntrs.nasa.gov/citations/19730009304", "licenseName": "Public domain (U.S. government work)", "replaces": "https://commons.wikimedia.org/wiki/Special:FilePath/Airspeed_indicator_DC-10.jpg?width=960"}]
     },
     {
       "id": "flight-level",

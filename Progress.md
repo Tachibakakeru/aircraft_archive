@@ -835,3 +835,9 @@
 - 本機提交 `892e1ce` 收錄 `data/korean_airlines_debug.json`。15 筆資料中有 14 筆與現有公開資料完全相同，`tus` 的 `tier` 在快照是 `null`、主資料是 `cargo`。保留除錯快照原貌。
 - V 速 JPEG 來自 BEA 調查報告第 19 頁。[BEA 使用聲明](https://bea.aero/en/legal-notice/)要求影像重製先取得同意。照片、`data/knowledge.json` 及 `tools/knowledge_photo_catalog.json` 的圖片替換草稿留在工作目錄，待釐清授權後再一併提交。
 - 核對兩個技能目錄與鎖定檔，確認六個技能均已安裝。同步 `AGENTS.md` 與 `CLAUDE.md` 的用法、提示詞、動畫稽核與實作流程、鎖定檔還原方式，並確認兩份文件的 Skills 段落一致。
+
+### BEA 素材盤點與 V 速圖替換（2026-11-07）
+
+- 網站資料與照片目錄只有 `v-speeds` 一則涉及 BEA，兩處指向同一張未曾提交的 Boeing 777-F 報告截圖。已追蹤的 BEA 提及屬於本工作日誌。原 JPEG 移到網站工作目錄外的本機備份。
+- 換用 [NASA TN D-7106 圖 33](https://ntrs.nasa.gov/citations/19730009304)，NASA 標註為美國政府作品並允許公開使用。裁切報告印刷第 65 頁（PDF 第 73 頁）並轉正，保留圖中的 V1、VR、V2 與原圖標題。新增三語圖說、來源與授權連結，更新知識資料與首頁的讀取版號及離線快取名稱。
+- 82 則知識與 78 筆圖片目錄檢查通過，沿用原預覽分頁確認 V 速條目載入 1616 × 656 的 NASA 圖及公有領域標示。

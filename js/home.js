@@ -756,7 +756,7 @@ renderAll();
 (async () => {
   const [fleet, airlines, count, knowledge] = await Promise.all([
     getJSON("data/fleet.json", 182), getJSON("data/airlines.json", 139),
-    getJSON("data/airport_count.json", 138), getJSON("data/knowledge.json", 192)
+    getJSON("data/airport_count.json", 138), getJSON("data/knowledge.json", 193)
   ]);
   if (fleet) D.fleet = fleet.aircraft || [];
   if (airlines) D.airlines = airlines.airlines || [];
