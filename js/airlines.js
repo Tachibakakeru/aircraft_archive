@@ -69,6 +69,7 @@ function makeTagInput(inputId, suggestId, chipsId, onChange){
     $(suggestId).hidden = false;
   });
   $(inputId).addEventListener("keydown", e => {
+    if (e.isComposing || e.keyCode === 229) return; // 中日文輸入法選字中，不攔截 Enter／方向鍵
     if (e.key === "Enter" || e.key === "Tab"){
       const q = $(inputId).value.trim();
       if (!q) return;

@@ -123,7 +123,7 @@
 
 ## UI／動畫 Skills（2026-11-07 17:31 新增）
 
-- 來源為 [emilkowalski/skills](https://github.com/emilkowalski/skills)（MIT）。專案安裝記錄在 `skills-lock.json`，更新專案技能用 `npx skills@latest update -p`。
+- 來源為 [emilkowalski/skills](https://github.com/emilkowalski/skills)（MIT）與 `modern-web-guidance`（見表）。專案安裝記錄在 `skills-lock.json`，更新專案技能用 `npx skills@latest update -p`。
 - 在此專案的 Codex 或 Claude Code 對話中，直接寫「用 `技能名稱` 檢查／修正某個頁面，交付某種結果」。已安裝的技能也可由代理依任務選用。Codex 可讀 `.agents/skills/<名稱>/SKILL.md`，Claude Code 可讀 `.claude/skills/<名稱>/SKILL.md`。
 
 | Skill | 用途 | 本專案適用處 |
@@ -134,6 +134,7 @@
 | `choreograph` | 多元素進場順序與時間差 | 換頁過場、首頁區塊進場、翻牌看板 |
 | `mobile-native` | 讓網頁在手機上更像原生 App | PWA、安全區域、觸控 hover |
 | `break-ui` | 用極端資料壓力測試版面 | 超長機場名、空搜尋結果、594 家航空公司列表 |
+| `modern-web-guidance` | Chrome／Edge／Firefox／MDN 維護的現代網頁寫法指引（2026-11-14 新增，來源 [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance)，Apache-2.0） | 改 HTML／CSS／前端 JS 前查最新寫法；`npx -y modern-web-guidance@latest legacy-scan .` 掃過時寫法 |
 
 - 稽核範例：「用 `improve-animations quick` 檢查全站動畫，先列優先順序」或「用 `improve-animations plan` 為跑道進度條寫一份效能改善計畫」。計畫放在 `plans/`，`plans/README.md` 為總表。要改程式時，可另請代理依指定計畫實作。2026-11-07 的首次稽核記在 `Progress.md`。
 - 單點任務範例：「用 `animation-performance` 診斷機場頁載入時的掉幀」；「用 `choreograph` 安排首頁看板的進場順序」；「用 `mobile-native` 檢查 iPhone 點擊後的 hover 殘留」；「用 `break-ui` 在本機預覽測試超長機場名和空結果，先列問題」；「用 `emil-design-eng` 評估搜尋面板的開關速度」。
@@ -145,3 +146,4 @@
 - `Progress.md` 是本專案的工作日誌與待辦單。每次本 task 回答涉及檢查、決策、改動、測試、提交或發現新問題時，都要同步更新。
 - 更新時記錄日期、範圍、結果與未解事項；不要記錄 Token、密碼或其他機密。
 - 開始新工作前先讀 `Progress.md`，避免覆蓋使用者未提交的資料或重做已完成工作。
+- 每次回答都要即時更新本檔，條目標題或內容附日期與時間（YYYY-MM-DD HH:MM）；回答結尾條列本輪改動。`AGENTS.md` 與 `CLAUDE.md` 的新增段落保持同步。

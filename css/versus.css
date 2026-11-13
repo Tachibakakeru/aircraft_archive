@@ -16,7 +16,7 @@ body{min-height:100vh}
   color:var(--muted);text-decoration:none;white-space:nowrap;
   transition:color .15s;
 }
-.vs-topbar .back:hover{color:var(--amber)}
+@media (hover:hover){.vs-topbar .back:hover{color:var(--amber)}}
 .vs-title{flex:1}
 .vs-title .eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--muted)}
 .vs-title h1{font-size:20px;font-weight:700;letter-spacing:.03em;margin-top:4px}
@@ -68,7 +68,7 @@ body{min-height:100vh}
   font-family:var(--mono);font-size:11px;letter-spacing:.08em;
   color:var(--cyan);text-decoration:none;
 }
-.vs-head-link:hover{text-decoration:underline}
+@media (hover:hover){.vs-head-link:hover{text-decoration:underline}}
 
 .vs-rows{padding:20px 24px 40px;display:flex;flex-direction:column;gap:18px}
 .vs-row{
@@ -92,7 +92,7 @@ body{min-height:100vh}
 .vs-card-fig img{max-width:100%;width:auto;height:auto;display:block;margin-inline:auto}
 .vs-card-fig figcaption{padding:8px 10px;font-size:11px;line-height:1.5;color:var(--muted)}
 .vs-card-fig figcaption a{display:block;margin-top:3px;color:var(--cyan);text-decoration:none;font-family:var(--mono);font-size:10px}
-.vs-card-fig figcaption a:hover{text-decoration:underline}
+@media (hover:hover){.vs-card-fig figcaption a:hover{text-decoration:underline}}
 .vs-card-fig-empty{
   display:flex;align-items:center;justify-content:center;
   min-height:120px;border:1px dashed var(--stroke);
@@ -114,10 +114,10 @@ body{min-height:100vh}
   font-family:var(--mono);font-size:11px;letter-spacing:.08em;
   color:var(--muted);text-decoration:none;
   border:1px solid var(--stroke);border-radius:6px;padding:5px 10px;
-  transition:all .15s;
+  transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
 .vs-card-view{color:var(--cyan)}
-.vs-card-edit:hover,.vs-card-view:hover{color:var(--amber);border-color:var(--amber)}
+@media (hover:hover){.vs-card-edit:hover,.vs-card-view:hover{color:var(--amber);border-color:var(--amber)}}
 
 @media (max-width: 720px){
   .vs-heads, .vs-row{grid-template-columns:1fr}
@@ -127,12 +127,12 @@ body{min-height:100vh}
 
 /* 2026-11 改版：頁首工具列改為天空帶（設計紀錄 docs/site-redesign.md） */
 .vs-topbar .back{color:var(--sky-muted)}
-.vs-topbar .back:hover{color:var(--sky-ink)}
+@media (hover:hover){.vs-topbar .back:hover{color:var(--sky-ink)}}
 .vs-topbar .eyebrow{color:var(--sky-muted)}
 .vs-topbar h1{font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:.01em;color:var(--sky-ink)}
 .vs-topbar .tool-btn,.vs-topbar button.ghost,.vs-topbar button.tiny{color:var(--sky-ink);background:var(--glass);border-color:var(--glass-line)}
-.vs-topbar .tool-btn:hover,.vs-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+@media (hover:hover){.vs-topbar .tool-btn:hover,.vs-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}}
 .vs-topbar button.primary{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
-.vs-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}
+@media (hover:hover){.vs-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}}
 .vs-topbar .cmp-difftoggle{color:var(--sky-ink)}
 .vs-topbar :focus-visible{outline-color:var(--sky-ink)}

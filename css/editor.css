@@ -16,7 +16,7 @@ body{min-height:100vh}
   color:var(--muted);text-decoration:none;white-space:nowrap;
   transition:color .15s;
 }
-.ed-topbar .back:hover{color:var(--amber)}
+@media (hover:hover){.ed-topbar .back:hover{color:var(--amber)}}
 .ed-title{display:flex;flex-direction:column;gap:4px;flex:1}
 .ed-title .eyebrow{font-size:10px}
 #model-select{
@@ -32,15 +32,15 @@ body{min-height:100vh}
 button.primary,button.ghost{
   font-family:var(--mono);font-size:11px;letter-spacing:.12em;
   border-radius:6px;padding:9px 16px;cursor:pointer;
-  transition:all .15s;
+  transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
 button.primary{background:var(--amber);color:var(--on-amber);border:1px solid var(--amber);font-weight:700}
-button.primary:hover{background:var(--amber-2)}
+@media (hover:hover){button.primary:hover{background:var(--amber-2)}}
 button.ghost{background:transparent;color:var(--text);border:1px solid var(--stroke)}
-button.ghost:hover{border-color:var(--amber);color:var(--amber)}
+@media (hover:hover){button.ghost:hover{border-color:var(--amber);color:var(--amber)}}
 button.tiny{font-size:10px;padding:5px 10px;letter-spacing:.1em;
   background:transparent;color:var(--muted);border:1px solid var(--stroke);border-radius:5px;cursor:pointer}
-button.tiny:hover{color:var(--amber);border-color:var(--amber)}
+@media (hover:hover){button.tiny:hover{color:var(--amber);border-color:var(--amber)}}
 
 .ed-note{
   padding:12px 24px;
@@ -65,9 +65,9 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
   background:transparent;border:none;
   padding:12px 24px;cursor:pointer;
   border-left:2px solid transparent;
-  transition:all .15s;
+  transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
-.ed-parts button:hover{color:var(--text);background:rgba(255,255,255,.03)}
+@media (hover:hover){.ed-parts button:hover{color:var(--text);background:rgba(255,255,255,.03)}}
 .ed-parts button.active{
   color:var(--amber);border-left-color:var(--amber);
   background:var(--amber-soft);font-weight:600;
@@ -153,7 +153,7 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
   background:transparent;border:1px solid var(--stroke);color:var(--muted);
   border-radius:5px;width:28px;height:28px;cursor:pointer;flex-shrink:0;
 }
-.img-row .del:hover{color:var(--warn);border-color:var(--warn)}
+@media (hover:hover){.img-row .del:hover{color:var(--warn);border-color:var(--warn)}}
 .img-add{display:flex;gap:10px}
 .img-hint{margin-top:8px;font-size:11px;line-height:1.7;color:var(--muted)}
 
@@ -162,7 +162,7 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
   background:var(--amber);color:var(--on-amber);
   font-family:var(--mono);font-size:12px;letter-spacing:.08em;font-weight:700;
   padding:12px 24px;border-radius:8px;
-  opacity:0;pointer-events:none;transition:all .3s;
+  opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;
   z-index:100;
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -199,7 +199,7 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
 }
 .gh-help{color:var(--cyan);text-decoration:none;font-family:var(--sans);
   letter-spacing:0;font-size:11px;margin-left:8px}
-.gh-help:hover{text-decoration:underline}
+@media (hover:hover){.gh-help:hover{text-decoration:underline}}
 .gh-fld input{
   width:100%;
   font-family:var(--sans);font-size:14px;
@@ -234,12 +234,12 @@ button.tiny:hover{color:var(--amber);border-color:var(--amber)}
 
 /* 2026-11 改版：頁首工具列改為天空帶（設計紀錄 docs/site-redesign.md） */
 .ed-topbar .back{color:var(--sky-muted)}
-.ed-topbar .back:hover{color:var(--sky-ink)}
+@media (hover:hover){.ed-topbar .back:hover{color:var(--sky-ink)}}
 .ed-topbar .eyebrow{color:var(--sky-muted)}
 .ed-topbar h1{font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:.01em;color:var(--sky-ink)}
 .ed-topbar .tool-btn,.ed-topbar button.ghost,.ed-topbar button.tiny{color:var(--sky-ink);background:var(--glass);border-color:var(--glass-line)}
-.ed-topbar .tool-btn:hover,.ed-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+@media (hover:hover){.ed-topbar .tool-btn:hover,.ed-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}}
 .ed-topbar button.primary{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
-.ed-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}
+@media (hover:hover){.ed-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}}
 .ed-topbar .cmp-difftoggle{color:var(--sky-ink)}
 .ed-topbar :focus-visible{outline-color:var(--sky-ink)}

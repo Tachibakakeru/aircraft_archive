@@ -29,16 +29,18 @@ const Runway = (() => {
         <span class="rwy-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${PLANE}"/></svg></span>
       </div>
       <div class="rwy-text"><b class="rwy-label"></b><span class="rwy-stat"></span></div>`;
-    const plane = el.querySelector(".rwy-plane"), roll = el.querySelector(".rwy-roll");
+    const strip = el.querySelector(".rwy-strip"), plane = el.querySelector(".rwy-plane"), roll = el.querySelector(".rwy-roll");
     el.querySelector(".rwy-label").textContent = label;
     let shown = 0, target = 0, raf = 0, stat = "", lastB = 0, lastT = 0;
     // 平滑跟上實際進度，不會一格一格跳
     const step = () => {
       shown += (target - shown) * .18;
       if (Math.abs(target - shown) < .001) shown = target;
-      const pct = shown * 100;
-      plane.style.left = `calc(${(4 + pct * .86).toFixed(2)}% )`;
-      roll.style.width = `${(4 + pct * .86).toFixed(2)}%`;
+      const f = (4 + shown * 86) / 100;           // 跑道上的位置（4%～90%）
+      const w = strip.clientWidth;                // 只寫 translate/scale，不會讓版面失效，這裡讀寬度不會強制重排
+      el.style.setProperty("--rwy-w", w + "px");
+      plane.style.translate = `${(w * (f - .04)).toFixed(1)}px 0`;  // 起點 left:4%
+      roll.style.scale = `${f.toFixed(4)} 1`;
       raf = shown !== target ? requestAnimationFrame(step) : 0;
     };
     const api = {
@@ -57,6 +59,7 @@ const Runway = (() => {
         return new Promise(resolve => {
           api.set(1);
           setTimeout(() => {
+            el.style.setProperty("--rwy-w", strip.clientWidth + "px");   // 不依賴 rAF 是否跑過
             el.classList.add("rwy-takeoff");
             setTimeout(() => { el.classList.add("rwy-gone"); setTimeout(() => { el.hidden = true; el.classList.remove("rwy-takeoff", "rwy-gone"); resolve(); }, 380); }, 900);
           }, 380);

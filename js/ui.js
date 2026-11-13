@@ -142,7 +142,7 @@ window.AircraftPicker = {
   document.addEventListener("keydown", e => {
     const input = e.target instanceof HTMLInputElement && e.target;
     const list = input && listFor(input);
-    if (!list || list.hidden) return;
+    if (!list || list.hidden || e.isComposing || e.keyCode === 229) return; // 輸入法選字中不攔截
     const opts = options(list);
     if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); list.hidden = true; input.setAttribute("aria-expanded", "false"); return; }
     if (!opts.length || !["ArrowDown", "ArrowUp", "Enter"].includes(e.key)) return;

@@ -11,7 +11,7 @@ body{min-height:100vh}
   border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.28);
 }
 .kn-search-opt{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:10px 12px;cursor:pointer}
-.kn-search-opt:hover{background:var(--amber-soft)}
+@media (hover:hover){.kn-search-opt:hover{background:var(--amber-soft)}}
 .kn-search-opt-name{font-size:13px;color:var(--text)}
 .kn-search-opt-label{font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap}
 
@@ -27,7 +27,7 @@ body{min-height:100vh}
   color:var(--muted);text-decoration:none;white-space:nowrap;
   transition:color .15s;
 }
-.kn-topbar .back:hover{color:var(--amber)}
+@media (hover:hover){.kn-topbar .back:hover{color:var(--amber)}}
 .kn-title{flex:1}
 .kn-title .eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--muted)}
 .kn-title h1{font-size:20px;font-weight:700;letter-spacing:.03em;margin-top:4px}
@@ -43,7 +43,7 @@ body{min-height:100vh}
   border:1px solid var(--stroke);background:transparent;color:var(--muted);
   cursor:pointer;transition:border-color .15s,color .15s;white-space:nowrap;
 }
-.kn-add-btn:hover{border-color:var(--amber);color:var(--amber)}
+@media (hover:hover){.kn-add-btn:hover{border-color:var(--amber);color:var(--amber)}}
 .kn-hint{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);margin-top:4px}
 #kn-new-fields{margin-bottom:12px;padding:12px;border-radius:8px;border:1px solid var(--stroke);background:var(--bg-1)}
 
@@ -100,7 +100,7 @@ body{min-height:100vh}
 .kn-gauge:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:50%}
 .kn-g-bezel{fill:#05070c;stroke:#3a4356;stroke-width:3}
 .kn-g-face{fill:#0d1119;stroke:rgba(255,255,255,.12);stroke-width:1}
-.kn-gauge:hover .kn-g-bezel, .kn-gauge:focus-visible .kn-g-bezel{stroke:var(--amber)}
+.kn-gauge:focus-visible .kn-g-bezel{stroke:var(--amber)}@media (hover:hover){.kn-gauge:hover .kn-g-bezel{stroke:var(--amber)}}
 .kn-tick{stroke:#8a97ad;stroke-width:1}
 .kn-tick.major{stroke:#d7deea;stroke-width:1.6}
 .kn-g-hub{fill:#c7cede;stroke:#05070c;stroke-width:1}
@@ -134,9 +134,11 @@ body{min-height:100vh}
 .kn-hotspot:focus-visible{outline:none}
 .kn-hs-ring{fill:rgba(255,255,255,.03);stroke:rgba(255,255,255,.22);stroke-width:1;stroke-dasharray:3 4}
 .kn-hs-tick{stroke:rgba(255,255,255,.35);stroke-width:1.4}
-.kn-hotspot:hover .kn-hs-ring, .kn-hotspot:focus-visible .kn-hs-ring{
+.kn-hotspot:focus-visible .kn-hs-ring{
   stroke:var(--amber);stroke-dasharray:none;fill:var(--amber-soft);
-}
+}@media (hover:hover){.kn-hotspot:hover .kn-hs-ring{
+  stroke:var(--amber);stroke-dasharray:none;fill:var(--amber-soft);
+}}
 .kn-hs-label{
   fill:#d7deea;font-family:var(--mono);font-size:11px;font-weight:700;
   text-anchor:middle;letter-spacing:.04em;
@@ -194,9 +196,9 @@ body{min-height:100vh}
   position:absolute;top:14px;right:14px;
   font-family:var(--mono);font-size:11px;letter-spacing:.06em;
   color:var(--muted);background:transparent;border:1px solid var(--stroke);border-radius:6px;
-  padding:5px 10px;cursor:pointer;transition:all .15s;
+  padding:5px 10px;cursor:pointer;transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
-.kn-modal-close:hover{color:var(--amber);border-color:var(--amber)}
+@media (hover:hover){.kn-modal-close:hover{color:var(--amber);border-color:var(--amber)}}
 
 .kn-view-badge{
   display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
@@ -230,9 +232,9 @@ body{min-height:100vh}
   font-family:var(--mono);font-size:11px;letter-spacing:.08em;
   color:var(--muted);background:transparent;
   border:1px solid var(--stroke);border-radius:6px;padding:6px 12px;cursor:pointer;
-  transition:all .15s;
+  transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
-.kn-editbtn:hover{color:var(--amber);border-color:var(--amber)}
+@media (hover:hover){.kn-editbtn:hover{color:var(--amber);border-color:var(--amber)}}
 
 .kn-edit{display:flex;flex-direction:column;gap:8px}
 .kn-edit label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted);margin-top:6px}
@@ -252,26 +254,26 @@ body{min-height:100vh}
   width:20px;height:20px;line-height:20px;text-align:center;padding:0;
   background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:11px;
 }
-.kn-edit-imgdel:hover{background:var(--amber);color:var(--on-amber)}
+@media (hover:hover){.kn-edit-imgdel:hover{background:var(--amber);color:var(--on-amber)}}
 
 .kn-edit-addrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .kn-edit-addrow .kn-edit-imgurl{flex:1;min-width:140px}
 .kn-edit-addrow button{
   font-family:var(--mono);font-size:11px;letter-spacing:.06em;white-space:nowrap;
   color:var(--text);background:var(--panel);border:1px solid var(--stroke);border-radius:8px;
-  padding:8px 12px;cursor:pointer;transition:all .15s;
+  padding:8px 12px;cursor:pointer;transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
-.kn-edit-addrow button:hover{border-color:var(--amber);color:var(--amber)}
+@media (hover:hover){.kn-edit-addrow button:hover{border-color:var(--amber);color:var(--amber)}}
 
 .kn-edit-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-top:8px}
 .kn-btn-ghost, .kn-btn-primary{
   font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
-  border-radius:8px;padding:9px 15px;cursor:pointer;transition:all .15s;
+  border-radius:8px;padding:9px 15px;cursor:pointer;transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
 .kn-btn-ghost{color:var(--muted);background:transparent;border:1px solid var(--stroke)}
-.kn-btn-ghost:hover{color:var(--text);border-color:var(--text)}
+@media (hover:hover){.kn-btn-ghost:hover{color:var(--text);border-color:var(--text)}}
 .kn-btn-primary{color:var(--on-amber);background:var(--amber);border:1px solid var(--amber);font-weight:700}
-.kn-btn-primary:hover{filter:brightness(1.08)}
+@media (hover:hover){.kn-btn-primary:hover{filter:brightness(1.08)}}
 .kn-btn-primary:disabled, .kn-btn-ghost:disabled{opacity:.6;cursor:default}
 
 @media (max-width: 640px){

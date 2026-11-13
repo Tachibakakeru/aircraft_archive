@@ -1,22 +1,35 @@
 # 天空檔案 SKY ARCHIVE
 
-互動式飛行資料庫，涵蓋兩個主題：飛行器（機型列表 → 3D 檢視器，點選機體
-部位顯示解說與規格）與機場／跑道（全球機場搜尋、跑道明細、衛星影像）。
-首頁 `index.html` 選擇要探索哪一個。純靜態網站，無需後端即可部署。
+互動式航空資料庫（Cloudflare Pages 靜態網站＋PWA，正式站
+[aircraft-archive.pages.dev](https://aircraft-archive.pages.dev)，`main` 推送後自動部署）。
 
-## 專案結構
+目前收錄：**184 個機型**（48 個有 3D 模型）、**85,587 座機場**、
+**594 家航空公司**、**84 則航空小知識**。介面支援繁中／English／日本語與深淺色主題。
+
+## 頁面
+
+| 頁面 | 內容 |
+|---|---|
+| `index.html` | 首頁「出境大廳」：翻頁時鐘、今日出發翻牌看板、機長廣播、航線動畫、我的登機證夾 |
+| `fleet.html` → `viewer.html?model=<id>` | 機型列表 → 3D 檢視器（部位解說、規格、標註點、時段場景、起飛示範） |
+| `compare.html`／`versus.html`／`variants.html` | 機型比較、Boeing 對 Airbus、機型家族對照 |
+| `airports.html` | 全球機場搜尋、跑道、衛星圖、METAR/TAF 即時天氣、收藏與登機證式比較 |
+| `airlines.html` | 航空公司（呼號、樞紐、航線、Logo、收藏與比較） |
+| `distance.html` | 機場距離計算 |
+| `knowledge.html` | 航空小知識（轉盤、四類場景、圖說與授權） |
+| `editor.html` | 資料編輯器（`/api/verify` 驗證、`/api/gh-save` 寫回 GitHub） |
+
+本機預覽：`python server.py`（no-cache）後開 `http://localhost:8000`。
+改動資源時同步更新引用的 `?v=N` 與 `sw.js` 的快取名稱。協作規則見 `AGENTS.md`，進度見 `Progress.md`。
+
+## 專案結構（主要部分）
 
 ```
 aircraft-archive/
-├── index.html          首頁（模式選擇：飛行器圖鑑 / 機場與跑道）
-├── fleet.html           機型列表頁（讀取 data/fleet.json，原 index.html）
-├── viewer.html          3D 檢視器頁（viewer.html?model=<id>）
-├── compare.html         機型比較頁
-├── variants.html        機型家族與次型號對照（靜態參考頁）
-├── airports.html        機場與跑道（獨立介面，見下方專節）
-├── editor.html          機型資料編輯器
-├── css/style.css        共用設計系統
-├── js/viewer.js         檢視器邏輯（Three.js r128, 自 cdnjs 載入）
+├── *.html               各頁面（見上表）
+├── css/                 sky.css 全站樣式、各頁樣式
+├── js/                  home.js、transition.js、viewer.js（Three.js r128）等
+├── functions/api/       Cloudflare Pages Functions：verify、gh-save、metar
 ├── data/
 │   ├── fleet.json       機隊索引（列表頁卡片內容）
 │   ├── <id>.json        各機型的部位文案（名稱/概述/規格/冷知識）
@@ -33,49 +46,16 @@ aircraft-archive/
     └── make_thumb.py    縮圖產生器
 ```
 
-**首頁改版說明**：`index.html` 原本是機型列表頁，現已改為模式選擇首頁；
-機型列表移到 `fleet.html`。若你先前分享過指向舊 `index.html`（機型列表）
-的連結，該連結現在會導向新的模式選擇首頁而非直接進列表——這是刻意的
-架構調整，未做相容轉址。
 
-## 本機測試
+## 編輯資料（站台密碼保護）
 
-瀏覽器會阻擋 `file://` 開啟時的資料讀取，請以本機伺服器測試：
+機型、機場、航空公司、航空小知識都可在站內編輯。進入編輯會要求輸入**站台編輯密碼**：
 
-```bash
-cd aircraft-archive
-python3 -m http.server 8000
-# 瀏覽 http://localhost:8000
-```
-
-## 編輯機型資料（瀏覽器內建編輯器 · 密碼保護）
-
-網站首頁右上角「✎ 編輯資料」，或每張卡片 hover 時右上的鉛筆圖示，進入
-`editor.html`。**首次進入會要求設定編輯密碼**，之後每次進入需輸入密碼。
-
-編輯器功能：
-- 逐部位編輯名稱、英文標籤、概述、**條列式重點**、規格表、冷知識
-- **加入圖片**：可貼外部圖片網址，或上傳本機圖片（會自動壓縮並內嵌）
-- 編輯即時存入瀏覽器 `localStorage`，重整不遺失
-- 「預覽檢視器」直接看套用後的效果（檢視器會優先讀取本機暫存）
-- 「匯出 JSON」下載 `<機型>.json`，覆蓋 `data/` 內同名檔案後重新部署即上線
-- 右上 🔒 鎖定並登出
-
-### 密碼保護的分寸（重要）
-
-這是防止「路人隨手亂改」的柵欄，**不是**防駭客的保險箱：
-
-- 密碼以 SHA-256 雜湊存在瀏覽器 `localStorage`，不存明文
-- 但這是純前端驗證，懂技術的人檢視原始碼就能繞過
-- **真正的保護在架構上**：編輯結果只存在編輯者自己的瀏覽器，
-  必須匯出 JSON 覆蓋檔案並重新部署才會影響線上內容。
-  訪客即使繞過密碼、在自己瀏覽器亂改，也動不了其他人看到的網站。
-- 密碼需在 HTTPS 或 localhost 下運作（`crypto.subtle` 要求安全環境）；
-  Cloudflare Pages 全站 HTTPS，本機測試用 localhost 皆符合。
-- 忘記密碼：清除該網站的瀏覽器資料（localStorage）即可重設。
-
-> 若日後要開放多人共編、或要求「連編輯者本地資料都不能被繞過」，
-> 就必須改用後端（如 Render）+ 資料庫 + 伺服器端驗證，那是另一個架構層級。
+- 密碼由 Cloudflare Pages Function `functions/api/verify.js` 在伺服器端驗證，前端不保存密碼或其雜湊。
+- 發布由 `functions/api/gh-save.js` 代為寫入 GitHub（Token 存在 Cloudflare 環境變數，不進前端），commit 後 Cloudflare Pages 自動重新部署。
+- 編輯中的草稿存在瀏覽器 `localStorage`，按「儲存本機」才寫入；讀取時以伺服器主資料為底，逐筆套用本機覆寫。
+- 後備方式：瀏覽器內設定自己的 GitHub Token（見下方「GitHub 直接更新」），或匯出 JSON 手動覆蓋 `data/` 後推送。
+- 密碼、Token 不寫入程式碼、文件或 `Progress.md`。
 
 ## 模型壓縮格式（v2）
 
@@ -188,7 +168,7 @@ python3 tools/make_thumb.py models/a380.json assets/thumb_a380.png
 - `assets/knowledge/adf-b17-radio-compass.jpg` 裁自 [Pi3.124 拍攝的 B-17G ADF 儀表實照](https://commons.wikimedia.org/wiki/File:Automatic_Radio_Direction_Finder_R-5_ARN7_indicator.jpg)，依原圖 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 授權分享；裁切位置亦記於 `tools/crop_knowledge_instruments.py`。
 - Three.js：MIT License，經 cdnjs 載入。
 
-## GitHub 直接更新（方案 A）
+## GitHub 直接更新（後備方案）
 
 編輯器的「⚙ GitHub」可設定直接 commit 到 repo，省去手動下載覆蓋：
 
@@ -273,7 +253,7 @@ ICAO/IATA 代號。內容為手動整理的參考資料，非資料驅動；家�
 資料來源：[OurAirports](https://ourairports.com/data/)（Public Domain，
 `davidmegginson/ourairports-data` 每日更新的鏡像）。**全量匯入**，不篩選
 機型或代號——OurAirports 收錄的所有機場與跑道（含已關閉、無代號的小型
-跑道）全數保留，目前共 **85,716 座機場、48,096 條跑道**。
+跑道）全數保留（移除 129 筆 `[Duplicate]` 重複資料後），目前共 **85,587 座機場**。
 
 ```
 data/

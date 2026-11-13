@@ -154,6 +154,7 @@ const SkyTime = (() => {
     const input = menu.querySelector(".tz-search");
     input.addEventListener("input", () => renderList(input.value));
     input.addEventListener("keydown", e => {
+      if (e.isComposing || e.keyCode === 229) return; // 中日文輸入法選字中，不攔截 Enter／方向鍵
       if (e.key === "ArrowDown"){ e.preventDefault(); act = Math.min(items.length - 1, act + 1); mark(); }
       else if (e.key === "ArrowUp"){ e.preventDefault(); act = Math.max(0, act - 1); mark(); }
       else if (e.key === "Enter"){ e.preventDefault(); if (items[act] !== undefined) choose(items[act]); }

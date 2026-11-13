@@ -583,8 +583,7 @@ function init(DATA, MODEL){
     coDot.setAttribute("cx", x);  coDot.setAttribute("cy", y);
     coLine.setAttribute("x1", x); coLine.setAttribute("y1", y);
     coLine.setAttribute("x2", lx);coLine.setAttribute("y2", ly);
-    coLabel.style.left = lx + "px";
-    coLabel.style.top  = (ly - 6) + "px";
+    coLabel.style.translate = `${lx}px ${ly - 6}px`;   // 每幀更新，用 translate 不觸發重排
   }
 
   /* ── 控制按鈕 ── */
@@ -631,10 +630,11 @@ function init(DATA, MODEL){
       const g = partGroups[id];
       _hsVec.copy(g.userData.anchor).applyMatrix4(airplane.matrixWorld);
       const v = _hsVec.clone().project(camera);
-      if (v.z > 1){ el.style.display = "none"; continue; }   // 在相機後方
-      el.style.display = "";
-      el.style.left = ((v.x + 1) / 2 * innerWidth) + "px";
-      el.style.top  = ((-v.y + 1) / 2 * innerHeight) + "px";
+      const behind = v.z > 1;                                // 在相機後方
+      if (el.hidden !== behind) el.hidden = behind;           // 狀態改變時才動 DOM
+      if (behind) continue;
+      // 每幀更新位置：只改 translate（合成層），不改 left/top 以免每幀重排
+      el.style.translate = `${((v.x + 1) / 2 * innerWidth).toFixed(1)}px ${((-v.y + 1) / 2 * innerHeight).toFixed(1)}px`;
       el.classList.toggle("active", selectedPartId === id);
       el.classList.toggle("dimmed", selectedPartId && selectedPartId !== id);
     }

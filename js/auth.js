@@ -175,6 +175,6 @@ async function requireAuth(){
 
     gate.querySelector("#auth-cancel").addEventListener("click", () => gate.remove());
     btn.addEventListener("click", submit);
-    gate.addEventListener("keydown", e => { if (e.key === "Enter") submit(); });
+    gate.addEventListener("keydown", e => { if (e.key === "Enter" && !e.isComposing && e.keyCode !== 229) submit(); });
   });
 }

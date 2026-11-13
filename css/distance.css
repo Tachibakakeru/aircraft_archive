@@ -16,7 +16,7 @@
   border:1px solid var(--stroke);background:transparent;color:var(--muted);
   font-size:16px;cursor:pointer;transition:color .15s,border-color .15s;
 }
-.dist-swap button:hover{color:var(--amber);border-color:var(--amber)}
+@media (hover:hover){.dist-swap button:hover{color:var(--amber);border-color:var(--amber)}}
 
 .dist-result{
   background:var(--panel);border:1px solid var(--stroke);border-radius:14px;

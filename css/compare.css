@@ -25,7 +25,7 @@ body{min-height:100vh}
   color:var(--muted);text-decoration:none;white-space:nowrap;
   transition:color .15s;
 }
-.cmp-topbar .back:hover{color:var(--amber)}
+@media (hover:hover){.cmp-topbar .back:hover{color:var(--amber)}}
 .cmp-title{flex:1}
 .cmp-title .eyebrow{font-size:10px}
 .cmp-title h1{font-size:20px;font-weight:700;letter-spacing:.03em;margin-top:4px}
@@ -46,9 +46,9 @@ body{min-height:100vh}
   font-family:var(--mono);font-size:12px;letter-spacing:.1em;
   color:var(--text);background:transparent;
   border:1px dashed var(--stroke);border-radius:8px;
-  padding:9px 16px;cursor:pointer;transition:all .15s;
+  padding:9px 16px;cursor:pointer;transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
-.cmp-add:hover{border-color:var(--amber);color:var(--amber)}
+@media (hover:hover){.cmp-add:hover{border-color:var(--amber);color:var(--amber)}}
 
 .cmp-table-wrap{padding:24px;overflow-x:auto}
 .cmp-empty{color:var(--muted);font-size:15px;padding:40px 0;text-align:center}
@@ -81,17 +81,17 @@ body{min-height:100vh}
   font-family:var(--mono);font-size:10px;letter-spacing:.1em;
   color:var(--muted);background:transparent;
   border:1px solid var(--stroke);border-radius:5px;
-  padding:4px 10px;cursor:pointer;transition:all .15s;
+  padding:4px 10px;cursor:pointer;transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
-.cmp-table thead .remove:hover{color:var(--warn);border-color:var(--warn)}
+@media (hover:hover){.cmp-table thead .remove:hover{color:var(--warn);border-color:var(--warn)}}
 .cmp-table thead .view-link{
   display:inline-block;margin-top:8px;margin-left:6px;
   font-family:var(--mono);font-size:10px;letter-spacing:.1em;
   color:var(--muted);text-decoration:none;
   border:1px solid var(--stroke);border-radius:5px;padding:4px 10px;
-  transition:all .15s;
+  transition:color .15s,background-color .15s,border-color .15s,box-shadow .15s,opacity .15s,transform .15s;
 }
-.cmp-table thead .view-link:hover{color:var(--amber);border-color:var(--amber)}
+@media (hover:hover){.cmp-table thead .view-link:hover{color:var(--amber);border-color:var(--amber)}}
 
 .cmp-table .cat-row td{
   font-family:var(--mono);font-size:11px;letter-spacing:.24em;
@@ -114,12 +114,12 @@ body{min-height:100vh}
 
 /* 2026-11 改版：頁首工具列改為天空帶（設計紀錄 docs/site-redesign.md） */
 .cmp-topbar .back{color:var(--sky-muted)}
-.cmp-topbar .back:hover{color:var(--sky-ink)}
+@media (hover:hover){.cmp-topbar .back:hover{color:var(--sky-ink)}}
 .cmp-topbar .eyebrow{color:var(--sky-muted)}
 .cmp-topbar h1{font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:.01em;color:var(--sky-ink)}
 .cmp-topbar .tool-btn,.cmp-topbar button.ghost,.cmp-topbar button.tiny{color:var(--sky-ink);background:var(--glass);border-color:var(--glass-line)}
-.cmp-topbar .tool-btn:hover,.cmp-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
+@media (hover:hover){.cmp-topbar .tool-btn:hover,.cmp-topbar button.ghost:hover{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}}
 .cmp-topbar button.primary{background:var(--sky-ink);color:var(--sky-1);border-color:var(--sky-ink)}
-.cmp-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}
+@media (hover:hover){.cmp-topbar button.primary:hover{background:var(--bg-1);color:var(--amber)}}
 .cmp-topbar .cmp-difftoggle{color:var(--sky-ink)}
 .cmp-topbar :focus-visible{outline-color:var(--sky-ink)}

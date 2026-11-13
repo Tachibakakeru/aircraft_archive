@@ -533,7 +533,7 @@ function wirePicker(input, list, which){
   input.addEventListener("focus", () => input.select());
   input.addEventListener("input", () => { clearTimeout(tm); tm = setTimeout(render, 80); });
   input.addEventListener("keydown", e => {
-    if (list.hidden) return;
+    if (list.hidden || e.isComposing || e.keyCode === 229) return; // 輸入法選字中不攔截
     if (e.key === "ArrowDown" && items.length) { e.preventDefault(); act = (act + 1) % items.length; mark(); }
     else if (e.key === "ArrowUp" && items.length) { e.preventDefault(); act = (act - 1 + items.length) % items.length; mark(); }
     else if (e.key === "Enter") { e.preventDefault(); choose(act < 0 ? 0 : act); }

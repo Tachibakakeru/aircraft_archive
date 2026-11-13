@@ -856,3 +856,28 @@
 - 使用者回報點選圖示後持續抖動。指定的 MP4 在本機路徑無法讀取，依目前的測站圖預覽檢查轉盤。修正置中座標包含頁面左側邊距，以及無限循環以總寬度推算換位的問題。改依對應節點的實際位置換回中間一份，且在程式捲動與拖曳期間不換位。
 - 原分頁驗證兩個方向的跨接縫點擊、搜尋測站圖與圖文顯示。連續取樣確認開啟詳情後輪轉與頁面位置穩定。84 筆知識資料與 JavaScript 語法檢查通過，知識頁 JS 升為 v=205，Service Worker 升為 `hangar-v81`，留在本機待確認。
 - 使用者確認推送轉盤修正至 `main`。推送前再次通過 84 筆知識資料與 JavaScript 語法檢查，正式站由 Cloudflare Pages 接續部署。
+
+### 補記與文件整理（2026-11-14 05:13）
+
+- 補記先前的韓國、日本航空公司補資料：新增日本公司並補齊 `airline_geo.json` 樞紐與代表航線；航空公司頁資源升為 `?v=133`；加入全域 `[hidden]{display:none!important}` 規則，修正被 class 樣式蓋過而顯示的隱藏元素；機場名稱改經 `airportDisplayName()` 統一顯示。當時已推送。
+- 使用者確認 iPhone 上功能正常（翻頁時鐘、翻牌看板等），此待辦結案。
+- README 更新：簡介、正式網址、資料數量（184／48／85,587／594／84）、頁面總表、本機預覽；刪除過時的首頁改版說明與 `http.server` 段落。
+- 新增規則：`AGENTS.md` 與 `CLAUDE.md` 同步；本檔每輪附日期時間即時更新；回答結尾條列改動。已寫入兩份文件與記憶。
+- 評估 GoogleChrome/modern-web-guidance（Chrome／Edge／Firefox／MDN 維護、Apache-2.0，約 250 項網頁功能指引＋`legacy-scan`）：值得試，建議先跑一次 `legacy-scan` 看結果再決定是否安裝；與現有 emilkowalski 動畫技能不重疊。未安裝。
+- 動畫稽核複查（對照目前程式碼）：16 處 `transition:all` 屬實；全站無 `@media (hover:hover)`，`:active` 只有地球儀拖曳游標一處；`js/runway.js` 每幀改 `left`／`width` 屬實；新發現 `js/viewer.js` `updateHotspots()` 每幀改標註點 `left`／`top`。尚未改程式。
+- 持續紀錄規則：每次回答即時更新本檔並附日期時間（YYYY-MM-DD HH:MM）；回答結尾條列本輪改動；`AGENTS.md` 與 `CLAUDE.md` 新增段落保持同步。
+
+### 動畫稽核五項修正＋modern-web-guidance（2026-11-14 05:30，本機，未推送）
+
+- ① `transition:all` 16 處改為只列實際變化的屬性：按鈕類 `color/background-color/border-color/box-shadow/opacity/transform`，提示框（airlines、editor 的 toast）`opacity/transform`。檔案：airlines、airports、compare、editor、knowledge、style、versus 的 CSS。
+- ② `js/runway.js` 跑道進度條：飛機改用 `translate`、滾行痕跡改用 `scale`（`transform-origin:left`），不再每幀改 `left/width`；起飛改由 `--rwy-w` 推到跑道尾端，起飛時直接量寬度，不依賴 rAF。起點仍是 4%，起飛 ease-in 不變。
+- ③ `js/viewer.js` 3D 標註點與部位標籤：每幀改 `translate`，不改 `left/top`；在相機後方時才切換 `hidden`（新增 `.hotspot[hidden]{display:none}`）。
+- ④ 全站 127 條 `:hover` 規則（15 個 CSS＋404.html 內嵌）以腳本包進 `@media (hover:hover)`，同一選擇器清單內的非 hover 選擇器（如 `.on`、`:focus-visible`）留在原處；手機點擊後不再殘留 hover。機型卡片的收藏星號在觸控裝置改為常駐顯示（原本只在 hover 出現）。
+- ⑤ `css/sky.css` 新增全站按壓回饋：`button`、`[role=button]`、`.btn` 按下時 `scale:.97`（獨立屬性，不覆蓋原本 transform），並移除 iOS 灰色點擊閃光。
+- modern-web-guidance 掃描（`legacy-scan`）3 項：IME Enter 2 項屬實並擴大修正到 5 處——`airlines.js` 樞紐／航線輸入、`auth.js` 密碼框、`home.js` 航線規劃、`skytime.js` 時區搜尋、`ui.js` 下拉選單，中日文輸入法選字時不攔截 Enter／方向鍵；`viewer.html` 起飛進度條改原生 `<progress>` 一項不採用（自訂外觀，現有 ARIA 已正確）。
+- 安裝 `modern-web-guidance` 技能（`.agents/skills`，Claude Code 以符號連結共用），未裝同 repo 的 `chrome-extensions`（本站非擴充功能）。`skills-lock.json` 已更新；AGENTS／CLAUDE 技能表同步。
+- 快取：所有改動的 CSS／JS `?v=` 各 +1（style 207、sky 7、viewer.js 212、runway.js 3 等），Service Worker `hangar-v82`。
+- README：編輯段落改為現行的 `/api/verify`＋`/api/gh-save` 流程，GitHub Token 段落改標為後備方案。
+- 驗證（本機預覽）：A320 檢視器 7 個標註點與部位標籤定位正確、無主控台錯誤；機場頁跑道條起點 4%、起飛到 102% 後收起；首頁 30 條 hover 規則在 `(hover:hover)` 內、`:active` 規則生效；航線規劃輸入「台北」時，選字中的 Enter 不觸發、一般 Enter 選到 TSA。所有改動 JS 通過 `node --check`。
+- 待使用者確認後推送。
+

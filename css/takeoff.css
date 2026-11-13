@@ -8,7 +8,7 @@
   font:10px var(--mono);letter-spacing:.16em;color:var(--amber)}
 .takeoff-hud-head button{border:0;background:transparent;color:var(--muted);font:20px var(--sans);
   line-height:1;cursor:pointer;padding:0 2px}
-.takeoff-hud-head button:hover{color:var(--text)}
+@media (hover:hover){.takeoff-hud-head button:hover{color:var(--text)}}
 .takeoff-hud strong{display:block;margin:12px 0 13px;font-size:20px;font-weight:650;letter-spacing:.04em}
 .takeoff-progress{height:4px;border-radius:4px;background:var(--stroke);overflow:hidden}
 .takeoff-progress span{display:block;width:0;height:100%;border-radius:inherit;background:var(--amber)}
