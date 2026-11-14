@@ -899,3 +899,4 @@
 - `js/i18n.js` `set()`：把改 `lang`、套用文字、送出 `langchange` 包進 `document.startViewTransition()`，整頁 0.4 秒淡入淡出；瀏覽器不支援（舊版 Safari 18 以前、Firefox 舊版）或分頁在背景時照舊瞬間切換。`css/sky.css` 設定 `::view-transition-old/new(root)` 時長 .4s。查過 modern-web-guidance 的 `same-document-transitions` 指引方向一致。
 - 版本：`i18n.js?v=219`、`sky.css?v=8`、Service Worker `hangar-v84`。
 - 驗證：預覽面板對我是背景狀態，走到「瞬間切換」後備路徑，英／中切換正確、無錯誤；淡入淡出效果需使用者在預覽目視確認。
+- 2026-11-14 06:10 使用者回覆「PUSH」：Logo 飛越例外與語言切換淡入淡出推送至 `main`（8b973a5），Cloudflare Pages 接續部署。
