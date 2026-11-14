@@ -93,3 +93,6 @@
 /* 按壓回饋（全站）：按下瞬間微縮。用獨立的 scale 屬性，不覆蓋元素原本的 transform */
 :where(button:not(:disabled), [role="button"], .btn){ -webkit-tap-highlight-color:transparent; }
 :where(button:not(:disabled), [role="button"], .btn):active{ scale:.97; }
+
+/* 切換語言的整頁淡入淡出（js/i18n.js set() 用 View Transitions）。比預設 .25s 稍慢、較柔和 */
+::view-transition-old(root),::view-transition-new(root){animation-duration:.4s;animation-timing-function:cubic-bezier(.4,0,.2,1)}

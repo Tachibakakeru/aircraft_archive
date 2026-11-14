@@ -490,4 +490,7 @@ body.rp-open{overflow:hidden}
   .auto-ctl.on .auto-ico{animation:auto-spin 1.6s linear infinite!important}
   .auto-bar i{transition:transform .2s linear!important}
   .auto-paused .auto-ctl.on .auto-ico{animation-play-state:paused!important}
+  /* Logo 飛越（js/extras.js）照常播放；2026-11-14 補上，原本被上方全域 transition:none 蓋掉而瞬間消失 */
+  .flyby.flyby-on .flyby-plane{transition:transform 2.4s cubic-bezier(.35,.05,.45,1)!important}
+  .flyby.flyby-on .flyby-trail{transition:opacity .6s 1.5s!important}
 }

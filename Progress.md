@@ -882,3 +882,20 @@
 - 待使用者確認後推送。
 
 - 2026-11-14 05:30 使用者回覆「PUSH」，推送 `618a1e2` 至 `main`（`277a152..618a1e2`），Cloudflare Pages 接續部署。待使用者在 iPhone 確認 hover 不殘留與按壓回饋手感。
+
+### 首頁 Logo 飛越在桌機看不到（2026-11-14 05:45，僅調查，未改程式）
+
+- 使用者回報 iPhone 首頁點 Logo 只有飛機飛過、電腦版沒有。這是 2026-11-04 的「Logo 飛越」彩蛋（`js/extras.js`），依使用者指示保留不改。
+- 電腦看不到的原因：該電腦開啟「減少動態效果」，`css/home.css` 第 327 行 reduced-motion 規則 `*{transition:none!important}` 讓飛機直接跳到終點、瞬間消失；iPhone 未開所以正常播放。本機預覽實測飛機 0.3 秒內已在畫面外。翻頁時鐘、翻牌看板等已排除此規則，飛越當初漏列。
+- 修正 `AGENTS.md`／`CLAUDE.md` 持續紀錄規則的誤寫：「更新本檔」改為「更新 `Progress.md`」。
+
+### 首頁 Logo 飛越在減少動態效果下照常播放（2026-11-14 05:55，本機，未推送）
+
+- `css/home.css` reduced-motion 例外區塊新增 `.flyby-plane`（transform 2.4s）與 `.flyby-trail`（opacity）的 transition，與原本 `css/transition.css` 數值相同。`home.css?v=211`，Service Worker `hangar-v83`。
+- 驗證：本機預覽在減少動態效果開啟下，飛機的 transition 由 `none` 變為 `transform 2.4s cubic-bezier(.35,.05,.45,1)`。預覽面板當時被隱藏、瀏覽器暫停 rAF，無法錄到實際飛行畫面，請使用者在預覽點 Logo 目視確認。
+
+### 切換語言整頁淡入淡出（2026-11-14 06:05，本機，未推送）
+
+- `js/i18n.js` `set()`：把改 `lang`、套用文字、送出 `langchange` 包進 `document.startViewTransition()`，整頁 0.4 秒淡入淡出；瀏覽器不支援（舊版 Safari 18 以前、Firefox 舊版）或分頁在背景時照舊瞬間切換。`css/sky.css` 設定 `::view-transition-old/new(root)` 時長 .4s。查過 modern-web-guidance 的 `same-document-transitions` 指引方向一致。
+- 版本：`i18n.js?v=219`、`sky.css?v=8`、Service Worker `hangar-v84`。
+- 驗證：預覽面板對我是背景狀態，走到「瞬間切換」後備路徑，英／中切換正確、無錯誤；淡入淡出效果需使用者在預覽目視確認。

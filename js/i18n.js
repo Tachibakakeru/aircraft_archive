@@ -2553,9 +2553,14 @@ const I18N = (() => {
     if (!SUPPORTED.includes(lang)) return;
     current = lang;
     localStorage.setItem(KEY, lang);
-    document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hant" : lang);
-    apply();
-    document.dispatchEvent(new CustomEvent("langchange", { detail: lang }));
+    const swap = () => {
+      document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hant" : lang);
+      apply();
+      document.dispatchEvent(new CustomEvent("langchange", { detail: lang }));
+    };
+    // 2026-11-14：切換語言時整頁淡入淡出（View Transitions，樣式在 css/sky.css）；不支援的瀏覽器照舊瞬間切換
+    if (document.startViewTransition && document.visibilityState === "visible") document.startViewTransition(swap);
+    else swap();
   }
   function cycle(){
     const i = SUPPORTED.indexOf(current);
