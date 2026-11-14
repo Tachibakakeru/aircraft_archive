@@ -925,3 +925,7 @@
 - 其他：`data/dreamlifter.json` 的副標原本還寫「尚無 3D 模型」，改成中英日三語簡介；重產 `assets/thumb_dreamlifter.png`、`assets/silhouettes/dreamlifter.png`（其餘 48 張剪影已還原）；版本 `viewer.js?v=214`、模型讀取鍵 212、機型資料讀取鍵 183、`fleet.json` 內縮圖 `?v=2`、Service Worker `hangar-v86`。
 - 順手修正：`AGENTS.md`、`Progress.md`、`models/blender/README.md` 裡 Blender 路徑被寫壞成 `D:lender.exe`，改回 `D:blender.exe`。
 - 文件：`AGENTS.md`、`README.md`、`models/blender/README.md` 同步；`CLAUDE.md` 無對應段落，未動。已知限制：輪艙門與起落架同時動作，中途會互相穿過；襟翼角度、收放角度仍是示意；無 Logo。
+
+### 推送 Dreamlifter 3D 模型（2026-11-15 01:05）
+
+- 使用者確認「PUSH」。commit `d57a4cc` 已推送到 `main`（28 個檔案：Dreamlifter 模型 v2、建模與檢查腳本、檢視器巢狀鉸鏈、登錄資料與文件），Cloudflare Pages 會自動部署。線上版本尚未實測。
