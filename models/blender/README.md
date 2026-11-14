@@ -52,3 +52,43 @@ approximate stowed/upper-skin envelopes (not full CAD collision certification).
 
 References: [actual main-gear shortening/inward retraction](https://www.heritageconcorde.com/mainlandinggear),
 [engine mountings on fixed wing structure](https://www.heritageconcorde.com/airframe-structure/1000).
+
+# Boeing 747-400 LCF Dreamlifter — original Blender educational prototype (trial v2, 2026-11-15)
+
+`dreamlifter.blend` is the editable source; `../dreamlifter.json` is the archive v2 export. No downloaded mesh,
+logo or photographic texture is included; geometry is an original approximation, not Boeing CAD.
+
+```powershell
+D:blender.exe --background --python-exit-code 1 --python tools/build_dreamlifter_blender.py
+python tools/make_thumb.py models/dreamlifter.json assets/thumb_dreamlifter.png
+python tools/check_model_inventory.py
+cd tools; python check_dreamlifter_model.py
+```
+
+Built with Blender 5.2.1 LTS, sharing the Concorde helper functions. Metres, nose +X, Z up, port +Y, ground z = 0;
+export normalises length (71.68 m) to 12 units. Published figures used: length 71.68 m, span 64.4 m,
+height 21.54 m, cargo hold diameter 8.38 m, stabilizer span 22.17 m, 747-400 engine stations and gear layout.
+
+193 meshes, 64 hinge groups on 8 slider channels:
+
+| Channel | Hinges | Notes |
+|---|---|---|
+| `flaps` | 4 | inboard/outboard Fowler flaps, 30° with 1.15 m aft travel (triple-slotted flap shown as one panel) |
+| `slats` | 28 | 3 Krueger + 11 variable-camber Krueger panels per wing, folding out from the lower skin |
+| `spoilers` | 12 | 6 per wing, 45° |
+| `ailerons` | 4 | inboard high-speed + outboard, left/right opposite, ±20° |
+| `elevators` | 4 | inboard/outboard each side, ±22° |
+| `rudder` | 2 | upper/lower, ±25° |
+| `gear` | 7 | nose (forward), 2 wing gear (inboard), 2 body gear (forward) + 2 nested truck-levelling joints; 18 wheels |
+| `swingtail` | 3 | aft fuselage, fin and stabilizer share the port-side hinge line, 93° |
+
+New optional v2 field `surfaces[].parent`: a hinge can hang from another hinge (rudder and elevators ride on the
+swing tail; body-gear trucks stay level while the leg swings). The viewer's takeoff demo now also drives
+`flaps`/`slats` slider channels.
+
+Known limits of this trial: fuselage is a convex double-lobe hull (no crease detail, no cargo-loader fittings);
+the tail support is ground equipment and is not modelled; gear doors move together with the gear rather than in
+sequence; Krueger linkage, gear retraction angles and the 93° tail swing are illustrative, not rigging data; livery is a neutral
+white/blue scheme without logos. The span follows Boeing's published 64.4 m.
+
+References (dimensions only, nothing bundled): Boeing published Dreamlifter figures already recorded in `data/dreamlifter.json`, and general 747-400 airport-planning dimensions. Trial v2 was compared by eye against Boeing Images catalogue photos (BI224697 in-flight render, BI223381 in flight) and Wikimedia Commons files `B747 LCF.JPG`, `Boeing 747-400(LCF) Dreamlifter.jpg` and the three-view `Boeing 747 LCF Dreamlifter.jpg`; stations were measured from those in a browser and no image is bundled. v2 changes: blunt hold dome starting 9.6 m aft of the nose, swing break at 48.5 m, tail cone ending at 69.0 m with the fin tip overhanging to 71.68 m, re-stationed fin and stabilizer, two port-side hinge fairings, triple-slotted flaps, flap-track fairings, gear doors, blue nacelles, no cheat line. Re-check these sources before refining the shape.

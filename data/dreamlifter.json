@@ -1,6 +1,10 @@
 {
   "title": "Boeing 747-400 Dreamlifter",
-  "sub": "尚無 3D 模型（開源倉庫未收錄，亦查無可用開源授權模型），僅提供規格資料",
+  "sub": {
+    "zh": "由 747-400 改裝的超大型貨機，加大的貨艙與可整段擺開的機尾用來運送 787 的機身與機翼大部件。",
+    "en": "An outsize freighter converted from the 747-400; its enlarged hold and swing tail carry major 787 fuselage and wing sections.",
+    "ja": "747-400を改造した超大型貨物機。拡大された貨物室とスイングテールで、787の胴体や主翼の大型部材を運びます。"
+  },
   "specifications": {
     "機組員與載客": [
       [

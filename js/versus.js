@@ -15,7 +15,7 @@ let idA = "b738", idB = "a320";
 let pickerA = null, pickerB = null;
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=182")).json();
+  fleet = await (await fetch("data/fleet.json?v=183")).json();
   fleet.aircraft.sort((a, b) => a.name.localeCompare(b.name, "en", { numeric: true, sensitivity: "base" }));
 
   const params = new URLSearchParams(location.search);

@@ -557,10 +557,10 @@
         "en": "A radically modified 747-400 with a bulbous fuselage — only 4 exist, shuttling 787 fuselage sections between Boeing's factories.",
         "ja": "747-400を大幅改造した超大型輸送機。世界に4機のみ、787の胴体部品を工場間輸送する専用機。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_dreamlifter.png?v=2",
       "icao": "B74S",
       "iata": "",
-      "has3d": false
+      "has3d": true
     },
     {
       "id": "dc9",

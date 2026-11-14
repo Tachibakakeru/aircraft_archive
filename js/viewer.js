@@ -22,7 +22,7 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=182`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=183`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 // 3D 模型是可選的（如 DC-9、707 家族等尚未建過幾何的機型只有規格文案，
@@ -31,7 +31,7 @@ function loadData(){
 // 機身可看（PARTS/PART_ORDER 也一併 fallback 成空，見 init() 開頭）。
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=211`).then(r => r.ok ? r.json() : null).catch(() => null)
+  fetch(`models/${MODEL_ID}.json?v=212`).then(r => r.ok ? r.json() : null).catch(() => null)
 ]).then(([DATA, MODEL]) => init(DATA, MODEL || { parts: {}, anchors: {}, meta: {} }))
   .catch(() => fail(I18N.t("viewer.loaderror").replace("{id}", MODEL_ID)));
 
@@ -158,6 +158,7 @@ function init(DATA, MODEL){
 
   // ── 可動操縱面：各片建鉸鏈 pivot，掛在主翼群組下（拾取／高亮歸主翼）──
   const surfaces = [];
+  const pivotById = {};   // surfaces[].parent：鉸鏈可掛在另一組鉸鏈下（擺尾上的方向舵、保持水平的輪架）
   if (MODEL.surfaces){
     for (const s of MODEL.surfaces){
       const parent = partGroups[s.part || "wing"];
@@ -174,7 +175,10 @@ function init(DATA, MODEL){
           end: e.slideEnd || 1, base: mesh.position.clone() };
         pivot.add(mesh);
       }
-      parent.add(pivot);
+      const host = s.parent && pivotById[s.parent];
+      if (host) pivot.position.sub(host.userData.base);   // 母鉸鏈座標原點在它自己的樞紐
+      (host || parent).add(pivot);
+      if (s.id) pivotById[s.id] = pivot;
       surfaces.push(pivot);
     }
   }
@@ -941,7 +945,9 @@ function init(DATA, MODEL){
   scene.add(runway);
   if (has3D && !["heli", "ask21"].includes(MODEL_ID)){
     btnTakeoff.hidden = false;
-    const hasTakeoffFlaps = surfaces.some(s => !s.userData.channel && (s.userData.type === "flap" || s.userData.type === "slat"));
+    const flapChannels = ["flaps", "slats"].filter(id => articulation[id]);
+    const setChannel = (id, v) => { articulation[id].target = v; const el = document.querySelector(`input[data-control="${id}"]`); if (el) el.value = v; };
+    const hasTakeoffFlaps = flapChannels.length > 0 || surfaces.some(s => !s.userData.channel && (s.userData.type === "flap" || s.userData.type === "slat"));
     const preflight = hasTakeoffFlaps ? 2 : 0;
     const duration = 12 + preflight;
     const bounds = new THREE.Box3();
@@ -989,6 +995,7 @@ function init(DATA, MODEL){
       deployTarget=s.deployTarget; deployNow=s.deployNow; applyDeploy();
       btnDeploy.setAttribute("aria-pressed", String(deployTarget > .5));
       btnDeploy.textContent=I18N.t(deployTarget > .5 ? "viewer.deploy.stow" : "viewer.deploy");
+      for (const id of Object.keys(s.channels)) setChannel(id, s.channels[id]);
       if (articulation.gear) articulation.gear.target=s.gear;
       const gearSlider = document.querySelector('input[data-control="gear"]');
       if (gearSlider) gearSlider.value=s.gear;
@@ -1005,6 +1012,7 @@ function init(DATA, MODEL){
         shadowOpacity:shadow.material.opacity,
         target:target.clone(),theta,phi,radius,autoRotate,
         gear:articulation.gear?.target ?? 0,deployTarget,deployNow,
+        channels:Object.fromEntries(Object.entries(articulation).map(([id, st]) => [id, st.target])),
         gridVisible:grid.visible,part:selectedPartId
       };
       stopTour(); deselect();
@@ -1016,6 +1024,7 @@ function init(DATA, MODEL){
       grid.visible=false; runway.visible=true; hotspotLayer.hidden=true;
       shadow.scale.set(1.05,.58,1);
       if (articulation.gear){ articulation.gear.target=0; document.querySelector('input[data-control="gear"]').value=0; }
+      for (const id of Object.keys(articulation)) if (id !== "gear") setChannel(id, 0);   // 擺尾、舵面等先歸零
       takeoff={saved,started:performance.now(),stage:hasTakeoffFlaps ? "flaps" : "roll",manualCamera:false,flaps:0};
       takeoffHud.hidden=false; btnTakeoff.setAttribute("aria-pressed", "true");
       syncTakeoffText();
@@ -1043,6 +1052,7 @@ function init(DATA, MODEL){
       if (hasTakeoffFlaps){
         const flaps=.42*smooth(t/1.7)*(1-smooth((flightT-8.8)/1.9));
         if (Math.abs(flaps-takeoff.flaps)>.0001){ takeoff.flaps=flaps; applyDeploy(); }
+        for (const id of flapChannels) setChannel(id, id === "slats" ? Math.min(1, flaps/.42) : flaps/.42*.67);   // 起飛襟翼約 20°／30°
       }
       if (articulation.gear){
         const gear=smooth((flightT-7)/1.7);

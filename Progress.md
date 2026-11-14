@@ -900,3 +900,28 @@
 - 版本：`i18n.js?v=219`、`sky.css?v=8`、Service Worker `hangar-v84`。
 - 驗證：預覽面板對我是背景狀態，走到「瞬間切換」後備路徑，英／中切換正確、無錯誤；淡入淡出效果需使用者在預覽目視確認。
 - 2026-11-14 06:10 使用者回覆「PUSH」：Logo 飛越例外與語言切換淡入淡出推送至 `main`（8b973a5），Cloudflare Pages 接續部署。
+
+### Dreamlifter Blender 試作 v1（2026-11-14 23:50，本機，未推送）
+
+- 使用者確認 iPhone 可正常切換語言（淡入淡出待辦結案）。
+- 依使用者要求以本機 Blender 5.2.1（`D:blender.exe`）製作圖鑑缺的 Boeing 747-400 LCF Dreamlifter。新增 `tools/build_dreamlifter_blender.py`（共用協和號腳本的輔助函式）、`models/blender/dreamlifter.blend`、`models/dreamlifter.json`（v2，約 840 KB）、`assets/thumb_dreamlifter.png`、`assets/silhouettes/dreamlifter.png`。
+- 幾何依公開尺寸：長 71.68 m、翼展 64.4 m、高 21.54 m、貨艙直徑 8.38 m、水平尾翼展 22.17 m。機身為雙圓弧凸包（原 747 下半部＋加大貨艙），保留駕駛艙隆起；四具 PW4062 短艙含進氣口、風扇、整流錐、核心罩、尾錐與派龍；無翼尖小翼。193 個網格。
+- 可動：64 組鉸鏈、8 個滑桿——襟翼 4、克魯格襟翼 28、擾流板 12、副翼 4（左右反向）、升降舵 4、方向舵 2、起落架 7（鼻輪向前、翼下主輪向內、機身主輪向前且輪架保持水平，共 18 輪）、擺尾貨艙門 3（後機身、垂尾、平尾同鉸鏈線，93°，方向舵與升降舵跟著擺）。
+- `js/viewer.js`：新增可選 `surfaces[].parent` 巢狀鉸鏈；起飛示範對有 `flaps`／`slats` 滑桿的機型也會放襟翼，開始時把其他滑桿歸零、結束後還原。舊機型不受影響（協和號回歸檢查通過）。
+- 登錄：`data/fleet.json` Dreamlifter `has3d=true`、縮圖；`data/model_inventory.json` 49/184；`data/silhouettes.json` 加入 Dreamlifter（既有 48 張剪影 PNG 重建後位元組不同但未提交，已還原）。版本：`viewer.js?v=213`、fleet.json 讀取鍵 183、silhouettes 鍵 2、相關 JS `?v=` 各 +1、Service Worker `hangar-v85`。
+- 驗證：Blender 背景建模成功並自檢尺寸；`tools/check_dreamlifter_model.py` 通過（尺寸、接地、各通道鉸鏈數、18 顆輪胎、收輪四個中途姿態與收起後輪胎都在機鼻／翼身整流罩內）；本機預覽實看側面、後上方、襟翼＋擾流板＋方向舵全開、擺尾全開、收輪 0／0.5／1、起飛示範（襟翼 0.67→收、輪 0→1），主控台無錯誤。
+- 已知限制（詳見 `models/blender/README.md`）：無襟翼滑軌整流罩、輪艙門、尾部支撐；Fowler 襟翼以單片表示；收放角度為示意；塗裝為無 Logo 的白藍配色。部位解說文字沿用既有 `data/dreamlifter.json`，未改。
+- 文件：`AGENTS.md` 3D 模型段落、`README.md`（49 個 3D、Dreamlifter 小節）、`models/blender/README.md` 同步。`CLAUDE.md` 無對應段落，未動。待使用者看過試作後決定修改方向與是否推送。
+
+### Dreamlifter 試作 v2：對照官方照片修正外型並補細節（2026-11-15 00:55，本機，未推送）
+
+- 使用者要求「對照波音官方照片修正外型細節，缺的細節也補上」，並中途要求「不要用我的頁面，只在 Claude desktop 裡面開網頁」：已關閉使用過的 Chrome 分頁，改用內建瀏覽器，並寫入記憶 `feedback_builtin_browser_only.md`。
+- 參考來源（只在瀏覽器裡看、量測站位，未下載、未收錄任何圖片）：波音圖庫 BI224697（官方飛行算圖）、BI223381（飛行照）；維基共享資源 `B747 LCF.JPG`（左側面）、`Boeing 747-400(LCF) Dreamlifter.jpg`（左前方）、`Boeing 747 LCF Dreamlifter.jpg`（三視圖）。
+- 外型修正（`tools/build_dreamlifter_blender.py`）：貨艙前端改成緊接駕駛艙後方的圓鈍隆起（機鼻後 9.6～15 m，原本 11.5～17.5 m 的緩坡）；擺尾分界 47.5→48.5 m；機身尾錐止於 69.0 m，垂直尾翼翼尖後伸到 71.68 m（原本把機身拉到全長）；垂尾與水平尾翼的前後緣位置依三視圖重定；引擎短艙改藍色、拿掉實機沒有的機身藍線；補機鼻主艙窗列與登機門框。
+- 補上的細節：三段式開縫襟翼（每片襟翼拆成前、中、後三段，共 12 組鉸鏈，後段依前段位置求出滑移量）；每邊 4 個襟翼滑軌整流罩（後半段跟著襟翼動）；鼻輪、機身主輪、翼下主輪艙門共 8 組（放輪時開、收輪時關）與翼下主輪支柱上的門板；擺尾分界左側上下兩個鉸鏈整流罩。
+- 修正 v1 既有問題：翼下主輪的側撐收輪後會從機翼上表面穿出，改成靠近旋轉軸的斜撐；檢查腳本新增「收輪後沒有零件高過機翼／整流罩」的檢查。
+- 未做：擺尾時的尾部支撐。實機是由地面的專用車輛撐住並推開機尾，不是機上零件，所以沒有加在模型上。
+- 結果：249 個網格、80 組鉸鏈，長 71.68／翼展 64.40／高 21.54 m；`tools/check_dreamlifter_model.py` 通過。預覽實測側面、左前方、左後方、襟翼全放、收輪、擺尾全開，主控台無錯誤。起飛示範與其他機型本輪沒有重測。
+- 其他：`data/dreamlifter.json` 的副標原本還寫「尚無 3D 模型」，改成中英日三語簡介；重產 `assets/thumb_dreamlifter.png`、`assets/silhouettes/dreamlifter.png`（其餘 48 張剪影已還原）；版本 `viewer.js?v=214`、模型讀取鍵 212、機型資料讀取鍵 183、`fleet.json` 內縮圖 `?v=2`、Service Worker `hangar-v86`。
+- 順手修正：`AGENTS.md`、`Progress.md`、`models/blender/README.md` 裡 Blender 路徑被寫壞成 `D:lender.exe`，改回 `D:blender.exe`。
+- 文件：`AGENTS.md`、`README.md`、`models/blender/README.md` 同步；`CLAUDE.md` 無對應段落，未動。已知限制：輪艙門與起落架同時動作，中途會互相穿過；襟翼角度、收放角度仍是示意；無 Logo。

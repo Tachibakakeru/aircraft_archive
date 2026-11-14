@@ -3,7 +3,7 @@
 互動式航空資料庫（Cloudflare Pages 靜態網站＋PWA，正式站
 [aircraft-archive.pages.dev](https://aircraft-archive.pages.dev)，`main` 推送後自動部署）。
 
-目前收錄：**184 個機型**（48 個有 3D 模型）、**85,587 座機場**、
+目前收錄：**184 個機型**（49 個有 3D 模型）、**85,587 座機場**、
 **594 家航空公司**、**84 則航空小知識**。介面支援繁中／English／日本語與深淺色主題。
 
 ## 頁面
@@ -290,3 +290,7 @@ python3 tools/build_airports.py /tmp/airports.csv /tmp/runways.csv /tmp/countrie
 # 協和號 Blender 試作模型
 
 協和號另有 SKY ARCHIVE 原創教學試作：`models/blender/concorde.blend` 為可編修來源，`models/concorde.json` 為站內 v2 幾何。重建方式、12 組鉸鏈與目前精度限制見 [模型製作說明](models/blender/README.md)。未使用外部成品網格、航空公司 Logo 或未知授權紋理；形體依公開尺寸近似建立，尚非精密 CAD 或飛行模擬器。
+
+# Dreamlifter Blender 試作模型
+
+Boeing 747-400 LCF Dreamlifter 為 SKY ARCHIVE 原創試作（`models/blender/dreamlifter.blend` → `models/dreamlifter.json`）：依公開尺寸建立，並對照波音官方照片與公開三視圖修正外型（v2，2026-11-15），80 組鉸鏈可分別操作三段式襟翼、前緣克魯格襟翼、擾流板、副翼、升降舵、方向舵、18 輪起落架與擺尾貨艙門。未使用外部網格、Logo 或紋理；重建方式與已知限制見 [模型製作說明](models/blender/README.md)。
