@@ -40,7 +40,7 @@ async function airportCoords(id){
 async function cruiseSpeedKmh(id){
   if (speedCache[id] != null) return speedCache[id];
   try {
-    const res = await fetch(`data/${id}.json?v=182`);
+    const res = await fetch(`data/${id}.json?v=183`);
     if (!res.ok) throw new Error();
     const d = await res.json();
     let kmh = null;
@@ -107,7 +107,7 @@ function fmtHours(h){
   try {
     const [aRes, fRes] = await Promise.all([
       fetch("data/airports.json?v=128"),
-      fetch("data/fleet.json?v=183"),
+      fetch("data/fleet.json?v=184"),
     ]);
     AIRPORTS = (await aRes.json()).airports;
     FLEET = (await fRes.json()).aircraft;
@@ -206,7 +206,7 @@ let routeMap = null, mapKey = "", mapState = null, silhouettes = null;
 // 機型剪影：tools/build_silhouettes.py 產生；沒有 3D 模型的機型對應同家族或同類別的剪影
 async function loadSilhouettes(){
   if (silhouettes) return silhouettes;
-  try { silhouettes = await (await fetch("data/silhouettes.json?v=2")).json(); } catch { silhouettes = {}; }
+  try { silhouettes = await (await fetch("data/silhouettes.json?v=3")).json(); } catch { silhouettes = {}; }
   return silhouettes;
 }
 // 圖示大小依翼展：約 10 m（小飛機）→ 28 px，80 m（A380）→ 56 px

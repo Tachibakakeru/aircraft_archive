@@ -300,7 +300,7 @@ def encode(ob):
     entry=dict(q=b64encode(q.tobytes()).decode(),qo=lo,qs=step,
                 i=b64encode(idx.tobytes()).decode(),iw=2,c=list(ob.data.materials[0].diffuse_color),t=0)
     if 'slide' in ob:
-        entry.update(slide=world(ob['slide']),slideEnd=ob['slideEnd'])
+        entry.update(slide=world(ob['slide']),slideEnd=ob.get('slideEnd', 1.0))
     return entry
 
 

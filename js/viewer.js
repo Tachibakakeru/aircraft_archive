@@ -22,7 +22,7 @@ function loadData(){
   if (local){
     try { return Promise.resolve(JSON.parse(local)); } catch {}
   }
-  return fetch(`data/${MODEL_ID}.json?v=183`).then(r => { if(!r.ok) throw 0; return r.json(); });
+  return fetch(`data/${MODEL_ID}.json?v=184`).then(r => { if(!r.ok) throw 0; return r.json(); });
 }
 
 // 3D 模型是可選的（如 DC-9、707 家族等尚未建過幾何的機型只有規格文案，
@@ -31,7 +31,7 @@ function loadData(){
 // 機身可看（PARTS/PART_ORDER 也一併 fallback 成空，見 init() 開頭）。
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=212`).then(r => r.ok ? r.json() : null).catch(() => null)
+  fetch(`models/${MODEL_ID}.json?v=222`).then(r => r.ok ? r.json() : null).catch(() => null)
 ]).then(([DATA, MODEL]) => init(DATA, MODEL || { parts: {}, anchors: {}, meta: {} }))
   .catch(() => fail(I18N.t("viewer.loaderror").replace("{id}", MODEL_ID)));
 
@@ -165,7 +165,7 @@ function init(DATA, MODEL){
       if (!parent) continue;
       const pivot = new THREE.Group();
       pivot.position.set(s.pv[0], s.pv[1], s.pv[2]);
-      pivot.userData = { type: s.t, side: s.sd, channel: s.channel, angle: s.angle, start: s.start || 0,
+      pivot.userData = { type: s.t, side: s.sd, channel: s.channel, angle: s.angle, start: s.start || 0, motion: s.motion,
         axis: new THREE.Vector3(s.ax[0], s.ax[1], s.ax[2]).normalize(),
         base: new THREE.Vector3(s.pv[0], s.pv[1], s.pv[2]) };
       for (const e of s.e){
@@ -189,14 +189,29 @@ function init(DATA, MODEL){
   // Fowler 平移：襟翼隨展開往後（-X）並略下（-Y）滑出、縫翼往前（+X）下伸
   const FOWLER = { flap: [-0.22, -0.05, 0], slat: [0.10, -0.05, 0] };
   let deployTarget = 0, deployNow = 0;
-  const articulation = Object.fromEntries((MODEL.controls || []).map(c => [c.id, {target: 0, now: 0}]));
+  const articulation = Object.fromEntries((MODEL.controls || []).map(c => [
+    c.id, {target: 0, now: 0, min: c.min, max: c.max}
+  ]));
+  function hingeTravel({ motion, start }, amount){
+    if (motion){
+      for (let i = 1; i < motion.length; i++){
+        const [end, target] = motion[i];
+        if (amount <= end){
+          const [begin, initial] = motion[i - 1];
+          const progress = Math.max(0, (amount - begin) / (end - begin));
+          return initial + (target - initial) * progress;
+        }
+      }
+      return motion[motion.length - 1][1];
+    }
+    return start ? Math.max(0, Math.min(1, (amount - start) / (1 - start))) : amount;
+  }
   function applyDeploy(){
     for (const pv of surfaces){
       if (pv.userData.channel){
         const state = articulation[pv.userData.channel];
         if (state){
-          const start = pv.userData.start;
-          const turn = start ? Math.max(0, Math.min(1, (state.now-start)/(1-start))) : state.now;
+          const turn = hingeTravel(pv.userData, state.now);
           pv.quaternion.setFromAxisAngle(pv.userData.axis, pv.userData.angle * turn);
           for (const mesh of pv.children){
             const slide = mesh.userData.slide;
@@ -321,28 +336,43 @@ function init(DATA, MODEL){
 
   /* ── 視角控制 ── */
   const target = new THREE.Vector3(0, 1.1, 0);
+  const panOffset = new THREE.Vector3();
+  const viewCenter = new THREE.Vector3();
+  const panAxis = new THREE.Vector3();
+  const PAN_LIMIT = 24;
   let theta = 0.9, phi = 1.15, radius = 13;
   const RAD_MIN = 5, RAD_MAX = 26;
   let radiusMax = RAD_MAX;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let autoRotate = !reducedMotion;
   let takeoff = null;
+  let panActive = false;
+
+  function panView(dx, dy){
+    const worldPerPixel = 2 * radius * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) / Math.max(1, canvas.clientHeight);
+    panOffset.addScaledVector(panAxis.setFromMatrixColumn(camera.matrixWorld, 0), -dx * worldPerPixel);
+    panOffset.addScaledVector(panAxis.setFromMatrixColumn(camera.matrixWorld, 1), dy * worldPerPixel);
+    panOffset.clampLength(0, PAN_LIMIT);
+    if (takeoff) takeoff.manualCamera = true;
+  }
 
   function applyCamera(){
     phi = Math.max(0.25, Math.min(Math.PI - 0.35, phi));
     radius = Math.max(RAD_MIN, Math.min(radiusMax, radius));
+    viewCenter.copy(target).add(panOffset);
     camera.position.set(
-      target.x + radius * Math.sin(phi) * Math.cos(theta),
-      target.y + radius * Math.cos(phi),
-      target.z + radius * Math.sin(phi) * Math.sin(theta)
+      viewCenter.x + radius * Math.sin(phi) * Math.cos(theta),
+      viewCenter.y + radius * Math.cos(phi),
+      viewCenter.z + radius * Math.sin(phi) * Math.sin(theta)
     );
-    camera.lookAt(target);
+    camera.lookAt(viewCenter);
   }
 
   let dragging = false, moved = 0, lastX = 0, lastY = 0, pinchDist = 0;
   const pointers = new Map();
 
   canvas.addEventListener("pointerdown", e => {
+    if (e.button !== 0) return;
     pointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
     dragging = true; moved = 0;
     lastX = e.clientX; lastY = e.clientY;
@@ -350,12 +380,16 @@ function init(DATA, MODEL){
     canvas.setPointerCapture(e.pointerId);
   });
   canvas.addEventListener("pointermove", e => {
-    if (pointers.has(e.pointerId)) pointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
+    if (!pointers.has(e.pointerId)){
+      if (!dragging) hoverCheck(e);
+      return;
+    }
+    pointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
 
     if (pointers.size === 2){
       const [a, b] = [...pointers.values()];
       const d = Math.hypot(a.x-b.x, a.y-b.y);
-      if (pinchDist > 0){
+      if (pinchDist > 0 && d > 0){
         radius *= pinchDist / d;
         if (takeoff) takeoff.manualCamera = true;
       }
@@ -363,28 +397,34 @@ function init(DATA, MODEL){
       moved = 99;
       return;
     }
-    if (!dragging) { hoverCheck(e); return; }
-
     const dx = e.clientX - lastX, dy = e.clientY - lastY;
     moved += Math.abs(dx) + Math.abs(dy);
     if (takeoff && moved > 3) takeoff.manualCamera = true;
-    theta += dx * 0.0055;
-    phi   -= dy * 0.0055;
+    if (panActive) panView(dx, dy);
+    else {
+      theta += dx * 0.0055;
+      phi   -= dy * 0.0055;
+    }
     lastX = e.clientX; lastY = e.clientY;
   });
   function endPointer(e){
-    pointers.delete(e.pointerId);
+    if (!pointers.delete(e.pointerId)) return;
     if (pointers.size < 2) pinchDist = 0;
     if (pointers.size === 0){
       dragging = false;
       canvas.classList.remove("dragging");
       if (takeoff) return;
-      if (moved < 7) pickAt(e.clientX, e.clientY);
+      if (moved < 7){
+        if (e.type === "pointerup") pickAt(e.clientX, e.clientY);
+      }
       else { camDirty = true; updateURL(); }
+    } else {
+      ({x: lastX, y: lastY} = pointers.values().next().value);
     }
   }
   canvas.addEventListener("pointerup", endPointer);
   canvas.addEventListener("pointercancel", endPointer);
+  canvas.addEventListener("lostpointercapture", endPointer);
   let wheelTimer = 0;
   canvas.addEventListener("wheel", e => {
     e.preventDefault();
@@ -592,6 +632,8 @@ function init(DATA, MODEL){
 
   /* ── 控制按鈕 ── */
   const btnRotate = document.getElementById("btn-rotate");
+  const btnPan = document.getElementById("btn-pan");
+  const dragHint = document.getElementById("view-drag-hint");
   let stopTakeoff = () => {};
   btnRotate.setAttribute("aria-pressed", String(autoRotate));
   btnRotate.addEventListener("click", () => {
@@ -599,10 +641,33 @@ function init(DATA, MODEL){
     autoRotate = !autoRotate;
     btnRotate.setAttribute("aria-pressed", String(autoRotate));
   });
+  function setPan(active){
+    panActive = active;
+    btnPan.setAttribute("aria-pressed", String(active));
+    dragHint.dataset.i18n = active ? "viewer.hint.pan" : "viewer.hint.drag";
+    dragHint.textContent = I18N.t(dragHint.dataset.i18n);
+    if (active){
+      autoRotate = false;
+      btnRotate.setAttribute("aria-pressed", "false");
+    }
+  }
+  btnPan.addEventListener("click", () => { stopTour(); setPan(!panActive); });
+  const panKeys = {ArrowLeft: [-18,0], ArrowRight: [18,0], ArrowUp: [0,-18], ArrowDown: [0,18]};
+  btnPan.addEventListener("keydown", e => {
+    if (!panActive || !panKeys[e.key]) return;
+    e.preventDefault();
+    e.stopPropagation();
+    panView(...panKeys[e.key]);
+    if (!takeoff){ camDirty = true; updateURL(); }
+  });
   document.getElementById("btn-reset").addEventListener("click", () => {
     stopTakeoff();
     theta = 0.9; phi = 1.15; radius = 13;
     airplane.rotation.y = 0;
+    panOffset.set(0,0,0);
+    setPan(false);
+    camDirty = true;
+    updateURL();
   });
 
   /* ── 3D 標註點（hotspots）── */
@@ -841,6 +906,7 @@ function init(DATA, MODEL){
     p.set("model", MODEL_ID);
     if (selectedPartId) p.set("part", selectedPartId);
     if (camDirty) p.set("cam", camStr());
+    if (panOffset.lengthSq() > 1e-6) p.set("pan", panOffset.toArray().map(v => v.toFixed(3)).join(","));
     history.replaceState(null, "", `?${p.toString()}`);
   }
 
@@ -902,6 +968,22 @@ function init(DATA, MODEL){
     const summary = document.createElement("summary");
     const heading = {zh: "可動部位", en: "Moving parts", ja: "可動部位"};
     details.append(summary);
+    function pauseViewForControls(){
+      stopTakeoff();
+      stopTour();
+      autoRotate = false;
+      btnRotate.setAttribute("aria-pressed", "false");
+      const captured = [...pointers.keys()];
+      pointers.clear();
+      pinchDist = 0;
+      dragging = false;
+      canvas.classList.remove("dragging");
+      for (const id of captured){
+        if (canvas.hasPointerCapture(id)) canvas.releasePointerCapture(id);
+      }
+    }
+    details.addEventListener("pointerdown", pauseViewForControls);
+    details.addEventListener("focusin", pauseViewForControls);
     const labels = [];
     for (const c of MODEL.controls){
       const label = document.createElement("label");
@@ -911,8 +993,10 @@ function init(DATA, MODEL){
       slider.min = c.min; slider.max = c.max; slider.step = c.step; slider.value = 0;
       slider.dataset.control = c.id;
       slider.addEventListener("input", () => {
-        const value=Number(slider.value);
-        stopTakeoff(); articulation[c.id].target=value; slider.value=value;
+        const value = slider.valueAsNumber;
+        pauseViewForControls();
+        articulation[c.id].target = value;
+        slider.valueAsNumber = value;
       });
       label.append(title, slider); details.append(label);
       labels.push([title, c.label]);
@@ -920,6 +1004,7 @@ function init(DATA, MODEL){
     const reset = document.createElement("button");
     reset.type = "button";
     reset.addEventListener("click", () => {
+      pauseViewForControls();
       for (const state of Object.values(articulation)) state.target = 0;
       for (const slider of details.querySelectorAll("input")) slider.value = 0;
     });
@@ -989,7 +1074,7 @@ function init(DATA, MODEL){
       airplane.position.copy(s.position); airplane.rotation.copy(s.rotation);
       shadow.position.copy(s.shadowPosition); shadow.scale.copy(s.shadowScale);
       shadow.material.opacity = s.shadowOpacity;
-      target.copy(s.target); theta=s.theta; phi=s.phi; radius=s.radius;
+      target.copy(s.target); panOffset.copy(s.panOffset); theta=s.theta; phi=s.phi; radius=s.radius;
       radiusMax=RAD_MAX;
       autoRotate=s.autoRotate; btnRotate.setAttribute("aria-pressed", String(autoRotate));
       deployTarget=s.deployTarget; deployNow=s.deployNow; applyDeploy();
@@ -1010,12 +1095,13 @@ function init(DATA, MODEL){
         position:airplane.position.clone(),rotation:airplane.rotation.clone(),
         shadowPosition:shadow.position.clone(),shadowScale:shadow.scale.clone(),
         shadowOpacity:shadow.material.opacity,
-        target:target.clone(),theta,phi,radius,autoRotate,
+        target:target.clone(),panOffset:panOffset.clone(),theta,phi,radius,autoRotate,
         gear:articulation.gear?.target ?? 0,deployTarget,deployNow,
         channels:Object.fromEntries(Object.entries(articulation).map(([id, st]) => [id, st.target])),
         gridVisible:grid.visible,part:selectedPartId
       };
       stopTour(); deselect();
+      panOffset.set(0,0,0);
       autoRotate=false; btnRotate.setAttribute("aria-pressed", "false");
       deployTarget=deployNow=0; applyDeploy();
       btnDeploy.setAttribute("aria-pressed", "false");
@@ -1084,6 +1170,13 @@ function init(DATA, MODEL){
       camDirty = true;
     }
   }
+  const panParam = params.get("pan");
+  if (panParam){
+    const offset = panParam.split(",").map(Number);
+    if (offset.length === 3 && offset.every(Number.isFinite)){
+      panOffset.fromArray(offset).clampLength(0, PAN_LIMIT);
+    }
+  }
   const wantPart = params.get("part");
   if (wantPart && PARTS[wantPart]) selectPart(wantPart);
 
@@ -1102,8 +1195,11 @@ function init(DATA, MODEL){
     if (autoRotate && !dragging) airplane.rotation.y += 0.0022;
     let articulationChanged = false;
     for (const state of Object.values(articulation)){
-      if (state.now === state.target) continue;
-      state.now = (reducedMotion && !takeoff) || Math.abs(state.now-state.target) < .001 ? state.target : state.now+(state.target-state.now)*.12;
+      const target = Number.isFinite(state.target)
+        ? Math.max(state.min, Math.min(state.max, state.target)) : 0;
+      if (state.now === target) continue;
+      state.now = (reducedMotion && !takeoff) || Math.abs(state.now-target) < .001
+        ? target : state.now+(target-state.now)*.12;
       articulationChanged = true;
     }
     if (articulationChanged) applyDeploy();

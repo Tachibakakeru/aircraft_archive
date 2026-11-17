@@ -4,7 +4,7 @@
 
 「天空檔案 / SKY ARCHIVE」是部署在 Cloudflare Pages 的純靜態航空資料網站與 PWA。它有四個可獨立瀏覽、可經驗證後編輯並發布的資料庫：
 
-1. **飛行器圖鑑**：184 個機型的資料、規格、家族、比較與可互動的 Three.js 3D 檢視器；本機其中 48 型已有 3D（含協和號試作），136 型待補。
+1. **飛行器圖鑑**：184 個機型的資料、規格、家族、比較與可互動的 Three.js 3D 檢視器；其中 50 型已有 3D，134 型待補。
 2. **機場與跑道**：85,587 座機場的搜尋、跑道、衛星圖、比較、收藏與資料編輯。
 3. **全球航空公司**：目前 594 家航空公司的公司資料、呼號、機隊、樞紐、航線、收藏與航線地圖。
 4. **航空小知識**：84 個三語航空知識條目，以座艙／飛航場景的可滑動互動 UI 呈現。
@@ -121,6 +121,19 @@
 - 新增模型的標準流程：來源／授權確認 → 轉換至 `models/<id>.json` → 產生縮圖 → 新增 `data/<id>.json` → 更新 `data/fleet.json` → 實際檢視部位分類與起落架。
 - `viewer.js` 同時支援舊格式與 `meta.format = 2` 壓縮格式。
 - 來源授權在 `README.md` 有記錄；新增模型不得沿用未取得適當授權的紋理或標誌。
+
+## Blender 補建飛機模型備忘（2026-11-16）
+
+- 協和號、Dreamlifter、A321neo 的可編輯來源在 `models/blender/`。可攜檔在 `models/glb/`，由 `tools/export_blender_glb.py` 從對應的 `.blend` 重建，保留分件、材質與一段示範動畫。若更新其中一架的來源，對應 GLB 與站內 JSON 一併重匯出。
+- 預覽驗證只用 Codex 的內建網頁分頁，沿用既有的本機預覽。使用者要求停止擷取 Windows 桌面或操作其桌面視窗。
+- 舵面驗收同時檢查滑桿數值與模型實際轉角。`Surface.hinged()` 接收弧度，呼叫端以 `rad()` 轉換度數。A321neo v3 的五個副翼、升降舵及方向舵鉸鏈均有角度回歸檢查。
+- 現行範例：Dreamlifter 與 A321neo Cabin Flex／LEAP-1A 以 `surfaces[].motion` 安排輪艙門先打開、輪組移動、門再關閉。`tools/check_gear_clearance_blender.py` 在兩架的 `.blend` 抽樣 401 個姿態檢查門與輪組；A321neo v2 同時檢查輪胎對外殼、襟翼對滑軌整流罩的干涉，以及收輪後輪胎是否露出腹部。官方參考、重建指令與展示近似事項見 `models/blender/README.md`。
+
+- 來源：[arjun988/blender-skills](https://github.com/arjun988/blender-skills/tree/904f095d8f36a6e72adaebb08d07f884a074743d)（MIT，已核對此版）。開始補建缺少的機型、重做外型或調整可動部位時，先從 `data/model_inventory.json` 確認缺模，讀本節與 `models/blender/README.md`，按任務查上游對應技能。本節已整理成可直接採用的流程。
+- **比例先行｜`blender-director` 的 [reference-image-match](https://github.com/arjun988/blender-skills/blob/904f095d8f36a6e72adaebb08d07f884a074743d/.claude/skills/references/reference-image-match.md)、`vehicle-artist`**：確認實際次型號，優先用原廠尺寸、三視圖及多角度實拍。以公尺建立機身站位，先對準翼展、機鼻、翼根、垂尾、引擎和接地姿態，再做細節。以正投影側／頂／正面比比例，以同角度斜視照片核對曲面；先校正視角，再判斷形狀誤差。標記資料不足的部位與示意尺寸。
+- **幾何與材質｜`hard-surface`、`asset-optimization`，有貼圖時再用 `uv-workflow`／`materials`**：分開機身、玻璃、短艙、輪組與各可動面。沿用協和號與 Dreamlifter 的截面放樣和對稱產生方法；左右動作有差異時分開處理。接縫、門框和整流罩以版型特徵及可辨識度決定細節量。只簡化不影響輪廓、部位點選或鉸鏈的網格，檢查退化面、非預期開口、法線、三角面數、材質數與匯出大小。
+- **機械動作｜`rigging`、`animation`**：用 Empty、局部旋轉軸及父子鉸鏈表示組件，對應站內 `surfaces[].parent`、`start`、`e[].slide`／`slideEnd`。依可查證的機構設定方向與先後順序；輪艙門只在輪組有足夠淨空時讓輪組進出。逐段檢查端點與多個中途姿態，尤其在輪艙門與起落架交會時；示意角度明確標註。
+- **匯出與驗收｜`export-pipeline`、`qa-review`**：優先沿用本機 Blender 背景模式與現有 Python 建模腳本，保留可編輯的 `.blend`，交付原生 v2 JSON、縮圖與剪影並更新圖鑑索引及盤點。Blender 使用公尺、機鼻 +X、Z 向上；網站為機鼻 +X、Y 向上、機長正規化為 12。除檢查比例、接地、索引及鉸鏈外，須在原本機預覽分頁檢查多角度成品、部位點選、滑桿全行程及適用的起飛示範。上游遊戲引擎／FBX 設定不直接套用；MCP 有可用連線時可輔助預覽，現有建模管線可獨立執行。
 
 ## UI／動畫 Skills（2026-11-07 17:31 新增）
 

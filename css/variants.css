@@ -45,6 +45,9 @@
 .v-chip .v-name{font-weight:600}
 .v-chip .v-code{font-family:var(--mono);font-size:10px;font-variant-numeric:tabular-nums;letter-spacing:.03em}
 .v-chip.in{background:var(--amber-soft);border:1px solid var(--amber)}
+a.v-chip.in{text-decoration:none}
+a.v-chip.in:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+@media (hover:hover){a.v-chip.in:hover{background:var(--panel-2,var(--panel));box-shadow:0 0 0 1px var(--amber)}}
 .v-chip.in .v-name{color:var(--text)}
 .v-chip.in .v-code{color:var(--amber)}
 .v-chip.out{border:1px dashed var(--stroke);color:var(--muted)}

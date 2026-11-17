@@ -8,8 +8,8 @@
 <link rel="icon" href="assets/icon.svg?v=2" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="theme-color" content="#1565d8">
-<link rel="stylesheet" href="css/style.css?v=207">
-<link rel="stylesheet" href="css/model-controls.css?v=182">
+<link rel="stylesheet" href="css/style.css?v=208">
+<link rel="stylesheet" href="css/model-controls.css?v=184">
 <link rel="stylesheet" href="css/takeoff.css?v=2">
 </head>
 <body class="viewer">
@@ -42,7 +42,7 @@
       <a href="compare.html" class="tool-btn" data-ico="compare" data-i18n="viewer.compare" title="機型比較">比較</a>
     </div>
     <div class="hint">
-      <span data-i18n="viewer.hint.drag">拖曳 — 旋轉視角</span><br>
+      <span id="view-drag-hint" data-i18n="viewer.hint.drag">拖曳 — 旋轉視角</span><br>
       <span data-i18n="viewer.hint.zoom">滾輪 / 雙指 — 縮放</span><br>
       <span data-i18n="viewer.hint.click">點擊部位 — 開啟解說</span>
     </div>
@@ -52,6 +52,9 @@
 <div class="controls">
   <button id="btn-rotate" aria-pressed="true" data-i18n="viewer.rotate">自動旋轉</button>
   <button id="btn-reset" data-i18n="viewer.reset">重置視角</button>
+  <button type="button" id="btn-pan" aria-pressed="false" data-i18n="viewer.pan"
+          data-i18n-title="viewer.pan.help" aria-describedby="pan-help">平移視角</button>
+  <span id="pan-help" hidden data-i18n="viewer.pan.help">開啟後拖曳畫面，或在此按鈕上使用方向鍵。</span>
   <button id="btn-hotspots" aria-pressed="true" data-i18n="viewer.hotspots">標註點</button>
   <button id="btn-tour" aria-pressed="false" data-i18n="viewer.tour">導覽</button>
   <button id="btn-takeoff" aria-pressed="false" data-i18n="viewer.takeoff" hidden>起飛示範</button>
@@ -108,10 +111,10 @@
 <link rel="stylesheet" href="css/sky.css?v=8">
 <link rel="stylesheet" href="css/transition.css?v=9">
 <script src="js/theme.js?v=134"></script>
-<script src="js/i18n.js?v=219"></script>
+<script src="js/i18n.js?v=222"></script>
 <script src="js/skytime.js?v=6"></script>
 <script src="js/transition.js?v=6"></script>
 <script src="js/extras.js?v=5" defer></script>
-<script src="js/viewer.js?v=214"></script>
+<script src="js/viewer.js?v=224"></script>
 </body>
 </html>

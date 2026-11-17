@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-17",
   "fleetCount": 184,
-  "modelCount": 49,
-  "missingCount": 135,
+  "modelCount": 50,
+  "missingCount": 134,
   "missing": [
     {
       "id": "c909",
@@ -32,11 +32,6 @@
     {
       "id": "a320n",
       "name": "Airbus A320neo",
-      "manufacturer": "Airbus"
-    },
-    {
-      "id": "a321n",
-      "name": "Airbus A321neo",
       "manufacturer": "Airbus"
     },
     {

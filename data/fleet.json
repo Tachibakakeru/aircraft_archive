@@ -1080,10 +1080,10 @@
         "en": "The stretched, high-capacity A320neo-family member for medium- and long-range single-aisle routes.",
         "ja": "A320neoファミリーの長胴・大容量型で、中長距離路線に対応します。"
       },
-      "thumb": "assets/thumb_nomodel.svg",
+      "thumb": "assets/thumb_a321n.png",
       "icao": "A21N",
       "iata": "32Q",
-      "has3d": false
+      "has3d": true
     },
     {
       "id": "a321xlr",

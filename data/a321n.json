@@ -74,9 +74,9 @@
         ]
       ],
       "fact": {
-        "zh": "多數後期 A321neo 採 Airbus Cabin Flex：第三對大型門可取消，改設兩對翼上逃生口；實際配置仍依認證客艙而異。",
-        "en": "Many later A321neos use Airbus Cabin Flex, deleting the third pair of full-size doors in favor of two pairs of overwing exits; certified cabin layouts still vary.",
-        "ja": "後期A321neoの多くはAirbus Cabin Flexを採用し、第3大型扉対を省いて翼上非常口2対へ変更しますが、認証客室仕様は異なります。"
+        "zh": "Airbus Cabin Flex 取消翼前的 2 號門，加入兩對翼上出口，並把翼後的 3 號門往後移。此模型展示具 LEAP-1A 引擎的 ACF 構型。",
+        "en": "Airbus Cabin Flex removes Door 2 ahead of the wing, adds two pairs of overwing exits, and moves Door 3 aft. The 3D model depicts a LEAP-1A-powered ACF configuration.",
+        "ja": "Airbus Cabin Flexは主翼前の第2扉をなくし、翼上非常口を2対追加し、第3扉を後方に移す。この3DモデルはLEAP-1A搭載のACF仕様。"
       },
       "bullets": [
         {

@@ -3,7 +3,7 @@
 互動式航空資料庫（Cloudflare Pages 靜態網站＋PWA，正式站
 [aircraft-archive.pages.dev](https://aircraft-archive.pages.dev)，`main` 推送後自動部署）。
 
-目前收錄：**184 個機型**（49 個有 3D 模型）、**85,587 座機場**、
+目前收錄：**184 個機型**（50 個有 3D 模型）、**85,587 座機場**、
 **594 家航空公司**、**84 則航空小知識**。介面支援繁中／English／日本語與深淺色主題。
 
 ## 頁面

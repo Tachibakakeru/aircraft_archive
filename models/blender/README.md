@@ -59,17 +59,18 @@ References: [actual main-gear shortening/inward retraction](https://www.heritage
 logo or photographic texture is included; geometry is an original approximation, not Boeing CAD.
 
 ```powershell
-D:blender.exe --background --python-exit-code 1 --python tools/build_dreamlifter_blender.py
+& 'D:/blender.exe' --background --python-exit-code 1 --python tools/build_dreamlifter_blender.py
 python tools/make_thumb.py models/dreamlifter.json assets/thumb_dreamlifter.png
 python tools/check_model_inventory.py
-cd tools; python check_dreamlifter_model.py
+python tools/check_dreamlifter_model.py
+& 'D:/blender.exe' -b models/blender/dreamlifter.blend --python-exit-code 1 --python tools/check_gear_clearance_blender.py
 ```
 
 Built with Blender 5.2.1 LTS, sharing the Concorde helper functions. Metres, nose +X, Z up, port +Y, ground z = 0;
 export normalises length (71.68 m) to 12 units. Published figures used: length 71.68 m, span 64.4 m,
 height 21.54 m, cargo hold diameter 8.38 m, stabilizer span 22.17 m, 747-400 engine stations and gear layout.
 
-193 meshes, 64 hinge groups on 8 slider channels:
+Trial v1 baseline (193 meshes and 64 hinges). V2 and later refinements follow this table.
 
 | Channel | Hinges | Notes |
 |---|---|---|
@@ -92,3 +93,36 @@ sequence; Krueger linkage, gear retraction angles and the 93° tail swing are il
 white/blue scheme without logos. The span follows Boeing's published 64.4 m.
 
 References (dimensions only, nothing bundled): Boeing published Dreamlifter figures already recorded in `data/dreamlifter.json`, and general 747-400 airport-planning dimensions. Trial v2 was compared by eye against Boeing Images catalogue photos (BI224697 in-flight render, BI223381 in flight) and Wikimedia Commons files `B747 LCF.JPG`, `Boeing 747-400(LCF) Dreamlifter.jpg` and the three-view `Boeing 747 LCF Dreamlifter.jpg`; stations were measured from those in a browser and no image is bundled. v2 changes: blunt hold dome starting 9.6 m aft of the nose, swing break at 48.5 m, tail cone ending at 69.0 m with the fin tip overhanging to 71.68 m, re-stationed fin and stabilizer, two port-side hinge fairings, triple-slotted flaps, flap-track fairings, gear doors, blue nacelles, no cheat line. Re-check these sources before refining the shape.
+
+## Dreamlifter gear sequence (2026-11-16)
+
+251 meshes and 82 hinges. The wing wheel-well doors have inboard and outer leaves with a nested hinge, following the configuration illustrated in the [UK AAIB investigation, figure 8](https://assets.publishing.service.gov.uk/media/56162bc040f0b6585f000005/Boeing_747-443_G-VROM_10-15.pdf). The wing doors fold clear before the legs swing. The wing, body and nose doors close after the gear is stowed. `surfaces[].motion` stores ordered pairs of slider progress and angle multiplier. Blender and the viewer use the same linear interpolation between those pairs. The hinge positions and door timing are approximated for display.
+
+## Airbus A321neo Cabin Flex / CFM LEAP-1A v4 (2026-11-17)
+
+`a321neo.blend` is the editable source and `../a321n.json` is the website export. The geometry depicts one Cabin Flex exit layout with LEAP-1A nacelles. It measures 44.51 m long, 35.80 m across and 11.76 m tall in the model's standing attitude, with 16.90 m between the nose and main axles and a 7.59 m main-gear track. V2 narrows the outer wing, replaces the wingtip extrusion with a tapered Sharklet loft (2.4 m from root chord line to tip chord line), and rounds the cabin windows.
+
+The nine sliders cover flaps, slats, spoilers, ailerons, elevators, rudder, stabilizer trim, landing gear and thrust reverser sleeves. The nose gear folds forward 92° and the two main assemblies fold inboard 80.5° using the Airbus planning drawings. The wheel wells are cut into the shell and the doors remain open during wheel travel. Each wing has three flap-track fairings with fixed forward shells and aft shells that move with their respective main flap elements. The test samples 401 poses for wheel-to-skin, door-to-gear and flap-to-fairing intersections, then checks the stowed wheels from below. Bay liners, linkages and control-surface deflections are educational approximations. Cabin and cargo doors are exterior outlines.
+
+V3 uses the Lufthansa A321neo side profile to reduce the vertical fin chord and rebuild its tip and root fillet. The nose loft, radome seam and six glass panes are aligned to front and side reference views. The forward windscreen outline is projected from the front elevation so the mullion stays narrow and the lower edges stay aligned. The aileron, elevator and rudder calls now convert the intended 23° or 27° display limits to radians. The Blender check verifies the resulting hinge angles at full travel.
+
+V4 adds smoothly blended fixed wing-root skin over both main wheel wells and two sequenced outer doors that close the remaining sections of the underside. The outer doors are hinged at the aft edge for clearance in this educational rig. The 401-pose check now includes main door pairs and confirms external coverage above and below the stowed wells.
+
+```powershell
+& 'D:/blender.exe' -b --python-exit-code 1 --python tools/build_a321neo_blender.py
+& 'D:/blender.exe' -b models/blender/a321neo.blend --python-exit-code 1 --python tools/check_gear_clearance_blender.py
+python tools/make_thumb.py models/a321n.json assets/thumb_a321n.png
+python tools/check_model_inventory.py
+```
+
+References: [Airbus A321 airport planning, sections 2-2, 2-3 and 2-9](https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2025-07/AC_A321_20250715.pdf), [Airbus Sharklet dimensions](https://www.airbus.com/en/newsroom/press-releases/2016-10-frontier-airlines-takes-delivery-of-its-first-a320neo), [Airbus Cabin Flex exit layout](https://www.airbus.com/en/newsroom/news/2017-11-quick-news-dubai-airshow-november-edition), [Airbus A321neo and A321XLR flap differences](https://www.airbus.com/en/newsroom/stories/2022-09-the-only-way-is-up-flight-testing-the-a321xlr-gathers-pace), [Airbus gear-down photograph](https://www.airbus.com/sites/g/files/jlcbta136/files/db69eed7ea79cf01847510686026391b_EN-American-Airlines-receives-first-A321neo.pdf), [CFM LEAP-1A underside photograph](https://www.cfmaeroengines.com/press-articles/american-airlines-selects-cfm-engines-and-services-for-airbus-a321neo-fleet-expansion).
+
+V3 references: [Lufthansa A321neo side profile and dimensions](https://www.lufthansa.com/fi/en/32q), the frontal photo provided by the user, and the A321neo windshield photos attributed in `data/a321n.json`.
+
+## Portable files
+
+`../glb/concorde.glb`, `../glb/dreamlifter.glb`, and `../glb/a321neo.glb` are binary glTF 2.0 exports from their editable Blender sources. Each retains named mesh parts, materials, hinge transforms, and one baked demonstration clip. Each `.blend` is the master for editing geometry or individual articulation actions. Rebuild a portable file from the repository root:
+
+```powershell
+& 'D:/blender.exe' -b models/blender/a321neo.blend --python-exit-code 1 --python tools/export_blender_glb.py
+```

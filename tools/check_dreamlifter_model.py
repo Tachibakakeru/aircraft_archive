@@ -9,6 +9,12 @@ M = 71.68 / 12          # archive units → metres
 
 
 def rotate(p, s, amount):
+    motion = s.get('motion')
+    if motion:
+        for (begin, initial), (end, target) in zip(motion, motion[1:]):
+            if begin <= amount <= end:
+                amount = initial + (target-initial)*(amount-begin)/(end-begin)
+                break
     a = s['angle'] * amount
     c, sn = math.cos(a), math.sin(a)
     ax, pv = s['ax'], s['pv']
@@ -33,7 +39,7 @@ def check():
     assert abs(hi[0]-lo[0]-71.68) < .1 and abs(hi[2]-lo[2]-64.4) < .2 and abs(hi[1]-21.54) < .1, (lo, hi)
     assert abs(lo[1]) < .03, lo                                   # tyres touch the ground
     counts = {c: sum(s['channel'] == c for s in model['surfaces']) for c in channels}
-    assert counts['flaps'] == 12 and counts['gear'] == 15 and counts['spoilers'] == 12 and counts['slats'] == 28, counts
+    assert counts['flaps'] == 12 and counts['gear'] == 17 and counts['spoilers'] == 12 and counts['slats'] == 28, counts
     assert counts['ailerons'] == 4 and counts['elevators'] == 4 and counts['rudder'] == 2, counts
     tyres = 0
     for s in model['surfaces']:

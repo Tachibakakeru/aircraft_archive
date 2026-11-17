@@ -33,7 +33,7 @@ def mesh(name, verts, faces, mat, part, joint=None, smooth=True):
     return ob
 
 
-def joint(name, pivot, axis, angle, channel, part, parent=None, probe=None, want=None):
+def joint(name, pivot, axis, angle, channel, part, parent=None, probe=None, want=None, motion=None):
     """Hinge empty. With probe/want the sign of `angle` is chosen so that a positive
     control value moves `probe` towards the direction `want`."""
     axis = Vector(axis).normalized()
@@ -42,6 +42,8 @@ def joint(name, pivot, axis, angle, channel, part, parent=None, probe=None, want
         if (moved - (Vector(probe) - Vector(pivot))).dot(Vector(want)) < 0:
             angle = -angle
     c.joint(name, tuple(pivot), tuple(axis), angle, channel, part)
+    if motion is not None:
+        RIG[name]['motion'] = motion
     if parent:
         ob = RIG[name]['object']
         ob.parent = RIG[parent]['object']
@@ -311,25 +313,51 @@ def build_gear():
         bogie(name, wc, name+'_truck')
 
 
-def door(name, s0, s1, y, z, drop, toward):
-    """Gear door drawn open (hanging from its hinge line); closes flush as the gear retracts."""
+GEAR_TRAVEL = [(0, 0), (.15, 0), (.8, 1), (1, 1)]
+DOOR_TRAVEL = [(0, -.85), (.8, -.85), (1, 1)]
+NOSE_DOOR_TRAVEL = [(0, 0), (.8, 0), (1, 1)]
+FOLDING_DOOR_TRAVEL = [(0, 0), (.15, 1), (.8, 1), (1, 0)]
+
+
+def door(name, s0, s1, y, z, drop, toward, motion=DOOR_TRAVEL):
+    """Bay panel hangs from the open hinge line at travel zero."""
     a, b = Vector((X(s0), y, z)), Vector((X(s1), y, z))
     down = Vector((0, 0, -drop))
-    joint(name, a, b-a, rad(90), 'gear', 'gear', probe=a+down, want=(0, toward, 0))
+    joint(name, a, b-a, rad(90), 'gear', 'gear', probe=a+down, want=(0, toward, 0), motion=motion)
     extrude(name, [a, b, b+down, a+down], (0, .05, 0), 'white', 'gear', name)
 
 
 def build_doors():
     for side in (-1, 1):
         tag = 'L' if side > 0 else 'R'
-        door(f'nose_door_{tag}', 5.5, 8.4, side*.56, 2.2, .56, -side)
-        door(f'body_door_{tag}_in', 33.2, 36.8, side*1.12, 1.82, .76, side)
-        door(f'body_door_{tag}_out', 33.2, 36.8, side*2.68, 2.05, .76, -side)
-        door(f'wing_door_{tag}', 30.2, 32.8, side*3.45, 2.3, .8, -side)
+        door(f'nose_door_{tag}', 5.5, 8.4, side*.84, 2.2, .84, -side, NOSE_DOOR_TRAVEL)
+        door(f'body_door_{tag}_in', 33.2, 36.8, side*1.01, 1.82, .89, side)
+        door(f'body_door_{tag}_out', 33.2, 36.8, side*2.79, 2.05, .89, -side)
+        # The wing wheel well has a two-leaf door. Both sections are flush in
+        # the closed pose, then fold clear before the gear starts to move.
+        x0, x1 = X(29.6), X(32.2)
+        y, z = side*1.9, 1.95
+        for suffix, width, y0, angle, parent in (
+                ('in', 1.10, y, -85, None),
+                ('out', .83, y+side*1.10, 169, f'wing_door_{tag}_in')):
+            leaf = f'wing_door_{tag}_{suffix}'
+            y1 = y0+side*width
+            joint(leaf, (x0,y0,z), (1,0,0), side*rad(angle), 'gear', 'gear', parent=parent,
+                  motion=FOLDING_DOOR_TRAVEL)
+            extrude(leaf, [(x0,y0,z),(x1,y0,z),(x1,y1,z),(x0,y1,z)], (0,0,.042), 'white', 'gear', leaf)
         # Strut-mounted door travels with the wing gear leg.
         pv = Vector((X(30.9), side*5.5, 3.45))
         extrude(f'Wing gear strut door {tag}', [pv+Vector((dx, side*.3, dz)) for dx, dz in
                 ((-.75, -.2), (.75, -.2), (.75, -1.75), (-.75, -1.75))], (0, .05, 0), 'white', 'gear', f'wing_gear_{tag}')
+
+
+def recalc_normals():
+    for ob in OBJECTS:
+        bm = bmesh.new()
+        bm.from_mesh(ob.data)
+        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+        bm.to_mesh(ob.data)
+        bm.free()
 
 
 # ───────────────────────── assembly ─────────────────────────
@@ -398,11 +426,11 @@ def build():
                      (f'elevator_{tag}_out', 5.7, 10.55, rad(22), 'elevators', DOWN, None)],
                     'hstab', 'white', 'swing_hstab')
     build_gear()
+    for rig in RIG.values():
+        if rig['channel'] == 'gear':
+            rig['motion'] = GEAR_TRAVEL
     build_doors()
-    for ob in OBJECTS:                                   # consistent outward normals
-        bm = bmesh.new(); bm.from_mesh(ob.data)
-        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
-        bm.to_mesh(ob.data); bm.free()
+    recalc_normals()
 
 
 CONTROLS = [
@@ -416,7 +444,7 @@ CONTROLS = [
     ('swingtail', tr('擺尾式貨艙門', 'Swing-tail cargo door', 'スイングテール貨物扉'), 0)]
 
 
-def export():
+def export_model(model_id, blend_name, source, control_specs, anchor_points):
     bpy.context.view_layer.update()
     world = c.world
     parts = {p: [] for p in ('cockpit', 'windshield', 'fuselage', 'engine', 'wingtip', 'wing', 'vstab', 'hstab', 'gear')}
@@ -430,6 +458,8 @@ def export():
                      e=[c.encode(ob) for ob in OBJECTS if ob.get('joint') == name])
         if r.get('parent'):
             entry['parent'] = r['parent']
+        if 'motion' in r:
+            entry['motion'] = r['motion']
         surfaces.append(entry)
     assert all(s['e'] for s in surfaces), [s['id'] for s in surfaces if not s['e']]
     ids = [s['id'] for s in surfaces]
@@ -438,34 +468,44 @@ def export():
     for s in surfaces:
         if s.get('parent', '').startswith('swing_'):
             assert s['parent'] == 'swing_'+s['part'], s['id']
-    controls = [dict(id=i, label=label, min=lo, max=1, step=.01) for i, label, lo in CONTROLS]
+    controls = [dict(id=i, label=label, min=lo, max=1, step=.01) for i, label, lo in control_specs]
     assert {s['channel'] for s in surfaces} == {x['id'] for x in controls}
-    anchors = {p: world(v) for p, v in dict(
-        cockpit=(X(4), 0, 8.6), windshield=(X(5), 1.3, 8.8), fuselage=(X(30), 0, 12.3), engine=(X(27), 11.7, 2.6),
-        wingtip=(X(47), 31.5, 7.2), wing=(X(36), 15, 5.2), vstab=(X(66), 0, 18), hstab=(X(65), 7, 8.8), gear=(X(31.5), 5.5, 1)).items()}
-    out = dict(meta=dict(format=2, model='dreamlifter',
-                         source='SKY ARCHIVE / Blender — original educational prototype (trial v2)',
+    anchors = {p: world(v) for p, v in anchor_points.items()}
+    out = dict(meta=dict(format=2, model=model_id,
+                         source=source,
                          units='normalized: length 12; source metres', prototype=True),
                texture=None, parts=parts, anchors=anchors, surfaces=surfaces, controls=controls)
-    (ROOT/'models/dreamlifter.json').write_text(json.dumps(out, separators=(',', ':')), encoding='utf-8')
-    # Editable .blend: frame 1 neutral, frame 61 full positive travel on every hinge.
+    (ROOT/f'models/{model_id}.json').write_text(json.dumps(out, separators=(',', ':')), encoding='utf-8')
+    # Editable .blend uses the same piecewise linear travel as the viewer.
+    bpy.context.preferences.edit.keyframe_new_interpolation_type = 'LINEAR'
     for r in RIG.values():
         ob = r['object']; ob.rotation_mode = 'AXIS_ANGLE'
-        ob.rotation_axis_angle = (0, *r['axis']); ob.keyframe_insert('rotation_axis_angle', frame=1)
-        ob.rotation_axis_angle = (r['angle'], *r['axis']); ob.keyframe_insert('rotation_axis_angle', frame=61)
+        for progress, multiplier in r.get('motion', [(0, 0), (1, 1)]):
+            ob.rotation_axis_angle = (r['angle'] * multiplier, *r['axis'])
+            ob.keyframe_insert('rotation_axis_angle', frame=1+60*progress)
     for ob in OBJECTS:
         if 'slide' in ob:
             ob.keyframe_insert('location', frame=1)
-            ob.location = Vector(ob.location)+Vector(ob['slide']); ob.keyframe_insert('location', frame=61)
+            ob.location = Vector(ob.location)+Vector(ob['slide'])
+            ob.keyframe_insert('location', frame=1+60*ob.get('slideEnd', 1))
     scene = bpy.context.scene
     scene.frame_end = 61; scene.frame_set(1)
     scene.unit_settings.system = 'METRIC'
     bpy.context.preferences.filepaths.save_version = 0
-    bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'models/blender/dreamlifter.blend'))
+    bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/f'models/blender/{blend_name}.blend'))
     lo = [min(v.co[k] for ob in OBJECTS for v in ob.data.vertices) for k in range(3)]   # rest pose, world = local
     hi = [max(v.co[k] for ob in OBJECTS for v in ob.data.vertices) for k in range(3)]
-    print(f'Dreamlifter: {len(OBJECTS)} meshes, {len(surfaces)} hinges; '
+    print(f'{model_id}: {len(OBJECTS)} meshes, {len(surfaces)} hinges; '
           f'length {hi[0]-lo[0]:.2f} m, span {hi[1]-lo[1]:.2f} m, height {hi[2]:.2f} m, ground {lo[2]:.3f} m')
+    return lo, hi
+
+
+def export():
+    anchors = dict(cockpit=(X(4), 0, 8.6), windshield=(X(5), 1.3, 8.8), fuselage=(X(30), 0, 12.3),
+                   engine=(X(27), 11.7, 2.6), wingtip=(X(47), 31.5, 7.2), wing=(X(36), 15, 5.2),
+                   vstab=(X(66), 0, 18), hstab=(X(65), 7, 8.8), gear=(X(31.5), 5.5, 1))
+    lo, hi = export_model('dreamlifter', 'dreamlifter',
+                          'SKY ARCHIVE / Blender — original educational prototype (sequenced gear)', CONTROLS, anchors)
     assert abs(hi[0]-lo[0]-LENGTH) < .05 and abs(hi[1]-lo[1]-64.4) < .1 and abs(hi[2]-21.54) < .1 and abs(lo[2]) < .02
 
 

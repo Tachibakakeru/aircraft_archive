@@ -755,7 +755,7 @@ function go(href){ location.href = href; }
 renderAll();
 (async () => {
   const [fleet, airlines, count, knowledge] = await Promise.all([
-    getJSON("data/fleet.json", 183), getJSON("data/airlines.json", 139),
+    getJSON("data/fleet.json", 184), getJSON("data/airlines.json", 139),
 getJSON("data/airport_count.json", 138), getJSON("data/knowledge.json", 195)
   ]);
   if (fleet) D.fleet = fleet.aircraft || [];
