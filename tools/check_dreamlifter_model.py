@@ -41,6 +41,10 @@ def check():
     assert abs(hi[0]-lo[0]-71.68) < .1 and abs(hi[2]-lo[2]-64.4) < .2 and abs(hi[1]-21.54) < .1, (lo, hi)
     assert abs(lo[1]) < .03, lo                                   # tyres touch the ground
     counts = {c: sum(s['channel'] == c for s in model['surfaces']) for c in channels}
+    assert counts['fan_cowl'] == 8 and all(
+        s['part'] == 'engine' and abs(abs(s['angle'])-math.radians(52)) < 1e-6
+        for s in model['surfaces'] if s['channel'] == 'fan_cowl'
+    )
     assert counts['flaps'] == 12 and counts['gear'] == 17 and counts['spoilers'] == 12 and counts['slats'] == 28, counts
     assert counts['ailerons'] == 4 and counts['elevators'] == 4 and counts['rudder'] == 2, counts
     tyres = 0

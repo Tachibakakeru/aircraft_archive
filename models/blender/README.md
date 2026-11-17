@@ -127,6 +127,12 @@ The website export records the demonstration rate in optional `surfaces[].rpm`. 
 
 References: [CFM LEAP](https://www.cfmaeroengines.com/leap), [Pratt & Whitney PW4062](https://app.prattwhitney.com/2013-12-20-Pratt-Whitney-Boeing-Celebrate-Delivery-of-First-PW4062-Engines-for-KC-46-Tankers), [Olympus 593 compressor modules](https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/N9311061.xhtml).
 
+## Dreamlifter opening fan cowls (2026-11-17)
+
+Each PW4062 has two fan cowl panels that open on longitudinal upper hinges. The 52° display travel reveals a simplified fan case, flanges and service lines. The Dreamlifter viewer's `fan_cowl` slider drives all eight panels. The Blender source and GLB clip retain the hinge animations.
+
+Reference for PW4000-series fan cowl construction: [Boeing nacelle description and drawings](https://data.ntsb.gov/Docket/Document/docBLOB?FileExtension=pdf&FileName=NTSB+Submission+UAL+N772UA_Boeing_docket-Rel.pdf&ID=16001237).
+
 ## Portable files
 
 `../glb/concorde.glb`, `../glb/dreamlifter.glb`, and `../glb/a321neo.glb` are binary glTF 2.0 exports from their editable Blender sources. Each retains named mesh parts, materials, hinge transforms, and one baked demonstration clip. Each `.blend` is the master for editing geometry or individual articulation actions. Rebuild a portable file from the repository root:

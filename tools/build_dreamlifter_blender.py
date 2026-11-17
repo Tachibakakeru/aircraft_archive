@@ -244,14 +244,50 @@ def build_wing(side):
     return w
 
 
+def fan_cowl(centre, tag):
+    x,y,z = centre
+    profile = [(1.01,1.474),(1.4,1.49),(1.82,1.485),(2.16,1.477)]
+    rows, arcs = len(profile), 29
+    for side in (-1,1):
+        hinge = f'fan_cowl_{tag}_{"left" if side > 0 else "right"}'
+        pivot = (x-1.58,y+side*.324,z+1.446)
+        joint(hinge,pivot,(1,0,0),side*rad(52),'fan_cowl','engine')
+        angles = [rad(-89.55+(77.4+89.55)*i/(arcs-1)) for i in range(arcs)]
+        verts = [(x-depth,y+side*(radius+offset)*math.cos(a),z+(radius+offset)*math.sin(a))
+                 for offset in (0,-.034) for depth,radius in profile for a in angles]
+        size = rows*arcs
+        faces = grid_faces(rows,arcs,closed=False,caps=False)
+        faces += [tuple(size+k for k in reversed(face)) for face in faces]
+        rim = list(range(arcs)) + [(i+1)*arcs-1 for i in range(1,rows)]
+        rim += list(range(size-2,size-arcs-1,-1)) + [i*arcs for i in range(rows-2,0,-1)]
+        faces.extend((i,j,j+size,i+size) for i,j in zip(rim,rim[1:]+rim[:1]))
+        mesh(f'PW4062 fan cowl door {hinge}',verts,faces,'blue','engine',hinge)
+
+    crown = [rad(77.75+24.5*i/12) for i in range(13)]
+    verts = [(x-depth,y+radius*math.cos(a),z+radius*math.sin(a))
+             for depth,radius in profile for a in crown]
+    mesh(f'Fixed fan cowl crown {tag}',verts,grid_faces(rows,len(crown),closed=False,caps=False),'blue','engine')
+    revolve(f'Fan case {tag}',centre,[(1.00,1.32),(1.13,1.34),(1.97,1.31),(2.17,1.33)],'metal','engine')
+    for i,depth in enumerate((1.16,1.55,1.98),1):
+        revolve(f'Fan case flange {tag} {i}',centre,
+                [(depth-.014,1.328),(depth-.014,1.369),(depth+.014,1.369),
+                 (depth+.014,1.328)],'dark','engine',sides=40)
+    for side in (-1,1):
+        c.rod(f'Fan case service line {tag}',(x-1.10,y+side*1.285,z-.20),
+              (x-2.08,y+side*1.285,z-.16),.020,M['blue'],'engine',sides=8)
+
+
 def build_engine(side, y, n):
     """PW4062: hollow inlet with fan and spinner, short fan cowl, core cowl, exhaust plug, pylon."""
     zc = wing_z(y)-2.2
     s0 = wing_le(y)-4.4
     centre = (X(s0), side*y, zc)
     tag = f'{"L" if side > 0 else "R"}{n}'
-    revolve(f'Nacelle fan cowl {tag}', centre, [(.02, 1.20), (0, 1.27), (.1, 1.36), (.5, 1.45),
-            (1.4, 1.49), (3.0, 1.46), (3.9, 1.36), (3.95, 1.30)], 'blue', 'engine')
+    revolve(f'Fixed inlet outer barrel {tag}',centre,[(.02,1.20),(0,1.27),(.1,1.36),(.5,1.45),
+            (.99,1.474)],'blue','engine')
+    fan_cowl(centre,tag)
+    revolve(f'Fixed aft nacelle shell {tag}',centre,[(2.18,1.477),(3.0,1.46),(3.9,1.36),
+            (3.95,1.30)],'blue','engine')
     revolve(f'Inlet lip {tag}', centre, [(0, 1.27), (.02, 1.20), (.25, 1.17), (.95, 1.16)], 'metal', 'engine')
     revolve(f'Fan disc {tag}', centre, [(.95, 1.16), (.96, .32)], 'dark', 'engine')
     fan = c.rotor(f'pw4062_rotor_{tag}',centre,29)
@@ -438,6 +474,7 @@ def build():
 
 
 CONTROLS = [
+    ('fan_cowl', tr('引擎風扇整流罩', 'Engine fan cowls', 'エンジン・ファンカウル'), 0),
     ('flaps', tr('襟翼', 'Flaps', 'フラップ'), 0),
     ('slats', tr('前緣克魯格襟翼', 'Leading-edge Krueger flaps', '前縁クルーガーフラップ'), 0),
     ('spoilers', tr('擾流板', 'Spoilers', 'スポイラー'), 0),
@@ -508,7 +545,7 @@ def export():
                    engine=(X(27), 11.7, 2.6), wingtip=(X(47), 31.5, 7.2), wing=(X(36), 15, 5.2),
                    vstab=(X(66), 0, 18), hstab=(X(65), 7, 8.8), gear=(X(31.5), 5.5, 1))
     lo, hi = export_model('dreamlifter', 'dreamlifter',
-                          'SKY ARCHIVE / Blender — original educational prototype (sequenced gear)', CONTROLS, anchors)
+                          'SKY ARCHIVE / Blender — Dreamlifter with opening fan cowls', CONTROLS, anchors)
     assert abs(hi[0]-lo[0]-LENGTH) < .05 and abs(hi[1]-lo[1]-64.4) < .1 and abs(hi[2]-21.54) < .1 and abs(lo[2]) < .02
 
 
