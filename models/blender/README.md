@@ -98,7 +98,7 @@ References (dimensions only, nothing bundled): Boeing published Dreamlifter figu
 
 251 meshes and 82 hinges. The wing wheel-well doors have inboard and outer leaves with a nested hinge, following the configuration illustrated in the [UK AAIB investigation, figure 8](https://assets.publishing.service.gov.uk/media/56162bc040f0b6585f000005/Boeing_747-443_G-VROM_10-15.pdf). The wing doors fold clear before the legs swing. The wing, body and nose doors close after the gear is stowed. `surfaces[].motion` stores ordered pairs of slider progress and angle multiplier. Blender and the viewer use the same linear interpolation between those pairs. The hinge positions and door timing are approximated for display.
 
-## Airbus A321neo Cabin Flex / CFM LEAP-1A v4 (2026-11-17)
+## Airbus A321neo Cabin Flex / CFM LEAP-1A v5 (2026-11-17)
 
 `a321neo.blend` is the editable source and `../a321n.json` is the website export. The geometry depicts one Cabin Flex exit layout with LEAP-1A nacelles. It measures 44.51 m long, 35.80 m across and 11.76 m tall in the model's standing attitude, with 16.90 m between the nose and main axles and a 7.59 m main-gear track. V2 narrows the outer wing, replaces the wingtip extrusion with a tapered Sharklet loft (2.4 m from root chord line to tip chord line), and rounds the cabin windows.
 
@@ -118,6 +118,14 @@ python tools/check_model_inventory.py
 References: [Airbus A321 airport planning, sections 2-2, 2-3 and 2-9](https://www.aircraft.airbus.com/sites/g/files/jlcbta126/files/2025-07/AC_A321_20250715.pdf), [Airbus Sharklet dimensions](https://www.airbus.com/en/newsroom/press-releases/2016-10-frontier-airlines-takes-delivery-of-its-first-a320neo), [Airbus Cabin Flex exit layout](https://www.airbus.com/en/newsroom/news/2017-11-quick-news-dubai-airshow-november-edition), [Airbus A321neo and A321XLR flap differences](https://www.airbus.com/en/newsroom/stories/2022-09-the-only-way-is-up-flight-testing-the-a321xlr-gathers-pace), [Airbus gear-down photograph](https://www.airbus.com/sites/g/files/jlcbta136/files/db69eed7ea79cf01847510686026391b_EN-American-Airlines-receives-first-A321neo.pdf), [CFM LEAP-1A underside photograph](https://www.cfmaeroengines.com/press-articles/american-airlines-selects-cfm-engines-and-services-for-airbus-a321neo-fleet-expansion).
 
 V3 references: [Lufthansa A321neo side profile and dimensions](https://www.lufthansa.com/fi/en/32q), the frontal photo provided by the user, and the A321neo windshield photos attributed in `data/a321n.json`.
+
+## Engine rotation (2026-11-17)
+
+The editable models and GLB demonstrations include two LEAP-1A fan rotors on A321neo, four PW4062 fan rotors on Dreamlifter and four recessed Olympus 593 compressor rotors on Concorde. Each rotor has its own pivot. Fan and compressor blade geometry and playback speeds are illustrative.
+
+The website export records the demonstration rate in optional `surfaces[].rpm`. The viewer drives the rotation independently of flight-control sliders. The `.blend` timeline and portable GLB clip also animate the pivots.
+
+References: [CFM LEAP](https://www.cfmaeroengines.com/leap), [Pratt & Whitney PW4062](https://app.prattwhitney.com/2013-12-20-Pratt-Whitney-Boeing-Celebrate-Delivery-of-First-PW4062-Engines-for-KC-46-Tankers), [Olympus 593 compressor modules](https://ntrl.ntis.gov/NTRL/dashboard/searchResults/titleDetail/N9311061.xhtml).
 
 ## Portable files
 

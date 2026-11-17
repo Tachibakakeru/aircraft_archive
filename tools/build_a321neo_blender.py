@@ -348,12 +348,11 @@ def build_engine(side):
     d.revolve('Inlet lip',centre,[(.002,1.04),(.001,1.15),(.08,1.24),(.14,1.25)],'steel','engine')
     d.revolve('Fan duct',centre,[(.08,1.035),(.56,1.00),(.72,.98)],'dark','engine')
     c.rod('Fan disk',(x-.72,y,z),(x-.78,y,z),.984,d.M['dark'],'engine',sides=40)
-    for k in range(18):
-        theta = math.tau*k/18
-        d.extrude('Swept fan blade',[(x-.68,y+r*math.cos(theta+a),z+r*math.sin(theta+a))
-                  for r,a in ((.22,-.10),(.93,.025),(.97,.11),(.35,.17))],
-                  (.028,0,0),'steel','engine')
-    d.revolve('Fan spinner',centre,[(.45,.025),(.61,.15),(.76,.25),(.84,.25)],'steel','engine',caps=True)
+    fan = c.rotor(f'leap_1a_rotor_{tag}',centre,37)
+    c.rotor_blades('LEAP-1A swept fan blade row',centre,
+                   [(.68,.22,-.10),(.65,.93,.025),(.68,.97,.11),(.70,.35,.17)],
+                   18,.028,d.M['steel'],fan)
+    d.revolve('Fan spinner',centre,[(.45,.025),(.61,.15),(.76,.25),(.84,.25)],'steel','engine',fan,caps=True)
     d.revolve('Cascade and tailpipe',centre,[(2.02,1.08),(2.46,1.07),(2.99,.83),
                 (3.54,.73),(3.73,.55),(3.9,.30)],'dark','engine',caps=True)
     for k in range(18):
@@ -482,7 +481,7 @@ def build():
         cockpit=(3.7,0,5.51),windshield=(2.2,.84,4.62),fuselage=(12,0,5.8),
         engine=(14.6,5.23,1.87),wingtip=(26.0,17.7,5.4),wing=(23,9,3.6),
         vstab=(39,0,10.4),hstab=(41.3,4.9,4.8),gear=(22.09,3.8,1)).items()}
-    lo, hi = d.export_model('a321n','a321neo','SKY ARCHIVE / Blender — A321neo ACF LEAP-1A v4',CONTROLS,anchors)
+    lo, hi = d.export_model('a321n','a321neo','SKY ARCHIVE / Blender — A321neo ACF LEAP-1A v5',CONTROLS,anchors)
     assert abs(hi[0]-lo[0]-LENGTH)<.03 and abs(hi[1]-lo[1]-2*HALF_SPAN)<.025
     assert abs(hi[2]-HEIGHT)<.03 and abs(lo[2])<.02
 

@@ -84,6 +84,43 @@ def joint(name, pivot, axis, angle, channel, part):
     RIG[name] = dict(object=ob, pivot=pivot, axis=axis, angle=angle, channel=channel, part=part)
 
 
+def rotor(name, centre, rpm):
+    joint(name, centre, (1,0,0), 0, None, 'engine')
+    RIG[name]['rpm'] = rpm
+    RIG[name]['object']['demo_rpm'] = rpm
+    return name
+
+
+def rotor_blades(name, centre, profile, blades, thickness, mat, joint_name):
+    """One mesh per blade row. Profile points are (depth, radius, sweep radians)."""
+    x,y,z = centre
+    vertices, faces = [], []
+    n = len(profile)
+    for i in range(blades):
+        theta = math.tau*i/blades
+        base = len(vertices)
+        vertices.extend((x-depth+offset,y+r*math.cos(theta+sweep),z+r*math.sin(theta+sweep))
+                        for offset in (-thickness/2,thickness/2) for depth,r,sweep in profile)
+        faces.extend((tuple(base+j for j in reversed(range(n))),
+                      tuple(base+n+j for j in range(n))))
+        for j in range(n):
+            k = (j+1) % n
+            faces.append((base+j,base+k,base+k+n,base+j+n))
+    return mesh(name,vertices,faces,mat,'engine',joint_name)
+
+
+def keyframe_joint(rig, steps):
+    obj = rig['object']
+    obj.rotation_mode = 'AXIS_ANGLE'
+    angle = rig['angle']
+    if 'rpm' in rig:
+        render = bpy.context.scene.render
+        angle = math.tau * rig['rpm'] * render.fps_base / render.fps
+    for progress, amount in steps:
+        obj.rotation_axis_angle = (angle*amount,*rig['axis'])
+        obj.keyframe_insert('rotation_axis_angle',frame=1+60*progress)
+
+
 def loft(name, stations, mat, part, joint_name=None, sides=48):
     # x, lateral radius, vertical centre, vertical radius
     verts = [(x, ry*math.cos(a*2*math.pi/sides), z+rz*math.sin(a*2*math.pi/sides))
@@ -222,8 +259,24 @@ def build():
                     (r,top-.09),(r-.09,top),(-r+.09,top),(-r,top-.09),(-r,bot+.09)])
             mesh('Tapered Olympus nacelle',verts,
                  [(j*8+k,j*8+(k+1)%8,(j+1)*8+(k+1)%8,(j+1)*8+k) for j in range(3) for k in range(8)],white,'engine')
-            mesh('Recessed intake throat',[(-5.3,y-.77,3.19),(-5.3,y+.77,3.19),
-                 (-5.3,y+.77,4.26),(-5.3,y-.77,4.26)],[(0,1,2,3)],dark,'engine')
+            # The rectangular ramp intake leads to a recessed first compressor stage.
+            duct = []
+            for k in range(32):
+                a = math.tau*k/32
+                u,v = math.cos(a),math.sin(a)
+                rect = max(abs(u)/.77,abs(v)/.53)
+                duct.append((-5.29,y+u/rect,3.72+v/rect))
+            duct.extend((-7.12,y+.55*math.cos(k*math.tau/32),3.57+.55*math.sin(k*math.tau/32))
+                        for k in range(32))
+            mesh('Rectangular to round Olympus intake duct',duct,
+                 [(k,(k+1)%32,(k+1)%32+32,k+32) for k in range(32)],dark,'engine',smooth=True)
+            centre = (-6.92,y,3.57)
+            fan = rotor(f'olympus_rotor_{side}_{n}',centre,42)
+            rod('Recessed compressor backing',(-7.14,y,3.57),(-7.17,y,3.57),.55,dark,'engine',sides=32)
+            rod('Olympus compressor hub',(-6.78,y,3.57),(-7.10,y,3.57),.16,steel,'engine',fan,sides=32)
+            rotor_blades('Olympus first compressor blade row',centre,
+                         [(0,.15,-.06),(.03,.50,.014),(.11,.50,.070),(.10,.15,.085)],
+                         24,.022,steel,fan)
             mesh('Intake compression ramp',[(-4.81,y-.76,4.24),(-4.81,y+.76,4.24),
                  (-5.25,y+.76,3.92),(-5.25,y-.76,3.92)],[(0,1,2,3)],gray,'engine')
             # Hollow nozzle: outer lip -> inner throat -> recessed dark interior.
@@ -312,9 +365,12 @@ def export():
         if 'joint' not in ob:
             parts[ob['partId']].append(encode(ob))
     for name,r in RIG.items():
-        surfaces.append(dict(id=name,part=r['part'],channel=r['channel'],pv=world(r['pivot']),
-                       ax=world(Vector(r['axis'])/SCALE),angle=r['angle'],start=r.get('start',0),
-                       e=[encode(ob) for ob in OBJECTS if ob.get('joint')==name]))
+        entry = dict(id=name,part=r['part'],channel=r['channel'],pv=world(r['pivot']),
+                     ax=world(Vector(r['axis'])/SCALE),angle=r['angle'],start=r.get('start',0),
+                     e=[encode(ob) for ob in OBJECTS if ob.get('joint')==name])
+        if 'rpm' in r:
+            entry['rpm'] = r['rpm']
+        surfaces.append(entry)
     controls=[dict(id='nose',label=tr('機鼻下垂','Droop nose','機首下げ'),min=0,max=1,step=.01),
               dict(id='elevons',label=tr('六片襟副翼','Six elevons','6枚のエレボン'),min=-1,max=1,step=.01),
               dict(id='rudder',label=tr('雙段方向舵','Split rudder','上下ラダー'),min=-1,max=1,step=.01),
@@ -324,26 +380,20 @@ def export():
     out=dict(meta=dict(format=2,model='concorde',source='SKY ARCHIVE / Blender — original educational prototype',
                        units='normalized: length 12; source metres',prototype=True),texture=None,parts=parts,
              anchors=anchors,surfaces=surfaces,controls=controls)
-    assert len(surfaces)==12 and sum(len(s['e']) for s in surfaces)>12
+    assert sum('rpm' not in s for s in surfaces)==12 and sum('rpm' in s for s in surfaces)==4
     assert all(s['part'] in parts and s['e'] for s in surfaces)
     assert all(abs(sum(a*a for a in s['ax'])-1)<1e-6 for s in surfaces)
     (ROOT/'models/concorde.json').write_text(json.dumps(out,separators=(',',':')),encoding='utf-8')
     # Each joint has its own editable action, hinge origin and keyframes.
+    bpy.context.preferences.edit.keyframe_new_interpolation_type = 'LINEAR'
     for r in RIG.values():
-        ob=r['object']; ob.rotation_mode='AXIS_ANGLE'
-        ob.rotation_axis_angle=(0,*r['axis']); ob.keyframe_insert('rotation_axis_angle',frame=1)
-        if r.get('start'):
-            ob.keyframe_insert('rotation_axis_angle',frame=1+60*r['start'])
-        ob.rotation_axis_angle=(r['angle'],*r['axis']); ob.keyframe_insert('rotation_axis_angle',frame=61)
-        for fc in ob.animation_data.action.fcurves:
-            for point in fc.keyframe_points: point.interpolation='LINEAR'
+        steps = [(0,0),(r['start'],0),(1,1)] if r.get('start') else [(0,0),(1,1)]
+        keyframe_joint(r,steps)
     for ob in OBJECTS:
         if 'slide' in ob:
             ob.location=(0,0,0); ob.keyframe_insert('location',frame=1)
             ob.location=ob['slide']; ob.keyframe_insert('location',frame=1+60*ob['slideEnd'])
             ob.keyframe_insert('location',frame=61)
-            for fc in ob.animation_data.action.fcurves:
-                for point in fc.keyframe_points: point.interpolation='LINEAR'
     scene=bpy.context.scene
     scene.frame_end=61
     scene.frame_set(1)

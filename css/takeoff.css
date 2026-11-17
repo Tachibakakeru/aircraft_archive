@@ -10,6 +10,11 @@
   line-height:1;cursor:pointer;padding:0 2px}
 @media (hover:hover){.takeoff-hud-head button:hover{color:var(--text)}}
 .takeoff-hud strong{display:block;margin:12px 0 13px;font-size:20px;font-weight:650;letter-spacing:.04em}
+.takeoff-engine{margin-bottom:13px}
+.takeoff-engine-label{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:var(--muted)}
+#takeoff-engine-value{color:var(--cyan);font:12px var(--mono);font-variant-numeric:tabular-nums}
+.takeoff-engine-meter{height:4px;margin-top:6px;border-radius:4px;background:var(--stroke);overflow:hidden}
+.takeoff-engine-meter span{display:block;height:100%;border-radius:inherit;background:var(--cyan);transform:scaleX(0);transform-origin:left}
 .takeoff-progress{height:4px;border-radius:4px;background:var(--stroke);overflow:hidden}
 .takeoff-progress span{display:block;width:0;height:100%;border-radius:inherit;background:var(--amber)}
 .takeoff-hud small{display:block;margin-top:10px;color:var(--muted);font-size:10px;line-height:1.5}

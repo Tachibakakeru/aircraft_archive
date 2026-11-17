@@ -27,10 +27,12 @@ def rotate(p, s, amount):
 def check():
     model = json.loads((ROOT/'models/dreamlifter.json').read_text())
     by_id = {s['id']: s for s in model['surfaces']}
+    assert sum('rpm' in s for s in model['surfaces']) == 4
     channels = {c['id'] for c in model['controls']}
     rest = [p for es in model['parts'].values() for e in es for p in vertices(e)]
     for s in model['surfaces']:
-        assert s['channel'] in channels and s['part'] in model['parts'] and s['e'], s['id']
+        assert s['part'] in model['parts'] and s['e'], s['id']
+        assert s['channel'] in channels or (s['part'] == 'engine' and s['rpm'] > 0), s['id']
         assert abs(sum(v*v for v in s['ax'])-1) < 1e-6, s['id']
         assert 'parent' not in s or s['parent'] in by_id, s['id']
         rest += [p for e in s['e'] for p in vertices(e)]

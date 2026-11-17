@@ -29,12 +29,14 @@ def posed(surface, entry, amount):
 def check():
     model=json.loads((ROOT/'models/concorde.json').read_text())
     assert model['meta']['format']==2
-    assert len(model['surfaces'])==12
+    assert sum('rpm' not in s for s in model['surfaces'])==12
+    assert sum('rpm' in s for s in model['surfaces'])==4
     channels={c['id'] for c in model['controls']}
     points=[]
     entries=[e for entries in model['parts'].values() for e in entries]
     for s in model['surfaces']:
-        assert s['part'] in model['parts'] and s['channel'] in channels and s['e']
+        assert s['part'] in model['parts'] and s['e']
+        assert s['channel'] in channels or (s['part']=='engine' and s['rpm']>0)
         assert abs(sum(v*v for v in s['ax'])-1)<1e-6
         assert len(s['pv'])==3 and all(math.isfinite(v) for v in s['pv'])
         entries.extend(s['e'])

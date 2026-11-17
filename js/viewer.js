@@ -31,7 +31,7 @@ function loadData(){
 // 機身可看（PARTS/PART_ORDER 也一併 fallback 成空，見 init() 開頭）。
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=222`).then(r => r.ok ? r.json() : null).catch(() => null)
+  fetch(`models/${MODEL_ID}.json?v=223`).then(r => r.ok ? r.json() : null).catch(() => null)
 ]).then(([DATA, MODEL]) => init(DATA, MODEL || { parts: {}, anchors: {}, meta: {} }))
   .catch(() => fail(I18N.t("viewer.loaderror").replace("{id}", MODEL_ID)));
 
@@ -158,6 +158,7 @@ function init(DATA, MODEL){
 
   // ── 可動操縱面：各片建鉸鏈 pivot，掛在主翼群組下（拾取／高亮歸主翼）──
   const surfaces = [];
+  const engineRotors = [];
   const pivotById = {};   // surfaces[].parent：鉸鏈可掛在另一組鉸鏈下（擺尾上的方向舵、保持水平的輪架）
   if (MODEL.surfaces){
     for (const s of MODEL.surfaces){
@@ -179,7 +180,11 @@ function init(DATA, MODEL){
       if (host) pivot.position.sub(host.userData.base);   // 母鉸鏈座標原點在它自己的樞紐
       (host || parent).add(pivot);
       if (s.id) pivotById[s.id] = pivot;
-      surfaces.push(pivot);
+      if (Number.isFinite(s.rpm) && s.rpm !== 0){
+        engineRotors.push({pivot, phase: 0, rate: s.rpm * Math.PI / 30});
+      } else {
+        surfaces.push(pivot);
+      }
     }
   }
 
@@ -632,9 +637,39 @@ function init(DATA, MODEL){
 
   /* ── 控制按鈕 ── */
   const btnRotate = document.getElementById("btn-rotate");
+  const btnEngines = document.getElementById("btn-engines");
+  const takeoffEngine = document.getElementById("takeoff-engine");
+  const takeoffEngineValue = document.getElementById("takeoff-engine-value");
+  const takeoffEngineMeter = document.getElementById("takeoff-engine-meter");
+  const takeoffEngineFill = takeoffEngineMeter.firstElementChild;
   const btnPan = document.getElementById("btn-pan");
   const dragHint = document.getElementById("view-drag-hint");
   let stopTakeoff = () => {};
+  let engineSpeed = 0, resumeEngineSpeed = 100, shownEngineSpeed = 0;
+  let engineSpeedInput, engineSpeedValue;
+  function setEngineSpeed(value){
+    engineSpeed = engineRotors.length ? THREE.MathUtils.clamp(value, 0, 100) : 0;
+    const percent = Math.round(engineSpeed);
+    if (percent === shownEngineSpeed) return;
+    if (!percent || !shownEngineSpeed) btnEngines.setAttribute("aria-pressed", String(percent > 0));
+    shownEngineSpeed = percent;
+    const label = percent + "%";
+    if (engineSpeedInput){
+      engineSpeedInput.value = percent;
+      engineSpeedInput.setAttribute("aria-valuetext", label);
+      engineSpeedValue.textContent = label;
+    }
+    takeoffEngineValue.textContent = label;
+    takeoffEngineMeter.setAttribute("aria-valuenow", percent);
+    takeoffEngineFill.style.transform = `scaleX(${percent/100})`;
+  }
+  btnEngines.hidden = engineRotors.length === 0;
+  takeoffEngine.hidden = btnEngines.hidden;
+  btnEngines.addEventListener("click", () => {
+    const wasRunning = engineSpeed > 0;
+    stopTakeoff();
+    setEngineSpeed(wasRunning ? 0 : resumeEngineSpeed);
+  });
   btnRotate.setAttribute("aria-pressed", String(autoRotate));
   btnRotate.addEventListener("click", () => {
     stopTakeoff();
@@ -962,14 +997,13 @@ function init(DATA, MODEL){
     });
     document.addEventListener("langchange", syncDeploy);
   }
-  if (MODEL.controls?.length){
+  if (MODEL.controls?.length || engineRotors.length){
     const details = document.createElement("details");
     details.className = "model-controls";
     const summary = document.createElement("summary");
     const heading = {zh: "可動部位", en: "Moving parts", ja: "可動部位"};
     details.append(summary);
     function pauseViewForControls(){
-      stopTakeoff();
       stopTour();
       autoRotate = false;
       btnRotate.setAttribute("aria-pressed", "false");
@@ -984,8 +1018,38 @@ function init(DATA, MODEL){
     }
     details.addEventListener("pointerdown", pauseViewForControls);
     details.addEventListener("focusin", pauseViewForControls);
+    if (engineRotors.length){
+      const label = document.createElement("label");
+      const heading = document.createElement("span");
+      heading.className = "model-speed-field";
+      const title = document.createElement("span");
+      title.dataset.i18n = "viewer.engine.speed";
+      title.textContent = I18N.t(title.dataset.i18n);
+      engineSpeedValue = document.createElement("span");
+      engineSpeedValue.className = "model-speed-value";
+      engineSpeedValue.textContent = "0%";
+      engineSpeedValue.setAttribute("aria-hidden", "true");
+      heading.append(title, engineSpeedValue);
+      engineSpeedInput = document.createElement("input");
+      engineSpeedInput.type = "range";
+      engineSpeedInput.min = 0;
+      engineSpeedInput.max = 100;
+      engineSpeedInput.step = 1;
+      engineSpeedInput.value = 0;
+      engineSpeedInput.dataset.control = "engine-speed";
+      engineSpeedInput.setAttribute("aria-valuetext", "0%");
+      engineSpeedInput.addEventListener("input", () => {
+        const value = engineSpeedInput.valueAsNumber;
+        stopTakeoff();
+        pauseViewForControls();
+        if (value > 0) resumeEngineSpeed = value;
+        setEngineSpeed(value);
+      });
+      label.append(heading, engineSpeedInput);
+      details.append(label);
+    }
     const labels = [];
-    for (const c of MODEL.controls){
+    for (const c of MODEL.controls || []){
       const label = document.createElement("label");
       const title = document.createElement("span");
       const slider = document.createElement("input");
@@ -994,6 +1058,7 @@ function init(DATA, MODEL){
       slider.dataset.control = c.id;
       slider.addEventListener("input", () => {
         const value = slider.valueAsNumber;
+        stopTakeoff();
         pauseViewForControls();
         articulation[c.id].target = value;
         slider.valueAsNumber = value;
@@ -1004,7 +1069,9 @@ function init(DATA, MODEL){
     const reset = document.createElement("button");
     reset.type = "button";
     reset.addEventListener("click", () => {
+      stopTakeoff();
       pauseViewForControls();
+      setEngineSpeed(0);
       for (const state of Object.values(articulation)) state.target = 0;
       for (const slider of details.querySelectorAll("input")) slider.value = 0;
     });
@@ -1077,6 +1144,7 @@ function init(DATA, MODEL){
       target.copy(s.target); panOffset.copy(s.panOffset); theta=s.theta; phi=s.phi; radius=s.radius;
       radiusMax=RAD_MAX;
       autoRotate=s.autoRotate; btnRotate.setAttribute("aria-pressed", String(autoRotate));
+      setEngineSpeed(s.engineSpeed);
       deployTarget=s.deployTarget; deployNow=s.deployNow; applyDeploy();
       btnDeploy.setAttribute("aria-pressed", String(deployTarget > .5));
       btnDeploy.textContent=I18N.t(deployTarget > .5 ? "viewer.deploy.stow" : "viewer.deploy");
@@ -1095,7 +1163,7 @@ function init(DATA, MODEL){
         position:airplane.position.clone(),rotation:airplane.rotation.clone(),
         shadowPosition:shadow.position.clone(),shadowScale:shadow.scale.clone(),
         shadowOpacity:shadow.material.opacity,
-        target:target.clone(),panOffset:panOffset.clone(),theta,phi,radius,autoRotate,
+        target:target.clone(),panOffset:panOffset.clone(),theta,phi,radius,autoRotate,engineSpeed,
         gear:articulation.gear?.target ?? 0,deployTarget,deployNow,
         channels:Object.fromEntries(Object.entries(articulation).map(([id, st]) => [id, st.target])),
         gridVisible:grid.visible,part:selectedPartId
@@ -1103,6 +1171,7 @@ function init(DATA, MODEL){
       stopTour(); deselect();
       panOffset.set(0,0,0);
       autoRotate=false; btnRotate.setAttribute("aria-pressed", "false");
+      setEngineSpeed(0);
       deployTarget=deployNow=0; applyDeploy();
       btnDeploy.setAttribute("aria-pressed", "false");
       btnDeploy.textContent=I18N.t("viewer.deploy");
@@ -1119,6 +1188,12 @@ function init(DATA, MODEL){
       if (!takeoff) return;
       const t=Math.min(duration,(now-takeoff.started)/1000);
       const flightT=Math.max(0,t-preflight);
+      if (engineRotors.length){
+        const idle = 18 * smooth(t/1.2);
+        const spool = 82 * smooth(t/(preflight+3.2));
+        const climbReduction = 18 * smooth((flightT-8.7)/2.3);
+        setEngineSpeed(idle+spool-climbReduction);
+      }
       const rotate=smooth((flightT-4.5)/2.3), climb=smooth((flightT-6)/5.5);
       const x=-26+68*smooth(flightT/11), angle=.15*rotate;
       const lift=Math.max(0,-bounds.min.x*Math.sin(angle));
@@ -1189,9 +1264,18 @@ function init(DATA, MODEL){
   window.addEventListener("resize", resize);
   resize();
 
-  function tick(){
+  let lastFrame = performance.now();
+  function tick(now = performance.now()){
     requestAnimationFrame(tick);
-    airplane.userData.updateTakeoff?.(performance.now());
+    const elapsed = Math.min(.05, Math.max(0, (now-lastFrame)/1000));
+    lastFrame = now;
+    airplane.userData.updateTakeoff?.(now);
+    if (engineSpeed > 0 && !document.hidden){
+      for (const rotor of engineRotors){
+        rotor.phase = (rotor.phase + elapsed * rotor.rate * engineSpeed/100) % (2 * Math.PI);
+        rotor.pivot.quaternion.setFromAxisAngle(rotor.pivot.userData.axis, rotor.phase);
+      }
+    }
     if (autoRotate && !dragging) airplane.rotation.y += 0.0022;
     let articulationChanged = false;
     for (const state of Object.values(articulation)){
@@ -1210,7 +1294,7 @@ function init(DATA, MODEL){
     applyCamera();
     updateCallout();
     updateHotspots();
-    updateNavLights(performance.now());
+    updateNavLights(now);
     renderer.render(scene, camera);
   }
   tick();

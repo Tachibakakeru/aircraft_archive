@@ -125,6 +125,7 @@
 ## Blender 補建飛機模型備忘（2026-11-16）
 
 - 協和號、Dreamlifter、A321neo 的可編輯來源在 `models/blender/`。可攜檔在 `models/glb/`，由 `tools/export_blender_glb.py` 從對應的 `.blend` 重建，保留分件、材質與一段示範動畫。若更新其中一架的來源，對應 GLB 與站內 JSON 一併重匯出。
+- 獨立引擎轉子沿用 v2 `surfaces[]` 樞紐，`rpm` 為展示轉速。短艙和風道保持固定，Blender 與 GLB 示範時間軸需保留可動轉子。
 - 預覽驗證只用 Codex 的內建網頁分頁，沿用既有的本機預覽。使用者要求停止擷取 Windows 桌面或操作其桌面視窗。
 - 舵面驗收同時檢查滑桿數值與模型實際轉角。`Surface.hinged()` 接收弧度，呼叫端以 `rad()` 轉換度數。A321neo v3 的五個副翼、升降舵及方向舵鉸鏈均有角度回歸檢查。
 - 現行範例：Dreamlifter 與 A321neo Cabin Flex／LEAP-1A 以 `surfaces[].motion` 安排輪艙門先打開、輪組移動、門再關閉。`tools/check_gear_clearance_blender.py` 在兩架的 `.blend` 抽樣 401 個姿態檢查門與輪組；A321neo v2 同時檢查輪胎對外殼、襟翼對滑軌整流罩的干涉，以及收輪後輪胎是否露出腹部。官方參考、重建指令與展示近似事項見 `models/blender/README.md`。

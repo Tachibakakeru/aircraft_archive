@@ -254,7 +254,11 @@ def build_engine(side, y, n):
             (1.4, 1.49), (3.0, 1.46), (3.9, 1.36), (3.95, 1.30)], 'blue', 'engine')
     revolve(f'Inlet lip {tag}', centre, [(0, 1.27), (.02, 1.20), (.25, 1.17), (.95, 1.16)], 'metal', 'engine')
     revolve(f'Fan disc {tag}', centre, [(.95, 1.16), (.96, .32)], 'dark', 'engine')
-    revolve(f'Spinner {tag}', centre, [(.97, .34), (.75, .27), (.5, .15), (.36, .01)], 'metal', 'engine')
+    fan = c.rotor(f'pw4062_rotor_{tag}',centre,29)
+    revolve(f'Spinner {tag}', centre, [(.97, .34), (.75, .27), (.5, .15), (.36, .01)], 'metal', 'engine', fan)
+    c.rotor_blades(f'PW4062 fan blade row {tag}',centre,
+                   [(.81,.28,-.050),(.72,1.12,.060),(.86,1.12,.102),(.90,.28,.031)],
+                   38,.030,M['metal'],fan)
     revolve(f'Fan exit {tag}', centre, [(3.95, 1.30), (3.6, 1.26), (3.6, .96)], 'dark', 'engine')
     revolve(f'Core cowl {tag}', centre, [(3.6, .96), (4.3, .93), (5.5, .62), (5.55, .58)], 'metal', 'engine')
     revolve(f'Exhaust plug {tag}', centre, [(5.3, .56), (5.55, .42), (6.4, .16), (6.7, .01)], 'dark', 'engine')
@@ -460,6 +464,8 @@ def export_model(model_id, blend_name, source, control_specs, anchor_points):
             entry['parent'] = r['parent']
         if 'motion' in r:
             entry['motion'] = r['motion']
+        if 'rpm' in r:
+            entry['rpm'] = r['rpm']
         surfaces.append(entry)
     assert all(s['e'] for s in surfaces), [s['id'] for s in surfaces if not s['e']]
     ids = [s['id'] for s in surfaces]
@@ -469,7 +475,7 @@ def export_model(model_id, blend_name, source, control_specs, anchor_points):
         if s.get('parent', '').startswith('swing_'):
             assert s['parent'] == 'swing_'+s['part'], s['id']
     controls = [dict(id=i, label=label, min=lo, max=1, step=.01) for i, label, lo in control_specs]
-    assert {s['channel'] for s in surfaces} == {x['id'] for x in controls}
+    assert {s['channel'] for s in surfaces if 'rpm' not in s} == {x['id'] for x in controls}
     anchors = {p: world(v) for p, v in anchor_points.items()}
     out = dict(meta=dict(format=2, model=model_id,
                          source=source,
@@ -479,10 +485,7 @@ def export_model(model_id, blend_name, source, control_specs, anchor_points):
     # Editable .blend uses the same piecewise linear travel as the viewer.
     bpy.context.preferences.edit.keyframe_new_interpolation_type = 'LINEAR'
     for r in RIG.values():
-        ob = r['object']; ob.rotation_mode = 'AXIS_ANGLE'
-        for progress, multiplier in r.get('motion', [(0, 0), (1, 1)]):
-            ob.rotation_axis_angle = (r['angle'] * multiplier, *r['axis'])
-            ob.keyframe_insert('rotation_axis_angle', frame=1+60*progress)
+        c.keyframe_joint(r,r.get('motion', [(0,0),(1,1)]))
     for ob in OBJECTS:
         if 'slide' in ob:
             ob.keyframe_insert('location', frame=1)
