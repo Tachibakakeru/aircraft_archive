@@ -1067,18 +1067,35 @@ function init(DATA, MODEL){
     a.click();
   });
 
-  /* ── 展開操縱面（襟翼／縫翼／擾流板／副翼） ── */
+  /* ── 一鍵展示模型具備的飛控面 ── */
   const btnDeploy = document.getElementById("btn-deploy");
-  if (surfaces.some(s => !s.userData.channel)){
+  const deployPreset = {flaps: .67, slats: 1, spoilers: .35, ailerons: .5, elevators: .5, elevons: .5, rudder: .5};
+  const legacyDeploy = surfaces.some(({userData: s}) => !s.channel && Object.hasOwn(DEPLOY, s.type));
+  const deployChannels = [...new Set(surfaces.map(s => s.userData.channel))]
+    .filter(id => Object.hasOwn(deployPreset, id) && Object.hasOwn(articulation, id));
+  function setChannel(id, value, animateDeploy = false){
+    const state = articulation[id];
+    state.target = value;
+    state.animateDeploy = animateDeploy;
+    const slider = document.querySelector(`input[data-control="${id}"]`);
+    if (slider) slider.value = value;
+  }
+  function isDeployed(){
+    return !takeoff && (deployTarget > .5 || deployChannels.some(id => articulation[id].target !== 0));
+  }
+  function syncDeploy(){
+    const on = isDeployed();
+    btnDeploy.setAttribute("aria-pressed", String(on));
+    btnDeploy.textContent = I18N.t(on ? "viewer.deploy.stow" : "viewer.deploy");
+  }
+  if (legacyDeploy || deployChannels.length){
     btnDeploy.hidden = false;
-    const syncDeploy = () => {
-      const on = deployTarget > 0.5;
-      btnDeploy.setAttribute("aria-pressed", String(on));
-      btnDeploy.textContent = I18N.t(on ? "viewer.deploy.stow" : "viewer.deploy");
-    };
+    syncDeploy();
     btnDeploy.addEventListener("click", () => {
       stopTakeoff();
-      deployTarget = deployTarget > 0.5 ? 0 : 1;
+      const extend = !isDeployed();
+      deployTarget = legacyDeploy && extend ? 1 : 0;
+      for (const id of deployChannels) setChannel(id, extend ? deployPreset[id] : 0, true);
       syncDeploy();
     });
     document.addEventListener("langchange", syncDeploy);
@@ -1146,8 +1163,8 @@ function init(DATA, MODEL){
         const value = slider.valueAsNumber;
         stopTakeoff();
         pauseViewForControls();
-        articulation[c.id].target = value;
-        slider.valueAsNumber = value;
+        setChannel(c.id, value);
+        if (deployChannels.includes(c.id)) syncDeploy();
       });
       label.append(title, slider); details.append(label);
       labels.push([title, c.label]);
@@ -1158,8 +1175,9 @@ function init(DATA, MODEL){
       stopTakeoff();
       pauseViewForControls();
       setEngineSpeed(0);
-      for (const state of Object.values(articulation)) state.target = 0;
-      for (const slider of details.querySelectorAll("input")) slider.value = 0;
+      deployTarget = 0;
+      for (const id of Object.keys(articulation)) setChannel(id, 0);
+      syncDeploy();
     });
     details.append(reset);
     function syncControls(){
@@ -1184,7 +1202,6 @@ function init(DATA, MODEL){
   if (has3D && !["heli", "ask21"].includes(MODEL_ID)){
     btnTakeoff.hidden = false;
     const flapChannels = ["flaps", "slats"].filter(id => articulation[id]);
-    const setChannel = (id, v) => { articulation[id].target = v; const el = document.querySelector(`input[data-control="${id}"]`); if (el) el.value = v; };
     const hasTakeoffFlaps = flapChannels.length > 0 || surfaces.some(s => !s.userData.channel && (s.userData.type === "flap" || s.userData.type === "slat"));
     const preflight = hasTakeoffFlaps ? 2 : 0;
     const duration = 12 + preflight;
@@ -1231,9 +1248,8 @@ function init(DATA, MODEL){
       autoRotate=s.autoRotate; btnRotate.setAttribute("aria-pressed", String(autoRotate));
       setEngineSpeed(s.engineSpeed);
       deployTarget=s.deployTarget; deployNow=s.deployNow; applyDeploy();
-      btnDeploy.setAttribute("aria-pressed", String(deployTarget > .5));
-      btnDeploy.textContent=I18N.t(deployTarget > .5 ? "viewer.deploy.stow" : "viewer.deploy");
       for (const id of Object.keys(s.channels)) setChannel(id, s.channels[id]);
+      syncDeploy();
       if (articulation.gear) articulation.gear.target=s.gear;
       const gearSlider = document.querySelector('input[data-control="gear"]');
       if (gearSlider) gearSlider.value=s.gear;
@@ -1256,8 +1272,6 @@ function init(DATA, MODEL){
       autoRotate=false; btnRotate.setAttribute("aria-pressed", "false");
       setEngineSpeed(0);
       deployTarget=deployNow=0; applyDeploy();
-      btnDeploy.setAttribute("aria-pressed", "false");
-      btnDeploy.textContent=I18N.t("viewer.deploy");
       radiusMax=48;
       grid.visible=false; runway.visible=true; hotspotLayer.hidden=true;
       shadow.position.set(0, .015, 0);
@@ -1266,6 +1280,7 @@ function init(DATA, MODEL){
       if (articulation.gear){ articulation.gear.target=0; document.querySelector('input[data-control="gear"]').value=0; }
       for (const id of Object.keys(articulation)) if (id !== "gear") setChannel(id, 0);   // 擺尾、舵面等先歸零
       takeoff={saved,started:performance.now(),stage:hasTakeoffFlaps ? "flaps" : "roll",manualCamera:false,flaps:0};
+      syncDeploy();
       takeoffHud.hidden=false; btnTakeoff.setAttribute("aria-pressed", "true");
       syncTakeoffText();
     }
@@ -1366,20 +1381,26 @@ function init(DATA, MODEL){
       }
     }
     if (autoRotate && !dragging) airplane.rotation.y += 0.0022;
-    let articulationChanged = false;
+    // A321 展開的逐格緩動，換算成經過時間以維持不同刷新率的速度。
+    const blend = 1 - Math.pow(.88, elapsed * 60);
+    const deployBlend = reducedMotion ? 1 - Math.pow(.90, elapsed * 60) : blend;
+    let poseChanged = false;
     for (const state of Object.values(articulation)){
       const target = Number.isFinite(state.target)
         ? Math.max(state.min, Math.min(state.max, state.target)) : 0;
       if (state.now === target) continue;
-      state.now = (reducedMotion && !takeoff) || Math.abs(state.now-target) < .001
-        ? target : state.now+(target-state.now)*.12;
-      articulationChanged = true;
+      const diff = target - state.now;
+      const direct = reducedMotion && !takeoff && !state.animateDeploy;
+      state.now = direct || Math.abs(diff) < .001
+        ? target : state.now + diff * (state.animateDeploy ? deployBlend : blend);
+      poseChanged = true;
     }
-    if (articulationChanged) applyDeploy();
-    if (Math.abs(deployNow - deployTarget) > 0.0015){
-      deployNow += (deployTarget - deployNow) * 0.12;   // 平滑展開／收回
-      applyDeploy();
+    if (deployNow !== deployTarget){
+      const diff = deployTarget - deployNow;
+      deployNow = Math.abs(diff) < .001 ? deployTarget : deployNow + diff * deployBlend;
+      poseChanged = true;
     }
+    if (poseChanged) applyDeploy();
     applyCamera();
     updateCallout();
     updateHotspots();
