@@ -20,7 +20,5 @@
 .takeoff-hud small{display:block;margin-top:10px;color:var(--muted);font-size:10px;line-height:1.5}
 @media(max-width:640px){
   .takeoff-hud{right:16px;bottom:136px;width:min(260px,calc(100vw - 32px))}
-  .controls{right:16px;overflow-x:auto;scrollbar-width:none}
-  .controls::-webkit-scrollbar{display:none}
   .controls>button{flex-shrink:0}
 }

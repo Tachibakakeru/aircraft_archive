@@ -65,6 +65,61 @@ function init(DATA, MODEL){
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 200);
 
+  const atmosphere = new THREE.ShaderMaterial({
+    side: THREE.BackSide, depthWrite: false, fog: false,
+    uniforms: {
+      zenith: {value:new THREE.Color()}, horizon: {value:new THREE.Color()},
+      ground: {value:new THREE.Color()}, glow: {value:new THREE.Color()},
+      lightDir: {value:new THREE.Vector3()}, night: {value:0}, cloudiness: {value:0}
+    },
+    vertexShader: `
+      varying vec3 skyRay;
+      void main(){
+        skyRay = position;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }`,
+    fragmentShader: `
+      uniform vec3 zenith, horizon, ground, glow, lightDir;
+      uniform float night, cloudiness;
+      varying vec3 skyRay;
+
+      float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+      float noise(vec2 p){
+        vec2 i = floor(p), f = fract(p);
+        f = f * f * (3.0 - 2.0 * f);
+        return mix(mix(hash(i), hash(i + vec2(1, 0)), f.x),
+                   mix(hash(i + vec2(0, 1)), hash(i + vec2(1, 1)), f.x), f.y);
+      }
+      void main(){
+        vec3 ray = normalize(skyRay);
+        float elevation = ray.y;
+        float facing = max(0.0, dot(ray, lightDir));
+        vec3 color = mix(horizon, zenith, pow(clamp(elevation, 0.0, 1.0), .60));
+        color = mix(color, ground, smoothstep(0.015, .40, -elevation));
+        color += glow * pow(facing, mix(9.0, 110.0, night)) * mix(.42, .32, night);
+        if (elevation > .01){
+          vec2 cloudPlane = ray.xz / (elevation + .19) * vec2(2.1, 3.8);
+          float density = noise(cloudPlane) * .56 + noise(cloudPlane * 2.1) * .29 + noise(cloudPlane * 4.3) * .15;
+          float cloud = smoothstep(.48, .74, density) * smoothstep(.015, .14, elevation) * cloudiness;
+          vec3 litCloud = mix(horizon, vec3(.94, .96, 1.0), .78);
+          litCloud = mix(litCloud, glow * .65 + horizon * .48, pow(facing, 9.0) * .65);
+          color = mix(color, litCloud, cloud);
+          if (night > .5){
+            vec2 stars = vec2(atan(ray.z, ray.x), asin(elevation)) * 110.0;
+            float seed = hash(floor(stars));
+            float dotSize = 1.0 - smoothstep(.08, .29, length(fract(stars) - .5));
+            color += vec3(.77, .86, 1.0) * dotSize * smoothstep(.982, 1.0, seed) * smoothstep(.03, .22, elevation);
+          }
+          float disc = smoothstep(.99962, .99986, facing);
+          color = mix(color, mix(vec3(1.0, .93, .76), vec3(.8, .86, .98), night), disc * (1.0 - cloud * .65));
+        }
+        gl_FragColor = vec4(color, 1.0);
+      }`
+  });
+  const sky = new THREE.Mesh(new THREE.SphereGeometry(90, 24, 12), atmosphere);
+  sky.renderOrder = -1;
+  scene.add(sky);
+
   const hemi = new THREE.HemisphereLight(0xcfe4ff, 0x1a2436, 0.9);
   scene.add(hemi);
   const key = new THREE.DirectionalLight(0xfff2df, 0.95);
@@ -81,15 +136,23 @@ function init(DATA, MODEL){
   const grid = new THREE.PolarGridHelper(9, 16, 5, 48,
     new THREE.Color(themeColor("--scene-grid", "#24344d")),
     new THREE.Color(themeColor("--scene-grid2", "#1a2740")));
+  grid.material.transparent = true;
   scene.add(grid);
 
+  const shadowCanvas = document.createElement("canvas");
+  shadowCanvas.width = shadowCanvas.height = 64;
+  const shadowContext = shadowCanvas.getContext("2d");
+  const shadowGradient = shadowContext.createRadialGradient(32, 32, 6, 32, 32, 32);
+  shadowGradient.addColorStop(0, "#000");
+  shadowGradient.addColorStop(.65, "rgba(0,0,0,.45)");
+  shadowGradient.addColorStop(1, "rgba(0,0,0,0)");
+  shadowContext.fillStyle = shadowGradient;
+  shadowContext.fillRect(0, 0, 64, 64);
   const shadow = new THREE.Mesh(
-    new THREE.CircleGeometry(4.8, 48),
-    new THREE.MeshBasicMaterial({color:0x000000, transparent:true, opacity:0.28})
+    new THREE.PlaneGeometry(10, 10),
+    new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(shadowCanvas), transparent:true, depthWrite:false})
   );
   shadow.rotation.x = -Math.PI/2;
-  shadow.position.y = 0.015;
-  shadow.scale.set(1.35, 1, 1);
   scene.add(shadow);
 
   /* ── 建立模型 ── */
@@ -238,17 +301,22 @@ function init(DATA, MODEL){
 
   /* ── 時段場景與航行燈（2026-11）──
      「場景」按鈕依序切換：自動（跟著 js/skytime.js 所選時區的時段）／清晨／正午／黃昏／夜間，存在 localStorage.hangar_vscene。
-     - 每個時段換背景漸層（body[data-vscene]，見 css/style.css）與三盞燈的顏色、亮度、方向（清晨太陽在東邊低角度、黃昏在西邊）。
+     - 天空與機身主光共用同一光源方向，晨昏採低角度逆向照射。
      - 航行燈：從模型幾何找出左右翼尖（左 = −z，機頭朝 +x）、機尾與機身頂部，
        左翼尖紅燈、右翼尖綠燈（常亮）、翼尖與機尾白色閃光燈（每 1.2 秒雙閃）、機身頂部紅色防撞燈（每秒一閃）。
        夜間全亮、晨昏較淡、白天不顯示。燈掛在 airplane 群組上，會跟著模型旋轉。 */
   const SCENE_PRESETS = {
-    day:   { hemi: [0xcfe4ff, 0x1a2436, .9],  key: [0xfff2df, .95, [6, 9, 5]],    rim: [0x6fd3ef, .35], lights: 0 },
-    dawn:  { hemi: [0xffd8c4, 0x2a2440, .78], key: [0xffb07a, .95, [8, 3.2, 2]],  rim: [0x8fa8ff, .3],  lights: .55 },
-    dusk:  { hemi: [0xffc09e, 0x2a1f3a, .62], key: [0xff8a4c, .9,  [-8, 2.6, 3]], rim: [0x6a7cff, .35], lights: .75 },
-    night: { hemi: [0x5b74b0, 0x05080f, .4],  key: [0xa9bcff, .3,  [-4, 8, -3]],  rim: [0x3a5cff, .3],  lights: 1 }
+    dawn:  { hemi: [0xb2c8f1, 0x393446, .68], key: [0xffae75, 1.10, [9, 1.4, 4]],  rim: [0x8fa8ff, .26], lights: .55,
+             sky: [0x3a64a1, 0xefb6a3, 0x667389, 0xff9859], clouds: .78, shadow: [2.9, 1.55, .43] },
+    day:   { hemi: [0xd3eaff, 0x647482, .78], key: [0xfff6e5, 1.05, [4, 10, -3]],  rim: [0xb8d9ff, .25], lights: 0,
+             sky: [0x377bbd, 0xc8dfef, 0x879ba9, 0xffe1a4], clouds: .85, shadow: [.60, 1.1, .45] },
+    dusk:  { hemi: [0x8c9ed1, 0x382837, .61], key: [0xff843b, 1.13, [-9, 1, -4]],  rim: [0x8195ec, .30], lights: .75,
+             sky: [0x253768, 0xea8f70, 0x554d62, 0xff7738], clouds: .90, shadow: [3.3, 1.65, .39] },
+    night: { hemi: [0x8eabd7, 0x47526b, .47], key: [0xb8d3ff, .52, [-5, 4, 7]],   rim: [0x809bd5, .23], lights: 1,
+             sky: [0x071227, 0x172d4c, 0x253650, 0x869dcc], clouds: .04, shadow: [1.1, 1.1, .23] }
   };
   const SCENE_MODES = ["auto", "dawn", "day", "dusk", "night"];
+  const FRAMING_ASPECT = .88;
   let sceneMode = (() => { try { const v = localStorage.getItem("hangar_vscene"); return SCENE_MODES.includes(v) ? v : "auto"; } catch { return "auto"; } })();
   let navLevel = 0;
   const navLights = [];
@@ -304,19 +372,36 @@ function init(DATA, MODEL){
     const p = document.documentElement.dataset.sky;
     return SCENE_PRESETS[p] ? p : "day";
   }
+  function applyGroundShadow(){
+    const [offset, stretch, opacity] = SCENE_PRESETS[currentPhase()].shadow;
+    const horizontal = Math.hypot(key.position.x, key.position.z);
+    shadow.position.set(-key.position.x * offset / horizontal, .015, -key.position.z * offset / horizontal);
+    shadow.rotation.z = Math.atan2(-key.position.z, key.position.x);
+    shadow.scale.set(stretch, .74, 1);
+    shadow.material.opacity = opacity;
+  }
   function applyScene(){
     const ph = currentPhase(), sp = SCENE_PRESETS[ph];
     hemi.color.setHex(sp.hemi[0]); hemi.groundColor.setHex(sp.hemi[1]); hemi.intensity = sp.hemi[2];
     key.color.setHex(sp.key[0]); key.intensity = sp.key[1]; key.position.set(...sp.key[2]);
     rim.color.setHex(sp.rim[0]); rim.intensity = sp.rim[1];
+    const skyColors = atmosphere.uniforms;
+    skyColors.zenith.value.setHex(sp.sky[0]); skyColors.horizon.value.setHex(sp.sky[1]);
+    skyColors.ground.value.setHex(sp.sky[2]); skyColors.glow.value.setHex(sp.sky[3]);
+    skyColors.lightDir.value.copy(key.position).normalize();
+    skyColors.night.value = Number(ph === "night");
+    skyColors.cloudiness.value = sp.clouds;
+    grid.material.opacity = ph === "night" ? .16 : .28;
+    if (!takeoff) applyGroundShadow();
     navLevel = sp.lights;
     navLights.forEach(l => { l.sprite.visible = navLevel > 0; });
-    if (ph === "day") document.body.removeAttribute("data-vscene"); else document.body.dataset.vscene = ph;
+    document.body.dataset.vscene = ph;
     const btn = document.getElementById("btn-scene");
     if (btn){
       const name = I18N.t("viewer.scene." + ph);
       btn.textContent = sceneMode === "auto" ? `${I18N.t("viewer.scene")}：${I18N.t("viewer.scene.auto")}（${name}）` : `${I18N.t("viewer.scene")}：${name}`;
       btn.title = I18N.t("viewer.scene.hint");
+      btn.dataset.ico = sceneMode === "auto" ? "clock" : ph === "day" ? "sun" : "scene-" + ph;
     }
   }
   function updateNavLights(now){
@@ -337,7 +422,6 @@ function init(DATA, MODEL){
   });
   document.addEventListener("skychange", () => { if (sceneMode === "auto") applyScene(); });
   document.addEventListener("langchange", applyScene);
-  applyScene();
 
   /* ── 視角控制 ── */
   const target = new THREE.Vector3(0, 1.1, 0);
@@ -352,6 +436,7 @@ function init(DATA, MODEL){
   let autoRotate = !reducedMotion;
   let takeoff = null;
   let panActive = false;
+  applyScene();
 
   function panView(dx, dy){
     const worldPerPixel = 2 * radius * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) / Math.max(1, canvas.clientHeight);
@@ -371,6 +456,7 @@ function init(DATA, MODEL){
       viewCenter.z + radius * Math.sin(phi) * Math.sin(theta)
     );
     camera.lookAt(viewCenter);
+    sky.position.copy(camera.position);
   }
 
   let dragging = false, moved = 0, lastX = 0, lastY = 0, pinchDist = 0;
@@ -836,7 +922,7 @@ function init(DATA, MODEL){
 
   /* ── 主題切換 ── */
   document.getElementById("btn-theme").addEventListener("click", () => {
-    const t = window.HangarTheme.toggle();
+    window.HangarTheme.toggle();
     // 場景網格顏色即時更新
     grid.material.color.set(themeColor("--scene-grid", "#24344d"));
   });
@@ -1139,8 +1225,7 @@ function init(DATA, MODEL){
       const s = takeoff.saved;
       takeoff = null;
       airplane.position.copy(s.position); airplane.rotation.copy(s.rotation);
-      shadow.position.copy(s.shadowPosition); shadow.scale.copy(s.shadowScale);
-      shadow.material.opacity = s.shadowOpacity;
+      applyGroundShadow();
       target.copy(s.target); panOffset.copy(s.panOffset); theta=s.theta; phi=s.phi; radius=s.radius;
       radiusMax=RAD_MAX;
       autoRotate=s.autoRotate; btnRotate.setAttribute("aria-pressed", String(autoRotate));
@@ -1161,8 +1246,6 @@ function init(DATA, MODEL){
       if (takeoff) stopTakeoff();
       const saved={
         position:airplane.position.clone(),rotation:airplane.rotation.clone(),
-        shadowPosition:shadow.position.clone(),shadowScale:shadow.scale.clone(),
-        shadowOpacity:shadow.material.opacity,
         target:target.clone(),panOffset:panOffset.clone(),theta,phi,radius,autoRotate,engineSpeed,
         gear:articulation.gear?.target ?? 0,deployTarget,deployNow,
         channels:Object.fromEntries(Object.entries(articulation).map(([id, st]) => [id, st.target])),
@@ -1177,6 +1260,8 @@ function init(DATA, MODEL){
       btnDeploy.textContent=I18N.t("viewer.deploy");
       radiusMax=48;
       grid.visible=false; runway.visible=true; hotspotLayer.hidden=true;
+      shadow.position.set(0, .015, 0);
+      shadow.rotation.z=0;
       shadow.scale.set(1.05,.58,1);
       if (articulation.gear){ articulation.gear.target=0; document.querySelector('input[data-control="gear"]').value=0; }
       for (const id of Object.keys(articulation)) if (id !== "gear") setChannel(id, 0);   // 擺尾、舵面等先歸零
@@ -1206,8 +1291,9 @@ function init(DATA, MODEL){
       if (!takeoff.manualCamera){
         theta=2.15-.25*climb+.38*wingFocus;
         phi=1.18+.36*climb-.19*wingFocus;
-        const chaseRadius=Math.min(46,Math.max(20,19/camera.aspect))+2*climb;
-        const focusRadius=Math.min(30,Math.max(13,11/camera.aspect));
+        const aspect = Math.max(FRAMING_ASPECT, camera.aspect);
+        const chaseRadius=Math.min(46,Math.max(20,19/aspect))+2*climb;
+        const focusRadius=Math.min(30,Math.max(13,11/aspect));
         radius=chaseRadius*(1-wingFocus)+focusRadius*wingFocus;
       }
       if (hasTakeoffFlaps){
@@ -1259,6 +1345,9 @@ function init(DATA, MODEL){
   function resize(){
     renderer.setSize(innerWidth, innerHeight, false);
     camera.aspect = innerWidth / innerHeight;
+    // Keep enough horizontal field of view for the airframe in portrait layouts.
+    const halfFov = Math.tan(Math.PI / 8) * Math.max(1, FRAMING_ASPECT / camera.aspect);
+    camera.fov = Math.min(90, THREE.MathUtils.radToDeg(2 * Math.atan(halfFov)));
     camera.updateProjectionMatrix();
   }
   window.addEventListener("resize", resize);
