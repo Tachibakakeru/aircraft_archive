@@ -31,7 +31,7 @@ function loadData(){
 // 機身可看（PARTS/PART_ORDER 也一併 fallback 成空，見 init() 開頭）。
 Promise.all([
   loadData(),
-  fetch(`models/${MODEL_ID}.json?v=224`).then(r => r.ok ? r.json() : null).catch(() => null)
+  fetch(`models/${MODEL_ID}.json?v=${MODEL_ID === "an225" ? 234 : 224}`).then(r => r.ok ? r.json() : null).catch(() => null)
 ]).then(([DATA, MODEL]) => init(DATA, MODEL || { parts: {}, anchors: {}, meta: {} }))
   .catch(() => fail(I18N.t("viewer.loaderror").replace("{id}", MODEL_ID)));
 
@@ -205,7 +205,7 @@ function init(DATA, MODEL){
       color: new THREE.Color(e.c[0], e.c[1], e.c[2]),
       map: (e.t && liveryTex) ? liveryTex : null,
       metalness: 0.15, roughness: 0.55, side: THREE.DoubleSide,
-      transparent: alpha < 1, opacity: alpha, depthWrite: alpha >= 1
+      alphaTest: e.alphaTest || 0, transparent: alpha < 1, opacity: alpha, depthWrite: alpha >= 1
     });
     return new THREE.Mesh(geo, m);
   }
@@ -236,7 +236,7 @@ function init(DATA, MODEL){
         const mesh = makeMesh(e);
         mesh.position.set(-s.pv[0], -s.pv[1], -s.pv[2]);   // 幾何相對樞紐
         if (e.slide) mesh.userData.slide = { delta: new THREE.Vector3(...e.slide),
-          end: e.slideEnd || 1, base: mesh.position.clone() };
+          start: e.slideStart || 0, end: e.slideEnd || 1, base: mesh.position.clone() };
         pivot.add(mesh);
       }
       const host = s.parent && pivotById[s.parent];
@@ -284,7 +284,7 @@ function init(DATA, MODEL){
           for (const mesh of pv.children){
             const slide = mesh.userData.slide;
             if (slide) mesh.position.copy(slide.base).addScaledVector(slide.delta,
-              Math.max(0, Math.min(1, state.now/slide.end)));
+              Math.max(0, Math.min(1, (state.now-slide.start)/(slide.end-slide.start))));
           }
         }
         continue;
@@ -1163,6 +1163,15 @@ function init(DATA, MODEL){
         const value = slider.valueAsNumber;
         stopTakeoff();
         pauseViewForControls();
+        if (articulation.loading && value !== 0){
+          if (c.id === "loading"){
+            for (const id of ["gear", "steer", "reverse"]) if (articulation[id]) setChannel(id, 0);
+          } else if (["gear", "steer", "reverse"].includes(c.id)){
+            setChannel("loading", 0);
+            if (c.id === "gear") setChannel("steer", 0);
+            if (c.id === "steer") setChannel("gear", 0);
+          }
+        }
         setChannel(c.id, value);
         if (deployChannels.includes(c.id)) syncDeploy();
       });
@@ -1321,6 +1330,14 @@ function init(DATA, MODEL){
         articulation.gear.target=gear;
         document.querySelector('input[data-control="gear"]').value=gear;
       }
+      // Use runway displacement and tyre radius for wheel rotation during the ground roll.
+      if (articulation.wheels && MODEL.meta.wheelRadius){
+        const travel = 68*smooth(Math.min(flightT,6)/11);
+        const phase = (travel/(2*Math.PI*MODEL.meta.wheelRadius))%1;
+        setChannel("wheels",phase);
+        articulation.wheels.now = phase;
+        applyDeploy();
+      }
       const stage=t>=duration ? "complete" : t<preflight ? "flaps" : flightT>=7 && articulation.gear ? "gear" : flightT>=6.3 ? "climb" : flightT>=4.5 ? "rotate" : "roll";
       if (stage!==takeoff.stage){ takeoff.stage=stage; syncTakeoffText(); }
       const progress=Math.round(t/duration*100);
@@ -1368,6 +1385,7 @@ function init(DATA, MODEL){
   window.addEventListener("resize", resize);
   resize();
 
+  applyDeploy();  // Some gear doors are open at the neutral (gear-down) pose.
   let lastFrame = performance.now();
   function tick(now = performance.now()){
     requestAnimationFrame(tick);

@@ -140,3 +140,21 @@ Reference for PW4000-series fan cowl construction: [Boeing nacelle description a
 ```powershell
 & 'D:/blender.exe' -b models/blender/a321neo.blend --python-exit-code 1 --python tools/export_blender_glb.py
 ```
+## An-225 可動模型（2026-11-28）
+
+外部網格及 UV 貼圖來自 Lee Elliott 的 FlightGear An-225，動畫設定來自 Herbert Wagner 等人。重建以 [FGMEMBERS/AN-225 的 57bd3c2](https://github.com/FGMEMBERS/AN-225/tree/57bd3c2c9b3e5b47e96c18fe7e1a9cc73c9719a4) 為準。保留上游 COPYING（GPL v2）；AN-225-Mrija.xml 的檔頭另載 GPL v3 或更新版本。本站分割可動機鼻與反推套筒，加入展示用貨艙、支撐腳與坡道。網站、Blender、GLB 都使用同一套分件與鉸鏈。
+
+尺寸依[安托諾夫歷史型錄](https://www.antonov.com/en/history/an-225-mriya)的機長 84 m、翼展 88.4 m、機高 18.2 m 校準。[安托諾夫航空裝載手冊](https://www.antonov.com/en/file/V5hQc2hGrJGRs?inline=1)的尺寸圖另列機高 18.1 m，並說明機鼻上掀、前架跪姿、前方坡道的裝載方式。模型保留雙前架、每側七組雙輪主架、雙垂尾、每側四段後緣襟翼及六具 D-18T 引擎。[實機裝載照片](https://www.aviationwa.org.au/aircraft-photos-movements/2016-2/antonov-an-225-mriya-visits-perth-and-australia-for-the-first-time-15-17-may-2016/)可辨識機首支撐。前緣增升面、擾流板及部分舵面沿用上游聯動分組。反推套筒、坡道伸展、風扇展示轉速、鉸鏈與輪艙門曲線為視覺近似，尚無原廠逐部件行程資料。機輪與門片在直線收放的抽樣檢查，不代表所有相鄰網格的工程干涉驗證。
+
+重建方式（第一個參數為該版 FlightGear 專案的本機路徑）
+
+~~~powershell
+python tools/build_an225.py <FlightGear-AN-225>
+python tools/check_an225_model.py
+& 'D:/blender.exe' -b --factory-startup --python-exit-code 1 --python tools/check_an225_clearance_blender.py
+& 'D:/blender.exe' -b --factory-startup --python-exit-code 1 --python tools/build_an225_blender.py
+~~~
+
+最後一個指令產生含貼圖與分件鉸鏈的 an225.blend 和 an225.glb。時間軸先展示飛行操縱面與起落架，再展示地面裝載。網頁可分別操作各通道。
+
+An-225 六具 D-18T 各建 33 片扭轉風扇葉片，幾何配合既有進氣道口徑。金屬前緣與中心整流錐隨轉子轉動，後方暗面固定。[實機特寫](https://commons.wikimedia.org/wiki/File:D-18T_-_Antonov_An-225.JPG)；[葉片數參考](https://nzdr.ru/data/media/biblio/voentech/ychebnikiav597.pdf)。葉型、厚度與間隙為展示近似。

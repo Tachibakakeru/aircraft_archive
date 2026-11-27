@@ -44,3 +44,5 @@
 ## 持續紀錄規則（2026-11-14 新增）
 
 - 每次回答都要即時更新 `Progress.md`，條目標題或內容附日期與時間（YYYY-MM-DD HH:MM）；回答結尾條列本輪改動。`AGENTS.md` 與 `CLAUDE.md` 的新增段落保持同步。
+
+- An-225 可動版的來源、授權、重建與限制見 models/blender/README.md。tools/build_an225.py 轉換指定版本的 FlightGear 機模，tools/build_an225_blender.py 同步產生可編輯 Blender 與 GLB。改動後執行 check_an225_model.py 與 check_an225_clearance_blender.py 檢查機體尺寸、裝載接地與輪胎對艙門的淨空。

@@ -294,3 +294,5 @@ python3 tools/build_airports.py /tmp/airports.csv /tmp/runways.csv /tmp/countrie
 # Dreamlifter Blender 試作模型
 
 Boeing 747-400 LCF Dreamlifter 為 SKY ARCHIVE 原創試作（`models/blender/dreamlifter.blend` → `models/dreamlifter.json`）：依公開尺寸建立，並對照波音官方照片與公開三視圖修正外型（v2，2026-11-15），80 組鉸鏈可分別操作三段式襟翼、前緣克魯格襟翼、擾流板、副翼、升降舵、方向舵、18 輪起落架與擺尾貨艙門。未使用外部網格、Logo 或紋理；重建方式與已知限制見 [模型製作說明](models/blender/README.md)。
+
+- **Antonov An-225** 的新版機模、貼圖與鉸鏈取自 Lee Elliott、Herbert Wagner 等人製作的 [FlightGear An-225](https://github.com/FGMEMBERS/AN-225/tree/57bd3c2c9b3e5b47e96c18fe7e1a9cc73c9719a4)。上游附 GPL v2 授權檔，動畫 XML 標示 GPL v3 或更新版本。本站改作、重建方法及差異記錄於 [模型來源說明](models/blender/README.md)。
