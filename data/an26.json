@@ -1,0 +1,179 @@
+{
+  "title": "Antonov An-26",
+  "sub": {
+    "zh": "從 An-24 平台發展的輕型運輸機，把旅客布局改成以後部貨艙與坡道為主。",
+    "en": "This An-24 derivative trades the passenger layout for a rear-loading cargo deck and ramp.",
+    "ja": "An-24を基に、旅客室に代えて後部荷役の貨物床とランプを備えた軽輸送機。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-26",
+    "https://www.antonov.com/en/article/avialiniji-antonova-pripinyat-spivpracyu-zi-svojim-generalnim-torgovim-agentom-kompaniyeyu-dreamlifts-ltd"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1969-05-21"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "23.80 m"
+      ],
+      [
+        "翼展",
+        "29.20 m"
+      ],
+      [
+        "機高",
+        "8.58 m"
+      ],
+      [
+        "翼面積",
+        "74.98 m²"
+      ]
+    ],
+    "重量": [
+      [
+        "最大酬載",
+        {
+          "zh": "4.5 t（Antonov Airlines 構型）",
+          "en": "4.5 t (Antonov Airlines configuration)",
+          "ja": "4.5 t（アントノフ航空仕様）"
+        }
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "440 km/h"
+      ],
+      [
+        "操作航程",
+        "1100 km"
+      ],
+      [
+        "飛行高度上限",
+        "9000 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Ivchenko AI-24VT"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage",
+    "hstab"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "從 An-24 平台發展的輕型運輸機，把旅客布局改成以後部貨艙與坡道為主。",
+        "en": "This An-24 derivative trades the passenger layout for a rear-loading cargo deck and ramp.",
+        "ja": "An-24を基に、旅客室に代えて後部荷役の貨物床とランプを備えた軽輸送機。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1969-05-21"
+        ],
+        [
+          "用途",
+          {
+            "zh": "軍用運輸機",
+            "en": "Military transport",
+            "ja": "軍用輸送機"
+          }
+        ],
+        [
+          "翼展",
+          "29.20 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "雙具 AI-24VT 渦槳位於高翼，引擎配置與加高安裝的 An-32 有別。",
+        "en": "Two AI-24VTs sit on the high wing, below the much higher installation of the An-32’s engines.",
+        "ja": "高翼にAI-24VTを2基装備。An-32のように大きく持ち上げた配置ではない。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Ivchenko AI-24VT"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "特殊尾坡道可放到地面，或滑入貨艙地板下以騰出裝卸開口。",
+        "en": "The rear ramp lowers to the ground or slides under the floor to clear the loading aperture.",
+        "ja": "後部ランプを地上まで下ろすほか、貨物床下に引き込んで開口部を広く使える。"
+      },
+      "specs": [
+        [
+          "全長",
+          "23.80 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "hstab": {
+      "name": {
+        "zh": "水平尾翼",
+        "en": "Horizontal stabilizer",
+        "ja": "水平尾翼"
+      },
+      "en": "HORIZONTAL STABILIZER",
+      "summary": {
+        "zh": "貨運型的尾段比 An-24 客機更直接地向上收束，可由側面辨認坡道輪廓。",
+        "en": "The aft fuselage sweeps up more distinctly than the An-24 airliner, making the ramp outline visible from the side.",
+        "ja": "後部胴体はAn-24旅客型より明確にせり上がり、側面からランプの輪郭が分かる。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

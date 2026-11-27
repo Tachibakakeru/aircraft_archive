@@ -1,0 +1,223 @@
+{
+  "title": "Lockheed C-5B Galaxy",
+  "sub": {
+    "zh": "第二批新造銀河式，1985 年首飛，1986 年開始配發；共交付 50 架。",
+    "en": "The second newly built Galaxy version first flew in 1985 and entered unit service in 1986. Fifty were delivered.",
+    "ja": "新造ギャラクシーの第2世代。1985年に初飛行し、1986年に部隊配備が始まった。50機が納入された。"
+  },
+  "sources": [
+    "https://www.nasa.gov/wp-content/uploads/2023/04/1985.pdf",
+    "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104492/c-5m-super-galaxy/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1985-09-10"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "75.3 m"
+      ],
+      [
+        "翼展",
+        "67.89 m"
+      ],
+      [
+        "機高",
+        "19.84 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "4 × General Electric TF39-GE-1C"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wing",
+    "vstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "第二批新造銀河式，1985 年首飛，1986 年開始配發；共交付 50 架。",
+        "en": "The second newly built Galaxy version first flew in 1985 and entered unit service in 1986. Fifty were delivered.",
+        "ja": "新造ギャラクシーの第2世代。1985年に初飛行し、1986年に部隊配備が始まった。50機が納入された。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1985-09-10"
+        ],
+        [
+          "全長",
+          "75.3 m"
+        ],
+        [
+          "翼展",
+          "67.89 m"
+        ]
+      ],
+      "fact": {
+        "zh": "C-5B 之後成為 C-5M 計畫的主要改裝機源，並非每架 B 型都以原構型保存。",
+        "en": "The C-5B became the main donor for the C-5M programme, so many B airframes later flew in a different configuration.",
+        "ja": "C-5M計画の主な改修母体で、後に別仕様で飛行した機体も多い。"
+      },
+      "bullets": [],
+      "images": [
+        {
+          "src": "assets/reference/c5b/overview.jpg?v=159d96b7ed37",
+          "caption": {
+            "zh": "C-5B 空中正面照 · Kenneth Hackman / U.S. Air Force",
+            "en": "C-5B frontal air-to-air photograph · Kenneth Hackman / U.S. Air Force",
+            "ja": "C-5Bの空撮正面 · Kenneth Hackman / U.S. Air Force"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:An_air-to-air_front_view_of_a_C-5B_Galaxy_aircraft_from_the_22nd_Military_Airlift_Squadron-_DF-ST-88-07447.jpg",
+          "author": "Kenneth Hackman / U.S. Air Force",
+          "license": "US public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-Military-Air_Force"
+        }
+      ]
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗／機首",
+        "en": "Cockpit windows / nose",
+        "ja": "操縦室窓・機首"
+      },
+      "en": "COCKPIT WINDOWS / NOSE",
+      "summary": {
+        "zh": "駕駛艙窗在抬高的機鼻上方；座艙玻璃與下方機鼻裝卸門分離。從正面亦能辨別高翼與左右各兩具短艙。",
+        "en": "The raised cockpit windows sit above the cargo nose. A front view also shows the high wing and two nacelles on each side.",
+        "ja": "操縦室窓は高い位置にあり、下方の機首貨物扉と分かれている。正面からは高翼と左右2基ずつのナセルも確認できる。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "保留前後雙端貨門與全長貨艙，比較 A 型時，整體外形差異小於內部改進。",
+        "en": "It kept both cargo openings and the full-length hold. Against the A, internal improvements are less obvious from the outside.",
+        "ja": "前後の貨物扉と長い貨物室を維持。A型との比較では内部の改良が外観より重要。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "延續 TF39 與四發翼下構型。辨識 B 型應以機身編號或可靠圖說輔助。",
+        "en": "It retained four underwing TF39s. A reliable caption or serial number helps identify a B-model airframe.",
+        "ja": "翼下のTF39を4基装備する構成を継承。B型の識別には機体番号や信頼できる写真説明も重要。"
+      },
+      "specs": [
+        [
+          "型號",
+          "4 × General Electric TF39-GE-1C"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "大展弦比高翼跨過上部機身，四具渦扇以翼下吊架排列。",
+        "en": "The high wing spans the upper fuselage, with the four turbofans suspended on underwing pylons.",
+        "ja": "高翼が胴体上部を横切り、翼下パイロンにターボファン4基を吊り下げる。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "67.89 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼裝在單片巨大垂直尾翼頂端，形成高 T 尾；機尾下部可保留裝卸空間。",
+        "en": "The horizontal tail sits at the top of a tall single fin, forming the T-tail above the rear loading area.",
+        "ja": "大きな単垂直尾翼の頂部に水平尾翼を置き、後部荷役位置の上方にT尾翼を構成する。"
+      },
+      "specs": [
+        [
+          "機高",
+          "19.84 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "降着装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "全系採五組起落架、28 個輪胎。裝卸時可降低停機高度，減小坡道與地面之間的高差。",
+        "en": "The family uses five landing-gear assemblies and 28 wheels. A kneeling system lowers the parked aircraft to reduce the loading-ramp height.",
+        "ja": "5組の降着装置と28輪を備える。ニーリング機構で駐機時の機体を下げ、荷役ランプとの高さの差を抑える。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

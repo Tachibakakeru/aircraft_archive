@@ -1,0 +1,156 @@
+{
+  "title": "Antonov An-70",
+  "sub": {
+    "zh": "四發槳扇式中型運輸機，原廠以短場與高效率巡航作為設計重點；本頁記錄實飛機型。",
+    "en": "A medium airlifter designed around four propfans, short-field access and efficient cruise. This entry covers the flown aircraft.",
+    "ja": "4発プロップファンの中型輸送機。短距離離着陸と巡航効率を重視した実飛行機を扱う。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-70"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1994-12-16"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "40.65 m"
+      ],
+      [
+        "翼展",
+        "44.06 m"
+      ],
+      [
+        "機高",
+        "16.40 m"
+      ]
+    ],
+    "重量": [
+      [
+        "最大酬載",
+        "47 t"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "700–750 km/h"
+      ],
+      [
+        "飛行高度上限",
+        "12000 m"
+      ],
+      [
+        "條件航程",
+        "5,100 km / 35 t"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "4 × Progress D-27"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "四發槳扇式中型運輸機，原廠以短場與高效率巡航作為設計重點；本頁記錄實飛機型。",
+        "en": "A medium airlifter designed around four propfans, short-field access and efficient cruise. This entry covers the flown aircraft.",
+        "ja": "4発プロップファンの中型輸送機。短距離離着陸と巡航効率を重視した実飛行機を扱う。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1994-12-16"
+        ],
+        [
+          "用途",
+          {
+            "zh": "軍用運輸機",
+            "en": "Military transport",
+            "ja": "軍用輸送機"
+          }
+        ],
+        [
+          "翼展",
+          "44.06 m"
+        ]
+      ],
+      "fact": {
+        "zh": "原廠列出 35 t 貨載航程 5,100 km，不能與最大酬載時的航程視為同一數字。",
+        "en": "Antonov gives 5,100 km with 35 t; that is a different condition from maximum payload.",
+        "ja": "メーカー公表の5,100 kmは35 t搭載時であり、最大搭載時の値とは異なる。"
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "D-27 槳扇驅動雙列反向轉動的槳葉；與有風扇涵道的渦扇引擎不同。",
+        "en": "Each D-27 drives two counter-rotating open blade rows, unlike a ducted turbofan.",
+        "ja": "D-27は2列の反転する露出ブレードを駆動し、ダクト付きターボファンとは異なる。"
+      },
+      "specs": [
+        [
+          "型號",
+          "4 × Progress D-27"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "高翼與後部輸送坡道構成主貨艙；機身尾段為裝卸留出開口。",
+        "en": "A high wing and aft loading ramp define the cargo layout, leaving an opening beneath the rising tail.",
+        "ja": "高翼と後部ランプを備え、せり上がる尾部の下に荷役開口を配置する。"
+      },
+      "specs": [
+        [
+          "全長",
+          "40.65 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

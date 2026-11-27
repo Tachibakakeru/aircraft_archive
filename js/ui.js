@@ -71,7 +71,7 @@ window.AircraftPicker = {
     const find = id => aircraft.find(a => a.id === id);
     function render(showAll = false){
       const q = showAll ? "" : input.value.trim().toLocaleLowerCase();
-      const matches = aircraft.filter(a => !q || [a.name, a.manufacturer, a.icao]
+      const matches = aircraft.filter(a => !q || [a.name, a.manufacturer, a.icao, ...(a.aliases || [])]
         .some(v => String(v || "").toLocaleLowerCase().includes(q)));
       menu.innerHTML = "";
       matches.forEach(a => {

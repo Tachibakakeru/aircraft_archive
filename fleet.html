@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/sky.css?v=8">
 <link rel="stylesheet" href="css/transition.css?v=9">
 <script src="js/theme.js?v=134"></script>
-<script src="js/i18n.js?v=221"></script>
+<script src="js/i18n.js?v=232"></script>
 <script src="js/skytime.js?v=6"></script>
 <script src="js/transition.js?v=6"></script>
 <script src="js/sitebar.js?v=201" defer></script>
@@ -67,7 +67,7 @@
 (async () => {
   const grid = document.getElementById("fleet-grid");
   try {
-    const res = await fetch("data/fleet.json?v=184");
+    const res = await fetch("data/fleet.json?v=210");
     if (!res.ok) throw new Error(res.status);
     const fleet = await res.json();
 
@@ -233,7 +233,7 @@
       let list = fleet.aircraft.filter(a =>
         (!favOnly.checked || favs.has(a.id)) &&
         (!cat || catId(a) === cat) &&
-        [a.name, a.manufacturer, I18N.field(a.category), a.icao, a.iata].join(" ").toLowerCase().includes(q) &&
+        [a.name, a.manufacturer, I18N.field(a.category), a.icao, a.iata, ...(a.aliases || [])].join(" ").toLowerCase().includes(q) &&
         (!getter || ((min == null || getter(a) >= min) && (max == null || getter(a) <= max))));
       list = list.slice().sort(SORTS[sortSel.value] || SORTS.name);
       render(list);
@@ -275,6 +275,6 @@ I18N.mountSelector(document.getElementById("btn-lang"));
 document.getElementById("btn-theme").addEventListener("click", () => window.HangarTheme.toggle());
 </script>
 
-<script src="js/ui.js?v=138"></script>
+<script src="js/ui.js?v=232"></script>
 </body>
 </html>

@@ -1,0 +1,264 @@
+{
+  "title": "Antonov An-124 Ruslan",
+  "sub": {
+    "zh": "「魯斯蘭」四發重型運輸機。分別列出民用 -100 的 120 t 與 -100M-150 的 150 t 酬載，不把紀錄飛行當作常規能力。",
+    "en": "The four-engine Ruslan heavy transport. The -100 is rated at 120 t and the -100M-150 at 150 t, distinct from record flights.",
+    "ja": "4発大型輸送機「ルスラン」。民間型-100の120 tと-100M-150の150 tを区別し、記録飛行と混同しない。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-124-ruslan",
+    "https://www.antonov.com/en/file/V5hQc2hGrJGRs?inline=1",
+    "https://antonov.com/en/upgrade",
+    "https://www.volga-dnepr.com/en/fleet/an-124/ts/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1982-12-24"
+      ],
+      [
+        "用途",
+        {
+          "zh": "貨機",
+          "en": "Freighter",
+          "ja": "貨物機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "69.10 m"
+      ],
+      [
+        "翼展",
+        "73.30 m"
+      ],
+      [
+        "機高",
+        "21.08 m"
+      ]
+    ],
+    "重量": [
+      [
+        "最大起飛重量（MTOW）",
+        "392 t (An-124-100) / 402 t (An-124-100M-150)"
+      ],
+      [
+        "最大酬載",
+        "120 t (An-124-100) / 150 t (An-124-100M-150)"
+      ]
+    ],
+    "容量": [
+      [
+        "貨艙容積",
+        "1,040 m³"
+      ],
+      [
+        "貨艙長度",
+        "36.5 m"
+      ],
+      [
+        "貨艙寬度",
+        "6.4 m"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "800–850 km/h"
+      ],
+      [
+        "飛行高度上限",
+        "11600 m"
+      ],
+      [
+        "條件航程",
+        "4,500 km / 120 t (An-124-100)"
+      ],
+      [
+        "條件航程",
+        "5,400 km / 120 t (An-124-100M-150)"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "4 × Progress D-18T"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage",
+    "gear",
+    "vstab",
+    "cockpit"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "「魯斯蘭」四發重型運輸機。分別列出民用 -100 的 120 t 與 -100M-150 的 150 t 酬載，不把紀錄飛行當作常規能力。",
+        "en": "The four-engine Ruslan heavy transport. The -100 is rated at 120 t and the -100M-150 at 150 t, distinct from record flights.",
+        "ja": "4発大型輸送機「ルスラン」。民間型-100の120 tと-100M-150の150 tを区別し、記録飛行と混同しない。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1982-12-24"
+        ],
+        [
+          "用途",
+          {
+            "zh": "貨機",
+            "en": "Freighter",
+            "ja": "貨物機"
+          }
+        ],
+        [
+          "翼展",
+          "73.30 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "四具 D-18T 掛在高置後掠翼下；An-225 採相同引擎系列，但增加至六具。",
+        "en": "Four D-18Ts hang beneath the swept high wing. The An-225 uses six engines from the same family.",
+        "ja": "高い後退翼の下にD-18Tを4基装備。An-225は同系統を6基装備する。"
+      },
+      "specs": [
+        [
+          "型號",
+          "4 × Progress D-18T"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "抬高駕駛艙之下是機鼻貨門，機尾亦具裝卸口，民用機貨艙約 36.5 × 6.4 × 4.4 m。",
+        "en": "A nose cargo opening sits below the raised flight deck, with aft access as well. The civil hold is about 36.5 × 6.4 × 4.4 m.",
+        "ja": "高い操縦室の下に機首貨物扉があり、後部にも荷役口がある。民間型の貨物室は約36.5 × 6.4 × 4.4 m。"
+      },
+      "specs": [
+        [
+          "全長",
+          "69.10 m"
+        ],
+        [
+          "貨艙容積",
+          "1,040 m³"
+        ],
+        [
+          "貨艙長度",
+          "36.5 m"
+        ],
+        [
+          "貨艙寬度",
+          "6.4 m"
+        ],
+        [
+          "最大起飛重量（MTOW）",
+          "392 t (An-124-100) / 402 t (An-124-100M-150)"
+        ],
+        [
+          "最大酬載",
+          "120 t (An-124-100) / 150 t (An-124-100M-150)"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "降着装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "前起落架能降低機鼻以協助裝卸，單垂尾則是與 An-225 雙垂尾區分的重點。",
+        "en": "The nose gear can lower the loading height; the single fin distinguishes it from the twin-finned An-225.",
+        "ja": "前脚を下げて荷役高さを抑えられる。単垂直尾翼はAn-225との識別点。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "機尾採單垂尾；與 An-225 的雙垂尾輪廓不同。",
+        "en": "The Ruslan has a single fin, in contrast to the twin-finned An-225.",
+        "ja": "ルスランは単垂直尾翼を採用し、An-225の双垂直尾翼とは異なる。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "操縦室"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "駕駛艙位於主貨艙前上方。原廠改良型 -100M 與 -100M-150 更新航電，採四人機組。",
+        "en": "The flight deck is above the forward cargo bay. Antonov’s -100M and -100M-150 upgrades use new avionics and a four-person crew.",
+        "ja": "操縦室は前方貨物室の上にある。改良型-100Mと-100M-150は新しいアビオニクスと4人の乗員構成を採用する。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": [
+        {
+          "src": "assets/reference/an124/cockpit.jpg?v=dccf81113659",
+          "caption": {
+            "zh": "An-124-100 的駕駛艙 · Vasiliy Koba",
+            "en": "An-124-100 flight deck · Vasiliy Koba",
+            "ja": "An-124-100の操縦室 · Vasiliy Koba"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:Maximus_Air_Cargo_Antonov_An-124-100_Ruslan_cockpit.jpeg",
+          "author": "Vasiliy Koba",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "title": "Lockheed C-5C Galaxy",
+  "sub": {
+    "zh": "由兩架 C-5A 改裝成太空貨物運輸型，1989 財政年度交付；包括哈伯太空望遠鏡的相關空運史。",
+    "en": "Two C-5As were modified for space cargo and delivered in fiscal 1989. The type’s history includes transport of the Hubble Space Telescope.",
+    "ja": "C-5Aの2機を宇宙関連貨物用に改修し、1989会計年度に引き渡した。ハッブル宇宙望遠鏡の輸送にも使われた。"
+  },
+  "sources": [
+    "https://www.af.mil/News/Features/Display/Article/787687/travis-two-c-5cs-designed-to-haul-special-cargo/",
+    "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104492/c-5m-super-galaxy/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "交付年度",
+        {
+          "zh": "1989 財政年度",
+          "en": "Fiscal year 1989",
+          "ja": "1989会計年度"
+        }
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "75.3 m"
+      ],
+      [
+        "翼展",
+        "67.89 m"
+      ],
+      [
+        "機高",
+        "19.84 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        {
+          "zh": "4 × General Electric TF39（原始改裝型）",
+          "en": "4 × General Electric TF39 (initial conversion)",
+          "ja": "4 × General Electric TF39（初期改修型）"
+        }
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wing",
+    "vstab",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "由兩架 C-5A 改裝成太空貨物運輸型，1989 財政年度交付；包括哈伯太空望遠鏡的相關空運史。",
+        "en": "Two C-5As were modified for space cargo and delivered in fiscal 1989. The type’s history includes transport of the Hubble Space Telescope.",
+        "ja": "C-5Aの2機を宇宙関連貨物用に改修し、1989会計年度に引き渡した。ハッブル宇宙望遠鏡の輸送にも使われた。"
+      },
+      "specs": [
+        [
+          "交付年度",
+          {
+            "zh": "1989 財政年度",
+            "en": "Fiscal year 1989",
+            "ja": "1989会計年度"
+          }
+        ],
+        [
+          "全長",
+          "75.3 m"
+        ],
+        [
+          "翼展",
+          "67.89 m"
+        ]
+      ],
+      "fact": {
+        "zh": "兩架分別由尾號 68-0213 與 68-0216 的 A 型改裝。",
+        "en": "C-5As 68-0213 and 68-0216 were the two donor airframes.",
+        "ja": "改修母体はC-5Aの68-0213と68-0216の2機。"
+      },
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗／機首",
+        "en": "Cockpit windows / nose",
+        "ja": "操縦室窓・機首"
+      },
+      "en": "COCKPIT WINDOWS / NOSE",
+      "summary": {
+        "zh": "駕駛艙窗在抬高的機鼻上方；座艙玻璃與下方機鼻裝卸門分離。從正面亦能辨別高翼與左右各兩具短艙。",
+        "en": "The raised cockpit windows sit above the cargo nose. A front view also shows the high wing and two nacelles on each side.",
+        "ja": "操縦室窓は高い位置にあり、下方の機首貨物扉と分かれている。正面からは高翼と左右2基ずつのナセルも確認できる。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "拆除原有部隊人員區，修改後部隔板與壓力門，並擴大後貨門，以收納太空計畫的大型運輸容器。",
+        "en": "Removing the troop compartment and reworking the rear bulkhead, pressure door and aft opening made room for large space-program containers.",
+        "ja": "兵員区画を取り除き、後部の隔壁、圧力扉、貨物開口を改修して宇宙計画用の大型容器に対応した。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "C 型最初沿用 TF39，日後重新換發的飛機使用 C-5M 構型，不能混用兩期規格。",
+        "en": "The C originally kept TF39s. Re-engined examples use the C-5M configuration, so the two periods should be kept distinct.",
+        "ja": "C型は当初TF39を継承。換装後はC-5M仕様となり、両時期の諸元は区別する。"
+      },
+      "specs": [
+        [
+          "型號",
+          {
+            "zh": "4 × General Electric TF39（原始改裝型）",
+            "en": "4 × General Electric TF39 (initial conversion)",
+            "ja": "4 × General Electric TF39（初期改修型）"
+          }
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "大展弦比高翼跨過上部機身，四具渦扇以翼下吊架排列。",
+        "en": "The high wing spans the upper fuselage, with the four turbofans suspended on underwing pylons.",
+        "ja": "高翼が胴体上部を横切り、翼下パイロンにターボファン4基を吊り下げる。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "67.89 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼裝在單片巨大垂直尾翼頂端，形成高 T 尾；機尾下部可保留裝卸空間。",
+        "en": "The horizontal tail sits at the top of a tall single fin, forming the T-tail above the rear loading area.",
+        "ja": "大きな単垂直尾翼の頂部に水平尾翼を置き、後部荷役位置の上方にT尾翼を構成する。"
+      },
+      "specs": [
+        [
+          "機高",
+          "19.84 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "降着装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "全系採五組起落架、28 個輪胎。裝卸時可降低停機高度，減小坡道與地面之間的高差。",
+        "en": "The family uses five landing-gear assemblies and 28 wheels. A kneeling system lowers the parked aircraft to reduce the loading-ramp height.",
+        "ja": "5組の降着装置と28輪を備える。ニーリング機構で駐機時の機体を下げ、荷役ランプとの高さの差を抑える。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

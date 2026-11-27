@@ -1,0 +1,179 @@
+{
+  "title": "Antonov An-32",
+  "sub": {
+    "zh": "從 An-26 衍生，針對高溫、高海拔環境換用更大功率的渦槳。",
+    "en": "An An-26 derivative re-engined for hot-and-high airfield conditions.",
+    "ja": "An-26を基に、高温・高地の飛行場向けに高出力エンジンを採用した派生型。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-32",
+    "https://antonov.com/en/upgrade"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛年份",
+        "1976"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "23.68 m"
+      ],
+      [
+        "翼展",
+        "29.20 m"
+      ],
+      [
+        "機高",
+        "8.75 m"
+      ],
+      [
+        "翼面積",
+        "74.98 m²"
+      ]
+    ],
+    "重量": [
+      [
+        "最大酬載",
+        "6.7 t (An-32B) / 7.5 t (An-32B-110/120)"
+      ],
+      [
+        "最大起飛重量（MTOW）",
+        "28.5 t (An-32B-110/120)"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "460 km/h"
+      ],
+      [
+        "操作航程",
+        "800 km"
+      ],
+      [
+        "飛行高度上限",
+        "8000 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Ivchenko AI-20DM"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage",
+    "wing"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "從 An-26 衍生，針對高溫、高海拔環境換用更大功率的渦槳。",
+        "en": "An An-26 derivative re-engined for hot-and-high airfield conditions.",
+        "ja": "An-26を基に、高温・高地の飛行場向けに高出力エンジンを採用した派生型。"
+      },
+      "specs": [
+        [
+          "首飛年份",
+          "1976"
+        ],
+        [
+          "用途",
+          {
+            "zh": "軍用運輸機",
+            "en": "Military transport",
+            "ja": "軍用輸送機"
+          }
+        ],
+        [
+          "翼展",
+          "29.20 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "較大的螺旋槳需要更高地面間隔，因此短艙明顯抬到主翼前緣上方。",
+        "en": "The nacelles sit conspicuously high relative to the wing to provide clearance for larger propellers.",
+        "ja": "大型プロペラの地上間隔を確保するため、ナセルが主翼前縁より明らかに高い。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Ivchenko AI-20DM"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "保留後部裝卸形式；原廠記錄也指出翼面增升系統及貨艙滾輪設備改良。",
+        "en": "Rear loading is retained, with improved high-lift devices and cargo rollers documented by Antonov.",
+        "ja": "後部荷役方式を維持し、高揚力装置と貨物室ローラーも改良された。"
+      },
+      "specs": [
+        [
+          "全長",
+          "23.68 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "識別時先看螺旋槳中心相對主翼的位置，再以較大的短艙和尾坡道確認。",
+        "en": "Compare propeller-hub height to the wing, then check the enlarged nacelles and rear ramp.",
+        "ja": "識別にはプロペラ中心と主翼の高さを比べ、大きなナセルと後部ランプも確認する。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

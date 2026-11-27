@@ -765,11 +765,22 @@
       "span": "88.4 m",
       "seats": "—",
       "tagline": {
-        "zh": "史上最大的飛機，六發、單機唯一，為運送暴風雪號太空梭而生。"
+        "zh": "由 An-124 發展的六發超重型運輸機，原為運載暴風雪號太空梭；唯一完工機於 2022 年在霍斯托梅爾被毀。",
+        "en": "A six-engine heavy airlifter derived from the An-124 for the Buran orbiter; the sole completed airframe was destroyed at Hostomel in 2022.",
+        "ja": "ブラン宇宙往還機の輸送用にAn-124から発展した6発超大型輸送機。唯一の完成機は2022年にホストメリで失われた。"
       },
       "thumb": "assets/thumb_an225.png",
       "icao": "A225",
-      "iata": ""
+      "iata": "",
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-225",
+        "安225",
+        "夢想號",
+        "ムリーヤ"
+      ]
     },
     {
       "id": "bae146",
@@ -3922,6 +3933,735 @@
       "icao": "AS21",
       "iata": "",
       "has3d": false
+    },
+    {
+      "id": "an2",
+      "name": "Antonov An-2",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "1947",
+      "span": "18.17 m",
+      "seats": "12",
+      "tagline": {
+        "zh": "安特諾夫設計局的首款飛機，後來用於農業、偏遠地區客貨運與巡查。",
+        "en": "Antonov’s first aircraft became a workhorse for farming, remote transport and patrol.",
+        "ja": "設計局最初の機体。農業、僻地輸送、巡回などに広く使われた。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN2",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-2",
+        "安2"
+      ]
+    },
+    {
+      "id": "an8",
+      "name": "Antonov An-8",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "1956",
+      "span": "37.00 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "早期雙發渦槳專用運輸機，建立安特諾夫高翼與機尾裝卸的設計路線。",
+        "en": "An early purpose-built twin turboprop that established Antonov’s high-wing, rear-loading transport layout.",
+        "ja": "高翼と後部荷役を組み合わせたアントノフ初期の双発ターボプロップ輸送機。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-8",
+        "安8"
+      ]
+    },
+    {
+      "id": "an10",
+      "name": "Antonov An-10 Ukraina",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "渦輪螺旋槳",
+        "en": "Turboprop",
+        "ja": "ターボプロップ"
+      },
+      "firstFlight": "1957",
+      "span": "38.00 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "「烏克蘭」四發渦槳客機，與 An-12 運輸機同步發展；可由連續客艙窗辨識。",
+        "en": "The Ukraina airliner was developed alongside the An-12 transport. A continuous cabin-window row distinguishes it.",
+        "ja": "「ウクライナ」の名を持つ4発旅客機。An-12と並行開発され、連続した客室窓が特徴。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-10",
+        "安10"
+      ]
+    },
+    {
+      "id": "an12",
+      "name": "Antonov An-12",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "貨機",
+        "en": "Freighter",
+        "ja": "貨物機"
+      },
+      "firstFlight": "1957",
+      "span": "38.02 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "四發渦槳貨運平台，後部裝卸設計使它與使用相似主翼的 An-10 客機分道而行。",
+        "en": "A four-engine turboprop freighter whose rear-loading layout distinguishes it from the similarly winged An-10 airliner.",
+        "ja": "An-10旅客機と主翼の構成が近い4発貨物機。後部荷役で用途が分かれる。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN12",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-12",
+        "安12"
+      ]
+    },
+    {
+      "id": "an14",
+      "name": "Antonov An-14 Pchelka",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "1958",
+      "span": "22.06 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "「小蜜蜂」輕型雙發短場運輸機，開啟 An-28 與 An-38 這條設計支系。",
+        "en": "The Little Bee was a light twin-engine STOL transport and the starting point of the An-28 and An-38 lineage.",
+        "ja": "軽量双発STOL機「小さな蜂」。An-28、An-38につながる設計の出発点。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-14",
+        "安14"
+      ]
+    },
+    {
+      "id": "an22",
+      "name": "Antonov An-22 Antei",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "貨機",
+        "en": "Freighter",
+        "ja": "貨物機"
+      },
+      "firstFlight": "1965",
+      "span": "64.40 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "「安泰」超重型渦槳運輸機，比 An-124 更早投入大型空運，採雙垂尾與八組對轉槳盤。",
+        "en": "Antei pioneered very heavy airlift before the An-124, with twin fins and two propeller discs per engine.",
+        "ja": "「アンテイ」はAn-124以前の超大型輸送を担った。双垂直尾翼と各エンジンの二重反転プロペラが特徴。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN22",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-22",
+        "安22"
+      ]
+    },
+    {
+      "id": "an24",
+      "name": "Antonov An-24",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "支線客機",
+        "en": "Regional airliner",
+        "ja": "リージョナル旅客機"
+      },
+      "firstFlight": "1959",
+      "span": "29.20 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "雙發渦槳支線客機，適應不同地區的機場，並衍生 An-26、An-30 與 An-32 設計支系。",
+        "en": "This twin-turboprop regional airliner led to the An-26, An-30 and An-32 branches.",
+        "ja": "地域路線用の双発ターボプロップ旅客機。An-26、An-30、An-32へと発展した。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN24",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-24",
+        "安24"
+      ]
+    },
+    {
+      "id": "an26",
+      "name": "Antonov An-26",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "1969",
+      "span": "29.20 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "從 An-24 平台發展的輕型運輸機，把旅客布局改成以後部貨艙與坡道為主。",
+        "en": "This An-24 derivative trades the passenger layout for a rear-loading cargo deck and ramp.",
+        "ja": "An-24を基に、旅客室に代えて後部荷役の貨物床とランプを備えた軽輸送機。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN26",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-26",
+        "安26"
+      ]
+    },
+    {
+      "id": "an28",
+      "name": "Antonov An-28",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "1973",
+      "span": "22.06 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "承接 An-14 的小型雙垂尾短場機，改用雙渦槳；量產由波蘭 PZL Mielec 承接。",
+        "en": "A twin-turboprop successor in the An-14 lineage, with series production at PZL Mielec in Poland.",
+        "ja": "An-14系統の双発ターボプロップ短距離離着陸機。ポーランドのPZLミェレツで量産された。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN28",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-28",
+        "安28"
+      ]
+    },
+    {
+      "id": "an30",
+      "name": "Antonov An-30",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "特種用途機",
+        "en": "Special-mission aircraft",
+        "ja": "特殊任務機"
+      },
+      "firstFlight": "1967",
+      "span": "29.20 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "以 An-24 系為基礎的航空測繪機，抬高駕駛艙、增加機首觀測區並改造機腹。",
+        "en": "An An-24-family survey aircraft with a raised cockpit, a glazed nose observation station and a modified belly.",
+        "ja": "An-24系の航空測量機。操縦室を高くし、ガラス張りの機首観測席と改修した機体下面を備える。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-30",
+        "安30"
+      ]
+    },
+    {
+      "id": "an32",
+      "name": "Antonov An-32",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "1976",
+      "span": "29.20 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "從 An-26 衍生，針對高溫、高海拔環境換用更大功率的渦槳。",
+        "en": "An An-26 derivative re-engined for hot-and-high airfield conditions.",
+        "ja": "An-26を基に、高温・高地の飛行場向けに高出力エンジンを採用した派生型。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN32",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-32",
+        "安32"
+      ]
+    },
+    {
+      "id": "an38",
+      "name": "Antonov An-38",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "通用運輸機",
+        "en": "Utility transport",
+        "ja": "汎用輸送機"
+      },
+      "firstFlight": "1994",
+      "span": "22.06 m",
+      "seats": "27",
+      "tagline": {
+        "zh": "An-28 設計支系的加長型，提供較大的客艙並延續粗糙短場運輸需求。",
+        "en": "A stretched member of the An-28 lineage that adds cabin capacity while keeping a rough-field focus.",
+        "ja": "An-28系統の胴体延長型。客室を広げ、簡易飛行場への適応を維持した。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN38",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-38",
+        "安38"
+      ]
+    },
+    {
+      "id": "an70",
+      "name": "Antonov An-70",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "1994",
+      "span": "44.06 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "四發槳扇式中型運輸機，原廠以短場與高效率巡航作為設計重點；本頁記錄實飛機型。",
+        "en": "A medium airlifter designed around four propfans, short-field access and efficient cruise. This entry covers the flown aircraft.",
+        "ja": "4発プロップファンの中型輸送機。短距離離着陸と巡航効率を重視した実飛行機を扱う。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN70",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-70",
+        "安70"
+      ]
+    },
+    {
+      "id": "an71",
+      "name": "Antonov An-71",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "特種用途機",
+        "en": "Special-mission aircraft",
+        "ja": "特殊任務機"
+      },
+      "firstFlight": "1985",
+      "span": "31.89 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "以 An-72 平台改造的空中預警試驗機，完成試飛但未量產。",
+        "en": "A prototype airborne early-warning derivative of the An-72 that flew but did not enter series production.",
+        "ja": "An-72を基にした早期警戒試験機。試験飛行を行ったが量産には至らなかった。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-71",
+        "安71"
+      ]
+    },
+    {
+      "id": "an72",
+      "name": "Antonov An-72",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "1977",
+      "span": "31.89 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "翼上雙渦扇與後貨艙坡道組成短場噴射運輸機，亦是 An-74 與 An-71 的設計來源。",
+        "en": "A short-field jet transport with overwing turbofans and a rear ramp, forming the basis of the An-74 and An-71.",
+        "ja": "翼上の双発ターボファンと後部ランプを持つ短距離離着陸輸送機。An-74、An-71の基礎となった。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN72",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-72",
+        "安72"
+      ]
+    },
+    {
+      "id": "an74",
+      "name": "Antonov An-74",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "1983",
+      "span": "31.89 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "由 An-72 發展而來，早期針對極地支援；後來發展出貨運與客貨混合等多種配置。",
+        "en": "An An-72 derivative developed for polar support and later offered in cargo and mixed layouts.",
+        "ja": "極地支援向けにAn-72から発展し、後に貨物・客貨混載などの型が生まれた。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "AN74",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-74",
+        "安74"
+      ]
+    },
+    {
+      "id": "an124",
+      "name": "Antonov An-124 Ruslan",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "貨機",
+        "en": "Freighter",
+        "ja": "貨物機"
+      },
+      "firstFlight": "1982",
+      "span": "73.30 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "「魯斯蘭」四發重型運輸機。分別列出民用 -100 的 120 t 與 -100M-150 的 150 t 酬載，不把紀錄飛行當作常規能力。",
+        "en": "The four-engine Ruslan heavy transport. The -100 is rated at 120 t and the -100M-150 at 150 t, distinct from record flights.",
+        "ja": "4発大型輸送機「ルスラン」。民間型-100の120 tと-100M-150の150 tを区別し、記録飛行と混同しない。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A124",
+      "has3d": false,
+      "iata": "A4F",
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-124",
+        "安124",
+        "魯斯蘭",
+        "An-124-100",
+        "An-124-100M-150",
+        "ルスラン"
+      ]
+    },
+    {
+      "id": "an132",
+      "name": "Antonov An-132D",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "2017",
+      "span": "29.20 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "以 An-32 為基礎，與沙烏地夥伴合作開發的 An-132D 技術展示機。9.2 t 是 An-132 設計值，與展示機的試驗結果分開看。",
+        "en": "The An-132D was a technology demonstrator developed from the An-32 with Saudi partners. The advertised 9.2 t is a programme design figure.",
+        "ja": "An-32を基にサウジアラビアのパートナーと開発した技術実証機。公表の9.2 tは計画上の設計値。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-132",
+        "安132"
+      ]
+    },
+    {
+      "id": "an140",
+      "name": "Antonov An-140",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "支線客機",
+        "en": "Regional airliner",
+        "ja": "リージョナル旅客機"
+      },
+      "firstFlight": "1997",
+      "span": "25.50 m",
+      "seats": "52",
+      "tagline": {
+        "zh": "用於 52 席級區域客運及客貨混合任務，設計上可由設備較少的機場運作。",
+        "en": "A 52-seat-class regional turboprop for passenger or mixed use, designed to operate from lightly equipped airfields.",
+        "ja": "52席級の地域路線用ターボプロップ機。旅客・客貨混載用途に対応し、設備の少ない飛行場でも運用できる設計。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A140",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-140",
+        "安140"
+      ]
+    },
+    {
+      "id": "an148",
+      "name": "Antonov An-148",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "支線客機",
+        "en": "Regional airliner",
+        "ja": "リージョナル旅客機"
+      },
+      "firstFlight": "2004",
+      "span": "28.91 m",
+      "seats": "75",
+      "tagline": {
+        "zh": "高翼雙渦扇支線客機；An-158 延長客艙，An-178 從同系統發展為尾坡道貨運型。",
+        "en": "A high-wing twinjet regional airliner. The An-158 stretches the cabin and the related An-178 adds aft cargo loading.",
+        "ja": "高翼双発のリージョナルジェット。An-158は胴体延長型で、同系列のAn-178は後部荷役の貨物機。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A148",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-148",
+        "安148"
+      ]
+    },
+    {
+      "id": "an158",
+      "name": "Antonov An-158",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "支線客機",
+        "en": "Regional airliner",
+        "ja": "リージョナル旅客機"
+      },
+      "firstFlight": "2010",
+      "span": "28.91 m",
+      "seats": "99",
+      "tagline": {
+        "zh": "原稱 An-148-200，是 An-148 的加長旅客型，設計載客 99 人。",
+        "en": "Originally the An-148-200, this stretched passenger version was designed for 99 passengers.",
+        "ja": "旧称An-148-200。客室を延長し、99人乗りとして設計された。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "icao": "A158",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-158",
+        "安158"
+      ]
+    },
+    {
+      "id": "an178",
+      "name": "Antonov An-178",
+      "manufacturer": "Antonov",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "2015",
+      "span": "30.57 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "以 An-148／158 的機體與設備為基礎發展的運輸機，寬貨艙配備機尾坡道，已實際試飛。",
+        "en": "A transport developed from the An-148/158 design, with a wider cargo cabin and rear ramp, demonstrated in flight.",
+        "ja": "An-148／158を基に開発された輸送機。幅広い貨物室と後部ランプを備え、飛行試験を行った。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "has3d": false,
+      "aliases": [
+        "安特諾夫",
+        "安托諾夫",
+        "アントノフ",
+        "安-178",
+        "安178"
+      ]
+    },
+    {
+      "id": "c5a",
+      "name": "Lockheed C-5A Galaxy",
+      "manufacturer": "Lockheed",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "1968",
+      "span": "67.89 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "銀河式的原始量產型，1968 年首飛、1970 年開始交付。高翼、T 尾與前後裝卸門成為整個家族的辨識特徵。",
+        "en": "The original Galaxy production model first flew in 1968 and began deliveries in 1970. Its high wing, T-tail and two-ended loading defined the family.",
+        "ja": "初代量産型ギャラクシー。1968年に初飛行し、1970年に引き渡しが始まった。高翼、T尾翼、前後の荷役口が系列の特徴となった。"
+      },
+      "thumb": "assets/reference/c5a/overview.jpg?v=1ae4ead4ee4e",
+      "has3d": false,
+      "aliases": [
+        "洛克希德",
+        "C-5",
+        "C5",
+        "銀河式",
+        "銀河運輸機",
+        "ギャラクシー"
+      ]
+    },
+    {
+      "id": "c5b",
+      "name": "Lockheed C-5B Galaxy",
+      "manufacturer": "Lockheed",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "1985",
+      "span": "67.89 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "第二批新造銀河式，1985 年首飛，1986 年開始配發；共交付 50 架。",
+        "en": "The second newly built Galaxy version first flew in 1985 and entered unit service in 1986. Fifty were delivered.",
+        "ja": "新造ギャラクシーの第2世代。1985年に初飛行し、1986年に部隊配備が始まった。50機が納入された。"
+      },
+      "thumb": "assets/reference/c5b/overview.jpg?v=159d96b7ed37",
+      "has3d": false,
+      "aliases": [
+        "洛克希德",
+        "C-5",
+        "C5",
+        "銀河式",
+        "銀河運輸機",
+        "ギャラクシー"
+      ]
+    },
+    {
+      "id": "c5c",
+      "name": "Lockheed C-5C Galaxy",
+      "manufacturer": "Lockheed",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "",
+      "span": "67.89 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "由兩架 C-5A 改裝成太空貨物運輸型，1989 財政年度交付；包括哈伯太空望遠鏡的相關空運史。",
+        "en": "Two C-5As were modified for space cargo and delivered in fiscal 1989. The type’s history includes transport of the Hubble Space Telescope.",
+        "ja": "C-5Aの2機を宇宙関連貨物用に改修し、1989会計年度に引き渡した。ハッブル宇宙望遠鏡の輸送にも使われた。"
+      },
+      "thumb": "assets/thumb_nomodel.svg",
+      "has3d": false,
+      "aliases": [
+        "洛克希德",
+        "C-5",
+        "C5",
+        "銀河式",
+        "銀河運輸機",
+        "ギャラクシー"
+      ]
+    },
+    {
+      "id": "c5m",
+      "name": "Lockheed C-5M Super Galaxy",
+      "manufacturer": "Lockheed Martin",
+      "category": {
+        "zh": "軍用運輸機",
+        "en": "Military transport",
+        "ja": "軍用輸送機"
+      },
+      "firstFlight": "2006",
+      "span": "67.89 m",
+      "seats": "—",
+      "tagline": {
+        "zh": "超級銀河式是現有機體的航電、引擎與可靠性升級型；熟悉的高翼與 T 尾保留，翼下短艙改變。",
+        "en": "The Super Galaxy modernized existing airframes with new avionics and engines and improved reliability. The high wing and T-tail remain, with new nacelles below.",
+        "ja": "既存機のアビオニクス、エンジン、信頼性を近代化したスーパーギャラクシー。高翼とT尾翼を維持し、翼下ナセルを換装した。"
+      },
+      "thumb": "assets/reference/c5m/overview.jpg?v=3dd47680a653",
+      "icao": "C5M",
+      "has3d": false,
+      "aliases": [
+        "洛克希德",
+        "C-5",
+        "C5",
+        "銀河式",
+        "銀河運輸機",
+        "ギャラクシー",
+        "超級銀河式",
+        "スーパーギャラクシー"
+      ]
     }
   ]
 }

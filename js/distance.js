@@ -107,7 +107,7 @@ function fmtHours(h){
   try {
     const [aRes, fRes] = await Promise.all([
       fetch("data/airports.json?v=128"),
-      fetch("data/fleet.json?v=184"),
+      fetch("data/fleet.json?v=210"),
     ]);
     AIRPORTS = (await aRes.json()).airports;
     FLEET = (await fRes.json()).aircraft;

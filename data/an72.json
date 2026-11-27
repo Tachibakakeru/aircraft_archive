@@ -1,0 +1,168 @@
+{
+  "title": "Antonov An-72",
+  "sub": {
+    "zh": "翼上雙渦扇與後貨艙坡道組成短場噴射運輸機，亦是 An-74 與 An-71 的設計來源。",
+    "en": "A short-field jet transport with overwing turbofans and a rear ramp, forming the basis of the An-74 and An-71.",
+    "ja": "翼上の双発ターボファンと後部ランプを持つ短距離離着陸輸送機。An-74、An-71の基礎となった。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-72"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛年份",
+        "1977"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "28.07 m"
+      ],
+      [
+        "翼展",
+        "31.89 m"
+      ],
+      [
+        "機高",
+        "8.65 m"
+      ],
+      [
+        "翼面積",
+        "98.78 m²"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "540 km/h"
+      ],
+      [
+        "操作航程",
+        "4320 km"
+      ],
+      [
+        "飛行高度上限",
+        "10100 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Progress D-36"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage",
+    "wing"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "翼上雙渦扇與後貨艙坡道組成短場噴射運輸機，亦是 An-74 與 An-71 的設計來源。",
+        "en": "A short-field jet transport with overwing turbofans and a rear ramp, forming the basis of the An-74 and An-71.",
+        "ja": "翼上の双発ターボファンと後部ランプを持つ短距離離着陸輸送機。An-74、An-71の基礎となった。"
+      },
+      "specs": [
+        [
+          "首飛年份",
+          "1977"
+        ],
+        [
+          "用途",
+          {
+            "zh": "軍用運輸機",
+            "en": "Military transport",
+            "ja": "軍用輸送機"
+          }
+        ],
+        [
+          "翼展",
+          "31.89 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "兩具 D-36 出流沿翼上表面與增升裝置流動，輔助低速時的升力。",
+        "en": "Exhaust from the two D-36s flows over the upper wing and high-lift surfaces to assist lift at low speed.",
+        "ja": "2基のD-36の排気を翼上面と高揚力装置に沿わせ、低速時の揚力を補う。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Progress D-36"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "機尾設貨物坡道，前部駕駛艙與後部裝卸區分開。",
+        "en": "An aft cargo ramp separates loading operations from the forward flight deck.",
+        "ja": "後部貨物ランプから荷役し、前方の操縦室と分けている。"
+      },
+      "specs": [
+        [
+          "全長",
+          "28.07 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "高置引擎、粗壯高翼和 T 尾是最鮮明的外型特徵。",
+        "en": "The high nacelles, substantial high wing and T-tail are the main silhouette cues.",
+        "ja": "高いナセル、厚みのある高翼、T尾翼が主な識別点。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

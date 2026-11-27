@@ -2,6 +2,11 @@
 
 完整專案作業地圖見 `AGENTS.md`；本檔與 `AGENTS.md` 的新增段落保持同步。
 
+## Antonov 與 C-5 家族（2026-11-27）
+
+- 飛行圖鑑收錄 Antonov 歷史型錄的 23 個主要動力機型，以及 Lockheed C-5A／B／C／M。安特諾夫各設計支系及 C-5 主要改型在機型家族頁可直接點開詳情。以機型頁的來源及次型號條件為準，C-5C 的 1989 財政年度是交付時間。
+- 本輪新增 26 個純資料條目。圖鑑共 210 個機型，50 個有 3D、160 個待補。使用 `python tools/check_model_inventory.py` 重建盤點。
+
 ## Blender 補建飛機模型備忘（2026-11-16）
 
 - 協和號、Dreamlifter、A321neo 的可編輯來源在 `models/blender/`。可攜檔在 `models/glb/`，由 `tools/export_blender_glb.py` 從對應的 `.blend` 重建，保留分件、材質與一段示範動畫。若更新其中一架的來源，對應 GLB 與站內 JSON 一併重匯出。

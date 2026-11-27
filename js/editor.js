@@ -21,7 +21,7 @@ const setZh = (old, value) => old && typeof old === "object" && !Array.isArray(o
   wirePwToggle($("gh-token"));
 
   try {
-    fleet = await (await fetch("data/fleet.json?v=184")).json();
+    fleet = await (await fetch("data/fleet.json?v=210")).json();
   } catch {
     $("ed-note").innerHTML = "無法載入 <code>data/fleet.json</code>，請以本機伺服器開啟（<code>python3 -m http.server</code>）。";
     return;

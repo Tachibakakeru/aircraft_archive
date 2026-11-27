@@ -27,7 +27,7 @@ const POPULAR = [
 const TPE = {icao:"RCTP",iata:"TPE",lat:25.0777,lon:121.2330};
 
 /* 讀不到資料時（例如離線）仍能完整呈現的後備數字 */
-const FALLBACK = {aircraft:184, models:48, airports:85587, airlines:594, cargo:18, alliances:3, topics:82};
+const FALLBACK = {aircraft:210, models:50, airports:85587, airlines:594, cargo:18, alliances:3, topics:82};
 
 /* ═══════════════ 小工具 ═══════════════ */
 const $ = s => document.querySelector(s);
@@ -231,7 +231,7 @@ async function ensureCodes(){
 function searchAll(q){
   const groups = [], want = k => scope === "all" || scope === k, cap = scope === "all" ? 4 : 10;
   const push = (k, list) => { const g = list.filter(x => x.s > 0).sort((a,b) => b.s - a.s).slice(0, cap).map(x => ({...x, k})); if (g.length) groups.push(g); };
-  if (want("fleet")) push("fleet", D.fleet.map(a => ({s:score(q,[a.icao,a.id,a.name.replace(/^(Airbus|Boeing)\s*/,"")],[a.name,a.manufacturer]),
+  if (want("fleet")) push("fleet", D.fleet.map(a => ({s:score(q,[a.icao,a.id,a.name.replace(/^(Airbus|Boeing)\s*/,"")],[a.name,a.manufacturer,...(a.aliases || [])]),
     code:a.icao || a.id.toUpperCase(), n:a.name, sub:`${a.manufacturer} · ${field(a.category)}`, href:`viewer.html?model=${encodeURIComponent(a.id)}`})));
   if (want("airports")) {
     const pop = new Map(POPULAR.map(p => [p.icao, p]));
@@ -755,7 +755,7 @@ function go(href){ location.href = href; }
 renderAll();
 (async () => {
   const [fleet, airlines, count, knowledge] = await Promise.all([
-    getJSON("data/fleet.json", 184), getJSON("data/airlines.json", 139),
+    getJSON("data/fleet.json", 210), getJSON("data/airlines.json", 139),
 getJSON("data/airport_count.json", 138), getJSON("data/knowledge.json", 195)
   ]);
   if (fleet) D.fleet = fleet.aircraft || [];

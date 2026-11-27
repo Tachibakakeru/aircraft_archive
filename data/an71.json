@@ -1,0 +1,154 @@
+{
+  "title": "Antonov An-71",
+  "sub": {
+    "zh": "以 An-72 平台改造的空中預警試驗機，完成試飛但未量產。",
+    "en": "A prototype airborne early-warning derivative of the An-72 that flew but did not enter series production.",
+    "ja": "An-72を基にした早期警戒試験機。試験飛行を行ったが量産には至らなかった。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-71"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1985-07-12"
+      ],
+      [
+        "用途",
+        {
+          "zh": "特種用途機",
+          "en": "Special-mission aircraft",
+          "ja": "特殊任務機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "23.50 m"
+      ],
+      [
+        "翼展",
+        "31.89 m"
+      ],
+      [
+        "機高",
+        "9.20 m"
+      ],
+      [
+        "翼面積",
+        "98.60 m²"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "530 km/h"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        {
+          "zh": "2 具翼上渦扇＋輔助推進引擎",
+          "en": "Two overwing turbofans and a booster engine",
+          "ja": "翼上ターボファン2基と補助推進エンジン"
+        }
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "vstab"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "以 An-72 平台改造的空中預警試驗機，完成試飛但未量產。",
+        "en": "A prototype airborne early-warning derivative of the An-72 that flew but did not enter series production.",
+        "ja": "An-72を基にした早期警戒試験機。試験飛行を行ったが量産には至らなかった。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1985-07-12"
+        ],
+        [
+          "用途",
+          {
+            "zh": "特種用途機",
+            "en": "Special-mission aircraft",
+            "ja": "特殊任務機"
+          }
+        ],
+        [
+          "翼展",
+          "31.89 m"
+        ]
+      ],
+      "fact": {
+        "zh": "原廠將它與 An-72 分列，這裡以獨立試驗條目保存紀錄。",
+        "en": "Antonov lists it separately from the An-72, so this catalogue records it as its own prototype entry.",
+        "ja": "メーカー資料でもAn-72とは別に記録されており、本図鑑も独立した試験機として掲載する。"
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "主推進引擎仍放在高翼上方；另有一具輔助推進引擎。",
+        "en": "The main engines remain above the high wing, with a separate booster engine.",
+        "ja": "主エンジンは高翼の上に残り、補助推進用エンジンも備える。"
+      },
+      "specs": [
+        [
+          "型號",
+          {
+            "zh": "2 具翼上渦扇＋輔助推進引擎",
+            "en": "Two overwing turbofans and a booster engine",
+            "ja": "翼上ターボファン2基と補助推進エンジン"
+          }
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "大型圓盤架在前掠垂尾頂端，和 An-72 的普通 T 尾輪廓一眼可分。",
+        "en": "The disc atop the forward-swept fin gives it a markedly different silhouette from the An-72’s conventional T-tail.",
+        "ja": "前進角のある垂直尾翼上の大型円盤で、An-72の通常のT尾翼と見分けられる。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "31.89 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

@@ -1,6 +1,10 @@
 {
   "title": "Antonov An-225 Mriya",
-  "sub": "史上最大的飛機 — 點擊機體部位查看解說",
+  "sub": {
+    "zh": "由 An-124 發展的六發超重型運輸機，原為運載暴風雪號太空梭；唯一完工機於 2022 年在霍斯托梅爾被毀。",
+    "en": "A six-engine heavy airlifter derived from the An-124 for the Buran orbiter; the sole completed airframe was destroyed at Hostomel in 2022.",
+    "ja": "ブラン宇宙往還機の輸送用にAn-124から発展した6発超大型輸送機。唯一の完成機は2022年にホストメリで失われた。"
+  },
   "partOrder": [
     "overview",
     "cockpit",
@@ -400,14 +404,14 @@
     },
     "overview": {
       "summary": {
-        "zh": "An-225 以高翼、六具翼下引擎、雙垂尾與84公尺長機身形成幾乎不會認錯的輪廓；本照為唯一完工機UR-82060。",
-        "en": "The An-225's high wing, six underwing engines, twin fins and 84 m fuselage form an almost unmistakable silhouette. This is the sole completed airframe, UR-82060.",
-        "ja": "An-225は高翼、翼下6発、双垂尾、全長84 mの組合せでほぼ見間違えない輪郭です。写真は唯一完成したUR-82060です。"
+        "zh": "由 An-124 發展的六發超重型運輸機，原為運載暴風雪號太空梭；唯一完工機於 2022 年在霍斯托梅爾被毀。",
+        "en": "A six-engine heavy airlifter derived from the An-124 for the Buran orbiter; the sole completed airframe was destroyed at Hostomel in 2022.",
+        "ja": "ブラン宇宙往還機の輸送用にAn-124から発展した6発超大型輸送機。唯一の完成機は2022年にホストメリで失われた。"
       },
       "fact": {
-        "zh": "尺寸感會受焦段影響；辨識時先數六具引擎，再確認雙垂尾與高翼，不要只靠『看起來很大』。",
-        "en": "Perspective can distort apparent size. Count six engines, then confirm the twin fins and high wing rather than relying on the aircraft merely looking large.",
-        "ja": "見かけの大きさは撮影条件で変わります。大きく見えることだけに頼らず、6発、高翼、双垂尾を確認します。"
+        "zh": "An-225 沿用 An-124 的設計基礎，加入延長機身、六具引擎與雙垂尾。第二架機體未完工。",
+        "en": "The An-225 extended the An-124 design with a longer fuselage, six engines and twin fins. A second airframe was never completed.",
+        "ja": "An-124を基に胴体を延長し、6発・双垂直尾翼とした。2機目の機体は完成していない。"
       },
       "bullets": [
         {
@@ -729,5 +733,10 @@
         "2.33 m（92 in）"
       ]
     ]
-  }
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-225-mriya",
+    "https://www.antonov.com/en/file/V5hQc2hGrJGRs?inline=1",
+    "https://mvs.gov.ua/en/news/znishhena-mriia-eksdirektoru-dp-antonov-povidomili-pro-pidozru"
+  ]
 }

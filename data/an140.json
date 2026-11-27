@@ -1,0 +1,158 @@
+{
+  "title": "Antonov An-140",
+  "sub": {
+    "zh": "用於 52 席級區域客運及客貨混合任務，設計上可由設備較少的機場運作。",
+    "en": "A 52-seat-class regional turboprop for passenger or mixed use, designed to operate from lightly equipped airfields.",
+    "ja": "52席級の地域路線用ターボプロップ機。旅客・客貨混載用途に対応し、設備の少ない飛行場でも運用できる設計。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-140"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1997-12-26"
+      ],
+      [
+        "用途",
+        {
+          "zh": "支線客機",
+          "en": "Regional airliner",
+          "ja": "リージョナル旅客機"
+        }
+      ],
+      [
+        "典型載客量",
+        "52"
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "22.60 m"
+      ],
+      [
+        "翼展",
+        "25.50 m"
+      ],
+      [
+        "機高",
+        "8.23 m"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "460–540 km/h"
+      ],
+      [
+        "操作航程",
+        "1380 km"
+      ],
+      [
+        "飛行高度上限",
+        "7600 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Klimov TV3-117VMA-SBM1"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "用於 52 席級區域客運及客貨混合任務，設計上可由設備較少的機場運作。",
+        "en": "A 52-seat-class regional turboprop for passenger or mixed use, designed to operate from lightly equipped airfields.",
+        "ja": "52席級の地域路線用ターボプロップ機。旅客・客貨混載用途に対応し、設備の少ない飛行場でも運用できる設計。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1997-12-26"
+        ],
+        [
+          "用途",
+          {
+            "zh": "支線客機",
+            "en": "Regional airliner",
+            "ja": "リージョナル旅客機"
+          }
+        ],
+        [
+          "典型載客量",
+          "52"
+        ],
+        [
+          "翼展",
+          "25.50 m"
+        ]
+      ],
+      "fact": {
+        "zh": "An-140 與 An-140-100 在 2000 年獲原廠記載的型別證書；伊朗生產型稱 IrAN-140。",
+        "en": "Antonov records type certificates for the An-140 and -140-100 in 2000. Iranian-built examples were called IrAN-140.",
+        "ja": "An-140とAn-140-100は2000年に型式証明を取得したとメーカーが記録している。イラン生産型はIrAN-140。"
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "雙渦槳掛在高翼，推進構型與後來的區域噴射機 An-148 明顯不同。",
+        "en": "Twin turboprops sit on the high wing, unlike the later An-148 regional jet.",
+        "ja": "高翼にターボプロップを2基搭載し、後のリージョナルジェットAn-148とは異なる。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Klimov TV3-117VMA-SBM1"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "客艙使用連續舷窗，機身較短，可布局純客運或客貨混合。",
+        "en": "Cabin windows span the short fuselage, which accommodates passenger or mixed layouts.",
+        "ja": "短い胴体に客室窓を並べ、旅客専用または客貨混載に対応する。"
+      },
+      "specs": [
+        [
+          "全長",
+          "22.60 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

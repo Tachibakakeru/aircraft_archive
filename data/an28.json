@@ -1,0 +1,168 @@
+{
+  "title": "Antonov An-28",
+  "sub": {
+    "zh": "承接 An-14 的小型雙垂尾短場機，改用雙渦槳；量產由波蘭 PZL Mielec 承接。",
+    "en": "A twin-turboprop successor in the An-14 lineage, with series production at PZL Mielec in Poland.",
+    "ja": "An-14系統の双発ターボプロップ短距離離着陸機。ポーランドのPZLミェレツで量産された。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-28"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1973-01-29"
+      ],
+      [
+        "用途",
+        {
+          "zh": "通用運輸機",
+          "en": "Utility transport",
+          "ja": "汎用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "12.95 m"
+      ],
+      [
+        "翼展",
+        "22.06 m"
+      ],
+      [
+        "機高",
+        "4.50 m"
+      ],
+      [
+        "翼面積",
+        "39.72 m²"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "352 km/h"
+      ],
+      [
+        "操作航程",
+        "1370 km"
+      ],
+      [
+        "飛行高度上限",
+        "6000 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Glushenkov TVD-10B (production)"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "承接 An-14 的小型雙垂尾短場機，改用雙渦槳；量產由波蘭 PZL Mielec 承接。",
+        "en": "A twin-turboprop successor in the An-14 lineage, with series production at PZL Mielec in Poland.",
+        "ja": "An-14系統の双発ターボプロップ短距離離着陸機。ポーランドのPZLミェレツで量産された。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1973-01-29"
+        ],
+        [
+          "用途",
+          {
+            "zh": "通用運輸機",
+            "en": "Utility transport",
+            "ja": "汎用輸送機"
+          }
+        ],
+        [
+          "翼展",
+          "22.06 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "兩具渦槳與支柱式高翼搭配；原型動力與後續 M28 的引擎配置須分開看。",
+        "en": "Twin turboprops sit on the strut-braced high wing; later M28 installations differ.",
+        "ja": "支柱付き高翼にターボプロップを2基搭載。後のM28とはエンジンの構成が異なる。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Glushenkov TVD-10B (production)"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "短機身內可布置座椅或貨物，由後部貨門裝卸。",
+        "en": "The short cabin can be laid out for seats or freight, with rear loading access.",
+        "ja": "短い胴体内を座席または貨物用に構成でき、後部から荷役する。"
+      },
+      "specs": [
+        [
+          "全長",
+          "12.95 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "降着装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "固定三點起落架與雙垂尾同為辨識重點，也是與 An-14 比較時保留的特徵。",
+        "en": "Fixed tricycle gear and twin fins are recognizable features inherited from the An-14 line.",
+        "ja": "固定式前輪配置と双垂直尾翼は、An-14系統から引き継いだ識別点。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

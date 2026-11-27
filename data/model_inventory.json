@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-17",
-  "fleetCount": 184,
+  "updated": "2026-11-27",
+  "fleetCount": 210,
   "modelCount": 50,
-  "missingCount": 134,
+  "missingCount": 160,
   "missing": [
     {
       "id": "c909",
@@ -673,6 +673,136 @@
       "id": "ask21b",
       "name": "Alexander Schleicher ASK 21 B",
       "manufacturer": "Alexander Schleicher"
+    },
+    {
+      "id": "an2",
+      "name": "Antonov An-2",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an8",
+      "name": "Antonov An-8",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an10",
+      "name": "Antonov An-10 Ukraina",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an12",
+      "name": "Antonov An-12",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an14",
+      "name": "Antonov An-14 Pchelka",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an22",
+      "name": "Antonov An-22 Antei",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an24",
+      "name": "Antonov An-24",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an26",
+      "name": "Antonov An-26",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an28",
+      "name": "Antonov An-28",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an30",
+      "name": "Antonov An-30",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an32",
+      "name": "Antonov An-32",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an38",
+      "name": "Antonov An-38",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an70",
+      "name": "Antonov An-70",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an71",
+      "name": "Antonov An-71",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an72",
+      "name": "Antonov An-72",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an74",
+      "name": "Antonov An-74",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an124",
+      "name": "Antonov An-124 Ruslan",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an132",
+      "name": "Antonov An-132D",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an140",
+      "name": "Antonov An-140",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an148",
+      "name": "Antonov An-148",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an158",
+      "name": "Antonov An-158",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "an178",
+      "name": "Antonov An-178",
+      "manufacturer": "Antonov"
+    },
+    {
+      "id": "c5a",
+      "name": "Lockheed C-5A Galaxy",
+      "manufacturer": "Lockheed"
+    },
+    {
+      "id": "c5b",
+      "name": "Lockheed C-5B Galaxy",
+      "manufacturer": "Lockheed"
+    },
+    {
+      "id": "c5c",
+      "name": "Lockheed C-5C Galaxy",
+      "manufacturer": "Lockheed"
+    },
+    {
+      "id": "c5m",
+      "name": "Lockheed C-5M Super Galaxy",
+      "manufacturer": "Lockheed Martin"
     }
   ]
 }

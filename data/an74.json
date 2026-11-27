@@ -1,0 +1,154 @@
+{
+  "title": "Antonov An-74",
+  "sub": {
+    "zh": "由 An-72 發展而來，早期針對極地支援；後來發展出貨運與客貨混合等多種配置。",
+    "en": "An An-72 derivative developed for polar support and later offered in cargo and mixed layouts.",
+    "ja": "極地支援向けにAn-72から発展し、後に貨物・客貨混載などの型が生まれた。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-74"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛年份",
+        "1983"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "28.01 m"
+      ],
+      [
+        "翼展",
+        "31.89 m"
+      ],
+      [
+        "機高",
+        "8.65 m"
+      ],
+      [
+        "翼面積",
+        "102 m²"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "540–560 km/h"
+      ],
+      [
+        "操作航程",
+        "4320–4600 km"
+      ],
+      [
+        "飛行高度上限",
+        "10100 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Progress D-36"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "由 An-72 發展而來，早期針對極地支援；後來發展出貨運與客貨混合等多種配置。",
+        "en": "An An-72 derivative developed for polar support and later offered in cargo and mixed layouts.",
+        "ja": "極地支援向けにAn-72から発展し、後に貨物・客貨混載などの型が生まれた。"
+      },
+      "specs": [
+        [
+          "首飛年份",
+          "1983"
+        ],
+        [
+          "用途",
+          {
+            "zh": "軍用運輸機",
+            "en": "Military transport",
+            "ja": "軍用輸送機"
+          }
+        ],
+        [
+          "翼展",
+          "31.89 m"
+        ]
+      ],
+      "fact": {
+        "zh": "標準型和 An-72 的外型非常接近，正面照片不宜憑引擎配置就判斷是哪一型。",
+        "en": "Standard An-74s closely resemble the An-72; the nacelles alone do not distinguish them in a head-on photograph.",
+        "ja": "標準型はAn-72に非常に似ており、正面写真でナセル配置だけを見ても区別できない。"
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "標準系列保留翼上 D-36；An-74TK-300 改採翼下吊掛，辨識時應先確認次型。",
+        "en": "The standard series retains its overwing D-36s. The An-74TK-300 moves them under the wing.",
+        "ja": "標準系列は翼上のD-36を維持するが、An-74TK-300では翼下配置に変更された。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Progress D-36"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "尾坡道可供貨物裝卸；不同 T／TK 次型的舷窗與艙內配置不盡相同。",
+        "en": "Cargo loads through a rear ramp; glazing and cabin arrangements vary across T and TK variants.",
+        "ja": "後部ランプで荷役を行う。T／TK各型では窓や機内配置が異なる。"
+      },
+      "specs": [
+        [
+          "全長",
+          "28.01 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "title": "Antonov An-24",
+  "sub": {
+    "zh": "雙發渦槳支線客機，適應不同地區的機場，並衍生 An-26、An-30 與 An-32 設計支系。",
+    "en": "This twin-turboprop regional airliner led to the An-26, An-30 and An-32 branches.",
+    "ja": "地域路線用の双発ターボプロップ旅客機。An-26、An-30、An-32へと発展した。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-24"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1959-10-20"
+      ],
+      [
+        "用途",
+        {
+          "zh": "支線客機",
+          "en": "Regional airliner",
+          "ja": "リージョナル旅客機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "23.53 m"
+      ],
+      [
+        "翼展",
+        "29.20 m"
+      ],
+      [
+        "機高",
+        "8.32 m"
+      ],
+      [
+        "翼面積",
+        "74.98 m²"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "420 km/h"
+      ],
+      [
+        "操作航程",
+        "990 km"
+      ],
+      [
+        "飛行高度上限",
+        "9100 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Ivchenko AI-24"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "雙發渦槳支線客機，適應不同地區的機場，並衍生 An-26、An-30 與 An-32 設計支系。",
+        "en": "This twin-turboprop regional airliner led to the An-26, An-30 and An-32 branches.",
+        "ja": "地域路線用の双発ターボプロップ旅客機。An-26、An-30、An-32へと発展した。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1959-10-20"
+        ],
+        [
+          "用途",
+          {
+            "zh": "支線客機",
+            "en": "Regional airliner",
+            "ja": "リージョナル旅客機"
+          }
+        ],
+        [
+          "翼展",
+          "29.20 m"
+        ]
+      ],
+      "fact": {
+        "zh": "安特諾夫記錄的新型試載客航線為基輔至赫爾松，時間是 1962 年。",
+        "en": "Antonov records a 1962 technical flight with passengers between Kyiv and Kherson.",
+        "ja": "アントノフの記録では、1962年にキーウからヘルソンまで乗客を乗せた技術飛行を行った。"
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "每側高翼各配一具 AI-24，較高度的安裝位置讓螺旋槳遠離地面。",
+        "en": "One AI-24 on each high wing keeps its propeller well above the ground.",
+        "ja": "高翼の左右にAI-24を1基ずつ搭載し、プロペラと地面の間隔を確保する。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Ivchenko AI-24"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "連續客艙窗與一般收束尾段是基本客機外觀；An-24T 貨運衍生型應另行辨讀。",
+        "en": "A window row and tapering tail identify the basic passenger variant; An-24T freighters differ.",
+        "ja": "連続した客室窓と先細りの尾部が基本旅客型の特徴。貨物派生型のAn-24Tとは区別する。"
+      },
+      "specs": [
+        [
+          "全長",
+          "23.53 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

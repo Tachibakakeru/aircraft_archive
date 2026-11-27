@@ -1,0 +1,174 @@
+{
+  "title": "Antonov An-12",
+  "sub": {
+    "zh": "四發渦槳貨運平台，後部裝卸設計使它與使用相似主翼的 An-10 客機分道而行。",
+    "en": "A four-engine turboprop freighter whose rear-loading layout distinguishes it from the similarly winged An-10 airliner.",
+    "ja": "An-10旅客機と主翼の構成が近い4発貨物機。後部荷役で用途が分かれる。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-12"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1957-12-16"
+      ],
+      [
+        "用途",
+        {
+          "zh": "貨機",
+          "en": "Freighter",
+          "ja": "貨物機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "33.11 m"
+      ],
+      [
+        "翼展",
+        "38.02 m"
+      ],
+      [
+        "機高",
+        "11.44 m"
+      ],
+      [
+        "翼面積",
+        "121.73 m²"
+      ]
+    ],
+    "重量": [
+      [
+        "最大酬載",
+        "20 t"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "570 km/h"
+      ],
+      [
+        "操作航程",
+        "5000 km"
+      ],
+      [
+        "飛行高度上限",
+        "10000 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "4 × Ivchenko AI-20"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "四發渦槳貨運平台，後部裝卸設計使它與使用相似主翼的 An-10 客機分道而行。",
+        "en": "A four-engine turboprop freighter whose rear-loading layout distinguishes it from the similarly winged An-10 airliner.",
+        "ja": "An-10旅客機と主翼の構成が近い4発貨物機。後部荷役で用途が分かれる。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1957-12-16"
+        ],
+        [
+          "用途",
+          {
+            "zh": "貨機",
+            "en": "Freighter",
+            "ja": "貨物機"
+          }
+        ],
+        [
+          "翼展",
+          "38.02 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "四具 AI-20 分布於高置主翼，從機首方向可數到四副螺旋槳。",
+        "en": "Four AI-20s line the high wing, with four propellers clearly visible head-on.",
+        "ja": "高翼にAI-20を4基搭載し、正面から4組のプロペラが見える。"
+      },
+      "specs": [
+        [
+          "型號",
+          "4 × Ivchenko AI-20"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "貨艙側壁沒有 An-10 的連續客窗，尾段設大型貨門；民用貨運與各改型的尾端外形有差異。",
+        "en": "The hold lacks the An-10’s window row and has a large rear opening. The extremity of the tail varies by version.",
+        "ja": "貨物室にAn-10のような連続窓はなく、後部に大型貨物扉がある。尾端形状は型式で異なる。"
+      },
+      "specs": [
+        [
+          "全長",
+          "33.11 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "降着装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "主輪位於機身下側整流罩區，與四具引擎短艙的位置分開。",
+        "en": "Main gear sits at the lower fuselage fairings, separate from the four engine nacelles.",
+        "ja": "主脚は胴体下部側面のフェアリング付近にあり、エンジンナセルから分離している。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

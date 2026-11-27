@@ -11,7 +11,7 @@ let selected = [];      // 目前比較的機型 id 陣列
 const $ = id => document.getElementById(id);
 
 (async () => {
-  fleet = await (await fetch("data/fleet.json?v=184")).json();
+  fleet = await (await fetch("data/fleet.json?v=210")).json();
   fleet.aircraft.sort((a, b) => a.name.localeCompare(b.name, "en", { numeric: true, sensitivity: "base" }));
 
   // 初始：網址帶 ?ids=a320,b738 或預設兩架

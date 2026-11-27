@@ -1,0 +1,155 @@
+{
+  "title": "Antonov An-132D",
+  "sub": {
+    "zh": "以 An-32 為基礎，與沙烏地夥伴合作開發的 An-132D 技術展示機。9.2 t 是 An-132 設計值，與展示機的試驗結果分開看。",
+    "en": "The An-132D was a technology demonstrator developed from the An-32 with Saudi partners. The advertised 9.2 t is a programme design figure.",
+    "ja": "An-32を基にサウジアラビアのパートナーと開発した技術実証機。公表の9.2 tは計画上の設計値。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-132d",
+    "https://www.antonov.com/en/aircraft/an-132"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "2017-03-31"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "24.53 m"
+      ],
+      [
+        "翼展",
+        "29.20 m"
+      ],
+      [
+        "機高",
+        "8.80 m"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "550 km/h"
+      ],
+      [
+        "飛行高度上限",
+        "8230 m"
+      ],
+      [
+        "備註",
+        {
+          "zh": "An-132 設計最大酬載為 9.2 t。",
+          "en": "The An-132’s design maximum payload is 9.2 t.",
+          "ja": "An-132の設計最大ペイロードは9.2 t。"
+        }
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Pratt & Whitney Canada PW150A"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "以 An-32 為基礎，與沙烏地夥伴合作開發的 An-132D 技術展示機。9.2 t 是 An-132 設計值，與展示機的試驗結果分開看。",
+        "en": "The An-132D was a technology demonstrator developed from the An-32 with Saudi partners. The advertised 9.2 t is a programme design figure.",
+        "ja": "An-32を基にサウジアラビアのパートナーと開発した技術実証機。公表の9.2 tは計画上の設計値。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "2017-03-31"
+        ],
+        [
+          "用途",
+          {
+            "zh": "軍用運輸機",
+            "en": "Military transport",
+            "ja": "軍用輸送機"
+          }
+        ],
+        [
+          "翼展",
+          "29.20 m"
+        ]
+      ],
+      "fact": {
+        "zh": "首飛屬 An-132D 展示機，與量產交付是不同里程碑。",
+        "en": "The first-flight date belongs to the An-132D demonstrator rather than a production delivery.",
+        "ja": "初飛行日はAn-132D実証機の記録であり、量産機の引き渡しとは区別する。"
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "改用 PW150A 與六葉螺旋槳，明顯區別於 An-32 的動力配置。",
+        "en": "PW150A engines turn six-blade propellers, distinct from the An-32 installation.",
+        "ja": "PW150Aと6枚ブレードのプロペラを採用し、An-32の動力構成と異なる。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Pratt & Whitney Canada PW150A"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "沿用高翼、後部貨門的基本構型；前段使用現代化航電。",
+        "en": "The high-wing, rear-loading layout is retained alongside a modernized avionics suite.",
+        "ja": "高翼と後部貨物扉を持つ基本構成を継承し、アビオニクスを近代化した。"
+      },
+      "specs": [
+        [
+          "全長",
+          "24.53 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

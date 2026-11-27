@@ -1,0 +1,335 @@
+{
+  "title": "Lockheed C-5M Super Galaxy",
+  "sub": {
+    "zh": "超級銀河式是現有機體的航電、引擎與可靠性升級型；熟悉的高翼與 T 尾保留，翼下短艙改變。",
+    "en": "The Super Galaxy modernized existing airframes with new avionics and engines and improved reliability. The high wing and T-tail remain, with new nacelles below.",
+    "ja": "既存機のアビオニクス、エンジン、信頼性を近代化したスーパーギャラクシー。高翼とT尾翼を維持し、翼下ナセルを換装した。"
+  },
+  "sources": [
+    "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104492/c-5m-super-galaxy/",
+    "https://www.af.mil/News/Article-Display/Article/130656/c-5-still-going-strong-after-38-years/"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "2006-06-19"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ],
+      [
+        "機組員",
+        "7"
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "75.3 m"
+      ],
+      [
+        "翼展",
+        "67.89 m"
+      ],
+      [
+        "機高",
+        "19.84 m"
+      ]
+    ],
+    "重量": [
+      [
+        "最大起飛重量（MTOW）",
+        "381,024 kg"
+      ],
+      [
+        "最大酬載",
+        "127.46 t"
+      ]
+    ],
+    "容量": [
+      [
+        "貨艙長度",
+        "36.6 m"
+      ],
+      [
+        "貨艙寬度",
+        "5.79 m"
+      ],
+      [
+        "貨艙高度",
+        "3.96 m"
+      ]
+    ],
+    "性能": [
+      [
+        "公布速度",
+        "518 mph (834 km/h)"
+      ],
+      [
+        "條件航程",
+        {
+          "zh": "約 4,800 nmi（54.4 t 貨載，未空中加油）",
+          "en": "Approx. 4,800 nmi (54.4 t cargo, unrefueled)",
+          "ja": "約4,800 nmi（貨物54.4 t、空中給油なし）"
+        }
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "4 × General Electric CF6-80C2-L1F (F138)"
+      ],
+      [
+        "單具推力",
+        "≈ 225 kN (50,580 lbf)"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "windshield",
+    "fuselage",
+    "engine",
+    "wing",
+    "vstab",
+    "gear",
+    "cockpit"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "超級銀河式是現有機體的航電、引擎與可靠性升級型；熟悉的高翼與 T 尾保留，翼下短艙改變。",
+        "en": "The Super Galaxy modernized existing airframes with new avionics and engines and improved reliability. The high wing and T-tail remain, with new nacelles below.",
+        "ja": "既存機のアビオニクス、エンジン、信頼性を近代化したスーパーギャラクシー。高翼とT尾翼を維持し、翼下ナセルを換装した。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "2006-06-19"
+        ],
+        [
+          "全長",
+          "75.3 m"
+        ],
+        [
+          "翼展",
+          "67.89 m"
+        ]
+      ],
+      "fact": {
+        "zh": "飛行甲板使用現代化航電與數位顯示。更新計畫還納入引擎與機體系統的維修診斷。",
+        "en": "Modern avionics and digital displays update the flight deck, while the upgrade adds diagnostics for propulsion and airframe systems.",
+        "ja": "操縦室のアビオニクスとデジタル表示を近代化し、エンジンや機体システムの整備診断機能も追加した。"
+      },
+      "bullets": [],
+      "images": [
+        {
+          "src": "assets/reference/c5m/overview.jpg?v=3dd47680a653",
+          "caption": {
+            "zh": "C-5M 超級銀河式飛行外觀 · Christopher Quail / U.S. Air Force",
+            "en": "C-5M Super Galaxy in flight · Christopher Quail / U.S. Air Force",
+            "ja": "飛行中のC-5Mスーパーギャラクシー · Christopher Quail / U.S. Air Force"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:A_C-5M_Super_Galaxy_flies_over_the_2019_Thunder_Over_Dover_Air_Show%2C_Sept._14%2C_2019%2C_at_Dover_Air_Force_Base%2C_Del.jpg",
+          "author": "Christopher Quail / U.S. Air Force",
+          "license": "US public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-Military-Air_Force"
+        }
+      ]
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗／機首",
+        "en": "Cockpit windows / nose",
+        "ja": "操縦室窓・機首"
+      },
+      "en": "COCKPIT WINDOWS / NOSE",
+      "summary": {
+        "zh": "駕駛艙窗在抬高的機鼻上方；座艙玻璃與下方機鼻裝卸門分離。從正面亦能辨別高翼與左右各兩具短艙。",
+        "en": "The raised cockpit windows sit above the cargo nose. A front view also shows the high wing and two nacelles on each side.",
+        "ja": "操縦室窓は高い位置にあり、下方の機首貨物扉と分かれている。正面からは高翼と左右2基ずつのナセルも確認できる。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "全長貨艙保留前後裝卸能力。最大貨載 127.46 t 與 4,800 nmi 航程不是同一載重條件。",
+        "en": "The full-length hold retains loading at both ends. The 127.46 t maximum cargo and the 4,800 nmi range refer to different payload conditions.",
+        "ja": "全長にわたる貨物室は前後から荷役できる。最大貨物127.46 tと航続距離4,800 nmiは異なる搭載条件の値。"
+      },
+      "specs": [
+        [
+          "貨艙長度",
+          "36.6 m"
+        ],
+        [
+          "貨艙寬度",
+          "5.79 m"
+        ],
+        [
+          "貨艙高度",
+          "3.96 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": [
+        {
+          "src": "assets/reference/c5m/fuselage.jpg?v=246b563f4cf9",
+          "caption": {
+            "zh": "C-5M「諾曼第精神號」主貨艙 · Jason Minto / U.S. Air Force",
+            "en": "Main cargo bay of the C-5M Spirit of Normandy · Jason Minto / U.S. Air Force",
+            "ja": "C-5M「スピリット・オブ・ノルマンディー」の主貨物室 · Jason Minto / U.S. Air Force"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:C-5M_cargo_bay.jpg",
+          "author": "Jason Minto / U.S. Air Force",
+          "license": "US public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-Military-Air_Force"
+        }
+      ]
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "四具 CF6-80C2-L1F 每具推力約 225 kN，軍用編號 F138；是辨識 M 型的重點。",
+        "en": "Four CF6-80C2-L1Fs, designated F138, deliver about 225 kN each and are a key M-model cue.",
+        "ja": "軍用名称F138のCF6-80C2-L1Fを4基装備。1基約225 kNで、M型の識別点になる。"
+      },
+      "specs": [
+        [
+          "型號",
+          "4 × General Electric CF6-80C2-L1F (F138)"
+        ],
+        [
+          "單具推力",
+          "≈ 225 kN (50,580 lbf)"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "大展弦比高翼跨過上部機身，四具渦扇以翼下吊架排列。",
+        "en": "The high wing spans the upper fuselage, with the four turbofans suspended on underwing pylons.",
+        "ja": "高翼が胴体上部を横切り、翼下パイロンにターボファン4基を吊り下げる。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "67.89 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "vstab": {
+      "name": {
+        "zh": "垂直尾翼",
+        "en": "Vertical stabilizer",
+        "ja": "垂直尾翼"
+      },
+      "en": "VERTICAL STABILIZER",
+      "summary": {
+        "zh": "水平尾翼裝在單片巨大垂直尾翼頂端，形成高 T 尾；機尾下部可保留裝卸空間。",
+        "en": "The horizontal tail sits at the top of a tall single fin, forming the T-tail above the rear loading area.",
+        "ja": "大きな単垂直尾翼の頂部に水平尾翼を置き、後部荷役位置の上方にT尾翼を構成する。"
+      },
+      "specs": [
+        [
+          "機高",
+          "19.84 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "降着装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "全系採五組起落架、28 個輪胎。裝卸時可降低停機高度，減小坡道與地面之間的高差。",
+        "en": "The family uses five landing-gear assemblies and 28 wheels. A kneeling system lowers the parked aircraft to reduce the loading-ramp height.",
+        "ja": "5組の降着装置と28輪を備える。ニーリング機構で駐機時の機体を下げ、荷役ランプとの高さの差を抑える。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "操縦室"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "飛行甲板使用現代化航電與數位顯示。更新計畫還納入引擎與機體系統的維修診斷。",
+        "en": "Modern avionics and digital displays update the flight deck, while the upgrade adds diagnostics for propulsion and airframe systems.",
+        "ja": "操縦室のアビオニクスとデジタル表示を近代化し、エンジンや機体システムの整備診断機能も追加した。"
+      },
+      "specs": [
+        [
+          "機組員",
+          "7"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": [
+        {
+          "src": "assets/reference/c5m/cockpit.jpg?v=1bbf65967e5e",
+          "caption": {
+            "zh": "C-5M 駕駛艙與數位顯示 · Noah Wulf",
+            "en": "C-5M flight deck and digital displays · Noah Wulf",
+            "ja": "C-5Mの操縦室とデジタル表示 · Noah Wulf"
+          },
+          "source": "https://commons.wikimedia.org/wiki/File:C-5M_Super_Galaxy_Cockpit_-_Aviation_Nation_2019.jpg",
+          "author": "Noah Wulf",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      ]
+    }
+  }
+}

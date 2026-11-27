@@ -1,0 +1,168 @@
+{
+  "title": "Antonov An-8",
+  "sub": {
+    "zh": "早期雙發渦槳專用運輸機，建立安特諾夫高翼與機尾裝卸的設計路線。",
+    "en": "An early purpose-built twin turboprop that established Antonov’s high-wing, rear-loading transport layout.",
+    "ja": "高翼と後部荷役を組み合わせたアントノフ初期の双発ターボプロップ輸送機。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-8"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1956-02-11"
+      ],
+      [
+        "用途",
+        {
+          "zh": "軍用運輸機",
+          "en": "Military transport",
+          "ja": "軍用輸送機"
+        }
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "30.74 m"
+      ],
+      [
+        "翼展",
+        "37.00 m"
+      ],
+      [
+        "機高",
+        "10.05 m"
+      ],
+      [
+        "翼面積",
+        "117.20 m²"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "450 km/h"
+      ],
+      [
+        "操作航程",
+        "3900 km"
+      ],
+      [
+        "飛行高度上限",
+        "9600 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Ivchenko AI-20D"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "windshield",
+    "wing"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "早期雙發渦槳專用運輸機，建立安特諾夫高翼與機尾裝卸的設計路線。",
+        "en": "An early purpose-built twin turboprop that established Antonov’s high-wing, rear-loading transport layout.",
+        "ja": "高翼と後部荷役を組み合わせたアントノフ初期の双発ターボプロップ輸送機。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1956-02-11"
+        ],
+        [
+          "用途",
+          {
+            "zh": "軍用運輸機",
+            "en": "Military transport",
+            "ja": "軍用輸送機"
+          }
+        ],
+        [
+          "翼展",
+          "37.00 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "高置機翼讓翼樑遠離貨艙地板；量產機的兩具渦槳分置左右翼。",
+        "en": "The high wing keeps its structural carry-through away from the cargo floor, with a turboprop on each wing.",
+        "ja": "高翼で主翼の桁を貨物床から離し、左右の翼にターボプロップを1基ずつ配置する。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Ivchenko AI-20D"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "windshield": {
+      "name": {
+        "zh": "駕駛艙外窗／機首",
+        "en": "Cockpit windows / nose",
+        "ja": "操縦室窓・機首"
+      },
+      "en": "COCKPIT WINDOWS / NOSE",
+      "summary": {
+        "zh": "封閉式機首下方可見導航員窗，後機身設貨艙開口。",
+        "en": "Navigator glazing is visible low on the nose; freight enters through the rear fuselage.",
+        "ja": "機首下に航法士用窓があり、後部胴体に貨物開口を備える。"
+      },
+      "specs": [
+        [
+          "全長",
+          "30.74 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "較後推出的 An-10／An-12 採四發布局，與 An-8 的兩具螺旋槳可明顯區分。",
+        "en": "Two propellers distinguish the An-8 from the later four-engine An-10 and An-12.",
+        "ja": "プロペラが2基のため、後発の4発機An-10／An-12と見分けやすい。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

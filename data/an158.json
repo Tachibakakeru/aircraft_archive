@@ -1,0 +1,206 @@
+{
+  "title": "Antonov An-158",
+  "sub": {
+    "zh": "原稱 An-148-200，是 An-148 的加長旅客型，設計載客 99 人。",
+    "en": "Originally the An-148-200, this stretched passenger version was designed for 99 passengers.",
+    "ja": "旧称An-148-200。客室を延長し、99人乗りとして設計された。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-158",
+    "https://www.antonov.com/en/file/G7YmHkcC8tbwk?inline=1"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "2010-04-28"
+      ],
+      [
+        "用途",
+        {
+          "zh": "支線客機",
+          "en": "Regional airliner",
+          "ja": "リージョナル旅客機"
+        }
+      ],
+      [
+        "典型載客量",
+        "99"
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "31.63 m"
+      ],
+      [
+        "翼展",
+        "28.91 m"
+      ],
+      [
+        "機高",
+        "8.20 m"
+      ],
+      [
+        "翼面積",
+        "87.32 m²"
+      ]
+    ],
+    "重量": [
+      [
+        "最大起飛重量（MTOW）",
+        "43.70 t"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "800–870 km/h"
+      ],
+      [
+        "操作航程",
+        "3500 km"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "2 × Progress D-436-148"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "fuselage",
+    "cockpit",
+    "wing"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "原稱 An-148-200，是 An-148 的加長旅客型，設計載客 99 人。",
+        "en": "Originally the An-148-200, this stretched passenger version was designed for 99 passengers.",
+        "ja": "旧称An-148-200。客室を延長し、99人乗りとして設計された。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "2010-04-28"
+        ],
+        [
+          "用途",
+          {
+            "zh": "支線客機",
+            "en": "Regional airliner",
+            "ja": "リージョナル旅客機"
+          }
+        ],
+        [
+          "典型載客量",
+          "99"
+        ],
+        [
+          "翼展",
+          "28.91 m"
+        ]
+      ],
+      "fact": {
+        "zh": "原廠所列 1,500–4,500 km 為任務區間；規格欄採其表列 3,500 km，未指定載重。",
+        "en": "Antonov describes missions from 1,500 to 4,500 km; its table gives 3,500 km without a specified payload.",
+        "ja": "メーカーは1,500～4,500 kmの任務を想定。表の3,500 kmには搭載量条件の記載がない。"
+      },
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "保持兩具 D-436-148 與高翼翼下布局，發動機型號本身不足以與 An-148 區分。",
+        "en": "It retains the two underwing D-436-148s; engine type alone does not distinguish it from the An-148.",
+        "ja": "翼下のD-436-148を2基搭載する方式を継承。エンジン型式だけではAn-148と区別できない。"
+      },
+      "specs": [
+        [
+          "型號",
+          "2 × Progress D-436-148"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "fuselage": {
+      "name": {
+        "zh": "機身／艙門",
+        "en": "Fuselage / doors",
+        "ja": "胴体・扉"
+      },
+      "en": "FUSELAGE / DOORS",
+      "summary": {
+        "zh": "機身比同廠列出的 29.13 m An-148 長約 2.5 m，以客艙長度與窗列作主要辨識。",
+        "en": "The fuselage is about 2.5 m longer than Antonov’s 29.13 m An-148 figure, extending the cabin and its window row.",
+        "ja": "メーカー諸元の全長29.13 mのAn-148より約2.5 m長く、客室と窓列の長さが識別点。"
+      },
+      "specs": [
+        [
+          "全長",
+          "31.63 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "cockpit": {
+      "name": {
+        "zh": "駕駛艙",
+        "en": "Cockpit",
+        "ja": "操縦室"
+      },
+      "en": "COCKPIT",
+      "summary": {
+        "zh": "原廠將數位航電、線傳飛控及引擎全權數位控制列為 An-148／158 系列共通設計。",
+        "en": "Antonov lists digital avionics, fly-by-wire controls and FADEC as common to the An-148/158 family.",
+        "ja": "デジタルアビオニクス、フライ・バイ・ワイヤ、FADECはAn-148／158系列の共通仕様。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "高翼兼顧發動機離地高度。原廠家族型錄列出的進氣口離地間隔為 1.65 m。",
+        "en": "The high wing gives the engines ground clearance, quoted at 1.65 m in the manufacturer’s family brochure.",
+        "ja": "高翼でエンジンの地上間隔を確保する。メーカーの系列資料では1.65 m。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "28.91 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}

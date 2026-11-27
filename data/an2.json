@@ -1,0 +1,172 @@
+{
+  "title": "Antonov An-2",
+  "sub": {
+    "zh": "安特諾夫設計局的首款飛機，後來用於農業、偏遠地區客貨運與巡查。",
+    "en": "Antonov’s first aircraft became a workhorse for farming, remote transport and patrol.",
+    "ja": "設計局最初の機体。農業、僻地輸送、巡回などに広く使われた。"
+  },
+  "sources": [
+    "https://www.antonov.com/en/history/an-2"
+  ],
+  "specifications": {
+    "機組員與載客": [
+      [
+        "首飛日期",
+        "1947-08-31"
+      ],
+      [
+        "用途",
+        {
+          "zh": "通用運輸機",
+          "en": "Utility transport",
+          "ja": "汎用輸送機"
+        }
+      ],
+      [
+        "典型載客量",
+        "12"
+      ]
+    ],
+    "尺寸": [
+      [
+        "全長",
+        "12.40 m"
+      ],
+      [
+        "翼展",
+        "18.17 m"
+      ],
+      [
+        "機高",
+        "5.35 m"
+      ],
+      [
+        "翼面積",
+        "71.52 m²"
+      ]
+    ],
+    "性能": [
+      [
+        "巡航速度",
+        "185 km/h"
+      ],
+      [
+        "飛行高度上限",
+        "4500 m"
+      ]
+    ],
+    "發動機": [
+      [
+        "型號",
+        "1 × Shvetsov ASh-62IR"
+      ]
+    ]
+  },
+  "partOrder": [
+    "overview",
+    "engine",
+    "wing",
+    "gear"
+  ],
+  "parts": {
+    "overview": {
+      "name": {
+        "zh": "整體外型",
+        "en": "Overall airframe",
+        "ja": "機体全体"
+      },
+      "en": "OVERALL AIRFRAME",
+      "summary": {
+        "zh": "安特諾夫設計局的首款飛機，後來用於農業、偏遠地區客貨運與巡查。",
+        "en": "Antonov’s first aircraft became a workhorse for farming, remote transport and patrol.",
+        "ja": "設計局最初の機体。農業、僻地輸送、巡回などに広く使われた。"
+      },
+      "specs": [
+        [
+          "首飛日期",
+          "1947-08-31"
+        ],
+        [
+          "用途",
+          {
+            "zh": "通用運輸機",
+            "en": "Utility transport",
+            "ja": "汎用輸送機"
+          }
+        ],
+        [
+          "典型載客量",
+          "12"
+        ],
+        [
+          "翼展",
+          "18.17 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "engine": {
+      "name": {
+        "zh": "引擎",
+        "en": "Engine",
+        "ja": "エンジン"
+      },
+      "en": "ENGINE",
+      "summary": {
+        "zh": "上下兩層機翼以支柱相連；前緣縫翼與大面積增升裝置有利低速起降。",
+        "en": "Struts connect the two wings; leading-edge slats and generous high-lift surfaces aid low-speed flight.",
+        "ja": "支柱で結ばれた複葉翼に前縁スラットと高揚力装置を備える。"
+      },
+      "specs": [
+        [
+          "型號",
+          "1 × Shvetsov ASh-62IR"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "wing": {
+      "name": {
+        "zh": "主翼",
+        "en": "Wing",
+        "ja": "主翼"
+      },
+      "en": "WING",
+      "summary": {
+        "zh": "機鼻的九缸星形活塞引擎驅動單具螺旋槳。",
+        "en": "A nine-cylinder radial piston engine drives the single nose propeller.",
+        "ja": "機首の9気筒星形ピストンエンジンで1基のプロペラを駆動する。"
+      },
+      "specs": [
+        [
+          "翼展",
+          "18.17 m"
+        ]
+      ],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    },
+    "gear": {
+      "name": {
+        "zh": "起落架",
+        "en": "Landing gear",
+        "ja": "降着装置"
+      },
+      "en": "LANDING GEAR",
+      "summary": {
+        "zh": "基本型採固定式尾輪起落架；可視任務換用滑雪板或浮筒。",
+        "en": "The fixed tailwheel undercarriage could give way to skis or floats.",
+        "ja": "固定尾輪式が基本で、スキーやフロートに交換できる。"
+      },
+      "specs": [],
+      "fact": {},
+      "bullets": [],
+      "images": []
+    }
+  }
+}
